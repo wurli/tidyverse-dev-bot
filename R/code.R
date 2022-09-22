@@ -1,7 +1,29 @@
 library(tidyverse)
 library(glue)
 
-pkgs             <- tidyverse::tidyverse_packages(include_self = FALSE)
+pkgs <- tidyverse_packages()
+
+urls <- pkgs |> 
+  set_names() |> 
+  map(utils::packageDescription) |> 
+  map(~ paste(c(.x$URL, .x$BugReports), collapse = ", ")) |> 
+  map(strsplit, ",\\s*") |> 
+  map(1) |> 
+  map(str_remove_all, "#readme$") |>  
+  map(str_remove_all, "/issues$") |> 
+  map(unique) |> 
+  map(str_subset, "github") |> 
+  map(str_subset, "github\\.io", negate = TRUE) |> 
+  imap(str_subset) 
+
+walk(urls, function(u) {
+  
+  system2("git", c("submodule", "add", u, "submodules"))
+  
+})
+  
+stopifnot(map_lgl(urls, ~ length(.) == 1))
+
 news_urls        <- glue("https://raw.githubusercontent.com/tidyverse/{pkgs}/main/NEWS.md")
 names(news_urls) <- pkgs
 
