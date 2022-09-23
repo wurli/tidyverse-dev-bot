@@ -1,117 +1,50 @@
 library(tidyverse)
 library(glue)
 
-pkgs <- tidyverse_packages()
+list.files("R", "^fn-", full.names = TRUE) |> 
+  walk(source)
 
-urls <- pkgs |> 
-  set_names() |> 
-  map(utils::packageDescription) |> 
-  map(~ paste(c(.x$URL, .x$BugReports), collapse = ", ")) |> 
-  map(strsplit, ",\\s*") |> 
-  map(1) |> 
-  map(str_remove_all, "#readme$") |>  
-  map(str_remove_all, "/issues$") |> 
-  map(unique) |> 
-  map(str_subset, "github") |> 
-  map(str_subset, "github\\.io", negate = TRUE) |> 
-  imap(str_subset) 
+new_bullets <- news_urls(fake_package = "NEWS.md") |> 
+  pull_news_files() |> 
+  get_news_data() |> 
+  remove_old_bullets(overwrite = F)
 
-stopifnot(map_lgl(urls, ~ length(.) == 1))
-
-all(pkgs %in% list.files("submodules"))
-
-git <- function(..., .repo = NULL, .quiet = TRUE) {
+format_bullets <- function(x) {
   
-  out <- system2("git", c(
-    if (!is.null(.repo)) glue("--work-tree={.repo}"),
-    ...
-  ), stdout = TRUE)
-  
-  out <- as_glue(paste(out, collapse = "\n"))
-  if (!.quiet) cat(out)
-  out
-  
-}
-
-list.files("submodules", full.names = TRUE)[1:3] |>
-  set_names(basename) |> 
-  map(function(submodule) {
-    
-    git("fetch", .repo = submodule)
-    status <- git("status", "README.md", .repo = submodule)
-    
-    if (str_detect(status, "Your branch is up to date")) {
-      return(NULL)
-    }
-    
-    git("pull", .repo = submodule)
-    
-  })
-
-updates <- news_urls %>% 
-  map( ~ tryCatch(
-    read_file(.x),
-    error = function(e) if (grepl("error 404", e$message)) NULL else stop(e)
-  )) %>% 
-  compact()
-
-updates %>% 
-  
-  # Get bullets which are under first header only
-  map(function(x) {
-    x                     <- str_split(x, "\n")[[1]]
-    is_header             <- str_detect(x, "^\\s*#\\s")
-    is_under_first_header <- cumsum(is_header) <= 1
-    x                     <- x[is_under_first_header]
-    paste(x, collapse = "\n")
-  }) %>%
-  
-  # Split text into individual bullets
-  map(~ str_split(., "\n(?=([*-]\\s+)|(#+\\s+))")[[1]]) %>% 
-  
-  # Construct a tibble of bullets with headings
-  map(function(x) {
-    tibble(
-      Text = x %>% 
-        str_replace_all("(?<![\n {0,20}]) +", " ") %>% 
-        str_subset("^[*-]") %>%              # Remove everything except bullets
-        str_subset("^$", negate = TRUE)      # Remove empty entries
+  x <- x |> 
+    mutate(
+      has_parent = !is.na(parent_id),
+      has_children = bullet_id %in% parent_id, 
+      .before = 1
     )
-  }) %>% 
-  bind_rows(.id = "Package")
-
-
-chomp <- function(e, level = 1) {
   
-  if (!is.list(e)) {
-    return(tibble(content = as.character(e)))
-  }
+  max_depth <- max(x$bullets_level)
   
-  if (is.null(names(e))) {
-    return(map_dfr(e, chomp, level))
-  }
+  out <- list()
   
-  if ("t" %in% names(e)) {
-    out <- chomp(e$c, level + 1) %>% 
-      mutate("tag_{level}" := e$t, .before = 1)
+  get_bullets <- function(depth = 1, parent = NULL) {
+   
+    b <- x |> 
+      filter(
+        bullets_level == depth,
+        if (!is.null(parent)) parent_id == parent else TRUE
+      ) |> 
+      select(text, has_children, bullet_id)
     
-    return(out)
+    b |> 
+      pmap(function(text, has_children, bullet_id) {
+        
+        if (!has_children) {
+          return(list(text = text))
+        }
+        
+        list(text = text, children = get_bullets(depth + 1, parent = bullet_id))
+        
+      }) |> 
+      set_names(~ paste0("b", seq_along(.)))
+     
   }
   
-  chomp(e$c, level + 1)
+  get_bullets()
   
 }
-
-json <- jsonlite::read_json("quarto-filter-test.json")
-
-json$blocks %>% 
-  chomp() %>% 
-  select(sort(colnames(.))) %>% 
-  relocate(content, .after = last_col()) %>% 
-  filter(
-    if_any(starts_with("tag"), ~ . %in% c("Str", "CodeBlock", "Code")),
-    content != ""
-  ) %>% 
-  print(n = Inf)
-
-json$blocks[[1]]

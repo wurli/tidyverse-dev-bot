@@ -1,0 +1,414 @@
+<h1 id="cli-development-version">cli (development version)</h1>
+<ul>
+<li><p>cli has better error messages now.</p></li>
+<li><p>New <code>format_inline()</code> argument: <code>collapse</code>,
+to collapse multi-line output, potentially because of <code>\f</code>
+characters.</p></li>
+</ul>
+<h1 id="cli-3.4.0">cli 3.4.0</h1>
+<ul>
+<li><p>New experimental styles to create ANSI hyperlinks in RStudio and
+terminals that support them. See <code>?cli::links</code> for details
+(#513).</p></li>
+<li><p>Expressions that start and end with a <code>{}</code>
+substitution are now styled correctly. E.g.
+<code>{.code {var1} + {var2}}</code> (#517).</p></li>
+<li><p>New <code>{.obj_type_friendly}</code> inline style to format the
+type of an R object in a user friendly way (#463).</p></li>
+<li><p>Improved vector collapsing behavior. cli now shows both the
+beginning and end of the collapsed vector, by default (#419).</p></li>
+<li><p>Nested <code>cli()</code> calls work now (#497).</p></li>
+<li><p>Return values now work as they should within <code>cli()</code>
+calls (#496).</p></li>
+<li><p>Style attributes with underscores have new names with dashes
+instead: <code>vec_sep</code>, <code>vec_last</code>,
+<code>vec_trunc</code>, <code>string-quote</code>. The old names still
+work, but the new ones take precedence (#483).</p></li>
+<li><p>cli now does not crash at the end of the R session on Arm Windows
+(#494; <span class="citation"
+data-cites="kevinushey">@kevinushey</span>)</p></li>
+<li><p>Vectors are truncated at 20 elements now by default, instead of
+100 (#430).</p></li>
+<li><p>20 new spinners from the awesome <a
+href="https://github.com/sindresorhus/cli-spinners">cli-spinners</a>
+package, and from <span class="citation"
+data-cites="HenrikBengtsson">@HenrikBengtsson</span> in #469. Run this
+to demo them, some need UTF-8 and emoji support:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>new <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;dots13&quot;</span>, <span class="st">&quot;dots8Bit&quot;</span>, <span class="st">&quot;sand&quot;</span>, <span class="st">&quot;material&quot;</span>, <span class="st">&quot;weather&quot;</span>, <span class="st">&quot;christmas&quot;</span>,</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;grenade&quot;</span>, <span class="st">&quot;point&quot;</span>, <span class="st">&quot;layer&quot;</span>, <span class="st">&quot;betaWave&quot;</span>, <span class="st">&quot;fingerDance&quot;</span>, <span class="st">&quot;fistBump&quot;</span>,</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;soccerHeader&quot;</span>, <span class="st">&quot;mindblown&quot;</span>, <span class="st">&quot;speaker&quot;</span>, <span class="st">&quot;orangePulse&quot;</span>, <span class="st">&quot;bluePulse&quot;</span>,</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;orangeBluePulse&quot;</span>, <span class="st">&quot;timeTravel&quot;</span>, <span class="st">&quot;aesthetic&quot;</span>, <span class="st">&quot;growVeriticalDotsLR&quot;</span>,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;growVeriticalDotsRL&quot;</span>, <span class="st">&quot;growVeriticalDotsLL&quot;</span>, <span class="st">&quot;growVeriticalDotsRR&quot;</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">demo_spinners</span>(new)</span></code></pre></div></li>
+<li><p>cli exit handlers are now compatible again with the withr package
+(#437).</p></li>
+<li><p>cli functions now keep trailing <code>\f</code> characters as
+newlines. They also keep multiple consecutive <code>\f</code> as
+multiple newlinees (#491).</p></li>
+<li><p><code>{}</code> substitutions within inline styles are now
+formatted correctly. E.g. <code>{.code download({url})}</code> will not
+add backticks to <code>url</code>, and <code>{.val pre-{x}-post}</code>
+will format the whole value instead of <code>x</code>. (#422,
+#474).</p></li>
+<li><p>cli now replaces newline characters within
+<code>{.class ... }</code> inline styles with spaces. If the
+<code>cli.warn_inline_newlines</code> option is set to TRUE, then it
+also throws a warning. (#417).</p></li>
+<li><p><code>code_highlight</code> now falls back to the default theme
+(instead of no theme) for unknown RStudio themes (#482, <span
+class="citation"
+data-cites="rossellhayes">@rossellhayes</span>).</p></li>
+<li><p><code>cli_abort()</code> now supplies <code>.frame</code> to
+<code>abort()</code>. This fixes an issue with the
+<code>.internal = TRUE</code> argument (r-lib/rlang#1386).</p></li>
+<li><p>cli now does a better job at detecting the RStudio build pane,
+job pane and render pane, and their capabilities w.r.t. ANSI colors and
+hyperlinks. Note that this requires a daily build of RStudio
+(#465).</p></li>
+<li><p>New functions for ANSI strings: <code>ansi_grep()</code>,
+<code>ansi_grepl()</code>, <code>ansi_nzchar()</code>. They work like
+the corresponding base R functions, but handle ANSI markup.</p></li>
+<li><p><code>style_hyperlink()</code> (really) no longer breaks if the
+env variable <code>VTE_VERSION</code> is of the form <code>\d{4}</code>,
+i.e., 4 consecutive numbers (#441, <span class="citation"
+data-cites="michaelchirico">@michaelchirico</span>)</p></li>
+<li><p><code>cli_dl()</code> and its corresponding <code>cli_li()</code>
+can now style the labels.</p></li>
+<li><p>The behavior cli’s inline styling expressions is now more
+predictable. cli does not try to evaluate a styled string as an R
+expression any more. E.g. the meaning of <code>"{.emph +1}"</code> is
+now always the “+1”, with style <code>.emph</code>, even if an
+<code>.emph</code> variable is available and the <code>.emph + 1</code>
+expression can be evaluated.</p></li>
+<li><p>Functions that apply bright background colors
+(e.g. <code>bg_br_yellow()</code>) now close themselves. They no longer
+format text after the end of the function (#484, <span class="citation"
+data-cites="rossellhayes">@rossellhayes</span>).</p></li>
+</ul>
+<h1 id="cli-3.3.0">cli 3.3.0</h1>
+<ul>
+<li><p><code>style_hyperlink()</code> no longer breaks if the env
+variable <code>VTE_VERSION</code> is of the form <code>\d{4}</code>,
+i.e., 4 consecutive numbers (#441, <span class="citation"
+data-cites="michaelchirico">@michaelchirico</span>)</p></li>
+<li><p><code>ansi_*()</code> functions support ANSI hyperlinks again
+(#444).</p></li>
+<li><p>Turning off ANSI colors via the <code>cli.num_colors</code>
+option or the <code>R_CLI_NUM_COLORS</code> or the <code>NO_COLOR</code>
+environment variable now also turns off ANSI hyperlinks (#447).</p></li>
+<li><p><code>symbol</code> now only has two variants: UTF-8 and ASCII.
+There are no special variants for RStudio and Windows RGui any more
+(#424).</p></li>
+</ul>
+<h1 id="cli-3.2.0">cli 3.2.0</h1>
+<h2 id="breaking-change">Breaking change</h2>
+<ul>
+<li>The <code>cli_theme_dark</code> option is now known as
+<code>cli.theme_dark</code>, to be consistent with all other cli option
+names (#380).</li>
+</ul>
+<h2 id="other-changes">Other changes</h2>
+<ul>
+<li><p>The preferred names of the S3 classes <code>ansi_string</code>,
+<code>ansi_style</code>, <code>boxx</code>, <code>rule</code> and
+<code>tree</code> now have <code>cli_</code> prefix:
+<code>cli_ansi_string</code>, etc. This will help avoiding name
+conflicts with other packages eventually, but for now the old names are
+kept as well, for compatibility.</p></li>
+<li><p><code>cli_abort()</code> has been updated to work nicely with
+rlang 1.0. The default <code>call</code> and backtrace soft-truncation
+are set to <code>.envir</code> (which itself is set to the immediate
+caller of <code>cli_abort()</code> by default).</p>
+<p>Line formatting now happens lazily at display time via
+<code>rlang::cnd_message()</code> (which is called by the
+<code>conditionMessage()</code> method for rlang errors).</p></li>
+<li><p>New <code>hash_sha256()</code> function to calculate SHA-256
+hashes. New <code>hash_raw_*()</code>, <code>hash_obj_*()</code> and
+<code>hash_file_*()</code> functions to calculate various hashes of raw
+vectors, R objects and files.</p></li>
+<li><p>You can use the new <code>cli.default_num_colors</code> option to
+set the default number of ANSI colors, only if ANSI support is otherwise
+detected. See the details in the manual of
+<code>num_ansi_colors()</code>.</p></li>
+<li><p>You can set the new <code>ESS_BACKGROUND_MODE</code> environment
+variable to <code>dark</code> to indicate dark mode.</p></li>
+<li><p>cli now handles quotes and comment characters better in the
+semantion <code>cli_*()</code> functions that perform glue string
+interpolation (#370).</p></li>
+</ul>
+<h1 id="cli-3.1.1">cli 3.1.1</h1>
+<ul>
+<li><code>style_hyperlink()</code> gains a <code>params=</code> argument
+(#384).</li>
+</ul>
+<h1 id="cli-3.1.0">cli 3.1.0</h1>
+<h2 id="breaking-changes">Breaking changes</h2>
+<ul>
+<li>The C progress bar API now uses <code>double</code> instead of
+<code>int</code> as the data type of the progress units (#335).</li>
+</ul>
+<h2 id="new-features">New features</h2>
+<ul>
+<li><p>Several improvements and changes in the <code>ansi_*()</code>
+functions:</p>
+<ul>
+<li>most <code>ansi_*()</code> functions are now implemented in C and
+they are much faster (#316).</li>
+<li>they handle <code>NA</code> values better.</li>
+<li>many functions now use UTF-8 graphemes by default instead of code
+points. E.g. <code>ansi_nchar()</code> counts graphemes, etc.</li>
+<li>they convert their input to UTF-8 and always return UTF-8 encoded
+strings.</li>
+<li>new function <code>ansi_simplify()</code> to remove superfluous ANSI
+tags.</li>
+<li>new function <code>ansi_html()</code> to convert ANSI-highlighted
+strings to HTML.</li>
+<li><code>ansi_has_any()</code> and <code>ansi_strip()</code> now have
+<code>sgr</code> and <code>csi</code> arguments to look for SGR tags,
+CSI tags, or both.</li>
+</ul></li>
+<li><p>New functions that handle UTF-8 encoded strings correctly:
+<code>utf8_graphemes()</code>, <code>utf8_nchar()</code>,
+<code>utf8_substr()</code>.</p></li>
+<li><p>Support for palettes, including a colorblind friendly palette.
+See <code>?ansi_palettes</code> for details.</p></li>
+<li><p>True color support: <code>num_ansi_colors()</code> now detects
+terminals with 24 bit color support, and <code>make_ansi_style()</code>
+uses the exact RGB colors on these terminals (#208).</p></li>
+<li><p>The new <code>col_br_*()</code> and <code>bg_br_()</code>
+functions create bright versions of eight base ANSI colors
+(#327).</p></li>
+<li><p>New function <code>code_highlight()</code> to syntax highlight R
+code. It supports several themes out of the box, see
+<code>code_theme_list()</code> (#348).</p></li>
+<li><p>New functions for hashing: <code>hash_animal()</code>,
+<code>hash_emoji()</code> and <code>hash_md5()</code>.</p></li>
+<li><p>New <code>diff_chr()</code> and <code>diff_str()</code> functions
+to calculate the difference of character vectors and letters of
+strings.</p></li>
+</ul>
+<h2 id="smaller-improvements">Smaller improvements</h2>
+<ul>
+<li><p>Progress bars with <code>clear = FALSE</code> now print the last,
+completed, state properly.</p></li>
+<li><p>The progress bar for Shiny apps now handles output from
+<code>cli_progress_output()</code>.</p></li>
+<li><p>Progress variables in C <code>format_done</code> strings work
+correctly now (#337).</p></li>
+<li><p><code>cli_dl()</code> now works with an empty description, and
+gives a better error for invalid input (#347).</p></li>
+<li><p><code>rule()</code> is now works better if the labels have ANSI
+markup.</p></li>
+<li><p><code>cli_spark</code> objects now have <code>format()</code> and
+<code>print()</code> methods.</p></li>
+<li><p><code>cli_process_done()</code> now does not error without a
+process (#351).</p></li>
+<li><p>ANSI markup is now supported in RStudio jobs (#353).</p></li>
+<li><p>The lack of ANSI support is now again correctly detected if there
+is an active <code>sink()</code> (#366).</p></li>
+</ul>
+<h1 id="cli-3.0.1">cli 3.0.1</h1>
+<ul>
+<li><p><code>ansi_strtrim()</code> now correctly keeps <code>NA</code>
+values (#309).</p></li>
+<li><p><code>format_inline()</code> now uses the correct environment
+(<span class="citation" data-cites="rundel">@rundel</span>,
+#314).</p></li>
+</ul>
+<h1 id="cli-3.0.0">cli 3.0.0</h1>
+<ul>
+<li><p>New functions for progress bars, please see the new articles at
+https://cli.r-lib.org/articles/ for details.</p></li>
+<li><p>New <code>cli_abort()</code>, <code>cli_warn()</code> and
+<code>cli_inform()</code> functions, to throw errors with cli
+pluralization and styling.</p></li>
+<li><p>New <code>format_inline()</code> function to format a cli string
+without emitting it (#278).</p></li>
+</ul>
+<h1 id="cli-2.5.0">cli 2.5.0</h1>
+<ul>
+<li><p>New <code>style_no_*()</code> functions to locally undo styling.
+New <code>col_none()</code> and <code>bg_none()</code> functions to
+locally undo text color and background color.</p></li>
+<li><p>It is now possible to undo text and background color in a theme,
+by setting them to <code>NULL</code> or <code>"none"</code>.</p></li>
+<li><p><code>cli_memo()</code> was renamed to
+<code>cli_bullets()</code>, as it is by default formatted as a bullet
+list (#250).</p></li>
+<li><p>New <code>ansi_toupper()</code>, <code>ansi_tolower</code> and
+<code>ansi_chartr()</code> functions, the ANSI styling aware variants of
+<code>toupper()</code>, <code>tolower()</code> and <code>chartr()</code>
+(#248).</p></li>
+<li><p>New <code>test_that_cli()</code> helper function to write
+testthat tests for cli output.</p></li>
+<li><p><code>tree()</code> now does not produce warnings for tibbles
+(#238).</p></li>
+<li><p>New inline style: <code>.cls</code> to format class names, e.g.
+<code>"{.var fit} must be an {.cls lm} object"</code>.</p></li>
+</ul>
+<h1 id="cli-2.4.0">cli 2.4.0</h1>
+<ul>
+<li><p>New <code>cli_memo()</code> function to create a list of items or
+tasks.</p></li>
+<li><p>New <code>cli::cli()</code> function to create a single cli
+message from multiple cli calls (#170).</p></li>
+<li><p>cli now highlights weird names, e.g. path names with leading or
+trailing space (#227).</p></li>
+<li><p>Styling is fixed at several places. In particular, nested lists
+should be now formatted better (#221).</p></li>
+<li><p>New <code>spark_bar()</code> and <code>spark_line()</code>
+functions to draw small bar or line charts.</p></li>
+</ul>
+<h1 id="cli-2.3.1">cli 2.3.1</h1>
+<ul>
+<li><p>ANSI color support detection works correctly now in older
+RStudio, and also on older R versions.</p></li>
+<li><p><code>cli_h1()</code>, <code>cli_h2()</code> and
+<code>cli_h3()</code> now work with multiple glue substitutions
+(#218).</p></li>
+</ul>
+<h1 id="cli-2.3.0">cli 2.3.0</h1>
+<ul>
+<li><p><code>boxx()</code> now correctly calculates the width of the box
+for non-ASCII characters.</p></li>
+<li><p>New <code>ansi_trimws()</code> and <code>ansi_strwrap()</code>
+functions, they are similar to <code>trimws()</code> and
+<code>strwrap()</code> but work on ANSI strings.</p></li>
+<li><p>New <code>ansi_columns()</code> function to format ANSI strings
+in multiple columns.</p></li>
+<li><p><code>ansi_substr()</code>, <code>ansi_substring()</code>,
+<code>ansi_strsplit()</code>, <code>ansi_align()</code> now always
+return <code>cli_ansi_string</code> objects.</p></li>
+<li><p><code>ansi_nchar()</code>, <code>ansi_align()</code>,
+<code>ansi_strtrim()</code> and the new <code>ansi_strwrap()</code> as
+well handle wide Unicode correctly, according to their display
+width.</p></li>
+<li><p><code>boxx()</code> can now add headers and footers to
+boxes.</p></li>
+</ul>
+<h1 id="cli-2.2.0">cli 2.2.0</h1>
+<ul>
+<li><p>New <code>style_hyperlink()</code> function to add hyperlinks, on
+terminals that support them.</p></li>
+<li><p><code>cli_format_method()</code> now works properly in knitr, and
+other environments that catch message conditions (#159).</p></li>
+<li><p>ANSI strings created by <code>col_*</code>, <code>bg_*</code> and
+<code>style_*</code> now also add the <code>character</code> class to
+the result. This fixes issues with code that expect
+<code>character</code> objects.</p></li>
+<li><p>New functions to manipulate ANSI strings:
+<code>ansi_aling()</code>, <code>ansi_has_any()</code>,
+<code>ansi_nchar()</code>, <code>ansi_regex()</code>,
+<code>ansi_strip()</code>, <code>ansi_strsplit()</code>,
+<code>ansi_substr()</code>, <code>ansi_substring()</code>.</p></li>
+</ul>
+<h1 id="cli-2.1.0">cli 2.1.0</h1>
+<ul>
+<li><p>New <code>cli_vec()</code> function to allow easier formatting of
+collapsed vectors. It is now also possible to use styling to set the
+collapsing parameters (#129).</p></li>
+<li><p>New <code>pluralize()</code> function to perform pluralization
+without generating cli output (#155).</p></li>
+<li><p><code>console_width()</code> works better now in RStudio, and
+also in terminals.</p></li>
+<li><p>Styling of verbatim text work properly now (#147, <span
+class="citation" data-cites="tzakharko">@tzakharko</span>).</p></li>
+<li><p>Messages (i.e. <code>message</code> conditions) coming from cli
+now have the <code>cliMessage</code> class, so you can easily suppress
+them without suppressing other messages (#156).</p></li>
+<li><p>cli prints the output to <code>stderr()</code> now, if there is
+an output or message sink. This is to make interactive and
+non-interactive sessions consistent (#153).</p></li>
+<li><p>Pluralization works correctly now if the last alternative is the
+empty string (#158).</p></li>
+<li><p>cli now caches the result of the dark background detection in
+iTerm on macOS. Reload cli to delete the cache (#131).</p></li>
+<li><p>The <code>is_dynamic_tty()</code>, <code>is_ansi_tty()</code> and
+<code>ansi_hide_cursor()</code> and related functions now default to the
+<code>"auto"</code> stream, which is automatically selected to be either
+<code>stdout()</code> or <code>stderr()</code>. See the manual for
+details (#144).</p></li>
+<li><p>The default theme now quotes file names, paths, email addresses
+if they don’t start or end with an alphanumeric character or a slash.
+This is to make it easier to spot names that start or end with a space
+(#167).</p></li>
+<li><p><code>make_spinner()</code> clears the line properly now (<span
+class="citation" data-cites="tzakharko">@tzakharko</span>,
+#164).</p></li>
+<li><p>Semantic cli functions now automatically replace Unicode
+non-breaking space characters (<code>\u00a0</code>) with regular space
+characters, right before output. They are still used to calculate the
+line breaks, but not outputted (#161).</p></li>
+<li><p>Progress bars now respect <code>is_dynamic_tty()</code> and do
+not output <code>\r</code> when this is false (<span class="citation"
+data-cites="jimhester">@jimhester</span>, #177)</p></li>
+</ul>
+<h1 id="cli-2.0.2">cli 2.0.2</h1>
+<ul>
+<li><p>The status bar now does not simplify multiple spaces by a single
+space.</p></li>
+<li><p>cli now does not crash if it fails to detect whether the RStudio
+theme is a dark theme (#138).</p></li>
+<li><p>cli now works better with wide Unicode characters, for example
+emojis. In particular, a status bar containing emojis is cleared
+properly (#133).</p></li>
+<li><p>The status bar now does not flicker when updated, in terminals
+(#135).</p></li>
+</ul>
+<h1 id="cli-2.0.1">cli 2.0.1</h1>
+<ul>
+<li><p>Symbols (<code>symbol$*</code>) are now correctly printed in
+RStudio on Windows (#124).</p></li>
+<li><p>The default theme for <code>cli_code()</code> output looks better
+now, especially in RStudio (#123).</p></li>
+<li><p>Remove spurious newline after a <code>cli_process_start()</code>
+was cleared manually, and also at the end of the function.</p></li>
+<li><p>Use Oxford comma when listing 3 or more items (<span
+class="citation" data-cites="jonocarroll">@jonocarroll</span>,
+#128).</p></li>
+</ul>
+<h1 id="cli-2.0.0">cli 2.0.0</h1>
+<h2 id="semantic-command-line-interface-tools">Semantic command line
+interface tools</h2>
+<p>cli 2.0.0 has a new set of functions that help creating a CLI using a
+set of higher level elements: headings, paragraphs, lists, alerts, code
+blocks, etc. The formatting of all elements can be customized via
+themes. See the “Building a semantic CLI” article on the package web
+site: https://cli.r-lib.org</p>
+<h2 id="bug-fixes">Bug fixes:</h2>
+<ul>
+<li>Fix a bug in <code>is_dynamic_tty()</code>, setting
+<code>R_CLI_DYNAMIC="FALSE"</code> now properly turns dynamic tty off
+(#70).</li>
+</ul>
+<h1 id="cli-1.1.0">cli 1.1.0</h1>
+<ul>
+<li><p>cli has now functions to add ANSI styles to text. These use the
+crayon package internally, and provide a simpler interface. See the
+<code>col_*</code>, <code>bg_*</code>, <code>style_*</code> and also the
+<code>make_ansi_style()</code> and <code>combine_ansi_styles()</code>
+functions (#51).</p></li>
+<li><p>New <code>is_dynamic_tty()</code> function detects if
+<code>\r</code> should be used for a stream (#62).</p></li>
+<li><p>New <code>is_ansi_tty()</code> function detects if ANSI control
+sequences can be used for a stream.</p></li>
+<li><p>New <code>ansi_hide_cursor()</code>,
+<code>ansi_show_cursor()</code> and
+<code>ansi_with_hidden_cursor()</code> functions to hide and show the
+cursor in terminals.</p></li>
+<li><p>New <code>make_spinner()</code> function helps integrating
+spinners into your functions.</p></li>
+<li><p>Now <code>symbol</code> always uses ASCII symbols when the
+<code>cli.unicode</code> option is set to <code>FALSE</code>.</p></li>
+</ul>
+<h1 id="section">1.0.1</h1>
+<ul>
+<li><p>New <code>cli_sitrep()</code> function, situation report about
+UTF-8 and ANSI color support (#53).</p></li>
+<li><p>Fall back to ASCII only characters on non-Windows platforms
+without UTF-8 support, and also in LaTeX when running knitr
+(#34).</p></li>
+</ul>
+<h1 id="cli-1.0.0">cli 1.0.0</h1>
+<p>First public release.</p>
