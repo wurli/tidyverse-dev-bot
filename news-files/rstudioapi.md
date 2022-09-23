@@ -1,278 +1,142 @@
-# rstudioapi 0.15 (UNRELEASED)
+
+# rstudioapi 0.15  (UNRELEASED)
+
 
 # rstudioapi 0.14
 
-!begin-bullets-1!
+* `documentPath()` now marks the encoding of file paths as UTF-8. (#257)
 
--   !begin-bullet!
-    `documentPath()` now marks the encoding of file paths as UTF-8.
-    (#257)
+* `getSourceEditorContext()` gains the `id` argument, to be used to request
+  the editor context for a document with an already-known ID. (#251)
+  
+* Added `documentOpen()`, for opening a document in RStudio and optionally
+  navigating the cursor to a particular point in the file. The method is
+  synchronous and returns the document ID upon completion.
 
-    !end-bullet!
--   !begin-bullet!
-    `getSourceEditorContext()` gains the `id` argument, to be used to
-    request the editor context for a document with an already-known ID.
-    (#251)
+* Fixed an issue where `rstudioapi::askForSecret()` would erroneously fall back
+  to using `rstudioapi::askForPassword()` during Knit.
 
-    !end-bullet!
--   !begin-bullet!
-    Added `documentOpen()`, for opening a document in RStudio and
-    optionally navigating the cursor to a particular point in the file.
-    The method is synchronous and returns the document ID upon
-    completion.
-
-    !end-bullet!
--   !begin-bullet!
-    Fixed an issue where `rstudioapi::askForSecret()` would erroneously
-    fall back to using `rstudioapi::askForPassword()` during Knit.
-
-    !end-bullet!
--   !begin-bullet!
-    Added `registerCommandCallback`, `registerCommandStreamCallback`,
-    and `unregisterCommandCallback`, used to execute a callback after an
-    IDE command is executed.
-
-    !end-bullet!
-
-!end-bullets-1!
+* Added `registerCommandCallback`, `registerCommandStreamCallback`, and
+  `unregisterCommandCallback`, used to execute a callback after an IDE command
+  is executed.
+  
 
 # rstudioapi 0.13
 
-!begin-bullets-2!
+* Fixed an issue where `rstudioapi::insertText()` would fail. (#208)
 
--   !begin-bullet!
-    Fixed an issue where `rstudioapi::insertText()` would fail. (#208)
-    !end-bullet!
-
-!end-bullets-2!
 
 # rstudioapi 0.12
 
-!begin-bullets-3!
+* Fixed an issue where remote `rstudioapi` calls would erroneously use
+  a previous response in some cases.
+  
+* Allow `navigateToFile` to accept an empty file. This file will default to the file
+  currently in view in the active column.
 
--   !begin-bullet!
-    Fixed an issue where remote `rstudioapi` calls would erroneously use
-    a previous response in some cases.
+* Added `registerChunkExecCallback` and `unregisterChunkExecCallback`, used to
+  execute a callback after a chunk is ran.
 
-    !end-bullet!
--   !begin-bullet!
-    Allow `navigateToFile` to accept an empty file. This file will
-    default to the file currently in view in the active column.
-
-    !end-bullet!
--   !begin-bullet!
-    Added `registerChunkExecCallback` and `unregisterChunkExecCallback`,
-    used to execute a callback after a chunk is ran.
-
-    !end-bullet!
-
-!end-bullets-3!
 
 # rstudioapi 0.11
 
-!begin-bullets-4!
+* `rstudioapi::launcherResourceLimit()` now properly delegates the type
+  and memory arguments. (#164)
 
--   !begin-bullet!
-    `rstudioapi::launcherResourceLimit()` now properly delegates the
-    type and memory arguments. (#164)
+* `rstudioapi` gains the function `highlightUi()`, used to highlight UI
+  elements in newer versions of RStudio.
+  
+* Paths returned from `selectFile()` are now properly marked with
+  UTF-8 encoding.
 
-    !end-bullet!
--   !begin-bullet!
-    `rstudioapi` gains the function `highlightUi()`, used to highlight
-    UI elements in newer versions of RStudio.
+* It is now possible for `rstudioapi` to communicate with a parent RStudio
+  session, for R sessions launched as RStudio jobs. Use
+  `rstudioapi::isAvailable(child_ok = TRUE)` to assert that it's okay to check
+  that `rstudioapi` is available and is running within an RStudio job.
 
-    !end-bullet!
--   !begin-bullet!
-    Paths returned from `selectFile()` are now properly marked with
-    UTF-8 encoding.
+* Added `bugReport()`, a helper function for reporting RStudio bugs
+  on the GitHub issue tracker with an issue template pre-populated
+  with some helpful diagnostic information.
 
-    !end-bullet!
--   !begin-bullet!
-    It is now possible for `rstudioapi` to communicate with a parent
-    RStudio session, for R sessions launched as RStudio jobs. Use
-    `rstudioapi::isAvailable(child_ok = TRUE)` to assert that it's okay
-    to check that `rstudioapi` is available and is running within an
-    RStudio job.
+* Added `userIdentity` and `systemUsername`, used to retrieve information about
+  the current user.
 
-    !end-bullet!
--   !begin-bullet!
-    Added `bugReport()`, a helper function for reporting RStudio bugs on
-    the GitHub issue tracker with an issue template pre-populated with
-    some helpful diagnostic information.
-
-    !end-bullet!
--   !begin-bullet!
-    Added `userIdentity` and `systemUsername`, used to retrieve
-    information about the current user.
-
-    !end-bullet!
-
-!end-bullets-4!
 
 # rstudioapi 0.10
 
-!begin-bullets-5!
+* Added the parameters `echo` and `focus` to `sendToConsole()`.
 
--   !begin-bullet!
-    Added the parameters `echo` and `focus` to `sendToConsole()`.
-    !end-bullet!
-
-!end-bullets-5!
 
 # rstudioapi 0.9
 
-!begin-bullets-6!
+* Added functions for displaying jobs in RStudio's Jobs pane: `jobAdd()`, `jobRemove()`, etc.
 
--   !begin-bullet!
-    Added functions for displaying jobs in RStudio's Jobs pane:
-    `jobAdd()`, `jobRemove()`, etc.
+* Added `translateLocalUrl()`, for translating localhost URLs to externally addressable ones on RStudio Server.
 
-    !end-bullet!
--   !begin-bullet!
-    Added `translateLocalUrl()`, for translating localhost URLs to
-    externally addressable ones on RStudio Server.
-
-    !end-bullet!
-
-!end-bullets-6!
 
 # rstudioapi 0.8
 
-!begin-bullets-7!
+* Added functions for installing + using build tools:
+  `buildToolsCheck()`, `buildToolsInstall()`, `buildToolsExec()`
+  
+* Added functions for installing + using themes: `addTheme()`, `applyTheme()`,
+  `convertTheme()`, `getThemes()`, `getThemeInfo()`.
 
--   !begin-bullet!
-    Added functions for installing + using build tools:
-    `buildToolsCheck()`, `buildToolsInstall()`, `buildToolsExec()`
+* Added `previewSql()`, for previewing output from executing a SQL query.
 
-    !end-bullet!
--   !begin-bullet!
-    Added functions for installing + using themes: `addTheme()`,
-    `applyTheme()`, `convertTheme()`, `getThemes()`, `getThemeInfo()`.
+* Added `askForSecret()`, for prompting the user to enter a password or otherwise privileged information.
 
-    !end-bullet!
--   !begin-bullet!
-    Added `previewSql()`, for previewing output from executing a SQL
-    query.
-
-    !end-bullet!
--   !begin-bullet!
-    Added `askForSecret()`, for prompting the user to enter a password
-    or otherwise privileged information.
-
-    !end-bullet!
--   !begin-bullet!
-    Fixed an issue where `getActiveProject()` failed for non-ASCII
-    paths. (#86)
-
-    !end-bullet!
-
-!end-bullets-7!
+* Fixed an issue where `getActiveProject()` failed for non-ASCII paths. (#86)
 
 # rstudioapi 0.7
 
-!begin-bullets-8!
+* Added methods for prompting the user for file paths: `selectFile()`,
+  `selectDirectory()`.
 
--   !begin-bullet!
-    Added methods for prompting the user for file paths: `selectFile()`,
-    `selectDirectory()`.
+* `askForPassword()` gains a default prompt (#41)
 
-    !end-bullet!
--   !begin-bullet!
-    `askForPassword()` gains a default prompt (#41)
+* Add `createProjectTemplate()` function
 
-    !end-bullet!
--   !begin-bullet!
-    Add `createProjectTemplate()` function
+* Add `setPersistentValue()` / `getPersistentValue()` functions
 
-    !end-bullet!
--   !begin-bullet!
-    Add `setPersistentValue()` / `getPersistentValue()` functions
+* Add methods for interacting with Terminal tab:
+  `terminalActivate()`, `terminalClear()`, `terminalCreate()`, `terminalList()`,
+  `terminalBuffer()`, `terminalContext()`, `terminalVisible()`, `terminalBusy()`,
+  `terminalRunning()`, `terminalKill()`, `terminalSend()`, `terminalExecute()`,
+  and `terminalExitCode()`.
 
-    !end-bullet!
--   !begin-bullet!
-    Add methods for interacting with Terminal tab: `terminalActivate()`,
-    `terminalClear()`, `terminalCreate()`, `terminalList()`,
-    `terminalBuffer()`, `terminalContext()`, `terminalVisible()`,
-    `terminalBusy()`, `terminalRunning()`, `terminalKill()`,
-    `terminalSend()`, `terminalExecute()`, and `terminalExitCode()`.
-
-    !end-bullet!
-
-!end-bullets-8!
 
 # rstudioapi 0.6
 
-!begin-bullets-9!
+* Add sendToConsole function
 
--   !begin-bullet!
-    Add sendToConsole function
+* Add APIs for setting cursor position in document
 
-    !end-bullet!
--   !begin-bullet!
-    Add APIs for setting cursor position in document
-
-    !end-bullet!
-
-!end-bullets-9!
 
 # rstudioapi 0.5
 
-!begin-bullets-10!
+* Add askForPassword function
 
--   !begin-bullet!
-    Add askForPassword function
+* Add getActiveProject function
 
-    !end-bullet!
--   !begin-bullet!
-    Add getActiveProject function
-
-    !end-bullet!
-
-!end-bullets-10!
 
 # rstudioapi 0.4
 
-!begin-bullets-11!
+* Add API methods for interacting with a document open in RStudio: 'insertText()', 'modifyRange()' and 'getActiveDocumentContext()'.
 
--   !begin-bullet!
-    Add API methods for interacting with a document open in RStudio:
-    'insertText()', 'modifyRange()' and 'getActiveDocumentContext()'.
-    !end-bullet!
-
-!end-bullets-11!
 
 # rstudioapi 0.3
 
-!begin-bullets-12!
+* Add stub and documentation for sourceMarker function
 
--   !begin-bullet!
-    Add stub and documentation for sourceMarker function
-    !end-bullet!
-
-!end-bullets-12!
 
 # rstudioapi 0.2
 
-!begin-bullets-13!
+* Compatibility with calling conventions for RStudio v0.99
 
--   !begin-bullet!
-    Compatibility with calling conventions for RStudio v0.99
+* Stubs and documentation for versionInfo, previewRd, and viewer functions
 
-    !end-bullet!
--   !begin-bullet!
-    Stubs and documentation for versionInfo, previewRd, and viewer
-    functions
-
-    !end-bullet!
-
-!end-bullets-13!
 
 # rstudioapi 0.1
 
-!begin-bullets-14!
-
--   !begin-bullet!
-    Initial release to CRAN
-    !end-bullet!
-
-!end-bullets-14!
+* Initial release to CRAN

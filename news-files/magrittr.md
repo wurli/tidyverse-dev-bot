@@ -2,116 +2,71 @@
 
 # magrittr 2.0.3
 
-!begin-bullets-1!
+* Fixed a C level protection issue in `%>%` (#256).
 
--   !begin-bullet!
-    Fixed a C level protection issue in `%>%` (#256).
-    !end-bullet!
-
-!end-bullets-1!
 
 # magrittr 2.0.2
 
-!begin-bullets-2!
+* New eager pipe `%!>%` for sequential evaluation (#247). Consider
+  using `force()` in your functions instead to make them strict, if
+  sequentiality is required. See the examples in `?"pipe-eager"`.
 
--   !begin-bullet!
-    New eager pipe `%!>%` for sequential evaluation (#247). Consider
-    using `force()` in your functions instead to make them strict, if
-    sequentiality is required. See the examples in `?"pipe-eager"`.
+* Fixed an issue that could cause pipe invocations to fail in versions of
+  R built with `--enable-strict-barrier`. (#239, @kevinushey)
 
-    !end-bullet!
--   !begin-bullet!
-    Fixed an issue that could cause pipe invocations to fail in versions
-    of R built with `--enable-strict-barrier`. (#239, @kevinushey)
-
-    !end-bullet!
-
-!end-bullets-2!
 
 # magrittr 2.0.1
 
-!begin-bullets-3!
+* Fixed issue caused by objects with certain names being present in
+  the calling environment (#233).
 
--   !begin-bullet!
-    Fixed issue caused by objects with certain names being present in
-    the calling environment (#233).
+* Fixed regression in `freduce()` with long lists (kcf-jackson/sketch#5).
 
-    !end-bullet!
--   !begin-bullet!
-    Fixed regression in `freduce()` with long lists
-    (kcf-jackson/sketch#5).
-
-    !end-bullet!
-
-!end-bullets-3!
 
 # magrittr 2.0.0
 
 ## Fast and lean implementation of the pipe
 
-!begin-bullet!
-
 The pipe has been rewritten in C with the following goals in mind:
 
-!end-bullet!
-
-!begin-bullets-4!
-
--   !begin-bullet!
-    Minimal performance cost.
-    !end-bullet!
--   !begin-bullet!
-    Minimal impact on backtraces.
-    !end-bullet!
--   !begin-bullet!
-    No impact on reference counts.
-    !end-bullet!
-
-!end-bullets-4!
-
-!begin-bullet!
+- Minimal performance cost.
+- Minimal impact on backtraces.
+- No impact on reference counts.
 
 As part of this rewrite we have changed the behaviour of the pipe to
 make it closer to the implementation that will likely be included in a
-future version of R. The pipe now evaluates piped expressions lazily
-(#120). The main consequence of this change is that warnings and errors
-can now be handled by trailing pipe calls:
+future version of R. The pipe now evaluates piped expressions lazily (#120).
+The main consequence of this change is that warnings and errors can
+now be handled by trailing pipe calls:
 
-!end-bullet!
-
-``` r
+```r
 stop("foo") %>% try()
 warning("bar") %>% suppressWarnings()
 ```
 
+
 ## Breaking changes
 
-!begin-bullet!
+The pipe rewrite should generally not affect your code. We have
+checked magrittr on 2800 CRAN packages and found only a dozen of
+failures. The development version of magrittr has been advertised on
+social media for a 3 months trial period, and no major issues were
+reported. However, there are some corner cases that might require
+updating your code. Below is a report of the backward
+incompatibilities we found in real code to help you transition, should
+you find an issue in your code.
 
-The pipe rewrite should generally not affect your code. We have checked
-magrittr on 2800 CRAN packages and found only a dozen of failures. The
-development version of magrittr has been advertised on social media for
-a 3 months trial period, and no major issues were reported. However,
-there are some corner cases that might require updating your code. Below
-is a report of the backward incompatibilities we found in real code to
-help you transition, should you find an issue in your code.
-
-!end-bullet!
 
 ### Behaviour of `return()` in a pipeline
 
-!begin-bullet!
-
 In previous versions of magrittr, the behaviour of `return()` within
 pipe expressions was undefined. Should it return from the current pipe
-expression, from the whole pipeline, or from the enclosing function? The
-behaviour that makes the most sense is to return from the enclosing
-function. However, we can't make this work easily with the new
-implementation, and so calling `return()` is now an error.
+expression, from the whole pipeline, or from the enclosing function?
+The behaviour that makes the most sense is to return from the
+enclosing function. However, we can't make this work easily with the
+new implementation, and so calling `return()` is now an error.
 
-!end-bullet!
-
-``` r
+```r
 my_function <- function(x) {
   x %>% {
     if (.) return("true")
@@ -123,14 +78,10 @@ my_function(TRUE)
 #> Error: no function to return from, jumping to top level
 ```
 
-!begin-bullet!
-
 In magrittr 1.5, `return()` used to return from the current pipe
 expression. You can rewrite this to the equivalent:
 
-!end-bullet!
-
-``` r
+```r
 my_function <- function(x) {
   x %>% {
     if (.) {
@@ -145,25 +96,17 @@ my_function(TRUE)
 #> [1] "true"
 ```
 
-!begin-bullet!
-
 For backward-compatibility we have special-cased trailing `return()`
 calls as this is a common occurrence in packages:
 
-!end-bullet!
-
-``` r
+```r
 1 %>% identity() %>% return()
 ```
 
-!begin-bullet!
+Note however that this only returns from the pipeline, not the
+enclosing function (which is the historical behaviour):
 
-Note however that this only returns from the pipeline, not the enclosing
-function (which is the historical behaviour):
-
-!end-bullet!
-
-``` r
+```r
 my_function <- function() {
   "value" %>% identity() %>% return()
   "wrong value"
@@ -173,194 +116,120 @@ my_function()
 #> [1] "wrong value"
 ```
 
-!begin-bullet!
-
 It is generally best to avoid using `return()` in a pipeline, even if
 trailing.
 
-!end-bullet!
 
 ### Failures caused by laziness
 
-!begin-bullet!
+With the new lazy model for the evaluation of pipe expressions,
+earlier parts of a pipeline are not yet evaluated when the last pipe
+expression is called. They only get evaluated when the last function
+actually uses the piped arguments:
 
-With the new lazy model for the evaluation of pipe expressions, earlier
-parts of a pipeline are not yet evaluated when the last pipe expression
-is called. They only get evaluated when the last function actually uses
-the piped arguments:
-
-!end-bullet!
-
-``` r
+```r
 ignore <- function(x) "return value"
 stop("never called") %>% ignore()
 #> [1] "return value"
 ```
 
-!begin-bullet!
-
 This should generally not cause problems. However we found some
 functions with special behaviour, written under the assumption that
 earlier parts of the pipeline were already evaluated and had already
 produced side effects. This is generally incorrect behaviour because
-that means that these functions do not work properly when called with
-the nested form, e.g. `f(g(1))` instead of `1 %>% g() %>% f()`.
-
-!end-bullet!
-
-!begin-bullet!
+that means that these functions do not work properly when called
+with the nested form, e.g. `f(g(1))` instead of `1 %>% g() %>% f()`.
 
 The solution to fix this is to call `force()` on the inputs to force
 evaluation, and only then check for side effects:
 
-!end-bullet!
-
-``` r
+```r
 my_function <- function(data) {
   force(data)
   peek_side_effect()
 }
 ```
 
-!begin-bullet!
-
 Another issue caused by laziness is that if any function in a pipeline
 returns invisibly, than the whole pipeline returns invisibly as well.
 
-!end-bullet!
-
-``` r
+```r
 1 %>% identity() %>% invisible()
 1 %>% invisible() %>% identity()
 1 %>% identity() %>% invisible() %>% identity()
 ```
 
-!begin-bullet!
-
 This is consistent with the equivalent nested code. This behaviour can
 be worked around in two ways. You can force visibility by wrapping the
 pipeline in parentheses:
 
-!end-bullet!
-
-``` r
+```r
 my_function <- function(x) {
   (x %>% invisible() %>% identity())
 }
 ```
 
-!begin-bullet!
-
 Or by assigning the result to a variable and return it:
 
-!end-bullet!
-
-``` r
+```r
 my_function <- function(x) {
   out <- x %>% invisible() %>% identity()
   out
 }
 ```
 
+
 ### Incorrect call stack introspection
 
-!begin-bullet!
-
 The magrittr expressions are no longer evaluated in frames that can be
-inspected by `sys.frames()` or `sys.parent()`. Using these functions for
-implementing actual functionality (as opposed as debugging tools) is
-likely to produce bugs. Instead, you should generally use
+inspected by `sys.frames()` or `sys.parent()`. Using these functions
+for implementing actual functionality (as opposed as debugging tools)
+is likely to produce bugs. Instead, you should generally use
 `parent.frame()` which works even when R code is called from
-non-inspectable frames. This happens with e.g. `do.call()` and the new C
-implementation of magrittr.
+non-inspectable frames. This happens with e.g. `do.call()` and the new
+C implementation of magrittr.
 
-!end-bullet!
 
 ### Incorrect assumptions about magrittr internals
 
-!begin-bullet!
+Some packages were depending on how magrittr was internally
+structured. Robust code should only use the documented and exported
+API of other packages.
 
-Some packages were depending on how magrittr was internally structured.
-Robust code should only use the documented and exported API of other
-packages.
-
-!end-bullet!
 
 ## Bug fixes
 
-!begin-bullets-5!
+* Can now use the placeholder `.` with the splicing operator `!!!`
+  from rlang (#191).
 
--   !begin-bullet!
-    Can now use the placeholder `.` with the splicing operator `!!!`
-    from rlang (#191).
+* Piped arguments are now persistent. They can be evaluated after the
+  pipeline has returned, which fixes subtle issues with function
+  factories (#159, #195).
 
-    !end-bullet!
--   !begin-bullet!
-    Piped arguments are now persistent. They can be evaluated after the
-    pipeline has returned, which fixes subtle issues with function
-    factories (#159, #195).
-
-    !end-bullet!
-
-!end-bullets-5!
 
 # magrittr 1.5
 
 ## New features
 
 ### Functional sequences.
-
-!begin-bullet!
-
-A pipeline, or a "functional sequence", need not be applied to a
-left-hand side value instantly. Instead it can serve as a function
-definition. A pipeline where the left-most left-hand side is the
-magrittr placeholder (the dot `.`) will thus create a function, which
-applies each right-hand side in sequence to its argument,
-e.g. `f <- . %>% abs %>% mean(na.rm = TRUE)`.
-
-!end-bullet!
+A pipeline, or a "functional sequence", need not be applied
+to a left-hand side value instantly. Instead it can serve as
+a function definition. A pipeline where the left-most left-hand
+side is the magrittr placeholder (the dot `.`) will thus create a
+function, which applies each right-hand side in sequence to its
+argument, e.g. `f <- . %>% abs %>% mean(na.rm = TRUE)`.
 
 ### New operators
-
-!begin-bullet!
-
 Three new operators are introduced for some special cases
 
-!end-bullet!
+* Assignment pipe: `%<>%`
+* Tee pipe: `%T>%`
+* Exposition pipe: `%$%`
 
-!begin-bullets-6!
-
--   !begin-bullet!
-    Assignment pipe: `%<>%`
-    !end-bullet!
--   !begin-bullet!
-    Tee pipe: `%T>%`
-    !end-bullet!
--   !begin-bullet!
-    Exposition pipe: `%$%`
-    !end-bullet!
-
-!end-bullets-6!
-
-!begin-bullet!
-
-For more information see the documentation, e.g. `?%T>%`.
-
-!end-bullet!
+For more information see the documentation, e.g. `?%T>%`.
 
 ### Lambdas
-
-!begin-bullet!
-
 Lambdas can now be made by enclosing several statements in curly braces,
 and is a unary function of the dot argument.
 
-!end-bullet!
-
-!begin-bullet!
-
-For more information and examples, see the updated vignette, and help
-files.
-
-!end-bullet!
+For more information and examples, see the updated vignette, and help files.

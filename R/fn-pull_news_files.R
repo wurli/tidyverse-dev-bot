@@ -1,15 +1,10 @@
-#' Read NEWS.md files for tidyverse pkgs
-#'
-#' This function uses pandoc to read and parse NEWS.md files for tidyverse
-#' packages. A custom lua filter is used to add annotations indicating lines
-#' where individual bullets and bullet lists begin/end.
-#'
-#' @param urls A named list - names indicate packages and values indicate URLs
-#'   to NEWS.md files
-#' @param dir The directory to write the files to
-#'
-#' @return A named list of filepaths to the created documents
-pull_news_files <- function(urls, dir = "news-files") {
+pull_news_files <- function(urls, 
+                            dir = "news-files", 
+                            hashes = "hashes.rds", 
+                            include_old = FALSE) {
+  
+  hash_loc    <- file.path(dir, hashes)
+  prev_hashes <- if (file.exists(hash_loc)) read_rds(file.path(dir, hashes)) else list()
   
   # For notifications
   force(urls)
@@ -17,34 +12,47 @@ pull_news_files <- function(urls, dir = "news-files") {
   stopifnot(!is.null(names(urls)))
   
   # Use pandoc to convert the docs directly from the URL
-  urls |> 
+  out <- urls |> 
     imap(function(url, pkg) {
       
-      cli::cli_alert_info("Reading/formatting package {.pkg {pkg}}")
-      
-      file <- glue("{dir}/{pkg}.md")
-      
-      res <- tryCatch(
-        {
-          system2(
-            "pandoc", c("-o", file, url, "--lua-filter annotate-bullets.lua"),
-            stdout = TRUE
-          )
-          TRUE
-        },
-        warning = function(w) {
-          cli::cli_alert_warning("Failed to read/format package {.pkg {pkg}}")
+      news <- tryCatch(
+        read_file(url),
+        error = function(e) {
           cli::cli_warn(c(
-            "Failed to read/format package {.pkg {pkg}}",
-            i = paste0("Original error:\n", w$message)
+            "Could not read news for package {.pkg {pkg}}",
+            i = "Here's the error: {e$message}"
           ))
           NULL
         }
-      )
+      ) 
       
-      if (isTRUE(res)) file else NULL
+      if (is.null(news)) {
+        return(NULL)
+      }
+      
+      hash <- rlang::hash(news)
+      
+      file <- glue("{dir}/{pkg}.md")
+      
+      if (identical(hash, prev_hashes[[pkg]])) {
+        cli::cli_alert_info("No changes to news for package {.pkg {pkg}}")
+        return(if (include_old) file else NULL)
+      }
+      
+      cli::cli_alert_warning("Caching news file for package {.pkg {pkg}}")
+      
+      # Sorry
+      prev_hashes[[pkg]] <<- hash
+      
+      write_file(news, file)
+      
+      file
       
     }) |> 
-    compact()
+    compact() 
+  
+  write_rds(prev_hashes, hash_loc)
+  
+  out
   
 }

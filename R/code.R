@@ -1,50 +1,32 @@
 library(tidyverse)
 library(glue)
 
+.max_tweet_length <- 280L
+.tweet_url_length <- 23L
+
 list.files("R", "^fn-", full.names = TRUE) |> 
   walk(source)
 
-new_bullets <- news_urls(fake_package = "NEWS.md") |> 
-  pull_news_files() |> 
-  get_news_data() |> 
-  remove_old_bullets(overwrite = F)
+# TODO: Fix lua filter so that bullets are annotated correctly, i.e. using
+# a for-loop. This is messing things up, particularly when bullets include
+# code blocks
 
-format_bullets <- function(x) {
-  
-  x <- x |> 
-    mutate(
-      has_parent = !is.na(parent_id),
-      has_children = bullet_id %in% parent_id, 
-      .before = 1
-    )
-  
-  max_depth <- max(x$bullets_level)
-  
-  out <- list()
-  
-  get_bullets <- function(depth = 1, parent = NULL) {
-   
-    b <- x |> 
-      filter(
-        bullets_level == depth,
-        if (!is.null(parent)) parent_id == parent else TRUE
-      ) |> 
-      select(text, has_children, bullet_id)
-    
-    b |> 
-      pmap(function(text, has_children, bullet_id) {
-        
-        if (!has_children) {
-          return(list(text = text))
-        }
-        
-        list(text = text, children = get_bullets(depth + 1, parent = bullet_id))
-        
-      }) |> 
-      set_names(~ paste0("b", seq_along(.)))
-     
-  }
-  
-  get_bullets()
-  
-}
+# urls                  <- news_urls(fake_package = "NEWS.md")
+# news_files            <- pull_news_files(urls, include_old = T)
+# news_files_annotated  <- annotate_news_files(news_files)
+# news_data             <- get_news_data(news_files_annotated)
+# new_bullets           <- remove_old_bullets(news_data, overwrite = F)
+# new_bullets_formatted <- format_bullets(new_bullets)
+
+new_bullets_formatted <- news_urls(fake_package = "NEWS.md", .package = "rlang") |> 
+  pull_news_files(include_old = T) |> 
+  annotate_news_files() |> 
+  get_news_data() |> 
+  remove_old_bullets(overwrite = F) |> 
+  format_bullets()
+
+formatted <- news_data |> 
+  format_bullets() 
+
+x <- formatted |> 
+  make_tweets()

@@ -1,4 +1,4 @@
-news_urls <- function(...) {
+news_urls <- function(..., .package = NULL, .for_humans = FALSE) {
   
   # Commented code can be used to dynamically produce `org`. It's hard-coded
   # for clarity and consistency.
@@ -39,7 +39,7 @@ news_urls <- function(...) {
     haven         = "tidyverse", 
     hms           = "tidyverse", 
     httr          = "r-lib", 
-    jsonlite      = "jeroen", 
+    # jsonlite      = "jeroen", # Uses NEWS (not .md) and master instead of main
     lubridate     = "tidyverse",
     magrittr      = "tidyverse", 
     modelr        = "tidyverse", 
@@ -58,9 +58,16 @@ news_urls <- function(...) {
     tidyverse     = "tidyverse"
   )
   
-  orgs |> 
-    imap(function(org, pkg) {
-      unclass(glue("https://raw.githubusercontent.com/{org}/{pkg}/main/NEWS.md"))
-    }) |> 
+  url_pattern <- if (.for_humans) {
+    "https://github.com/{org}/{pkg}/blob/main/NEWS.md"
+  } else {
+    "https://raw.githubusercontent.com/{org}/{pkg}/main/NEWS.md"
+  }
+  
+  out <- orgs |> 
+    imap(function(org, pkg) unclass(glue(url_pattern))) |> 
     c(list(...))
+  
+  if (is.null(.package)) out else out[.package]
+  
 }

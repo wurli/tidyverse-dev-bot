@@ -4,6 +4,8 @@ This markdown file is used for testing.
 
 * A new bullet in here
 
+* A bullet with *italic text*
+
 This is a bit more text that should be ignored.
 
 * This is a bullet which is edited

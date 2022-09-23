@@ -3,6 +3,10 @@ get_news_data <- function(files = list.files("news-files", full.names = TRUE)) {
   # For notifications
   force(files)
   
+  if (length(files) == 0) {
+    return(tibble())
+  }
+  
   if (is.null(names(files))) {
     files <- files |> 
       set_names(basename) |> 
@@ -13,18 +17,22 @@ get_news_data <- function(files = list.files("news-files", full.names = TRUE)) {
     map(read_lines) |> 
     map(function(text) {
       
-      out <- tibble(text = text) |> 
+      #out <- tibble(text = text) |> 
+      tibble(text = read_lines("news-files-annotated/rlang.md")) |> 
         
         # Add cols showing start/end lines for lists of bullets and 
         # individual bullets. Also give each bullet a unique id
         mutate(
-          bullets_start = str_detect(text, "!begin-bullets-\\d+!"),
-          bullets_end   = str_detect(text, "!end-bullets-\\d+!"),
-          bullets_level = cumsum(bullets_start) - cumsum(bullets_end),
-          bullet_start  = lag(str_detect(text, "!begin-bullet!"), default = FALSE),
-          bullet_end    = str_detect(text, "!end-bullet!"),
-          is_bullet     = as.logical(cumsum(bullet_start) - cumsum(bullet_end)) & bullets_level > 0,
-          bullet_id     = cumsum(bullet_start) + ifelse(is_bullet, 0, NA)
+          bullets_start   = str_detect(text, "!begin-bullets-\\d+!"),
+          bullets_end     = str_detect(text, "!end-bullets-\\d+!"),
+          bullets_level   = cumsum(bullets_start) - cumsum(bullets_end),
+          bullet_start    = lag(str_detect(text, "!begin-bullet!"), default = FALSE),
+          bullet_end      = str_detect(text, "!end-bullet!"),
+          is_bullet       = as.logical(cumsum(bullet_start) - cumsum(bullet_end)) & bullets_level > 0,
+          bullet_id       = cumsum(bullet_start) + ifelse(is_bullet, 0, NA),
+          codeblock_start = str_detect(text, "!codeblock-start!"),
+          codeblock_end   = str_detect(text, "!codeblock-end!"),
+          is_codeblock    = as.logical(cumsum(codeblock_start) - cumsum(codeblock_end))
         ) |> 
         
         # Remove helpers and any non-tweet text, e.g. headings etc
