@@ -16,16 +16,37 @@ urls <- pkgs |>
   map(str_subset, "github\\.io", negate = TRUE) |> 
   imap(str_subset) 
 
-walk(urls, function(u) {
-  
-  system2("git", c("submodule", "add", u, "submodules"))
-  
-})
-  
 stopifnot(map_lgl(urls, ~ length(.) == 1))
 
-news_urls        <- glue("https://raw.githubusercontent.com/tidyverse/{pkgs}/main/NEWS.md")
-names(news_urls) <- pkgs
+all(pkgs %in% list.files("submodules"))
+
+git <- function(..., .repo = NULL, .quiet = TRUE) {
+  
+  out <- system2("git", c(
+    if (!is.null(.repo)) glue("--work-tree={.repo}"),
+    ...
+  ), stdout = TRUE)
+  
+  out <- as_glue(paste(out, collapse = "\n"))
+  if (!.quiet) cat(out)
+  out
+  
+}
+
+list.files("submodules", full.names = TRUE)[1:3] |>
+  set_names(basename) |> 
+  map(function(submodule) {
+    
+    git("fetch", .repo = submodule)
+    status <- git("status", "README.md", .repo = submodule)
+    
+    if (str_detect(status, "Your branch is up to date")) {
+      return(NULL)
+    }
+    
+    git("pull", .repo = submodule)
+    
+  })
 
 updates <- news_urls %>% 
   map( ~ tryCatch(
