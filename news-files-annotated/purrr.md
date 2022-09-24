@@ -6,31 +6,44 @@
 
 !begin-bullets-1!
 
--   `cross()` and all its variants have been deprecated in favour of
+-   !begin-bullet!
+    `cross()` and all its variants have been deprecated in favour of
     `tidyr::expand_grid()`. These functions were slow and buggy and we
     no longer think they are the right approach to solving this problem.
     See #768 for more information.
 
--   `update_list()` (#858) and `rerun()` (#877), and the use of
+    !end-bullet!
+-   !begin-bullet!
+    `update_list()` (#858) and `rerun()` (#877), and the use of
     tidyselect with `map_at()` and friends (#874) have been deprecated.
     These functions use some form of non-standard evaluation which we
     now believe is a poor fit for purrr.
 
--   The `lift_*` family of functions has been superseded. We no longer
+    !end-bullet!
+-   !begin-bullet!
+    The `lift_*` family of functions has been superseded. We no longer
     believe these to be a good fit for purrr because they rely on a
     style of function manipulation that is very uncommon in R code
     (#871).
 
--   `*_raw()` have been deprecated because they are of limited use and
+    !end-bullet!
+-   !begin-bullet!
+    `*_raw()` have been deprecated because they are of limited use and
     you can now use `map_vec()` instead (#903).
 
--   `prepend()`, `rdunif()`, `rbernoulli()`, `when()`, and
+    !end-bullet!
+-   !begin-bullet!
+    `prepend()`, `rdunif()`, `rbernoulli()`, `when()`, and
     `list_along()` have all been deprecated (#925). It's now clear that
     they don't align with the core purpose of purrr.
 
--   `splice()` is deprecated because we no longer believe that automatic
+    !end-bullet!
+-   !begin-bullet!
+    `splice()` is deprecated because we no longer believe that automatic
     splicing makes for good UI. Instead use `list2()` + `!!!` or
     `list_flatten()` (#869).
+
+    !end-bullet!
 
 !end-bullets-1!
 
@@ -38,19 +51,28 @@
 
 !begin-bullets-2!
 
--   `flatten()` and friends are superseded in favour of
+-   !begin-bullet!
+    `flatten()` and friends are superseded in favour of
     `list_flatten()`, `list_c()`, `list_cbind()`, and `list_rbind()`.
 
--   `*_dfc()` and `*_dfr()` have been superseded in favour of using the
+    !end-bullet!
+-   !begin-bullet!
+    `*_dfc()` and `*_dfr()` have been superseded in favour of using the
     appropriate map function along with `list_rbind()` or `list_cbind()`
     (#912).
 
--   `simplify()`, `simplify_all()`, and `as_vector()` have been
+    !end-bullet!
+-   !begin-bullet!
+    `simplify()`, `simplify_all()`, and `as_vector()` have been
     deprecated in favour of `list_simplify()`. It provides a more
     consistent definition of simplification (#900).
 
--   `transpose()` has been deprecated in favour of `list_transpose()`
+    !end-bullet!
+-   !begin-bullet!
+    `transpose()` has been deprecated in favour of `list_transpose()`
     (#875). It has built-in simplification.
+
+    !end-bullet!
 
 !end-bullets-2!
 
@@ -58,25 +80,36 @@
 
 !begin-bullets-3!
 
--   `as_function()`, `at_depth()`, and the `...f` argument to
+-   !begin-bullet!
+    `as_function()`, `at_depth()`, and the `...f` argument to
     `partial()` are no longer supported. They have been defunct for
     quite some time.
 
--   Soft deprecated functions: `%@%`, `reduce_right()`,
+    !end-bullet!
+-   !begin-bullet!
+    Soft deprecated functions: `%@%`, `reduce_right()`,
     `reduce2_right()`, `accumulate_right()` are now fully deprecated.
     Similarly, the `.lazy`, `.env`, and `.first` arguments to
     `partial()`, and the `.right` argument to `detect()` and
     `detect_index()` are fully deprecated. Removing elements with `NULL`
     in `list_modify()` and `list_merge()` is now fully deprecated.
 
--   `is_numeric()` and `is_scalar_numeric()` have been removed. They
+    !end-bullet!
+-   !begin-bullet!
+    `is_numeric()` and `is_scalar_numeric()` have been removed. They
     have been deprecated since purrr 0.2.3 (Sep 2017).
 
--   `invoke_*()` is now deprecated. It was superseded in 0.3.0
+    !end-bullet!
+-   !begin-bullet!
+    `invoke_*()` is now deprecated. It was superseded in 0.3.0
     (Jan 2019) and 3.5 years later, we have decided to deprecate it as
     part of the API refinement in the 1.0.0 release.
 
--   `map_call()` has been removed. It was made defunct in 0.3.0.
+    !end-bullet!
+-   !begin-bullet!
+    `map_call()` has been removed. It was made defunct in 0.3.0.
+
+    !end-bullet!
 
 !end-bullets-3!
 
@@ -84,38 +117,57 @@
 
 !begin-bullets-4!
 
--   `*_at()` can now take a function (or formula) that's passed the
+-   !begin-bullet!
+    `*_at()` can now take a function (or formula) that's passed the
     vector of element names and returns the elements to select.
 
--   New `map_vec()`, `map2_vec()`, and `pmap_vec()` work on all types of
+    !end-bullet!
+-   !begin-bullet!
+    New `map_vec()`, `map2_vec()`, and `pmap_vec()` work on all types of
     vectors, extending `map_lgl()`, `map_int()`, and friends so that you
     can easily work with dates, factors, date-times and more (#435).
 
--   New `keep_at()` and `discard_at()` that work like `keep()` and
+    !end-bullet!
+-   !begin-bullet!
+    New `keep_at()` and `discard_at()` that work like `keep()` and
     `discard()` but operation on element names rather than element
     contents (#817).
 
--   Some mapping functions have now a `.progress` argument to create a
+    !end-bullet!
+-   !begin-bullet!
+    Some mapping functions have now a `.progress` argument to create a
     progress bar. See `?progress_bars` (#149).
 
--   purrr is now licensed as MIT (#805).
+    !end-bullet!
+-   !begin-bullet!
+    purrr is now licensed as MIT (#805).
 
--   `modify()`, `modify_if()`, `modify_at()`, and `modify2()` are no
+    !end-bullet!
+-   !begin-bullet!
+    `modify()`, `modify_if()`, `modify_at()`, and `modify2()` are no
     longer generics. We have discovered a simple implementation that no
     longer requires genericity and methods were only provided by a very
     small number of packages (#894).
 
--   purrr now uses the base pipe (`|>`) and anonymous function short
+    !end-bullet!
+-   !begin-bullet!
+    purrr now uses the base pipe (`|>`) and anonymous function short
     hand (`\(x)`), in all examples. This means that examples will no
     longer work in R 4.0 and earlier so in those versions of R, the
     examples are automatically converted to a regular section with a
     note that they might not work (#936).
 
--   When map functions fail, they now report the element they failed at
+    !end-bullet!
+-   !begin-bullet!
+    When map functions fail, they now report the element they failed at
     (#945).
 
--   New `modify_tree()` for recursively modifying nested data structures
+    !end-bullet!
+-   !begin-bullet!
+    New `modify_tree()` for recursively modifying nested data structures
     (#720).
+
+    !end-bullet!
 
 !end-bullets-4!
 
@@ -123,18 +175,27 @@
 
 !begin-bullets-5!
 
--   New `list_c()`, `list_rbind()`, and `list_cbind()` make it easy to
+-   !begin-bullet!
+    New `list_c()`, `list_rbind()`, and `list_cbind()` make it easy to
     `c()`, `rbind()`, or `cbind()` all of the elements in a list.
 
--   New `list_simplify()` reduces a list of length-1 vectors to a
+    !end-bullet!
+-   !begin-bullet!
+    New `list_simplify()` reduces a list of length-1 vectors to a
     simpler atomic or S3 vector (#900).
 
--   New `list_transpose()` which automatically simplifies if possible
+    !end-bullet!
+-   !begin-bullet!
+    New `list_transpose()` which automatically simplifies if possible
     (#875).
 
--   `accumulate()` and `accumulate2()` now both simplify the output if
+    !end-bullet!
+-   !begin-bullet!
+    `accumulate()` and `accumulate2()` now both simplify the output if
     possible using vctrs. New arguments `simplify` and `ptype` allow you
     to control the details of simplification (#774, #809).
+
+    !end-bullet!
 
 !end-bullets-5!
 
@@ -142,38 +203,53 @@
 
 !begin-bullets-6!
 
--   `_lgl()`, `_int()`, `_int()`, and `_dbl()` now use the same (strict)
+-   !begin-bullet!
+    `_lgl()`, `_int()`, `_int()`, and `_dbl()` now use the same (strict)
     coercion methods as vctrs (#904). This means that:
 
     !begin-bullets-7!
-    -   `map_chr(TRUE, identity)`, `map_chr(0L, identity)`, and
+    -   !begin-bullet!
+        `map_chr(TRUE, identity)`, `map_chr(0L, identity)`, and
         `map_chr(1L, identity)` are deprecated because we now believe
         that converting a logical/integer/double to a character vector
         should require an explicit coercion.
 
-    -   `map_int(1.5, identity)` now fails because we believe that
+        !end-bullet!
+    -   !begin-bullet!
+        `map_int(1.5, identity)` now fails because we believe that
         silently truncating doubles to integers is dangerous. But note
         that `map_int(1, identity)` still works since no numeric
         precision is lost.
 
-    -   `map_int(c(TRUE, FALSE), identity)`,
+        !end-bullet!
+    -   !begin-bullet!
+        `map_int(c(TRUE, FALSE), identity)`,
         `map_dbl(c(TRUE, FALSE), identity)`,
         `map_lgl(c(1L, 0L), identity)` and `map_lgl(c(1, 0), identity)`
         now succeed because 1/TRUE and 0/FALSE should be
         interchangeable.
 
-    !end-bullets-7!
+        !end-bullet!
 
--   `map2()`, `modify2()`, and `pmap()` now use tidyverse recycling
+    !end-bullets-7!
+    !end-bullet!
+-   !begin-bullet!
+    `map2()`, `modify2()`, and `pmap()` now use tidyverse recycling
     rules where vectors of length 1 are recycled to any size but all
     others must have the same length (#878).
 
--   `map2()` and `pmap()` now recycle names of their first input if
+    !end-bullet!
+-   !begin-bullet!
+    `map2()` and `pmap()` now recycle names of their first input if
     needed (#783).
 
--   `modify()`, `modify_if()`, and `modify_at()` have been reimplemented
+    !end-bullet!
+-   !begin-bullet!
+    `modify()`, `modify_if()`, and `modify_at()` have been reimplemented
     using vctrs principles. This shouldn't have an user facing impact,
     but it does make the implementation much simpler.
+
+    !end-bullet!
 
 !end-bullets-6!
 
@@ -181,23 +257,36 @@
 
 !begin-bullets-8!
 
--   `vec_depth()` is now `pluck_depth()` and works with more types of
+-   !begin-bullet!
+    `vec_depth()` is now `pluck_depth()` and works with more types of
     input (#818).
 
--   `pluck()` now requires indices to be length 1 (#813). It also now
+    !end-bullet!
+-   !begin-bullet!
+    `pluck()` now requires indices to be length 1 (#813). It also now
     reports the correct type if you supply an unexpected index.
 
--   `pluck()` now accepts negative integers, indexing from the right
+    !end-bullet!
+-   !begin-bullet!
+    `pluck()` now accepts negative integers, indexing from the right
     (#603).
 
--   `pluck()` and `chuck()` now fail if you provide named inputs to ...
+    !end-bullet!
+-   !begin-bullet!
+    `pluck()` and `chuck()` now fail if you provide named inputs to ...
     (#788).
 
--   `pluck()` no longer replaces 0-length vectors with `default`; it now
+    !end-bullet!
+-   !begin-bullet!
+    `pluck()` no longer replaces 0-length vectors with `default`; it now
     only applies absent and `NULL` components.
 
--   `pluck<-`/`assign_in()` can now modify non-existing locations
+    !end-bullet!
+-   !begin-bullet!
+    `pluck<-`/`assign_in()` can now modify non-existing locations
     (#704).
+
+    !end-bullet!
 
 !end-bullets-8!
 
@@ -205,15 +294,22 @@
 
 !begin-bullets-9!
 
--   `pluck<-`/`assign_in()` now sets elements to `NULL` rather than
+-   !begin-bullet!
+    `pluck<-`/`assign_in()` now sets elements to `NULL` rather than
     removing them (#636). Now use the explicit `zap()` if you want to
     remove elements.
 
--   `modify()`, `modify2()`, and `modify_if()` now correctly handle
+    !end-bullet!
+-   !begin-bullet!
+    `modify()`, `modify2()`, and `modify_if()` now correctly handle
     `NULL`s in replacement values (#655, #746, #753).
 
--   `list_modify()`'s interface has been standardised. Modifying with
+    !end-bullet!
+-   !begin-bullet!
+    `list_modify()`'s interface has been standardised. Modifying with
     `NULL` now always creates a `NULL` in the output (#810)
+
+    !end-bullet!
 
 !end-bullets-9!
 
@@ -221,12 +317,17 @@
 
 !begin-bullets-10!
 
--   New `list_update()` which is similar to `list_modify()` but doesn't
+-   !begin-bullet!
+    New `list_update()` which is similar to `list_modify()` but doesn't
     work recursively (#822).
 
--   `list_modify()` no longer recurses into data frames (and other
+    !end-bullet!
+-   !begin-bullet!
+    `list_modify()` no longer recurses into data frames (and other
     objects built on top of lists that are fundamentally non-list like)
     (#810).
+
+    !end-bullet!
 
 !end-bullets-10!
 
@@ -234,44 +335,69 @@
 
 !begin-bullets-11!
 
--   `modify()` no longer supports modifying calls or pairlists.
+-   !begin-bullet!
+    `modify()` no longer supports modifying calls or pairlists.
 
--   `modify_depth()` is no longer a generic. This makes it more
+    !end-bullet!
+-   !begin-bullet!
+    `modify_depth()` is no longer a generic. This makes it more
     consistent with `map_depth()`.
 
--   `map_depth()` now uses `is.list()` to determine if there's more
+    !end-bullet!
+-   !begin-bullet!
+    `map_depth()` now uses `is.list()` to determine if there's more
     depth to recurse into, as opposed to `!is_atomic(.x)` (#920).
 
--   `as_mapper()` is now around twice as fast when used with character,
+    !end-bullet!
+-   !begin-bullet!
+    `as_mapper()` is now around twice as fast when used with character,
     integer, or list (#820).
 
--   `possibly()` now defaults `otherwise` to NULL.
+    !end-bullet!
+-   !begin-bullet!
+    `possibly()` now defaults `otherwise` to NULL.
 
--   `modify_if(.else)` is now actually evaluated for atomic vectors
+    !end-bullet!
+-   !begin-bullet!
+    `modify_if(.else)` is now actually evaluated for atomic vectors
     (@mgirlich, #701).
 
--   `lmap()` now always returns a list, even if `.x` is a data frame.
+    !end-bullet!
+-   !begin-bullet!
+    `lmap()` now always returns a list, even if `.x` is a data frame.
     This makes it more consistent with other functions in the `map`
     family.
 
--   `lmap_if()` correctly handles `.else` functions (#847).
+    !end-bullet!
+-   !begin-bullet!
+    `lmap_if()` correctly handles `.else` functions (#847).
 
--   `every()` now correctly propagates missing values using the same
+    !end-bullet!
+-   !begin-bullet!
+    `every()` now correctly propagates missing values using the same
     rules as `&&` (#751). Internally, it has become a wrapper around
     `&&`. This makes it consistent with `&&` and also with `some()`
     which has always been a wrapper around `||` with the same
     propagation rules.
 
--   `every()` and `some()` now properly check the return value of their
+    !end-bullet!
+-   !begin-bullet!
+    `every()` and `some()` now properly check the return value of their
     predicate function. It must now return a `TRUE`, `FALSE`, or `NA`.
 
--   Greatly improved performance of functions created with `partial()`
+    !end-bullet!
+-   !begin-bullet!
+    Greatly improved performance of functions created with `partial()`
     (#715). Their invocation is now as fast as for functions creating
     manually.
 
--   `partial()` no longer inlines the function in the call stack. This
+    !end-bullet!
+-   !begin-bullet!
+    `partial()` no longer inlines the function in the call stack. This
     fixes issues when `partial()` is used with `lm()` for instance
     (#707).
+
+    !end-bullet!
 
 !end-bullets-11!
 
@@ -279,14 +405,21 @@
 
 !begin-bullets-12!
 
--   Fixed issue in `list_modify()` that prevented lists from being
+-   !begin-bullet!
+    Fixed issue in `list_modify()` that prevented lists from being
     removed with `zap()` (@adamroyjones, #777).
 
--   Added documentation for exporting functions created with purrr
+    !end-bullet!
+-   !begin-bullet!
+    Added documentation for exporting functions created with purrr
     adverb (@njtierney, #668). See `?faq-adverbs-export`.
 
--   Added `none()`, which tests that a predicate is false for all
+    !end-bullet!
+-   !begin-bullet!
+    Added `none()`, which tests that a predicate is false for all
     elements (the opposite of `every()`) (@AliciaSchep, #735).
+
+    !end-bullet!
 
 !end-bullets-12!
 
@@ -294,12 +427,19 @@
 
 !begin-bullets-13!
 
--   Maintenance release.
+-   !begin-bullet!
+    Maintenance release.
 
--   The documentation of `map()` and its variants has been improved by
+    !end-bullet!
+-   !begin-bullet!
+    The documentation of `map()` and its variants has been improved by
     @surdina as part of the Tidyverse Developer Day (@surdina, #671).
 
--   purrr now depends on R 3.2 or greater.
+    !end-bullet!
+-   !begin-bullet!
+    purrr now depends on R 3.2 or greater.
+
+    !end-bullet!
 
 !end-bullets-13!
 
@@ -307,7 +447,9 @@
 
 !begin-bullets-14!
 
--   Fix protection issues reported by rchk.
+-   !begin-bullet!
+    Fix protection issues reported by rchk.
+    !end-bullet!
 
 !end-bullets-14!
 
@@ -315,17 +457,28 @@
 
 !begin-bullets-15!
 
--   `reduce()` now forces arguments (#643).
+-   !begin-bullet!
+    `reduce()` now forces arguments (#643).
 
--   Fixed an issue in `partial()` with generic functions (#647).
+    !end-bullet!
+-   !begin-bullet!
+    Fixed an issue in `partial()` with generic functions (#647).
 
--   `negate()` now works with generic functions and functions with early
+    !end-bullet!
+-   !begin-bullet!
+    `negate()` now works with generic functions and functions with early
     returns.
 
--   `compose()` now works with generic functions again (#629, #639). Its
+    !end-bullet!
+-   !begin-bullet!
+    `compose()` now works with generic functions again (#629, #639). Its
     set of unit tests was expanded to cover many edge cases.
 
--   `prepend()` now works with empty lists (@czeildi, #637)
+    !end-bullet!
+-   !begin-bullet!
+    `prepend()` now works with empty lists (@czeildi, #637)
+
+    !end-bullet!
 
 !end-bullets-15!
 
@@ -335,7 +488,8 @@
 
 !begin-bullets-16!
 
--   `modify()` and variants are now wrapping `[[<-` instead of `[<-`.
+-   !begin-bullet!
+    `modify()` and variants are now wrapping `[[<-` instead of `[<-`.
     This change increases the genericity of these functions but might
     cause different behaviour in some cases.
 
@@ -345,15 +499,21 @@
     truncates the vector with a warning, `[[<-` fails with an error (as
     is appropriate).
 
--   `modify()` and variants now return the same type as the input when
+    !end-bullet!
+-   !begin-bullet!
+    `modify()` and variants now return the same type as the input when
     the input is an atomic vector.
 
--   All functionals taking predicate functions (like `keep()`,
+    !end-bullet!
+-   !begin-bullet!
+    All functionals taking predicate functions (like `keep()`,
     `detect()`, `some()`) got stricter. Predicate functions must now
     return a single `TRUE` or `FALSE`.
 
     This change is meant to detect problems early with a more meaningful
     error message.
+
+    !end-bullet!
 
 !end-bullets-16!
 
@@ -361,20 +521,31 @@
 
 !begin-bullets-17!
 
--   New `chuck()` function. This is a strict variant of `pluck()` that
+-   !begin-bullet!
+    New `chuck()` function. This is a strict variant of `pluck()` that
     throws errors when an element does not exist instead of returning
     `NULL` (@daniel-barnett, #482).
 
--   New `assign_in()` and `pluck<-` functions. They modify a data
+    !end-bullet!
+-   !begin-bullet!
+    New `assign_in()` and `pluck<-` functions. They modify a data
     structure at an existing pluck location.
 
--   New `modify_in()` function to map a function at a pluck location.
+    !end-bullet!
+-   !begin-bullet!
+    New `modify_in()` function to map a function at a pluck location.
 
--   `pluck()` now dispatches properly with S3 vectors. The vector class
+    !end-bullet!
+-   !begin-bullet!
+    `pluck()` now dispatches properly with S3 vectors. The vector class
     must implement a `length()` method for numeric indexing and a
     `names()` method for string indexing.
 
--   `pluck()` now supports primitive functions (#404).
+    !end-bullet!
+-   !begin-bullet!
+    `pluck()` now supports primitive functions (#404).
+
+    !end-bullet!
 
 !end-bullets-17!
 
@@ -382,16 +553,21 @@
 
 !begin-bullets-18!
 
--   New `.else` argument for `map_if()` and `modify_if()`. They take an
+-   !begin-bullet!
+    New `.else` argument for `map_if()` and `modify_if()`. They take an
     alternative function that is mapped over elements of the input for
     which the predicate function returns `FALSE` (#324).
 
--   `reduce()`, `reduce2()`, `accumulate()`, and `accumulate2()` now
+    !end-bullet!
+-   !begin-bullet!
+    `reduce()`, `reduce2()`, `accumulate()`, and `accumulate2()` now
     terminate early when the function returns a value wrapped with
     `done()` (#253). When an empty `done()` is returned, the value at
     the last iteration is returned instead.
 
--   Functions taking predicates (`map_if()`, `keep()`, `some()`,
+    !end-bullet!
+-   !begin-bullet!
+    Functions taking predicates (`map_if()`, `keep()`, `some()`,
     `every()`, `keep()`, etc) now fail with an informative message when
     the return value is not `TRUE` or `FALSE` (#470).
 
@@ -408,37 +584,57 @@
     where `NA` propagation is unsafe, e.g. in `if ()` conditions, make
     sure to use safe predicate functions like `is_true()`.
 
--   `modify()` and variants are now implemented using `length()`, `[[`,
+    !end-bullet!
+-   !begin-bullet!
+    `modify()` and variants are now implemented using `length()`, `[[`,
     and `[[<-` methods. This implementation should be compatible with
     most vector classes.
 
--   New `modify2()` and `imodify()` functions. These work like `map()`
+    !end-bullet!
+-   !begin-bullet!
+    New `modify2()` and `imodify()` functions. These work like `map()`
     and `imap()` but preserve the type of `.x` in the return value.
 
--   `pmap()` and `pwalk()` now preserve class for inputs of `factor`,
+    !end-bullet!
+-   !begin-bullet!
+    `pmap()` and `pwalk()` now preserve class for inputs of `factor`,
     `Date`, `POSIXct` and other atomic S3 classes with an appropriate
     `[[` method (#358, @mikmart).
 
--   `modify()`, `modify_if()` and `modify_at()` now preserve the class
+    !end-bullet!
+-   !begin-bullet!
+    `modify()`, `modify_if()` and `modify_at()` now preserve the class
     of atomic vectors instead of promoting them to lists. New S3 methods
     are provided for character, logical, double, and integer classes
     (@t-kalinowski, #417).
 
--   By popular request, `at_depth()` has been brought back as
+    !end-bullet!
+-   !begin-bullet!
+    By popular request, `at_depth()` has been brought back as
     `map_depth()`. Like `modify_depth()`, it applies a function at a
     specified level of a data structure. However, it transforms all
     traversed vectors up to `.depth` to bare lists (#381).
 
--   `map_at()`, `modify_at()` and `lmap_at()` accept negative values for
+    !end-bullet!
+-   !begin-bullet!
+    `map_at()`, `modify_at()` and `lmap_at()` accept negative values for
     `.at`, ignoring elements at those positions.
 
--   `map()` and `modify()` now work with calls and pairlists (#412).
+    !end-bullet!
+-   !begin-bullet!
+    `map()` and `modify()` now work with calls and pairlists (#412).
 
--   `modify_depth()` now modifies atomic leaves as well. This makes
+    !end-bullet!
+-   !begin-bullet!
+    `modify_depth()` now modifies atomic leaves as well. This makes
     `modify_depth(x, 1, fn)` equivalent to `modify(x, fn)` (#359).
 
--   New `accumulate2()` function which is to `accumulate()` what
+    !end-bullet!
+-   !begin-bullet!
+    New `accumulate2()` function which is to `accumulate()` what
     `reduce2()` is to `reduce()`.
+
+    !end-bullet!
 
 !end-bullets-18!
 
@@ -446,17 +642,22 @@
 
 !begin-bullets-19!
 
--   New `rate_backoff()` and `rate_delay()` functions to create rate
+-   !begin-bullet!
+    New `rate_backoff()` and `rate_delay()` functions to create rate
     objects. You can pass rates to `insistently()`, `slowly()`, or the
     lower level function `rate_sleep()`. This will cause a function to
     wait for a given amount of time with exponential backoff
     (increasingly larger waiting times) or for a constant delay.
 
--   `insistently(f)` modifies a function, `f`, so that it is repeatedly
+    !end-bullet!
+-   !begin-bullet!
+    `insistently(f)` modifies a function, `f`, so that it is repeatedly
     called until it succeeds (@richierocks, @ijlyttle).
 
     `slowly()` modifies a function so that it waits for a given amount
     of time between calls.
+
+    !end-bullet!
 
 !end-bullets-19!
 
@@ -469,7 +670,8 @@ arguments.
 
 !begin-bullets-20!
 
--   `partial()` now supports empty `... =` argument to specify the
+-   !begin-bullet!
+    `partial()` now supports empty `... =` argument to specify the
     position of future arguments, relative to partialised ones. This
     syntax is borrowed from (and implemented with)
     `rlang::call_modify()`.
@@ -478,21 +680,30 @@ arguments.
     renamed to `.f`, which is more consistent with other purrr function
     signatures.
 
--   `partial()` now supports quasiquotation. When you unquote an
+    !end-bullet!
+-   !begin-bullet!
+    `partial()` now supports quasiquotation. When you unquote an
     argument, it is evaluated only once at function creation time. This
     is more flexible than the `.lazy` argument since you can control the
     timing of evaluation for each argument. Consequently, `.lazy` is
     soft-deprecated (#457).
 
--   Fixed an infinite loop when partialised function is given the same
+    !end-bullet!
+-   !begin-bullet!
+    Fixed an infinite loop when partialised function is given the same
     name as the original function (#387).
 
--   `partial()` now calls `as_closure()` on primitive functions to
+    !end-bullet!
+-   !begin-bullet!
+    `partial()` now calls `as_closure()` on primitive functions to
     ensure argument matching (#360).
 
--   The `.lazy` argument of `partial()` is soft-deprecated in favour of
+    !end-bullet!
+-   !begin-bullet!
+    The `.lazy` argument of `partial()` is soft-deprecated in favour of
     quasiquotation:
 
+    !begin-codeblock!
     ``` r
     # Before
     partial(fn, u = runif(1), n = rnorm(1), .lazy = FALSE)
@@ -502,87 +713,135 @@ arguments.
     partial(fn, u = !!runif(1), n = rnorm(1))    # First constant
     ```
 
+    !end-codeblock!
+    !end-bullet!
+
 !end-bullets-20!
 
 ## Minor improvements and fixes
 
 !begin-bullets-21!
 
--   The tibble package is now in Suggests rather than Imports. This
+-   !begin-bullet!
+    The tibble package is now in Suggests rather than Imports. This
     brings the hard dependency of purrr to just rlang and magrittr.
 
--   `compose()` now returns an identity function when called without
+    !end-bullet!
+-   !begin-bullet!
+    `compose()` now returns an identity function when called without
     inputs.
 
--   Functions created with `compose()` now have the same formal
+    !end-bullet!
+-   !begin-bullet!
+    Functions created with `compose()` now have the same formal
     parameters as the first function to be called. They also feature a
     more informative print method that prints all composed functions in
     turn (@egnha, #366).
 
--   New `.dir` argument in `compose()`. When set to `"forward"`, the
+    !end-bullet!
+-   !begin-bullet!
+    New `.dir` argument in `compose()`. When set to `"forward"`, the
     functions are composed from left to right rather than right to left.
 
--   `list_modify()` now supports the `zap()` sentinel (reexported from
+    !end-bullet!
+-   !begin-bullet!
+    `list_modify()` now supports the `zap()` sentinel (reexported from
     rlang) to remove elements from lists. Consequently, removing
     elements with the ambiguous sentinel `NULL` is soft-deprecated.
 
--   The requirements of `list_modify()` and `list_merge()` have been
+    !end-bullet!
+-   !begin-bullet!
+    The requirements of `list_modify()` and `list_merge()` have been
     relaxed. Previously it required both the modified lists and the
     inputs to be either named or unnamed. This restriction now only
     applies to inputs in `...`. When inputs are all named, they are
     matched to the list by name. When they are all unnamed, they are
     matched positionally. Otherwise, this is an error.
 
--   Fixed ordering of names returned by `accumulate_right()` output.
+    !end-bullet!
+-   !begin-bullet!
+    Fixed ordering of names returned by `accumulate_right()` output.
     They now correspond to the order of inputs.
 
--   Fixed names of `accumulate()` output when `.init` is supplied.
+    !end-bullet!
+-   !begin-bullet!
+    Fixed names of `accumulate()` output when `.init` is supplied.
 
--   `compose()` now supports composition with lambdas (@ColinFay, #556)
+    !end-bullet!
+-   !begin-bullet!
+    `compose()` now supports composition with lambdas (@ColinFay, #556)
 
--   Fixed a `pmap()` crash with empty lists on the Win32 platform
+    !end-bullet!
+-   !begin-bullet!
+    Fixed a `pmap()` crash with empty lists on the Win32 platform
     (#565).
 
--   `modify_depth` now has `.ragged` argument evaluates correctly to
+    !end-bullet!
+-   !begin-bullet!
+    `modify_depth` now has `.ragged` argument evaluates correctly to
     `TRUE` by default when `.depth < 0` (@cderv, #530).
 
--   `accumulate()` now inherits names from their first input (@AshesITR,
+    !end-bullet!
+-   !begin-bullet!
+    `accumulate()` now inherits names from their first input (@AshesITR,
     #446).
 
--   `attr_getter()` no longer uses partial matching. For example, if an
+    !end-bullet!
+-   !begin-bullet!
+    `attr_getter()` no longer uses partial matching. For example, if an
     `x` object has a `labels` attribute but no `label` attribute,
     `attr_getter("label")(x)` will no longer extract the `labels`
     attribute (#460, @huftis).
 
--   `flatten_dfr()` and `flatten_dfc()` now aborts if dplyr is not
+    !end-bullet!
+-   !begin-bullet!
+    `flatten_dfr()` and `flatten_dfc()` now aborts if dplyr is not
     installed. (#454)
 
--   `imap_dfr()` now works with `.id` argument is provided (#429)
+    !end-bullet!
+-   !begin-bullet!
+    `imap_dfr()` now works with `.id` argument is provided (#429)
 
--   `list_modify()`, `update_list()` and `list_merge()` now handle
+    !end-bullet!
+-   !begin-bullet!
+    `list_modify()`, `update_list()` and `list_merge()` now handle
     duplicate duplicate argument names correctly (#441, @mgirlich).
 
--   `map_raw`, `imap_raw`, `flatten_raw`, `invoke_map_raw`, `map2_raw`
+    !end-bullet!
+-   !begin-bullet!
+    `map_raw`, `imap_raw`, `flatten_raw`, `invoke_map_raw`, `map2_raw`
     and `pmap_raw` added to support raw vectors. (#455, @romainfrancois)
 
--   `flatten()` now supports raw and complex elements.
+    !end-bullet!
+-   !begin-bullet!
+    `flatten()` now supports raw and complex elements.
 
--   `array_branch()` and `array_tree()` now retain the `dimnames()` of
+    !end-bullet!
+-   !begin-bullet!
+    `array_branch()` and `array_tree()` now retain the `dimnames()` of
     the input array (#584, @flying-sheep)
 
--   `pluck()` no longer flattens lists of arguments. You can still do it
+    !end-bullet!
+-   !begin-bullet!
+    `pluck()` no longer flattens lists of arguments. You can still do it
     manually with `!!!`. This change is for consistency with other
     dots-collecting functions of the tidyverse.
 
--   `map_at()`, `lmap_at()` and `modify_at()` now supports selection
+    !end-bullet!
+-   !begin-bullet!
+    `map_at()`, `lmap_at()` and `modify_at()` now supports selection
     using `vars()` and `tidyselect` (@ColinFay, #608).
 
     Note that for now you need to import `vars()` from dplyr or call it
     qualified like `dplyr::vars()`. It will be reexported from rlang in
     a future release.
 
--   `detect()` now has a .default argument to specify the value returned
+    !end-bullet!
+-   !begin-bullet!
+    `detect()` now has a .default argument to specify the value returned
     when nothing is detected (#622, @ColinFay).
+
+    !end-bullet!
 
 !end-bullets-21!
 
@@ -595,9 +854,11 @@ We have standardised the purrr API for reverse iteration with a common
 
 !begin-bullets-22!
 
--   `reduce_right()` is soft-deprecated and replaced by a new `.dir`
+-   !begin-bullet!
+    `reduce_right()` is soft-deprecated and replaced by a new `.dir`
     argument of `reduce()`:
 
+    !begin-codeblock!
     ``` {r}
     # Before:
     reduce_right(1:3, f)
@@ -606,6 +867,7 @@ We have standardised the purrr API for reverse iteration with a common
     reduce(1:3, f, .dir = "backward")
     ```
 
+    !end-codeblock!
     Note that the details of the computation have changed. Whereas
     `reduce_right()` computed `f(f(3, 2), 1)`, it now computes
     `f(1, f(2, 3))`. This is the standard way of reducing from the
@@ -614,6 +876,7 @@ We have standardised the purrr API for reverse iteration with a common
     To produce the exact same reduction as `reduce_right()`, simply
     reverse your vector and use a left reduction:
 
+    !begin-codeblock!
     ``` {r}
     # Before:
     reduce_right(1:3, f)
@@ -622,16 +885,22 @@ We have standardised the purrr API for reverse iteration with a common
     reduce(rev(1:3), f)
     ```
 
--   `reduce2_right()` is soft-deprecated without replacement. It is not
+    !end-codeblock!
+    !end-bullet!
+-   !begin-bullet!
+    `reduce2_right()` is soft-deprecated without replacement. It is not
     clear what algorithmic properties should a right reduction have in
     this case. Please reach out if you know about a use case for a right
     reduction with a ternary function.
 
--   `accumulate_right()` is soft-deprecated and replaced by the new
+    !end-bullet!
+-   !begin-bullet!
+    `accumulate_right()` is soft-deprecated and replaced by the new
     `.dir` argument of `accumulate()`. Note that the algorithm has
     slightly changed: the accumulated value is passed to the right
     rather than the left, which is consistent with a right reduction.
 
+    !begin-codeblock!
     ``` {r}
     # Before:
     accumulate_right(1:3, f)
@@ -640,10 +909,14 @@ We have standardised the purrr API for reverse iteration with a common
     accumulate(1:3, f, .dir = "backward")
     ```
 
--   The `.right` argument of `detect()` and `detect_index()` is
+    !end-codeblock!
+    !end-bullet!
+-   !begin-bullet!
+    The `.right` argument of `detect()` and `detect_index()` is
     soft-deprecated and renamed to `.dir` for consistency with other
     functions and clarity of the interface.
 
+    !begin-codeblock!
     ``` {r}
     # Before
     detect(x, f, .right = TRUE)
@@ -651,6 +924,9 @@ We have standardised the purrr API for reverse iteration with a common
     # After
     detect(x, f, .dir = "backward")
     ```
+
+    !end-codeblock!
+    !end-bullet!
 
 !end-bullets-22!
 
@@ -661,13 +937,18 @@ The interface of `partial()` has been simplified (see more about
 
 !begin-bullets-23!
 
--   The `.lazy` argument of `partial()` is soft-deprecated in favour of
+-   !begin-bullet!
+    The `.lazy` argument of `partial()` is soft-deprecated in favour of
     quasiquotation.
 
--   We had to rename `...f` to `.f` in `partial()` in order to support
+    !end-bullet!
+-   !begin-bullet!
+    We had to rename `...f` to `.f` in `partial()` in order to support
     `... =` argument (which would otherwise partial-match on `...f`).
     This also makes `partial()` more consistent with other purrr
     function signatures.
+
+    !end-bullet!
 
 !end-bullets-23!
 
@@ -679,10 +960,12 @@ continue to be maintained undefinitely in the package.
 
 !begin-bullets-24!
 
--   `invoke()` is retired in favour of the `exec()` function, reexported
+-   !begin-bullet!
+    `invoke()` is retired in favour of the `exec()` function, reexported
     from rlang. `exec()` evaluates a function call built from its inputs
     and supports tidy dots:
 
+    !begin-codeblock!
     ``` r
     # Before:
     invoke(mean, list(na.rm = TRUE), x = 1:10)
@@ -691,13 +974,17 @@ continue to be maintained undefinitely in the package.
     exec(mean, 1:10, !!!list(na.rm = TRUE))
     ```
 
+    !end-codeblock!
     Note that retired functions are not removed from the package and
     will be maintained undefinitely.
 
--   `invoke_map()` is retired without replacement because it is more
+    !end-bullet!
+-   !begin-bullet!
+    `invoke_map()` is retired without replacement because it is more
     complex to understand than the corresponding code using `map()`,
     `map2()` and `exec()`:
 
+    !begin-codeblock!
     ``` r
     # Before:
     invoke_map(fns, list(args))
@@ -708,20 +995,27 @@ continue to be maintained undefinitely in the package.
     map2(fns, list(args1, args2), function(fn, args) exec(fn, !!!args))
     ```
 
+    !end-codeblock!
+    !end-bullet!
+
 !end-bullets-24!
 
 ### Other lifecycle changes
 
 !begin-bullets-25!
 
--   `%@%` is soft-deprecated, please use the operator exported in rlang
+-   !begin-bullet!
+    `%@%` is soft-deprecated, please use the operator exported in rlang
     instead. The latter features an interface more consistent with `@`
     as it uses NSE, supports S4 fields, and has an assignment variant.
 
--   Removing elements from lists using `NULL` in `list_modify()` is
+    !end-bullet!
+-   !begin-bullet!
+    Removing elements from lists using `NULL` in `list_modify()` is
     soft-deprecated. Please use the new `zap()` sentinel reexported from
     rlang instead:
 
+    !begin-codeblock!
     ``` {r}
       # Before:
       list_modify(x, foo = NULL)
@@ -730,18 +1024,25 @@ continue to be maintained undefinitely in the package.
       list_modify(x, foo = zap())
     ```
 
+    !end-codeblock!
     This change is motivated by the ambiguity of `NULL` as a deletion
     sentinel because `NULL` is also a valid value in lists. In the
     future, `NULL` will set an element to `NULL` rather than removing
     the element.
 
--   `rerun()` is now in the questioning stage because we are no longer
+    !end-bullet!
+-   !begin-bullet!
+    `rerun()` is now in the questioning stage because we are no longer
     convinced NSE functions are a good fit for purrr. Also,
     `rerun(n,   x)` can just as easily be expressed as `map(1:n, ~ x)`
     (with the added benefit of being passed the current index as
     argument to the lambda).
 
--   `map_call()` is defunct.
+    !end-bullet!
+-   !begin-bullet!
+    `map_call()` is defunct.
+
+    !end-bullet!
 
 !end-bullets-25!
 
@@ -749,7 +1050,9 @@ continue to be maintained undefinitely in the package.
 
 !begin-bullets-26!
 
--   This is a maintenance release following the release of dplyr 0.7.5.
+-   !begin-bullet!
+    This is a maintenance release following the release of dplyr 0.7.5.
+    !end-bullet!
 
 !end-bullets-26!
 
@@ -757,7 +1060,9 @@ continue to be maintained undefinitely in the package.
 
 !begin-bullets-27!
 
--   Fixes for R 3.1.
+-   !begin-bullet!
+    Fixes for R 3.1.
+    !end-bullet!
 
 !end-bullets-27!
 
@@ -769,15 +1074,20 @@ We noticed the following issues during reverse dependencies checks:
 
 !begin-bullets-28!
 
--   If `reduce()` fails with this message:
+-   !begin-bullet!
+    If `reduce()` fails with this message:
     `` Error: `.x` is empty, and   no `.init` supplied ``, this is
     because `reduce()` now returns `.init` when `.x` is empty. Fix the
     problem by supplying an appropriate argument to `.init`, or by
     providing special behaviour when `.x` has length 0.
 
--   The type predicates have been migrated to rlang. Consequently the
+    !end-bullet!
+-   !begin-bullet!
+    The type predicates have been migrated to rlang. Consequently the
     `bare-type-predicates` documentation topic is no longer in purrr,
     which might cause a warning if you cross-reference it.
+
+    !end-bullet!
 
 !end-bullets-28!
 
@@ -793,12 +1103,17 @@ purrr and dplyr:
 
 !begin-bullets-29!
 
--   `order_by()`, `sort_by()` and `split_by()` have been removed.
+-   !begin-bullet!
+    `order_by()`, `sort_by()` and `split_by()` have been removed.
     `order_by()` conflicted with `dplyr::order_by()` and the complete
     family doesn't feel that useful. Use tibbles instead (#217).
 
--   `contains()` has been renamed to `has_element()` to avoid conflicts
+    !end-bullet!
+-   !begin-bullet!
+    `contains()` has been renamed to `has_element()` to avoid conflicts
     with dplyr (#217).
+
+    !end-bullet!
 
 !end-bullets-29!
 
@@ -810,17 +1125,26 @@ often more readable to extract an element buried in a deep data
 structure. Compare this syntax-heavy extraction which reads
 non-linearly:
 
+!begin-codeblock!
+
     accessor(x[[1]])$foo
+
+!end-codeblock!
 
 to the equivalent pluck:
 
+!begin-codeblock!
+
     x %>% pluck(1, accessor, "foo")
+
+!end-codeblock!
 
 ## Map helpers
 
 !begin-bullets-30!
 
--   `as_function()` is now `as_mapper()` because it is a tranformation
+-   !begin-bullet!
+    `as_function()` is now `as_mapper()` because it is a tranformation
     that makes sense primarily for mapping functions, not in general
     (#298). `.null` has been renamed to `.default` to better reflect its
     intent (#298). `.default` is returned whenever an element is absent
@@ -833,20 +1157,30 @@ to the equivalent pluck:
     so that `map(1:10, partial(`-`, .x = 5))` produces
     `list(5 - 1, 5 - 2, ...)`.
 
--   Recursive indexing can now extract objects out of environments
+    !end-bullet!
+-   !begin-bullet!
+    Recursive indexing can now extract objects out of environments
     (#213) and S4 objects (#200), as well as lists.
 
--   `attr_getter()` makes it possible to extract from attributes like
+    !end-bullet!
+-   !begin-bullet!
+    `attr_getter()` makes it possible to extract from attributes like
     `map(list(iris, mtcars), attr_getter("row.names"))`.
 
--   The argument list for formula-functions has been tweaked so that you
+    !end-bullet!
+-   !begin-bullet!
+    The argument list for formula-functions has been tweaked so that you
     can refer to arguments by position with `..1`, `..2`, and so on.
     This makes it possible to use the formula shorthand for functions
     with more than two arguments (#289).
 
--   `possibly()`, `safely()` and friends no longer capture interrupts:
+    !end-bullet!
+-   !begin-bullet!
+    `possibly()`, `safely()` and friends no longer capture interrupts:
     this means that you can now terminate a mapper using one of these
     with Escape or Ctrl + C (#314)
+
+    !end-bullet!
 
 !end-bullets-30!
 
@@ -854,22 +1188,31 @@ to the equivalent pluck:
 
 !begin-bullets-31!
 
--   All map functions now treat `NULL` the same way as an empty vector
+-   !begin-bullet!
+    All map functions now treat `NULL` the same way as an empty vector
     (#199), and return an empty vector if any input is an empty vector.
 
--   All `map()` functions now force their arguments in the same way that
+    !end-bullet!
+-   !begin-bullet!
+    All `map()` functions now force their arguments in the same way that
     base R does for `lapply()` (#191). This makes `map()` etc easier to
     use when generating functions.
 
--   A new family of "indexed" map functions, `imap()`, `imap_lgl()` etc,
+    !end-bullet!
+-   !begin-bullet!
+    A new family of "indexed" map functions, `imap()`, `imap_lgl()` etc,
     provide a short-hand for `map2(x, names(x))` or
     `map2(x, seq_along(x))` (#240).
 
--   The data frame suffix `_df` has been (soft) deprecated in favour of
+    !end-bullet!
+-   !begin-bullet!
+    The data frame suffix `_df` has been (soft) deprecated in favour of
     `_dfr` to more clearly indicate that it's a row-bind. All variants
     now also have a `_dfc` for column binding (#167). (These will not be
     terribly useful until `dplyr::bind_rows()`/`dplyr::bind_cols()` have
     better semantics for vectors.)
+
+    !end-bullet!
 
 !end-bullets-31!
 
@@ -885,11 +1228,16 @@ of `[<-`. `modify.default()` is thus a shorthand for `x[] <- map(x, f)`.
 
 !begin-bullets-32!
 
--   `at_depth()` has been renamed to `modify_depth()`.
+-   !begin-bullet!
+    `at_depth()` has been renamed to `modify_depth()`.
 
--   `modify_depth()` gains new `.ragged` argument, and negative depths
+    !end-bullet!
+-   !begin-bullet!
+    `modify_depth()` gains new `.ragged` argument, and negative depths
     are now computed relative to the deepest component of the list
     (#236).
+
+    !end-bullet!
 
 !end-bullets-32!
 
@@ -897,25 +1245,36 @@ of `[<-`. `modify.default()` is thus a shorthand for `x[] <- map(x, f)`.
 
 !begin-bullets-33!
 
--   `auto_browse(f)` returns a new function that automatically calls
+-   !begin-bullet!
+    `auto_browse(f)` returns a new function that automatically calls
     `browser()` if `f` throws an error (#281).
 
--   `vec_depth()` computes the depth (i.e. the number of levels of
+    !end-bullet!
+-   !begin-bullet!
+    `vec_depth()` computes the depth (i.e. the number of levels of
     indexing) or a vector (#243).
 
--   `reduce2()` and `reduce2_right()` make it possible to reduce with a
+    !end-bullet!
+-   !begin-bullet!
+    `reduce2()` and `reduce2_right()` make it possible to reduce with a
     3 argument function where the first argument is the accumulated
     value, the second argument is `.x`, and the third argument is `.y`
     (#163).
 
--   `list_modify()` extends `stats::modifyList()` to replace by position
+    !end-bullet!
+-   !begin-bullet!
+    `list_modify()` extends `stats::modifyList()` to replace by position
     if the list is not named.(#201). `list_merge()` operates similarly
     to `list_modify()` but combines instead of replacing (#322).
 
--   The legacy function `update_list()` is basically a version of
+    !end-bullet!
+-   !begin-bullet!
+    The legacy function `update_list()` is basically a version of
     `list_modify` that evaluates formulas within the list. It is likely
     to be deprecated in the future in favour of a tidyeval interface
     such as a list method for `dplyr::mutate()`.
+
+    !end-bullet!
 
 !end-bullets-33!
 
@@ -923,53 +1282,84 @@ of `[<-`. `modify.default()` is thus a shorthand for `x[] <- map(x, f)`.
 
 !begin-bullets-34!
 
--   Thanks to @dchiu911, the unit test coverage of purrr is now much
+-   !begin-bullet!
+    Thanks to @dchiu911, the unit test coverage of purrr is now much
     greater.
 
--   All predicate functions are re-exported from rlang (#124).
+    !end-bullet!
+-   !begin-bullet!
+    All predicate functions are re-exported from rlang (#124).
 
--   `compact()` now works with standard mapper conventions (#282).
+    !end-bullet!
+-   !begin-bullet!
+    `compact()` now works with standard mapper conventions (#282).
 
--   `cross_n()` has been renamed to `cross()`. The `_n` suffix was
+    !end-bullet!
+-   !begin-bullet!
+    `cross_n()` has been renamed to `cross()`. The `_n` suffix was
     removed for consistency with `pmap()` (originally called `map_n()`
     at the start of the project) and `transpose()` (originally called
     `zip_n()`). Similarly, `cross_d()` has been renamed to `cross_df()`
     for consistency with `map_df()`.
 
--   `every()` and `some()` now return `NA` if present in the input
+    !end-bullet!
+-   !begin-bullet!
+    `every()` and `some()` now return `NA` if present in the input
     (#174).
 
--   `invoke()` uses a more robust approach to generate the argument list
+    !end-bullet!
+-   !begin-bullet!
+    `invoke()` uses a more robust approach to generate the argument list
     (#249) It no longer uses lazyeval to figure out which enviroment a
     character `f` comes from.
 
--   `is_numeric()` and `is_scalar_numeric()` are deprecated because they
+    !end-bullet!
+-   !begin-bullet!
+    `is_numeric()` and `is_scalar_numeric()` are deprecated because they
     don't test for what you might expect at first sight.
 
--   `reduce()` now throws an error if `.x` is empty and `.init` is not
+    !end-bullet!
+-   !begin-bullet!
+    `reduce()` now throws an error if `.x` is empty and `.init` is not
     supplied.
 
--   Deprecated functions `flatmap()`, `map3()`, `map_n()`, `walk3()`,
+    !end-bullet!
+-   !begin-bullet!
+    Deprecated functions `flatmap()`, `map3()`, `map_n()`, `walk3()`,
     `walk_n()`, `zip2()`, `zip3()`, `zip_n()` have been removed.
 
--   `pmap()` coerces data frames to lists to avoid the expensive
+    !end-bullet!
+-   !begin-bullet!
+    `pmap()` coerces data frames to lists to avoid the expensive
     `[.data.frame` which provides security that is unneeded here (#220).
 
--   `rdunif()` checks its inputs for validity (#211).
+    !end-bullet!
+-   !begin-bullet!
+    `rdunif()` checks its inputs for validity (#211).
 
--   `set_names()` can now take a function to tranform the names
+    !end-bullet!
+-   !begin-bullet!
+    `set_names()` can now take a function to tranform the names
     programmatically (#276), and you can supply names in `...` to reduce
     typing even more more (#316). `set_names()` is now powered by
     `rlang::set_names()`.
 
--   `safely()` now actually uses the `quiet` argument (#296).
+    !end-bullet!
+-   !begin-bullet!
+    `safely()` now actually uses the `quiet` argument (#296).
 
--   `transpose()` now matches by name if available (#164). You can
+    !end-bullet!
+-   !begin-bullet!
+    `transpose()` now matches by name if available (#164). You can
     override the default choice with the new `.names` argument.
 
--   The function argument of `detect()` and `detect_index()` have been
+    !end-bullet!
+-   !begin-bullet!
+    The function argument of `detect()` and `detect_index()` have been
     renamed from `.p` to `.f`. This is because they have mapper
     semantics rather than predicate semantics.
+
+    !end-bullet!
 
 !end-bullets-34!
 
@@ -979,12 +1369,14 @@ This is a compatibility release with dplyr 0.6.0.
 
 !begin-bullets-35!
 
--   All data-frame based mappers have been removed in favour of new
+-   !begin-bullet!
+    All data-frame based mappers have been removed in favour of new
     functions and idioms in the tidyverse. `dmap()`, `dmap_at()`,
     `dmap_if()`, `invoke_rows()`, `slice_rows()`, `map_rows()`,
     `by_slice()`, `by_row()`, and `unslice()` have been moved to
     purrrlyr. This is a bit of an aggresive change but it allows us to
     make the dependencies much lighter.
+    !end-bullet!
 
 !end-bullets-35!
 
@@ -992,14 +1384,21 @@ This is a compatibility release with dplyr 0.6.0.
 
 !begin-bullets-36!
 
--   Fix for dev tibble support.
+-   !begin-bullet!
+    Fix for dev tibble support.
 
--   `as_function()` now supports list arguments which allow recursive
+    !end-bullet!
+-   !begin-bullet!
+    `as_function()` now supports list arguments which allow recursive
     indexing using either names or positions. They now always stop when
     encountering the first NULL (#173).
 
--   `accumulate` and `reduce` correctly pass extra arguments to the
+    !end-bullet!
+-   !begin-bullet!
+    `accumulate` and `reduce` correctly pass extra arguments to the
     worker function.
+
+    !end-bullet!
 
 !end-bullets-36!
 
@@ -1007,16 +1406,25 @@ This is a compatibility release with dplyr 0.6.0.
 
 !begin-bullets-37!
 
--   `as_function()` gains a `.null` argument that for character and
+-   !begin-bullet!
+    `as_function()` gains a `.null` argument that for character and
     numeric values allows you to specify what to return for null/absent
     elements (#110). This can be used with any map function,
     e.g. `map_int(x, 1, .null = NA)`
 
--   `as_function()` is now generic.
+    !end-bullet!
+-   !begin-bullet!
+    `as_function()` is now generic.
 
--   New `is_function()` that returns `TRUE` only for regular functions.
+    !end-bullet!
+-   !begin-bullet!
+    New `is_function()` that returns `TRUE` only for regular functions.
 
--   Fix crash on GCC triggered by `invoke_rows()`.
+    !end-bullet!
+-   !begin-bullet!
+    Fix crash on GCC triggered by `invoke_rows()`.
+
+    !end-bullet!
 
 !end-bullets-37!
 
@@ -1026,56 +1434,82 @@ This is a compatibility release with dplyr 0.6.0.
 
 !begin-bullets-38!
 
--   There are two handy infix functions:
+-   !begin-bullet!
+    There are two handy infix functions:
 
     !begin-bullets-39!
-    -   `x %||% y` is shorthand for `if (is.null(x)) y else x` (#109).
-    -   `x %@% "a"` is shorthand for `attr(x, "a", exact = TRUE)` (#69).
+    -   !begin-bullet!
+        `x %||% y` is shorthand for `if (is.null(x)) y else x` (#109).
+        !end-bullet!
+    -   !begin-bullet!
+        `x %@% "a"` is shorthand for `attr(x, "a", exact = TRUE)` (#69).
+        !end-bullet!
 
     !end-bullets-39!
-
--   `accumulate()` has been added to handle recursive folding. It is
+    !end-bullet!
+-   !begin-bullet!
+    `accumulate()` has been added to handle recursive folding. It is
     shortand for `Reduce(f, .x, accumulate = TRUE)` and follows a
     similar syntax to `reduce()` (#145). A right-hand version
     `accumulate_right()` was also added.
 
--   `map_df()` row-binds output together. It's the equivalent of
+    !end-bullet!
+-   !begin-bullet!
+    `map_df()` row-binds output together. It's the equivalent of
     `plyr::ldply()` (#127)
 
--   `flatten()` is now type-stable and always returns a list. To return
+    !end-bullet!
+-   !begin-bullet!
+    `flatten()` is now type-stable and always returns a list. To return
     a simpler vector, use `flatten_lgl()`, `flatten_int()`,
     `flatten_dbl()`, `flatten_chr()`, or `flatten_df()`.
 
--   `invoke()` has been overhauled to be more useful: it now works
+    !end-bullet!
+-   !begin-bullet!
+    `invoke()` has been overhauled to be more useful: it now works
     similarly to `map_call()` when `.x` is NULL, and hence `map_call()`
     has been deprecated. `invoke_map()` is a vectorised complement to
     `invoke()` (#125), and comes with typed variants `invoke_map_lgl()`,
     `invoke_map_int()`, `invoke_map_dbl()`, `invoke_map_chr()`, and
     `invoke_map_df()`.
 
--   `transpose()` replaces `zip2()`, `zip3()`, and `zip_n()` (#128). The
+    !end-bullet!
+-   !begin-bullet!
+    `transpose()` replaces `zip2()`, `zip3()`, and `zip_n()` (#128). The
     name more clearly reflects the intent (transposing the first and
     second levels of list). It no longer has fields argument or the
     `.simplify` argument; instead use the new `simplify_all()` function.
 
--   `safely()`, `quietly()`, and `possibly()` are experimental functions
+    !end-bullet!
+-   !begin-bullet!
+    `safely()`, `quietly()`, and `possibly()` are experimental functions
     for working with functions with side-effects (e.g. printed output,
     messages, warnings, and errors) (#120). `safely()` is a version of
     `try()` that modifies a function (rather than an expression), and
     always returns a list with two components, `result` and `error`.
 
--   `list_along()` and `rep_along()` generalise the idea of
+    !end-bullet!
+-   !begin-bullet!
+    `list_along()` and `rep_along()` generalise the idea of
     `seq_along()`. (#122).
 
--   `is_null()` is the snake-case version of `is.null()`.
+    !end-bullet!
+-   !begin-bullet!
+    `is_null()` is the snake-case version of `is.null()`.
 
--   `pmap()` (parallel map) replaces `map_n()` (#132), and has
+    !end-bullet!
+-   !begin-bullet!
+    `pmap()` (parallel map) replaces `map_n()` (#132), and has
     typed-variants suffixed `pmap_lgl()`, `pmap_int()`, `pmap_dbl()`,
     `pmap_chr()`, and `pmap_df()`.
 
--   `set_names()` is a snake-case alternative to `setNames()` with
+    !end-bullet!
+-   !begin-bullet!
+    `set_names()` is a snake-case alternative to `setNames()` with
     stricter equality checking, and more convenient defaults for pipes:
     `x %>% set_names()` is equivalent to `setNames(x, x)` (#119).
+
+    !end-bullet!
 
 !end-bullets-38!
 
@@ -1087,22 +1521,29 @@ functions.
 
 !begin-bullets-40!
 
--   `map()` now always returns a list. Data frame support has been moved
+-   !begin-bullet!
+    `map()` now always returns a list. Data frame support has been moved
     to `map_df()` and `dmap()`. The latter supports sliced data frames
     as a shortcut for the combination of `by_slice()` and `dmap()`:
     `x %>% by_slice(dmap, fun, .collate = "rows")`. The conditional
     variants `dmap_at()` and `dmap_if()` also support sliced data frames
     and will recycle scalar results to the slice size.
 
--   `map_rows()` has been renamed to `invoke_rows()`. As other
+    !end-bullet!
+-   !begin-bullet!
+    `map_rows()` has been renamed to `invoke_rows()`. As other
     rows-based functionals, it collates results inside lists by default,
     but with column collation this function is equivalent to
     `plyr::mdply()`.
 
--   The rows-based functionals gain a `.to` option to name the output
+    !end-bullet!
+-   !begin-bullet!
+    The rows-based functionals gain a `.to` option to name the output
     column as well as a `.collate` argument. The latter allows to
     collate the output in lists (by default), on columns or on rows.
     This makes these functions more flexible and more predictable.
+
+    !end-bullet!
 
 !end-bullets-40!
 
@@ -1110,18 +1551,29 @@ functions.
 
 !begin-bullets-41!
 
--   `as_function()`, which converts formulas etc to functions, is now
+-   !begin-bullet!
+    `as_function()`, which converts formulas etc to functions, is now
     exported (#123).
 
--   `rerun()` is correctly scoped (#95)
+    !end-bullet!
+-   !begin-bullet!
+    `rerun()` is correctly scoped (#95)
 
--   `update_list()` can now modify an element called `x` (#98).
+    !end-bullet!
+-   !begin-bullet!
+    `update_list()` can now modify an element called `x` (#98).
 
--   `map*()` now use custom C code, rather than relying on `lapply()`,
+    !end-bullet!
+-   !begin-bullet!
+    `map*()` now use custom C code, rather than relying on `lapply()`,
     `mapply()` etc. The performance characteristcs are very similar, but
     it allows us greater control over the output (#118).
 
--   `map_lgl()` now has second argument `.f`, not `.p` (#134).
+    !end-bullet!
+-   !begin-bullet!
+    `map_lgl()` now has second argument `.f`, not `.p` (#134).
+
+    !end-bullet!
 
 !end-bullets-41!
 
@@ -1129,13 +1581,22 @@ functions.
 
 !begin-bullets-42!
 
--   `flatmap()` -\> use `map()` followed by the appropriate `flatten()`.
+-   !begin-bullet!
+    `flatmap()` -\> use `map()` followed by the appropriate `flatten()`.
 
--   `map_call()` -\> `invoke()`.
+    !end-bullet!
+-   !begin-bullet!
+    `map_call()` -\> `invoke()`.
 
--   `map_n()` -\> `pmap()`; `walk_n()` -\> `pwalk()`.
+    !end-bullet!
+-   !begin-bullet!
+    `map_n()` -\> `pmap()`; `walk_n()` -\> `pwalk()`.
 
--   `map3(x, y, z)` -\> `map_n(list(x, y, z))`;
+    !end-bullet!
+-   !begin-bullet!
+    `map3(x, y, z)` -\> `map_n(list(x, y, z))`;
     `walk3(x, y, z) ->`pwalk(list(x, y, z))\`
+
+    !end-bullet!
 
 !end-bullets-42!

@@ -73,10 +73,15 @@ called.
 
 !begin-bullets-1!
 
--   cli is new in Imports.
+-   !begin-bullet!
+    cli is new in Imports.
 
--   googlesheets4 Suggests testthat \>= 3.0.0 and, specifically, uses
+    !end-bullet!
+-   !begin-bullet!
+    googlesheets4 Suggests testthat \>= 3.0.0 and, specifically, uses
     third edition features.
+
+    !end-bullet!
 
 !end-bullets-1!
 
@@ -114,10 +119,16 @@ three prefixes:
 
 !begin-bullets-2!
 
--   `gs4_`: refers variously to the googlesheets4 package, v4 of the
+-   !begin-bullet!
+    `gs4_`: refers variously to the googlesheets4 package, v4 of the
     Google Sheets API, or to operations on one or more (spread)Sheets
--   `sheet_`: operations on one or more (work)sheets
--   `range_`: operations on a range of cells
+    !end-bullet!
+-   !begin-bullet!
+    `sheet_`: operations on one or more (work)sheets
+    !end-bullet!
+-   !begin-bullet!
+    `range_`: operations on a range of cells
+    !end-bullet!
 
 !end-bullets-2!
 
@@ -140,17 +151,29 @@ feedback.
 
 !begin-bullets-3!
 
--   `gs4_create()` creates a new Google Sheet and, optionally, writes
+-   !begin-bullet!
+    `gs4_create()` creates a new Google Sheet and, optionally, writes
     one or more data frames into it (#61).
--   `sheet_write()` (also available as `write_sheet()`) writes a data
+    !end-bullet!
+-   !begin-bullet!
+    `sheet_write()` (also available as `write_sheet()`) writes a data
     frame into a new or existing (work)sheet, inside an existing (or
     new) (spread)Sheet.
--   `sheet_append()` adds rows to an existing data table.
--   `range_write()` writes to a cell range.
--   `range_flood()` "floods" all cells in a range with the same content.
+    !end-bullet!
+-   !begin-bullet!
+    `sheet_append()` adds rows to an existing data table.
+    !end-bullet!
+-   !begin-bullet!
+    `range_write()` writes to a cell range.
+    !end-bullet!
+-   !begin-bullet!
+    `range_flood()` "floods" all cells in a range with the same content.
     `range_clear()` is a wrapper around `range_flood()` for the special
     case of clearing cell values.
--   `range_delete()` deletes a range of cells.
+    !end-bullet!
+-   !begin-bullet!
+    `range_delete()` deletes a range of cells.
+    !end-bullet!
 
 !end-bullets-3!
 
@@ -161,16 +184,34 @@ an existing (spread)Sheet:
 
 !begin-bullets-4!
 
--   (`sheet_write()` and `sheet_append()` are described above.)
--   `sheet_properties()` returns a tibble of metadata with one row per
+-   !begin-bullet!
+    (`sheet_write()` and `sheet_append()` are described above.)
+    !end-bullet!
+-   !begin-bullet!
+    `sheet_properties()` returns a tibble of metadata with one row per
     sheet.
--   `sheet_names()` returns sheet names.
--   `sheet_add()` adds one or more sheets.
--   `sheet_copy()` copies a sheet.
--   `sheet_delete()` deletes one or more sheets.
--   `sheet_relocate()` moves sheets around.\
--   `sheet_rename()` renames one sheet.
--   `sheet_resize()` changes the number of rows or columns in a sheet.
+    !end-bullet!
+-   !begin-bullet!
+    `sheet_names()` returns sheet names.
+    !end-bullet!
+-   !begin-bullet!
+    `sheet_add()` adds one or more sheets.
+    !end-bullet!
+-   !begin-bullet!
+    `sheet_copy()` copies a sheet.
+    !end-bullet!
+-   !begin-bullet!
+    `sheet_delete()` deletes one or more sheets.
+    !end-bullet!
+-   !begin-bullet!
+    `sheet_relocate()` moves sheets around.\
+    !end-bullet!
+-   !begin-bullet!
+    `sheet_rename()` renames one sheet.
+    !end-bullet!
+-   !begin-bullet!
+    `sheet_resize()` changes the number of rows or columns in a sheet.
+    !end-bullet!
 
 !end-bullets-4!
 
@@ -222,8 +263,10 @@ schema. The return value of `gs4_get()` has this class.
 
 !begin-bullets-5!
 
--   `read_sheet()` passes its `na` argument down to the helpers that
+-   !begin-bullet!
+    `read_sheet()` passes its `na` argument down to the helpers that
     parse cells, so that `na` actually has the documented effect (#73).
+    !end-bullet!
 
 !end-bullets-5!
 
@@ -231,8 +274,10 @@ schema. The return value of `gs4_get()` has this class.
 
 !begin-bullets-6!
 
--   Patch release to modify a test fixture, to be compatible with tibble
+-   !begin-bullet!
+    Patch release to modify a test fixture, to be compatible with tibble
     v3.0. Related to tibble's increased type strictness.
+    !end-bullet!
 
 !end-bullets-6!
 
@@ -240,6 +285,8 @@ schema. The return value of `gs4_get()` has this class.
 
 !begin-bullets-7!
 
--   Added a `NEWS.md` file to track changes to the package.
+-   !begin-bullet!
+    Added a `NEWS.md` file to track changes to the package.
+    !end-bullet!
 
 !end-bullets-7!

@@ -1,11 +1,18 @@
 # cli (development version)
 
+# cli 3.4.1
+
 !begin-bullets-1!
 
--   cli has better error messages now.
+-   !begin-bullet!
+    cli has better error messages now.
 
--   New `format_inline()` argument: `collapse`, to collapse multi-line
+    !end-bullet!
+-   !begin-bullet!
+    New `format_inline()` argument: `collapse`, to collapse multi-line
     output, potentially because of `\f` characters.
+
+    !end-bullet!
 
 !end-bullets-1!
 
@@ -13,37 +20,57 @@
 
 !begin-bullets-2!
 
--   New experimental styles to create ANSI hyperlinks in RStudio and
+-   !begin-bullet!
+    New experimental styles to create ANSI hyperlinks in RStudio and
     terminals that support them. See `?cli::links` for details (#513).
 
--   Expressions that start and end with a `{}` substitution are now
+    !end-bullet!
+-   !begin-bullet!
+    Expressions that start and end with a `{}` substitution are now
     styled correctly. E.g. `{.code {var1} + {var2}}` (#517).
 
--   New `{.obj_type_friendly}` inline style to format the type of an R
+    !end-bullet!
+-   !begin-bullet!
+    New `{.obj_type_friendly}` inline style to format the type of an R
     object in a user friendly way (#463).
 
--   Improved vector collapsing behavior. cli now shows both the
+    !end-bullet!
+-   !begin-bullet!
+    Improved vector collapsing behavior. cli now shows both the
     beginning and end of the collapsed vector, by default (#419).
 
--   Nested `cli()` calls work now (#497).
+    !end-bullet!
+-   !begin-bullet!
+    Nested `cli()` calls work now (#497).
 
--   Return values now work as they should within `cli()` calls (#496).
+    !end-bullet!
+-   !begin-bullet!
+    Return values now work as they should within `cli()` calls (#496).
 
--   Style attributes with underscores have new names with dashes
+    !end-bullet!
+-   !begin-bullet!
+    Style attributes with underscores have new names with dashes
     instead: `vec_sep`, `vec_last`, `vec_trunc`, `string-quote`. The old
     names still work, but the new ones take precedence (#483).
 
--   cli now does not crash at the end of the R session on Arm Windows
+    !end-bullet!
+-   !begin-bullet!
+    cli now does not crash at the end of the R session on Arm Windows
     (#494; @kevinushey)
 
--   Vectors are truncated at 20 elements now by default, instead of 100
+    !end-bullet!
+-   !begin-bullet!
+    Vectors are truncated at 20 elements now by default, instead of 100
     (#430).
 
--   20 new spinners from the awesome
+    !end-bullet!
+-   !begin-bullet!
+    20 new spinners from the awesome
     [cli-spinners](https://github.com/sindresorhus/cli-spinners)
     package, and from @HenrikBengtsson in #469. Run this to demo them,
     some need UTF-8 and emoji support:
 
+    !begin-codeblock!
     ``` r
     new <- c("dots13", "dots8Bit", "sand", "material", "weather", "christmas",
       "grenade", "point", "layer", "betaWave", "fingerDance", "fistBump",
@@ -53,51 +80,78 @@
     demo_spinners(new)
     ```
 
--   cli exit handlers are now compatible again with the withr package
+    !end-codeblock!
+    !end-bullet!
+-   !begin-bullet!
+    cli exit handlers are now compatible again with the withr package
     (#437).
 
--   cli functions now keep trailing `\f` characters as newlines. They
+    !end-bullet!
+-   !begin-bullet!
+    cli functions now keep trailing `\f` characters as newlines. They
     also keep multiple consecutive `\f` as multiple newlinees (#491).
 
--   `{}` substitutions within inline styles are now formatted correctly.
+    !end-bullet!
+-   !begin-bullet!
+    `{}` substitutions within inline styles are now formatted correctly.
     E.g. `{.code download({url})}` will not add backticks to `url`, and
     `{.val pre-{x}-post}` will format the whole value instead of `x`.
     (#422, #474).
 
--   cli now replaces newline characters within `{.class ... }` inline
+    !end-bullet!
+-   !begin-bullet!
+    cli now replaces newline characters within `{.class ... }` inline
     styles with spaces. If the `cli.warn_inline_newlines` option is set
     to TRUE, then it also throws a warning. (#417).
 
--   `code_highlight` now falls back to the default theme (instead of no
+    !end-bullet!
+-   !begin-bullet!
+    `code_highlight` now falls back to the default theme (instead of no
     theme) for unknown RStudio themes (#482, @rossellhayes).
 
--   `cli_abort()` now supplies `.frame` to `abort()`. This fixes an
+    !end-bullet!
+-   !begin-bullet!
+    `cli_abort()` now supplies `.frame` to `abort()`. This fixes an
     issue with the `.internal = TRUE` argument (r-lib/rlang#1386).
 
--   cli now does a better job at detecting the RStudio build pane, job
+    !end-bullet!
+-   !begin-bullet!
+    cli now does a better job at detecting the RStudio build pane, job
     pane and render pane, and their capabilities w.r.t. ANSI colors and
     hyperlinks. Note that this requires a daily build of RStudio (#465).
 
--   New functions for ANSI strings: `ansi_grep()`, `ansi_grepl()`,
+    !end-bullet!
+-   !begin-bullet!
+    New functions for ANSI strings: `ansi_grep()`, `ansi_grepl()`,
     `ansi_nzchar()`. They work like the corresponding base R functions,
     but handle ANSI markup.
 
--   `style_hyperlink()` (really) no longer breaks if the env variable
+    !end-bullet!
+-   !begin-bullet!
+    `style_hyperlink()` (really) no longer breaks if the env variable
     `VTE_VERSION` is of the form `\d{4}`, i.e., 4 consecutive numbers
     (#441, @michaelchirico)
 
--   `cli_dl()` and its corresponding `cli_li()` can now style the
+    !end-bullet!
+-   !begin-bullet!
+    `cli_dl()` and its corresponding `cli_li()` can now style the
     labels.
 
--   The behavior cli's inline styling expressions is now more
+    !end-bullet!
+-   !begin-bullet!
+    The behavior cli's inline styling expressions is now more
     predictable. cli does not try to evaluate a styled string as an R
     expression any more. E.g. the meaning of `"{.emph +1}"` is now
     always the "+1", with style `.emph`, even if an `.emph` variable is
     available and the `.emph + 1` expression can be evaluated.
 
--   Functions that apply bright background colors
+    !end-bullet!
+-   !begin-bullet!
+    Functions that apply bright background colors
     (e.g. `bg_br_yellow()`) now close themselves. They no longer format
     text after the end of the function (#484, @rossellhayes).
+
+    !end-bullet!
 
 !end-bullets-2!
 
@@ -105,18 +159,27 @@
 
 !begin-bullets-3!
 
--   `style_hyperlink()` no longer breaks if the env variable
+-   !begin-bullet!
+    `style_hyperlink()` no longer breaks if the env variable
     `VTE_VERSION` is of the form `\d{4}`, i.e., 4 consecutive numbers
     (#441, @michaelchirico)
 
--   `ansi_*()` functions support ANSI hyperlinks again (#444).
+    !end-bullet!
+-   !begin-bullet!
+    `ansi_*()` functions support ANSI hyperlinks again (#444).
 
--   Turning off ANSI colors via the `cli.num_colors` option or the
+    !end-bullet!
+-   !begin-bullet!
+    Turning off ANSI colors via the `cli.num_colors` option or the
     `R_CLI_NUM_COLORS` or the `NO_COLOR` environment variable now also
     turns off ANSI hyperlinks (#447).
 
--   `symbol` now only has two variants: UTF-8 and ASCII. There are no
+    !end-bullet!
+-   !begin-bullet!
+    `symbol` now only has two variants: UTF-8 and ASCII. There are no
     special variants for RStudio and Windows RGui any more (#424).
+
+    !end-bullet!
 
 !end-bullets-3!
 
@@ -126,8 +189,10 @@
 
 !begin-bullets-4!
 
--   The `cli_theme_dark` option is now known as `cli.theme_dark`, to be
+-   !begin-bullet!
+    The `cli_theme_dark` option is now known as `cli.theme_dark`, to be
     consistent with all other cli option names (#380).
+    !end-bullet!
 
 !end-bullets-4!
 
@@ -135,13 +200,16 @@
 
 !begin-bullets-5!
 
--   The preferred names of the S3 classes `ansi_string`, `ansi_style`,
+-   !begin-bullet!
+    The preferred names of the S3 classes `ansi_string`, `ansi_style`,
     `boxx`, `rule` and `tree` now have `cli_` prefix: `cli_ansi_string`,
     etc. This will help avoiding name conflicts with other packages
     eventually, but for now the old names are kept as well, for
     compatibility.
 
--   `cli_abort()` has been updated to work nicely with rlang 1.0. The
+    !end-bullet!
+-   !begin-bullet!
+    `cli_abort()` has been updated to work nicely with rlang 1.0. The
     default `call` and backtrace soft-truncation are set to `.envir`
     (which itself is set to the immediate caller of `cli_abort()` by
     default).
@@ -150,20 +218,30 @@
     `rlang::cnd_message()` (which is called by the `conditionMessage()`
     method for rlang errors).
 
--   New `hash_sha256()` function to calculate SHA-256 hashes. New
+    !end-bullet!
+-   !begin-bullet!
+    New `hash_sha256()` function to calculate SHA-256 hashes. New
     `hash_raw_*()`, `hash_obj_*()` and `hash_file_*()` functions to
     calculate various hashes of raw vectors, R objects and files.
 
--   You can use the new `cli.default_num_colors` option to set the
+    !end-bullet!
+-   !begin-bullet!
+    You can use the new `cli.default_num_colors` option to set the
     default number of ANSI colors, only if ANSI support is otherwise
     detected. See the details in the manual of `num_ansi_colors()`.
 
--   You can set the new `ESS_BACKGROUND_MODE` environment variable to
+    !end-bullet!
+-   !begin-bullet!
+    You can set the new `ESS_BACKGROUND_MODE` environment variable to
     `dark` to indicate dark mode.
 
--   cli now handles quotes and comment characters better in the
+    !end-bullet!
+-   !begin-bullet!
+    cli now handles quotes and comment characters better in the
     semantion `cli_*()` functions that perform glue string interpolation
     (#370).
+
+    !end-bullet!
 
 !end-bullets-5!
 
@@ -171,7 +249,9 @@
 
 !begin-bullets-6!
 
--   `style_hyperlink()` gains a `params=` argument (#384).
+-   !begin-bullet!
+    `style_hyperlink()` gains a `params=` argument (#384).
+    !end-bullet!
 
 !end-bullets-6!
 
@@ -181,8 +261,10 @@
 
 !begin-bullets-7!
 
--   The C progress bar API now uses `double` instead of `int` as the
+-   !begin-bullet!
+    The C progress bar API now uses `double` instead of `int` as the
     data type of the progress units (#335).
+    !end-bullet!
 
 !end-bullets-7!
 
@@ -190,46 +272,76 @@
 
 !begin-bullets-8!
 
--   Several improvements and changes in the `ansi_*()` functions:
+-   !begin-bullet!
+    Several improvements and changes in the `ansi_*()` functions:
 
     !begin-bullets-9!
-    -   most `ansi_*()` functions are now implemented in C and they are
+    -   !begin-bullet!
+        most `ansi_*()` functions are now implemented in C and they are
         much faster (#316).
-    -   they handle `NA` values better.
-    -   many functions now use UTF-8 graphemes by default instead of
+        !end-bullet!
+    -   !begin-bullet!
+        they handle `NA` values better.
+        !end-bullet!
+    -   !begin-bullet!
+        many functions now use UTF-8 graphemes by default instead of
         code points. E.g. `ansi_nchar()` counts graphemes, etc.
-    -   they convert their input to UTF-8 and always return UTF-8
+        !end-bullet!
+    -   !begin-bullet!
+        they convert their input to UTF-8 and always return UTF-8
         encoded strings.
-    -   new function `ansi_simplify()` to remove superfluous ANSI tags.
-    -   new function `ansi_html()` to convert ANSI-highlighted strings
+        !end-bullet!
+    -   !begin-bullet!
+        new function `ansi_simplify()` to remove superfluous ANSI tags.
+        !end-bullet!
+    -   !begin-bullet!
+        new function `ansi_html()` to convert ANSI-highlighted strings
         to HTML.
-    -   `ansi_has_any()` and `ansi_strip()` now have `sgr` and `csi`
+        !end-bullet!
+    -   !begin-bullet!
+        `ansi_has_any()` and `ansi_strip()` now have `sgr` and `csi`
         arguments to look for SGR tags, CSI tags, or both.
+        !end-bullet!
 
     !end-bullets-9!
-
--   New functions that handle UTF-8 encoded strings correctly:
+    !end-bullet!
+-   !begin-bullet!
+    New functions that handle UTF-8 encoded strings correctly:
     `utf8_graphemes()`, `utf8_nchar()`, `utf8_substr()`.
 
--   Support for palettes, including a colorblind friendly palette. See
+    !end-bullet!
+-   !begin-bullet!
+    Support for palettes, including a colorblind friendly palette. See
     `?ansi_palettes` for details.
 
--   True color support: `num_ansi_colors()` now detects terminals with
+    !end-bullet!
+-   !begin-bullet!
+    True color support: `num_ansi_colors()` now detects terminals with
     24 bit color support, and `make_ansi_style()` uses the exact RGB
     colors on these terminals (#208).
 
--   The new `col_br_*()` and `bg_br_()` functions create bright versions
+    !end-bullet!
+-   !begin-bullet!
+    The new `col_br_*()` and `bg_br_()` functions create bright versions
     of eight base ANSI colors (#327).
 
--   New function `code_highlight()` to syntax highlight R code. It
+    !end-bullet!
+-   !begin-bullet!
+    New function `code_highlight()` to syntax highlight R code. It
     supports several themes out of the box, see `code_theme_list()`
     (#348).
 
--   New functions for hashing: `hash_animal()`, `hash_emoji()` and
+    !end-bullet!
+-   !begin-bullet!
+    New functions for hashing: `hash_animal()`, `hash_emoji()` and
     `hash_md5()`.
 
--   New `diff_chr()` and `diff_str()` functions to calculate the
+    !end-bullet!
+-   !begin-bullet!
+    New `diff_chr()` and `diff_str()` functions to calculate the
     difference of character vectors and letters of strings.
+
+    !end-bullet!
 
 !end-bullets-8!
 
@@ -237,28 +349,47 @@
 
 !begin-bullets-10!
 
--   Progress bars with `clear = FALSE` now print the last, completed,
+-   !begin-bullet!
+    Progress bars with `clear = FALSE` now print the last, completed,
     state properly.
 
--   The progress bar for Shiny apps now handles output from
+    !end-bullet!
+-   !begin-bullet!
+    The progress bar for Shiny apps now handles output from
     `cli_progress_output()`.
 
--   Progress variables in C `format_done` strings work correctly now
+    !end-bullet!
+-   !begin-bullet!
+    Progress variables in C `format_done` strings work correctly now
     (#337).
 
--   `cli_dl()` now works with an empty description, and gives a better
+    !end-bullet!
+-   !begin-bullet!
+    `cli_dl()` now works with an empty description, and gives a better
     error for invalid input (#347).
 
--   `rule()` is now works better if the labels have ANSI markup.
+    !end-bullet!
+-   !begin-bullet!
+    `rule()` is now works better if the labels have ANSI markup.
 
--   `cli_spark` objects now have `format()` and `print()` methods.
+    !end-bullet!
+-   !begin-bullet!
+    `cli_spark` objects now have `format()` and `print()` methods.
 
--   `cli_process_done()` now does not error without a process (#351).
+    !end-bullet!
+-   !begin-bullet!
+    `cli_process_done()` now does not error without a process (#351).
 
--   ANSI markup is now supported in RStudio jobs (#353).
+    !end-bullet!
+-   !begin-bullet!
+    ANSI markup is now supported in RStudio jobs (#353).
 
--   The lack of ANSI support is now again correctly detected if there is
+    !end-bullet!
+-   !begin-bullet!
+    The lack of ANSI support is now again correctly detected if there is
     an active `sink()` (#366).
+
+    !end-bullet!
 
 !end-bullets-10!
 
@@ -266,9 +397,14 @@
 
 !begin-bullets-11!
 
--   `ansi_strtrim()` now correctly keeps `NA` values (#309).
+-   !begin-bullet!
+    `ansi_strtrim()` now correctly keeps `NA` values (#309).
 
--   `format_inline()` now uses the correct environment (@rundel, #314).
+    !end-bullet!
+-   !begin-bullet!
+    `format_inline()` now uses the correct environment (@rundel, #314).
+
+    !end-bullet!
 
 !end-bullets-11!
 
@@ -276,14 +412,21 @@
 
 !begin-bullets-12!
 
--   New functions for progress bars, please see the new articles at
+-   !begin-bullet!
+    New functions for progress bars, please see the new articles at
     https://cli.r-lib.org/articles/ for details.
 
--   New `cli_abort()`, `cli_warn()` and `cli_inform()` functions, to
+    !end-bullet!
+-   !begin-bullet!
+    New `cli_abort()`, `cli_warn()` and `cli_inform()` functions, to
     throw errors with cli pluralization and styling.
 
--   New `format_inline()` function to format a cli string without
+    !end-bullet!
+-   !begin-bullet!
+    New `format_inline()` function to format a cli string without
     emitting it (#278).
+
+    !end-bullet!
 
 !end-bullets-12!
 
@@ -291,27 +434,42 @@
 
 !begin-bullets-13!
 
--   New `style_no_*()` functions to locally undo styling. New
+-   !begin-bullet!
+    New `style_no_*()` functions to locally undo styling. New
     `col_none()` and `bg_none()` functions to locally undo text color
     and background color.
 
--   It is now possible to undo text and background color in a theme, by
+    !end-bullet!
+-   !begin-bullet!
+    It is now possible to undo text and background color in a theme, by
     setting them to `NULL` or `"none"`.
 
--   `cli_memo()` was renamed to `cli_bullets()`, as it is by default
+    !end-bullet!
+-   !begin-bullet!
+    `cli_memo()` was renamed to `cli_bullets()`, as it is by default
     formatted as a bullet list (#250).
 
--   New `ansi_toupper()`, `ansi_tolower` and `ansi_chartr()` functions,
+    !end-bullet!
+-   !begin-bullet!
+    New `ansi_toupper()`, `ansi_tolower` and `ansi_chartr()` functions,
     the ANSI styling aware variants of `toupper()`, `tolower()` and
     `chartr()` (#248).
 
--   New `test_that_cli()` helper function to write testthat tests for
+    !end-bullet!
+-   !begin-bullet!
+    New `test_that_cli()` helper function to write testthat tests for
     cli output.
 
--   `tree()` now does not produce warnings for tibbles (#238).
+    !end-bullet!
+-   !begin-bullet!
+    `tree()` now does not produce warnings for tibbles (#238).
 
--   New inline style: `.cls` to format class names, e.g.
+    !end-bullet!
+-   !begin-bullet!
+    New inline style: `.cls` to format class names, e.g.
     `"{.var fit} must be an {.cls lm} object"`.
+
+    !end-bullet!
 
 !end-bullets-13!
 
@@ -319,19 +477,30 @@
 
 !begin-bullets-14!
 
--   New `cli_memo()` function to create a list of items or tasks.
+-   !begin-bullet!
+    New `cli_memo()` function to create a list of items or tasks.
 
--   New `cli::cli()` function to create a single cli message from
+    !end-bullet!
+-   !begin-bullet!
+    New `cli::cli()` function to create a single cli message from
     multiple cli calls (#170).
 
--   cli now highlights weird names, e.g. path names with leading or
+    !end-bullet!
+-   !begin-bullet!
+    cli now highlights weird names, e.g. path names with leading or
     trailing space (#227).
 
--   Styling is fixed at several places. In particular, nested lists
+    !end-bullet!
+-   !begin-bullet!
+    Styling is fixed at several places. In particular, nested lists
     should be now formatted better (#221).
 
--   New `spark_bar()` and `spark_line()` functions to draw small bar or
+    !end-bullet!
+-   !begin-bullet!
+    New `spark_bar()` and `spark_line()` functions to draw small bar or
     line charts.
+
+    !end-bullet!
 
 !end-bullets-14!
 
@@ -339,11 +508,16 @@
 
 !begin-bullets-15!
 
--   ANSI color support detection works correctly now in older RStudio,
+-   !begin-bullet!
+    ANSI color support detection works correctly now in older RStudio,
     and also on older R versions.
 
--   `cli_h1()`, `cli_h2()` and `cli_h3()` now work with multiple glue
+    !end-bullet!
+-   !begin-bullet!
+    `cli_h1()`, `cli_h2()` and `cli_h3()` now work with multiple glue
     substitutions (#218).
+
+    !end-bullet!
 
 !end-bullets-15!
 
@@ -351,23 +525,36 @@
 
 !begin-bullets-16!
 
--   `boxx()` now correctly calculates the width of the box for non-ASCII
+-   !begin-bullet!
+    `boxx()` now correctly calculates the width of the box for non-ASCII
     characters.
 
--   New `ansi_trimws()` and `ansi_strwrap()` functions, they are similar
+    !end-bullet!
+-   !begin-bullet!
+    New `ansi_trimws()` and `ansi_strwrap()` functions, they are similar
     to `trimws()` and `strwrap()` but work on ANSI strings.
 
--   New `ansi_columns()` function to format ANSI strings in multiple
+    !end-bullet!
+-   !begin-bullet!
+    New `ansi_columns()` function to format ANSI strings in multiple
     columns.
 
--   `ansi_substr()`, `ansi_substring()`, `ansi_strsplit()`,
+    !end-bullet!
+-   !begin-bullet!
+    `ansi_substr()`, `ansi_substring()`, `ansi_strsplit()`,
     `ansi_align()` now always return `cli_ansi_string` objects.
 
--   `ansi_nchar()`, `ansi_align()`, `ansi_strtrim()` and the new
+    !end-bullet!
+-   !begin-bullet!
+    `ansi_nchar()`, `ansi_align()`, `ansi_strtrim()` and the new
     `ansi_strwrap()` as well handle wide Unicode correctly, according to
     their display width.
 
--   `boxx()` can now add headers and footers to boxes.
+    !end-bullet!
+-   !begin-bullet!
+    `boxx()` can now add headers and footers to boxes.
+
+    !end-bullet!
 
 !end-bullets-16!
 
@@ -375,19 +562,28 @@
 
 !begin-bullets-17!
 
--   New `style_hyperlink()` function to add hyperlinks, on terminals
+-   !begin-bullet!
+    New `style_hyperlink()` function to add hyperlinks, on terminals
     that support them.
 
--   `cli_format_method()` now works properly in knitr, and other
+    !end-bullet!
+-   !begin-bullet!
+    `cli_format_method()` now works properly in knitr, and other
     environments that catch message conditions (#159).
 
--   ANSI strings created by `col_*`, `bg_*` and `style_*` now also add
+    !end-bullet!
+-   !begin-bullet!
+    ANSI strings created by `col_*`, `bg_*` and `style_*` now also add
     the `character` class to the result. This fixes issues with code
     that expect `character` objects.
 
--   New functions to manipulate ANSI strings: `ansi_aling()`,
+    !end-bullet!
+-   !begin-bullet!
+    New functions to manipulate ANSI strings: `ansi_aling()`,
     `ansi_has_any()`, `ansi_nchar()`, `ansi_regex()`, `ansi_strip()`,
     `ansi_strsplit()`, `ansi_substr()`, `ansi_substring()`.
+
+    !end-bullet!
 
 !end-bullets-17!
 
@@ -395,51 +591,78 @@
 
 !begin-bullets-18!
 
--   New `cli_vec()` function to allow easier formatting of collapsed
+-   !begin-bullet!
+    New `cli_vec()` function to allow easier formatting of collapsed
     vectors. It is now also possible to use styling to set the
     collapsing parameters (#129).
 
--   New `pluralize()` function to perform pluralization without
+    !end-bullet!
+-   !begin-bullet!
+    New `pluralize()` function to perform pluralization without
     generating cli output (#155).
 
--   `console_width()` works better now in RStudio, and also in
+    !end-bullet!
+-   !begin-bullet!
+    `console_width()` works better now in RStudio, and also in
     terminals.
 
--   Styling of verbatim text work properly now (#147, @tzakharko).
+    !end-bullet!
+-   !begin-bullet!
+    Styling of verbatim text work properly now (#147, @tzakharko).
 
--   Messages (i.e. `message` conditions) coming from cli now have the
+    !end-bullet!
+-   !begin-bullet!
+    Messages (i.e. `message` conditions) coming from cli now have the
     `cliMessage` class, so you can easily suppress them without
     suppressing other messages (#156).
 
--   cli prints the output to `stderr()` now, if there is an output or
+    !end-bullet!
+-   !begin-bullet!
+    cli prints the output to `stderr()` now, if there is an output or
     message sink. This is to make interactive and non-interactive
     sessions consistent (#153).
 
--   Pluralization works correctly now if the last alternative is the
+    !end-bullet!
+-   !begin-bullet!
+    Pluralization works correctly now if the last alternative is the
     empty string (#158).
 
--   cli now caches the result of the dark background detection in iTerm
+    !end-bullet!
+-   !begin-bullet!
+    cli now caches the result of the dark background detection in iTerm
     on macOS. Reload cli to delete the cache (#131).
 
--   The `is_dynamic_tty()`, `is_ansi_tty()` and `ansi_hide_cursor()` and
+    !end-bullet!
+-   !begin-bullet!
+    The `is_dynamic_tty()`, `is_ansi_tty()` and `ansi_hide_cursor()` and
     related functions now default to the `"auto"` stream, which is
     automatically selected to be either `stdout()` or `stderr()`. See
     the manual for details (#144).
 
--   The default theme now quotes file names, paths, email addresses if
+    !end-bullet!
+-   !begin-bullet!
+    The default theme now quotes file names, paths, email addresses if
     they don't start or end with an alphanumeric character or a slash.
     This is to make it easier to spot names that start or end with a
     space (#167).
 
--   `make_spinner()` clears the line properly now (@tzakharko, #164).
+    !end-bullet!
+-   !begin-bullet!
+    `make_spinner()` clears the line properly now (@tzakharko, #164).
 
--   Semantic cli functions now automatically replace Unicode
+    !end-bullet!
+-   !begin-bullet!
+    Semantic cli functions now automatically replace Unicode
     non-breaking space characters (`\u00a0`) with regular space
     characters, right before output. They are still used to calculate
     the line breaks, but not outputted (#161).
 
--   Progress bars now respect `is_dynamic_tty()` and do not output `\r`
+    !end-bullet!
+-   !begin-bullet!
+    Progress bars now respect `is_dynamic_tty()` and do not output `\r`
     when this is false (@jimhester, #177)
+
+    !end-bullet!
 
 !end-bullets-18!
 
@@ -447,18 +670,27 @@
 
 !begin-bullets-19!
 
--   The status bar now does not simplify multiple spaces by a single
+-   !begin-bullet!
+    The status bar now does not simplify multiple spaces by a single
     space.
 
--   cli now does not crash if it fails to detect whether the RStudio
+    !end-bullet!
+-   !begin-bullet!
+    cli now does not crash if it fails to detect whether the RStudio
     theme is a dark theme (#138).
 
--   cli now works better with wide Unicode characters, for example
+    !end-bullet!
+-   !begin-bullet!
+    cli now works better with wide Unicode characters, for example
     emojis. In particular, a status bar containing emojis is cleared
     properly (#133).
 
--   The status bar now does not flicker when updated, in terminals
+    !end-bullet!
+-   !begin-bullet!
+    The status bar now does not flicker when updated, in terminals
     (#135).
+
+    !end-bullet!
 
 !end-bullets-19!
 
@@ -466,16 +698,25 @@
 
 !begin-bullets-20!
 
--   Symbols (`symbol$*`) are now correctly printed in RStudio on Windows
+-   !begin-bullet!
+    Symbols (`symbol$*`) are now correctly printed in RStudio on Windows
     (#124).
 
--   The default theme for `cli_code()` output looks better now,
+    !end-bullet!
+-   !begin-bullet!
+    The default theme for `cli_code()` output looks better now,
     especially in RStudio (#123).
 
--   Remove spurious newline after a `cli_process_start()` was cleared
+    !end-bullet!
+-   !begin-bullet!
+    Remove spurious newline after a `cli_process_start()` was cleared
     manually, and also at the end of the function.
 
--   Use Oxford comma when listing 3 or more items (@jonocarroll, #128).
+    !end-bullet!
+-   !begin-bullet!
+    Use Oxford comma when listing 3 or more items (@jonocarroll, #128).
+
+    !end-bullet!
 
 !end-bullets-20!
 
@@ -493,8 +734,10 @@ site: https://cli.r-lib.org
 
 !begin-bullets-21!
 
--   Fix a bug in `is_dynamic_tty()`, setting `R_CLI_DYNAMIC="FALSE"` now
+-   !begin-bullet!
+    Fix a bug in `is_dynamic_tty()`, setting `R_CLI_DYNAMIC="FALSE"` now
     properly turns dynamic tty off (#70).
+    !end-bullet!
 
 !end-bullets-21!
 
@@ -502,26 +745,39 @@ site: https://cli.r-lib.org
 
 !begin-bullets-22!
 
--   cli has now functions to add ANSI styles to text. These use the
+-   !begin-bullet!
+    cli has now functions to add ANSI styles to text. These use the
     crayon package internally, and provide a simpler interface. See the
     `col_*`, `bg_*`, `style_*` and also the `make_ansi_style()` and
     `combine_ansi_styles()` functions (#51).
 
--   New `is_dynamic_tty()` function detects if `\r` should be used for a
+    !end-bullet!
+-   !begin-bullet!
+    New `is_dynamic_tty()` function detects if `\r` should be used for a
     stream (#62).
 
--   New `is_ansi_tty()` function detects if ANSI control sequences can
+    !end-bullet!
+-   !begin-bullet!
+    New `is_ansi_tty()` function detects if ANSI control sequences can
     be used for a stream.
 
--   New `ansi_hide_cursor()`, `ansi_show_cursor()` and
+    !end-bullet!
+-   !begin-bullet!
+    New `ansi_hide_cursor()`, `ansi_show_cursor()` and
     `ansi_with_hidden_cursor()` functions to hide and show the cursor in
     terminals.
 
--   New `make_spinner()` function helps integrating spinners into your
+    !end-bullet!
+-   !begin-bullet!
+    New `make_spinner()` function helps integrating spinners into your
     functions.
 
--   Now `symbol` always uses ASCII symbols when the `cli.unicode` option
+    !end-bullet!
+-   !begin-bullet!
+    Now `symbol` always uses ASCII symbols when the `cli.unicode` option
     is set to `FALSE`.
+
+    !end-bullet!
 
 !end-bullets-22!
 
@@ -529,11 +785,16 @@ site: https://cli.r-lib.org
 
 !begin-bullets-23!
 
--   New `cli_sitrep()` function, situation report about UTF-8 and ANSI
+-   !begin-bullet!
+    New `cli_sitrep()` function, situation report about UTF-8 and ANSI
     color support (#53).
 
--   Fall back to ASCII only characters on non-Windows platforms without
+    !end-bullet!
+-   !begin-bullet!
+    Fall back to ASCII only characters on non-Windows platforms without
     UTF-8 support, and also in LaTeX when running knitr (#34).
+
+    !end-bullet!
 
 !end-bullets-23!
 

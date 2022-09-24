@@ -1,5 +1,7 @@
 # cli (development version)
 
+# cli 3.4.1
+
 * cli has better error messages now.
 
 * New `format_inline()` argument: `collapse`, to collapse multi-line output,

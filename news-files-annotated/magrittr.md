@@ -4,7 +4,9 @@
 
 !begin-bullets-1!
 
--   Fixed a C level protection issue in `%>%` (#256).
+-   !begin-bullet!
+    Fixed a C level protection issue in `%>%` (#256).
+    !end-bullet!
 
 !end-bullets-1!
 
@@ -12,12 +14,17 @@
 
 !begin-bullets-2!
 
--   New eager pipe `%!>%` for sequential evaluation (#247). Consider
+-   !begin-bullet!
+    New eager pipe `%!>%` for sequential evaluation (#247). Consider
     using `force()` in your functions instead to make them strict, if
     sequentiality is required. See the examples in `?"pipe-eager"`.
 
--   Fixed an issue that could cause pipe invocations to fail in versions
+    !end-bullet!
+-   !begin-bullet!
+    Fixed an issue that could cause pipe invocations to fail in versions
     of R built with `--enable-strict-barrier`. (#239, @kevinushey)
+
+    !end-bullet!
 
 !end-bullets-2!
 
@@ -25,11 +32,16 @@
 
 !begin-bullets-3!
 
--   Fixed issue caused by objects with certain names being present in
+-   !begin-bullet!
+    Fixed issue caused by objects with certain names being present in
     the calling environment (#233).
 
--   Fixed regression in `freduce()` with long lists
+    !end-bullet!
+-   !begin-bullet!
+    Fixed regression in `freduce()` with long lists
     (kcf-jackson/sketch#5).
+
+    !end-bullet!
 
 !end-bullets-3!
 
@@ -41,9 +53,15 @@ The pipe has been rewritten in C with the following goals in mind:
 
 !begin-bullets-4!
 
--   Minimal performance cost.
--   Minimal impact on backtraces.
--   No impact on reference counts.
+-   !begin-bullet!
+    Minimal performance cost.
+    !end-bullet!
+-   !begin-bullet!
+    Minimal impact on backtraces.
+    !end-bullet!
+-   !begin-bullet!
+    No impact on reference counts.
+    !end-bullet!
 
 !end-bullets-4!
 
@@ -53,10 +71,14 @@ future version of R. The pipe now evaluates piped expressions lazily
 (#120). The main consequence of this change is that warnings and errors
 can now be handled by trailing pipe calls:
 
+!begin-codeblock!
+
 ``` r
 stop("foo") %>% try()
 warning("bar") %>% suppressWarnings()
 ```
+
+!end-codeblock!
 
 ## Breaking changes
 
@@ -77,6 +99,8 @@ behaviour that makes the most sense is to return from the enclosing
 function. However, we can't make this work easily with the new
 implementation, and so calling `return()` is now an error.
 
+!begin-codeblock!
+
 ``` r
 my_function <- function(x) {
   x %>% {
@@ -89,8 +113,12 @@ my_function(TRUE)
 #> Error: no function to return from, jumping to top level
 ```
 
+!end-codeblock!
+
 In magrittr 1.5, `return()` used to return from the current pipe
 expression. You can rewrite this to the equivalent:
+
+!begin-codeblock!
 
 ``` r
 my_function <- function(x) {
@@ -107,15 +135,23 @@ my_function(TRUE)
 #> [1] "true"
 ```
 
+!end-codeblock!
+
 For backward-compatibility we have special-cased trailing `return()`
 calls as this is a common occurrence in packages:
+
+!begin-codeblock!
 
 ``` r
 1 %>% identity() %>% return()
 ```
 
+!end-codeblock!
+
 Note however that this only returns from the pipeline, not the enclosing
 function (which is the historical behaviour):
+
+!begin-codeblock!
 
 ``` r
 my_function <- function() {
@@ -127,6 +163,8 @@ my_function()
 #> [1] "wrong value"
 ```
 
+!end-codeblock!
+
 It is generally best to avoid using `return()` in a pipeline, even if
 trailing.
 
@@ -137,11 +175,15 @@ parts of a pipeline are not yet evaluated when the last pipe expression
 is called. They only get evaluated when the last function actually uses
 the piped arguments:
 
+!begin-codeblock!
+
 ``` r
 ignore <- function(x) "return value"
 stop("never called") %>% ignore()
 #> [1] "return value"
 ```
+
+!end-codeblock!
 
 This should generally not cause problems. However we found some
 functions with special behaviour, written under the assumption that
@@ -153,6 +195,8 @@ the nested form, e.g. `f(g(1))` instead of `1 %>% g() %>% f()`.
 The solution to fix this is to call `force()` on the inputs to force
 evaluation, and only then check for side effects:
 
+!begin-codeblock!
+
 ``` r
 my_function <- function(data) {
   force(data)
@@ -160,8 +204,12 @@ my_function <- function(data) {
 }
 ```
 
+!end-codeblock!
+
 Another issue caused by laziness is that if any function in a pipeline
 returns invisibly, than the whole pipeline returns invisibly as well.
+
+!begin-codeblock!
 
 ``` r
 1 %>% identity() %>% invisible()
@@ -169,9 +217,13 @@ returns invisibly, than the whole pipeline returns invisibly as well.
 1 %>% identity() %>% invisible() %>% identity()
 ```
 
+!end-codeblock!
+
 This is consistent with the equivalent nested code. This behaviour can
 be worked around in two ways. You can force visibility by wrapping the
 pipeline in parentheses:
+
+!begin-codeblock!
 
 ``` r
 my_function <- function(x) {
@@ -179,7 +231,11 @@ my_function <- function(x) {
 }
 ```
 
+!end-codeblock!
+
 Or by assigning the result to a variable and return it:
+
+!begin-codeblock!
 
 ``` r
 my_function <- function(x) {
@@ -187,6 +243,8 @@ my_function <- function(x) {
   out
 }
 ```
+
+!end-codeblock!
 
 ### Incorrect call stack introspection
 
@@ -208,12 +266,17 @@ packages.
 
 !begin-bullets-5!
 
--   Can now use the placeholder `.` with the splicing operator `!!!`
+-   !begin-bullet!
+    Can now use the placeholder `.` with the splicing operator `!!!`
     from rlang (#191).
 
--   Piped arguments are now persistent. They can be evaluated after the
+    !end-bullet!
+-   !begin-bullet!
+    Piped arguments are now persistent. They can be evaluated after the
     pipeline has returned, which fixes subtle issues with function
     factories (#159, #195).
+
+    !end-bullet!
 
 !end-bullets-5!
 
@@ -236,9 +299,15 @@ Three new operators are introduced for some special cases
 
 !begin-bullets-6!
 
--   Assignment pipe: `%<>%`
--   Tee pipe: `%T>%`
--   Exposition pipe: `%$%`
+-   !begin-bullet!
+    Assignment pipe: `%<>%`
+    !end-bullet!
+-   !begin-bullet!
+    Tee pipe: `%T>%`
+    !end-bullet!
+-   !begin-bullet!
+    Exposition pipe: `%$%`
+    !end-bullet!
 
 !end-bullets-6!
 

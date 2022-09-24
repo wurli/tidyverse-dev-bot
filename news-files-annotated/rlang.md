@@ -80,13 +80,13 @@
 -   !begin-bullet!
     Child errors may now have empty messages to enable this pattern:
 
-    !end-bullet!
     !begin-codeblock!
         Error in `my_function()`:
         Caused by error in `their_function()`:
         ! Message.
 
     !end-codeblock!
+    !end-bullet!
 -   !begin-bullet!
     The `rlib_bytes` class now uses prettyunits to format bytes. The
     bytes are now represented with decimal prefixes instead of binary
@@ -98,29 +98,23 @@
     now causes the corresponding function call in the backtrace to be
     highlighted.
 
-    !end-bullet!
-    !begin-bullet!
     In addition, if you store the argument name of a failing input in
     the `arg` error field, the argument is also highlighted in the
     backtrace.
 
-    !end-bullet!
-    !begin-bullet!
     Instead of:
 
-    !end-bullet!
     !begin-codeblock!
         cli::cli_abort("{.arg {arg}} must be a foobar.", call = call)
 
     !end-codeblock!
-    !begin-bullet!
     You can now write this to benefit from arg highlighting:
 
-    !end-bullet!
     !begin-codeblock!
         cli::cli_abort("{.arg {arg}} must be a foobar.", arg = arg, call = call)
 
     !end-codeblock!
+    !end-bullet!
 -   !begin-bullet!
     `abort(message = )` can now be a function. In this case, it is
     stored in the `header` field and acts as a `cnd_header()` method
@@ -346,12 +340,8 @@
 
 ## Major changes
 
-!begin-bullet!
-
 This release focuses on the rlang errors framework and features
 extensive changes to the display of error messages.
-
-!end-bullet!
 
 !begin-bullets-7!
 
@@ -374,8 +364,6 @@ extensive changes to the display of error messages.
     avoid confusing messages when an error is thrown from a helper
     function that isn't relevant to users.
 
-    !end-bullet!
-    !begin-bullet!
     To help with these cases, `abort()` now takes a `call` argument that
     you can set to `caller_env()` or `parent.frame()` when used in a
     helper function. The function call corresponding to this environment
@@ -394,7 +382,6 @@ extensive changes to the display of error messages.
     it for chaining errors. It mostly works like `tryCatch()` with a few
     important differences.
 
-    !end-bullet!
     !begin-bullets-8!
     -   !begin-bullet!
         Compared to `tryCatch()`, `try_fetch()` preserves the call
@@ -410,6 +397,7 @@ extensive changes to the display of error messages.
         !end-bullet!
 
     !end-bullets-8!
+    !end-bullet!
 -   !begin-bullet!
     The tidy eval documentation has been fully rewritten to reflect
     current practices. Access it through the "Tidy evaluation" and
@@ -428,16 +416,12 @@ extensive changes to the display of error messages.
     instead of returning `NULL`. This new error helps you detect when
     `.data` is used in the wrong context.
 
-    !end-bullet!
-    !begin-bullet!
     We've noticed several packages failing after this change because
     they were using `.data` outside of a data-masking context. For
     instance the `by` argument of `dplyr::join()` is not data-masked.
     Previously `dplyr::join(by = .data$foo)` would silently be
     interpreted as `dplyr::join(by = NULL)`. This is now an error.
 
-    !end-bullet!
-    !begin-bullet!
     Another issue is using `.data` inside `ggplot2::labs(...)`. This is
     not allowed since `labs()` isn't data-masked.
 
@@ -446,16 +430,12 @@ extensive changes to the display of error messages.
     `call_name()` now returns `NULL` instead of `"::"` for calls of the
     form `foo::bar`.
 
-    !end-bullet!
-    !begin-bullet!
     We've noticed some packages do not check for `NULL` results from
     `call_name()`. Note that many complex calls such as `foo()()`,
     `foo$bar()` don't have a "name" and cause a `NULL` result. This is
     why you should always check for `NULL` results when using
     `call_name()`.
 
-    !end-bullet!
-    !begin-bullet!
     We've added the function `is_call_simple()` to make it easier to
     work safely with `call_name()`. The invariant is that `call_name()`
     always returns a string when `is_call_simple()` returns `TRUE`.
@@ -468,19 +448,17 @@ extensive changes to the display of error messages.
     expressions that can't be created by the parser. It used to return
     `TRUE` for any calls, including those that contain injected objects.
 
-    !end-bullet!
-    !begin-bullet!
     Consider using `is_call()` or just remove the expression check. In
     many cases it is fine letting all objects go through when an
     expression is expected. For instance you can inject objects directly
     inside dplyr arguments:
 
-    !end-bullet!
     !begin-codeblock!
         x <- seq_len(nrow(data))
         dplyr::mutate(data, col = !!x)
 
     !end-codeblock!
+    !end-bullet!
 -   !begin-bullet!
     If a string is supplied to `as_function()` instead of an object
     (function or formula), the function is looked up in the global
@@ -490,8 +468,6 @@ extensive changes to the display of error messages.
     obvious user environment. The support for strings should be
     considered a convenience for end users only, not for programmers.
 
-    !end-bullet!
-    !begin-bullet!
     Since environment forwarding is easy to mess up, and since the
     feature is aimed towards end users, `as_function()` now defaults to
     the global environment. Supply an environment explicitly if that is
@@ -624,7 +600,6 @@ extensive changes to the display of error messages.
     of R. This introduces several cosmetic and informative changes in
     errors thrown by `abort()`:
 
-    !end-bullet!
     !begin-bullets-12!
     -   !begin-bullet!
         The `call` field of error messages is now displayed, as is the
@@ -648,7 +623,6 @@ extensive changes to the display of error messages.
         !end-bullet!
 
     !end-bullets-12!
-    !begin-bullet!
     See
     <https://rlang.r-lib.org/reference/topic-condition-customisation.html>
     to customise this new display.
@@ -664,7 +638,6 @@ extensive changes to the display of error messages.
     The `print()` method of rlang errors (commonly invoked with
     `last_error()`) has been improved:
 
-    !end-bullet!
     !begin-bullets-13!
     -   !begin-bullet!
         Display calls if present.
@@ -674,6 +647,7 @@ extensive changes to the display of error messages.
         !end-bullet!
 
     !end-bullets-13!
+    !end-bullet!
 -   !begin-bullet!
     `inform()` and `warn()` messages can now be silenced with the global
     options `rlib_message_verbosity` and `rlib_warning_verbosity`.
@@ -690,8 +664,6 @@ extensive changes to the display of error messages.
     width-wrapped to the terminal size and user themes are applied. This
     is currently only the case for rlang messages.
 
-    !end-bullet!
-    !begin-bullet!
     This special formatting is not applied when `abort()`, `warn()`, and
     `inform()` are called from another namespace than rlang. See
     <https://rlang.r-lib.org/reference/topic-condition-formatting.html>
@@ -703,7 +675,6 @@ extensive changes to the display of error messages.
     `format_error_bullets()` (used as a fallback instead of cli) now
     treats:
 
-    !end-bullet!
     !begin-bullets-14!
     -   !begin-bullet!
         Unnamed elements as unindented line breaks (#1130)
@@ -722,7 +693,6 @@ extensive changes to the display of error messages.
         !end-bullet!
 
     !end-bullets-14!
-    !begin-bullet!
     For convenience, a fully unnamed vector is interpreted as a vector
     of `"*"` bullets.
 
@@ -827,8 +797,6 @@ extensive changes to the display of error messages.
     `rlang_backtrace_on_error_report` option. By default, this is set to
     `"none"`.
 
-    !end-bullet!
-    !begin-bullet!
     The display of backtraces for *unexpected* errors (in chunks where
     `error` is unset or set to `FALSE`) is still controlled by
     `rlang_backtrace_on_error`.
@@ -846,19 +814,15 @@ extensive changes to the display of error messages.
     `rlang_backtrace_on_error_report` global options in knitr to display
     a backtrace for expected errors.
 
-    !end-bullet!
-    !begin-bullet!
     If you show rlang backtraces in a knitted document, also set this in
     a hidden chunk to trim the knitr context from the backtraces:
 
-    !end-bullet!
     !begin-codeblock!
         options(
           rlang_trace_top_env = environment()
         )
 
     !end-codeblock!
-    !begin-bullet!
     This change replaces an ad hoc mechanism that caused bugs in corner
     cases (#1205).
 
@@ -931,8 +895,6 @@ extensive changes to the display of error messages.
     `check_dots_unnamed()` have been moved from ellipsis to rlang. The
     ellipsis package is deprecated and will eventually be archived.
 
-    !end-bullet!
-    !begin-bullet!
     We have added `check_dots_empty0()`. It has a different UI but is
     almost as efficient as checking for `missing(...)`. Use this in very
     low level functions where a couple microseconds make a difference.
@@ -1002,7 +964,6 @@ extensive changes to the display of error messages.
     The new predicate `is_call_simple()` indicates whether a call has a
     name and/or a namespace. It provides two invariants:
 
-    !end-bullet!
     !begin-bullets-18!
     -   !begin-bullet!
         If `is_call_simple(x)` is `TRUE`, `call_name()` always returns a
@@ -1016,6 +977,7 @@ extensive changes to the display of error messages.
         !end-bullet!
 
     !end-bullets-18!
+    !end-bullet!
 -   !begin-bullet!
     `call_name()` and `call_ns()` now return `NULL` with calls of the
     form `foo::bar` (#670).
@@ -1158,8 +1120,6 @@ extensive changes to the display of error messages.
     supports matching missing arguments to their defaults in the
     function definition (#875).
 
-    !end-bullet!
-    !begin-bullet!
     `call_standardise()` is deprecated in favour of `call_match()`.
 
     !end-bullet!
@@ -1453,8 +1413,6 @@ extensive changes to the display of error messages.
     reflect the error ancestry, and the deepest backtrace in the
     ancestry is displayed.
 
-    !end-bullet!
-    !begin-bullet!
     This change simplifies the display (#851) and makes it possible to
     rethow errors from a calling handler rather than an exiting handler,
     which we now think is more appropriate because it allows users to
@@ -1610,11 +1568,8 @@ extensive changes to the display of error messages.
     `list2()` and `enquos()`, and thus most of the tidyverse. Note that
     if you use the glue syntax in an R package, you need to import glue.
 
-    !end-bullet!
-    !begin-bullet!
     A single pair of braces triggers normal glue interpolation:
 
-    !end-bullet!
     !begin-codeblock!
     ``` r
     df <- data.frame(x = 1:3)
@@ -1628,13 +1583,11 @@ extensive changes to the display of error messages.
     ```
 
     !end-codeblock!
-    !begin-bullet!
     Using a pair of double braces is for labelling a function argument.
     Technically, this is shortcut for `"{as_label(enquo(arg))}"`. The
     syntax is similar to the curly-curly syntax for interpolating
     function arguments:
 
-    !end-bullet!
     !begin-codeblock!
     ``` r
     my_wrapper <- function(data, var, suffix = "foo") {
@@ -1654,6 +1607,7 @@ extensive changes to the display of error messages.
     ```
 
     !end-codeblock!
+    !end-bullet!
 -   !begin-bullet!
     Fixed a bug in magrittr backtraces that caused duplicate calls to
     appear in the trace.
@@ -1720,8 +1674,6 @@ extensive changes to the display of error messages.
     are automatically called by `conditionMessage.rlang_error()`, the
     default method for all rlang errors.
 
-    !end-bullet!
-    !begin-bullet!
     Concretely, this is a way of breaking up lazy generation of error
     messages with `conditionMessage()` into three independent parts.
     This provides a lot of flexibility for hierarchies of error classes,
@@ -1883,13 +1835,9 @@ extensive changes to the display of error messages.
 
 ### Interpolate function inputs with the curly-curly operator
 
-!begin-bullet!
-
 The main change of this release is the new tidy evaluation operator
 `{{`. This operator abstracts the quote-and-unquote idiom into a single
 interpolation step:
-
-!end-bullet!
 
 !begin-codeblock!
 
@@ -1901,21 +1849,13 @@ interpolation step:
 
 !end-codeblock!
 
-!begin-bullet!
-
 `{{ var }}` is a shortcut for `!!enquo(var)` that should be easier on
 the eyes, and easier to learn and teach.
-
-!end-bullet!
-
-!begin-bullet!
 
 Note that for multiple inputs, the existing documentation doesn't stress
 enough that you can just pass dots straight to other tidy eval
 functions. There is no need for quote-and-unquote unless you need to
 modify the inputs or their names in some way:
-
-!end-bullet!
 
 !begin-codeblock!
 
@@ -1929,15 +1869,11 @@ modify the inputs or their names in some way:
 
 ### More robust `.env` pronoun
 
-!begin-bullet!
-
 Another improvement to tidy evaluation should make it easier to use the
 `.env` pronoun. Starting from this release, subsetting an object from
 the `.env` pronoun now evaluates the corresponding symbol. This makes
 `.env` more robust, in particular in magrittr pipelines. The following
 example would previously fail:
-
-!end-bullet!
 
 !begin-codeblock!
 
@@ -1946,12 +1882,8 @@ example would previously fail:
 
 !end-codeblock!
 
-!begin-bullet!
-
 This way, using the `.env` pronoun is now equivalent to unquoting a
 constant objects, but with an easier syntax:
-
-!end-bullet!
 
 !begin-codeblock!
 
@@ -1959,14 +1891,10 @@ constant objects, but with an easier syntax:
 
 !end-codeblock!
 
-!begin-bullet!
-
 Note that following this change, and despite its name, `.env` is no
 longer referring to a bare environment. Instead, it is a special
 shortcut with its own rules. Similarly, the `.data` pronoun is not
 really a data frame.
-
-!end-bullet!
 
 ## New functions and features
 
@@ -1999,13 +1927,13 @@ really a data frame.
     `set_names()` now names unnamed input vectors before applying a
     function. The following expressions are now equivalent:
 
-    !end-bullet!
     !begin-codeblock!
         letters %>% set_names() %>% set_names(toupper)
 
         letters %>% set_names(toupper)
 
     !end-codeblock!
+    !end-bullet!
 -   !begin-bullet!
     You can now pass a character vector as message argument for
     `abort()`, `warn()`, `inform()`, and `signal()`. The vector is
@@ -2039,12 +1967,12 @@ really a data frame.
     considerably improves its performance. This also means it now
     preserves empty arguments:
 
-    !end-bullet!
     !begin-codeblock!
         call2("fn", 1, , foo = )
         #> fn(1, , foo = )
 
     !end-codeblock!
+    !end-bullet!
 
 !end-bullets-34!
 
@@ -2103,13 +2031,9 @@ really a data frame.
 
 ## Lifecycle
 
-!begin-bullet!
-
 We commit to support 5 versions of R. As R 3.6 is about to be released,
 rlang now requires R 3.2 or greater. We're also continuing our efforts
 to streamline and narrow the rlang API.
-
-!end-bullet!
 
 !begin-bullets-36!
 
@@ -2196,15 +2120,11 @@ to streamline and narrow the rlang API.
 
 # rlang 0.3.1
 
-!begin-bullet!
-
 This patch release polishes the new backtrace feature introduced in
 rlang 0.3.0 and solves bugs for the upcoming release of purrr 0.3.0. It
 also features `as_label()` and `as_name()` which are meant to replace
 `quo_name()` in the future. Finally, a bunch of deparsing issues have
 been fixed.
-
-!end-bullet!
 
 ## Backtrace fixes
 
@@ -2215,7 +2135,6 @@ been fixed.
     enable rlang backtraces for all errors, including warnings promoted
     to errors:
 
-    !end-bullet!
     !begin-codeblock!
     ``` r
     if (requireNamespace("rlang", quietly = TRUE)) {
@@ -2224,10 +2143,8 @@ been fixed.
     ```
 
     !end-codeblock!
-    !begin-bullet!
     This handler also works as a calling handler:
 
-    !end-bullet!
     !begin-codeblock!
     ``` r
     with_handlers(
@@ -2237,17 +2154,16 @@ been fixed.
     ```
 
     !end-codeblock!
-    !begin-bullet!
     However it's often more practical to use `with_abort()` in that
     case:
 
-    !end-bullet!
     !begin-codeblock!
     ``` r
     with_abort(foo(bar))
     ```
 
     !end-codeblock!
+    !end-bullet!
 -   !begin-bullet!
     `with_abort()` gains a `classes` argument to promote any kind of
     condition to an rlang error.
@@ -2279,8 +2195,6 @@ been fixed.
 
 ## `as_label()` and `as_name()`
 
-!begin-bullet!
-
 The new `as_label()` and `as_name()` functions should be used instead of
 `quo_name()` to transform objects and quoted expressions to a string. We
 have noticed that tidy eval users often use `quo_name()` to extract
@@ -2288,23 +2202,13 @@ names from quosured symbols. This is not a good use for that function
 because the way `quo_name()` creates a string is not a well defined
 operation.
 
-!end-bullet!
-
-!begin-bullet!
-
 For this reason, we are replacing `quo_name()` with two new functions
 that have more clearly defined purposes, and hopefully better names
 reflecting those purposes. Use `as_label()` to transform any object to a
 short human-readable description, and `as_name()` to extract names from
 (possibly quosured) symbols.
 
-!end-bullet!
-
-!begin-bullet!
-
 Create labels with `as_label()` to:
-
-!end-bullet!
 
 !begin-bullets-39!
 
@@ -2321,23 +2225,13 @@ Create labels with `as_label()` to:
 
 !end-bullets-39!
 
-!begin-bullet!
-
 We expect `as_label()` to gain additional parameters in the future, for
 example to control the maximum width of a label. The way an object is
 labelled is thus subject to change.
 
-!end-bullet!
-
-!begin-bullet!
-
 On the other hand, `as_name()` transforms symbols back to a string in a
 well defined manner. Unlike `as_label()`, `as_name()` guarantees the
 roundtrip symbol -\> string -\> symbol.
-
-!end-bullet!
-
-!begin-bullet!
 
 In general, if you don't know for sure what kind of object you're
 dealing with (a call, a symbol, an unquoted constant), use `as_label()`
@@ -2346,18 +2240,12 @@ a symbol and need the name of the object it refers to, use `as_name()`.
 For instance, use `as_label()` with objects captured with `enquo()` and
 `as_name()` with symbols captured with `ensym()`.
 
-!end-bullet!
-
-!begin-bullet!
-
 Note that `quo_name()` will only be soft-deprecated at the next major
 version of rlang (0.4.0). At this point, it will start issuing
 once-per-session warnings in scripts, but not in packages. It will then
 be deprecated in yet another major version, at which point it will issue
 once-per-session warnings in packages as well. You thus have plenty of
 time to change your code.
-
-!end-bullet!
 
 ## Minor fixes and features
 
@@ -2458,26 +2346,20 @@ time to change your code.
 
 ## Breaking changes
 
-!begin-bullet!
-
 The rlang API is still maturing. In this section, you'll find hard
 breaking changes. See the life cycle section below for an exhaustive
 list of API changes.
-
-!end-bullet!
 
 !begin-bullets-41!
 
 -   !begin-bullet!
     `quo_text()` now deparses non-syntactic symbols with backticks:
 
-    !end-bullet!
     !begin-codeblock!
         quo_text(sym("foo+"))
         #> [1] "`foo+`"
 
     !end-codeblock!
-    !begin-bullet!
     This caused a number of issues in reverse dependencies as
     `quo_text()` tends to be used for converting symbols to strings.
     `quo_text()` and `quo_name()` should not be used for this purpose
@@ -2486,8 +2368,6 @@ list of API changes.
     labels. If you need to convert symbols to strings, please use
     `as_string()` rather than `quo_text()`.
 
-    !end-bullet!
-    !begin-bullet!
     We have extended the documentation of `?quo_text` and `?quo_name` to
     make these points clearer.
 
@@ -2502,7 +2382,6 @@ list of API changes.
     changed from `NULL` to `zap()`. This breaking change is motivated by
     the ambiguity of `NULL` with valid argument values.
 
-    !end-bullet!
     !begin-codeblock!
     ``` r
     call_modify(call, arg = NULL)  # Add `arg = NULL` to the call
@@ -2510,6 +2389,7 @@ list of API changes.
     ```
 
     !end-codeblock!
+    !end-bullet!
 -   !begin-bullet!
     The `%@%` operator now quotes its input and supports S4 objects.
     This makes it directly equivalent to `@` except that it extracts
@@ -2525,12 +2405,8 @@ list of API changes.
 
 ## Summary
 
-!begin-bullet!
-
 The changes for this version are organised around three main themes:
 error reporting, tidy eval, and tidy dots.
-
-!end-bullet!
 
 !begin-bullets-42!
 
@@ -2544,8 +2420,6 @@ error reporting, tidy eval, and tidy dots.
     backtrace. To see the full backtrace, call
     `summary(rlang::last_error())`.
 
-    !end-bullet!
-    !begin-bullet!
     `abort()` also gains a `parent` argument. This is meant for
     situations where you're calling a low level API (to download a file,
     parse a JSON file, etc) and would like to intercept errors with
@@ -2555,8 +2429,6 @@ error reporting, tidy eval, and tidy dots.
     the backtrace will be shown in two sections corresponding to the
     high-level and low-level contexts.
 
-    !end-bullet!
-    !begin-bullet!
     In order to get segmented backtraces, the low-level error has to be
     thrown with `abort()`. When that's not the case, you can call the
     low-level function within `with_abort()` to automatically promote
@@ -2660,8 +2532,6 @@ error reporting, tidy eval, and tidy dots.
     The data are stored in the condition and can be examined by user
     handlers.
 
-    !end-bullet!
-    !begin-bullet!
     Consequently all arguments have been renamed and prefixed with a dot
     (to limit naming conflicts between arguments and metadata names).
 
@@ -2690,7 +2560,6 @@ error reporting, tidy eval, and tidy dots.
     makes `!!!` behave the same in functions taking dots with `list2()`
     and in quoting functions. `!!!` accepts these types:
 
-    !end-bullet!
     !begin-bullets-45!
     -   !begin-bullet!
         Lists, pairlists, and atomic vectors. If they have a class, they
@@ -2710,10 +2579,8 @@ error reporting, tidy eval, and tidy dots.
         !end-bullet!
 
     !end-bullets-45!
-    !begin-bullet!
     `!!!` disallows:
 
-    !end-bullet!
     !begin-bullets-46!
     -   !begin-bullet!
         Any other objects like functions or environments, but also
@@ -2721,7 +2588,6 @@ error reporting, tidy eval, and tidy dots.
         !end-bullet!
 
     !end-bullets-46!
-    !begin-bullet!
     Quoting functions used to automatically wrap language objects in
     lists to make them spliceable. This behaviour is now soft-deprecated
     and it is no longer valid to write `!!!enquo(x)`. Please unquote
@@ -2917,12 +2783,12 @@ error reporting, tidy eval, and tidy dots.
     no old value). This makes it easy to restore the original
     environment state:
 
-    !end-bullet!
     !begin-codeblock!
         old <- env_bind(env, foo = "foo", bar = "bar")
         env_bind(env, !!!old)
 
     !end-codeblock!
+    !end-bullet!
 -   !begin-bullet!
     `env_bind()` now supports binding missing arguments and removing
     bindings with zap sentinels. `env_bind(env, foo = )` binds a missing
@@ -3099,13 +2965,9 @@ error reporting, tidy eval, and tidy dots.
 
 ### Soft-deprecated functions and arguments
 
-!begin-bullet!
-
 rlang 0.3.0 introduces a new warning mechanism for soft-deprecated
 functions and arguments. A warning is issued, but only under one of
 these circumstances:
-
-!end-bullet!
 
 !begin-bullets-51!
 
@@ -3118,20 +2980,12 @@ these circumstances:
 
 !end-bullets-51!
 
-!begin-bullet!
-
 In addition, deprecation warnings appear only once per session in order
 to not be disruptive.
-
-!end-bullet!
-
-!begin-bullet!
 
 Deprecation warnings shouldn't make R CMD check fail for packages using
 testthat. However, `expect_silent()` can transform the warning to a hard
 failure.
-
-!end-bullet!
 
 #### tidyeval
 
@@ -3213,8 +3067,6 @@ failure.
     causing confusion (see issue #427). You should now extract the
     environment separately before calling these functions.
 
-    !end-bullet!
-    !begin-bullet!
     This change concerns `env_depth()`, `env_poke_parent()`,
     `env_parent<-`, `env_tail()`, `set_env()`, `env_clone()`,
     `env_inherits()`, `env_bind()`, `scoped_bindings()`,
@@ -3233,12 +3085,8 @@ failure.
 
 ### Deprecated functions and arguments
 
-!begin-bullet!
-
 Deprecated functions and arguments issue a warning inconditionally, but
 only once per session.
-
-!end-bullet!
 
 !begin-bullets-54!
 
@@ -3247,7 +3095,6 @@ only once per session.
     deprecated as of rlang 0.3.0. Just use the unqualified forms
     instead:
 
-    !end-bullet!
     !begin-codeblock!
         # Bad
         rlang::expr(mean(rlang::UQ(var) * 100))
@@ -3259,7 +3106,6 @@ only once per session.
         rlang::expr(mean(!!var * 100))
 
     !end-codeblock!
-    !begin-bullet!
     Although soft-deprecated since rlang 0.2.0, `UQ()` and `UQS()` can
     still be used for now.
 
@@ -3284,11 +3130,7 @@ only once per session.
 
 ### Defunct functions and arguments
 
-!begin-bullet!
-
 Defunct functions and arguments throw an error when used.
-
-!end-bullet!
 
 !begin-bullets-55!
 
@@ -3326,12 +3168,8 @@ Defunct functions and arguments throw an error when used.
 
 ### Functions and arguments in the questioning stage
 
-!begin-bullet!
-
 We are no longer convinced these functions are the right approach but we
 do not have a precise alternative yet.
-
-!end-bullet!
 
 !begin-bullets-56!
 
@@ -3360,20 +3198,12 @@ do not have a precise alternative yet.
 
 # rlang 0.2.2
 
-!begin-bullet!
-
 This is a maintenance release that fixes several garbage collection
 protection issues.
 
-!end-bullet!
-
 # rlang 0.2.1
 
-!begin-bullet!
-
 This is a maintenance release that fixes several tidy evaluation issues.
-
-!end-bullet!
 
 !begin-bullets-57!
 
@@ -3396,16 +3226,12 @@ This is a maintenance release that fixes several tidy evaluation issues.
 
 # rlang 0.2.0
 
-!begin-bullet!
-
 This release of rlang is mostly an effort at polishing the tidy
 evaluation framework. All tidy eval functions and operators have been
 rewritten in C in order to improve performance. Capture of expression,
 quasiquotation, and evaluation of quosures are now vastly faster. On the
 UI side, many of the inconveniences that affected the first release of
 rlang have been solved:
-
-!end-bullet!
 
 !begin-bullets-58!
 
@@ -3428,14 +3254,8 @@ rlang have been solved:
 
 !end-bullets-58!
 
-!begin-bullet!
-
 See the first section below for a complete list of changes to the tidy
 evaluation framework.
-
-!end-bullet!
-
-!begin-bullet!
 
 This release also polishes the rlang API. Many functions have been
 renamed as we get a better feel for the consistency and clarity of the
@@ -3447,8 +3267,6 @@ documentation topics. In addition we have gathered all lifecycle
 information in the `?rlang::lifecycle` help page. Please only use
 functions marked as stable in your projects unless you are prepared to
 deal with occasional backward incompatible updates.
-
-!end-bullet!
 
 ## Tidy evaluation
 
@@ -3467,8 +3285,6 @@ deal with occasional backward incompatible updates.
     The tidy eval `!!` operator now binds tightly. You no longer have to
     wrap it in parentheses, i.e. `!!x > y` will only unquote `x`.
 
-    !end-bullet!
-    !begin-bullet!
     Technically the `!!` operator has the same precedence as unary `-`
     and `+`. This means that `!!a:b` and `!!a + b` are equivalent to
     `(!!a):b` and `(!!a) + b`. On the other hand `!!a^b` and `!!a$b` are
@@ -3492,8 +3308,6 @@ deal with occasional backward incompatible updates.
     captures the name `arg` rather than the expression supplied to the
     `arg` argument.
 
-    !end-bullet!
-    !begin-bullet!
     In addition, `enexprs()` is like `enquos()` but like `exprs()` it
     returns bare expressions. And `ensyms()` expects strings or symbols.
 
@@ -3501,14 +3315,12 @@ deal with occasional backward incompatible updates.
 -   !begin-bullet!
     It is now possible to use `enquo()` within a magrittr pipe:
 
-    !end-bullet!
     !begin-codeblock!
         select_one <- function(df, var) {
           df %>% dplyr::select(!!enquo(var))
         }
 
     !end-codeblock!
-    !begin-bullet!
     Technically, this is because `enquo()` now also captures arguments
     in parents of the current environment rather than just in the
     current environment. The flip side of this increased flexibility is
@@ -3583,13 +3395,11 @@ deal with occasional backward incompatible updates.
 -   !begin-bullet!
     Quasiquotation now supports `!!` and `!!!` as functional forms:
 
-    !end-bullet!
     !begin-codeblock!
         expr(`!!`(var))
         quo(call(`!!!`(var)))
 
     !end-codeblock!
-    !begin-bullet!
     This is consistent with the way native R operators parses to
     function calls. These new functional forms are to be preferred to
     `UQ()` and `UQS()`. We are now questioning the latter and might
@@ -3772,22 +3582,17 @@ deal with occasional backward incompatible updates.
 
 ## API changes
 
-!begin-bullet!
-
 The rlang API is maturing and still in flux. However we have made an
 effort to better communicate what parts are stable. We will not
 introduce breaking changes for stable functions unless the payoff for
 the change is worth the trouble. See `?rlang::lifecycle` for the
 lifecycle status of exported functions.
 
-!end-bullet!
-
 !begin-bullets-64!
 
 -   !begin-bullet!
     The particle "lang" has been renamed to "call":
 
-    !end-bullet!
     !begin-bullets-65!
     -   !begin-bullet!
         `lang()` has been renamed to `call2()`.
@@ -3807,7 +3612,6 @@ lifecycle status of exported functions.
         !end-bullet!
 
     !end-bullets-65!
-    !begin-bullet!
     In rlang 0.1 calls were called "language" objects in order to follow
     the R type nomenclature as returned by `base::typeof()`. We wanted
     to avoid adding to the confusion between S modes and R types. With
@@ -3822,8 +3626,6 @@ lifecycle status of exported functions.
     due to the same mechanism (in technical terms, lexical scoping with
     hierarchically nested environments).
 
-    !end-bullet!
-    !begin-bullet!
     Following this new terminology, the new functions `as_data_mask()`
     and `new_data_mask()` replace `as_overscope()` and
     `new_overscope()`. `as_data_mask()` has also a more consistent
@@ -3958,8 +3760,6 @@ lifecycle status of exported functions.
     functions are soft-deprecated: `lang()`, `is_lang()`, `lang_fn()`,
     `lang_name()`, `lang_args()`.
 
-    !end-bullet!
-    !begin-bullet!
     In addition, `lang_head()` and `lang_tail()` are soft-deprecated
     without replacement because these are low level accessors that are
     rarely needed.
@@ -4035,19 +3835,11 @@ lifecycle status of exported functions.
 
 # rlang 0.1.2
 
-!begin-bullet!
-
 This hotfix release makes rlang compatible with the R 3.1 branch.
-
-!end-bullet!
 
 # rlang 0.1.1
 
-!begin-bullet!
-
 This release includes two important fixes for tidy evaluation:
-
-!end-bullet!
 
 !begin-bullets-70!
 
@@ -4133,8 +3925,4 @@ This release includes two important fixes for tidy evaluation:
 
 # rlang 0.1.0
 
-!begin-bullet!
-
 Initial release.
-
-!end-bullet!

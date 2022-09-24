@@ -24,12 +24,16 @@ Where to learn more:
 
 !begin-bullets-1!
 
--   [Team Drives is being renamed to shared
+-   !begin-bullet!
+    [Team Drives is being renamed to shared
     drives](https://workspaceupdates.googleblog.com/2019/04/shared-drives.html)
     from Google Workspace blog
--   [Upcoming changes to the Google Drive API and Google Picker
+    !end-bullet!
+-   !begin-bullet!
+    [Upcoming changes to the Google Drive API and Google Picker
     API](https://cloud.google.com/blog/products/application-development/upcoming-changes-to-the-google-drive-api-and-google-picker-api)
     from the Google Cloud blog
+    !end-bullet!
 
 !end-bullets-1!
 
@@ -58,12 +62,16 @@ New functions related to shortcuts:
 
 !begin-bullets-2!
 
--   `shortcut_create()`: creates a shortcut to a specific Drive file (or
+-   !begin-bullet!
+    `shortcut_create()`: creates a shortcut to a specific Drive file (or
     folder).
--   `shortcut_resolve()`: resolves a shortcut to its target, i.e. the
+    !end-bullet!
+-   !begin-bullet!
+    `shortcut_resolve()`: resolves a shortcut to its target, i.e. the
     file it refers to. Works for multiple files at once, i.e. the input
     can be a mix of shortcuts and non-shortcuts. The non-shortcuts are
     passed through and the shortcuts are replaced by their targets.
+    !end-bullet!
 
 !end-bullets-2!
 
@@ -72,28 +80,46 @@ filepath:
 
 !begin-bullets-3!
 
--   Main principle: shortcuts are first-class Drive files that we assume
+-   !begin-bullet!
+    Main principle: shortcuts are first-class Drive files that we assume
     users will need to manipulate with googledrive. In general, there is
     no automatic resolution to the target file.
--   `drive_reveal(what = "path")` returns the canonical path, i.e. there
+    !end-bullet!
+-   !begin-bullet!
+    `drive_reveal(what = "path")` returns the canonical path, i.e. there
     will be no shortcuts among the non-terminal "folder" parts of the
     returned path.
--   `drive_get(path = "foo/")` can retrieve a folder named "foo" or a
+    !end-bullet!
+-   !begin-bullet!
+    `drive_get(path = "foo/")` can retrieve a folder named "foo" or a
     shortcut named "foo", whose target is a folder.
--   When a shortcut-to-a-folder is specified as the `path`, in a context
+    !end-bullet!
+-   !begin-bullet!
+    When a shortcut-to-a-folder is specified as the `path`, in a context
     where it unambiguously specifies a parent folder, the `path` **is**
     auto-resolved to its target folder. This is the exception to the "no
     automatic resolution" rule. Functions affected:
     !begin-bullets-4!
-    -   `drive_ls(path, ...)`
-    -   `drive_create(name, path, ...)` and its convenience wrappers
+    -   !begin-bullet!
+        `drive_ls(path, ...)`
+        !end-bullet!
+    -   !begin-bullet!
+        `drive_create(name, path, ...)` and its convenience wrappers
         `drive_mkdir()` and `shortcut_create()`
-    -   `drive_cp(file, path, ...)`
-    -   `drive_mv(file, path, ...)`
-    -   `drive_upload(media, path, ...)` and its close friend
+        !end-bullet!
+    -   !begin-bullet!
+        `drive_cp(file, path, ...)`
+        !end-bullet!
+    -   !begin-bullet!
+        `drive_mv(file, path, ...)`
+        !end-bullet!
+    -   !begin-bullet!
+        `drive_upload(media, path, ...)` and its close friend
         `drive_put()`
+        !end-bullet!
 
     !end-bullets-4!
+    !end-bullet!
 
 !end-bullets-3!
 
@@ -101,14 +127,22 @@ Further reading about changes to the Drive folder model:
 
 !begin-bullets-5!
 
--   [Simplifying Google Drive's folder structure and sharing
+-   !begin-bullet!
+    [Simplifying Google Drive's folder structure and sharing
     models](https://cloud.google.com/blog/products/g-suite/simplifying-google-drives-folder-structure-and-sharing-models)
--   [Single-parenting behavior
+    !end-bullet!
+-   !begin-bullet!
+    [Single-parenting behavior
     changes](https://developers.google.com/drive/api/v3/ref-single-parent)
--   [Create a shortcut to a Drive
+    !end-bullet!
+-   !begin-bullet!
+    [Create a shortcut to a Drive
     file](https://developers.google.com/drive/api/v3/shortcuts)
--   Find files & folders with Google Drive shortcuts:
+    !end-bullet!
+-   !begin-bullet!
+    Find files & folders with Google Drive shortcuts:
     `https://support.google.com/drive/answer/9700156`
+    !end-bullet!
 
 !end-bullets-5!
 
@@ -135,7 +169,8 @@ will be removed in a future release. In the current release,
 
 !begin-bullets-6!
 
--   We now share a variety of world-readable, persistent example files
+-   !begin-bullet!
+    We now share a variety of world-readable, persistent example files
     on Drive, for use in examples and documentation. These remote
     example files complement the local example files that were already
     included in googledrive.
@@ -144,23 +179,32 @@ will be removed in a future release. In the current release,
     example files:
 
     !begin-bullets-7!
-    -   Plural forms:`drive_examples_remote()`, `drive_examples_local()`
-    -   Singular forms: `drive_example_remote()`,
+    -   !begin-bullet!
+        Plural forms:`drive_examples_remote()`, `drive_examples_local()`
+        !end-bullet!
+    -   !begin-bullet!
+        Singular forms: `drive_example_remote()`,
         `drive_example_local()`
+        !end-bullet!
 
     !end-bullets-7!
-
--   `drive_read_string()` and `drive_read_raw()` are new functions that
+    !end-bullet!
+-   !begin-bullet!
+    `drive_read_string()` and `drive_read_raw()` are new functions that
     read the content of a Drive file directly into R, skipping the step
     of downloading to a local file (#81).
 
--   `drive_reveal(what = "property_name")` now works for any property
+    !end-bullet!
+-   !begin-bullet!
+    `drive_reveal(what = "property_name")` now works for any property
     found in the file metadata stored in the `drive_resource` column.
     The new column is also simplified in more cases now, e.g. to
     `character` or `logical`. If the `property_name` suggests it's a
     date-time, we return `POSIXct`.
 
--   We've modernized the mechanisms by which the `dribble` class is (or
+    !end-bullet!
+-   !begin-bullet!
+    We've modernized the mechanisms by which the `dribble` class is (or
     is not) retained by various data frame operations. This boils down
     to updating or adding methods used by the base, dplyr,
     pillar/tibble, and vctrs packages.
@@ -170,17 +214,26 @@ will be removed in a future release. In the current release,
     is that `dribble` manipulation via dplyr now works best with dplyr
     \>= 1.0.0.
 
--   The `drive_id` S3 class is now implemented more fully, using the
+    !end-bullet!
+-   !begin-bullet!
+    The `drive_id` S3 class is now implemented more fully, using the
     vctrs package (#93, #364):
 
     !begin-bullets-8!
-    -   The `drive_id` class will persist after mundane operations, like
+    -   !begin-bullet!
+        The `drive_id` class will persist after mundane operations, like
         subsetting.
-    -   You can no longer put strings that are obviously invalid into a
+        !end-bullet!
+    -   !begin-bullet!
+        You can no longer put strings that are obviously invalid into a
         `drive_id` object.
-    -   The `id` column of a `dribble` is now an instance of `drive_id`.
+        !end-bullet!
+    -   !begin-bullet!
+        The `id` column of a `dribble` is now an instance of `drive_id`.
+        !end-bullet!
 
     !end-bullets-8!
+    !end-bullet!
 
 !end-bullets-6!
 
@@ -223,11 +276,15 @@ The release of version 1.0.0 marks two events:
 
 !begin-bullets-9!
 
--   The overall design of googledrive has survived \~2 years on CRAN,
+-   !begin-bullet!
+    The overall design of googledrive has survived \~2 years on CRAN,
     with very little need for change. The API and feature set is fairly
     stable.
--   There are changes in the auth interface that are not backwards
+    !end-bullet!
+-   !begin-bullet!
+    There are changes in the auth interface that are not backwards
     compatible.
+    !end-bullet!
 
 !end-bullets-9!
 
@@ -245,9 +302,13 @@ consistent and makes two new token flows available in googledrive:
 
 !begin-bullets-10!
 
--   Application Default Credentials
--   Service account tokens from the metadata server available to VMs
+-   !begin-bullet!
+    Application Default Credentials
+    !end-bullet!
+-   !begin-bullet!
+    Service account tokens from the metadata server available to VMs
     running on GCE
+    !end-bullet!
 
 !end-bullets-10!
 
@@ -255,25 +316,41 @@ Where to learn more:
 
 !begin-bullets-11!
 
--   Help for
+-   !begin-bullet!
+    Help for
     [`drive_auth()`](https://googledrive.tidyverse.org/reference/drive_auth.html)
     *all that most users need*
--   *details for more advanced users*
+    !end-bullet!
+-   !begin-bullet!
+    *details for more advanced users*
     !begin-bullets-12!
-    -   [Bring your own OAuth app or API
+    -   !begin-bullet!
+        [Bring your own OAuth app or API
         key](https://googledrive.tidyverse.org/articles/articles/bring-your-own-app.html)
-    -   [How to get your own API
+        !end-bullet!
+    -   !begin-bullet!
+        [How to get your own API
         credentials](https://gargle.r-lib.org/articles/get-api-credentials.html)
-    -   [Non-interactive
+        !end-bullet!
+    -   !begin-bullet!
+        [Non-interactive
         auth](https://gargle.r-lib.org/articles/non-interactive-auth.html)
-    -   [Auth when using R in the
+        !end-bullet!
+    -   !begin-bullet!
+        [Auth when using R in the
         browser](https://gargle.r-lib.org/articles/auth-from-web.html)
-    -   [How gargle gets
+        !end-bullet!
+    -   !begin-bullet!
+        [How gargle gets
         tokens](https://gargle.r-lib.org/articles/how-gargle-gets-tokens.html)
-    -   [Managing tokens
+        !end-bullet!
+    -   !begin-bullet!
+        [Managing tokens
         securely](https://gargle.r-lib.org/articles/articles/managing-tokens-securely.html)
+        !end-bullet!
 
     !end-bullets-12!
+    !end-bullet!
 
 !end-bullets-11!
 
@@ -298,8 +375,10 @@ The arguments and usage of `drive_auth()` have changed.
 
 !begin-bullets-13!
 
--   Previous signature (v0.1.3 and earlier)
+-   !begin-bullet!
+    Previous signature (v0.1.3 and earlier)
 
+    !begin-codeblock!
     ``` r
     drive_auth(
       oauth_token = NULL,                       # use `token` now
@@ -311,8 +390,12 @@ The arguments and usage of `drive_auth()` have changed.
     )
     ```
 
--   Current signature (\>= v1.0.0)
+    !end-codeblock!
+    !end-bullet!
+-   !begin-bullet!
+    Current signature (\>= v1.0.0)
 
+    !begin-codeblock!
     ``` r
     drive_auth(
       email = gargle::gargle_oauth_email(),             # NEW!
@@ -323,6 +406,9 @@ The arguments and usage of `drive_auth()` have changed.
       token = NULL                                      # was `oauth_token`
     )
     ```
+
+    !end-codeblock!
+    !end-bullet!
 
 !end-bullets-13!
 
@@ -338,19 +424,27 @@ Auth configuration has also changed:
 
 !begin-bullets-14!
 
--   `drive_auth_configure()` is a variant of the now-deprecated
+-   !begin-bullet!
+    `drive_auth_configure()` is a variant of the now-deprecated
     `drive_auth_config()` whose explicit and only job is to *set*
     aspects of the configuration, i.e. the OAuth app or API key.
     !begin-bullets-15!
-    -   Use `drive_oauth_app()` (new) and `drive_api_key()` to
+    -   !begin-bullet!
+        Use `drive_oauth_app()` (new) and `drive_api_key()` to
         *retrieve* a user-configured app or API key, if such exist.
-    -   These functions no longer return built-in auth assets, although
+        !end-bullet!
+    -   !begin-bullet!
+        These functions no longer return built-in auth assets, although
         built-in assets still exist and are used in the absence of user
         configuration.
+        !end-bullet!
 
     !end-bullets-15!
--   `drive_deauth()` is how you go into a de-authorized state, i.e. send
+    !end-bullet!
+-   !begin-bullet!
+    `drive_deauth()` is how you go into a de-authorized state, i.e. send
     an API key in lieu of a token.
+    !end-bullet!
 
 !end-bullets-14!
 
@@ -361,15 +455,23 @@ There are other small changes to the low-level developer-facing API:
 
 !begin-bullets-16!
 
--   `generate_request()` has been renamed to `request_generate()`.
--   `make_request()` had been renamed to `request_make()` and is a very
+-   !begin-bullet!
+    `generate_request()` has been renamed to `request_generate()`.
+    !end-bullet!
+-   !begin-bullet!
+    `make_request()` had been renamed to `request_make()` and is a very
     thin wrapper around `gargle::request_make()` that only adds
     googledrive's user agent.
--   `build_request()` has been removed. If you can't do what you need
+    !end-bullet!
+-   !begin-bullet!
+    `build_request()` has been removed. If you can't do what you need
     with `request_generate()`, use `gargle::request_develop()` or
     `gargle::request_build()` directly.
--   `process_response()` has been removed. Instead, use
+    !end-bullet!
+-   !begin-bullet!
+    `process_response()` has been removed. Instead, use
     `gargle::response_process(response)`, as we do inside googledrive.
+    !end-bullet!
 
 !end-bullets-16!
 
@@ -386,10 +488,14 @@ googledrive v1.0.0 offers some new ways to fight this:
 
 !begin-bullets-17!
 
--   All functions that create a new item or rename/move an existing item
+-   !begin-bullet!
+    All functions that create a new item or rename/move an existing item
     have gained an `overwrite` argument.
--   `drive_put()` is a new convenience wrapper that figures out whether
+    !end-bullet!
+-   !begin-bullet!
+    `drive_put()` is a new convenience wrapper that figures out whether
     to call `drive_upload()` or `drive_update()`.
+    !end-bullet!
 
 !end-bullets-17!
 
@@ -401,12 +507,24 @@ These functions gain an `overwrite` argument:
 
 !begin-bullets-18!
 
--   `drive_create()` *this whole function is new*
--   `drive_cp()`
--   `drive_mkdir()`
--   `drive_mv()`
--   `drive_rename()`
--   `drive_upload()`
+-   !begin-bullet!
+    `drive_create()` *this whole function is new*
+    !end-bullet!
+-   !begin-bullet!
+    `drive_cp()`
+    !end-bullet!
+-   !begin-bullet!
+    `drive_mkdir()`
+    !end-bullet!
+-   !begin-bullet!
+    `drive_mv()`
+    !end-bullet!
+-   !begin-bullet!
+    `drive_rename()`
+    !end-bullet!
+-   !begin-bullet!
+    `drive_upload()`
+    !end-bullet!
 
 !end-bullets-18!
 
@@ -440,6 +558,8 @@ PATCH](https://medium.com/backticks-tildes/restful-api-design-put-vs-patch-4a061
 
 In pseudo-code, here's the basic idea of `drive_put()`:
 
+!begin-codeblock!
+
 ``` r
 target_filepath <- <determined from arguments `path`, `name`, and `media`>
 hits <- <get all Drive files at target_filepath>
@@ -451,6 +571,8 @@ if (no hits) {
  ERROR
 }
 ```
+
+!end-codeblock!
 
 ## Other changes
 
@@ -507,10 +629,12 @@ Minor patch release for compatibility with the imminent release of purrr
 
 !begin-bullets-19!
 
--   Internal usage of `glue::collapse()` modified to call
+-   !begin-bullet!
+    Internal usage of `glue::collapse()` modified to call
     `glue::glue_collapse()` if glue v1.3.0 or later is installed and
     `glue::collapse()` otherwise. Eliminates a deprecation warning
     emanating from glue. (#222 @jimhester)
+    !end-bullet!
 
 !end-bullets-19!
 
@@ -518,6 +642,8 @@ Minor patch release for compatibility with the imminent release of purrr
 
 !begin-bullets-20!
 
--   initial CRAN release
+-   !begin-bullet!
+    initial CRAN release
+    !end-bullet!
 
 !end-bullets-20!

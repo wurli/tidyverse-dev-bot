@@ -4,20 +4,29 @@
 
 !begin-bullets-1!
 
--   `read_table()`, `read_log()`, and `read_delim_chunked()` (and
+-   !begin-bullet!
+    `read_table()`, `read_log()`, and `read_delim_chunked()` (and
     friends) gain the `show_col_types` argument found elsewhere. All
     `read_*()` functions now respect the `show_col_types` argument or
     option, even when using the first edition parsing engine (#1331).
 
--   `show_progress()` uses `rlang::is_interactive()` instead of
+    !end-bullet!
+-   !begin-bullet!
+    `show_progress()` uses `rlang::is_interactive()` instead of
     `base::interactive()` (#1356).
 
--   `read_builtin()` does more argument checking, so that we catch
+    !end-bullet!
+-   !begin-bullet!
+    `read_builtin()` does more argument checking, so that we catch
     obviously malformed input before passing along to `utils::data()`
     (#1361).
 
--   `chickens.csv` and `whitespace-sample.txt` are new example datasets
+    !end-bullet!
+-   !begin-bullet!
+    `chickens.csv` and `whitespace-sample.txt` are new example datasets
     accessible via `readr_example()` (#1354).
+
+    !end-bullet!
 
 !end-bullets-1!
 
@@ -25,10 +34,15 @@
 
 !begin-bullets-2!
 
--   Jenny Bryan is now the maintainer.
+-   !begin-bullet!
+    Jenny Bryan is now the maintainer.
 
--   Fix buffer overflow when trying to parse an integer from a field
+    !end-bullet!
+-   !begin-bullet!
+    Fix buffer overflow when trying to parse an integer from a field
     that is over 64 characters long (#1326)
+
+    !end-bullet!
 
 !end-bullets-2!
 
@@ -36,14 +50,18 @@
 
 !begin-bullets-3!
 
--   All readr functions again read eagerly by default. Unfortunately
+-   !begin-bullet!
+    All readr functions again read eagerly by default. Unfortunately
     many users experienced frustration from the drawbacks of lazy
     reading, in particular locking files on Windows, so it was decided
     to disable lazy reading default. However
     `options(readr.read_lazy = TRUE)` can be used to set the default to
     by lazy if desired.
--   New `readr.read_lazy` global option to control if readr reads files
+    !end-bullet!
+-   !begin-bullet!
+    New `readr.read_lazy` global option to control if readr reads files
     lazily or not (#1266)
+    !end-bullet!
 
 !end-bullets-3!
 
@@ -51,12 +69,17 @@
 
 !begin-bullets-4!
 
--   minor test tweak for compatibility with testthat 3.1.0 (#@lionel-,
+-   !begin-bullet!
+    minor test tweak for compatibility with testthat 3.1.0 (#@lionel-,
     #1304)
 
--   `write_rds()` gains a `text=` argument, to control using a text
+    !end-bullet!
+-   !begin-bullet!
+    `write_rds()` gains a `text=` argument, to control using a text
     based object representation, like the `ascii=` argument in
     `saveRDS()` (#1270)
+
+    !end-bullet!
 
 !end-bullets-4!
 
@@ -64,20 +87,31 @@
 
 !begin-bullets-5!
 
--   `options(readr.show_col_types = FALSE)` now works as intended
+-   !begin-bullet!
+    `options(readr.show_col_types = FALSE)` now works as intended
     (#1250)
 
--   `read_delim_chunked()` now again correctly respects the `chunk_size`
+    !end-bullet!
+-   !begin-bullet!
+    `read_delim_chunked()` now again correctly respects the `chunk_size`
     parameter (#1248)
 
--   `type_convert()` gains a `guess_integer` argument, passed to
+    !end-bullet!
+-   !begin-bullet!
+    `type_convert()` gains a `guess_integer` argument, passed to
     `guess_parser()` (@jmbarbone, #1264)
 
--   `read_tsv()` now correctly passes the `quote` and `na` arguments to
+    !end-bullet!
+-   !begin-bullet!
+    `read_tsv()` now correctly passes the `quote` and `na` arguments to
     `vroom::vroom()` (#1254, #1255)
 
--   Avoid spurious byte compilation errors due to the programmatically
+    !end-bullet!
+-   !begin-bullet!
+    Avoid spurious byte compilation errors due to the programmatically
     generated `spec_*()` functions.
+
+    !end-bullet!
 
 !end-bullets-5!
 
@@ -104,12 +138,17 @@ e.g.
 
 !begin-bullets-6!
 
--   `with_edition(1, read_csv("my_file.csv"))` will read `my_file.csv`
+-   !begin-bullet!
+    `with_edition(1, read_csv("my_file.csv"))` will read `my_file.csv`
     with the first edition of readr.
 
--   `readr::local_edition(1)` placed at the top of your function or
+    !end-bullet!
+-   !begin-bullet!
+    `readr::local_edition(1)` placed at the top of your function or
     script will use the first edition for the rest of the function or
     script.
+
+    !end-bullet!
 
 !end-bullets-6!
 
@@ -148,6 +187,8 @@ filenames to be read in the same vector to the reading function.
 First we generate some files to read by splitting the nycflights dataset
 by airline.
 
+!begin-codeblock!
+
 ``` {r}
 library(nycflights13)
 purrr::iwalk(
@@ -156,14 +197,20 @@ purrr::iwalk(
 )
 ```
 
+!end-codeblock!
+
 Then we can efficiently read them into one tibble by passing the
 filenames directly to readr.
+
+!begin-codeblock!
 
 ``` {r}
 files <- fs::dir_ls(glob = "flights*tsv")
 files
 readr::read_tsv(files)
 ```
+
+!end-codeblock!
 
 If the filenames contain data, such as the date when the sample was
 collected, use `id` argument to include the paths as a column in the
@@ -176,9 +223,13 @@ Edition two supports automatic guessing of delimiters. Because of this
 you can now use `read_delim()` without specifying a `delim` argument in
 many cases.
 
+!begin-codeblock!
+
 ``` {r}
 x <- read_delim(readr_example("mtcars.csv"))
 ```
+
+!end-codeblock!
 
 ### Literal data
 
@@ -188,9 +239,13 @@ length \> 1 are now assumed to correspond to multiple files. Because of
 this we now have a more explicit way to represent literal data, by
 putting `I()` around the input.
 
+!begin-codeblock!
+
 ``` {r}
 readr::read_csv(I("a,b\n1,2"))
 ```
+
+!end-codeblock!
 
 ### License changes
 
@@ -205,21 +260,28 @@ license.
 
 !begin-bullets-7!
 
--   `melt_csv()`, `melt_delim()`, `melt_tsv()` and `melt_fwf()` have
+-   !begin-bullet!
+    `melt_csv()`, `melt_delim()`, `melt_tsv()` and `melt_fwf()` have
     been superseded by functions in the same name in the meltr package.
     The versions in readr have been deprecated. These functions rely on
     the first edition parsing code and would be challenging to update to
     the new parser. When the first edition parsing code is eventually
     removed from readr they will be removed.
 
--   `read_table2()` has been renamed to `read_table()`, as most users
+    !end-bullet!
+-   !begin-bullet!
+    `read_table2()` has been renamed to `read_table()`, as most users
     expect `read_table()` to work like `utils::read.table()`. If you
     want the previous strict behavior of the `read_table()` you can use
     `read_fwf()` with `fwf_empty()` directly (#717).
 
--   Normalizing newlines in files with just carriage returns `\r` is no
+    !end-bullet!
+-   !begin-bullet!
+    Normalizing newlines in files with just carriage returns `\r` is no
     longer supported. The last major OS to use only CR as the newline
     was 'classic' Mac OS, which had its final release in 2001.
+
+    !end-bullet!
 
 !end-bullets-7!
 
@@ -227,35 +289,56 @@ license.
 
 !begin-bullets-8!
 
--   `read_*_chunked()` functions now include their specification as an
+-   !begin-bullet!
+    `read_*_chunked()` functions now include their specification as an
     attribute (#1143)
 
--   All `read_*()` functions gain a `col_select` argument to more easily
+    !end-bullet!
+-   !begin-bullet!
+    All `read_*()` functions gain a `col_select` argument to more easily
     choose which columns to select.
 
--   All `read_*()` functions gain a `id` argument to optionally store
+    !end-bullet!
+-   !begin-bullet!
+    All `read_*()` functions gain a `id` argument to optionally store
     the file paths when reading multiple files.
 
--   All `read_*()` functions gain a `name_repair` argument to control
+    !end-bullet!
+-   !begin-bullet!
+    All `read_*()` functions gain a `name_repair` argument to control
     how column names are repaired.
 
--   All `read_*()` and `write_*()` functions gain a `num_threads`
+    !end-bullet!
+-   !begin-bullet!
+    All `read_*()` and `write_*()` functions gain a `num_threads`
     argument to control the number of processing threads they use
     (#1201)
 
--   All `write_*()` and `format_*()` functions gain `quote` and `escape`
+    !end-bullet!
+-   !begin-bullet!
+    All `write_*()` and `format_*()` functions gain `quote` and `escape`
     arguments, to explicitly control how fields are quoted and how
     double quotes are escaped. (#653, #759, #844, #993, #1018, #1083)
 
--   All `write_*()` functions gain a `progress` argument and display a
+    !end-bullet!
+-   !begin-bullet!
+    All `write_*()` functions gain a `progress` argument and display a
     progress bar when writing (#791).
 
--   write_excel_csv() now defaults to `quote = "all"` (#759)
+    !end-bullet!
+-   !begin-bullet!
+    write_excel_csv() now defaults to `quote = "all"` (#759)
 
--   write_tsv() now defaults to `quote = "none"` (#993)
+    !end-bullet!
+-   !begin-bullet!
+    write_tsv() now defaults to `quote = "none"` (#993)
 
--   `read_table()` now handles skipped lines with unpaired quotes
+    !end-bullet!
+-   !begin-bullet!
+    `read_table()` now handles skipped lines with unpaired quotes
     properly (#1180)
+
+    !end-bullet!
 
 !end-bullets-8!
 
@@ -263,52 +346,85 @@ license.
 
 !begin-bullets-9!
 
--   The BH package is no longer a dependency. The boost C++ headers in
+-   !begin-bullet!
+    The BH package is no longer a dependency. The boost C++ headers in
     BH have thousands of files, so can take a long time to extract and
     compiling them takes a great deal of memory, which made readr
     difficult to compile on systems with limited memory (#1147).
 
--   readr now uses the tzdb package when parsing date-times
+    !end-bullet!
+-   !begin-bullet!
+    readr now uses the tzdb package when parsing date-times
     (@DavisVaughan, r-lib/vroom#273)
 
--   Chunked readers now support files with more than `INT_MAX` (\~ 2
+    !end-bullet!
+-   !begin-bullet!
+    Chunked readers now support files with more than `INT_MAX` (\~ 2
     Billion) number of lines (#1177)
 
--   Memory no longer inadvertently leaks when reading memory from R
+    !end-bullet!
+-   !begin-bullet!
+    Memory no longer inadvertently leaks when reading memory from R
     connections (#1161)
 
--   Invalid date formats no longer can potentially crash R (#1151)
+    !end-bullet!
+-   !begin-bullet!
+    Invalid date formats no longer can potentially crash R (#1151)
 
--   `col_factor()` now throws a more informative error message if given
+    !end-bullet!
+-   !begin-bullet!
+    `col_factor()` now throws a more informative error message if given
     non-character levels (#1140)
 
--   `problems()` now takes `.Last.value` as its default argument. This
+    !end-bullet!
+-   !begin-bullet!
+    `problems()` now takes `.Last.value` as its default argument. This
     lets you run `problems()` without an argument to see the problems in
     the previously read dataset.
 
--   `read_delim()` fails when sample of parsing problems contains
+    !end-bullet!
+-   !begin-bullet!
+    `read_delim()` fails when sample of parsing problems contains
     non-ASCII characters (@hidekoji, #1136)
 
--   `read_log()` gains a `trim_ws` argument (#738)
+    !end-bullet!
+-   !begin-bullet!
+    `read_log()` gains a `trim_ws` argument (#738)
 
--   `read_rds()` and `write_rds()` gain a `refhook` argument, to pass
+    !end-bullet!
+-   !begin-bullet!
+    `read_rds()` and `write_rds()` gain a `refhook` argument, to pass
     functions that handle references objects (#1206)
 
--   `read_rds()` can now read .Rds files from URLs (#1186)
+    !end-bullet!
+-   !begin-bullet!
+    `read_rds()` can now read .Rds files from URLs (#1186)
 
--   `read_*()` functions gain a `show_col_types` argument, if set to
+    !end-bullet!
+-   !begin-bullet!
+    `read_*()` functions gain a `show_col_types` argument, if set to
     `FALSE` this turns off showing the column types unconditionally.
 
--   `type_convert()` now throws a warning if the input has no character
+    !end-bullet!
+-   !begin-bullet!
+    `type_convert()` now throws a warning if the input has no character
     columns (#1020)
 
--   `write_csv()` now errors if given a matrix column (#1171)
+    !end-bullet!
+-   !begin-bullet!
+    `write_csv()` now errors if given a matrix column (#1171)
 
--   `write_csv()` now again is able to write data with duplicated column
+    !end-bullet!
+-   !begin-bullet!
+    `write_csv()` now again is able to write data with duplicated column
     names (#1169)
 
--   `write_file()` now forces its argument before opening the output
+    !end-bullet!
+-   !begin-bullet!
+    `write_file()` now forces its argument before opening the output
     file (#1158)
+
+    !end-bullet!
 
 !end-bullets-9!
 
@@ -318,13 +434,18 @@ license.
 
 !begin-bullets-10!
 
--   `write_*()` functions first argument is now `file` instead of
+-   !begin-bullet!
+    `write_*()` functions first argument is now `file` instead of
     `path`, for consistency with the `read_*()` functions. `path` has
     been deprecated and will be removed in a future version of readr
     (#1110, @brianrice2)
 
--   `write_*()` functions now output any NaN values in the same way as
+    !end-bullet!
+-   !begin-bullet!
+    `write_*()` functions now output any NaN values in the same way as
     NA values, controlled by the `na=` argument. (#1082).
+
+    !end-bullet!
 
 !end-bullets-10!
 
@@ -332,10 +453,12 @@ license.
 
 !begin-bullets-11!
 
--   It is now possible to generate a column specification from any
+-   !begin-bullet!
+    It is now possible to generate a column specification from any
     tibble (or data.frame) with `as.col_spec()` and convert any column
     specification to a short representation with `as.character()`
 
+    !begin-codeblock!
         s <- as.col_spec(iris)
         s
         #> cols(
@@ -348,24 +471,41 @@ license.
         as.character(s)
         #> [1] "ddddf"
 
--   The cli package is now used for all messages.
+    !end-codeblock!
+    !end-bullet!
+-   !begin-bullet!
+    The cli package is now used for all messages.
 
--   The runtime performance for tables with an extreme number of columns
+    !end-bullet!
+-   !begin-bullet!
+    The runtime performance for tables with an extreme number of columns
     is greatly improved (#825)
 
--   Compressed files are now detected by magic numbers rather than by
+    !end-bullet!
+-   !begin-bullet!
+    Compressed files are now detected by magic numbers rather than by
     the file extension (#1125)
 
--   A memory leak when reading files is now fixed (#1092)
+    !end-bullet!
+-   !begin-bullet!
+    A memory leak when reading files is now fixed (#1092)
 
--   `write_*()` functions gain a `eol =` argument to control the end of
+    !end-bullet!
+-   !begin-bullet!
+    `write_*()` functions gain a `eol =` argument to control the end of
     line character used (#857). This allows writing of CSV files with
     Windows newlines (CRLF) if desired.
 
--   The Rcpp dependency has been removed in favor of cpp11.
+    !end-bullet!
+-   !begin-bullet!
+    The Rcpp dependency has been removed in favor of cpp11.
 
--   The build system has been greatly simplified so should work on more
+    !end-bullet!
+-   !begin-bullet!
+    The build system has been greatly simplified so should work on more
     systems.
+
+    !end-bullet!
 
 !end-bullets-11!
 
@@ -373,68 +513,109 @@ license.
 
 !begin-bullets-12!
 
--   The full problem field is now displayed in the problems tibble, as
+-   !begin-bullet!
+    The full problem field is now displayed in the problems tibble, as
     intended (#444).
 
--   New `%h` placeholder for parsing unrestricted hours (\<0 and \>23)
+    !end-bullet!
+-   !begin-bullet!
+    New `%h` placeholder for parsing unrestricted hours (\<0 and \>23)
     to support parsing durations (#549, @krlmlr).
 
--   `as.character.col_spec()` now handles logical columns as well
+    !end-bullet!
+-   !begin-bullet!
+    `as.character.col_spec()` now handles logical columns as well
     (#1127)
 
--   `fwf_positions(end)` no longer has a default argument and must be
+    !end-bullet!
+-   !begin-bullet!
+    `fwf_positions(end)` no longer has a default argument and must be
     specified (#996)
 
--   `guess_parser()` gains a `na` argument and removes NA values before
+    !end-bullet!
+-   !begin-bullet!
+    `guess_parser()` gains a `na` argument and removes NA values before
     guessing (#1041).
 
--   `parse_guess()` now passes the `na` argument to `guess_parser()`
+    !end-bullet!
+-   !begin-bullet!
+    `parse_guess()` now passes the `na` argument to `guess_parser()`
 
--   `read_*` functions now close properly all connections, including on
+    !end-bullet!
+-   !begin-bullet!
+    `read_*` functions now close properly all connections, including on
     errors like HTTP errors when reading from a url (@cderv, #1050).
 
--   `read_delimited()` no longer mistakenly stats literal filenames
+    !end-bullet!
+-   !begin-bullet!
+    `read_delimited()` no longer mistakenly stats literal filenames
     (#1063)
 
--   `read_lines()` now ignores quotations when skipping lines (#991).
+    !end-bullet!
+-   !begin-bullet!
+    `read_lines()` now ignores quotations when skipping lines (#991).
 
--   `read_lines(skip_empty_rows = TRUE)` no longer crashes if a file
+    !end-bullet!
+-   !begin-bullet!
+    `read_lines(skip_empty_rows = TRUE)` no longer crashes if a file
     ends with an empty line (#968)
 
--   `write_*()` functions now invisibly return the input data frame
+    !end-bullet!
+-   !begin-bullet!
+    `write_*()` functions now invisibly return the input data frame
     unchanged, rather than a version with factors and dates converted to
     strings. (@jesse-ross, #975).
 
--   `write_csv2()` now formats decimal numbers more consistently with
+    !end-bullet!
+-   !begin-bullet!
+    `write_csv2()` now formats decimal numbers more consistently with
     `utils::write.csv2()` (#1087)
 
--   `write_csv2()` and `format_csv2()` no longer pad number columns with
+    !end-bullet!
+-   !begin-bullet!
+    `write_csv2()` and `format_csv2()` no longer pad number columns with
     whitespaces (@keesdeschepper, #1046).
 
--   `write_excel_csv()` no longer outputs a byte order mark when
+    !end-bullet!
+-   !begin-bullet!
+    `write_excel_csv()` no longer outputs a byte order mark when
     appending to a file (#1075).
 
--   Uses of `tibble::data_frame` updated to `tibble::tibble`
+    !end-bullet!
+-   !begin-bullet!
+    Uses of `tibble::data_frame` updated to `tibble::tibble`
     ([tidyverse/dplyr#4069](https://github.com/tidyverse/dplyr/issues/4069),
     @thays42, #1124, @brianrice2)
 
--   `read_delimited()` now returns an empty `tibble::data_frame()`
+    !end-bullet!
+-   !begin-bullet!
+    `read_delimited()` now returns an empty `tibble::data_frame()`
     rather than signaling an error when given a connection with an empty
     file (@pralitp, #963).
 
--   More helpful error when trying to write out data frames with list
+    !end-bullet!
+-   !begin-bullet!
+    More helpful error when trying to write out data frames with list
     columns (@ellessenne, #938)
 
--   `type_convert()` removes a 'spec' attribute, because the current
+    !end-bullet!
+-   !begin-bullet!
+    `type_convert()` removes a 'spec' attribute, because the current
     columns likely have modified data types. The 'spec' attribute is set
     by functions like `read_delim()` (@jimhester, @wibeasley, #1032).
 
--   `write_rds()` now can specify the Rds version to use. The default
+    !end-bullet!
+-   !begin-bullet!
+    `write_rds()` now can specify the Rds version to use. The default
     value is 2 as it's compatible to R versions prior to 3.5.0
     (@shrektan, #1001).
 
--   Fixes for issues related to variable initialization in C++ code
+    !end-bullet!
+-   !begin-bullet!
+    Fixes for issues related to variable initialization in C++ code
     (@michaelquinn32, ##1133).
+
+    !end-bullet!
 
 !end-bullets-12!
 
@@ -442,22 +623,33 @@ license.
 
 !begin-bullets-13!
 
--   Column specifications are now coloured when printed. This makes it
+-   !begin-bullet!
+    Column specifications are now coloured when printed. This makes it
     easy to see at a glance when a column is input as a different type
     then the rest. Colouring can be disabled by setting
     `options(crayon.enabled = FALSE)`.
 
--   `as.col_spec()` can now use named character vectors, which makes
+    !end-bullet!
+-   !begin-bullet!
+    `as.col_spec()` can now use named character vectors, which makes
     `read_csv("file.csv", col_types = c(xyz = "c"))` equivalent to
     `read_csv("file.csv", col_types = cols(xyz = col_character())`
 
--   Fix skipping when single quotes are embedded in double quoted
+    !end-bullet!
+-   !begin-bullet!
+    Fix skipping when single quotes are embedded in double quoted
     strings, and single quotes in skipped or commented lines (#944,
     #945).
 
--   Fix for compilation using custom architectures on macOS (#919)
+    !end-bullet!
+-   !begin-bullet!
+    Fix for compilation using custom architectures on macOS (#919)
 
--   Fix for valgrind errors (#941)
+    !end-bullet!
+-   !begin-bullet!
+    Fix for valgrind errors (#941)
+
+    !end-bullet!
 
 !end-bullets-13!
 
@@ -492,15 +684,25 @@ is to call subset with no arguments on your object, e.g. `x[]`.
 
 !begin-bullets-14!
 
--   `hms` objects with NA values are now written without whitespace
+-   !begin-bullet!
+    `hms` objects with NA values are now written without whitespace
     padding (#930).
--   `read_*()` functions now return `spec_tbl_df` objects, which differ
+    !end-bullet!
+-   !begin-bullet!
+    `read_*()` functions now return `spec_tbl_df` objects, which differ
     from regular `tbl_df` objects only in that the `spec` attribute is
     removed (and they are demoted to regular `tbl_df` objects) as soon
     as they are subset (#934).
--   `write_csv2()` now properly respects the `na` argument (#928)
--   Fixes compilation with multiple architectures on linux (#922).
--   Fixes compilation with R \< 3.3.0
+    !end-bullet!
+-   !begin-bullet!
+    `write_csv2()` now properly respects the `na` argument (#928)
+    !end-bullet!
+-   !begin-bullet!
+    Fixes compilation with multiple architectures on linux (#922).
+    !end-bullet!
+-   !begin-bullet!
+    Fixes compilation with R \< 3.3.0
+    !end-bullet!
 
 !end-bullets-14!
 
@@ -539,6 +741,8 @@ store data in 'long' or 'melted' form, where each row corresponds to a
 single value in the dataset. This form is useful when your data is
 ragged and not rectangular.
 
+!begin-codeblock!
+
 ``` r
 data <-"a,b,c
 1,2
@@ -558,6 +762,8 @@ readr::melt_csv(data)
 #> 8     3     3 character y    
 #> 9     3     4 character z
 ```
+
+!end-codeblock!
 
 Thanks to Duncan Garmonsway (@nacnudus) for great work on the idea an
 implementation of the `melt_*()` functions!
@@ -586,47 +792,87 @@ drawbacks of either method.
 
 !begin-bullets-15!
 
--   `melt_*()` functions added for reading ragged data (#760,
+-   !begin-bullet!
+    `melt_*()` functions added for reading ragged data (#760,
     @nacnudus).
--   `AccumulateCallback` R6 class added to provide an example of
+    !end-bullet!
+-   !begin-bullet!
+    `AccumulateCallback` R6 class added to provide an example of
     accumulating values in a single result (#689, @blakeboswell).
--   `read_fwf()` can now accept overlapping field specifications (#692,
+    !end-bullet!
+-   !begin-bullet!
+    `read_fwf()` can now accept overlapping field specifications (#692,
     @gergness)
--   `type_convert()` now allows character column specifications and also
+    !end-bullet!
+-   !begin-bullet!
+    `type_convert()` now allows character column specifications and also
     silently skips non-character columns (#369, #699)
--   The `parse_*()` functions and `read_fwf()` gain a `trim_ws` argument
+    !end-bullet!
+-   !begin-bullet!
+    The `parse_*()` functions and `read_fwf()` gain a `trim_ws` argument
     to control whether the fields should be trimmed before parsing
     (#636, #735).
--   `parse_number()` now parses numbers in scientific notation using `e`
+    !end-bullet!
+-   !begin-bullet!
+    `parse_number()` now parses numbers in scientific notation using `e`
     and `E` (#684, @sambrady3).
--   Add `write_excel_csv2()` function to allow writing csv files with
+    !end-bullet!
+-   !begin-bullet!
+    Add `write_excel_csv2()` function to allow writing csv files with
     comma as a decimal separator and semicolon as a column separator
     (#753, @olgamie).
--   `read_*()` files now support reading from the clipboard by using
+    !end-bullet!
+-   !begin-bullet!
+    `read_*()` files now support reading from the clipboard by using
     `clipboard()` (#656).
--   `write_file()` gains a `sep` argument, to specify the line separator
+    !end-bullet!
+-   !begin-bullet!
+    `write_file()` gains a `sep` argument, to specify the line separator
     (#665).
--   Allow files to be read via FTP over SSH by recognising `sftp` as a
+    !end-bullet!
+-   !begin-bullet!
+    Allow files to be read via FTP over SSH by recognising `sftp` as a
     URL protocol (#707, @jdeboer).
--   `parse_date*() accepts`%a\` for local day of week (#763,
+    !end-bullet!
+-   !begin-bullet!
+    `parse_date*() accepts`%a\` for local day of week (#763,
     @tigertoes).
--   Added function `read_lines_raw_chunked()` (#710, @gergness)
--   `write_csv2()` added to complement `write_excel_csv2()` and allow
+    !end-bullet!
+-   !begin-bullet!
+    Added function `read_lines_raw_chunked()` (#710, @gergness)
+    !end-bullet!
+-   !begin-bullet!
+    `write_csv2()` added to complement `write_excel_csv2()` and allow
     writing csv file readable by `read_csv2()` (#870, @cderv).
--   `as.col_spec()` is now exported (#517).
--   `write*()` functions gain a `quote_escape` argument to control how
+    !end-bullet!
+-   !begin-bullet!
+    `as.col_spec()` is now exported (#517).
+    !end-bullet!
+-   !begin-bullet!
+    `write*()` functions gain a `quote_escape` argument to control how
     quotes are escaped in the output (#854).
--   `read*()` functions now have a more informative error when trying to
+    !end-bullet!
+-   !begin-bullet!
+    `read*()` functions now have a more informative error when trying to
     read a remote bz2 file (#891).
--   `spec_table2()` function added to correspond to `read_table2()`
+    !end-bullet!
+-   !begin-bullet!
+    `spec_table2()` function added to correspond to `read_table2()`
     (#778, @mawds).
--   `parse_factor()` now has `levels = NULL` by default (#862,
+    !end-bullet!
+-   !begin-bullet!
+    `parse_factor()` now has `levels = NULL` by default (#862,
     @mikmart).
--   `"f"` can now be used as a shortcode for `col_factor()` in `cols()`
+    !end-bullet!
+-   !begin-bullet!
+    `"f"` can now be used as a shortcode for `col_factor()` in `cols()`
     and the `col_types` argument to `read_delim()` and friends (#810,
     @mikmart).
--   Functions now read connections to a temporary file rather than to an
+    !end-bullet!
+-   !begin-bullet!
+    Functions now read connections to a temporary file rather than to an
     in-memory object (#610, #76).
+    !end-bullet!
 
 !end-bullets-15!
 
@@ -634,44 +880,80 @@ drawbacks of either method.
 
 !begin-bullets-16!
 
--   `standardise_path()` now uses a case-insensitive comparison for the
+-   !begin-bullet!
+    `standardise_path()` now uses a case-insensitive comparison for the
     file extensions (#794).
--   `parse_guess()` now guesses logical types when given (lowercase)
+    !end-bullet!
+-   !begin-bullet!
+    `parse_guess()` now guesses logical types when given (lowercase)
     'true' and 'false' inputs (#818).
--   `read_*()` now do not print a progress bar when running inside a
+    !end-bullet!
+-   !begin-bullet!
+    `read_*()` now do not print a progress bar when running inside a
     RStudio notebook chunk (#793)
--   `read_table2()` now skips comments anywhere in the file (#908).
--   `parse_factor()` now handles the case of empty strings separately,
+    !end-bullet!
+-   !begin-bullet!
+    `read_table2()` now skips comments anywhere in the file (#908).
+    !end-bullet!
+-   !begin-bullet!
+    `parse_factor()` now handles the case of empty strings separately,
     so you can have a factor level that is an empty string (#864).
--   `read_delim()` now correctly reads quoted headers with embedded
+    !end-bullet!
+-   !begin-bullet!
+    `read_delim()` now correctly reads quoted headers with embedded
     newlines (#784).
--   `fwf_positions()` now always returns `col_names` as a character
+    !end-bullet!
+-   !begin-bullet!
+    `fwf_positions()` now always returns `col_names` as a character
     (#797).
--   `format_*()` now explicitly marks it's output encoding as UTF-8
+    !end-bullet!
+-   !begin-bullet!
+    `format_*()` now explicitly marks it's output encoding as UTF-8
     (#697).
--   `read_delim()` now ignores whitespace between the delimiter and
+    !end-bullet!
+-   !begin-bullet!
+    `read_delim()` now ignores whitespace between the delimiter and
     quoted fields (#668).
--   `read_table2()` now properly ignores blank lines at the end of a
+    !end-bullet!
+-   !begin-bullet!
+    `read_table2()` now properly ignores blank lines at the end of a
     file like `read_table()` and `read_delim()` (#657).
--   `read_delim()`, `read_table()` and `read_table()` now skip blank
+    !end-bullet!
+-   !begin-bullet!
+    `read_delim()`, `read_table()` and `read_table()` now skip blank
     lines at the start of a file (#680, #747).
--   `guess_parser()` now guesses a logical type for columns which are
+    !end-bullet!
+-   !begin-bullet!
+    `guess_parser()` now guesses a logical type for columns which are
     all missing. This is useful when binding multiple files together
     where some files have missing columns. (#662).
--   Column guessing will now never guess an integer type. This avoids
+    !end-bullet!
+-   !begin-bullet!
+    Column guessing will now never guess an integer type. This avoids
     issues where double columns are incorrectly guessed as integers if
     they have only integer values in the first 1000 (#645, #652).
--   `read_*()` now converts string `file`s to UTF-8 before parsing,
+    !end-bullet!
+-   !begin-bullet!
+    `read_*()` now converts string `file`s to UTF-8 before parsing,
     which is convenient for non-UTF-8 platforms in most cases (#730,
     @yutannihilation).
--   `write_csv()` writes integers up to 10\^15 without scientific
+    !end-bullet!
+-   !begin-bullet!
+    `write_csv()` writes integers up to 10\^15 without scientific
     notation (#765, @zeehio)
--   `read_*()` no longer throws a "length of NULL cannot be changed"
+    !end-bullet!
+-   !begin-bullet!
+    `read_*()` no longer throws a "length of NULL cannot be changed"
     warning when trying to resize a skipped column (#750, #833).
--   `read_*()` now handles non-ASCII paths properly with R \>=3.5.0 on
+    !end-bullet!
+-   !begin-bullet!
+    `read_*()` now handles non-ASCII paths properly with R \>=3.5.0 on
     Windows (#838, @yutannihilation).
--   `read*()`'s `trim_ws` parameter now trims both spaces and tabs
+    !end-bullet!
+-   !begin-bullet!
+    `read*()`'s `trim_ws` parameter now trims both spaces and tabs
     (#767)
+    !end-bullet!
 
 !end-bullets-16!
 
@@ -679,10 +961,14 @@ drawbacks of either method.
 
 !begin-bullets-17!
 
--   Point release for test compatibility with tibble v1.3.1.
--   Fixed undefined behavior in localtime.c when using `locale(tz = "")`
+-   !begin-bullet!
+    Point release for test compatibility with tibble v1.3.1.
+    !end-bullet!
+-   !begin-bullet!
+    Fixed undefined behavior in localtime.c when using `locale(tz = "")`
     after loading a timezone due to incomplete reinitialization of the
     global locale.
+    !end-bullet!
 
 !end-bullets-17!
 
@@ -694,22 +980,38 @@ drawbacks of either method.
 
 !begin-bullets-18!
 
--   `parse_factor()` gains a `include_na` argument, to include `NA` in
+-   !begin-bullet!
+    `parse_factor()` gains a `include_na` argument, to include `NA` in
     the factor levels (#541).
--   `parse_factor()` will now can accept `levels = NULL`, which allows
+    !end-bullet!
+-   !begin-bullet!
+    `parse_factor()` will now can accept `levels = NULL`, which allows
     one to generate factor levels based on the data (like
     stringsAsFactors = TRUE) (#497).
--   `parse_numeric()` now returns the full string if it contains no
+    !end-bullet!
+-   !begin-bullet!
+    `parse_numeric()` now returns the full string if it contains no
     numbers (#548).
--   `parse_time()` now correctly handles 12 AM/PM (#579).
--   `problems()` now returns the file path in additional to the location
+    !end-bullet!
+-   !begin-bullet!
+    `parse_time()` now correctly handles 12 AM/PM (#579).
+    !end-bullet!
+-   !begin-bullet!
+    `problems()` now returns the file path in additional to the location
     of the error in the file (#581).
--   `read_csv2()` gives a message if it updates the default locale
+    !end-bullet!
+-   !begin-bullet!
+    `read_csv2()` gives a message if it updates the default locale
     (#443, @krlmlr).
--   `read_delim()` now signals an error if given an empty delimiter
+    !end-bullet!
+-   !begin-bullet!
+    `read_delim()` now signals an error if given an empty delimiter
     (#557).
--   `write_*()` functions witting whole number doubles are no longer
+    !end-bullet!
+-   !begin-bullet!
+    `write_*()` functions witting whole number doubles are no longer
     written with a trailing `.0` (#526).
+    !end-bullet!
 
 !end-bullets-18!
 
@@ -717,19 +1019,31 @@ drawbacks of either method.
 
 !begin-bullets-19!
 
--   `fwf_cols()` allows for specifying the `col_positions` argument of
+-   !begin-bullet!
+    `fwf_cols()` allows for specifying the `col_positions` argument of
     `read_fwf()` with named arguments of either column positions or
     widths (#616, @jrnold).
--   `fwf_empty()` gains an `n` argument to control how many lines are
+    !end-bullet!
+-   !begin-bullet!
+    `fwf_empty()` gains an `n` argument to control how many lines are
     read for whitespace to determine column structure (#518, @Yeedle).
--   `read_fwf()` gives error message if specifications have overlapping
+    !end-bullet!
+-   !begin-bullet!
+    `read_fwf()` gives error message if specifications have overlapping
     columns (#534, @gergness)
--   `read_table()` can now handle `pipe()` connections (#552).
--   `read_table()` can now handle files with many lines of leading
+    !end-bullet!
+-   !begin-bullet!
+    `read_table()` can now handle `pipe()` connections (#552).
+    !end-bullet!
+-   !begin-bullet!
+    `read_table()` can now handle files with many lines of leading
     comments (#563).
--   `read_table2()` which allows any number of whitespace characters as
+    !end-bullet!
+-   !begin-bullet!
+    `read_table2()` which allows any number of whitespace characters as
     delimiters, a more exact replacement for `utils::read.table()`
     (#608).
+    !end-bullet!
 
 !end-bullets-19!
 
@@ -737,11 +1051,15 @@ drawbacks of either method.
 
 !begin-bullets-20!
 
--   `write_*()` functions now support writing to binary connections. In
+-   !begin-bullet!
+    `write_*()` functions now support writing to binary connections. In
     addition output filenames with `.gz`, `.bz2` or `.xz` will
     automatically open the appropriate connection and to write the
     compressed file. (#348)
--   `write_lines()` now accepts a list of raw vectors (#542).
+    !end-bullet!
+-   !begin-bullet!
+    `write_lines()` now accepts a list of raw vectors (#542).
+    !end-bullet!
 
 !end-bullets-20!
 
@@ -749,15 +1067,25 @@ drawbacks of either method.
 
 !begin-bullets-21!
 
--   `col_euro_double()`, `parse_euro_double()`, `col_numeric()`, and
+-   !begin-bullet!
+    `col_euro_double()`, `parse_euro_double()`, `col_numeric()`, and
     `parse_numeric()` have been removed.
--   `guess_encoding()` returns a tibble, and works better with lists of
+    !end-bullet!
+-   !begin-bullet!
+    `guess_encoding()` returns a tibble, and works better with lists of
     raw vectors (as returned by `read_lines_raw()`).
--   `ListCallback` R6 Class to provide a more flexible return type for
+    !end-bullet!
+-   !begin-bullet!
+    `ListCallback` R6 Class to provide a more flexible return type for
     callback functions (#568, @mmuurr)
--   `tibble::as.tibble()` now used to construct tibbles (#538).
--   `read_csv`, `read_csv2`, and `read_tsv` gain a `quote` argument,
+    !end-bullet!
+-   !begin-bullet!
+    `tibble::as.tibble()` now used to construct tibbles (#538).
+    !end-bullet!
+-   !begin-bullet!
+    `read_csv`, `read_csv2`, and `read_tsv` gain a `quote` argument,
     (#631, @noamross)
+    !end-bullet!
 
 !end-bullets-21!
 
@@ -765,19 +1093,33 @@ drawbacks of either method.
 
 !begin-bullets-22!
 
--   `parse_factor()` now converts data to UTF-8 based on the supplied
+-   !begin-bullet!
+    `parse_factor()` now converts data to UTF-8 based on the supplied
     locale (#615).
--   `read_*()` functions with the `guess_max` argument now throw errors
+    !end-bullet!
+-   !begin-bullet!
+    `read_*()` functions with the `guess_max` argument now throw errors
     on inappropriate inputs (#588).
--   `read_*_chunked()` functions now properly end the stream if `FALSE`
+    !end-bullet!
+-   !begin-bullet!
+    `read_*_chunked()` functions now properly end the stream if `FALSE`
     is returned from the callback.
--   `read_delim()` and `read_fwf()` when columns are skipped using
+    !end-bullet!
+-   !begin-bullet!
+    `read_delim()` and `read_fwf()` when columns are skipped using
     `col_types` now report the correct column name (#573, @cb4ds).
--   `spec()` declarations that are long now print properly (#597).
--   `read_table()` does not print `spec` when `col_types` is not `NULL`
+    !end-bullet!
+-   !begin-bullet!
+    `spec()` declarations that are long now print properly (#597).
+    !end-bullet!
+-   !begin-bullet!
+    `read_table()` does not print `spec` when `col_types` is not `NULL`
     (#630, @jrnold).
--   `guess_encoding()` now returns a tibble for all ASCII input as well
+    !end-bullet!
+-   !begin-bullet!
+    `guess_encoding()` now returns a tibble for all ASCII input as well
     (#641).
+    !end-bullet!
 
 !end-bullets-22!
 
@@ -791,6 +1133,8 @@ guesses aren't correct, and to make it easier to generate reproducible
 code. Now column specifications are printing by default when you read
 from a file:
 
+!begin-codeblock!
+
 ``` r
 challenge <- read_csv(readr_example("challenge.csv"))
 #> Parsed with column specification:
@@ -800,7 +1144,11 @@ challenge <- read_csv(readr_example("challenge.csv"))
 #> )
 ```
 
+!end-codeblock!
+
 And you can extract those values after the fact with `spec()`:
+
+!begin-codeblock!
 
 ``` r
 spec(challenge)
@@ -809,6 +1157,8 @@ spec(challenge)
 #>   y = col_character()
 #> )
 ```
+
+!end-codeblock!
 
 This makes it easier to quickly identify parsing problems and fix them
 (#314). If the column specification is long, the new `cols_condense()`
@@ -829,6 +1179,8 @@ you'll fail fast with an error.
 You can now also adjust the number of rows that readr uses to guess the
 column types with `guess_max`:
 
+!begin-codeblock!
+
 ``` r
 challenge <- read_csv(readr_example("challenge.csv"), guess_max = 1500)
 #> Parsed with column specification:
@@ -838,25 +1190,38 @@ challenge <- read_csv(readr_example("challenge.csv"), guess_max = 1500)
 #> )
 ```
 
+!end-codeblock!
+
 You can now access the guessing algorithm from R. `guess_parser()` will
 tell you which parser readr will select for a character vector (#377).
 We've made a number of fixes to the guessing algorithm:
 
 !begin-bullets-23!
 
--   New example `extdata/challenge.csv` which is carefully created to
+-   !begin-bullet!
+    New example `extdata/challenge.csv` which is carefully created to
     cause problems with the default column type guessing heuristics.
 
--   Blank lines and lines with only comments are now skipped
+    !end-bullet!
+-   !begin-bullet!
+    Blank lines and lines with only comments are now skipped
     automatically without warning (#381, #321).
 
--   Single '-' or '.' are now parsed as characters, not numbers (#297).
+    !end-bullet!
+-   !begin-bullet!
+    Single '-' or '.' are now parsed as characters, not numbers (#297).
 
--   Numbers followed by a single trailing character are parsed as
+    !end-bullet!
+-   !begin-bullet!
+    Numbers followed by a single trailing character are parsed as
     character, not numbers (#316).
 
--   We now guess at times using the `time_format` specified in the
+    !end-bullet!
+-   !begin-bullet!
+    We now guess at times using the `time_format` specified in the
     `locale()`.
+
+    !end-bullet!
 
 !end-bullets-23!
 
@@ -865,19 +1230,28 @@ We have made a number of improvements to the reification of the
 
 !begin-bullets-24!
 
--   If `col_types` is too long, it is subsetted correctly (#372,
+-   !begin-bullet!
+    If `col_types` is too long, it is subsetted correctly (#372,
     @jennybc).
 
--   If `col_names` is too short, the added names are numbered correctly
+    !end-bullet!
+-   !begin-bullet!
+    If `col_names` is too short, the added names are numbered correctly
     (#374, @jennybc).
 
--   Missing column name names are now given a default name (`X2`, `X7`
+    !end-bullet!
+-   !begin-bullet!
+    Missing column name names are now given a default name (`X2`, `X7`
     etc) (#318). Duplicated column names are now deduplicated. Both
     changes generate a warning; to suppress it supply an explicit
     `col_names` (setting `skip = 1` if there's an existing ill-formed
     header).
 
--   `col_types()` accepts a named list as input (#401).
+    !end-bullet!
+-   !begin-bullet!
+    `col_types()` accepts a named list as input (#401).
+
+    !end-bullet!
 
 !end-bullets-24!
 
@@ -887,13 +1261,18 @@ The date time parsers recognise three new format strings:
 
 !begin-bullets-25!
 
--   `%I` for 12 hour time format (#340).
+-   !begin-bullet!
+    `%I` for 12 hour time format (#340).
 
--   `%AD` and `%AT` are "automatic" date and time parsers. They are both
+    !end-bullet!
+-   !begin-bullet!
+    `%AD` and `%AT` are "automatic" date and time parsers. They are both
     slightly less flexible than previous defaults. The automatic date
     parser requires a four digit year, and only accepts `-` and `/` as
     separators (#442). The flexible time parser now requires colons
     between hours and minutes and optional seconds (#424).
+
+    !end-bullet!
 
 !end-bullets-25!
 
@@ -903,22 +1282,33 @@ Date and time parsing functions received a number of small enhancements:
 
 !begin-bullets-26!
 
--   `parse_time()` returns `hms` objects rather than a custom `time`
+-   !begin-bullet!
+    `parse_time()` returns `hms` objects rather than a custom `time`
     class (#409). It now correctly parses missing values (#398).
 
--   `parse_date()` returns a numeric vector (instead of an integer
+    !end-bullet!
+-   !begin-bullet!
+    `parse_date()` returns a numeric vector (instead of an integer
     vector) (#357).
 
--   `parse_date()`, `parse_time()` and `parse_datetime()` gain an `na`
+    !end-bullet!
+-   !begin-bullet!
+    `parse_date()`, `parse_time()` and `parse_datetime()` gain an `na`
     argument to match all other parsers (#413).
 
--   If the format argument is omitted `parse_date()` or `parse_time()`,
+    !end-bullet!
+-   !begin-bullet!
+    If the format argument is omitted `parse_date()` or `parse_time()`,
     date and time formats specified in the locale will be used. These
     now default to `%AD` and `%AT` respectively.
 
--   You can now parse partial dates with `parse_date()` and
+    !end-bullet!
+-   !begin-bullet!
+    You can now parse partial dates with `parse_date()` and
     `parse_datetime()`, e.g. `parse_date("2001", "%Y")` returns
     `2001-01-01`.
+
+    !end-bullet!
 
 !end-bullets-26!
 
@@ -935,24 +1325,37 @@ fixed a major bug where parsing negative numbers yielded positive values
 
 !begin-bullets-27!
 
--   `read_file_raw()` reads a complete file into a single raw vector
+-   !begin-bullet!
+    `read_file_raw()` reads a complete file into a single raw vector
     (#451).
 
--   `read_*()` functions gain a `quoted_na` argument to control whether
+    !end-bullet!
+-   !begin-bullet!
+    `read_*()` functions gain a `quoted_na` argument to control whether
     missing values within quotes are treated as missing values or as
     strings (#295).
 
--   `write_excel_csv()` can be used to write a csv file with a UTF-8 BOM
+    !end-bullet!
+-   !begin-bullet!
+    `write_excel_csv()` can be used to write a csv file with a UTF-8 BOM
     at the start, which forces Excel to read it as UTF-8 encoded (#375).
 
--   `write_lines()` writes a character vector to a file (#302).
+    !end-bullet!
+-   !begin-bullet!
+    `write_lines()` writes a character vector to a file (#302).
 
--   `write_file()` to write a single character or raw vector to a file
+    !end-bullet!
+-   !begin-bullet!
+    `write_file()` to write a single character or raw vector to a file
     (#474).
 
--   Experimental support for chunked reading a writing
+    !end-bullet!
+-   !begin-bullet!
+    Experimental support for chunked reading a writing
     (`read_*_chunked()`) functions. The API is unstable and subject to
     change in the future (#427).
+
+    !end-bullet!
 
 !end-bullets-27!
 
@@ -960,7 +1363,8 @@ fixed a major bug where parsing negative numbers yielded positive values
 
 !begin-bullets-28!
 
--   Printing double values now uses an
+-   !begin-bullet!
+    Printing double values now uses an
     [implementation](https://github.com/juj/MathGeoLib/blob/master/src/Math/grisu3.c)
     of the [grisu3
     algorithm](http://www.cs.tufts.edu/~nr/cs257/archive/florian-loitsch/printf.pdf)
@@ -968,65 +1372,103 @@ fixed a major bug where parsing negative numbers yielded positive values
     (#432) '.0' is appended to whole number doubles, to ensure they will
     be read as doubles as well. (#483)
 
--   readr imports tibble so that you get consistent `tbl_df` behaviour
+    !end-bullet!
+-   !begin-bullet!
+    readr imports tibble so that you get consistent `tbl_df` behaviour
     (#317, #385).
 
--   New example `extdata/challenge.csv` which is carefully created to
+    !end-bullet!
+-   !begin-bullet!
+    New example `extdata/challenge.csv` which is carefully created to
     cause problems with the default column type guessing heuristics.
 
--   `default_locale()` now sets the default locale in
+    !end-bullet!
+-   !begin-bullet!
+    `default_locale()` now sets the default locale in
     `readr.default_locale` rather than regenerating it for each call.
     (#416).
 
--   `locale()` now automatically sets decimal mark if you set the
+    !end-bullet!
+-   !begin-bullet!
+    `locale()` now automatically sets decimal mark if you set the
     grouping mark. It throws an error if you accidentally set decimal
     and grouping marks to the same character (#450).
 
--   All `read_*()` can read into long vectors, substantially increasing
+    !end-bullet!
+-   !begin-bullet!
+    All `read_*()` can read into long vectors, substantially increasing
     the number of rows you can read (#309).
 
--   All `read_*()` functions return empty objects rather than signaling
+    !end-bullet!
+-   !begin-bullet!
+    All `read_*()` functions return empty objects rather than signaling
     an error when run on an empty file (#356, #441).
 
--   `read_delim()` gains a `trim_ws` argument (#312, noamross)
+    !end-bullet!
+-   !begin-bullet!
+    `read_delim()` gains a `trim_ws` argument (#312, noamross)
 
--   `read_fwf()` received a number of improvements:
+    !end-bullet!
+-   !begin-bullet!
+    `read_fwf()` received a number of improvements:
 
     !begin-bullets-29!
-    -   `read_fwf()` now can now reliably read only a partial set of
+    -   !begin-bullet!
+        `read_fwf()` now can now reliably read only a partial set of
         columns (#322, #353, #469)
 
-    -   `fwf_widths()` accepts negative column widths for compatibility
+        !end-bullet!
+    -   !begin-bullet!
+        `fwf_widths()` accepts negative column widths for compatibility
         with the `widths` argument in `read.fwf()` (#380, @leeper).
 
-    -   You can now read fixed width files with ragged final columns, by
+        !end-bullet!
+    -   !begin-bullet!
+        You can now read fixed width files with ragged final columns, by
         setting the final end position in `fwf_positions()` or final
         width in `fwf_widths()` to `NA` (#353, @ghaarsma). `fwf_empty()`
         does this automatically.
 
-    -   `read_fwf()` and `fwf_empty()` can now skip commented lines by
+        !end-bullet!
+    -   !begin-bullet!
+        `read_fwf()` and `fwf_empty()` can now skip commented lines by
         setting a `comment` argument (#334).
 
-    !end-bullets-29!
+        !end-bullet!
 
--   `read_lines()` ignores embedded null's in strings (#338) and gains a
+    !end-bullets-29!
+    !end-bullet!
+-   !begin-bullet!
+    `read_lines()` ignores embedded null's in strings (#338) and gains a
     `na` argument (#479).
 
--   `readr_example()` makes it easy to access example files bundled with
+    !end-bullet!
+-   !begin-bullet!
+    `readr_example()` makes it easy to access example files bundled with
     readr.
 
--   `type_convert()` now accepts only `NULL` or a `cols` specification
+    !end-bullet!
+-   !begin-bullet!
+    `type_convert()` now accepts only `NULL` or a `cols` specification
     for `col_types` (#369).
 
--   `write_delim()` and `write_csv()` now invisibly return the input
+    !end-bullet!
+-   !begin-bullet!
+    `write_delim()` and `write_csv()` now invisibly return the input
     data frame (as documented, #363).
 
--   Doubles are parsed with `boost::spirit::qi::long_double` to work
+    !end-bullet!
+-   !begin-bullet!
+    Doubles are parsed with `boost::spirit::qi::long_double` to work
     around a bug in the spirit library when parsing large numbers
     (#412).
 
--   Fix bug when detecting column types for single row files without
+    !end-bullet!
+-   !begin-bullet!
+    Fix bug when detecting column types for single row files without
     headers (#333).
+
+    !end-bullet!
 
 !end-bullets-28!
 
@@ -1034,8 +1476,10 @@ fixed a major bug where parsing negative numbers yielded positive values
 
 !begin-bullets-30!
 
--   Fix bug when checking empty values for missingness (caused valgrind
+-   !begin-bullet!
+    Fix bug when checking empty values for missingness (caused valgrind
     issue and random crashes).
+    !end-bullet!
 
 !end-bullets-30!
 
@@ -1043,7 +1487,9 @@ fixed a major bug where parsing negative numbers yielded positive values
 
 !begin-bullets-31!
 
--   Fixes so that readr works on Solaris.
+-   !begin-bullet!
+    Fixes so that readr works on Solaris.
+    !end-bullet!
 
 !end-bullets-31!
 
@@ -1059,25 +1505,36 @@ encoding. This has lead to a number of changes:
 
 !begin-bullets-32!
 
--   `read_csv()`, `read_tsv()`, `read_fwf()`, `read_table()`,
+-   !begin-bullet!
+    `read_csv()`, `read_tsv()`, `read_fwf()`, `read_table()`,
     `read_lines()`, `read_file()`, `type_convert()`, `parse_vector()`
     all gain a `locale` argument.
 
--   `locale()` controls all the input settings that vary from
+    !end-bullet!
+-   !begin-bullet!
+    `locale()` controls all the input settings that vary from
     place-to-place.
 
--   `col_euro_double()` and `parse_euro_double()` have been deprecated.
+    !end-bullet!
+-   !begin-bullet!
+    `col_euro_double()` and `parse_euro_double()` have been deprecated.
     Use the `decimal_mark` parameter to `locale()` instead.
 
--   The default encoding is now UTF-8. To load files that are not in
+    !end-bullet!
+-   !begin-bullet!
+    The default encoding is now UTF-8. To load files that are not in
     UTF-8, set the `encoding` parameter of the `locale()` (#40). New
     `guess_encoding()` function uses stringi to help you figure out the
     encoding of a file.
 
--   `parse_datetime()` and `parse_date()` with `%B` and `%b` use the
+    !end-bullet!
+-   !begin-bullet!
+    `parse_datetime()` and `parse_date()` with `%B` and `%b` use the
     month names (full and abbreviate) defined in the locale (#242). They
     also inherit the tz from the locale, rather than using an explicit
     `tz` parameter.
+
+    !end-bullet!
 
 !end-bullets-32!
 
@@ -1087,39 +1544,56 @@ See `vignette("locales")` for more details.
 
 !begin-bullets-33!
 
--   `cols()` lets you pick the default column type for columns not
+-   !begin-bullet!
+    `cols()` lets you pick the default column type for columns not
     otherwise explicitly named (#148). You can refer to parsers either
     with their full name (e.g. `col_character()`) or their one letter
     abbreviation (e.g. `c`).
 
--   `cols_only()` allows you to load only named columns. You can also
+    !end-bullet!
+-   !begin-bullet!
+    `cols_only()` allows you to load only named columns. You can also
     choose to override the default column type in `cols()` (#72).
 
--   `read_fwf()` is now much more careful with new lines. If a line is
+    !end-bullet!
+-   !begin-bullet!
+    `read_fwf()` is now much more careful with new lines. If a line is
     too short, you'll get a warning instead of a silent mistake (#166,
     #254). Additionally, the last column can now be ragged: the width of
     the last field is silently extended until it hits the next line
     break (#146). This appears to be a common feature of "fixed" width
     files in the wild.
 
--   In `read_csv()`, `read_tsv()`, `read_delim()` etc:
+    !end-bullet!
+-   !begin-bullet!
+    In `read_csv()`, `read_tsv()`, `read_delim()` etc:
 
     !begin-bullets-34!
-    -   `comment` argument allows you to ignore comments (#68).
+    -   !begin-bullet!
+        `comment` argument allows you to ignore comments (#68).
 
-    -   `trim_ws` argument controls whether leading and trailing
+        !end-bullet!
+    -   !begin-bullet!
+        `trim_ws` argument controls whether leading and trailing
         whitespace is removed. It defaults to `TRUE` (#137).
 
-    -   Specifying the wrong number of column names, or having rows with
+        !end-bullet!
+    -   !begin-bullet!
+        Specifying the wrong number of column names, or having rows with
         an unexpected number of columns, generates a warning, rather
         than an error (#189).
 
-    -   Multiple NA values can be specified by passing a character
+        !end-bullet!
+    -   !begin-bullet!
+        Multiple NA values can be specified by passing a character
         vector to `na` (#125). The default has been changed to
         `na = c("", "NA")`. Specifying `na = ""` now works as expected
         with character columns (#114).
 
+        !end-bullet!
+
     !end-bullets-34!
+    !end-bullet!
 
 !end-bullets-33!
 
@@ -1130,52 +1604,77 @@ work and how to override them (#122).
 
 !begin-bullets-35!
 
--   `parse_character()` gains better support for embedded nulls: any
+-   !begin-bullet!
+    `parse_character()` gains better support for embedded nulls: any
     characters after the first null are dropped with a warning (#202).
 
--   `parse_integer()` and `parse_double()` no longer silently ignore
+    !end-bullet!
+-   !begin-bullet!
+    `parse_integer()` and `parse_double()` no longer silently ignore
     trailing letters after the number (#221).
 
--   New `parse_time()` and `col_time()` allows you to parse times
+    !end-bullet!
+-   !begin-bullet!
+    New `parse_time()` and `col_time()` allows you to parse times
     (hours, minutes, seconds) into number of seconds since midnight. If
     the format is omitted, it uses a flexible parser that looks for
     hours, then optional colon, then minutes, then optional colon, then
     optional seconds, then optional am/pm (#249).
 
--   `parse_date()` and `parse_datetime()`:
+    !end-bullet!
+-   !begin-bullet!
+    `parse_date()` and `parse_datetime()`:
 
     !begin-bullets-36!
-    -   `parse_datetime()` no longer incorrectly reads partial dates
+    -   !begin-bullet!
+        `parse_datetime()` no longer incorrectly reads partial dates
         (e.g. 19, 1900, 1900-01) (#136). These triggered common false
         positives and after re-reading the ISO8601 spec, I believe they
         actually refer to periods of time, and should not be translated
         in to a specific instant (#228).
 
-    -   Compound formats "%D", "%F", "%R", "%X", "%T", "%x" are now
+        !end-bullet!
+    -   !begin-bullet!
+        Compound formats "%D", "%F", "%R", "%X", "%T", "%x" are now
         parsed correctly, instead of using the ISO8601 parser (#178,
         @kmillar).
 
-    -   "%." now requires a non-digit. New "%+" skips one or more
+        !end-bullet!
+    -   !begin-bullet!
+        "%." now requires a non-digit. New "%+" skips one or more
         non-digits.
 
-    -   You can now use `%p` to refer to AM/PM (and am/pm) (#126).
+        !end-bullet!
+    -   !begin-bullet!
+        You can now use `%p` to refer to AM/PM (and am/pm) (#126).
 
-    -   `%b` and `%B` formats (month and abbreviated month name) ignore
+        !end-bullet!
+    -   !begin-bullet!
+        `%b` and `%B` formats (month and abbreviated month name) ignore
         case when matching (#219).
 
-    -   Local (non-UTC) times with and without daylight savings are now
+        !end-bullet!
+    -   !begin-bullet!
+        Local (non-UTC) times with and without daylight savings are now
         parsed correctly (#120, @andres-s).
 
-    !end-bullets-36!
+        !end-bullet!
 
--   `parse_number()` is a somewhat flexible numeric parser designed to
+    !end-bullets-36!
+    !end-bullet!
+-   !begin-bullet!
+    `parse_number()` is a somewhat flexible numeric parser designed to
     read currencies and percentages. It only reads the first number from
     a string (using the grouping mark defined by the locale).
 
--   `parse_numeric()` has been deprecated because the name is
+    !end-bullet!
+-   !begin-bullet!
+    `parse_numeric()` has been deprecated because the name is
     confusing - it's a flexible number parser, not a parser of
     "numerics", as R collectively calls doubles and integers. Use
     `parse_number()` instead.
+
+    !end-bullet!
 
 !end-bullets-35!
 
@@ -1184,18 +1683,27 @@ to the heuristics that readr uses to guess column types:
 
 !begin-bullets-37!
 
--   New `parse_guess()` and `col_guess()` to explicitly guess column
+-   !begin-bullet!
+    New `parse_guess()` and `col_guess()` to explicitly guess column
     type.
 
--   Bumped up row inspection for column typing guessing from 100 to
+    !end-bullet!
+-   !begin-bullet!
+    Bumped up row inspection for column typing guessing from 100 to
     1000.
 
--   The heuristics for guessing `col_integer()` and `col_double()` are
+    !end-bullet!
+-   !begin-bullet!
+    The heuristics for guessing `col_integer()` and `col_double()` are
     stricter. Numbers with leading zeros now default to being parsed as
     text, rather than as integers/doubles (#266).
 
--   A column is guessed as `col_number()` only if it parses as a regular
+    !end-bullet!
+-   !begin-bullet!
+    A column is guessed as `col_number()` only if it parses as a regular
     number when you ignoring the grouping marks.
+
+    !end-bullet!
 
 !end-bullets-37!
 
@@ -1203,80 +1711,127 @@ to the heuristics that readr uses to guess column types:
 
 !begin-bullets-38!
 
--   Now use R's platform independent `iconv` wrapper, thanks to BDR
+-   !begin-bullet!
+    Now use R's platform independent `iconv` wrapper, thanks to BDR
     (#149).
 
--   Pathological zero row inputs (due to empty input, `skip` or `n_max`)
+    !end-bullet!
+-   !begin-bullet!
+    Pathological zero row inputs (due to empty input, `skip` or `n_max`)
     now return zero row data frames (#119).
 
--   When guessing field types, and there's no information to go on, use
+    !end-bullet!
+-   !begin-bullet!
+    When guessing field types, and there's no information to go on, use
     character instead of logical (#124, #128).
 
--   Concise `col_types` specification now understands `?` (guess) and
+    !end-bullet!
+-   !begin-bullet!
+    Concise `col_types` specification now understands `?` (guess) and
     `-` (skip) (#188).
 
--   `count_fields()` starts counting from 1, not 0 (#200).
+    !end-bullet!
+-   !begin-bullet!
+    `count_fields()` starts counting from 1, not 0 (#200).
 
--   `format_csv()` and `format_delim()` make it easy to render a csv or
+    !end-bullet!
+-   !begin-bullet!
+    `format_csv()` and `format_delim()` make it easy to render a csv or
     delimited file into a string.
 
--   `fwf_empty()` now works correctly when `col_names` supplied (#186,
+    !end-bullet!
+-   !begin-bullet!
+    `fwf_empty()` now works correctly when `col_names` supplied (#186,
     #222).
 
--   `parse_*()` gains a `na` argument that allows you to specify which
+    !end-bullet!
+-   !begin-bullet!
+    `parse_*()` gains a `na` argument that allows you to specify which
     values should be converted to missing.
 
--   `problems()` now reports column names rather than column numbers
+    !end-bullet!
+-   !begin-bullet!
+    `problems()` now reports column names rather than column numbers
     (#143). Whenever there is a problem, the first five problems are
     printing out in a warning message, so you can more easily see what's
     wrong.
 
--   `read_*()` throws a warning instead of an error is `col_types`
+    !end-bullet!
+-   !begin-bullet!
+    `read_*()` throws a warning instead of an error is `col_types`
     specifies a non-existent column (#145, @alyst).
 
--   `read_*()` can read from a remote gz compressed file (#163).
+    !end-bullet!
+-   !begin-bullet!
+    `read_*()` can read from a remote gz compressed file (#163).
 
--   `read_delim()` defaults to `escape_backslash = FALSE` and
+    !end-bullet!
+-   !begin-bullet!
+    `read_delim()` defaults to `escape_backslash = FALSE` and
     `escape_double = TRUE` for consistency. `n_max` also affects the
     number of rows read to guess the column types (#224).
 
--   `read_lines()` gains a progress bar. It now also correctly checks
+    !end-bullet!
+-   !begin-bullet!
+    `read_lines()` gains a progress bar. It now also correctly checks
     for interrupts every 500,000 lines so you can interrupt long running
     jobs. It also correctly estimates the number of lines in the file,
     considerably speeding up the reading of large files (60s -\> 15s for
     a 1.5 Gb file).
 
--   `read_lines_raw()` allows you to read a file into a list of raw
+    !end-bullet!
+-   !begin-bullet!
+    `read_lines_raw()` allows you to read a file into a list of raw
     vectors, one element for each line.
 
--   `type_convert()` gains `NA` and `trim_ws` arguments, and removes
+    !end-bullet!
+-   !begin-bullet!
+    `type_convert()` gains `NA` and `trim_ws` arguments, and removes
     missing values before determining column types.
 
--   `write_csv()`, `write_delim()`, and `write_rds()` all invisibly
+    !end-bullet!
+-   !begin-bullet!
+    `write_csv()`, `write_delim()`, and `write_rds()` all invisibly
     return their input so you can use them in a pipe (#290).
 
--   `write_delim()` generalises `write_csv()` to write any delimited
+    !end-bullet!
+-   !begin-bullet!
+    `write_delim()` generalises `write_csv()` to write any delimited
     format (#135). `write_tsv()` is a helpful wrapper for tab separated
     files.
 
     !begin-bullets-39!
-    -   Quotes are only used when they're needed (#116): when the string
+    -   !begin-bullet!
+        Quotes are only used when they're needed (#116): when the string
         contains a quote, the delimiter, a new line or NA.
 
-    -   Double vectors are saved using same amount of precision as
+        !end-bullet!
+    -   !begin-bullet!
+        Double vectors are saved using same amount of precision as
         `as.character()` (#117).
 
-    -   New `na` argument that specifies how missing values should be
+        !end-bullet!
+    -   !begin-bullet!
+        New `na` argument that specifies how missing values should be
         written (#187)
 
-    -   POSIXt vectors are saved in a ISO8601 compatible format (#134).
+        !end-bullet!
+    -   !begin-bullet!
+        POSIXt vectors are saved in a ISO8601 compatible format (#134).
 
-    -   No longer fails silently if it can't open the target for writing
+        !end-bullet!
+    -   !begin-bullet!
+        No longer fails silently if it can't open the target for writing
         (#193, #172).
 
-    !end-bullets-39!
+        !end-bullet!
 
--   `write_rds()` and `read_rds()` wrap around `readRDS()` and
+    !end-bullets-39!
+    !end-bullet!
+-   !begin-bullet!
+    `write_rds()` and `read_rds()` wrap around `readRDS()` and
     `saveRDS()`, defaulting to no compression (#140, @nicolasCoutin).
+
+    !end-bullet!
 
 !end-bullets-38!

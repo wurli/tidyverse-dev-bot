@@ -15,60 +15,114 @@ get_news_data <- function(files = list.files("news-files", full.names = TRUE)) {
   
   bullets_data <- files |> 
     map(read_lines) |> 
-    map(function(text) {
-      
-      #out <- tibble(text = text) |> 
-      tibble(text = read_lines("news-files-annotated/rlang.md")) |> 
-        
-        # Add cols showing start/end lines for lists of bullets and 
-        # individual bullets. Also give each bullet a unique id
-        mutate(
-          bullets_start   = str_detect(text, "!begin-bullets-\\d+!"),
-          bullets_end     = str_detect(text, "!end-bullets-\\d+!"),
-          bullets_level   = cumsum(bullets_start) - cumsum(bullets_end),
-          bullet_start    = lag(str_detect(text, "!begin-bullet!"), default = FALSE),
-          bullet_end      = str_detect(text, "!end-bullet!"),
-          is_bullet       = as.logical(cumsum(bullet_start) - cumsum(bullet_end)) & bullets_level > 0,
-          bullet_id       = cumsum(bullet_start) + ifelse(is_bullet, 0, NA),
-          codeblock_start = str_detect(text, "!codeblock-start!"),
-          codeblock_end   = str_detect(text, "!codeblock-end!"),
-          is_codeblock    = as.logical(cumsum(codeblock_start) - cumsum(codeblock_end))
-        ) |> 
-        
-        # Remove helpers and any non-tweet text, e.g. headings etc
-        filter(is_bullet) |> 
-        select(-ends_with(c("start", "end")), -is_bullet) |>
-        
-        # Collapse so each bullet occupies a single row
-        group_by(bullets_level, bullet_id) |> 
-        summarise(
-          text = text |> 
-            str_c(collapse = "\n") |> 
-            str_squish(),
-          .groups = "drop"
-        ) |> 
-        arrange(bullet_id) |> 
-        
-        # Add a column which, for each sequence of sub-bullets, indicates the
-        # bullet which the sub-bullets are related to
-        mutate(
-          parent_id = map2_int(bullets_level, row_number(), function(b, r) {
-            rows <- row_number()
-            as.integer(bullet_id[max(rows[rows < r & bullets_level == b - 1] %or% NA_real_)])
-          }),
-          .before = 1
-        )
-      
-      # Adding parent text is useful for identifying bullets when working out
-      # what hasn't been tweeted yet
-      out |> 
-        left_join(
-          out |> select(bullet_id, parent_text = text),
-          by = c("parent_id" = "bullet_id")
-        )
-      
-    }) |> 
-    
+    map(news_to_df) |> 
     bind_rows(.id = "package")
+  
+}
+
+
+# news_to_df(read_lines("test.md"))
+news_to_df <- function(text) {
+  
+  # Annotations which delimit bullet lists, bullets and code blocks
+  ann <- list(
+    bullets_start   = "!begin-bullets-\\d+!",
+    bullets_end     = "!end-bullets-\\d+!",
+    bullet_start    = "!begin-bullet!",
+    bullet_end      = "!end-bullet!",
+    codeblock_start = "!begin-codeblock!",
+    codeblock_end   = "!end-codeblock!"
+  )
+  
+  out <- tibble(text = text) |> 
+    #out <- tibble(text = read_lines("test.md")) |> 
+    
+    # Helper columns derived from annotations added by the lua filter
+    mutate(
+      bullets_start   = str_detect(text, ann$bullets_start),
+      bullets_end     = str_detect(text, ann$bullets_end),
+      bullets_level   = cumsum(bullets_start) - cumsum(bullets_end),
+      bullet_start    = lag(str_detect(text, ann$bullet_start), default = FALSE),
+      bullet_end      = lead(str_detect(text, ann$bullet_end), 1, default = FALSE),
+      is_bullet       = as.logical(cumsum(bullet_start) - cumsum(bullet_end)),
+      bullet_id       = cumsum(bullet_start) + ifelse(is_bullet, 0, NA),
+      codeblock_start = lag(str_detect(text, ann$codeblock_start), default = FALSE),
+      codeblock_end   = lead(str_detect(text, ann$codeblock_end), 1, default = FALSE),
+      is_codeblock    = as.logical(cumsum(codeblock_start) - cumsum(codeblock_end)),
+      codeblock_id    = ifelse(is_codeblock, cumsum(codeblock_start), NA),
+      is_annotation   = str_detect(text, paste(ann, collapse = "|")),
+      order           = row_number(),
+      section_id      = cumsum(bullet_start) + cumsum(codeblock_start)
+    ) |> 
+    
+    # Remove helpers and any non-tweet text, e.g. headings etc
+    filter(
+      is_bullet, 
+      !is_annotation,
+      !str_squish(text) %in% c("```", "``` r", "``` {r}")
+    ) |> 
+    select(-c(ends_with(c("start", "end")), is_bullet, is_annotation)) |> 
+    
+    # Collapse so each chunk of text occupies a single row. Bullets may still
+    # be spread across multiple rows if they include code blocks
+    group_by(bullets_level, bullet_id, codeblock_id, is_codeblock, section_id) |> 
+    summarise(
+      across(text, function(text) {
+        
+        # Non-code sections can just be squished together
+        if (!any(is_codeblock)) {
+          return(str_squish(paste(text, collapse = "\n")))
+        }
+        
+        # Get the level of indentation for the whole code block so it can
+        # be removed to save precious chars
+        indents <- text |> 
+          str_subset("^\\s*$", negate = TRUE) |> 
+          str_extract("^ *") |> 
+          str_length() |> 
+          min()
+        
+        # Remove indentation
+        text <- str_remove(text, paste0("^", str_dup(" ", indents)))
+        
+        # Add fence ticks and collapse to a single string
+        paste0("```\n", paste(text, collapse = "\n"), "\n```")
+        
+      }),
+      order = min(order),
+      .groups = "drop"
+    ) |> 
+    arrange(order) |> 
+    
+    # Collapse so each bullet occupies a single row
+    group_by(bullets_level, bullet_id) |>
+    summarise(
+      text = paste(text, collapse = "\n") |> str_remove("\n$"),
+      order = min(order),
+      .groups = "drop"
+    ) |>
+    
+    # Final reorder, although not really necessary for any later code to work
+    arrange(order) |> 
+    select(-order) |> 
+    
+    # Add a column which, for each sequence of sub-bullets, indicates the
+    # bullet which the sub-bullets are related to
+    mutate(
+      row = row_number(),
+      parent_id = map2_int(bullets_level, row, function(b, r) {
+        as.integer(bullet_id[max(row[row < r & bullets_level == b - 1] %or% NA_real_)])
+      }),
+      .before = 1
+    ) |> 
+    select(-row)
+  
+  # Adding parent text is useful for identifying bullets when working out
+  # what hasn't been tweeted yet
+  out |> 
+    left_join(
+      out |> select(bullet_id, parent_text = text),
+      by = c("parent_id" = "bullet_id")
+    )
   
 }

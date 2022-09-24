@@ -4,8 +4,10 @@
 
 !begin-bullets-1!
 
--   crayon now does not fail to install from source if the utils package
+-   !begin-bullet!
+    crayon now does not fail to install from source if the utils package
     is not loaded (#133).
+    !end-bullet!
 
 !end-bullets-1!
 
@@ -13,12 +15,17 @@
 
 !begin-bullets-2!
 
--   You can use the new `cli.default_num_colors` option to set the
+-   !begin-bullet!
+    You can use the new `cli.default_num_colors` option to set the
     default number of ANSI colors, only if ANSI support is otherwise
     detected. See the details in the manual of `num_ansi_colors()`.
     (From cli.)
 
--   crayon now install cleanly on R 3.4.x and R 3.5.x on Windows (#131).
+    !end-bullet!
+-   !begin-bullet!
+    crayon now install cleanly on R 3.4.x and R 3.5.x on Windows (#131).
+
+    !end-bullet!
 
 !end-bullets-2!
 
@@ -26,9 +33,14 @@
 
 !begin-bullets-3!
 
--   Better ANSI support detection if there is an active `sink()`.
+-   !begin-bullet!
+    Better ANSI support detection if there is an active `sink()`.
 
--   Support ANSI markup in RStudio jobs.
+    !end-bullet!
+-   !begin-bullet!
+    Support ANSI markup in RStudio jobs.
+
+    !end-bullet!
 
 !end-bullets-3!
 
@@ -36,11 +48,16 @@
 
 !begin-bullets-4!
 
--   ANSI color support detection works correctly now in older RStudio
+-   !begin-bullet!
+    ANSI color support detection works correctly now in older RStudio
     (#112).
 
--   ANSI color support detection works correctly now on older R versions
+    !end-bullet!
+-   !begin-bullet!
+    ANSI color support detection works correctly now on older R versions
     (#109).
+
+    !end-bullet!
 
 !end-bullets-4!
 
@@ -48,23 +65,36 @@
 
 !begin-bullets-5!
 
--   Overhauled and much improved detection of ANSI color support and
+-   !begin-bullet!
+    Overhauled and much improved detection of ANSI color support and
     number of ANSI colors.
 
--   `NO_COLOR` environment variable disables color (#64)
+    !end-bullet!
+-   !begin-bullet!
+    `NO_COLOR` environment variable disables color (#64)
 
--   Now colors are turned on if ANSICON
+    !end-bullet!
+-   !begin-bullet!
+    Now colors are turned on if ANSICON
     (<https://github.com/adoxa/ansicon>) is active.
 
--   New `hyperlink()` function to add hyperlinks to terminal output. The
+    !end-bullet!
+-   !begin-bullet!
+    New `hyperlink()` function to add hyperlinks to terminal output. The
     new `has_hyperlink()` function tests if the current `stdout()`
     supports this.
 
--   `reset` style now restores previous style for text following it
+    !end-bullet!
+-   !begin-bullet!
+    `reset` style now restores previous style for text following it
     (@brodieG, #35).
 
--   Warnings are no longer generated when the INSIDE_EMACS environment
+    !end-bullet!
+-   !begin-bullet!
+    Warnings are no longer generated when the INSIDE_EMACS environment
     variable is set but does not include a version number.
+
+    !end-bullet!
 
 !end-bullets-5!
 
@@ -72,11 +102,18 @@
 
 !begin-bullets-6!
 
--   Style functions convert arguments to character now
+-   !begin-bullet!
+    Style functions convert arguments to character now
 
--   Autodetect RStudio ANSI support
+    !end-bullet!
+-   !begin-bullet!
+    Autodetect RStudio ANSI support
 
--   `col_align()` gains `type` argument, default `"width"` (#54).
+    !end-bullet!
+-   !begin-bullet!
+    `col_align()` gains `type` argument, default `"width"` (#54).
+
+    !end-bullet!
 
 !end-bullets-6!
 
@@ -84,39 +121,64 @@
 
 !begin-bullets-7!
 
--   Removed dependency to `memoise` (@brodieG, #25)
+-   !begin-bullet!
+    Removed dependency to `memoise` (@brodieG, #25)
 
--   Fixed a test case that changed the `crayon.enabled` setting,
+    !end-bullet!
+-   !begin-bullet!
+    Fixed a test case that changed the `crayon.enabled` setting,
     potentially (@brodieG)
 
--   Added `crayon.colors` option, to specify the number of colors
+    !end-bullet!
+-   !begin-bullet!
+    Added `crayon.colors` option, to specify the number of colors
     explicitly
 
--   `TERM=xterm` and `tput colors=8` will use 256 colors, as 256 colors
+    !end-bullet!
+-   !begin-bullet!
+    `TERM=xterm` and `tput colors=8` will use 256 colors, as 256 colors
     are usually supported in this case (#17)
 
--   Support colors in ConEmu and cmder, on Windows
+    !end-bullet!
+-   !begin-bullet!
+    Support colors in ConEmu and cmder, on Windows
 
--   Fix color detection in Emacs tramp
+    !end-bullet!
+-   !begin-bullet!
+    Fix color detection in Emacs tramp
 
--   `col_strsplit` and `col_substr` corner cases:
+    !end-bullet!
+-   !begin-bullet!
+    `col_strsplit` and `col_substr` corner cases:
 
     !begin-bullets-8!
-    -   handle empty chunks at beginning or end of strings like
+    -   !begin-bullet!
+        handle empty chunks at beginning or end of strings like
         `base::strsplit` (@brodieG, #26)
 
-    -   explicitly deal with 'split' values that are not length 1 as
+        !end-bullet!
+    -   !begin-bullet!
+        explicitly deal with 'split' values that are not length 1 as
         that is not currently supported
 
-    -   handle zero length `x` argument in `col_substr`, and add more
+        !end-bullet!
+    -   !begin-bullet!
+        handle zero length `x` argument in `col_substr`, and add more
         explicit error messages for corner cases
 
+        !end-bullet!
+
     !end-bullets-8!
+    !end-bullet!
+-   !begin-bullet!
+    Some performance improvements to `col_substr` (@brodieG)
 
--   Some performance improvements to `col_substr` (@brodieG)
-
--   Change rgb to ANSI code mapping, based on the "paint" ruby gem
+    !end-bullet!
+-   !begin-bullet!
+    Change rgb to ANSI code mapping, based on the "paint" ruby gem
     (@richfitz, #33, #34)
+
+    !end-bullet!
 
 !end-bullets-7!
 
@@ -124,7 +186,9 @@
 
 !begin-bullets-9!
 
--   Fixed some `R CMD check` problems.
+-   !begin-bullet!
+    Fixed some `R CMD check` problems.
+    !end-bullet!
 
 !end-bullets-9!
 
@@ -132,11 +196,18 @@
 
 !begin-bullets-10!
 
--   Colors are turned on by default in Emacs ESS 23.x and above.
+-   !begin-bullet!
+    Colors are turned on by default in Emacs ESS 23.x and above.
 
--   Functions to turn on and off a style: `start`, `finish`.
+    !end-bullet!
+-   !begin-bullet!
+    Functions to turn on and off a style: `start`, `finish`.
 
--   Really fix `tput` corner cases (@jimhester, #21)
+    !end-bullet!
+-   !begin-bullet!
+    Really fix `tput` corner cases (@jimhester, #21)
+
+    !end-bullet!
 
 !end-bullets-10!
 
@@ -144,8 +215,10 @@
 
 !begin-bullets-11!
 
--   Fix detecting number of colors when `tput` exists, but fails with an
+-   !begin-bullet!
+    Fix detecting number of colors when `tput` exists, but fails with an
     error and/or does not return anything useful. (@jimhester, #18, #19)
+    !end-bullet!
 
 !end-bullets-11!
 
@@ -153,11 +226,16 @@
 
 !begin-bullets-12!
 
--   Fix detection of number of colors, it was cached from installation
+-   !begin-bullet!
+    Fix detection of number of colors, it was cached from installation
     time (#17).
 
--   Color aware string operations. They are slow and experimental
+    !end-bullet!
+-   !begin-bullet!
+    Color aware string operations. They are slow and experimental
     currently.
+
+    !end-bullet!
 
 !end-bullets-12!
 
@@ -165,12 +243,19 @@
 
 !begin-bullets-13!
 
--   `show_ansi_colors()` prints all supported colors on the screen.
+-   !begin-bullet!
+    `show_ansi_colors()` prints all supported colors on the screen.
 
--   256 colors, on terminals that support it.
+    !end-bullet!
+-   !begin-bullet!
+    256 colors, on terminals that support it.
 
--   Disable colors on Windows, they are not supported in the default
+    !end-bullet!
+-   !begin-bullet!
+    Disable colors on Windows, they are not supported in the default
     setup.
+
+    !end-bullet!
 
 !end-bullets-13!
 
@@ -178,6 +263,8 @@
 
 !begin-bullets-14!
 
--   First released version.
+-   !begin-bullet!
+    First released version.
+    !end-bullet!
 
 !end-bullets-14!
