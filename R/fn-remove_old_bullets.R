@@ -10,6 +10,23 @@ remove_old_bullets <- function(x, file = "last_refresh_data.csv", overwrite = TR
   cli::cli_alert("Reading {.file {file}}")
   prev <- read_csv(file, show_col_types = FALSE)
   
+  # Makes development easier
+  if (!identical(colnames(prev), colnames(x))) {
+    
+    stopifnot(interactive())
+    
+    choice <- menu(
+      title = "Old data has different columns to new data. Do you want to overwrite?",
+      choices = c("Overwrite", "Stop")
+    )
+    
+    if (choice == 2) stop()
+    
+    write_csv(x, "last_refresh_data.csv")
+    return(x)
+    
+  }
+  
   by <- c("package", "bullets_level", "text", "parent_text")
 
   out <- rows_delete(

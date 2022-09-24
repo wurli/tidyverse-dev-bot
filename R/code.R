@@ -1,8 +1,8 @@
 library(tidyverse)
 library(glue)
-
-.max_tweet_length <- 280L
-.tweet_url_length <- 23L
+library(V8) # For JS library to get tweet length
+.ct <- v8()
+.ct$source("twitter-text/js/pkg/twitter-text-3.1.0.min.js")
 
 list.files("R", "^fn-", full.names = TRUE) |> 
   walk(source)
@@ -18,15 +18,11 @@ list.files("R", "^fn-", full.names = TRUE) |>
 # new_bullets           <- remove_old_bullets(news_data, overwrite = F)
 # new_bullets_formatted <- format_bullets(new_bullets)
 
-new_bullets_formatted <- news_urls(fake_package = "NEWS.md", .package = "rlang") |> 
+new_bullets_formatted <- news_urls(fake_package = "NEWS.md") |> 
   pull_news_files(include_old = T) |> 
   annotate_news_files() |> 
   get_news_data() |> 
-  remove_old_bullets(overwrite = F) |> 
-  format_bullets()
+  remove_old_bullets(overwrite = T) 
 
-formatted <- news_data |> 
-  format_bullets() 
 
-x <- formatted |> 
-  make_tweets()
+make_tweets()

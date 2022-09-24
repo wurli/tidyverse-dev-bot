@@ -34,8 +34,8 @@ news_to_df <- function(text) {
     codeblock_end   = "!end-codeblock!"
   )
   
-  out <- tibble(text = text) |> 
-    #out <- tibble(text = read_lines("test.md")) |> 
+  # out <- tibble(text = text) |> 
+  out <- tibble(text = read_lines("test.md")) |> 
     
     # Helper columns derived from annotations added by the lua filter
     mutate(
@@ -94,35 +94,29 @@ news_to_df <- function(text) {
     ) |> 
     arrange(order) |> 
     
-    # Collapse so each bullet occupies a single row
-    group_by(bullets_level, bullet_id) |>
-    summarise(
-      text = paste(text, collapse = "\n") |> str_remove("\n$"),
-      order = min(order),
-      .groups = "drop"
-    ) |>
+    # Remove any blank lines (which aren't code)
+    filter(is_codeblock | !str_detect(text, "^\\s*$")) |> 
     
-    # Final reorder, although not really necessary for any later code to work
-    arrange(order) |> 
-    select(-order) |> 
-    
-    # Add a column which, for each sequence of sub-bullets, indicates the
-    # bullet which the sub-bullets are related to
-    mutate(
-      row = row_number(),
-      parent_id = map2_int(bullets_level, row, function(b, r) {
-        as.integer(bullet_id[max(row[row < r & bullets_level == b - 1] %or% NA_real_)])
-      }),
-      .before = 1
+    # Add bullet symbols where bullets level > 1. Bullets are never really
+    # nested more than one level, but it's nice to handle those cases.
+    with_groups(
+      bullet_id, mutate, text = ifelse(
+        bullets_level > 1 & row_number() == 1,
+        paste(c("*", "-", ">")[((bullets_level - 2) %% 3) + 1], text),
+        text
+      )
     ) |> 
-    select(-row)
-  
-  # Adding parent text is useful for identifying bullets when working out
-  # what hasn't been tweeted yet
-  out |> 
-    left_join(
-      out |> select(bullet_id, parent_text = text),
-      by = c("parent_id" = "bullet_id")
-    )
+    
+    # Give sub-bullets the same id as their 'parent'. Also add a column
+    # indicating what the text of the `parent` bullet says. This is useful for
+    # checking whether a bullet has already been tweeted.
+    mutate(
+      bullet_id = ifelse(bullets_level > 1, NA, bullet_id),
+      parent_text = ifelse(bullets_level > 1, NA_character_, text),
+    ) |> 
+    fill(bullet_id, parent_text, .direction = "down") |> 
+    mutate(parent_text = ifelse(bullets_level == 1, NA_character_, parent_text)) |> 
+    
+    select(bullets_level, bullet_id, section_id, is_codeblock, text, parent_text)
   
 }

@@ -175,3 +175,6 @@
 [submodule "submodules/tidyverse"]
 	path = submodules/tidyverse
 	url = https://github.com/tidyverse/tidyverse
+[submodule "twitter-text"]
+	path = twitter-text
+	url = https://github.com/twitter/twitter-text.git
