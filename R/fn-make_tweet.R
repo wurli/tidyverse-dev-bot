@@ -56,12 +56,12 @@ make_tweet <- function(x, is_codeblock, package) {
     prev <- tail(tweet, 1)
     
     # -- diagnostics --
-    # cli::cli_h1("Analsing tweet element {.val {i}}")
-    # cli::cli_alert_info("{.arg prev} = ")
-    # prev |> str_replace_all("\n", "\n    ") |> cat()
-    # cli::cli_alert_info("{.arg x} = ")
-    # x |> str_replace_all("\n", "\n    ") |> cat()
-    # cli::cli_alert_info("{.arg is_codeblock} = {.val {is_codeblock}}")
+    cli::cli_h1("Analsing tweet element {.val {i}}")
+    cli::cli_alert_info("{.arg prev} = ")
+    prev |> str_replace_all("\n", "\n    ") |> substr(1, 150) |> paste0("...") |> cat()
+    cli::cli_alert_info("{.arg x} = ")
+    x |> str_replace_all("\n", "\n    ") |> substr(1, 150) |> paste0("...") |> cat()
+    cli::cli_alert_info("{.arg is_codeblock} = {.val {is_codeblock}}")
     
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     # Case 1: concatenation of prev and next elements is valid -----------------
@@ -84,7 +84,8 @@ make_tweet <- function(x, is_codeblock, package) {
     if (is_short) {
       
       # Only split codeblocks by line - otherwise by sentence
-      split <- if (is_codeblock) "\n" else "\\.(\\s|$)"
+      split   <- if (is_codeblock) "\n" else "\\.(\\s|$)"
+      combine <- if (is_codeblock) "\n" else ". "
       
       # Early return if the next tweet can't be chopped into two parts of the
       # desired length
@@ -102,7 +103,7 @@ make_tweet <- function(x, is_codeblock, package) {
               n_splits = 1
             )
           
-          new <- paste(c(new, parts[1]), collapse = split)
+          new <- paste(c(new, parts[1]), collapse = split, combine = combine)
           valid <- tweet_info(new, "valid")
           
           if (valid) {
