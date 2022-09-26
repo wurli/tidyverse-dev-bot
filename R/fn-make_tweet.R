@@ -20,7 +20,6 @@ make_tweet <- function(x, is_codeblock, package) {
   tweet <- paste(c(header, x, footer), collapse = "\n\n")
   is_valid <- tweet_info(tweet, "valid")
   if (is_valid) {
-    cli::cli_alert_info("Single tweet (not a thread)")
     return(tweet)
   }
   
@@ -32,8 +31,6 @@ make_tweet <- function(x, is_codeblock, package) {
   ) 
   
   len <- length(out)
-  
-  cli::cli_alert_info("Thread of {.val {len}} tweets")
   
   out <- imap_chr(out, function(x, i) {
     

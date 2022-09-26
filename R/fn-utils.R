@@ -84,7 +84,7 @@ compress_thread <- function(x, is_codeblock = NULL, main_sep = "\n\n",
     fully_compressed <- head(accum, -1)
     x_prev <- tail(accum, 1)
     new <- compress_two_tweets(x_prev, x, is_codeblock, extra_space = extra_space)
-    c(fully_compressed, head(new), tail(new, -1))
+    c(fully_compressed, head(new, -1), tail(new, 1))
   })
   
 }
@@ -207,13 +207,14 @@ chop_up_tweet <- function(x, is_code = FALSE, width = .max_tweet_length - 7) {
     splits <- c("\n\n", "\n", "(?<=\\.) ", " ")
     collapse <- c("\n\n", "\n", " ", " ")
   }
-
   
   for (i in seq_along(splits)) {
     
     out <- str_segment1(x, width = width, split = splits[i], combine = collapse[i])
     
-    if (all(tweet_info(out, "valid"))) {
+    valid <- tweet_info(out, "valid")
+    
+    if (all(valid)) {
       return(out)
     }
     
@@ -221,7 +222,9 @@ chop_up_tweet <- function(x, is_code = FALSE, width = .max_tweet_length - 7) {
   
   cli::cli_abort(c(
     "Could not break text into valid tweets",
-    i = "Check {.emph {x}}"
+    i = "Using {.arg is_code} = {.val {is_code}} and {.arg width} = {.val {width}}",
+    i = "Check {.emph {x}}",
+    i = "Invalid segment{?s}: {.emph {out[!valid]}}"
   ))
     
 }
