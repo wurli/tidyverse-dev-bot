@@ -2,6 +2,7 @@ make_tweets <- function(x) {
   x |>
     group_by(package, bullet_id) |>
     summarise(
+      original = list(cur_data()),
       tweet = list(make_tweet(
         text,
         is_codeblock = is_codeblock,

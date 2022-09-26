@@ -8,13 +8,16 @@ str_segment1 <- function(x, ...) {
 # `str_wrap()` which breaks strings into substrings and preserves original 
 # linebreaks
 str_segment <- function(x, 
-                        width = 220, 
+                        width = 280, 
                         split = "\n", 
                         combine = split, 
                         strict = FALSE,
                         n_splits = Inf) {
   
   n_splits <- max(n_splits, 0)
+  
+  pad <- strrep("x", .max_tweet_length - width)
+  valid <- function(x) tweet_is_valid(paste0(pad, x))
   
   x |> 
     str_split(split) |> 
@@ -37,7 +40,7 @@ str_segment <- function(x,
           }
           
           # If a 'piece' doesn't fit, return it as-is (dealt with elsewhere)
-          if (nchar(piece) > width) {
+          if (!valid(piece)) {
             if (strict) {
               cli::cli_abort(c(
                 "Could not break string into segments of width <= {.val {width}} ",
@@ -52,7 +55,7 @@ str_segment <- function(x,
           prev <- tail(out, 1)
           new <- paste(c(prev, piece), collapse = combine)
           
-          if (nchar(new) <= width) c(completed, new) else c(completed, prev, piece)
+          if (valid(new)) c(completed, new) else c(completed, prev, piece)
           
         })
       
@@ -124,7 +127,8 @@ compress_two_tweets <- function(x1, x2, x2_is_code = FALSE, main_sep = "\n\n", e
     return(x1)
   }
   
-  valid <- function(x) x |> paste0(strrep("x", extra_space)) |> tweet_info( "valid")
+  pad <- strrep("x", extra_space)
+  valid <- function(x) x |> paste0(pad) |> tweet_is_valid()
   
   x1_valid <- valid(x1)
   x2_valid <- valid(x2)
@@ -149,7 +153,7 @@ compress_two_tweets <- function(x1, x2, x2_is_code = FALSE, main_sep = "\n\n", e
   # Split normal text by full-stops
   chunk_split   <- if (x2_is_code) "(?<!```)\n(?!```)" else "\\. "
   chunk_combine <- if (x2_is_code) "\n" else ". "
-  free_space    <- max(.max_tweet_length - tweet_info(x1, "weightedLength") - extra_space, 0)
+  free_space    <- max(.max_tweet_length - tweet_length(x1) - extra_space, 0)
   
   # If x2 is code it's better to keep it all in one tweet. If x1 takes up more
   # than 50% of a tweet, and if x2 is a valid tweet on its own, give it its own

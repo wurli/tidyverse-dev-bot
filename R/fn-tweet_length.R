@@ -5,3 +5,11 @@ tweet_info <- function(x, attr = NULL) {
   mapper <- if (attr == "valid") map_lgl else map_int
   mapper(out, attr)
 }
+
+tweet_is_valid <- function(x) {
+  tweet_info(x, "valid")
+}
+
+tweet_length <- function(x) {
+  tweet_info(x, "weightedLength")
+}
