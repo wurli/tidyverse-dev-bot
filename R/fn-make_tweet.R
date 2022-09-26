@@ -41,8 +41,12 @@ make_tweet <- function(x, is_codeblock, package) {
     return(tweet)
   }
   
+  NULL
   
-  
+}
+
+test_make_tweet <- function(...) {
+  do.call(make_tweet, print(get_tweet(...)))
 }
 
 
@@ -94,4 +98,28 @@ if (FALSE) {
     row.names = c(NA, -20L), 
     class = c("tbl_df", "tbl", "data.frame")
   )
+  
+  get_tweet <- function(x = new_bullets_formatted, i = 1, has_codeblock = NULL, has_subbullets = NULL) {
+    
+    # x <- filter(x, ...)
+    
+    if (isTRUE(has_codeblock)) {
+      x <- x |> 
+        with_groups(c(package, bullet_id), filter, any(is_codeblock))
+    }
+    
+    if (isTRUE(has_subbullets)) {
+      x <- x |> 
+        with_groups(c(package, bullet_id), filter, n() > 1 & any(grepl("^\\* ", text)))
+    }
+    
+    x <- x |> 
+      with_groups(c(package, bullet_id), mutate, row = cur_group_id()) |> 
+      filter(row == i) 
+    
+    stopifnot(nrow(x) > 0)
+      
+    list(x = x$text, is_codeblock = x$is_codeblock, package = unique(x$package))
+  }
+  
 }

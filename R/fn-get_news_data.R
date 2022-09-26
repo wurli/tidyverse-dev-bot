@@ -15,14 +15,16 @@ get_news_data <- function(files = list.files("news-files", full.names = TRUE)) {
   
   bullets_data <- files |> 
     map(read_lines) |> 
-    map(news_to_df) |> 
+    imap(news_to_df) |> 
     bind_rows(.id = "package")
   
 }
 
 
 # news_to_df(read_lines("test.md"))
-news_to_df <- function(text) {
+news_to_df <- function(text, pkg) {
+  
+  cli::cli_alert_info("Formatting {.file NEWS.md} as a dataset for package {.pkg {pkg}}")
   
   # Annotations which delimit bullet lists, bullets and code blocks
   ann <- list(
