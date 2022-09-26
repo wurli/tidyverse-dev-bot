@@ -1,15 +1,13 @@
 library(tidyverse)
 library(glue)
 library(V8) # For JS library to get tweet length
+
+# Load twitter-text library
 .ct <- v8()
 .ct$source("twitter-text/js/pkg/twitter-text-3.1.0.min.js")
 
 list.files("R", "^fn-", full.names = TRUE) |> 
   walk(source)
-
-# TODO: Fix lua filter so that bullets are annotated correctly, i.e. using
-# a for-loop. This is messing things up, particularly when bullets include
-# code blocks
 
 # urls                  <- news_urls(fake_package = "NEWS.md")
 # news_files            <- pull_news_files(urls, include_old = T)

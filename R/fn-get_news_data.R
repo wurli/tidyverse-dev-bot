@@ -35,7 +35,7 @@ news_to_df <- function(text) {
   )
   
   # out <- tibble(text = text) |> 
-  out <- tibble(text = read_lines("test.md")) |> 
+  out <- tibble(text = text) |> 
     
     # Helper columns derived from annotations added by the lua filter
     mutate(
