@@ -13,137 +13,71 @@ make_tweets <- function(x) {
 
 make_tweet <- function(x, is_codeblock, package) {
   
-  sections <- list(
-    header = tibble(
-      text = paste0("{", package, "} update:\n"),
-      order = 0L
-    ),
-    body = tibble(
-      text = x,
-      is_codeblock = is_codeblock,
-      order = seq_along(x)
-    ),
-    footer = tibble(
-      text = paste0("\n\n", news_urls(.package = package, .for_humans = TRUE)),
-      order = length(x) + 1L
-    )
-  )
+  header <- paste0("{", package, "} update:")
+  footer <- paste0(news_urls(.package = package, .for_humans = TRUE))
   
   # 1. Try a single tweet
-  tweet <- sections |> 
-    bind_rows() |> 
-    pull(text) |> 
-    paste(collapse = "")
-  
+  tweet <- paste(c(header, x, footer), collapse = "\n\n")
   is_valid <- tweet_info(tweet, "valid")
-  
   if (is_valid) {
-    cli::cli_alert_info("Returning tweet of length 1")
+    cli::cli_alert_info("Single tweet (not a thread)")
     return(tweet)
   }
   
-  # To account for a thread header, e.g. a tweet prefix like "(1/5)\n"
-  max_len <- .max_tweet_length - 7
-  i <- 0
+  # 2. Try a thread
+  out <- compress_thread(
+    x = c(header, x, footer),
+    is_codeblock = c(FALSE, is_codeblock, FALSE), 
+    extra_space = 7
+  ) 
   
-  x <- paste0(x, c(rep("\n\n", length(x) - 1), ""))
+  len <- length(out)
   
+  cli::cli_alert_info("Thread of {.val {len}} tweets")
   
-  tweets <- reduce2(x, is_codeblock, .init = NULL, function(tweet, x, is_codeblock) {
-    i <<- i + 1
+  out <- imap_chr(out, function(x, i) {
     
-    complete <- head(tweet, -1)
-    prev <- tail(tweet, 1)
-    
-    # -- diagnostics --
-    cli::cli_h1("Analsing tweet element {.val {i}}")
-    cli::cli_alert_info("{.arg prev} = ")
-    prev |> str_replace_all("\n", "\n    ") |> substr(1, 150) |> paste0("...") |> cat()
-    cli::cli_alert_info("{.arg x} = ")
-    x |> str_replace_all("\n", "\n    ") |> substr(1, 150) |> paste0("...") |> cat()
-    cli::cli_alert_info("{.arg is_codeblock} = {.val {is_codeblock}}")
-    
-    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    # Case 1: concatenation of prev and next elements is valid -----------------
-    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    # - if so, return it
-    new <- paste(c(prev, x), collapse = "\n\n")
-    
-    if (tweet_info(new, "valid")) {
-      cli::cli_alert_info("Prev and next can be concatenated - returning")
-      return(c(complete, new))
+    if (i == 1) {
+      str_replace(x, "\n", paste0("\n(1/", len, ")\n"))
+    } else {
+      paste0("(", i, "/", len, ")\n", x)
     }
-    
-    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    # Case 2: prev element is very short (<= 1/2 the allowed length) -----------
-    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    # - If so, add a bit of the next and use the remainder as the next element
-    free_chars <- max_len - nchar(prev)
-    is_short <- (free_chars / max_len) > (1 / 2)
-    
-    if (is_short) {
-      
-      # Only split codeblocks by line - otherwise by sentence
-      split   <- if (is_codeblock) "\n" else "\\.(\\s|$)"
-      combine <- if (is_codeblock) "\n" else ". "
-      
-      # Early return if the next tweet can't be chopped into two parts of the
-      # desired length
-      if (is_segmentable(x, width = free_chars, split = split, first_only = TRUE)) {
-        
-        new <- prev
-        valid <- TRUE
-        
-        while(valid) {
-          
-          parts <- x |> 
-            str_segment1(
-              width = free_chars + 2, # To account for linebreaks 
-              split = split,
-              n_splits = 1
-            )
-          
-          new <- paste(c(new, parts[1]), collapse = split, combine = combine)
-          valid <- tweet_info(new, "valid")
-          
-          if (valid) {
-            prev <- new
-            x <- tail(parts, -1)
-          }
-          
-        }
-        
-        # Return the 'complete' tweets, the lengthened previous element
-        # and the remainder of the chopped up element
-        return(c(complete, prev, x))
-      }
-      
-    }
-    
-    c(tweet, x)
-    
-    # Case 3, next element on its own is valid. 
-    # - if so, return it
-    
-    # Deal with 
-    
-    # Case 1 - the prev tweet is
-    
     
   })
-  
-  tweets
+ 
+  out 
   
 }
 
-test_make_tweet(has_codeblock = T, has_subbullets = T)
+# test_make_tweet(has_codeblock = T, has_subbullets = T)
 
 test_make_tweet <- function(...) {
   tweet <- get_tweet(...)
-  do.call(make_tweet, )
+  do.call(make_tweet, tweet)
 }
 
-
+get_tweet <- function(x = new_bullets_formatted, i = 1, has_codeblock = NULL, has_subbullets = NULL) {
+  
+  # x <- filter(x, ...)
+  
+  if (isTRUE(has_codeblock)) {
+    x <- x |> 
+      with_groups(c(package, bullet_id), filter, any(is_codeblock))
+  }
+  
+  if (isTRUE(has_subbullets)) {
+    x <- x |> 
+      with_groups(c(package, bullet_id), filter, n() > 1 & any(grepl("^\\* ", text)))
+  }
+  
+  x <- x |> 
+    with_groups(c(package, bullet_id), mutate, row = cur_group_id()) |> 
+    filter(row == i) 
+  
+  stopifnot(nrow(x) > 0)
+  
+  list(x = x$text, is_codeblock = x$is_codeblock, package = unique(x$package))
+}
 
 # Get some test data x
 if (FALSE) {
@@ -192,28 +126,4 @@ if (FALSE) {
     row.names = c(NA, -20L), 
     class = c("tbl_df", "tbl", "data.frame")
   )
-  
-  get_tweet <- function(x = new_bullets_formatted, i = 1, has_codeblock = NULL, has_subbullets = NULL) {
-    
-    # x <- filter(x, ...)
-    
-    if (isTRUE(has_codeblock)) {
-      x <- x |> 
-        with_groups(c(package, bullet_id), filter, any(is_codeblock))
-    }
-    
-    if (isTRUE(has_subbullets)) {
-      x <- x |> 
-        with_groups(c(package, bullet_id), filter, n() > 1 & any(grepl("^\\* ", text)))
-    }
-    
-    x <- x |> 
-      with_groups(c(package, bullet_id), mutate, row = cur_group_id()) |> 
-      filter(row == i) 
-    
-    stopifnot(nrow(x) > 0)
-      
-    list(x = x$text, is_codeblock = x$is_codeblock, package = unique(x$package))
-  }
-  
 }
