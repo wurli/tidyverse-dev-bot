@@ -38,15 +38,108 @@ make_tweet <- function(x, is_codeblock, package) {
   is_valid <- tweet_info(tweet, "valid")
   
   if (is_valid) {
+    cli::cli_alert_info("Returning tweet of length 1")
     return(tweet)
   }
   
-  NULL
+  # To account for a thread header, e.g. a tweet prefix like "(1/5)\n"
+  max_len <- .max_tweet_length - 7
+  i <- 0
+  
+  x <- paste0(x, c(rep("\n\n", length(x) - 1), ""))
+  
+  
+  tweets <- reduce2(x, is_codeblock, .init = NULL, function(tweet, x, is_codeblock) {
+    i <<- i + 1
+    
+    complete <- head(tweet, -1)
+    prev <- tail(tweet, 1)
+    
+    # -- diagnostics --
+    # cli::cli_h1("Analsing tweet element {.val {i}}")
+    # cli::cli_alert_info("{.arg prev} = ")
+    # prev |> str_replace_all("\n", "\n    ") |> cat()
+    # cli::cli_alert_info("{.arg x} = ")
+    # x |> str_replace_all("\n", "\n    ") |> cat()
+    # cli::cli_alert_info("{.arg is_codeblock} = {.val {is_codeblock}}")
+    
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    # Case 1: concatenation of prev and next elements is valid -----------------
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    # - if so, return it
+    new <- paste(c(prev, x), collapse = "\n\n")
+    
+    if (tweet_info(new, "valid")) {
+      cli::cli_alert_info("Prev and next can be concatenated - returning")
+      return(c(complete, new))
+    }
+    
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    # Case 2: prev element is very short (<= 1/2 the allowed length) -----------
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    # - If so, add a bit of the next and use the remainder as the next element
+    free_chars <- max_len - nchar(prev)
+    is_short <- (free_chars / max_len) > (1 / 2)
+    
+    if (is_short) {
+      
+      # Only split codeblocks by line - otherwise by sentence
+      split <- if (is_codeblock) "\n" else "\\.(\\s|$)"
+      
+      # Early return if the next tweet can't be chopped into two parts of the
+      # desired length
+      if (is_segmentable(x, width = free_chars, split = split, first_only = TRUE)) {
+        
+        new <- prev
+        valid <- TRUE
+        
+        while(valid) {
+          
+          parts <- x |> 
+            str_segment1(
+              width = free_chars + 2, # To account for linebreaks 
+              split = split,
+              n_splits = 1
+            )
+          
+          new <- paste(c(new, parts[1]), collapse = split)
+          valid <- tweet_info(new, "valid")
+          
+          if (valid) {
+            prev <- new
+            x <- tail(parts, -1)
+          }
+          
+        }
+        
+        # Return the 'complete' tweets, the lengthened previous element
+        # and the remainder of the chopped up element
+        return(c(complete, prev, x))
+      }
+      
+    }
+    
+    c(tweet, x)
+    
+    # Case 3, next element on its own is valid. 
+    # - if so, return it
+    
+    # Deal with 
+    
+    # Case 1 - the prev tweet is
+    
+    
+  })
+  
+  tweets
   
 }
 
+test_make_tweet(has_codeblock = T, has_subbullets = T)
+
 test_make_tweet <- function(...) {
-  do.call(make_tweet, print(get_tweet(...)))
+  tweet <- get_tweet(...)
+  do.call(make_tweet, )
 }
 
 

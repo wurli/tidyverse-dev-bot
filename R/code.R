@@ -6,6 +6,8 @@ library(V8) # For JS library to get tweet length
 .ct <- v8()
 .ct$source("twitter-text/js/pkg/twitter-text-3.1.0.min.js")
 
+.max_tweet_length <- 240
+
 list.files("R", "^fn-", full.names = TRUE) |> 
   walk(source)
 
