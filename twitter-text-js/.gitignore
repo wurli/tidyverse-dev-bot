@@ -1,0 +1,8 @@
+test/conformance.js
+.DS_Store
+node_modules/
+dist/
+package-lock.json
+src/configs/*.json
+src/configs/BUILD
+src/configs/README.md
