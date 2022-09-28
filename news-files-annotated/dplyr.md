@@ -3,6 +3,17 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Joins now reference the correct column in `y` when a type error is
+    thrown while joining on two columns with different names (#6465).
+
+    !end-bullet!
+-   !begin-bullet!
+    Warnings are now enriched with contextualised information in
+    `summarise()` and `filter()` just like they have been in `mutate()`
+    and `arrange()`.
+
+    !end-bullet!
+-   !begin-bullet!
     Using 1 column matrices in `filter()` is now deprecated (#6091).
 
     !end-bullet!
@@ -487,12 +498,8 @@
     is no longer restricted to just numeric and date-time vectors.
     Additionally, `left` and `right` are no longer required to be
     scalars, they can now also be vectors with the same length as `x`.
-    Finally, `left` and `right` are now cast to the type of `x` before
-    the comparison is made. This last change means that you can no
-    longer make comparisons like `between(<int>, 0, 2.5)`, as `2.5`
-    can't be cast to integer without losing information. We recommend
-    that you convert the `<int>` vector to double before calling
-    `between()` if you require this (#6183, #6260).
+    Finally, `x`, `left`, and `right` are now cast to their common type
+    before the comparison is made (#6183, #6260, #6478).
 
     !end-bullet!
 -   !begin-bullet!

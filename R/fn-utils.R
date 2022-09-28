@@ -8,16 +8,13 @@ str_segment1 <- function(x, ...) {
 # `str_wrap()` which breaks strings into substrings and preserves original 
 # linebreaks
 str_segment <- function(x, 
-                        width = 280, 
+                        padding = 7, 
                         split = "\n", 
                         combine = split, 
                         strict = FALSE,
                         n_splits = Inf) {
   
   n_splits <- max(n_splits, 0)
-  
-  pad <- strrep("x", .max_tweet_length - width)
-  valid <- function(x) tweet_is_valid(paste0(pad, x))
   
   x |> 
     str_split(split) |> 
@@ -40,7 +37,7 @@ str_segment <- function(x,
           }
           
           # If a 'piece' doesn't fit, return it as-is (dealt with elsewhere)
-          if (!valid(piece)) {
+          if (!tweet_is_valid(piece, padding)) {
             if (strict) {
               cli::cli_abort(c(
                 "Could not break string into segments of width <= {.val {width}} ",
@@ -55,7 +52,11 @@ str_segment <- function(x,
           prev <- tail(out, 1)
           new <- paste(c(prev, piece), collapse = combine)
           
-          if (valid(new)) c(completed, new) else c(completed, prev, piece)
+          if (tweet_is_valid(new, padding)) {
+            c(completed, new) 
+          } else {
+            c(completed, prev, piece)
+          }
           
         })
       
@@ -138,13 +139,13 @@ compress_two_tweets <- function(x1, x2, x2_is_code = FALSE, main_sep = "\n\n", e
   extra_after <- NULL
   
   if (!x1_valid) {
-    parts <- chop_up_tweet(x1, is_code = FALSE, width = .max_tweet_length - extra_space)
+    parts <- chop_up_tweet(x1, is_code = FALSE, padding = extra_space)
     extra_before <- head(parts, -1)
     x1 <- tail(parts, 1)
   }
   
   if (!x2_valid) {
-    parts <- chop_up_tweet(x2, is_code = x2_is_code, width = .max_tweet_length - extra_space)
+    parts <- chop_up_tweet(x2, is_code = x2_is_code, padding = extra_space)
     extra_after <- tail(parts, -1)
     x2 <- head(parts, 1)
   }
@@ -167,7 +168,7 @@ compress_two_tweets <- function(x1, x2, x2_is_code = FALSE, main_sep = "\n\n", e
   # To separate 'main' chunks of text
   combine <- main_sep
   
-  go <- is_segmentable(x2, width = free_space, split = chunk_split)
+  go <- is_segmentable(x2, width = free_space, split = chunk_split) 
   
   # Recursively add bits of the second chunk to the first, and stop when
   # the first is no longer a valid tweet
@@ -179,7 +180,7 @@ compress_two_tweets <- function(x1, x2, x2_is_code = FALSE, main_sep = "\n\n", e
     
     parts <- x2 |> 
       str_segment1(
-        width = free_space,
+        padding = extra_space,
         split = chunk_split,
         combine = chunk_combine,
         n_splits = 1
@@ -202,7 +203,7 @@ compress_two_tweets <- function(x1, x2, x2_is_code = FALSE, main_sep = "\n\n", e
   
 }
 
-chop_up_tweet <- function(x, is_code = FALSE, width = .max_tweet_length - 7) {
+chop_up_tweet <- function(x, is_code = FALSE, padding = 7, width = .max_tweet_length - padding) {
   
   if (is_code) {
     splits <- c("(?<!```)\n(?!```)")
@@ -214,9 +215,9 @@ chop_up_tweet <- function(x, is_code = FALSE, width = .max_tweet_length - 7) {
   
   for (i in seq_along(splits)) {
     
-    out <- str_segment1(x, width = width, split = splits[i], combine = collapse[i])
+    out <- str_segment1(x, padding = padding, split = splits[i], combine = collapse[i]) 
     
-    valid <- tweet_info(out, "valid")
+    valid <- tweet_is_valid(out, padding) 
     
     if (all(valid)) {
       return(out)

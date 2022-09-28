@@ -6,7 +6,9 @@ tweet_info <- function(x, attr = NULL) {
   mapper(out, attr)
 }
 
-tweet_is_valid <- function(x) {
+tweet_is_valid <- function(x, pad = NULL) {
+  pad <- strrep("x", pad %||% 0)
+  x <- paste0(pad, x)
   tweet_info(x, "valid")
 }
 

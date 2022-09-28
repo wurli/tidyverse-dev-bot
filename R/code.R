@@ -22,7 +22,4 @@ new_bullets_formatted <- news_urls(fake_package = "NEWS.md") |>
   pull_news_files(include_old = T) |> 
   annotate_news_files() |> 
   get_news_data() |> 
-  remove_old_bullets(overwrite = T) 
-
-
-make_tweets()
+  remove_old_bullets(overwrite = F) 

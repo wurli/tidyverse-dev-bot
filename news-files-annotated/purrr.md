@@ -14,6 +14,11 @@
 
     !end-bullet!
 -   !begin-bullet!
+    Use of map functions with expressions, calls, and pairlists has been
+    deprecated (#961).
+
+    !end-bullet!
+-   !begin-bullet!
     `update_list()` (#858) and `rerun()` (#877), and the use of
     tidyselect with `map_at()` and friends (#874) have been deprecated.
     These functions use some form of non-standard evaluation which we
@@ -336,7 +341,7 @@
 !begin-bullets-11!
 
 -   !begin-bullet!
-    `modify()` no longer supports modifying calls or pairlists.
+    `modify()` no longer works with calls or pairlists.
 
     !end-bullet!
 -   !begin-bullet!
@@ -345,8 +350,14 @@
 
     !end-bullet!
 -   !begin-bullet!
-    `map_depth()` now uses `is.list()` to determine if there's more
-    depth to recurse into, as opposed to `!is_atomic(.x)` (#920).
+    `map_depth()` and `modify_depth()` have a new `is_leaf` argument
+    that allows you to control what counts as a level. The default uses
+    `!vec_is_list()` to avoid recursing into rich S3 objects like linear
+    models or data.frames (#958, #920).
+
+    !end-bullet!
+-   !begin-bullet!
+    `map_depth()` and `modify_depth()` now correctly recurse at depth 1.
 
     !end-bullet!
 -   !begin-bullet!
