@@ -1,4 +1,4 @@
-name: londonmapbot
+name: twitter-dev-bot-post
 
 on:
   schedule:
