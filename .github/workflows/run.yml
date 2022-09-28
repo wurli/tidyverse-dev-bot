@@ -17,5 +17,7 @@ jobs:
       - uses: r-lib/actions/setup-r@master
       - uses: r-lib/actions/setup-renv@master
       - uses: r-lib/actions/setup-pandoc@master
-      - name: Create and post tweet
+      - name: list dirs
+        run: ls
+      - name: Scrape, format and post
         run: Rscript run.R
