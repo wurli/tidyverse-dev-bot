@@ -1,7 +1,8 @@
 pull_news_files <- function(urls, 
                             dir = "news-files", 
                             hashes = "hashes.rds", 
-                            include_old = FALSE) {
+                            include_old = FALSE,
+                            overwrite = TRUE) {
   
   hash_loc    <- file.path(dir, hashes)
   prev_hashes <- if (file.exists(hash_loc)) read_rds(file.path(dir, hashes)) else list()
@@ -51,7 +52,7 @@ pull_news_files <- function(urls,
     }) |> 
     compact() 
   
-  write_rds(prev_hashes, hash_loc)
+  if (overwrite) write_rds(prev_hashes, hash_loc)
   
   out
   

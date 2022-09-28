@@ -1,4 +1,8 @@
 # Uses the javascript library made available by twitter
+# Also requires:
+# library(V8)
+# .ct <- v8()
+# .ct$source("twitter-text/js/pkg/twitter-text-3.1.0.min.js")
 tweet_info <- function(x, attr = NULL) {
   out <- map(x, ~ .ct$call("twttr.txt.parseTweet", .x))
   if (is.null(attr)) return(out)

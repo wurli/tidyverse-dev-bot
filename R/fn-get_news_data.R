@@ -1,4 +1,4 @@
-get_news_data <- function(files = list.files("news-files", full.names = TRUE)) {
+get_news_data <- function(files = list.files("news-files-annotates", full.names = TRUE)) {
   
   # For notifications
   force(files)
@@ -109,10 +109,12 @@ news_to_df <- function(text, pkg) {
       )
     ) |> 
     
-    # Give sub-bullets the same id as their 'parent'. Also add a column
+    # Replace @ with @@ so github users don't show as twitter users.
+    # Also give sub-bullets the same id as their 'parent'. Also add a column
     # indicating what the text of the `parent` bullet says. This is useful for
     # checking whether a bullet has already been tweeted.
     mutate(
+      text = text |> str_replace_all("@", "@@"),
       bullet_id = ifelse(bullets_level > 1, NA, bullet_id),
       parent_text = ifelse(bullets_level > 1, NA_character_, text),
     ) |> 

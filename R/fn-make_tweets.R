@@ -1,18 +1,34 @@
-make_tweets <- function(x) {
-  x |>
-    group_by(package, bullet_id) |>
+make_tweets <- function(x, simplify = TRUE) {
+  
+  force(x)
+  
+  if (nrow(x) == 0) {
+    return(tibble())
+  }
+  
+  out <- x |>
+    group_by(package, tweet_id = bullet_id) |>
     summarise(
       original = list(cur_data()),
-      tweet = list(make_tweet(
+      tweet = list(make_single_tweet(
         text,
         is_codeblock = is_codeblock,
         package = cur_group()$package
       )),
       .groups = "drop"
-    )
+    ) 
+  
+  if (!simplify) {
+    return(out)
+  }
+  
+  out |> 
+    select(package, tweet_id, tweet) |> 
+    unnest(tweet)
+  
 }
 
-make_tweet <- function(x, is_codeblock, package) {
+make_single_tweet <- function(x, is_codeblock, package) {
   
   header <- paste0("{", package, "} update:")
   footer <- paste0(news_urls(.package = package, .for_humans = TRUE))
@@ -31,17 +47,9 @@ make_tweet <- function(x, is_codeblock, package) {
     extra_space = 7
   ) 
   
+  # Add thread subheaders like '(1/n)\n'
   len <- length(out)
-  
-  out <- imap_chr(out, function(x, i) {
-    
-    if (i == 1) {
-      str_replace(x, "\n", paste0("\n(1/", len, ")\n"))
-    } else {
-      paste0("(", i, "/", len, ")\n", x)
-    }
-    
-  })
+  out <- imap_chr(out, function(x, i) paste0("(", i, "/", len, ")\n", x))
  
   out 
   
