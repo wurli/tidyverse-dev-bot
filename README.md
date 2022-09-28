@@ -19,7 +19,7 @@ them to twitter.
 
 3.  This data is transformed using R to give individual tweets or
     threads where bullets would otherwise overflow. The
-    (twitter-text)[<https://github.com/twitter/twitter-text>] javascript
+    [twitter-text](https://github.com/twitter/twitter-text) javascript
     library is used here to test whether tweets are valid or not.
 
 4.  Tweets are posted using the {rtweet} package
