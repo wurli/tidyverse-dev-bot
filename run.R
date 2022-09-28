@@ -19,6 +19,8 @@ rtweet::auth_as(rtweet::rtweet_bot(
   access_secret = Sys.getenv("TWITTER_ACCESS_SECRET")
 ))
 
+cat(Sys.getenv("THIS_IS_A_TEST"))
+
 # Load functions
 list.files("R", full.names = TRUE) |> 
   walk(source)
