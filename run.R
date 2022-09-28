@@ -10,7 +10,7 @@ print(list.files())
 
 # Load twitter-text library
 .ct <- v8()
-.ct$source("twitter-text/js/pkg/twitter-text-3.1.0.min.js")
+.ct$source("twitter-text/pkg/twitter-text-3.1.0.min.js")
 
 # Tweet validation is performed by the `twitter-text` library. however
 # this is useful when working out where to put line/tweet breaks
