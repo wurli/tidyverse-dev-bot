@@ -3,6 +3,11 @@ library(glue)
 library(V8) # For JS library to get tweet length
 library(rtweet)
 
+
+cat("working dir:", getwd(), "\n\n")
+cat("Files:\n")
+print(list.files())
+
 # Load twitter-text library
 .ct <- v8()
 .ct$source("twitter-text/js/pkg/twitter-text-3.1.0.min.js")
