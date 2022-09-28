@@ -76,8 +76,10 @@ try_post <- function(status, ..., .tries = 3) {
   }
   
   if (!isTRUE(res)) {
+    # {cli} strings shouldn't start with a dot
+    n_tries <- .tries
     cli::cli_abort(c(
-      "Could not post tweet after {.val {.tries}} tries",
+      "Could not post tweet after {.val {n_tries}} tries",
       i = "Here's the error: {res}"
     ))
   }
