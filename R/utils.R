@@ -78,6 +78,18 @@ is_segmentable <- function(x, width = 220, split = "\n", first_only = TRUE) {
   map_lgl(x, ~ all(nchar(.) <= width))
 }
 
+first_chars <- function(x, n = 60, dots = "...", always_dots = FALSE) {
+  
+  if (nchar(x) > n) {
+    n <- n - nchar(dots)
+  } else if (!always_dots) {
+    dots <- ""
+  }
+  
+  paste0(substr(x, 1, n), dots)
+  
+}
+
 dput_styled <- function(x, ...) {
   con <- textConnection("out", "w")
   dput(x, con, ...)

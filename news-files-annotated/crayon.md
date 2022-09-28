@@ -1,19 +1,28 @@
 # development version
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    crayon functions now mark their output with the right encoding, if
+    their input was marked (#136, #138).
+    !end-bullet!
+
+!end-bullets-1!
+
 # 1.5.1
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     crayon now does not fail to install from source if the utils package
     is not loaded (#133).
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # 1.5.0
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     You can use the new `cli.default_num_colors` option to set the
@@ -27,11 +36,11 @@
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 # 1.4.2
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     Better ANSI support detection if there is an active `sink()`.
@@ -42,11 +51,11 @@
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 # 1.4.1
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     ANSI color support detection works correctly now in older RStudio
@@ -59,11 +68,11 @@
 
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 # 1.4.0
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     Overhauled and much improved detection of ANSI color support and
@@ -96,11 +105,11 @@
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # 1.3.4
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     Style functions convert arguments to character now
@@ -115,11 +124,11 @@
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 # 1.3.2
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     Removed dependency to `memoise` (@brodieG, #25)
@@ -151,7 +160,7 @@
 -   !begin-bullet!
     `col_strsplit` and `col_substr` corner cases:
 
-    !begin-bullets-8!
+    !begin-bullets-9!
     -   !begin-bullet!
         handle empty chunks at beginning or end of strings like
         `base::strsplit` (@brodieG, #26)
@@ -168,7 +177,7 @@
 
         !end-bullet!
 
-    !end-bullets-8!
+    !end-bullets-9!
     !end-bullet!
 -   !begin-bullet!
     Some performance improvements to `col_substr` (@brodieG)
@@ -180,21 +189,21 @@
 
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 # 1.3.1
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     Fixed some `R CMD check` problems.
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 # 1.3.0
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     Colors are turned on by default in Emacs ESS 23.x and above.
@@ -209,22 +218,22 @@
 
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 # 1.2.1
 
-!begin-bullets-11!
+!begin-bullets-12!
 
 -   !begin-bullet!
     Fix detecting number of colors when `tput` exists, but fails with an
     error and/or does not return anything useful. (@jimhester, #18, #19)
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-12!
 
 # 1.2.0
 
-!begin-bullets-12!
+!begin-bullets-13!
 
 -   !begin-bullet!
     Fix detection of number of colors, it was cached from installation
@@ -237,11 +246,11 @@
 
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
 
 # 1.1.0
 
-!begin-bullets-13!
+!begin-bullets-14!
 
 -   !begin-bullet!
     `show_ansi_colors()` prints all supported colors on the screen.
@@ -257,14 +266,14 @@
 
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-14!
 
 # 1.0.0
 
-!begin-bullets-14!
+!begin-bullets-15!
 
 -   !begin-bullet!
     First released version.
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-15!

@@ -14,13 +14,15 @@ annotate_news_files <- function(files, dir = "news-files-annotated", quiet = TRU
   # For notifications
   force(files)
   
+  cli::cli_h2("Adding annotations to news data for easier parsing")
+  
   stopifnot(!is.null(names(files)))
   
   # Use pandoc to convert the docs directly from the URL
   files |> 
     imap(function(path, pkg) {
       
-      cli::cli_alert_info("Annotating news file for package {.pkg {pkg}}")
+      cli::cli_alert("Annotating news file for package {.pkg {pkg}}")
       
       file <- glue("{dir}/{pkg}.md")
       
@@ -30,7 +32,7 @@ annotate_news_files <- function(files, dir = "news-files-annotated", quiet = TRU
           stdout = TRUE
         ),
         warning = function(w) {
-          cli::cli_alert_warning("Annotating news file for package {.pkg {pkg}}")
+          cli::cli_alert_warning("Could not annotate news file for package {.pkg {pkg}}")
           cli::cli_warn(c(
             "Failed to annotate news file for package {.pkg {pkg}}",
             i = paste0("Original error:\n", w$message)

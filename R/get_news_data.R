@@ -3,6 +3,8 @@ get_news_data <- function(files = list.files("news-files-annotates", full.names 
   # For notifications
   force(files)
   
+  cli::cli_h2("Formatting news as a tidy dataframe")
+  
   if (length(files) == 0) {
     return(tibble())
   }
@@ -22,9 +24,9 @@ get_news_data <- function(files = list.files("news-files-annotates", full.names 
 
 
 # news_to_df(read_lines("test.md"))
-news_to_df <- function(text, pkg) {
+news_to_df <- function(text, pkg, bullet_syms = c("\U2022", "\U2023", "\U2043")) {
   
-  cli::cli_alert_info("Formatting {.file NEWS.md} as a dataset for package {.pkg {pkg}}")
+  cli::cli_alert("Formatting {.file NEWS.md} as a dataset for package {.pkg {pkg}}")
   
   # Annotations which delimit bullet lists, bullets and code blocks
   ann <- list(
@@ -104,17 +106,17 @@ news_to_df <- function(text, pkg) {
     with_groups(
       bullet_id, mutate, text = ifelse(
         bullets_level > 1 & row_number() == 1,
-        paste(c("*", "-", ">")[((bullets_level - 2) %% 3) + 1], text),
+        paste(bullet_syms[((bullets_level - 2) %% length(bullet_syms)) + 1], text),
         text
       )
     ) |> 
     
-    # Replace @ with @@ so github users don't show as twitter users.
+    # Replace @ with @+nbsp so github users don't show as twitter users.
     # Also give sub-bullets the same id as their 'parent'. Also add a column
     # indicating what the text of the `parent` bullet says. This is useful for
     # checking whether a bullet has already been tweeted.
     mutate(
-      text = text |> str_replace_all("@", "@@"),
+      text = text |> str_replace_all("@", "@\U00A0"),
       bullet_id = ifelse(bullets_level > 1, NA, bullet_id),
       parent_text = ifelse(bullets_level > 1, NA_character_, text),
     ) |> 

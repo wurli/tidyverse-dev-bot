@@ -3,6 +3,8 @@ remove_old_bullets <- function(x, file = "last_refresh_data.csv", overwrite = TR
   # For notifications
   force(x)
   
+  cli::cli_h2("Discarding text which has already been posted")
+  
   if (nrow(x) == 0) {
     return(tibble())
   }

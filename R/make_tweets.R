@@ -2,6 +2,8 @@ make_tweets <- function(x, simplify = TRUE) {
   
   force(x)
   
+  cli::cli_h2("Making tweets from news data")
+  
   if (nrow(x) == 0) {
     return(tibble())
   }
@@ -31,7 +33,10 @@ make_tweets <- function(x, simplify = TRUE) {
 make_single_tweet <- function(x, is_codeblock, package) {
   
   header <- paste0("{", package, "} update:")
-  footer <- paste0(news_urls(.package = package, .for_humans = TRUE))
+  footer <- paste0(
+    "#RStats #Tidyverse\n\n",
+    news_urls(.package = package, .for_humans = TRUE)
+  )
   
   # 1. Try a single tweet
   tweet <- paste(c(header, x, footer), collapse = "\n\n")
@@ -85,7 +90,7 @@ get_tweet <- function(x = new_bullets_formatted, i = 1, has_codeblock = NULL, ha
   list(x = x$text, is_codeblock = x$is_codeblock, package = unique(x$package))
 }
 
-# Get some test data x
+# Get some test data 
 if (FALSE) {
   small <- structure(
     list(

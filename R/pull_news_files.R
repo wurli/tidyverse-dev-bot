@@ -4,11 +4,13 @@ pull_news_files <- function(urls,
                             include_old = FALSE,
                             overwrite = TRUE) {
   
-  hash_loc    <- file.path(dir, hashes)
-  prev_hashes <- if (file.exists(hash_loc)) read_rds(file.path(dir, hashes)) else list()
-  
   # For notifications
   force(urls)
+  
+  cli::cli_h2("Pulling {.code NEWS.md} files from GitHub")
+  
+  hash_loc    <- file.path(dir, hashes)
+  prev_hashes <- if (file.exists(hash_loc)) read_rds(file.path(dir, hashes)) else list()
   
   stopifnot(!is.null(names(urls)))
   
@@ -36,11 +38,11 @@ pull_news_files <- function(urls,
       file <- glue("{dir}/{pkg}.md")
       
       if (identical(hash, prev_hashes[[pkg]])) {
-        cli::cli_alert_info("No changes to news for package {.pkg {pkg}}")
+        cli::cli_alert("No changes to news for package {.pkg {pkg}}")
         return(if (include_old) file else NULL)
       }
       
-      cli::cli_alert_warning("Caching news file for package {.pkg {pkg}}")
+      cli::cli_alert("Caching news file for package {.pkg {pkg}}")
       
       # Sorry
       prev_hashes[[pkg]] <<- hash
