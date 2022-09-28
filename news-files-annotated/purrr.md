@@ -350,9 +350,9 @@
 
     !end-bullet!
 -   !begin-bullet!
-    `map_depth()` and `modify_depth()` have a new `is_leaf` argument
+    `map_depth()` and `modify_depth()` have a new `is_node` argument
     that allows you to control what counts as a level. The default uses
-    `!vec_is_list()` to avoid recursing into rich S3 objects like linear
+    `vec_is_list()` to avoid recursing into rich S3 objects like linear
     models or data.frames (#958, #920).
 
     !end-bullet!

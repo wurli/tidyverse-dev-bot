@@ -52,8 +52,14 @@ remove_old_bullets <- function(x, file = "last_refresh_data.csv", overwrite = TR
   }
   
   if (overwrite) {
-    cli::cli_alert("Overwriting {.file {file}} with new data")
-    write_csv(x, "last_refresh_data.csv")
+    cli::cli_alert("Overwriting {.file {file}} to include new tweets")
+    already_tweeted <- rows_insert(
+      x = prev |> select(all_of(by)),
+      y = x |> select(all_of(by)),
+      by = by,
+      conflict = "ignore"
+    )
+    write_csv(already_tweeted, "last_refresh_data.csv")
   } else {
     cli::cli_alert_warning("Not overwriting {.file {file}} with new data")
   }
