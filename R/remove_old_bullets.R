@@ -12,13 +12,19 @@ remove_old_bullets <- function(x, file = "last_refresh_data.csv", overwrite = TR
   cli::cli_alert("Reading {.file {file}}")
   prev <- read_csv(file, show_col_types = FALSE)
   
+  by <- c("package", "bullets_level", "text", "parent_text")
+  
   # Makes development easier
-  if (!identical(colnames(prev), colnames(x))) {
+  if (!identical(colnames(prev), by)) {
     
     stopifnot(interactive())
     
     choice <- menu(
-      title = "Old data has different columns to new data. Do you want to overwrite?",
+      title = paste0(
+        "Old data has different columns to new data. Do you want to overwrite?\n",
+        "Old:", paste(colnames(prev), collapse = ", "), "\n",
+        "New:", paste(by, collapse = ", ")
+      ),
       choices = c("Overwrite", "Stop")
     )
     
@@ -28,8 +34,6 @@ remove_old_bullets <- function(x, file = "last_refresh_data.csv", overwrite = TR
     return(x)
     
   }
-  
-  by <- c("package", "bullets_level", "text", "parent_text")
 
   out <- rows_delete(
     x = x,
@@ -54,7 +58,7 @@ remove_old_bullets <- function(x, file = "last_refresh_data.csv", overwrite = TR
   if (overwrite) {
     cli::cli_alert("Overwriting {.file {file}} to include new tweets")
     already_tweeted <- rows_insert(
-      x = prev |> select(all_of(by)),
+      x = prev,
       y = x |> select(all_of(by)),
       by = by,
       conflict = "ignore"

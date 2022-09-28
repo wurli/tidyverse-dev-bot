@@ -116,7 +116,7 @@ news_to_df <- function(text, pkg, bullet_syms = c("\U2022", "\U2023", "\U2043"))
     # indicating what the text of the `parent` bullet says. This is useful for
     # checking whether a bullet has already been tweeted.
     mutate(
-      text = text |> str_replace_all("@", "@\U00A0"),
+      text = text |> str_replace_all("@", "@\U200B"),
       bullet_id = ifelse(bullets_level > 1, NA, bullet_id),
       parent_text = ifelse(bullets_level > 1, NA_character_, text),
     ) |> 

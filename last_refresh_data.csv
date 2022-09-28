@@ -5536,3 +5536,968 @@ tidyverse,2,"• Removed DBI (since very different API, #16)",Membership changes
 tidyverse,2,• Added feather (#15),Membership changes:
 tidyverse,1,"`tidyverse_deps()` and `tidyverse_packages()` are now exported so you can more easily see the make up of the tidyverse, and what package versions you have (#18, #23)",NA
 tidyverse,1,`suppressPackageStartupMessages()` now suppresses all messages during loading (#19). `suppressPackageStartupMessages()` is called automatically for all tidyverse packages (#27).,NA
+broom,1,"Fix `glance.fixest` error when model includes only fixed effects and no regressors (`#1018` by `@​arcruz0`, `#1088` by",NA
+broom,1,Add tidiers for `Rchoice` objects (`#961` by `@​vincentarelbundock`,NA
+broom,1,`tidy.coxph` can now report confidence intervals on models utilizing penalized/clustering terms (`#966` by `@​vincentarelbundock` and,NA
+broom,1,"`tidy.coxph` can now handle models utilizing penalized/clustering terms (`#966` and `#969` by `@​vincentarelbundock`,",NA
+broom,1,"Fix `tidy.felm` confidence interval bug. Replaces ""robust"" argument with ""se.type"". (`#919` by `@​grantmcdermott`; supersedes `#818` by",NA
+broom,1,`tidy.ridgelm()` now always return a `GCV` column and never returns an `xm` column. (#533 by @​jmuhlenkamp),NA
+broom,1,"`rma` objects from the `metafor` package (#674 by @​malcolmbarrett,",NA
+broom,1,`tidy.felm()` now has a `robust = TRUE/FALSE` option that supports robust and cluster standard errors. (#781 by @​kuriwaki),NA
+broom,1,Return factor rather than numeric class predictions in `.fitted` of `augment.polr()`. (#619) Add an option to return `p.values` in `tidy.polr()`. (#833 by @​LukasWallrich),NA
+broom,1,"`tidy.prcomp()` argument `matrix` gained new options `""scores""`, `""loadings""`, and `""eigenvalues""`. (#557 by @​GegznaV)",NA
+broom,1,`tidy_optim()` now provides the standard error if the Hessian is present. (#529 by @​billdenney),NA
+broom,1,`tidy.htest()` column names are now run through `make.names()` to ensure syntactic correctness. (#549 by @​karissawhiting),NA
+broom,1,"Many `glance()` methods now return a `nobs` column, which contains the number of data points used to fit the model! (#597 by @​vincentarelbundock)",NA
+broom,1,Advice to help beginners make PRs (#397 by @​karldw),NA
+broom,1,"`glance` support for `arima` objects fit with `method = ""CSS""` (#396 by @​josue-rodriguez)",NA
+broom,1,A bug fix to re-enable tidying `glmnet` objects with `family = multinomial` (#395 by @​erleholgersen),NA
+broom,1,A bug fix to allow tidying `quantreg` intercept only models (#378 by @​erleholgersen),NA
+broom,1,A bug fix for `aovlist` objects (#377 by @​mvevans89),NA
+broom,1,Support for `glmnetUtils` objects (#352 by @​Hong-Revo),NA
+broom,1,A bug fix to allow `tidy_emmeans` to handle column names with dashes (#351 by @​bmannakee),NA
+broom,1,Support saved formulas in `augment.felm` (#347 by @​ShreyasSingh),NA
+broom,1,`confint_tidy` now drops rows of all `NA` (#345 by @​atyre2),NA
+broom,1,A new tidier for `caret::confusionMatrix` objects (#344 by @​mkuehn10),NA
+broom,1,Tidiers for `Kendall::Kendall` objects (#343 by @​cimentadaj),NA
+broom,1,A new tidying method for `car::durbinWatsonTest` objects (#341 by @​mkuehn10),NA
+broom,1,`glance` throws an informative error for `quantreg:rq` models fit with multiple `tau` values (#338 by @​bfgray3),NA
+broom,1,`tidy.glmnet` gains the ability to retain zero-valued coefficients with a `return_zeros` argument that defaults to `FALSE` (#337 by @​bfgray3),NA
+broom,1,`tidy.manova` now retains a `Residuals` row (#334 by @​jarvisc1),NA
+broom,1,"Tidiers for `ordinal::clm`, `ordinal::clmm`, `survey::svyolr` and `MASS::polr` ordinal model objects (#332 by @​larmarange)",NA
+broom,1,Support for `anova` objects from `car::Anova` (#325 by @​mariusbarth),NA
+broom,1,Tidiers for `tseries::garch` models (#323 by @​wilsonfreitas),NA
+broom,1,Removed dependency on `psych` package (#313 by @​nutterb),NA
+broom,1,Improved error messages (#303 by @​michaelweylandt),NA
+broom,1,Compatibility with new `rstanarm` and `loo` packages (#298 by @​jgabry),NA
+broom,1,A truly huge increase in unit tests (#267 by @​dchiu911),NA
+broom,1,Bug fix for `tidy.prcomp` when missing labels (#265 by @​corybrunson),NA
+broom,1,Added a `pkgdown` site at https://broom.tidyverse.org/ (#260 by @​jayhesselberth),NA
+broom,1,Added tidiers for `AER::ivreg` models (#247 by @​hughjonesd),NA
+broom,1,Added tidiers for the `lavaan` package (#233 by @​puterleat),NA
+broom,1,Added `conf.int` argument to `tidy.coxph` (#220 by @​larmarange),NA
+broom,1,Added `augment` method for chi-squared tests (#138 by @​larmarange),NA
+broom,1,changed default se.type for `tidy.rq` to match that of `quantreg::summary.rq()` (#404 by @​ethchr),NA
+broom,1,Added argument `quick` for `tidy.plm` and `tidy.felm` (#502 and #509 by @​MatthieuStigler),NA
+broom,1,Changed DESCRIPTION Authors@​R to new format,NA
+cli,1,cli now does not crash at the end of the R session on Arm Windows (#494; @​kevinushey),NA
+cli,1,"20 new spinners from the awesome [cli-spinners](https://github.com/sindresorhus/cli-spinners) package, and from @​HenrikBengtsson in #469. Run this to demo them, some need UTF-8 and emoji support:",NA
+cli,1,"`code_highlight` now falls back to the default theme (instead of no theme) for unknown RStudio themes (#482, @​rossellhayes).",NA
+cli,1,"`style_hyperlink()` (really) no longer breaks if the env variable `VTE_VERSION` is of the form `\d{4}`, i.e., 4 consecutive numbers (#441, @​michaelchirico)",NA
+cli,1,"Functions that apply bright background colors (e.g. `bg_br_yellow()`) now close themselves. They no longer format text after the end of the function (#484, @​rossellhayes).",NA
+cli,1,"`style_hyperlink()` no longer breaks if the env variable `VTE_VERSION` is of the form `\d{4}`, i.e., 4 consecutive numbers (#441, @​michaelchirico)",NA
+cli,1,"`format_inline()` now uses the correct environment (@​rundel, #314).",NA
+cli,1,"Styling of verbatim text work properly now (#147, @​tzakharko).",NA
+cli,1,"`make_spinner()` clears the line properly now (@​tzakharko, #164).",NA
+cli,1,"Progress bars now respect `is_dynamic_tty()` and do not output `\r` when this is false (@​jimhester, #177)",NA
+cli,1,"Use Oxford comma when listing 3 or more items (@​jonocarroll, #128).",NA
+crayon,1,"`reset` style now restores previous style for text following it (@​brodieG, #35).",NA
+crayon,1,"Removed dependency to `memoise` (@​brodieG, #25)",NA
+crayon,1,"Fixed a test case that changed the `crayon.enabled` setting, potentially (@​brodieG)",NA
+crayon,2,"• handle empty chunks at beginning or end of strings like `base::strsplit` (@​brodieG, #26)",`col_strsplit` and `col_substr` corner cases:
+crayon,1,Some performance improvements to `col_substr` (@​brodieG),NA
+crayon,1,"Change rgb to ANSI code mapping, based on the ""paint"" ruby gem (@​richfitz, #33, #34)",NA
+crayon,1,"Really fix `tput` corner cases (@​jimhester, #21)",NA
+dbplyr,1,"Variables that are neither found in the data nor in the environment now produce an error (@​mgirlich, #907).",NA
+dbplyr,1,"The keyword highlighting can now be customised via the option `dbplyr_highlight`. Turn it off via `options(dbplyr_highlight = FALSE)` or pass a custom ansi style, e.g. `options(dbplyr_highlight = cli::combine_ansi_styles(""bold"", ""cyan""))` (@​mgirlich, #974).",NA
+dbplyr,1,"`cur_column()` is now supported (@​mgirlich, #951).",NA
+dbplyr,1,"Many errors have been improved and now show the function where the error happened instead of a helper function (@​mgirlich, #907).",NA
+dbplyr,1,"Errors produced by the database, e.g. in `collect()` or `rows_*()`, now show the verb where the error happened (@​mgirlich).",NA
+dbplyr,1,"`window_order()` now produces a better error message when applied to a data frame (@​mgirlich, #947).",NA
+dbplyr,1,"Using a named `across()` now gives a clear error message (@​mgirlich, #761).",NA
+dbplyr,1,"Using `quantile()` for SQLite now gives a better error saying that it is not supported (@​mgirlich, #1000).",NA
+dbplyr,1,"`pivot_wider()` works again for MS SQL (@​mgirlich, #929).",NA
+dbplyr,1,"Querying Teradata databases works again. Unfortunately, the fix requires every column to be explicitly selected again (@​mgirlich, #966).",NA
+dbplyr,1,"Grouping by renamed columns works again (@​mgirlich, #928).",NA
+dbplyr,1,"Fixed an installation issue due to missing namespace for `setOldClass()` (@​mgirlich, #927).",NA
+dbplyr,1,"`str_flatten()` uses `collapse = """"` by default, consistent with `stringr`, for Snowflake, Redshift, Postgres, and MySQL (@​fh-afrachioni, #993).",NA
+dbplyr,1,"`slice_sample()` now works for Oracle (@​mgirlich, #986).",NA
+dbplyr,1,"`copy_inline()` now works for Hana (#950), Oracle (#972), and Redshift (#949, thanks to @​ejneer for an initial implementation).",NA
+dbplyr,1,"`copy_inline()` gains a `types` argument to specify the SQL column types (@​mgirlich, #963).",NA
+dbplyr,1,"`rows_*()` now uses the column types of `x` when auto copying a local data frame to a Postgres database (@​mgirlich, #909).",NA
+dbplyr,2,"• `*_join()` + `select()` (@​mgirlich, #876).","dbplyr now needs less subqueries resulting in shorter, more readable and in some cases even faster SQL. The following combination of verbs now avoids a subquery if possible:"
+dbplyr,2,"• `select()` + `*_join()` (@​mgirlich, #875).","dbplyr now needs less subqueries resulting in shorter, more readable and in some cases even faster SQL. The following combination of verbs now avoids a subquery if possible:"
+dbplyr,2,"• `mutate()` + `filter()` and `filter()` + `filter()` (@​mgirlich, #792).","dbplyr now needs less subqueries resulting in shorter, more readable and in some cases even faster SQL. The following combination of verbs now avoids a subquery if possible:"
+dbplyr,2,"• `distinct()` (@​mgirlich, #880).","dbplyr now needs less subqueries resulting in shorter, more readable and in some cases even faster SQL. The following combination of verbs now avoids a subquery if possible:"
+dbplyr,2,"• `summarise()` + `filter()` now translates to `HAVING` where possible (@​mgirlich, #877).","dbplyr now needs less subqueries resulting in shorter, more readable and in some cases even faster SQL. The following combination of verbs now avoids a subquery if possible:"
+dbplyr,2,"• Joins now don't use the table alias ""LHS"" and ""RHS"" unless necessary (@​mgirlich).",The generated SQL is now shorter and more readable:
+dbplyr,2,"• When using common table expressions the results of joins and set operations are now reused (@​mgirlich, #978).",The generated SQL is now shorter and more readable:
+dbplyr,2,"• When possible, dbplyr now uses `SELECT *` after a join instead of explicitly selecting every column (@​mgirlich, #898).",The generated SQL is now shorter and more readable:
+dbplyr,1,"A call to `sql()` is now translated differently. The `...` are now evaluated locally instead of being translated with `translate_sql()` (@​mgirlich, #952).\",NA
+dbplyr,1,"New translations for Teradata: `as.Date()`, `week()`, `quarter()`, `paste()`, `startsWith()`, `row_number()`, `weighted.mean()`, `lead()`, `lag()`, and `cumsum()` (@​overmar, #913).",NA
+dbplyr,2,"• string functions: `grepl()`, `paste()`, `paste0()`, `str_c()`, `str_locate()`, `str_detect()`, `str_replace()`, `str_replace_all()`, `str_remove()`, `str_remove_all()`, `str_trim()`, `str_squish()` and `str_flatten()` (@​fh-afrachioni, #860).",New translations for Snowflake:
+dbplyr,1,"Querying Oracle databases works again. Unfortunately, the fix requires every column to be explicitly selected again (@​mgirlich, #908).",NA
+dbplyr,1,"`semi_join()` and `anti_join()` work again for Spark (@​mgirlich, #915).",NA
+dbplyr,1,"`str_c()` is now translated to `||` in Oracle (@​mgirlich, #921).",NA
+dbplyr,1,"SQL formatting has been considerably improved with new wrapping and indenting. `show_query()` creates more readable queries by printing the keywords in blue (@​mgirlich, #644). When possible dbplyr now uses `SELECT *` instead of explicitly selecting every column (@​mgirlich).",NA
+dbplyr,1,"Added support for `rows_insert()`, `rows_append()`, `rows_update()`, `rows_patch()`, `rows_upsert()`, and `rows_delete()` (@​mgirlich, #736).",NA
+dbplyr,1,"Added `copy_inline()` as a `copy_to()` equivalent that does not need write access (@​mgirlich, #628).",NA
+dbplyr,1,"`remote_query()`, `show_query()`, `compute()` and `collect()` have an experimental `cte` argument. If `TRUE` the SQL query will use common table expressions instead of nested queries (@​mgirlich, #638).",NA
+dbplyr,1,"New `in_catalog()`, which works like `in_schema()`, but allows creation of table identifiers consisting of three components: catalog, schema, name (#806, @​krlmlr).",NA
+dbplyr,1,"When possible, dbplyr now uses `SELECT *` instead of explicitly selecting every column (@​mgirlich).",NA
+dbplyr,1,"New translation for `cut()` (@​mgirlich, #697).",NA
+dbplyr,2,"• `as.Date()` for Oracle (@​mgirlich, #661).",Improved translations for specific backends:
+dbplyr,2,"• `case_when()` with a final clause of the form `TRUE ~ ...` uses `ELSE ...` for SQLite (@​mgirlich, #754).",Improved translations for specific backends:
+dbplyr,2,"• `day()`, `week()`, `isoweek()`, and `isoyear()` for Postgres (@​mgirlich, #675).",Improved translations for specific backends:
+dbplyr,2,• `explain()` for ROracle (@​mgirlich).,Improved translations for specific backends:
+dbplyr,2,"• `fill()` for SQL Server (#651, @​mgirlich) and RPostgreSQL (@​mgirlich).",Improved translations for specific backends:
+dbplyr,2,"• `quantile()` for SQL Server (@​mgirlich, #620).",Improved translations for specific backends:
+dbplyr,2,"• `str_flatten()` for Redshift (@​hdplsa, #804)",Improved translations for specific backends:
+dbplyr,2,"• `slice_sample()` for MySQL/MariaDB and SQL Server (@​mgirlich, #617).",Improved translations for specific backends:
+dbplyr,2,"• `union()` for Hive (@​mgirlich, #663).",Improved translations for specific backends:
+dbplyr,1,"The backend function `dbplyr_fill0()` (used for databases that lack `IGNORE NULLS` support) now respects database specific translations (@​rsund, #753).",NA
+dbplyr,1,"Unary plus (e.g. `db %>% filter(x == +1)`) now works (@​mgirlich, #674).",NA
+dbplyr,1,"`is.na()`, `ifelse()`, `if_else()`, `case_when()`, and `if()` generate slightly more compact SQL (@​mgirlich, #738).",NA
+dbplyr,1,"`if_else()` now supports the `missing` argument (@​mgirlich, #641).",NA
+dbplyr,1,"`n()` now respects the window frame (@​mgirlich, #700).",NA
+dbplyr,1,"`quantile()` no longer errors when using the `na.rm` argument (@​mgirlich, #600).",NA
+dbplyr,1,"`remote_name()` now returns a name in more cases where it makes sense (@​mgirlich, #850).",NA
+dbplyr,1,"The partial evaluation code is now more aligned with `dtplyr`. This makes it easier to transfer bug fixes and new features from one package to the other. In this process the second argument of `partial_eval()` was changed to a lazy frame instead of a character vector of variables (@​mgirlich, #766). Partially evaluated expressions with infix operations are now correctly translated. For example `translate_sql(!!expr(2 - 1) * x)` now works (@​mgirlich, #634).",NA
+dbplyr,1,"New `pillar::tbl_format_header()` method for lazy tables: Printing a lazy table where all rows are displayed also shows the exact number of rows in the header. The threshold is controlled by `getOption(""pillar.print_min"")`, with a default of 10 (#796, @​krlmlr).",NA
+dbplyr,1,"`across()`, `if_any()` and `if_all()` now defaults to `.cols = everything()` (@​mgirlich, #760). If `.fns` is not provided `if_any()` and `if_all()` work like a parallel version of `any()`/`any()` (@​mgirlich, #734).",NA
+dbplyr,1,"`across()`, `if_any()`, and `if_all()` can now translate evaluated lists and functions (@​mgirlich, #796), and accept the name of a list of functions (@​mgirlich, #817).",NA
+dbplyr,1,"Multiple `across()` calls in `mutate()` and `transmute()` can now access freshly created variables (@​mgirlich, #802).",NA
+dbplyr,1,"`add_count()` now doesn't change the groups of the input (@​mgirlich, #614).",NA
+dbplyr,1,"`compute()` can now handle when `name` is named by unnaming it first (@​mgirlich, #623), and now works when `temporary = TRUE` for Oracle (@​mgirlich, #621).",NA
+dbplyr,1,"`distinct()` now supports `.keep_all = TRUE` (@​mgirlich, #756).",NA
+dbplyr,1,"`expand()` now works in DuckDB (@​mgirlich, #712).",NA
+dbplyr,1,"`explain()` passes `...` to methods (@​mgirlich, #783), and works for Redshift (@​mgirlich, #740).",NA
+dbplyr,1,"`filter()` throws an error if you supply a named argument (@​mgirlich, #764).",NA
+dbplyr,1,"Joins disambiguates columns that only differ in case (@​mgirlich, #702). New arguments `x_as` and `y_as` allow you to control the table alias used in SQL query (@​mgirlich, #637). Joins with `na_matches = ""na""` now work for DuckDB (@​mgirlich, #704).",NA
+dbplyr,1,"`mutate()` and `transmute()` use named windows if a window definition is used at least twice and the backend supports named windows (@​mgirlich, #624).",NA
+dbplyr,1,"`mutate()` now supports the arguments `.keep`, `.before`, and `.after` (@​mgirlich, #802).",NA
+dbplyr,1,"`nesting()` now supports the `.name_repair` argument (@​mgirlich, #654).",NA
+dbplyr,1,"`pivot_longer()` can now pivot a column named `name` (@​mgirlich, #692), can repair names (@​mgirlich, #694), and can work with multiple `names_from` columns (@​mgirlich, #693).",NA
+dbplyr,1,"`pivot_wider(values_fn = )` and `pivot_longer(values_transform = )` can now be formulas (@​mgirlich, #745).",NA
+dbplyr,1,"`pivot_wider()` now supports the arguments `names_vary`, `names_expand`, and `unused_fn` (@​mgirlich, #774).",NA
+dbplyr,1,"`remote_name()` now returns a name in more cases where it makes sense (@​mgirlich, #850).",NA
+dbplyr,1,"`ungroup()` removes variables in `...` from grouping (@​mgirlich, #689).",NA
+dbplyr,1,"`transmute()` now keeps grouping variables (@​mgirlich, #802).",NA
+dbplyr,1,New support for Snowflake (@​edgararuiz),NA
+dbplyr,1,"`compute()`, `sql_table_index()`, and `sql_query_wrap()` now work with schemas (@​mgirlich, #595).",NA
+dbplyr,1,"`group_by()` now ungroups when the dots argument is empty and `.add` is `FALSE` (@​mgirlich, #615).",NA
+dbplyr,1,"`sql_escape_date()` and `sql_escape_datetime` gain methods for MS Access (@​erikvona, #608).",NA
+dbplyr,1,"Thanks to @​mgirlich, dbplyr gains support for key verbs from tidyr: `pivot_longer()` (#532), `pivot_wider()` (#543), `expand()` (#538), `complete()` (#538), `replace_na()` (#538), `fill()` (#566).",NA
+dbplyr,1,@​mgirlich is now a dbplyr author in recognition of his significant and sustained contributions.,NA
+dbplyr,1,"`summarise()` now supports argument `.groups` (@​mgirlich, #584).",NA
+dbplyr,2,"• `as.integer()` and `as.integer64()` translations cast first to `NUMERIC` to avoid CASTing weirdness (@​DavidPatShuiFong, #496).",MS SQL:
+dbplyr,1,"Redshift: `lag()` and `lead()` lose the `default` parameter since it's not supported (@​hdplsa, #548).",NA
+dbplyr,1,"SQLite: custom translation of `full_join()` and `right_join()` (@​mgirlich, #536).",NA
+dbplyr,1,"`distinct()` now respects grouping (@​mgirlich, #535).",NA
+dbplyr,1,"`db_connection_describe()` no longer uses partial matching (@​mgirlich, #564).",NA
+dbplyr,1,"`select()` no longer relocates grouping variables to the front (@​mgirlich, #568). and informs when adding missing grouping variables (@​mgirlich, #559).",NA
+dbplyr,2,• `sub_str()` translation is more consistent in edge cases (@​ianmcook).,All backends:
+dbplyr,2,"• All `median()` (@​lorenzwalthert, #483), `pmin()`, `pmax()` (#479), `sd()` and `var()` functions have an `na.rm` argument that warns once when not `TRUE`. This makes them consistent with `mean()` and `sum()`.",All backends:
+dbplyr,1,"[blob](https://blob.tidyverse.org/) vectors can now be used with `!!` and `!!!` operators, for example in `filter()` (@​okhoma, #433)",NA
+dbplyr,1,"MS SQL translation does better a distinguishing between bit and boolean (#377, #318). `if` and `ifelse` once again generate `IIF`, creating simpler expressions. `as.*()` function uses `TRY_CAST()` instead of `CAST()` for version 11+ (2012+) (@​DavidPatShuiFong, #380).",NA
+dbplyr,1,"Oracle translation now depends on Oracle 12c, and uses a ""row-limiting"" clause for `head()`. It gains translations for `today()` and `now()`, and improved `as.Date()` translation (@​rlh1994, #267).",NA
+dbplyr,1,"PostgreSQL: new translations for lubridate period functions `years()`, `months()`, `days()`, and `floor_date()` (@​bkkkk, #333) and stringr functions `str_squish()`, `str_remove()`, and `str_remove_all()` (@​shosaco).",NA
+dbplyr,1,"Internally `DBI::dbExecute()` now uses `immediate = TRUE`; this improves support for session-scoped temporary tables in MS SQL (@​krlmlr, #438).",NA
+dbplyr,1,"Subqueries with `ORDER BY` use `TOP 9223372036854775807` instead of `TOP 100 PERCENT` on SQL Server for compatibility with Azure Data Warehouse (#337, @​alexkyllo).",NA
+dbplyr,1,"`escape()` now supports `blob` vectors using new `sql_escape_raw()` generic. It enables using [blob](https://blob.tidyverse.org/) variables in dplyr verbs, for example to filter nvarchar values by UTF-16 blobs (see https://github.com/r-dbi/DBI/issues/215#issuecomment-356376133). (@​okhoma, #433)",NA
+dbplyr,1,"Added `setOldClass()` calls for `""ident""` and `""ident_q""` classes for compatibility with dplyr 1.0.0 (#448, @​krlmlr).",NA
+dbplyr,1,"`semi_join()` and `anti_join()` now correctly support the `sql_on` argument (#443, @​krlmlr).",NA
+dbplyr,1,"The Date and POSIXt methods for `escape()` now use exported `sql_escape_date()` and `sql_escape_datetime()` generics to allow backend specific formatting of date and datetime literals. These are used to provide methods for Athena and Presto backends (@​OssiLehtinen, #384, #391).",NA
+dbplyr,1,"`first()`, `last()`, `nth()`, `lead()` and `lag()` now respect the `window_frame()` (@​krlmlr, #366).",NA
+dbplyr,1,"SQL server: new translations for `str_flatten()` (@​PauloJhonny, #405).",NA
+dbplyr,1,"Postgres: correct `str_detect()`, `str_replace()` and `str_replace_all()` translation (@​shosaco, #362).",NA
+dbplyr,1,"Window functions now translated correctly for Hive (#293, @​cderv).",NA
+dbplyr,1,"All `..._join()` functions gain an `sql_on` argument that allows specifying arbitrary join predicates in SQL code (#146, @​krlmlr).",NA
+dbplyr,1,"New translations for some lubridate functions: `today()`, `now()`, `year()`, `month()`, `day()`, `hour()`, `minute()`, `second()`, `quarter()`, `yday()` (@​colearendt, @​derekmorr). Also added new translation for `as.POSIXct()`.",NA
+dbplyr,1,"New translations for stringr functions: `str_c()`, `str_sub()`, `str_length()`, `str_to_upper()`, `str_to_lower()`, and `str_to_title()` (@​colearendt). Non-translated stringr functions throw a clear error.",NA
+dbplyr,1,"New translations for bitwise operations: `bitwNot()`, `bitwAnd()`, `bitwOr()`, `bitwXor()`, `bitwShiftL()`, and `bitwShiftR()`. Unlike the base R functions, the translations do not coerce arguments to integers (@​davidchall, #235).",NA
+dbplyr,1,"New translation for `median()` and `quantile()`. Works for all ANSI compliant databases (SQL Server, Postgres, MariaDB, Teradata) and has custom translations for Hive. Thanks to @​edavidaja for researching the SQL variants! (#169)",NA
+dbplyr,2,"• Translations also applied to connections via the odbc package (@​colearendt, #238)",MySQL/MariaDB
+dbplyr,2,"• Basic support for regular expressions via `str_detect()` and\ `str_replace_all()` (@​colearendt, #168).",MySQL/MariaDB
+dbplyr,2,"• New custom translation for `paste()` and `paste0()` (@​cderv, #221)",Oracle
+dbplyr,2,"• Basic support for regular expressions via `str_detect()` and\ `str_replace_all()` (@​colearendt, #168).",Postgres
+dbplyr,1,"table names generated by `random_table_name()` have the prefix ""dbplyr\_"", which makes it easier to find them programmatically (@​mattle24, #111)",NA
+dbplyr,1,"`sql_aggregate()` now takes an optional argument `f_r` for passing to `check_na_rm()`. This allows the warning to show the R function name rather than the SQL function name (@​sverchkov, #153).",NA
+dbplyr,1,"`sql_prefix()` no longer turns SQL functions into uppercase, allowing for correct translation of case-sensitive SQL functions (#181, @​mtoto).",NA
+dbplyr,1,"`x %in% y` is now translated to `FALSE` if `y` is empty (@​mgirlich, #160).",NA
+dbplyr,1,"`case_when` now translates with a ELSE clause if a formula of the form `TRUE~<RHS>` is provided . (@​cderv, #112)",NA
+dbplyr,2,"• Correct translation for `as.numeric()`/`as.double()` (@​chris-park, #171).",SQLite
+dbplyr,1,"`sql_render.op()` now correctly forwards the `con` argument (@​kevinykuo, #73).",NA
+dbplyr,2,• MS Access (#2946) (@​DavisVaughan),New translations for
+dbplyr,2,"• Oracle, via odbc or ROracle (#2928, #2732, @​edgararuiz)",New translations for
+dbplyr,1,"`in_schema()` should now work in more places, particularly in `copy_to()` (#3013, @​baileych)",NA
+dbplyr,1,"`select()` queries no longer alias column names unnecessarily (#2968, @​DavisVaughan).",NA
+dbplyr,2,• Better support for temporary tables (@​Hong-Revo),MS SQL
+dbplyr,1,SQLite: improved `na_if` translation (@​cwarden),NA
+dbplyr,1,PostgreSQL: translation for `grepl()` added (@​zozlak),NA
+dbplyr,1,"Oracle: changed VARVHAR to VARCHAR2 datatype (@​washcycle, #66)",NA
+dbplyr,1,Added SQL translations for Oracle (@​edgararuiz).,NA
+dbplyr,1,"Added custom `db_analyze_table()` for MS SQL, Oracle, Hive and Impala (@​edgararuiz)",NA
+dbplyr,1,Added support for `sd()` for aggregate and window functions (#2887) (@​edgararuiz),NA
+dbplyr,1,"dplyr has gained a basic SQL optimiser, which collapses certain nested SELECT queries into a single query (#1979). This will improve query execution performance for databases with less sophisticated query optimisers, and fixes certain problems with ordering and limits in subqueries (#1979). A big thanks goes to @​hhoeflin for figuring out this optimisation.",NA
+dbplyr,2,"• SQL joins always use the `ON ...` syntax, avoiding `USING ...` even for natural joins. Improved handling of tables with columns of the same name (#1997, @​javierluraschi). They now generate SQL more similar to what you'd write by hand, eliminating a layer or two of subqueries (#2333)",SQL joins have been improved:
+dbplyr,2,"• `right_join()` and `full_join()` now return results consistent with local data frame sources when there are records in the right table with no match in the left table. `right_join()` returns values of `by` columns from the right table. `full_join()` returns coalesced values of `by` columns from the left and right tables (#2578, @​ianmcook)",SQL joins have been improved:
+dbplyr,1,SQL translation for Microsoft SQL Server (@​edgararuiz),NA
+dbplyr,1,SQL translation for Apache Hive (@​edgararuiz),NA
+dbplyr,1,SQL translation for Apache Impala (@​edgararuiz),NA
+dbplyr,1,"`copy_to()` now succeeds for MySQL if a character column contains `NA` (#1975, #2256, #2263, #2381, @​demorenoc, @​eduardgrebe).",NA
+dplyr,1,"`storms` has been updated to include 2021 data and some missing storms that were omitted due to an error (@​steveharoz, #6320).",NA
+dplyr,1,"`nth()`, `first()`, and `last()` have gained an `na_rm` argument since they are summary functions (#6242, with contributions from @​tnederlof).",NA
+dplyr,1,"`slice()` helpers again produce output equivalent to `slice(.data, 0)` when the `n` or `prop` argument is 0, fixing a bug introduced in the previous version (@​eutwt, #6184).",NA
+dplyr,1,"`relocate()` now retains the last name change when a single column is renamed multiple times while it is being moved. This better matches the behavior of `rename()` (#6209, with help from @​eutwt).",NA
+dplyr,1,"New `rows_append()` which works like `rows_insert()` but ignores keys and allows you to insert arbitrary rows with a guarantee that the type of `x` won't change (#6249, thanks to @​krlmlr for the implementation and @​mgirlich for the idea).",NA
+dplyr,1,"`rows_insert()` gained a new `conflict` argument allowing you greater control over rows in `y` with keys that conflict with keys in `x`. A conflict arises if a key in `y` already exists in `x`. By default, a conflict results in an error, but you can now also `""ignore""` these `y` rows. This is very similar to the `ON CONFLICT DO NOTHING` command from SQL (#5588, with helpful additions from @​mgirlich and @​krlmlr).",NA
+dplyr,1,"`storms` data updated to 2020 (@​steveharoz, #5899).",NA
+dplyr,1,"Removed the `name` argument from the `compute()` generic (@​ianmcook, #5783).",NA
+dplyr,1,"`group_by(.drop = FALSE)` preserves ordered factors (@​brianrice2, #5545).",NA
+dplyr,1,"`inner_join()` gains a `keep` parameter for consistency with the other mutating joins (@​patrickbarks, #5581).",NA
+dplyr,1,"`cummean()` no longer has off-by-one indexing problem (@​cropgen, #5287).",NA
+dplyr,1,"`pull()` can now return named vectors by specifying an additional column name (@​ilarischeinin, #4102).",NA
+dplyr,1,"`group_modify()` works with additional arguments (@​billdenney and @​cderv, #4509)",NA
+dplyr,1,"`rbind_all()` and `rbind_list()` have been removed (@​bjungbogati, #4430).",NA
+dplyr,1,"`dr_dplyr()` has been removed as it is no longer needed (#4433, @​smwindecker).",NA
+dplyr,1,"`select_vars()`, `rename_vars()`, `select_var()`, `current_vars()` are now deprecated (@​perezp44, #4432)",NA
+dplyr,1,"New `vignette(""base"")` which describes how dplyr verbs relate to the base R equivalents (@​sastoudt, #4755)",NA
+dplyr,1,"New `vignette(""grouping"")` gives more details about how dplyr verbs change when applied to grouped data frames (#4779, @​MikeKSmith).",NA
+dplyr,1,"`starwars` dataset now does a better job of separating biological sex from gender identity. The previous `gender` column has been renamed to `sex`, since it actually describes the individual's biological sex. A new `gender` column encodes the actual gender identity using other information about the Star Wars universe (@​MeganBeckett, #4456).",NA
+dplyr,1,"`src_tbls()` accepts `...` arguments (#4485, @​ianmcook). This could be a breaking change for some dplyr backend packages that implement `src_tbls()`.",NA
+dplyr,1,"Updated `distinct_if()`, `distinct_at()` and `distinct_all()` to include `.keep_all` argument (@​beansrowning, #4343).",NA
+dplyr,1,"`group_indices()` now ignores empty groups by default for `data.frame`, which is consistent with the default of `group_by()` (@​yutannihilation, #4208).",NA
+dplyr,1,"The error `could not find function ""n""` or the warning `` Calling `n()` without importing or prefixing it is deprecated, use `dplyr::n()` `` indicates when functions like `n()`, `row_number()`, ... are not imported or prefixed. The easiest fix is to import dplyr with `import(dplyr)` in your `NAMESPACE` or `#' @​import dplyr` in a roxygen comment, alternatively such functions can be imported selectively as any other function with `importFrom(dplyr, n)` in the `NAMESPACE` or `#' @​importFrom dplyr n` in a roxygen comment. The third option is to prefix them, i.e. use `dplyr::n()`",NA
+dplyr,1,"`distinct()` respects the order of the variables provided (#3195, @​foo-bar-baz-qux) and handles the 0 rows and 0 columns special case (#2954).",NA
+dplyr,1,"Fix `ntile()` and `row_number()` ordering to use the locale-dependent ordering functions in R when dealing with character vectors, rather than always using the C-locale ordering function in C (#2792, @​foo-bar-baz-qux).",NA
+dplyr,1,"`combine()` returns `logical()` when all inputs are `NULL` (or when there are no inputs) (#3365, @​zeehio).",NA
+dplyr,1,"Add warning with explanation to `distinct()` if any of the selected columns are of type `list` (#3088, @​foo-bar-baz-qux), or when used on unknown columns (#2867, @​foo-bar-baz-qux).",NA
+dplyr,1,"Added an `.onDetach()` hook that allows for plyr to be loaded and attached without the warning message that says functions in dplyr will be masked, since dplyr is no longer attached (#3359, @​jwnorman).",NA
+dplyr,1,"`distinct()` now throws an error when used on unknown columns (#2867, @​foo-bar-baz-qux).",NA
+dplyr,1,"Fix undefined behaviour in `between()`, where `NA_REAL` were assigned instead of `NA_LOGICAL`. (#2855, @​zeehio)",NA
+dplyr,1,"New `add_count()` and `add_tally()` for adding an `n` column within groups (#2078, @​dgrtwo).",NA
+dplyr,1,"New `pull()` generic for extracting a single column either by name or position (either from the left or the right). Thanks to @​paulponcet for the idea (#2054). This verb is powered with the new `select_var()` internal helper, which is exported as well. It is like `select_vars()` but returns a single variable.",NA
+dplyr,1,"`as_tibble()` is re-exported from tibble. This is the recommend way to create tibbles from existing data frames. `tbl_df()` has been softly deprecated. `tribble()` is now imported from tibble (#2336, @​chrMongeau); this is now preferred to `frame_data()`.",NA
+dplyr,1,"Fix groups when joining grouped data frames with duplicate columns (#2330, #2334, @​davidkretch).",NA
+dplyr,1,"For selecting variables, the first selector decides if it's an inclusive selection (i.e., the initial column list is empty), or an exclusive selection (i.e., the initial column list contains all columns). This means that `select(mtcars, contains(""am""), contains(""FOO""), contains(""vs""))` now returns again both `am` and `vs` columns like in dplyr 0.4.3 (#2275, #2289, @​r2evans).",NA
+dplyr,1,"Breaking change: `bind_rows()` and `combine()` are more strict when coercing. Logical values are no longer coerced to integer and numeric. Date, POSIXct and other integer or double-based classes are no longer coerced to integer or double as there is chance of attributes or information being lost (#2209, @​zeehio).",NA
+dplyr,1,"`combine()` accepts `NA` values (#2203, @​zeehio)",NA
+dplyr,1,"`combine()` and `bind_rows()` with character and factor types now always warn about the coercion to character (#2317, @​zeehio)",NA
+dplyr,1,"`mutate` coerces results from grouped dataframes accepting combinable data types (such as `integer` and `numeric`). (#1892, @​zeehio)",NA
+dplyr,1,"`case_when()` supports `NA` values (#2000, @​tjmahr).",NA
+dplyr,1,"`lag()` enforces integer `n` (#2162, @​kevinushey).",NA
+dplyr,1,"`recode()` gains `.dots` argument to support passing replacements as list (#2110, @​jlegewie).",NA
+dplyr,1,"`grouped_df` and `rowwise` are registered officially as S3 classes. This makes them easier to use with S4 (#2276, @​joranE, #2789).",NA
+dplyr,1,"`distinct()` now only keeps the distinct variables. If you want to return all variables (using the first row for non-distinct values) use `.keep_all = TRUE` (#1110). For SQL sources, `.keep_all = FALSE` is implemented using `GROUP BY`, and `.keep_all = TRUE` raises an error (#1937, #1942, @​krlmlr). (The default behaviour of using all variables when none are specified remains - this note only applies if you select some variables).",NA
+dplyr,1,"`coalesce()` finds the first non-missing value from a set of vectors. (#1666, thanks to @​krlmlr for initial implementation).",NA
+dplyr,1,"A new family of functions replace `summarise_each()` and `mutate_each()` (which will thus be deprecated in a future release). `summarise_all()` and `mutate_all()` apply a function to all columns while `summarise_at()` and `mutate_at()` operate on a subset of columns. These columns are selected with either a character vector of columns names, a numeric vector of column positions, or a column specification with `select()` semantics generated by the new `columns()` helper. In addition, `summarise_if()` and `mutate_if()` take a predicate function or a logical vector (these verbs currently require local sources). All these functions can now take ordinary functions instead of a list of functions generated by `funs()` (though this is only useful for local sources). (#1845, @​lionel-)",NA
+dplyr,1,"`select_if()` lets you select columns with a predicate function. Only compatible with local sources. (#497, #1569, @​lionel-)",NA
+dplyr,1,"`all_equal()` shows better error message when comparing raw values or when types are incompatible and `convert = TRUE` (#1820, @​krlmlr).",NA
+dplyr,1,"`frame_data()` properly constructs rectangular tables (#1377, @​kevinushey), and supports list-cols.",NA
+dplyr,1,"new `as_data_frame.tbl_cube()` (#1563, @​krlmlr).",NA
+dplyr,1,"`tbl_cube`s are now constructed correctly from data frames, duplicate dimension values are detected, missing dimension values are filled with `NA`. The construction from data frames now guesses the measure variables by default, and allows specification of dimension and/or measure variables (#1568, @​krlmlr).",NA
+dplyr,1,"Swap order of `dim_names` and `met_name` arguments in `as.tbl_cube` (for `array`, `table` and `matrix`) for consistency with `tbl_cube` and `as.tbl_cube.data.frame`. Also, the `met_name` argument to `as.tbl_cube.table` now defaults to `""Freq""` for consistency with `as.data.frame.table` (@​krlmlr, #1374).",NA
+dplyr,1,"`as_data_frame()` on SQL sources now returns all rows (#1752, #1821, @​krlmlr).",NA
+dplyr,1,"`compute()` gets new parameters `indexes` and `unique_indexes` that make it easier to add indexes (#1499, @​krlmlr).",NA
+dplyr,1,"Avoiding segfaults in presence of `raw` columns (#1803, #1817, @​krlmlr).",NA
+dplyr,1,"`arrange()` fails gracefully on list columns (#1489) and matrices (#1870, #1945, @​krlmlr).",NA
+dplyr,1,"The progress bar in `do()` is now updated at most 20 times per second, avoiding unnecessary redraws (#1734, @​mkuhn)",NA
+dplyr,1,"`one_of()` tolerates unknown variables in `vars`, but warns (#1848, @​jennybc).",NA
+dplyr,1,"`bind_rows()` rejects `POSIXlt` columns (#1875, @​krlmlr).",NA
+dplyr,1,"Joins now use correct class when joining on `POSIXct` columns (#1582, @​joel23888), and consider time zones (#819). Joins handle a `by` that is empty (#1496), or has duplicates (#1192). Suffixes grow progressively to avoid creating repeated column names (#1460). Joins on string columns should be substantially faster (#1386). Extra attributes are ok if they are identical (#1636). Joins work correct when factor levels not equal (#1712, #1559). Anti- and semi-joins give correct result when by variable is a factor (#1571), but warn if factor levels are inconsistent (#2741). A clear error message is given for joins where an explicit `by` contains unavailable columns (#1928, #1932). Warnings about join column inconsistencies now contain the column names (#2728).",NA
+dplyr,1,"There were a number of fixes to enable joining of data frames that don't have the same encoding of column names (#1513), including working around bug 16885 regarding `match()` in R 3.3.0 (#1806, #1810, @​krlmlr).",NA
+dplyr,1,"`n_distinct()` uses multiple arguments for data frames (#1084), falls back to R evaluation when needed (#1657), reverting decision made in (#567). Passing no arguments gives an error (#1957, #1959, @​krlmlr).",NA
+dplyr,1,"`frame_data()` provides a means for constructing `data_frame`s using a simple row-wise language. (#1358, @​kevinushey)",NA
+dplyr,1,"`bind_rows()` gains a `.id` argument. When supplied, it creates a new column that gives the name of each data frame (#1337, @​lionel-).",NA
+dplyr,1,"`data_frame()` always produces a `tbl_df` (#1151, @​kevinushey)",NA
+dplyr,1,"`glimpse()` also prints out the number of variables in addition to the number of observations (@​ilarischeinin, #988).",NA
+dplyr,1,"The `Progress` bar used by `do()` now respects global option `dplyr.show_progress` (default is TRUE) so you can turn it off globally (@​jimhester #1264, #1226).",NA
+dplyr,1,"When "","" is already being used as the decimal point (`getOption(""OutDec"")`), use ""."" as the thousands separator when printing out formatted numbers (@​ilarischeinin, #988).",NA
+dplyr,1,"`db_query_fields.SQLiteConnection` uses `build_sql` rather than `paste0` (#926, @​NikNakk)",NA
+dplyr,1,"`n_distinct(x)` is translated to `COUNT(DISTINCT(x))` (@​skparkes, #873).",NA
+dplyr,1,"`do()` uses lazyeval to correctly evaluate its arguments in the correct environment (#744), and new `do_()` is the SE equivalent of `do()` (#718). You can modify grouped data in place: this is probably a bad idea but it's sometimes convenient (#737). `do()` on grouped data tables now passes in all columns (not all columns except grouping vars) (#735, thanks to @​kismsu). `do()` with database tables no longer potentially includes grouping variables twice (#673). Finally, `do()` gives more consistent outputs when there are no rows or no groups (#625).",NA
+dplyr,1,`data_frame()` now acts correctly if the first argument is a vector to be recycled. (#680 thanks @​jimhester),NA
+dplyr,1,"`data_frame()` by @​kevinushey is a nicer way of creating data frames. It never coerces column types (no more `stringsAsFactors = FALSE`!), never munges column names, and never adds row names. You can use previously defined columns to compute new columns (#376).",NA
+dplyr,1,"`%>%` is simply re-exported from magrittr, instead of creating a local copy (#496, thanks to @​jimhester)",NA
+dplyr,1,"`do()` now displays the progress bar only when used in interactive prompts and not when knitting (#428, @​jimhester).",NA
+dplyr,1,"`select()` gains `one_of()` selector: this allows you to select variables provided by a character vector (#396). It fails immediately if you give an empty pattern to `starts_with()`, `ends_with()`, `contains()` or `matches()` (#481, @​leondutoit). Fixed buglet in `select()` so that you can now create variables called `val` (#564).",NA
+dplyr,1,"`tally()` and `top_n()` work consistently: neither accidentally evaluates the the `wt` param. (#426, @​mnel)",NA
+dplyr,1,"Correct SQL generation for `paste()` when used with the collapse parameter targeting a Postgres database. (@​rbdixon, #1357)",NA
+dplyr,1,"`sample_n()` and `sample_frac()` methods for data.frames exported. (#405, @​alyst)",NA
+dplyr,1,Improved handling of hybrid evaluation re \$ and @​ (#645).,NA
+dplyr,1,"`summarise()` and `group_by()` now retain over-allocation when working with data.tables (#475, @​arunsrinivasan).",NA
+dplyr,1,"`as.tbl_cube()` gains a method for matrices (#359, @​paulstaab)",NA
+dplyr,1,"`compute()` gains `temporary` argument so you can control whether the results are temporary or permanent (#382, @​cpsievert)",NA
+dplyr,1,"Support for [MonetDB](http://www.monetdb.org) tables with `src_monetdb()` (#8, thanks to @​hannesmuehleisen).",NA
+dplyr,1,"`top_n()` returns `n` rows instead of `n - 1` (@​leondutoit, #367).",NA
+dtplyr,1,"`if_any()` and `if_all()` now work for a list of functions specified in the `.fns` argument(@​mgirlich, #335).",NA
+dtplyr,1,"In `semi_join()` the `y` table is again coerced to a lazy table if `copy = TRUE` (@​mgirlich, #322).",NA
+dtplyr,1,"`if_any()` and `if_all()` now work without specifying the `.fns` argument (@​mgirlich, #325).",NA
+dtplyr,2,"• `drop_na()` (@​markfairbanks, #194)",dtplyr gains translations for many more tidyr verbs:
+dtplyr,2,"• `complete()` (@​markfairbanks, #225)",dtplyr gains translations for many more tidyr verbs:
+dtplyr,2,"• `expand()` (@​markfairbanks, #225)",dtplyr gains translations for many more tidyr verbs:
+dtplyr,2,"• `fill()` (@​markfairbanks, #197)",dtplyr gains translations for many more tidyr verbs:
+dtplyr,2,"• `pivot_longer()` (@​markfairbanks, #204)",dtplyr gains translations for many more tidyr verbs:
+dtplyr,2,"• `replace_na()` (@​markfairbanks, #202)",dtplyr gains translations for many more tidyr verbs:
+dtplyr,2,"• `nest()` (@​mgirlich, #251)",dtplyr gains translations for many more tidyr verbs:
+dtplyr,2,"• `separate()` (@​markfairbanks, #269)",dtplyr gains translations for many more tidyr verbs:
+dtplyr,1,"`tally()` gains a translation (@​mgirlich, #201).",NA
+dtplyr,1,"`ifelse()` is mapped to `fifelse()` (@​markfairbanks, #220).",NA
+dtplyr,1,"`across()` defaults to `everything()` when `.cols` isn't provided (@​markfairbanks, #231), and handles named selections (@​eutwt #293). It ˜ow handles `.fns` arguments in more forms (@​eutwt #288):",NA
+dtplyr,2,"• Anonymous functions, such as `function(x) x + 1`","`across()` defaults to `everything()` when `.cols` isn't provided (@​markfairbanks, #231), and handles named selections (@​eutwt #293). It ˜ow handles `.fns` arguments in more forms (@​eutwt #288):"
+dtplyr,2,"• Formulas which don't require a function call, such as `~ 1`","`across()` defaults to `everything()` when `.cols` isn't provided (@​markfairbanks, #231), and handles named selections (@​eutwt #293). It ˜ow handles `.fns` arguments in more forms (@​eutwt #288):"
+dtplyr,1,"`arrange(dt, desc(col))` is translated to `dt[order(-col)]` in order to take advantage of data.table's fast order (@​markfairbanks, #227).",NA
+dtplyr,1,"`count()` applied to data.tables no longer breaks when dtplyr is loaded (@​mgirlich, #201).",NA
+dtplyr,1,"`filter()` errors for named input, e.g. `filter(dt, x = 1)` (@​mgirlich, #267) and works for negated logical columns (@​mgirlich, @​211).",NA
+dtplyr,1,"`group_by()` ungroups when no grouping variables are specified (@​mgirlich, #248), and supports inline mutation like `group_by(dt, y = x)` (@​mgirlich, #246).",NA
+dtplyr,1,"`if_else()` named arguments are translated to the correct arguments in `data.table::fifelse()` (@​markfairbanks, #234). `if_else()` supports `.data` and `.env` pronouns (@​markfairbanks, #220).",NA
+dtplyr,1,"`if_any()` and `if_all()` default to `everything()` when `.cols` isn't provided (@​eutwt, #294).",NA
+dtplyr,1,"`lazy_dt()` keeps groups (@​mgirlich, #206).",NA
+dtplyr,1,"`left_join()` produces the same column order as dplyr (@​markfairbanks, #139).",NA
+dtplyr,1,"`left_join()`, `right_join()`, `full_join()`, and `inner_join()` perform a cross join for `by = character()` (@​mgirlich, #242).",NA
+dtplyr,1,"`left_join()`, `right_join()`, and `inner_join()` are always translated to the `[.data.table` equivalent. For simple merges the translation gets a bit longer but thanks to the simpler code base it helps to better handle names in `by` and duplicated variables names produced in the data.table join (@​mgirlich, #222).",NA
+dtplyr,1,"`mutate()` and `transmute()` work when called without variables (@​mgirlich, #248).",NA
+dtplyr,1,`mutate()` gains new experimental arguments `.before` and `.after` that allow you to control where the new columns are placed (to match dplyr 1.0.0) (@​eutwt #291).,NA
+dtplyr,1,"`mutate()` can modify grouping columns (instead of creating another column with the same name) (@​mgirlich, #246).",NA
+dtplyr,1,"`tally()` and `count()` follow the dplyr convention of creating a unique name if the default output `name` (n) already exists (@​eutwt, #295).",NA
+dtplyr,1,"`pivot_wider()` names the columns correctly when `names_from` is a numeric column (@​mgirlich, #214).",NA
+dtplyr,1,"`pull()` supports the `name` argument (@​mgirlich, #263).",NA
+dtplyr,1,"`slice_*()` functions after `group_by()` are faster (@​mgirlich, #216).",NA
+dtplyr,1,"`slice_max()` works when ordering by a character column (@​mgirlich, #218).",NA
+dtplyr,1,"`summarise()` supports the `.groups` argument (@​mgirlich, #245).",NA
+dtplyr,1,"`summarise()`, `tally()`, and `count()` can change the value of a grouping variables (@​eutwt, #295).",NA
+dtplyr,1,"`transmute()` doesn't produce duplicate columns when assigning to the same variable (@​mgirlich, #249). It correctly flags grouping variables so they selected (@​mgirlich, #246).",NA
+dtplyr,1,"`ungroup()` removes variables in `...` from grouping (@​mgirlich, #253).",NA
+dtplyr,2,"• `relocate()` (@​smingerson, #162).",dtplyr has been bought up to compatibility with dplyr 1.0.0. This includes new translations for:
+dtplyr,1,"We have begun the process of adding translations for tidyr verbs beginning with `pivot_wider()` (@​markfairbanks, #189).",NA
+dtplyr,1,`filter()` on grouped data nows use a much faster translation using on `.I` rather than `.SD` (and requiring an intermediate assignment) (#176). Thanks to suggestion from @​myoung3 and @​ColeMiller1.,NA
+dtplyr,2,"• Anonymous functions are now preserved (@​smingerson, #155)",Translation of individual expressions:
+dtplyr,1,`as_tibble()` gains a `.name_repair` argument (@​markfairbanks).,NA
+dtplyr,1,"`rename()` now works without `data.table` attached, as intended (@​michaelchirico, #123).",NA
+dtplyr,1,"`ungroup()` now copies its input (@​christophsax, #54).",NA
+dtplyr,1,"`mutate()` preserves grouping (@​christophsax, #17).",NA
+dtplyr,1,"`if_else()` and `coalesce()` are mapped to data.table's `fifelse()` and `fcoalesce()` respectively (@​michaelchirico, #112).",NA
+dtplyr,1,"`inner_join()`, `left_join()`, `right_join()`, and `full_join()`: new `suffix` argument which allows you to control what suffix duplicated variable names receive, as introduced in dplyr 0.5 (#40, @​christophsax).",NA
+dtplyr,1,"Joins use extended `merge.data.table()` and the `on` argument, introduced in data.table 1.9.6. Avoids copy and allows joins by different keys (#20, #21, @​christophsax).",NA
+forcats,1,"`fct_lump_n()` no longer uses a partial argument name (@​malcolmbarrett, #276).",NA
+forcats,1,"`fct_c()`, `fct_collapse()` and `fct_recode()` are now explicitly documented as using [dynamic dots](https://rlang.r-lib.org/reference/dyn-dots.html) (@​labouz, #234).",NA
+forcats,1,"`fct_collapse()` now accepts a `other_level` argument, to allow a user-specified `Other` level (@​gtm19, #194). It now correctly collapses factors when `other_level` is not `NULL` (#172), and makes `""Other""` the last level (#202) (@​gtm19, #172 & #202)",NA
+forcats,1,"`fct_lump()` has been split up into three new functions: `fct_lump_prop()`, `fct_lump_n()`, and `fct_lump_lowfreq()`. (@​jonocarroll, #167, #142). All `fct_lump_()` functions check their inputs more carefully (@​robinson_es, #169)",NA
+forcats,1,"`fct_reorder2()` gains a helper function `first2()`, that sorts `.y` by the first value of `.x` (@​jtr13).",NA
+forcats,1,"`fct_collapse()` gains a `group_other` argument to allow you to group all un-named levels into `""Other""`. (#100, @​AmeliaMN)",NA
+forcats,1,"`fct_cross()` creates a new factor containing the combined levels from two or more input factors, similar to `base::interaction` (@​tslumley, #136)",NA
+forcats,1,"`fct_inseq()` reorders labels in numeric order, if possible (#145, @​kbodwin).",NA
+forcats,1,"`fct_lump_min()` preserves levels that appear at least `min` times (can also be used with the `w` weighted argument) (@​robinsones, #142).",NA
+forcats,1,"`fct_match()` performs validated matching, providing a safer alternative to `f %in% c(""x"", ""y"")` which silently returns `FALSE` if `""x""` or `""y""` are not levels of `f` (e.g. because of a typo) (#126, @​jonocarroll).",NA
+forcats,1,"`as_factor()` now has a numeric method. By default, orders factors in numeric order, unlike the other methods which default to order of appearance. (#145, @​kbodwin)",NA
+forcats,1,"`fct_count()` gains a parameter to also compute the proportion (@​zhiiiyang, #146).",NA
+forcats,1,"`fct_lump()` now does not change the label if no lumping occurs (@​zhiiiyang, #130).",NA
+forcats,1,"`fct_lump()` gains `w` argument (#70, @​wilkox) to weight value frequencies before lumping them together (#68).",NA
+forcats,1,"`fct_relabel()` now accepts objects coercible to functions by `rlang::as_function` (#91, @​alistaire47)",NA
+forcats,1,"`fct_relabel()` allows programmatic relabeling of levels (#50, @​krlmlr).",NA
+ggplot2,1,"The dot-dot notation (`..var..`) and `stat()`, which have been superseded by `after_stat()`, are now formally deprecated (@​yutannihilation, #3693).",NA
+ggplot2,1,"`geom_col()` and `geom_bar()` gain a new `just` argument. This is set to `0.5` by default; use `just = 0`/`just = 1` to place columns on the left/right of the axis breaks. (@​wurli, #4899)",NA
+ggplot2,1,"Fix a bug in `position_jitter()` where infinity values were dropped (@​javlon, #4790).",NA
+ggplot2,1,"`geom_linerange()` now respects the `na.rm` argument (#4927, @​thomasp85)",NA
+ggplot2,1,"Improve the support for `guide_axis()` on `coord_trans()` (@​yutannihilation, #3959)",NA
+ggplot2,1,"`geom_density()` and `stat_density()` now support `bounds` argument to estimate density with boundary correction (@​echasnovski, #4013).",NA
+ggplot2,1,"ggplot now checks during statistical transformations whether any data columns were dropped and warns about this. If stats intend to drop data columns they can declare them in the new field `dropped_aes`. (@​clauswilke, #3250)",NA
+ggplot2,1,"Added `stat_align()` to align data without common x-coordinates prior to stacking. This is now the default stat for `geom_area()` (@​thomasp85, #4850)",NA
+ggplot2,1,"Fix a bug in `stat_contour_filled()` where break value differences below a certain number of digits would cause the computations to fail (@​thomasp85, #4874)",NA
+ggplot2,1,"`stage()` now properly refers to the values without scale transformations for the stage of `after_stat`. If your code requires the scaled version of the values for some reason, you have to apply the same transformation by yourself, e.g. `sqrt()` for `scale_{x,y}_sqrt()` (@​yutannihilation and @​teunbrand, #4155).",NA
+ggplot2,1,"A `linewidth` aesthetic has been introduced and supersedes the `size` aesthetic for scaling the width of lines in line based geoms. `size` will remain functioning but deprecated for these geoms and it is recommended to update all code to reflect the new aesthetic (@​thomasp85, #3672)",NA
+ggplot2,1,"Secondary axis ticks are now positioned more precisely, removing small visual artefacts with alignment between grid and ticks (@​thomasp85, #3576)",NA
+ggplot2,1,"Improve `stat_function` documentation regarding `xlim` argument. (@​92amartins, #4474)",NA
+ggplot2,1,"`qplot()` is now formally deprecated (@​yutannihilation, #3956).",NA
+ggplot2,1,"Use `rlang::hash()` instead of `digest::digest()`. This update may lead to changes in the automatic sorting of legends. In order to enforce a specific legend order use the `order` argument in the guide. (@​thomasp85, #4458)",NA
+ggplot2,1,"Fix various issues with how `labels`, `breaks`, `limits`, and `show.limits` interact in the different binning guides (@​thomasp85, #4831)",NA
+ggplot2,1,"Automatic break calculation now squishes the scale limits to the domain of the transformation. This allows `scale_{x/y}_sqrt()` to find breaks at 0\ when appropriate (@​teunbrand, #980).",NA
+ggplot2,1,"Using multiple modified aesthetics correctly will no longer trigger warnings. If used incorrectly, the warning will now report the duplicated aesthetic instead of `NA` (@​teunbrand, #4707).",NA
+ggplot2,1,"`...` supports `rlang::list2` dynamic dots in all public functions. (@​mone27, #4764)",NA
+ggplot2,1,"`theme()` now has a `strip.clip` argument, that can be set to `""off""` to prevent the clipping of strip text and background borders (@​teunbrand, #4118)",NA
+ggplot2,1,`aes()` now supports the `!!!` operator in its first two arguments (#2675). Thanks to @​yutannihilation and @​teunbrand for draft implementations.,NA
+ggplot2,1,"Require rlang \>= 1.0.0 (@​billybarc, #4797)",NA
+ggplot2,1,"`geom_violin()` no longer issues ""collapsing to unique 'x' values"" warning (@​bersbersbers, #4455)",NA
+ggplot2,1,"`annotate()` now documents unsupported geoms (`geom_abline()`, `geom_hline()` and `geom_vline()`), and warns when they are requested (@​mikmart, #4719)",NA
+ggplot2,1,"`presidential` dataset now includes Trump's presidency (@​bkmgit, #4703).",NA
+ggplot2,1,"`position_stack()` now works fully with `geom_text()` (@​thomasp85, #4367)",NA
+ggplot2,1,"`geom_tile()` now correctly recognises missing data in `xmin`, `xmax`, `ymin`, and `ymax` (@​thomasp85 and @​sigmapi, #4495)",NA
+ggplot2,1,"`geom_hex()` will now use the binwidth from `stat_bin_hex()` if present, instead of deriving it (@​thomasp85, #4580)",NA
+ggplot2,1,`geom_hex()` now works on non-linear coordinate systems (@​thomasp85),NA
+ggplot2,1,"Fixed a bug throwing errors when trying to render an empty plot with secondary axes (@​thomasp85, #4509)",NA
+ggplot2,1,"Axes are now added correctly in `facet_wrap()` when `as.table = FALSE` (@​thomasp85, #4553)",NA
+ggplot2,1,"Better compatibility of custom device functions in `ggsave()` (@​thomasp85, #4539)",NA
+ggplot2,1,"Binning scales are now more resilient to calculated limits that ends up being `NaN` after transformations (@​thomasp85, #4510)",NA
+ggplot2,1,"Strip padding in `facet_grid()` is now only in effect if `strip.placement = ""outside""` *and* an axis is present between the strip and the panel (@​thomasp85, #4610)",NA
+ggplot2,1,"Aesthetics of length 1 are now recycled to 0 if the length of the data is 0 (@​thomasp85, #4588)",NA
+ggplot2,1,"Setting `size = NA` will no longer cause `guide_legend()` to error (@​thomasp85, #4559)",NA
+ggplot2,1,"Setting `stroke` to `NA` in `geom_point()` will no longer impair the sizing of the points (@​thomasp85, #4624)",NA
+ggplot2,1,"`stat_bin_2d()` now correctly recognises the `weight` aesthetic (@​thomasp85, #4646)",NA
+ggplot2,1,"All geoms now have consistent exposure of linejoin and lineend parameters, and the guide keys will now respect these settings (@​thomasp85, #4653)",NA
+ggplot2,1,"`geom_sf()` now respects `arrow` parameter for lines (@​jakeruss, #4659)",NA
+ggplot2,1,"Updated documentation for `print.ggplot` to reflect that it returns the original plot, not the result of `ggplot_build()`. (@​r2evans, #4390)",NA
+ggplot2,1,"`scale_*_manual()` no longer displays extra legend keys, or changes their order, when a named `values` argument has more items than the data. To display all `values` on the legend instead, use `scale_*_manual(values = vals, limits = names(vals))`. (@​teunbrand, @​banfai, #4511, #4534)",NA
+ggplot2,1,"`geom_contour()` now accepts a function in the `breaks` argument (@​eliocamp, #4652).",NA
+ggplot2,1,"VISUAL CHANGE: `scale_*_viridis_b()` now uses the full range of the viridis scales (@​gregleleu, #4737)",NA
+ggplot2,1,"Updated documentation for `geom_contour()` to correctly reflect argument precedence between `bins` and `binwidth`. (@​eliocamp, #4651)",NA
+ggplot2,1,The `ticks.linewidth` and `frame.linewidth` parameters of `guide_colourbar()` are now multiplied with `.pt` like elsewhere in ggplot2. It can cause visual changes when these arguments are not the defaults and these changes can be restored to their previous behaviour by adding `/ .pt` (@​teunbrand #4314).,NA
+ggplot2,1,"Dots in `geom_dotplot()` are now correctly aligned to the baseline when `stackratio != 1` and `stackdir != ""up""` (@​mjskay, #4614)",NA
+ggplot2,1,"Key glyphs for `geom_boxplot()`, `geom_crossbar()`, `geom_pointrange()`, and `geom_linerange()` are now orientation-aware (@​mjskay, #4732)",NA
+ggplot2,1,"Updated documentation for `geom_smooth()` to more clearly describe effects of the `fullrange` parameter (@​thoolihan, #4399).",NA
+ggplot2,1,"Fix an issue where `coord_sf()` was reporting that it is non-linear even when data is provided in projected coordinates (@​clauswilke,",NA
+ggplot2,1,"Alt-text can now be added to a plot using the `alt` label, i.e `+ labs(alt = ...)`. Currently this alt text is not automatically propagated, but we plan to integrate into Shiny, RMarkdown, and other tools in the future. (@​thomasp85, #4477)",NA
+ggplot2,1,"Add support for the BrailleR package for creating descriptions of the plot when rendered (@​thomasp85, #4459)",NA
+ggplot2,1,"`coord_sf()` now has an argument `default_crs` that specifies the coordinate reference system (CRS) for non-sf layers and scale/coord limits. This argument defaults to `NULL`, which means non-sf layers are assumed to be in projected coordinates, as in prior ggplot2 versions. Setting `default_crs = sf::st_crs(4326)` provides a simple way to interpret x and y positions as longitude and latitude, regardless of the CRS used by `coord_sf()`. Authors of extension packages implementing `stat_sf()`-like functionality are encouraged to look at the source code of `stat_sf()`'s `compute_group()` function to see how to provide scale-limit hints to `coord_sf()` (@​clauswilke, #3659).",NA
+ggplot2,1,"`ggsave()` now uses ragg to render raster output if ragg is available. It also handles custom devices that sets a default unit (e.g. `ragg::agg_png`) correctly (@​thomasp85, #4388)",NA
+ggplot2,1,"`ggsave()` now returns the saved file location invisibly (#3379, @​eliocamp). Note that, as a side effect, an unofficial hack `<ggplot object> + ggsave()` no longer works (#4513).",NA
+ggplot2,1,"The scale arguments `limits`, `breaks`, `minor_breaks`, `labels`, `rescaler` and `oob` now accept purrr style lambda notation (@​teunbrand, #4427). The same is true for `as_labeller()` (and therefore also `labeller()`) (@​netique, #4188).",NA
+ggplot2,1,"Manual scales now allow named vectors passed to `values` to contain fewer elements than existing in the data. Elements not present in values will be set to `NA` (@​thomasp85, #3451)",NA
+ggplot2,1,"Date and datetime position scales support out-of-bounds (oob) arguments to control how limits affect data outside those limits (@​teunbrand, #4199).",NA
+ggplot2,1,"Fix a bug that `after_stat()` and `after_scale()` cannot refer to aesthetics if it's specified in the plot-global mapping (@​yutannihilation, #4260).",NA
+ggplot2,1,"Fix bug in `annotate_logticks()` that would cause an error when used together with `coord_flip()` (@​thomasp85, #3954)",NA
+ggplot2,1,"Fix a bug in `geom_abline()` that resulted in `intercept` not being subjected to the transformation of the y scale (@​thomasp85, #3741)",NA
+ggplot2,1,"Extent the range of the line created by `geom_abline()` so that line ending is not visible for large linewidths (@​thomasp85, #4024)",NA
+ggplot2,1,"Fix bug in `geom_dotplot()` where dots would be positioned wrong with `stackgroups = TRUE` (@​thomasp85, #1745)",NA
+ggplot2,1,"Fix calculation of confidence interval for locfit smoothing in `geom_smooth()` (@​topepo, #3806)",NA
+ggplot2,1,"Fix bug in `geom_text()` where `""outward""` and `""inward""` justification for some `angle` values was reversed (@​aphalo, #4169, #4447)",NA
+ggplot2,1,"`ggsave()` now sets the default background to match the fill value of the `plot.background` theme element (@​karawoo, #4057)",NA
+ggplot2,1,"It is now deprecated to specify `guides(<scale> = FALSE)` or `scale_*(guide = FALSE)` to remove a guide. Please use `guides(<scale> = ""none"")` or `scale_*(guide = ""none"")` instead (@​yutannihilation, #4097)",NA
+ggplot2,1,"Fix a bug in `guide_bins()` where keys would disappear if the guide was reversed (@​thomasp85, #4210)",NA
+ggplot2,1,"Fix bug in `guide_coloursteps()` that would repeat the terminal bins if the breaks coincided with the limits of the scale (@​thomasp85, #4019)",NA
+ggplot2,1,"Make sure that default labels from default mappings doesn't overwrite default labels from explicit mappings (@​thomasp85, #2406)",NA
+ggplot2,1,"Fix bug in `labeller()` where parsing was turned off if `.multiline = FALSE` (@​thomasp85, #4084)",NA
+ggplot2,1,"Make sure `label_bquote()` has access to the calling environment when evaluating the labels (@​thomasp85, #4141)",NA
+ggplot2,1,"Fix a bug in the layer implementation that introduced a new state after the first render which could lead to a different look when rendered the second time (@​thomasp85, #4204)",NA
+ggplot2,1,"Fix a bug in legend justification where justification was lost of the legend dimensions exceeded the available size (@​thomasp85, #3635)",NA
+ggplot2,1,"Fix a bug in `position_dodge2()` where `NA` values in thee data would cause an error (@​thomasp85, #2905)",NA
+ggplot2,1,"Make sure `position_jitter()` creates the same jittering independent of whether it is called by name or with constructor (@​thomasp85, #2507)",NA
+ggplot2,1,"Fix a bug in `position_jitter()` where different jitters would be applied to different position aesthetics of the same axis (@​thomasp85, #2941)",NA
+ggplot2,1,"Fix a bug in `qplot()` when supplying `c(NA, NA)` as axis limits (@​thomasp85, #4027)",NA
+ggplot2,1,"Remove cross-inheritance of default discrete colour/fill scales and check the type and aesthetic of function output if `type` is a function (@​thomasp85, #4149)",NA
+ggplot2,1,"Fix bug in `scale_[x|y]_date()` where custom breaks functions that resulted in fracional dates would get misaligned (@​thomasp85, #3965)",NA
+ggplot2,1,"Fix bug in `scale_[x|y]_datetime()` where a specified timezone would be ignored by the scale (@​thomasp85, #4007)",NA
+ggplot2,1,"Fix issue in `sec_axis()` that would throw warnings in the absence of any secondary breaks (@​thomasp85, #4368)",NA
+ggplot2,1,"`stat_count()` now computes width based on the full dataset instead of per group (@​thomasp85, #2047)",NA
+ggplot2,1,"Extended `stat_ecdf()` to calculate the cdf from either x or y instead from y only (@​jgjl, #4005)",NA
+ggplot2,1,"Fix a bug in `stat_summary_bin()` where one more than the requested number of bins would be created (@​thomasp85, #3824)",NA
+ggplot2,1,"Only drop groups in `stat_ydensity()` when there are fewer than two data points and throw a warning (@​andrewwbutler, #4111).",NA
+ggplot2,1,"Fixed a bug in strip assembly when theme has `strip.text = element_blank()` and plots are faceted with multi-layered strips (@​teunbrand, #4384).",NA
+ggplot2,1,"Using `theme(aspect.ratio = ...)` together with free space in `facet_grid()` now crrectly throws an error (@​thomasp85, #3834)",NA
+ggplot2,1,"Fixed a bug in `labeller()` so that `.default` is passed to `as_labeller()` when labellers are specified by naming faceting variables. (@​waltersom, #4031)",NA
+ggplot2,1,"Updated style for example code (@​rjake, #4092)",NA
+ggplot2,1,"Improved error with hint when piping a `ggplot` object into a facet function (#4379, @​mitchelloharawild).",NA
+ggplot2,1,"Fixed a bug that `guide_bins()` mistakenly ignore `override.aes` argument (@​yutannihilation, #4085).",NA
+ggplot2,1,"Added an `outside` option to `annotation_logticks()` that places tick marks outside of the plot bounds. (#3783, @​kbodwin)",NA
+ggplot2,1,"`annotation_raster()` adds support for native rasters. For large rasters, native rasters render significantly faster than arrays (@​kent37, #3388)",NA
+ggplot2,1,"Facet strips now have dedicated position-dependent theme elements (`strip.text.x.top`, `strip.text.x.bottom`, `strip.text.y.left`, `strip.text.y.right`) that inherit from `strip.text.x` and `strip.text.y`, respectively. As a consequence, some theme stylings now need to be applied to the position-dependent elements rather than to the parent elements. This change was already introduced in ggplot2 3.3.0 but not listed in the changelog. (@​thomasp85, #3683)",NA
+ggplot2,1,"Facets now handle layers containing no data (@​yutannihilation, #3853).",NA
+ggplot2,1,"A newly added geom `geom_density_2d_filled()` and associated stat `stat_density_2d_filled()` can draw filled density contours (@​clauswilke, #3846).",NA
+ggplot2,1,"A newly added `geom_function()` is now recommended to use in conjunction with/instead of `stat_function()`. In addition, `stat_function()` now works with transformed y axes, e.g. `scale_y_log10()`, and in plots containing no other data or layers (@​clauswilke, #3611, #3905, #3983).",NA
+ggplot2,1,"Fixed a bug in `geom_sf()` that caused problems with legend-type autodetection (@​clauswilke, #3963).",NA
+ggplot2,1,"Support graphics devices that use the `file` argument instead of `fileneame` in `ggsave()` (@​bwiernik, #3810)",NA
+ggplot2,1,"Default discrete color scales are now configurable through the `options()` of `ggplot2.discrete.colour` and `ggplot2.discrete.fill`. When set to a character vector of colour codes (or list of character vectors) with sufficient length, these colours are used for the default scale. See `help(scale_colour_discrete)` for more details and examples (@​cpsievert, #3833).",NA
+ggplot2,1,"Default continuous colour scales (i.e., the `options()` `ggplot2.continuous.colour` and `ggplot2.continuous.fill`, which inform the `type` argument of `scale_fill_continuous()` and `scale_colour_continuous()`) now accept a function, which allows more control over these default `continuous_scale()`s (@​cpsievert, #3827).",NA
+ggplot2,1,"A bug was fixed in `stat_contour()` when calculating breaks based on the `bins` argument (@​clauswilke, #3879, #4004).",NA
+ggplot2,1,"Data columns can now contain `Vector` S4 objects, which are widely used in the Bioconductor project. (@​teunbrand, #3837)",NA
+ggplot2,1,"`element_text()` now issues a warning when vectorized arguments are provided, as in `colour = c(""red"", ""green"", ""blue"")`. Such use is discouraged and not officially supported (@​clauswilke, #3492).",NA
+ggplot2,1,"Changed `theme_grey()` setting for legend key so that it creates no border (`NA`) rather than drawing a white one. (@​annennenne, #3180)",NA
+ggplot2,1,"`geom_ribbon()` now draws separate lines for the upper and lower intervals if `colour` is mapped. Similarly, `geom_area()` and `geom_density()` now draw the upper lines only in the same case by default. If you want old-style full stroking, use `outline.type = ""full""` (@​yutannihilation, #3503 / @​thomasp85, #3708).",NA
+ggplot2,1,"The evaluation time of aesthetics can now be controlled to a finer degree. `after_stat()` supersedes the use of `stat()` and `..var..`-notation, and is joined by `after_scale()` to allow for mapping to scaled aesthetic values. Remapping of the same aesthetic is now supported with `stage()`, so you can map a data variable to a stat aesthetic, and remap the same aesthetic to something else after statistical transformation (@​thomasp85, #3534)",NA
+ggplot2,1,"All `coord_*()` functions with `xlim` and `ylim` arguments now accept vectors with `NA` as a placeholder for the minimum or maximum value (e.g., `ylim = c(0, NA)` would zoom the y-axis from 0 to the maximum value observed in the data). This mimics the behaviour of the `limits` argument in continuous scale functions (@​paleolimbot, #2907).",NA
+ggplot2,1,"Allowed reversing of discrete scales by re-writing `get_limits()` (@​AnneLyng, #3115)",NA
+ggplot2,1,"All geoms and stats that had a direction (i.e. where the x and y axes had different interpretation), can now freely choose their direction, instead of relying on `coord_flip()`. The direction is deduced from the aesthetic mapping, but can also be specified directly with the new `orientation` argument (@​thomasp85, #3506).",NA
+ggplot2,1,"Position guides can now be customized using the new `guide_axis()`, which can be passed to position `scale_*()` functions or via `guides()`. The new axis guide (`guide_axis()`) comes with arguments `check.overlap` (automatic removal of overlapping labels), `angle` (easy rotation of axis labels), and `n.dodge` (dodge labels into multiple rows/columns) (@​paleolimbot, #3322).",NA
+ggplot2,1,"A new scale type has been added, that allows binning of aesthetics at the scale level. It has versions for both position and non-position aesthetics and comes with two new guides (`guide_bins` and `guide_coloursteps`) (@​thomasp85, #3096)",NA
+ggplot2,1,"`scale_x_continuous()` and `scale_y_continuous()` gains an `n.breaks` argument guiding the number of automatic generated breaks (@​thomasp85, #3102)",NA
+ggplot2,1,"Added `stat_contour_filled()` and `geom_contour_filled()`, which compute and draw filled contours of gridded data (@​paleolimbot, #3044). `geom_contour()` and `stat_contour()` now use the isoband package to compute contour lines. The `complete` parameter (which was undocumented and has been unused for at least four years) was removed (@​paleolimbot, #3044).",NA
+ggplot2,1,"Themes have gained two new parameters, `plot.title.position` and `plot.caption.position`, that can be used to customize how plot title/subtitle and plot caption are positioned relative to the overall plot (@​clauswilke, #3252).",NA
+ggplot2,1,"`Geom` now gains a `setup_params()` method in line with the other ggproto classes (@​thomasp85, #3509)",NA
+ggplot2,1,"The newly added function `register_theme_elements()` now allows developers of extension packages to define their own new theme elements and place them into the ggplot2 element tree (@​clauswilke, #2540).",NA
+ggplot2,1,"`coord_trans()` now draws second axes and accepts `xlim`, `ylim`, and `expand` arguments to bring it up to feature parity with `coord_cartesian()`. The `xtrans` and `ytrans` arguments that were deprecated in version 1.0.1 in favour of `x` and `y` were removed (@​paleolimbot, #2990).",NA
+ggplot2,1,"`coord_trans()` now calculates breaks using the expanded range (previously these were calculated using the unexpanded range, which resulted in differences between plots made with `coord_trans()` and those made with `coord_cartesian()`). The expansion for discrete axes in `coord_trans()` was also updated such that it behaves identically to that in `coord_cartesian()` (@​paleolimbot, #3338).",NA
+ggplot2,1,`expand_scale()` was deprecated in favour of `expansion()` for setting the `expand` argument of `x` and `y` scales (@​paleolimbot).,NA
+ggplot2,1,"Fix a bug in `geom_raster()` that squeezed the image when it went outside scale limits (#3539, @​thomasp85)",NA
+ggplot2,1,"`geom_sf()` now determines the legend type automatically (@​microly, #3646).",NA
+ggplot2,1,"`geom_sf()` now removes rows that can't be plotted due to `NA` aesthetics (#3546, @​thomasp85)",NA
+ggplot2,1,"`geom_sf()` now applies alpha to linestring geometries (#3589, @​yutannihilation).",NA
+ggplot2,1,"`gg_dep()` was deprecated (@​perezp44, #3382).",NA
+ggplot2,1,"Added function `ggplot_add.by()` for lists created with `by()`, allowing such lists to be added to ggplot objects (#2734, @​Maschette)",NA
+ggplot2,1,"Increase the default `nbin` of `guide_colourbar()` to place the ticks more precisely (#3508, @​yutannihilation).",NA
+ggplot2,1,"`manual_scale()` now matches `values` with the order of `breaks` whenever `values` is an unnamed vector. Previously, unnamed `values` would match with the limits of the scale and ignore the order of any `breaks` provided. Note that this may change the appearance of plots that previously relied on the unordered behaviour (#2429, @​idno0001).",NA
+ggplot2,1,"`scale_manual_*(limits = ...)` now actually limits the scale (#3262, @​yutannihilation).",NA
+ggplot2,1,"Fix a bug when `show.legend` is a named logical vector (#3461, @​yutannihilation).",NA
+ggplot2,1,"Added weight aesthetic option to `stat_density()` and made scaling of weights the default (@​annennenne, #2902)",NA
+ggplot2,1,"`stat_density2d()` can now take an `adjust` parameter to scale the default bandwidth. (#2860, @​haleyjeppson)",NA
+ggplot2,1,"`stat_smooth()` uses `REML` by default, if `method = ""gam""` and `gam`'s method is not specified (@​ikosmidis, #2630).",NA
+ggplot2,1,"stacking text when calculating the labels and the y axis with `stat_summary()` now works (@​ikosmidis, #2709)",NA
+ggplot2,1,"`stat_summary()` and related functions now support rlang-style lambda functions (#3568, @​dkahle).",NA
+ggplot2,1,"Addition of partial themes to plots has been made more predictable; stepwise addition of individual partial themes is now equivalent to addition of multple theme elements at once (@​clauswilke, #3039).",NA
+ggplot2,1,"Facets now don't fail even when some variable in the spec are not available in all layers (@​yutannihilation, #2963).",NA
+ggplot2,1,"`geom_polygon()` can now draw polygons with holes using the new `subgroup` aesthetic. This functionality requires R 3.6.0 (@​thomasp85, #3128)",NA
+ggplot2,1,"Aesthetic mappings now accept functions that return `NULL` (@​yutannihilation, #2997).",NA
+ggplot2,1,"`stat_function()` now accepts rlang/purrr style anonymous functions for the `fun` parameter (@​dkahle, #3159).",NA
+ggplot2,1,"`geom_rug()` gains an ""outside"" option to allow for moving the rug tassels to outside the plot area (@​njtierney, #3085) and a `length` option to allow for changing the length of the rug lines (@​daniel-wells, #3109).",NA
+ggplot2,1,"All geoms now take a `key_glyph` paramter that allows users to customize how legend keys are drawn (@​clauswilke, #3145). In addition, a new key glyph `timeseries` is provided to draw nice legends for time series (@​mitchelloharawild, #3145).",NA
+ggplot2,1,"Layers now have a new member function `setup_layer()` which is called at the very beginning of the plot building process and which has access to the original input data and the plot object being built. This function allows the creation of custom layers that autogenerate aesthetic mappings based on the input data or that filter the input data in some form. For the time being, this feature is not exported, but it has enabled the development of a new layer type, `layer_sf()` (see next item). Other special-purpose layer types may be added in the future (@​clauswilke, #2872).",NA
+ggplot2,1,"A new layer type `layer_sf()` can auto-detect and auto-map sf geometry columns in the data. It should be used by extension developers who are writing new sf-based geoms or stats (@​clauswilke, #3232).",NA
+ggplot2,1,"`x0` and `y0` are now recognized positional aesthetics so they will get scaled if used in extension geoms and stats (@​thomasp85, #3168)",NA
+ggplot2,1,"Continuous scale limits now accept functions which accept the default limits and return adjusted limits. This makes it possible to write a function that e.g. ensures the limits are always a multiple of 100, regardless of the data (@​econandrew, #2307).",NA
+ggplot2,1,"`cut_width()` now accepts `...` to pass further arguments to `base::cut.default()` like `cut_number()` and `cut_interval()` already did (@​cderv, #3055)",NA
+ggplot2,1,"`coord_map()` now can have axes on the top and right (@​karawoo, #3042).",NA
+ggplot2,1,"`coord_polar()` now correctly rescales the secondary axis (@​linzi-sg, #3278)",NA
+ggplot2,1,"`coord_sf()`, `coord_map()`, and `coord_polar()` now squash `-Inf` and `Inf` into the min and max of the plot (@​yutannihilation, #2972).",NA
+ggplot2,1,"`coord_sf()` graticule lines are now drawn in the same thickness as panel grid lines in `coord_cartesian()`, and seting panel grid lines to `element_blank()` now also works in `coord_sf()` (@​clauswilke, #2991, #2525).",NA
+ggplot2,1,"`element_line()` now fills closed arrows (@​yutannihilation, #2924).",NA
+ggplot2,1,"Facet strips on the left side of plots now have clipping turned on, preventing text from running out of the strip and borders from looking thicker than for other strips (@​karawoo, #2772 and #3061).",NA
+ggplot2,1,"ggplot2 now works in Turkish locale (@​yutannihilation, #3011).",NA
+ggplot2,1,"Clearer error messages for inappropriate aesthetics (@​clairemcwhite, #3060).",NA
+ggplot2,1,"ggplot2 no longer attaches any external packages when using functions that depend on packages that are suggested but not imported by ggplot2. The affected functions include `geom_hex()`, `stat_binhex()`, `stat_summary_hex()`, `geom_quantile()`, `stat_quantile()`, and `map_data()` (@​clauswilke, #3126).",NA
+ggplot2,1,"`geom_area()` and `geom_ribbon()` now sort the data along the x-axis in the `setup_data()` method rather than as part of `draw_group()` (@​thomasp85, #3023)",NA
+ggplot2,1,"`geom_hline()`, `geom_vline()`, and `geom_abline()` now throw a warning if the user supplies both an `xintercept`, `yintercept`, or `slope` value and a mapping (@​RichardJActon, #2950).",NA
+ggplot2,1,"`geom_rug()` now works with `coord_flip()` (@​has2k1, #2987).",NA
+ggplot2,1,"`geom_violin()` no longer throws an error when quantile lines fall outside the violin polygon (@​thomasp85, #3254).",NA
+ggplot2,1,"`guide_legend()` and `guide_colorbar()` now use appropriate spacing between legend key glyphs and legend text even if the legend title is missing (@​clauswilke, #2943).",NA
+ggplot2,1,"Default labels are now generated more consistently; e.g., symbols no longer get backticks, and long expressions are abbreviated with `...` (@​yutannihilation, #2981).",NA
+ggplot2,1,"All-`Inf` layers are now ignored for picking the scale (@​yutannihilation, #3184).",NA
+ggplot2,1,"Diverging Brewer colour palette now use the correct mid-point colour (@​dariyasydykova, #3072).",NA
+ggplot2,1,"`scale_color_continuous()` now points to `scale_colour_continuous()` so that it will handle `type = ""viridis""` as the documentation states (@​hlendway, #3079).",NA
+ggplot2,1,"`scale_continuous` will now draw axis line even if the length of breaks is 0 (@​thomasp85, #3257)",NA
+ggplot2,1,`stat_bin()` will now error when the number of bins exceeds 1e6 to avoid accidentally freezing the user session (@​thomasp85).,NA
+ggplot2,1,"`sec_axis()` now places ticks accurately when using nonlinear transformations (@​dpseidel, #2978).",NA
+ggplot2,1,"`facet_wrap()` and `facet_grid()` now automatically remove NULL from facet specs, and accept empty specs (@​yutannihilation, #3070, #2986).",NA
+ggplot2,1,`stat_bin()` now handles data with only one unique value (@​yutannihilation #3047).,NA
+ggplot2,1,"`sec_axis()` now accepts functions as well as formulas (@​yutannihilation, #3031).",NA
+ggplot2,1,"New theme elements allowing different ticks lengths for each axis. For instance, this can be used to have inwards ticks on the x-axis (`axis.ticks.length.x`) and outwards ticks on the y-axis (`axis.ticks.length.y`) (@​pank, #2935).",NA
+ggplot2,1,"The arguments of `Stat*$compute_layer()` and `Position*$compute_layer()` are now renamed to always match the ones of `Stat$compute_layer()` and `Position$compute_layer()` (@​yutannihilation, #3202).",NA
+ggplot2,1,"`geom_*()` and `stat_*()` now accepts purrr-style lambda notation (@​yutannihilation, #3138).",NA
+ggplot2,1,"`geom_tile()` and `geom_rect()` now draw rectangles without notches at the corners. The style of the corner can be controlled by `linejoin` parameters (@​yutannihilation, #3050).",NA
+ggplot2,1,"In non-user-facing internal code (specifically in the `aes()` function and in the `aesthetics` argument of scale functions), ggplot2 now always uses the British spelling for aesthetics containing the word ""colour"". When users specify a ""color"" aesthetic it is automatically renamed to ""colour"". This renaming is also applied to non-standard aesthetics that contain the word ""color"". For example, ""point_color"" is renamed to ""point_colour"". This convention makes it easier to support both British and American spelling for novel, non-standard aesthetics, but it may require some adjustment for packages that have previously introduced non-standard color aesthetics using American spelling. A new function `standardise_aes_names()` is provided in case extension writers need to perform this renaming in their own code (@​clauswilke, #2649).",NA
+ggplot2,1,"Functions that generate other functions (closures) now force the arguments that are used from the generated functions, to avoid hard-to-catch errors. This may affect some users of manual scales (such as `scale_colour_manual()`, `scale_fill_manual()`, etc.) who depend on incorrect behavior (@​krlmlr, #2807).",NA
+ggplot2,1,"`Coord` objects now have a function `backtransform_range()` that returns the panel range in data coordinates. This change may affect developers of custom coords, who now should implement this function. It may also affect developers of custom geoms that use the `range()` function. In some applications, `backtransform_range()` may be more appropriate (@​clauswilke, #2821).",NA
+ggplot2,1,"`coord_sf()` has much improved customization of axis tick labels. Labels can now be set manually, and there are two new parameters, `label_graticule` and `label_axes`, that can be used to specify which graticules to label on which side of the plot (@​clauswilke, #2846, #2857, #2881).",NA
+ggplot2,1,"Two new geoms `geom_sf_label()` and `geom_sf_text()` can draw labels and text on sf objects. Under the hood, a new `stat_sf_coordinates()` calculates the x and y coordinates from the coordinates of the sf geometries. You can customize the calculation method via `fun.geometry` argument (@​yutannihilation, #2761).",NA
+ggplot2,1,"`benchplot()` now uses tidy evaluation (@​dpseidel, #2699).",NA
+ggplot2,1,"The error message in `compute_aesthetics()` now only provides the names of aesthetics with mismatched lengths, rather than all aesthetics (@​karawoo, #2853).",NA
+ggplot2,1,"For faceted plots, data is no longer internally reordered. This makes it safer to feed data columns into `aes()` or into parameters of geoms or stats. However, doing so remains discouraged (@​clauswilke, #2694).",NA
+ggplot2,1,"`coord_sf()` now also understands the `clip` argument, just like the other coords (@​clauswilke, #2938).",NA
+ggplot2,1,"`fortify()` now displays a more informative error message for `grouped_df()` objects when dplyr is not installed (@​jimhester, #2822).",NA
+ggplot2,1,"All `geom_*()` now display an informative error message when required aesthetics are missing (@​dpseidel, #2637 and #2706).",NA
+ggplot2,1,"`geom_boxplot()` now understands the `width` parameter even when used with a non-standard stat, such as `stat_identity()` (@​clauswilke, #2893).",NA
+ggplot2,1,"`geom_hex()` now understands the `size` and `linetype` aesthetics (@​mikmart, #2488).",NA
+ggplot2,1,"`geom_hline()`, `geom_vline()`, and `geom_abline()` now work properly with `coord_trans()` (@​clauswilke, #2149, #2812).",NA
+ggplot2,1,"`geom_text(..., parse = TRUE)` now correctly renders the expected number of items instead of silently dropping items that are empty expressions, e.g. the empty string """". If an expression spans multiple lines, we take just the first line and drop the rest. This same issue is also fixed for `geom_label()` and the axis labels for `geom_sf()` (@​slowkow, #2867).",NA
+ggplot2,1,"`geom_sf()` now respects `lineend`, `linejoin`, and `linemitre` parameters for lines and polygons (@​alistaire47, #2826).",NA
+ggplot2,1,"`ggsave()` now exits without creating a new graphics device if previously none was open (@​clauswilke, #2363).",NA
+ggplot2,1,"`labs()` now has named arguments `title`, `subtitle`, `caption`, and `tag`. Also, `labs()` now accepts tidyeval (@​yutannihilation, #2669).",NA
+ggplot2,1,"`position_nudge()` is now more robust and nudges only in the direction requested. This enables, for example, the horizontal nudging of boxplots (@​clauswilke, #2733).",NA
+ggplot2,1,"`sec_axis()` and `dup_axis()` now return appropriate breaks for the secondary axis when applied to log transformed scales (@​dpseidel, #2729).",NA
+ggplot2,1,"`sec_axis()` now works as expected when used in combination with tidy eval (@​dpseidel, #2788).",NA
+ggplot2,1,"`scale_*_date()`, `scale_*_time()` and `scale_*_datetime()` can now display a secondary axis that is a **one-to-one** transformation of the primary axis, implemented using the `sec.axis` argument to the scale constructor (@​dpseidel, #2244).",NA
+ggplot2,1,"`stat_contour()`, `stat_density2d()`, `stat_bin2d()`, `stat_binhex()` now calculate normalized statistics including `nlevel`, `ndensity`, and `ncount`. Also, `stat_density()` now includes the calculated statistic `nlevel`, an alias for `scaled`, to better match the syntax of `stat_bin()` (@​bjreisman, #2679).",NA
+ggplot2,1,"New `tag` label for adding identification tags to plots, typically used for labelling a subplot with a letter. Add a tag with `labs(tag = ""A"")`, style it with the `plot.tag` theme element, and control position with the `plot.tag.position` theme setting (@​thomasp85).",NA
+ggplot2,1,"`geom_segment()` and `geom_curve()` have a new `arrow.fill` parameter which allows you to specify a separate fill colour for closed arrowheads (@​hrbrmstr and @​clauswilke, #2375).",NA
+ggplot2,1,"`geom_point()` and friends can now take shapes as strings instead of integers, e.g. `geom_point(shape = ""diamond"")` (@​daniel-barnett, #2075).",NA
+ggplot2,1,"New `position_dodge2()` provides enhanced dodging for boxplots. Compared to `position_dodge()`, `position_dodge2()` compares `xmin` and `xmax` values\ to determine which elements overlap, and spreads overlapping elements evenly within the region of overlap. `position_dodge2()` is now the default position adjustment for `geom_boxplot()`, because it handles `varwidth = TRUE`, and will be considered for other geoms in the future. The `padding` parameter adds a small amount of padding between elements (@​karawoo, #2143) and a `reverse` parameter allows you to reverse the order of placement (@​karawoo, #2171).",NA
+ggplot2,1,"New `stat_qq_line()` makes it easy to add a simple line to a Q-Q plot, which makes it easier to judge the fit of the theoretical distribution (@​nicksolomon).",NA
+ggplot2,1,"Improved support for mapping date/time variables to `alpha`, `size`, `colour`, and `fill` aesthetics, including `date_breaks` and `date_labels` arguments (@​karawoo, #1526), and new `scale_alpha()` variants (@​karawoo, #1526).",NA
+ggplot2,1,"Improved support for ordered factors. Ordered factors throw a warning when mapped to shape (unordered factors do not), and do not throw warnings when mapped to size or alpha (unordered factors do). Viridis is used as the default colour and fill scale for ordered factors (@​karawoo, #1526).",NA
+ggplot2,1,"It can also be useful for line charts, e.g. for counts over time, where one wants to have a 'hard' lower limit of y = 0 but leave the upper limit unspecified (and perhaps differing between panels), with some extra space above the highest point on the line (with symmetrical limits, the extra space above the highest point could in some cases cause the lower limit to be negative). The old syntax for the `expand` argument will, of course, continue to work (@​huftis, #1669).",NA
+ggplot2,1,"`scale_colour_continuous()` and `scale_colour_gradient()` are now controlled by global options `ggplot2.continuous.colour` and `ggplot2.continuous.fill`. These can be set to `""gradient""` (the default) or `""viridis""` (@​karawoo).",NA
+ggplot2,1,"New `scale_colour_viridis_c()`/`scale_fill_viridis_c()` (continuous) and `scale_colour_viridis_d()`/`scale_fill_viridis_d()` (discrete) make it easy to use Viridis colour scales (@​karawoo, #1526).",NA
+ggplot2,1,"Guides for `geom_text()` now accept custom labels with `guide_legend(override.aes = list(label = ""foo""))` (@​brianwdavis, #2458).",NA
+ggplot2,1,"Strips gain margins on all sides by default. This means that to fully justify text to the edge of a strip, you will need to also set the margins to 0 (@​karawoo).",NA
+ggplot2,1,Rotated strip labels now correctly understand `hjust` and `vjust` parameters at all angles (@​karawoo).,NA
+ggplot2,1,"Strip labels now understand justification relative to the direction of the text, meaning that in y facets, the strip text can be placed at either end of the strip using `hjust` (@​karawoo).",NA
+ggplot2,1,"Legend titles and labels get a little extra space around them, which prevents legend titles from overlapping the legend at large font sizes (@​karawoo, #1881).",NA
+ggplot2,1,"New `autolayer()` S3 generic (@​mitchelloharawild, #1974). This is similar to `autoplot()` but produces layers rather than complete plots.",NA
+ggplot2,1,Custom objects can now be added using `+` if a `ggplot_add` method has been defined for the class of the object (@​thomasp85).,NA
+ggplot2,1,"Theme elements can now be subclassed. Add a `merge_element` method to control how properties are inherited from the parent element. Add an `element_grob` method to define how elements are rendered into grobs (@​thomasp85, #1981).",NA
+ggplot2,1,"`discrete_scale()` documentation now inherits shared definitions from `continuous_scale()` (@​alistaire47, #2052).",NA
+ggplot2,1,"`guide_colorbar()` shows all colours of the scale (@​has2k1, #2343).",NA
+ggplot2,1,"Tick marks for secondary axes with strong transformations are more accurately placed (@​thomasp85, #1992).",NA
+ggplot2,1,"All colour and fill scales now have an `aesthetics` argument that can be used to set the aesthetic(s) the scale works with. This makes it possible to apply a colour scale to both colour and fill aesthetics at the same time, via `aesthetics = c(""colour"", ""fill"")` (@​clauswilke).",NA
+ggplot2,1,"Three new generic scales work with any aesthetic or set of aesthetics: `scale_continuous_identity()`, `scale_discrete_identity()`, and `scale_discrete_manual()` (@​clauswilke).",NA
+ggplot2,1,"`scale_*_gradient2()` now consistently omits points outside limits by rescaling after the limits are enforced (@​foo-bar-baz-qux, #2230).",NA
+ggplot2,1,"`geom_label()` now correctly produces unbordered labels when `label.size` is 0, even when saving to PDF (@​bfgray3, #2407).",NA
+ggplot2,1,"`geom_boxplot()` now supplies a default value if no `x` aesthetic is present (@​foo-bar-baz-qux, #2110).",NA
+ggplot2,1,"`geom_density()` drops groups with fewer than two data points and throws a warning. For groups with two data points, density values are now calculated with `stats::density` (@​karawoo, #2127).",NA
+ggplot2,1,"`geom_segment()` now also takes a `linejoin` parameter. This allows more control over the appearance of the segments, which is especially useful for plotting thick arrows (@​Ax3man, #774).",NA
+ggplot2,1,"`geom_smooth()` now reports the formula used when `method = ""auto""` (@​davharris #1951). `geom_smooth()` now orders by the `x` aesthetic, making it easier to pass pre-computed values without manual ordering (@​izahn, #2028). It also now knows it has `ymin` and `ymax` aesthetics (#1939). The legend correctly reflects the status of the `se` argument when used with stats other than the default (@​clauswilke, #1546).",NA
+ggplot2,1,"`position_jitter()` and `position_jitterdodge()` gain a `seed` argument that allows the specification of a random seed for reproducible jittering (@​krlmlr, #1996 and @​slowkow, #2445).",NA
+ggplot2,1,"`stat_summary_bin()` now understands the `breaks` parameter (@​karawoo, #2214).",NA
+ggplot2,1,`stat_bin()` now accepts functions for `binwidth`. This allows better binning when faceting along variables with different ranges (@​botanize).,NA
+ggplot2,1,"`stat_bin()` and `geom_histogram()` now sum correctly when using the `weight` aesthetic (@​jiho, #1921).",NA
+ggplot2,1,"`stat_bin()` again uses correct scaling for the computed variable `ndensity` (@​timgoodman, #2324).",NA
+ggplot2,1,"`stat_bin()` and `stat_bin_2d()` now properly handle the `breaks` parameter when the scales are transformed (@​has2k1, #2366).",NA
+ggplot2,1,"`update_geom_defaults()` and `update_stat_defaults()` allow American spelling of aesthetic parameters (@​foo-bar-baz-qux, #2299).",NA
+ggplot2,1,"The `show.legend` parameter now accepts a named logical vector to hide/show only some aesthetics in the legend (@​tutuchan, #1798).",NA
+ggplot2,1,"Clipping to the plot panel is now configurable, through a `clip` argument to coordinate systems, e.g. `coord_cartesian(clip = ""off"")` (@​clauswilke, #2536).",NA
+ggplot2,1,"`coord_polar()` now draws secondary axis ticks and labels (@​dylan-stark, #2072), and can draw the radius axis on the right (@​thomasp85, #2005).",NA
+ggplot2,1,"`coord_trans()` now generates a warning when a transformation generates non-finite values (@​foo-bar-baz-qux, #2147).",NA
+ggplot2,1,"Complete themes now always override all elements of the default theme (@​has2k1, #2058, #2079).",NA
+ggplot2,1,Fixed bug when setting strips to `element_blank()` (@​thomasp85).,NA
+ggplot2,1,"Axes positioned on the top and to the right can now customize their ticks and lines separately (@​thomasp85, #1899).",NA
+ggplot2,1,"Built-in themes gain parameters `base_line_size` and `base_rect_size` which control the default sizes of line and rectangle elements (@​karawoo, #2176).",NA
+ggplot2,1,Default themes use `rel()` to set line widths (@​baptiste).,NA
+ggplot2,1,Themes were tweaked for visual consistency and more graceful behavior when changing the base font size. All absolute heights or widths were replaced with heights or widths that are proportional to the base font size. One relative font size was eliminated (@​clauswilke).,NA
+ggplot2,1,"The height of descenders is now calculated solely on font metrics and doesn't change with the specific letters in the string. This fixes minor alignment issues with plot titles, subtitles, and legend titles (#2288, @​clauswilke).",NA
+ggplot2,1,"`guide_colorbar()` is more configurable: tick marks and color bar frame can now by styled with arguments `ticks.colour`, `ticks.linewidth`, `frame.colour`, `frame.linewidth`, and `frame.linetype` (@​clauswilke).",NA
+ggplot2,1,"`guide_colorbar()` now uses `legend.spacing.x` and `legend.spacing.y` correctly, and it can handle multi-line titles. Minor tweaks were made to `guide_legend()` to make sure the two legend functions behave as similarly as possible (@​clauswilke, #2397 and #2398).",NA
+ggplot2,1,"The theme elements `legend.title` and `legend.text` now respect the settings of `margin`, `hjust`, and `vjust` (@​clauswilke, #2465, #1502).",NA
+ggplot2,1,"Non-angle parameters of `label.theme` or `title.theme` can now be set in `guide_legend()` and `guide_colorbar()` (@​clauswilke, #2544).",NA
+ggplot2,1,"`fortify()` gains a method for tbls (@​karawoo, #2218).",NA
+ggplot2,1,"`ggproto()` produces objects with class `c(""ggproto"", ""gg"")`, allowing for a more informative error message when adding layers, scales, or other ggproto objects (@​jrnold, #2056).",NA
+ggplot2,1,"`ggsave()`'s DPI argument now supports 3 string options: ""retina"" (320 DPI), ""print"" (300 DPI), and ""screen"" (72 DPI) (@​foo-bar-baz-qux, #2156). `ggsave()` now uses full argument names to avoid partial match warnings (#2355), and correctly restores the previous graphics device when several graphics devices are open (#2363).",NA
+ggplot2,1,"New functions `summarise_layout()`, `summarise_coord()`, and `summarise_layers()` summarise the layout, coordinate systems, and layers of a built ggplot object (#2034, @​wch). This provides a tested API that (e.g.) shiny can depend on.",NA
+ggplot2,1,"Updated startup messages reflect new resources (#2410, @​mine-cetinkaya-rundel).",NA
+ggplot2,1,"`facet_grid()` and `facet_wrap()` now allow expressions in their faceting formulas (@​DanRuderman, #1596).",NA
+ggplot2,1,"Built-in themes are more visually homogeneous, and match `theme_grey` better. (@​jiho, #1679)",NA
+ggplot2,1,"`geom_boxplot()` gains new `outlier.alpha` (@​jonathan-g) and `outlier.fill` (@​schloerke, #1787) parameters to control the alpha/fill of outlier points independently of the alpha of the boxes.",NA
+ggplot2,1,"`position_jitter()` (and hence `geom_jitter()`) now correctly computes the jitter width/jitter when supplied by the user (#1775, @​has2k1).",NA
+ggplot2,1,"`geom_violin()` no longer transforms quantile lines with the alpha aesthetic (@​mnbram, #1714). It no longer errors when quantiles are requested but data have zero range (#1687). When `trim = FALSE` it once again has a nice range that allows the density to reach zero (by extending the range 3 bandwidths to either side of the data) (#1700).",NA
+ggplot2,1,"`geom_dotplot()` works better when faceting and binning on the y-axis. (#1618, @​has2k1).",NA
+ggplot2,1,"`geom_hexbin()` once again supports `..density..` (@​mikebirdgeneau, #1688).",NA
+ggplot2,1,"`stat_density()` gains new argument `n`, which is passed to underlying function `stats::density` (""number of equally spaced points at which the density is to be estimated""). (@​hbuschme)",NA
+ggplot2,1,"`layer()` now accepts a function as the data argument. The function will be applied to the data passed to the `ggplot()` function and must return a data.frame (#1527, @​thomasp85). This is a more general version of the deprecated `subset` argument.",NA
+ggplot2,1,"`theme_update()` now uses the `+` operator instead of `%+replace%`, so that unspecified values will no longer be `NULL`ed out. `theme_replace()` preserves the old behaviour if desired (@​oneillkza, #1519).",NA
+ggplot2,1,"`stat_bin()` has been overhauled to use the same algorithm as ggvis, which has been considerably improved thanks to the advice of Randy Prium (@​rpruim). This includes:",NA
+ggplot2,2,• Better arguments and a better algorithm for determining the origin. You can now specify either `boundary` or the `center` of a bin. `origin` has been deprecated in favour of these arguments.,"`stat_bin()` has been overhauled to use the same algorithm as ggvis, which has been considerably improved thanks to the advice of Randy Prium (@​rpruim). This includes:"
+ggplot2,2,"• `drop` is deprecated in favour of `pad`, which adds extra 0-count bins at either end (needed for frequency polygons). `geom_histogram()` defaults to `pad = FALSE` which considerably improves the default limits for the histogram, especially when the bins are big (#1477).","`stat_bin()` has been overhauled to use the same algorithm as ggvis, which has been considerably improved thanks to the advice of Randy Prium (@​rpruim). This includes:"
+ggplot2,2,• The default algorithm does a (somewhat) better job at picking nice widths and origins across a wider range of input data.,"`stat_bin()` has been overhauled to use the same algorithm as ggvis, which has been considerably improved thanks to the advice of Randy Prium (@​rpruim). This includes:"
+ggplot2,2,"• `bins = n` now gives a histogram with `n` bins, not `n + 1` (#1487).","`stat_bin()` has been overhauled to use the same algorithm as ggvis, which has been considerably improved thanks to the advice of Randy Prium (@​rpruim). This includes:"
+ggplot2,1,"`position_jitterdodge()` now works on all possible dodge aesthetics, e.g. `color`, `linetype` etc. instead of only based on `fill` (@​bleutner)",NA
+ggplot2,1,`stat_density()` gains a `bw` parameter which makes it easy to get consistent smoothing between facets (@​jiho),NA
+ggplot2,1,"`stat-density-2d()` no longer ignores the `h` parameter, and now accepts `bins` and `binwidth` parameters to control the number of contours (#1448, @​has2k1).",NA
+ggplot2,1,"All elements should now inherit correctly for all themes except `theme_void()`. (@​Katiedaisey, #1555)",NA
+ggplot2,1,`theme_void()` was completely void of text but facets and legends still need labels. They are now visible (@​jiho).,NA
+ggplot2,1,Removed a superfluous comma in `theme-defaults.r` code (@​jschoeley),NA
+ggplot2,1,"Fixed issue where `coord_map()` fails when given an explicit `parameters` argument (@​tdmcarthur, #1729)",NA
+ggplot2,1,"New `geom_curve()` adds curved lines, with a similar specification to `geom_segment()` (@​veraanadi, #1088).",NA
+ggplot2,1,"`geom_point()` gains a `stroke` aesthetic which controls the border width of shapes 21-25 (#1133, @​SeySayux). `size` and `stroke` are additive so a point with `size = 5` and `stroke = 5` will have a diameter of 10mm. (#1142)",NA
+ggplot2,1,"New `theme_void()` is completely empty. It's useful for plots with non- standard coordinates or for drawings (@​jiho, #976).",NA
+ggplot2,1,"New `theme_dark()` has a dark background designed to make colours pop out (@​jiho, #1018)",NA
+ggplot2,1,"`theme_minimal()` became slightly more minimal by removing the axis ticks: labels now line up directly beneath grid lines (@​tomschloss, #1084)",NA
+ggplot2,1,"New theme setting `panel.ontop` (logical) make it possible to place background elements (i.e., gridlines) on top of data. Best used with transparent `panel.background` (@​noamross. #551).",NA
+ggplot2,1,"Use of `qplot()` in examples has been minimised (#1123, @​hrbrmstr). This is inline with the 2nd edition of the ggplot2 box, which minimises the use of `qplot()` in favour of `ggplot()`.",NA
+ggplot2,1,"All partially matched arguments and `$` have been been replaced with full matches (@​jimhester, #1134).",NA
+ggplot2,1,"`borders()` now accepts xlim and ylim arguments for specifying the geographical region of interest (@​markpayneatwork, #1392).",NA
+ggplot2,1,"`facet_wrap()` more carefully checks its `nrow` and `ncol` arguments to ensure that they're specified correctly (@​richierocks, #962)",NA
+ggplot2,1,"`geom_segment()` annotations were not transforming with scales (@​BrianDiggs, #859).",NA
+ggplot2,1,`geom_violin()` now has the ability to draw quantile lines (@​DanRuderman).,NA
+ggplot2,1,"`ggsave()` has been simplified a little to make it easier to maintain. It no longer checks that you're printing a ggplot2 object (so now also works with any grid grob) (#970), and always requires a filename. Parameter `device` now supports character argument to specify which supported device to use ('pdf', 'png', 'jpeg', etc.), for when it cannot be correctly inferred from the file extension (for example when a temporary filename is supplied server side in shiny apps) (@​sebkopf, #939). It no longer opens a graphics device if one isn't already open - this is annoying when you're running from a script (#1326).",NA
+ggplot2,1,"`guide_colorbar()` creates correct legend if only one color (@​krlmlr, #943).",NA
+ggplot2,1,"`scale_*_brewer()` and `scale_*_distiller()` add new `direction` argument of `scales::brewer_pal`, making it easier to change the order of colours (@​jiho, #1139).",NA
+ggplot2,1,"`stat_bin()` gains `bins` arguments, which denotes the number of bins. Now you can set `bins=100` instead of `binwidth=0.5`. Note that `breaks` or `binwidth` will override it (@​tmshn, #1158, #102).",NA
+ggplot2,1,"`stat_boxplot()` warns if a continuous variable is used for the `x` aesthetic without also supplying a `group` aesthetic (#992, @​krlmlr).",NA
+ggplot2,1,"Automatically computed breaks do not lead to an error for transformations like ""probit"" where the inverse can map to infinity (#871, @​krlmlr)",NA
+ggplot2,1,"`stat_function()` now always evaluates the function on the original scale. Previously it computed the function on transformed scales, giving incorrect values (@​BrianDiggs, #1011).",NA
+ggplot2,1,"`strip_dots` works with anonymous functions within calculated aesthetics (e.g. `aes(sapply(..density.., function(x) mean(x))))` (#1154, @​NikNakk)",NA
+ggplot2,1,"`theme()` gains `validate = FALSE` parameter to turn off validation, and hence store arbitrary additional data in the themes. (@​tdhock, #1121)",NA
+ggplot2,1,"Improved the calculation of segments needed to draw the curve representing a line when plotted in polar coordinates. In some cases, the last segment of a multi-segment line was not drawn (@​BrianDiggs, #952)",NA
+haven,1,@​gorcha is now a haven author in recognition of his significant and,NA
+haven,1,"`write_sav()` now checks for case-insensitive duplicate variable names (@​juansebastianl, #641) and verifies that variable names are valid SPSS variables.",NA
+haven,1,"`read_dta()` no longer crashes if it sees StrL variables with missing values (@​gorcha, #594, #600, #608).",NA
+haven,1,"`write_dta()` now correctly handles ""labelled""-class numeric (double) variables that don't have value labels (@​jmobrien, #606, #609).",NA
+haven,1,"`write_dta()` now allows variable names up to 32 characters (@​sbae, #605).",NA
+haven,1,"Can now correctly combine `labelled_spss()` with identical labels (@​gorcha, #599).",NA
+haven,1,"`labelled_spss()` gains full vctrs support thanks to the hard work of @​gorcha (#527, #534, #538, #557). This means that they should now work seamlessly in dplyr 1.0.0, tidyr 1.0.0 and other packages that use vctrs.",NA
+haven,1,"`write_sav(compress = FALSE)` now uses SPSS bytecode compression instead of the rarely-used uncompressed mode. `compress = TRUE` continues to use the newer (and not universally supported, but more compact) zlib format (@​oliverbock, #544).",NA
+haven,1,"`labelled()` gains the necessary support to work seemlessly in dplyr 1.0.0, tidyr 1.0.0, and other packages that use vctrs (@​mikmart, #496).",NA
+haven,1,"`as_factor()` allows non-unique labels when `levels = ""label""`. This fixes a particularly annoying printing bug (#424, @​gergness)",NA
+haven,1,`read_sas()` now supports (IS\|E\|B)8601(DT\|DA\|TM) date/time formats (@​mikmart).,NA
+haven,1,"`write_dta()` can now write dataset labels with the `label` argument, which defaults to the `label` attribute of the input data frame, if present (@​gorcha, #449).",NA
+haven,2,• Is faster when input doesn't contain any missing values (@​hughparsonage).,`as_factor()`:
+haven,2,"• `data.frame` method now correctly passes `...` along (#407, @​zkamvar).",`as_factor()`:
+haven,1,Updated to latest ReadStat from @​evanmiller:,NA
+haven,2,• `read_por()` can now read files from SPSS 25 (#412),Updated to latest ReadStat from @​evanmiller:
+haven,2,• `read_por()` now uses base-30 instead of base-10 for the exponent (#413),Updated to latest ReadStat from @​evanmiller:
+haven,2,• `read_sas()` can read zero column file (#420),Updated to latest ReadStat from @​evanmiller:
+haven,2,• `read_sav()` reads long strings (#381),Updated to latest ReadStat from @​evanmiller:
+haven,2,• `read_sav()` has greater memory limit allowing it to read more labels (#418),Updated to latest ReadStat from @​evanmiller:
+haven,2,• `read_spss()` reads long variable labels (#422),Updated to latest ReadStat from @​evanmiller:
+haven,2,• `write_sav()` no longer creates incorrect column names when \>10k columns (#410),Updated to latest ReadStat from @​evanmiller:
+haven,2,• `write_sav()` no longer crashes when writing long label names (#395),Updated to latest ReadStat from @​evanmiller:
+haven,1,"`labelled()` and `labelled_spss()` now support adding the `label` attribute to the resulting object. The `label` is a short, human-readable description of the object, and is now also used when printing, and can be easily removed using the new `zap_label()` function. (#362, @​huftis) Previously, the `label` attribute was supported both when reading and writing SPSS files, but it was not possible to actually create objects in R having the `label` attribute using the constructors `labelled()` or `labelled_spss()`.",NA
+haven,1,"`labelled_spss` objects preserve their attributes when subsetted (#360, @​gergness).",NA
+haven,1,"`write_*()` functions now invisibly return the input data frame (as documented) (#349, @​austensen).",NA
+haven,1,"Fix for when `as_factor()` with option `levels=""labels""` is used on tagged NAs (#340, @​gergness)",NA
+haven,1,`read_sav()` once again correctly returns system defined missings as `NA` (rather than `NaN`) (#223). `read_sav()` and `write_sav()` preserve SPSS's display widths (@​ecortens).,NA
+haven,1,"The ReadStat library is stored in a subdirectory of `src` (#209, @​krlmlr).",NA
+haven,1,"Import tibble so that tibbles are printed consistently (#154, @​krlmlr).",NA
+haven,1,"Added support for reading and writing variable formats. Similarly to to variable labels, formats are stored as an attribute on the vector. Use `zap_formats()` if you want to remove these attributes. (@​gorcha, #119, #123).",NA
+haven,1,"`as_factor()` no longer drops the `label` attribute (variable label) when used (#177, @​itsdalmo).",NA
+haven,1,"Using `as_factor()` with `levels = ""default` or `levels = ""both""` preserves unused labels (implicit missing) when converting (#172, @​itsdalmo). Labels (and the resulting factor levels) are always sorted by values.",NA
+haven,1,"`labelled()` is less strict with its checks: you can mix double and integer value and labels (#86, #110, @​lionel-), and `is.labelled()` is now exported (#124). Putting a labelled vector in a data frame now generates the correct column name (#193).",NA
+haven,1,"`read_dta()`, `read_sas()`, and `read_sav()` have a better test for missing string values (#79). They can all read from connections and compressed files (@​lionel-, #109)",NA
+haven,1,"`zap_labels()` has been completely overhauled. It now works (@​markriseley, #69), and only drops label attributes; it no longer replaces labelled values with `NA`s. It also gains a data frame method that zaps the labels from every column.",NA
+httr,1,"`parse_url()` now refers to RFC3986 for the parsing of the URL's scheme, with a bit more permissive syntax (@​ymarcon, #615).",NA
+httr,1,"Remove the default `cainfo` option on Windows. Providing a CA bundle is not needed anymore because `curl` now uses the native schannel SSL backend. For recent versions of libcurl, overriding the CA bundle actually breaks custom trust certificates on corporate networks. (@​jeroen, #603)",NA
+httr,1,"`http_status()` now throws the correct error message if http status code is not in the list of known codes (@​Javdat, #567).",NA
+httr,1,"`POST()` gains an example on how to use `encode = ""raw""` for specific json string body (@​cderv, #563)",NA
+httr,1,"`RETRY()` now throws the correct error message if an error occurs during the request (@​austin3dickey, #581).",NA
+httr,1,"`VERB()` and `RETRY()` now automatically uppercase methods (@​patr1ckm, #571).",NA
+httr,1,"`init_oauth2.0()` passes `use_basic_auth` onwards, enabling basic authentication for OAuth 2.0 (@​peterhartman, #484).",NA
+httr,1,"`oauth2.0_token()` (and `init_oauth2.0()`) gains a `oob_value` argument that allows arbitrary values to be sent for the `request_uri` parameter during OOB flows (@​ctrombley, #493).",NA
+httr,1,"`oauth2.0_token()` (and `init_oauth2.0()`) gain a new `query_authorize_extra` parameter make it possible to add extra query parameters to the authorization URL. This is needed some APIs (e.g. fitbit) (@​cosmomeese, #503).",NA
+httr,1,"`oauth_endpoints()` contains updated urls for Yahoo (@​ctrombley, #493) and Vimeo (#491).",NA
+httr,1,"Prior to token retrieval from on-disk cache, scopes are de-duplicated, sorted, and stripped of names before being hashed. This eliminates a source of hash mismatch that causes new tokens to be requested, even when existing tokens had the necessary scope. (@​jennybc, #495)",NA
+httr,1,"A new Noun Project demo shows how to use one-legged OAuth1 (@​cderv, #548).",NA
+httr,1,"`parse_http_date()` gets a better default value for the `failure` argument so that reponses with unparseable dates can be printed without error (@​shrektan, #544).",NA
+httr,1,"`POST()` now uses 22 digits of precision for `body` list elements by default (@​jmwerner, #490)",NA
+httr,1,"Non-http(s) headers are no longer parsed (@​billdenney, #537). This makes it possible to use httr with protocols other than http, although this is not advised, and you're own your own.",NA
+httr,1,"New `set_callback()` and `get_callback()` set and query callback functions that are called right before and after performing an HTTP request (@​gaborcsardi, #409)",NA
+httr,1,"`RETRY()` now retries if an error occurs during the request (@​asieira, #404), and gains two new arguments:",NA
+httr,2,"• `terminate_on` gives you greater control over which status codes should it stop retrying. (@​asieira, #404)","`RETRY()` now retries if an error occurs during the request (@​asieira, #404), and gains two new arguments:"
+httr,2,• `pause_min` allows for sub-second delays. (Use with caution! Generally the default is preferred.) (@​r2evans),"`RETRY()` now retries if an error occurs during the request (@​asieira, #404), and gains two new arguments:"
+httr,2,"• If the server returns HTTP status code 429 and specifies a `retry-after` value, that value will now be used instead of exponential backoff with jitter, unless it's smaller than `pause_min`. (@​nielsoledam, #472)","`RETRY()` now retries if an error occurs during the request (@​asieira, #404), and gains two new arguments:"
+httr,1,"New oauth cache files are always added to `.gitignore` and, if it exists, `.Rbuildignore`. Specifically, this now happens when option `httr_oauth_cache = TRUE` or user specifies cache file name explicitly. (@​jennybc, #436)",NA
+httr,1,"`oauth_encode()` now handles UTF-8 characters correctly. (@​yutannihilation, #424)",NA
+httr,1,"`oauth_signature()` now normalises the URL as described in the OAuth1.0a spec (@​leeper, #435)",NA
+httr,2,"• `config_init` allows you to supply additional config for the initial request. This is needed for some APIs (e.g. reddit) which rate limit based on `user_agent` (@​muschellij2, #363).",`oauth2.0_token()` gains three new arguments:
+httr,2,"• `client_credentials`, allows you to use the OAauth2 *Client Credential Grant*. See [RFC 6749](https://tools.ietf.org/html/rfc6749#section-4) for details. (@​cderv, #384)",`oauth2.0_token()` gains three new arguments:
+httr,1,"`find_cert_bundle()` will now correctly find cert bundle in ""R_HOME/etc"" (@​jiwalker-usgs, #386).",NA
+httr,1,"`modify_url()` recognises more forms of empty queries. This eliminates a source of spurious trailing `?` and `?=` (@​jennybc, #452).",NA
+httr,1,"`oauth_signature()` no longer prepends 'oauth\_' to additional parameters. (@​jimhester, #373)",NA
+httr,1,"The default user agent string is now computed once and cached. This is a small performance improvement, but important for local connections (#322, @​richfitz).",NA
+httr,1,"`oauth1.0_token()` gains RSA-SHA1 signature support with the `private_key` argument (@​nathangoulding, #316).",NA
+httr,2,"• `user_params` allows you to pass arbitrary additional parameters to the token access endpoint when acquiring or refreshing a token (@​cornf4ke, #312)",`oauth2.0_token()` throws an error if it fails to get an access token (#250) and gains two new arguments:
+httr,2,"• `use_basic_auth` allows you to pick use http authentication when getting a token (#310, @​grahamrp).",`oauth2.0_token()` throws an error if it fails to get an access token (#250) and gains two new arguments:
+httr,1,"`oauth_service_token()` checks that its arguments are the correct types (#282) and anways returns a `request` object (#313, @​nathangoulding).",NA
+httr,1,"`refresh_oauth2.0()` checks for known OAuth2.0 errors and clears the locally cached token in the presense of any (@​nathangoulding, #315).",NA
+httr,1,"httr no longer depends on stringr (#285, @​jimhester).",NA
+httr,1,"`build_url()` collapses vector `path` with `/` (#280, @​artemklevtsov).",NA
+httr,1,"`progress()` returns `TRUE` to fix for 'progress callback must return boolean' warning (@​jeroenooms, #252).",NA
+httr,1,"`upload_file()` supports very large files (\> 2.5 Gb) (@​jeroenooms, #257).",NA
+httr,1,"The `oauth_listener` can now listen on a custom IP address and port (the previously hardwired ip:port of `127.0.0.1:1410` is now just the default). This permits authentication to work under other settings, such as inside docker containers (which require localhost uses `0.0.0.0` instead). To configure, set the system environmental variables `HTTR_LOCALHOST` and `HTTR_PORT` respectively (@​cboettig, #211).",NA
+httr,1,`POST()` and `PUT()` now clean up after themselves when uploading a single file (@​mtmorgan).,NA
+httr,1,"Correctly parse headers with multiple `:`, thanks to @​mmorgan (#180).",NA
+httr,1,"Suport for Google OAuth2 [service accounts](https://developers.google.com/identity/protocols/oauth2/service-account). (#119, thanks to help from @​siddharthab).",NA
+httr,1,"`vignette(""api-packages"")` gains more detailed instructions on setting environment variables, thanks to @​jennybc.",NA
+httr,1,"Fix for OAuth 2 process when using `options(httr_oob_default = TRUE)` (#126, @​WillemPaling).",NA
+httr,1,New `brew_dr()` checks for common problems. Currently checks if your libCurl uses NSS. This is unlikely to work so it gives you some advice on how to fix the problem (thanks to @​eddelbuettel for debugging this problem).,NA
+httr,1,"`Content-Type` set to title case to avoid errors in servers which do not correctly implement case insensitivity in header names. (#142, #146) thanks to Håkon Malmedal (@​hmalmedal) and Jim Hester (@​jimhester).",NA
+httr,1,"Added support for passing oauth1 tokens in URL instead of the headers (#145, @​bogstag).",NA
+httr,1,Typo which broke `set_cookies()` fixed by @​hrbrmstr.,NA
+httr,1,"The OAuth2 dance can now be performed without running a local webserver (#33, thanks to @​craigcitro). To make that the default, set `options(httr_oob_default = TRUE)`. This is useful when running R remotely.",NA
+httr,1,"Add support for passing oauth2 tokens in headers instead of the URL, and make this the default (#34, thanks to @​craigcitro).",NA
+httr,1,"Use the httpuv webserver for the OAuth dance instead of the built-in httpd server (#32, thanks to @​jdeboer). This makes the dance work in Rstudio, and also seems a little faster. Rook is no longer required.",NA
+httr,1,"Add support for `fragment` in url building/parsing (#70, thanks to @​craigcitro).",NA
+magrittr,1,"Fixed an issue that could cause pipe invocations to fail in versions of R built with `--enable-strict-barrier`. (#239, @​kevinushey)",NA
+modelr,1,"`add_predictions()`, `gather_predictions()`, and `spread_predictions()` gain a `type` parameter which is passed through to `stats::predict()` (#34, @​pmenzel)",NA
+modelr,1,New `crossv_loo()` which implements leave-one-out cross validation (@​pmenzel),NA
+modelr,1,"New `mape()` and `rsae()` model quality statistics (@​paulponcet, #33).",NA
+modelr,1,"`typical()` gains `ordered` and `integer` methods (@​jrnold, #44), and `...` argument (@​jrnold, #42).",NA
+modelr,1,"Add `mse()` function to calculate mean squared error. Written by @​bensoltoff, pull request #57",NA
+pillar,1,"New `ctl_new_rowid_pillar()` generic and default method for customizing the appearance of row IDs (#260, #550, @​nbenn).",NA
+pillar,1,"Remove outdated detail in `?tbl_sum` (@​IndrajeetPatil, #565).",NA
+pillar,1,"Skip test that requires lubridate if it's not installed (#505, @​MichaelChirico).",NA
+pillar,1,"New `pillar.min_chars` option allows controlling the minimum number of characters shown for a character column (#178, @​statsmaths).",NA
+pillar,1,"New `align()` to support easy alignment of strings within a character vector (existing function exported by @​davidchall, #185).",NA
+purrr,1,"Soft deprecated functions: `%@​%`, `reduce_right()`, `reduce2_right()`, `accumulate_right()` are now fully deprecated. Similarly, the `.lazy`, `.env`, and `.first` arguments to `partial()`, and the `.right` argument to `detect()` and `detect_index()` are fully deprecated. Removing elements with `NULL` in `list_modify()` and `list_merge()` is now fully deprecated.",NA
+purrr,1,"`modify_if(.else)` is now actually evaluated for atomic vectors (@​mgirlich, #701).",NA
+purrr,1,"Fixed issue in `list_modify()` that prevented lists from being removed with `zap()` (@​adamroyjones, #777).",NA
+purrr,1,"Added documentation for exporting functions created with purrr adverb (@​njtierney, #668). See `?faq-adverbs-export`.",NA
+purrr,1,"Added `none()`, which tests that a predicate is false for all elements (the opposite of `every()`) (@​AliciaSchep, #735).",NA
+purrr,1,"The documentation of `map()` and its variants has been improved by @​surdina as part of the Tidyverse Developer Day (@​surdina, #671).",NA
+purrr,1,"`prepend()` now works with empty lists (@​czeildi, #637)",NA
+purrr,1,"New `chuck()` function. This is a strict variant of `pluck()` that throws errors when an element does not exist instead of returning `NULL` (@​daniel-barnett, #482).",NA
+purrr,1,"`pmap()` and `pwalk()` now preserve class for inputs of `factor`, `Date`, `POSIXct` and other atomic S3 classes with an appropriate `[[` method (#358, @​mikmart).",NA
+purrr,1,"`modify()`, `modify_if()` and `modify_at()` now preserve the class of atomic vectors instead of promoting them to lists. New S3 methods are provided for character, logical, double, and integer classes (@​t-kalinowski, #417).",NA
+purrr,1,"`insistently(f)` modifies a function, `f`, so that it is repeatedly called until it succeeds (@​richierocks, @​ijlyttle). `slowly()` modifies a function so that it waits for a given amount of time between calls.",NA
+purrr,1,"Functions created with `compose()` now have the same formal parameters as the first function to be called. They also feature a more informative print method that prints all composed functions in turn (@​egnha, #366).",NA
+purrr,1,"`compose()` now supports composition with lambdas (@​ColinFay, #556)",NA
+purrr,1,"`modify_depth` now has `.ragged` argument evaluates correctly to `TRUE` by default when `.depth < 0` (@​cderv, #530).",NA
+purrr,1,"`accumulate()` now inherits names from their first input (@​AshesITR, #446).",NA
+purrr,1,"`attr_getter()` no longer uses partial matching. For example, if an `x` object has a `labels` attribute but no `label` attribute, `attr_getter(""label"")(x)` will no longer extract the `labels` attribute (#460, @​huftis).",NA
+purrr,1,"`list_modify()`, `update_list()` and `list_merge()` now handle duplicate duplicate argument names correctly (#441, @​mgirlich).",NA
+purrr,1,"`map_raw`, `imap_raw`, `flatten_raw`, `invoke_map_raw`, `map2_raw` and `pmap_raw` added to support raw vectors. (#455, @​romainfrancois)",NA
+purrr,1,"`array_branch()` and `array_tree()` now retain the `dimnames()` of the input array (#584, @​flying-sheep)",NA
+purrr,1,"`map_at()`, `lmap_at()` and `modify_at()` now supports selection using `vars()` and `tidyselect` (@​ColinFay, #608). Note that for now you need to import `vars()` from dplyr or call it qualified like `dplyr::vars()`. It will be reexported from rlang in a future release.",NA
+purrr,1,"`detect()` now has a .default argument to specify the value returned when nothing is detected (#622, @​ColinFay).",NA
+purrr,1,"`%@​%` is soft-deprecated, please use the operator exported in rlang instead. The latter features an interface more consistent with `@​` as it uses NSE, supports S4 fields, and has an assignment variant.",NA
+purrr,1,"Thanks to @​dchiu911, the unit test coverage of purrr is now much greater.",NA
+purrr,2,"• `x %@​% ""a""` is shorthand for `attr(x, ""a"", exact = TRUE)` (#69).",There are two handy infix functions:
+readr,1,"minor test tweak for compatibility with testthat 3.1.0 (#@​lionel-, #1304)",NA
+readr,1,"`type_convert()` gains a `guess_integer` argument, passed to `guess_parser()` (@​jmbarbone, #1264)",NA
+readr,1,"readr now uses the tzdb package when parsing date-times (@​DavisVaughan, r-lib/vroom#273)",NA
+readr,1,"`read_delim()` fails when sample of parsing problems contains non-ASCII characters (@​hidekoji, #1136)",NA
+readr,1,"`write_*()` functions first argument is now `file` instead of `path`, for consistency with the `read_*()` functions. `path` has been deprecated and will be removed in a future version of readr (#1110, @​brianrice2)",NA
+readr,1,"New `%h` placeholder for parsing unrestricted hours (\<0 and \>23) to support parsing durations (#549, @​krlmlr).",NA
+readr,1,"`read_*` functions now close properly all connections, including on errors like HTTP errors when reading from a url (@​cderv, #1050).",NA
+readr,1,"`write_*()` functions now invisibly return the input data frame unchanged, rather than a version with factors and dates converted to strings. (@​jesse-ross, #975).",NA
+readr,1,"`write_csv2()` and `format_csv2()` no longer pad number columns with whitespaces (@​keesdeschepper, #1046).",NA
+readr,1,"Uses of `tibble::data_frame` updated to `tibble::tibble` ([tidyverse/dplyr#4069](https://github.com/tidyverse/dplyr/issues/4069), @​thays42, #1124, @​brianrice2)",NA
+readr,1,"`read_delimited()` now returns an empty `tibble::data_frame()` rather than signaling an error when given a connection with an empty file (@​pralitp, #963).",NA
+readr,1,"More helpful error when trying to write out data frames with list columns (@​ellessenne, #938)",NA
+readr,1,"`type_convert()` removes a 'spec' attribute, because the current columns likely have modified data types. The 'spec' attribute is set by functions like `read_delim()` (@​jimhester, @​wibeasley, #1032).",NA
+readr,1,"`write_rds()` now can specify the Rds version to use. The default value is 2 as it's compatible to R versions prior to 3.5.0 (@​shrektan, #1001).",NA
+readr,1,"Fixes for issues related to variable initialization in C++ code (@​michaelquinn32, ##1133).",NA
+readr,1,"If `col_types` is too long, it is subsetted correctly (#372, @​jennybc).",NA
+readr,1,"If `col_names` is too short, the added names are numbered correctly (#374, @​jennybc).",NA
+readr,2,"• `fwf_widths()` accepts negative column widths for compatibility with the `widths` argument in `read.fwf()` (#380, @​leeper).",`read_fwf()` received a number of improvements:
+readr,2,"• You can now read fixed width files with ragged final columns, by setting the final end position in `fwf_positions()` or final width in `fwf_widths()` to `NA` (#353, @​ghaarsma). `fwf_empty()` does this automatically.",`read_fwf()` received a number of improvements:
+readr,2,"• Compound formats ""%D"", ""%F"", ""%R"", ""%X"", ""%T"", ""%x"" are now parsed correctly, instead of using the ISO8601 parser (#178, @​kmillar).",`parse_date()` and `parse_datetime()`:
+readr,2,"• Local (non-UTC) times with and without daylight savings are now parsed correctly (#120, @​andres-s).",`parse_date()` and `parse_datetime()`:
+readr,1,"`read_*()` throws a warning instead of an error is `col_types` specifies a non-existent column (#145, @​alyst).",NA
+readr,1,"`write_rds()` and `read_rds()` wrap around `readRDS()` and `saveRDS()`, defaulting to no compression (#140, @​nicolasCoutin).",NA
+readxl,1,"""Date or Not Date"": The classification of number formats as being datetime-ish is more sophisticated and should no longer be so easily fooled by, e.g., colours or currencies. This affects cell and column type guessing, hopefully for the better (#388, #559, @​nacnudus, @​reviewher).",NA
+readxl,1,"Warning messages for impossible dates are more specific. Unsupported dates prior to 1900 have their own message now, instead of being lumped in with dates on the non-existent day of February 29, 1900 (#551, #554, @​cderv).",NA
+readxl,1,"readxl has switched from Rcpp to cpp11 and now requires C++11 (#659, @​sbearrows).",NA
+readxl,1,"readxl has a [new article](https://readxl.tidyverse.org/articles/articles/multiple-header-rows.html) on reading Excel files with multiple header rows (#486, #492 @​apreshill).",NA
+readxl,1,"xlsx files that do not have a ""styles"" part can now be read (#505, #506 @​jt6)",NA
+readxl,1,"Reading xls sheet with exactly 65,536 rows no longer enters an infinite loop. (xls, #373, #416, #432 @​vkapartzianis)",NA
+readxl,1,Add `$(C_VISIBILITY)` to compiler flags to hide internal symbols from the dll. (#385 @​jeroen),NA
+readxl,1,"Numeric data in a logical column now coerces properly to logical. (xlsx, #385 @​nacnudus)",NA
+readxl,1,"`""list""` is a new accepted value for `col_types`. Loads data as a list of length-1 vectors, that are typed using the logic from `col_types = NULL`, but on a cell-by-cell basis (#262 @​gergness).",NA
+readxl,1,"`guess_max` is a new argument that lets user adjust the number of rows used to guess column types. (#223, #257 @​tklebel and @​jennybc)",NA
+readxl,1,"`na` can now hold multiple NA values, e.g., `read_excel(""missing-values.xls"", na = c(""NA"", ""1""))`. (#13, #56, @​jmarshallnz)",NA
+readxl,2,"• Dates in .xlsx files saved with LibreOffice are now recognized as such. (#134, @​zeehio)",Coercions and cell data:
+readxl,1,"More robust logic for sheet lookup in xlsx. Improves compatibility with xlsx written by a variety of tools and/or xlsx containing chartsheets. (#233, #104, #200, #168, #116, @​jimhester and @​jennybc)",NA
+readxl,1,"`read_xls()` and `read_xlsx()` are now exposed, such that files without an `.xls` or `.xlsx` extension can be read. (#85, @​jirkalewandowski)",NA
+readxl,1,"The tibble package is now imported (#175, @​krlmlr) and `tibble::repair_names()` is used to prevent empty, `NA`, or duplicated column names. (#216, #208, #199 #182, #53, #247).",NA
+readxl,1,"Default column names for xlsx now start with X\_\_1 instead of X\_\_0. (#98, @​zeehio, @​krlmlr)",NA
+readxl,1,"Fix compilation warnings/failures (FreeBSD 10.3 #221, gcc 4.9.3 #124) and/or problems reading xls (CentOS 6.6 #189). (#244, #245, #246 @​jeroen)",NA
+readxl,1,"Unwanted printed output (e.g., `DEFINEDNAME: 21 00 00 ...`) is suppressed when reading xls that contains a defined range. (#82, #188, @​PedramNavid)",NA
+reprex,1,"`reprex_rtf()` (a shortcut for `reprex(venue = ""rtf"")`) now works on Windows, even if one of the (possibly temporary) filepaths contains a space, e.g. because the username contains a space (#409, @​cderv).",NA
+reprex,1,"The RStudio addin no longer displays a warning about condition length when selecting 'current file' as the reprex source (#391, @​bisaloo).",NA
+reprex,1,"UTF-8 encoding: Following the lead of knitr, reprex makes explicit use of UTF-8 internally (#237 @​krlmlr, #261).",NA
+reprex,1,"The `tidyverse_quiet` argument and `reprex.tidyverse_quiet` option also control startup messages from the [tidymodels](https://www.tidymodels.org) meta-package (#326, @​juliasilge).",NA
+reprex,1,"New article on techniques for making package startup quieter (#187, @​marionlouveaux).",NA
+reprex,1,"New venue ""html"" to render HTML fragments, useful for pasting in sites without markdown but that allow HTML (#236 @​cwickham).",NA
+reprex,1,"Line wrapping is preserved from source via a Pandoc option (#145 @​jimhester, #175).",NA
+reprex,1,"The HTML preview should appear in the RStudio Viewer more consistently, especially on Windows (#75 @​yutannihilation).",NA
+reprex,1,More rigorous use of UTF-8 encoding (#76 @​yutannihilation).,NA
+reprex,1,"Expression input handling has been refactored. As a result, formatR is no longer Suggested. Trailing comments -- inline and on their own line -- are also now retained (#89, #91, #114, @​jennybc and @​jimhester).",NA
+reprex,1,"Custom prompts are now escaped when used in regexes (#98, #99 @​jimhester). Embedded newlines are now escaped.",NA
+reprex,2,"• This made the explicit `upload.fun` argument unnecessary, so it's gone. The `upload.fun` option defaults to `knitr::imgur_upload`, which means figures produced by the reprex will be uploaded to [imgur.com](https://imgur.com/) and the associated image syntax will be put into the Markdown, e.g. `![](https://i.imgur.com/QPU5Cg9.png)`. (#15 @​paternogbc)","`reprex()` gains optional arguments `opts_chunk` and `opts_knit`, taking named list as input, in order to supplement or override default knitr chunk and package options, respectively. (#33)"
+reprex,1,"`reprex()` gains the `si` argument to request that `devtools::session_info()` or `sessionInfo()` be appended to reprex code (#6 @​dgrtwo). When `si = TRUE` and `venue = ""gh""` (the default), session info is wrapped in a collapsible details tag. See [an example](https://github.com/tidyverse/reprex/issues/55) (#55).",NA
+reprex,1,"Reprex code can be provided as an R expression. (#6 @​dgrtwo, #35)",NA
+reprex,1,"`reprex()` uses clipboard functionality from [`clipr`](https://CRAN.R-project.org/package=clipr) and thus should work on Windows and suitably prepared Unix-like systems, in addition to Mac OS. (#16 @​mdlincoln)",NA
+rlang,1,"The `pkg_version_info()` function now allows `==` for package version comparison (#1469, @​kryekuzhinieri).",NA
+rlang,2,"• Elements named `""v""` as green ticks (@​rossellhayes)",`format_error_bullets()` (used as a fallback instead of cli) now treats:
+rlang,1,"New `hash()` function to generate 128-bit hashes for arbitrary R objects using the xxHash library. The implementation is modeled after [xxhashlite](https://github.com/coolbutuseless/xxhashlite), created by @​coolbutuseless.",NA
+rlang,1,"Fixed an issue causing extra empty lines in `inform()` messages with `.frequency` (#1076, @​schloerke).",NA
+rlang,1,"`expr_deparse()` now correctly wraps code using `::` and `:::` (#1072, @​krlmlr).",NA
+rlang,1,Backtraces now include native stacks (e.g. from C code) when the [winch](https://r-prof.github.io/winch/) package is installed and `rlang_trace_use_winch` is set to `TRUE` (@​krlmlr).,NA
+rlang,1,"New `raw_deparse_str()` function for converting a raw vector into a string of hexadecimal characters (@​krlmlr, #978).",NA
+rlang,1,"`is_installed()` now properly handles a `pkg` argument of length \> 1. Before this it silently tested the first element of `pkg` only and thus always returned `TRUE` if the first package was installed regardless of the actual length of `pkg`. (#991, @​salim-b)",NA
+rlang,1,"`arg_match0()` is a faster version of `arg_match()` for use when performance is at a premium (#997, @​krlmlr).",NA
+rlang,1,"All rlang options are now documented in a centralised place, see `?rlang::faq-options` (#899, @​smingerson).",NA
+rlang,1,"`arg_match()` now detects and suggests possible typos in provided arguments (@​jonkeane, #798).",NA
+rlang,1,"`arg_match()` now gives an error if argument is of length greater than 1 and doesn't exactly match the values input, similar to base `match.arg` (#914, @​AliciaSchep)",NA
+rlang,1,The reminder to call `last_error()` is now less confusing thanks to a suggestion by @​markhwhiteii.,NA
+rlang,1,"`x %|% y` now also works when `y` is of same length as `x` (@​rcannood, #806).",NA
+rlang,1,"New functions for weak references: `new_weakref()`, `weakref_key()`, `weakref_value()`, and `is_weakref()` (@​wch, #787).",NA
+rlang,1,"`is_interactive()` is aware of the `TESTTHAT` environment variable and returns `FALSE` when it is `""true""` (@​jennybc, #738).",NA
+rlang,1,"The return object from `as_function()` now inherits from `""function""` (@​richierocks, #735).",NA
+rlang,1,The `%@​%` operator now quotes its input and supports S4 objects. This makes it directly equivalent to `@​` except that it extracts attributes for non-S4 objects (#207).,NA
+rlang,1,The operator `%@​%` has now a replacement version to update attributes of an object (#207).,NA
+rlang,1,"New function experimental function `chr_unserialise_unicode()` for turning characters serialised to unicode point form (e.g. `<U+xxxx>`) to UTF-8. In addition, `as_utf8_character()` now translates those as well. (@​krlmlr)",NA
+rlang,1,"Fixed a performance bug in `set_names()` that caused a full copy of the vector names (@​jimhester, #366).",NA
+rvest,1,"`html_table()` converts empty tables to empty tibbles (@​epiben, #327).",NA
+rvest,1,"`html_table()` correctly handles tables with cells that contain blank values for `rowspan` and/or `colspan`, so that e.g. `<td rowspan="""">` is parsed as `<td rowspan=1>` (@​epiben, #323).",NA
+rvest,1,"`html_form_set()` can now accept character vectors allowing you to select multiple checkboxes in a set or select multiple values from a multi-`<select>` (#127, with help from @​juba). It also uses dynamic dots so that you can use `!!!` if you have a list of values (#189).",NA
+rvest,1,"`submit_request()` now checks for empty form-field-types to select the correct submit fields (@​rentrop, #159)",NA
+rvest,1,"Remove all remaining uses of `html()` in favor of `read_html()` (@​jimhester, #113).",NA
+stringr,1,"New `vignette(""from-base"")` by @​sastoudt provides a comprehensive comparison between base R functions and their stringr equivalents. It's designed to help you move to stringr if you're already familiar with base R string functions (#266).",NA
+stringr,1,"New `str_split_i()` function to extract only a single piece from a string (#278, @​bfgray3).",NA
+stringr,1,"New `str_like()` function which allows the use of SQL wildcards (#280, @​rjpat).",NA
+stringr,1,"New `str_unique()` is a wrapper around `stri_unique()` and returns unique string values in a character vector (#249, @​seasmith).",NA
+stringr,1,"Many typos in `sentences` have been fixed (@​romatik, #299)",NA
+stringr,1,`str_starts()` and `str_ends()` now correctly respect regex operator precedence (@​carlganz).,NA
+stringr,1,"`str_wrap()` breaks only at whitespace by default; set `whitespace_only = FALSE` to return to the previous behaviour (#335, @​rjpat).",NA
+stringr,1,"`word()` now returns all the sentence when using a negative `start` parameter that is greater or equal than the number of words. (@​pdelboca, #245)",NA
+stringr,1,`str_interp()` now renders lists consistently independent on the presence of additional placeholders (@​amhrasmussen).,NA
+stringr,1,"New `str_starts()` and `str_ends()` functions to detect patterns at the beginning or end of strings (@​jonthegeek, #258).",NA
+stringr,1,"`str_subset()`, `str_detect()`, and `str_which()` get `negate` argument, which is useful when you want the elements that do NOT match (#259, @​yutannihilation).",NA
+stringr,1,"New `str_to_sentence()` function to capitalize with sentence case (@​jonthegeek, #202).",NA
+stringr,1,"`str_trunc()` is once again vectorised correctly (#203, @​austin3dickey).",NA
+stringr,1,"`str_remove()` and `str_remove_all()` functions. These wrap `str_replace()` and `str_replace_all()` to remove patterns from strings. (@​Shians, #178)",NA
+stringr,1,"`str_squish()` removes spaces from both the left and right side of strings, and also converts multiple space (or space-like characters) to a single space within strings (@​stephlocke, #197).",NA
+stringr,1,"`str_sub()` gains `omit_na` argument for ignoring `NA`. Accordingly, `str_replace()` now ignores `NA`s and keeps the original strings. (@​yutannihilation, #164)",NA
+stringr,1,"`str_trunc()` now preserves NAs (@​ClaytonJY, #162)",NA
+stringr,1,"`str_trunc()` now throws an error when `width` is shorter than `ellipsis` (@​ClaytonJY, #163).",NA
+stringr,1,"`fixed()`, `regex()`, and `coll()` now throw an error if you use them with anything other than a plain string (#60). I've clarified that the replacement for `perl()` is `regex()` not `regexp()` (#61). `boundary()` has improved defaults when splitting on non-word boundaries (#58, @​lmullen).",NA
+stringr,1,"`str_subset()` now respects custom options for `fixed()` patterns (#79, @​gagolews).",NA
+stringr,1,"New `str_subset()` keeps values that match a pattern. It's a convenient wrapper for `x[str_detect(x)]` (#21, @​jiho).",NA
+tibble,1,"Update example for `nrow` argument to `new_tibble()` (@​heavywatal, #1394).",NA
+tibble,1,"Skip tests if suggested packages not available (#1246, @​MichaelChirico).",NA
+tibble,1,"`size_sum()` is now reexported from pillar (#850, @​topepo).",NA
+tibble,1,"`add_row(df)` adds an empty row again (#809, @​DavisVaughan).",NA
+tibble,1,"`as_tibble.data.frame()` uses implicit row names if asked to create a column from row names. This allows lossless direct conversion of matrices with row names to tibbles (#567, @​stufield).",NA
+tibble,1,"`view()` now uses the created (or passed) title argument (#610, @​xvrdm).",NA
+tibble,1,"tibble names can again be set to `NULL` within RStudio, as some R routines within RStudio relied on this behaviour (#563, @​kevinushey).",NA
+tibble,1,"Replace `new_list_along()` by `rep_along()` to support rlang 0.3.1 (#557, @​lionel-).",NA
+tibble,1,"The `validate` argument of `as_tibble()` is deprecated but supported (emits a message once per session). Use `.name_repair = ""minimal""` instead of `validate = FALSE`, and `.name_repair = ""check_unique""` instead of `validate = TRUE`. If you need to support older versions of tibble, pass both `.name_repair` and `validate` arguments in a consistent way, no message will be emitted in this case (#469, @​jennybc).",NA
+tibble,1,"Improved S4 support by adding `exportClass(tbl_df)` to `NAMESPACE` (#436, @​jeffreyhanson and @​javierfajnolla).",NA
+tibble,1,"Bring error message for invalid column type in line with allowed matrix/df cols (#465, @​maxheld83).",NA
+tibble,1,"`as_tibble()` prints an informative error message when using the `rownames` argument and the input data frame or matrix does not have row names (#388, @​anhqle).",NA
+tibble,1,"`column_to_rownames()` uses the real variable name in its error message (#399, @​alexwhan).",NA
+tibble,1,"`glimpse()` disambiguates outputs for factors if the levels contain commas (#384, @​anhqle).",NA
+tibble,1,"Skip dplyr in tests if unavailable (#420, @​QuLogic).",NA
+tibble,1,"Skip mockr in tests if unavailable (#454, @​Enchufa2).",NA
+tibble,1,"Avoid use of `stop()` in examples if packages are not installed (#453, @​Enchufa2).",NA
+tibble,1,"Fix `as_tibble()` examples by using correct argument names in `requireNamespace()` call (#424, @​michaelweylandt).",NA
+tibble,1,"`as_tibble()` checks column length only once (#365, @​anhqle).",NA
+tibble,1,"Using `rlang::list2()` (#391, @​lionel-).",NA
+tibble,1,"Using `rlang` instead of `lazyeval` (#225, @​lionel-), and `rlang`",NA
+tibble,2,"• New `lst()` and `lst_()` create lists in the same way that `data_frame()` and `data_frame_()` create data frames (hadley/dplyr#1290). `lst(NULL)` doesn't raise an error (#17, @​jennybc), but always uses deparsed expression as name (even for `NULL`).",Exported functions:
+tibble,2,"• New `rownames_to_column()` and `column_to_rownames()` (#11, @​zhilongjia).",Exported functions:
+tibble,2,"• New `repair_names()` fixes missing and duplicate names (#10, #15, @​r2evans).",Exported functions:
+tibble,2,"• `as_data_frame()` is now an S3 generic with methods for lists (the old `as_data_frame()`), data frames (trivial), matrices (with efficient C++ implementation) (hadley/dplyr#876), and `NULL` (returns a 0-row 0-column data frame) (#17, @​jennybc).",Features
+tibble,2,"• `frame_data()` properly constructs rectangular tables (hadley/dplyr#1377, @​kevinushey).",Bug fixes
+tibble,2,"• Add test that `[.tbl_df()` does not change class (#41, @​jennybc). Improve `[.tbl_df()` error message.",Minor modifications
+tibble,2,"• Update README, with edits (#52, @​bhive01) and enhancements (#54, @​jennybc).",Documentation
+tidyr,1,"`uncount()` is now generic so implementations can be provided for objects other than data frames (@​mgirlich, #1358).",NA
+tidyr,1,"`uncount()` gained the `...` argument. It comes between the required and the optional arguments (@​mgirlich, #1358).",NA
+tidyr,1,"`pivot_longer()` is now more memory efficient due to the usage of `vctrs::vec_interleave()` (#1310, @​mgirlich).",NA
+tidyr,1,"`fill()` now works correctly when there is a column named `.direction` in `data` (#1319, @​tjmahr).",NA
+tidyr,1,"`pivot_wider()` gains a new `unused_fn` argument for controlling how to summarize unused columns that aren't involved in the pivoting process (#990, thanks to @​mgirlich for an initial implementation).",NA
+tidyr,1,"`pivot_longer()`'s `names_transform` and `values_transform` arguments now accept a single function which will be applied to all of the columns (#1284, thanks to @​smingerson for an initial implementation).",NA
+tidyr,1,@​mgirlich is now a tidyr author in recognition of his significant and sustained contributions.,NA
+tidyr,1,"`expand_grid()` is now about twice as fast and `pivot_wider()` is a bit faster (@​mgirlich, #1130).",NA
+tidyr,1,"`unchop()` is now much faster, which propagates through to various functions, such as `unnest()`, `unnest_longer()`, `unnest_wider()`, and `separate_rows()` (@​mgirlich, @​DavisVaughan, #1127).",NA
+tidyr,1,"`unnest()` is now much faster (@​mgirlich, @​DavisVaughan, #1127).",NA
+tidyr,1,"`uncount()` error for non-integer weights and gives a clearer error message for negative weights (@​mgirlich, #1069).",NA
+tidyr,1,"`pivot_wider()` works with data.table and empty key variables (@​mgirlich, #1066).",NA
+tidyr,1,"`separate_rows()` works for factor columns (@​mgirlich, #1058).",NA
+tidyr,1,"stringi dependency has been removed; this was a substantial dependency that make tidyr hard to compile in resource constrained environments (@​rjpat, #936).",NA
+tidyr,1,"Both `pivot_wider()` and `pivot_longer()` are considerably more performant, thanks largely to improvements in the underlying vctrs code (#790, @​DavisVaughan).",NA
+tidyr,1,"`hoist()` now automatically names pluckers that are a single string (#837). It error if you use duplicated column names (@​mgirlich, #834), and now uses `rlang::list2()` behind the scenes (which means that you can now use `!!!` and `:=`) (#801).",NA
+tidyr,1,"`expand()`, `expand_grid()`, `crossing()`, and `nesting()` gain a `.name_repair` giving you control over their name repair strategy (@​jeffreypullin, #798).",NA
+tidyr,1,"`full_seq()` now also works when gaps between observations are shorter than the given `period`, but are within the tolerance given by `tol`. Previously, gaps between consecutive observations had to be in the range \[`period`, `period + tol`\]; gaps can now be in the range \[`period - tol`, `period + tol`\] (@​ha0ye, #657).",NA
+tidyr,1,"`complete()` now uses `full_join()` so that all levels are preserved even when not all levels are specified (@​Ryo-N7, #493).",NA
+tidyr,1,"`fill()` now accepts `downup` and `updown` as fill directions (@​coolbutuseless, #505).",NA
+tidyr,1,"`crossing()` preserves factor levels (#410), now works with list-columns (#446, @​SamanthaToet). (These also help `expand()` which is built on top of `crossing()`)",NA
+tidyr,1,"`unnest()` will run with named and unnamed list-columns of same length (@​hlendway, #460).",NA
+tidyr,1,"`separate()` now accepts `NA` as a column name in the `into` argument to denote columns which are omitted from the result. (@​markdly, #397).",NA
+tidyr,1,"`drop_na()` no longer drops columns (@​jennybryan, #245), and works with list-cols (#280). Equivalent of `NA` in a list column is any empty (length 0) data structure.",NA
+tidyr,1,"`replace_na()` now also works with vectors (#342, @​flying-sheep), and can replace `NULL` in list-columns. It throws a better error message if you attempt to replace with something other than length 1.",NA
+tidyr,1,"`separate()` now works correctly counts from RHS when using negative integer `sep` values (@​markdly, #315).",NA
+tidyr,1,"`drop_na()` removes observations which have `NA` in the given variables. If no variables are given, all variables are considered (#194, @​janschulz).",NA
+tidyr,1,"`separate()` fills from right-to-left (not left-to-right!) when fill = ""left"" (#170, @​dgrtwo).",NA
+tidyr,1,"`spread()` once again creates columns of mixed type when `convert = TRUE` (#118, @​jennybc). `spread()` with `drop = FALSE` handles zero-length factors (#56). `spread()`ing a data frame with only key and value columns creates a one row output (#41).",NA
+tidyr,1,"`unite()` now removes old columns before adding new (#89, @​krlmlr).",NA
+tidyr,1,"`separate()` now warns if defunct ... argument is used (#151, @​krlmlr).",NA
+xml2,1,`xml_find_all.xml_node()` fails more informatively the `xpath` parameter is the wrong type (@​michaelchirico),NA
+xml2,1,"`xml_find_all.xml_nodeset()` gains a `flatten` argument to control whether to return a single nodeset or a list of nodesets (#311, @​jakejh)",NA
+xml2,1,"`XPtr` gets explicit copy constructor and assignment operator definitions, which were two missing components of the [Rule of three](https://en.wikipedia.org/wiki/Rule_of_three_(C%2B%2B_programming)) (@​michaelchirico)",NA
+xml2,1,"Compilation fix on macOS 10.15.4 (@​kevinushey, #296)",NA
+xml2,1,"Fix potential dangling pointer with internal `asXmlChar()` function (@​michaelquinn32, #287).",NA
+xml2,1,"`xml_add_child()` can now create nodes with a `par` attribute. These previously errored due to partial name matching of the `parent` function in the internal `create_node()` function. (@​jennybc, #285)",NA
+xml2,1,"xml2 now has a pkgdown site! <https://xml2.r-lib.org> (@​jayhesselberth, #211).",NA
+xml2,1,"`xml_add_child()` now requires less resources to insert a node when called with `.where = 0L` (@​heckendorfc, #175).",NA
+xml2,1,"Add `xml_validate()` to validate a document against an xml schema (#31, @​jeroenooms).",NA
+xml2,1,"Allow setting non-character attributes (values are coerced to characters). (@​sjp, #117, #122).",NA
+xml2,1,"Fixed return value in call to vapply in xml_integer.xml_nodeset. (@​ddiez, #146, #147).",NA
+xml2,1,"Allow docs missing a root element to be created and printed. (@​sjp, #126, #121).",NA
+xml2,1,"xml_add\_\* methods now return invisibly. (@​sjp, #124)",NA
+xml2,1,"`as_list()` now preserves element names when attributes exist, and escapes XML attributes that conflict with special R attributes (@​peterfoley, #115).",NA
+xml2,1,"All C++ functions now use `checked_get()` instead of `get()` where possible, so NULL XPtrs properly throw an error rather than crashing. (@​jimhester, #101, #104).",NA
+xml2,1,"`xml_integer()` and `xml_double()` functions to make it easy to extract integer and double text from nodes (@​jimhester, #97, #99).",NA
+xml2,1,"xml2 now supports modification and creation of XML nodes. New functions `xml_new_document()`, `xml_new_child()`, `xml_new_sibling()`, `xml_set_namespace()`, , `xml_remove()`, `xml_replace()`, `xml_root()` and replacement methods for `xml_name()`, `xml_attr()`, `xml_attrs()` and `xml_text()` (@​jimhester, #9 #76)",NA
+xml2,1,"`xml_ns()` now keeps namespace prefixes that point to the same URI (@​jimhester, #35, #95).",NA
+xml2,1,"`read_xml()` and `read_html()` methods added for `httr::response()` objects. (@​jimhester, #63, #93)",NA
+xml2,1,"`xml_child()` function to make selecting children a little easier (@​jimhester, #23, #94)",NA
+xml2,1,"`xml_find_one()` has been deprecated in favor of `xml_find_first()` (@​jimhester, #58, #92)",NA
+xml2,1,"`xml_read()` functions now default to passing the document's namespace object. Namespace definitions can now be removed as well as added and `xml_ns_strip()` added to remove all default namespaces from a document. (@​jimhester, #28, #89)",NA
+xml2,1,"`xml_read()` gains a `options` argument to control all available parsing options, including `HUGE` to turn off limits for parsing very large documents and now drops blank text nodes by default, mimicking default behavior of XML package. (@​jimhester, #49, #62, #85, #88)",NA
+xml2,1,"`xml_write()` expands the path on filenames, so directories can be specified with '\~/' (@​jimhester, #86, #80)",NA
+xml2,1,"`xml_find_one()` now returns a 'xml_missing' node object if there are 0 matches (@​jimhester, #55, #53, hadley/rvest#82).",NA
+xml2,1,"`xml_find_num()`, `xml_find_chr()`, `xml_find_lgl()` functions added to return numeric, character and logical results from XPath expressions. (@​jimhester, #55)",NA
+tidyverse,1,"Eliminate repeats in the package list when loading an odd number of packages (#94, #100, @​dchiu911)",NA
+tidyverse,1,"Packages attached from same library they were initially loaded from (#171, @​gabrocsardi)",NA
+tidyverse,1,"`tidyverse_deps()` now succeeds even if a dependency of a dependency is missing (#152, @​PoGibas). It no longer includes dependencies that are needed by the tidyverse package but are not strictly part of the tidyverse (i.e. cli, crayon, and rstudioapi).",NA
+tidyverse,1,"`tidyverse_deps()` and `tidyverse_update()` gain a new `repos` argument that gets passed to the base function `available.packages()` (@​zkamvar, #82)",NA
+tidyverse,1,"`tidyverse_packages()` correctly returns packages names (#93, #106, @​coatless)",NA
