@@ -6501,3 +6501,5 @@ tidyverse,1,"Packages attached from same library they were initially loaded from
 tidyverse,1,"`tidyverse_deps()` now succeeds even if a dependency of a dependency is missing (#152, @​PoGibas). It no longer includes dependencies that are needed by the tidyverse package but are not strictly part of the tidyverse (i.e. cli, crayon, and rstudioapi).",NA
 tidyverse,1,"`tidyverse_deps()` and `tidyverse_update()` gain a new `repos` argument that gets passed to the base function `available.packages()` (@​zkamvar, #82)",NA
 tidyverse,1,"`tidyverse_packages()` correctly returns packages names (#93, #106, @​coatless)",NA
+readr,1,"Help files below `man/` have been re-generated, so that they give rise to valid HTML5. (This is the impetus for this release, to keep the package safely on CRAN.)",NA
+readr,1,"`mini-gapminder-africa.csv` and friends are new example datasets accessible via `readr_example()`, which have been added to illustrate reading multiple files at once, into a single data frame.",NA
