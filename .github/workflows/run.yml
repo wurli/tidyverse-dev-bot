@@ -3,7 +3,7 @@ name: twitter-dev-bot-post
 on:
   workflow_dispatch:
   schedule:
-    - cron: '15,45 * * * *'
+    - cron: '15 * * * *'
 
 jobs:
 

@@ -24,7 +24,7 @@ them to twitter.
 
 4.  Tweets are posted using the {rtweet} package
 
-5.  This is run by sourcing `run.R` once every 30 minutes using GitHub
+5.  This is run by sourcing `run.R` once every hour using GitHub
     Actions
 
 ## Why?
