@@ -92,6 +92,10 @@
 
     !end-bullet!
 -   !begin-bullet!
+    New `str_sub_all()` to extract multiple substrings from each string.
+
+    !end-bullet!
+-   !begin-bullet!
     New `str_unique()` is a wrapper around `stri_unique()` and returns
     unique string values in a character vector (#249, @seasmith).
 

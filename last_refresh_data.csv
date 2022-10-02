@@ -6503,3 +6503,4 @@ tidyverse,1,"`tidyverse_deps()` and `tidyverse_update()` gain a new `repos` argu
 tidyverse,1,"`tidyverse_packages()` correctly returns packages names (#93, #106, @​coatless)",NA
 readr,1,"Help files below `man/` have been re-generated, so that they give rise to valid HTML5. (This is the impetus for this release, to keep the package safely on CRAN.)",NA
 readr,1,"`mini-gapminder-africa.csv` and friends are new example datasets accessible via `readr_example()`, which have been added to illustrate reading multiple files at once, into a single data frame.",NA
+stringr,1,New `str_sub_all()` to extract multiple substrings from each string.,NA
