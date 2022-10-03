@@ -6505,3 +6505,5 @@ readr,1,"Help files below `man/` have been re-generated, so that they give rise 
 readr,1,"`mini-gapminder-africa.csv` and friends are new example datasets accessible via `readr_example()`, which have been added to illustrate reading multiple files at once, into a single data frame.",NA
 stringr,1,New `str_sub_all()` to extract multiple substrings from each string.,NA
 rlang,1,Many functions deprecated in rlang 0.2.0 and 0.3.0 have been removed from the package.,NA
+stringr,1,"`str_view()` will use ANSI colouring if available (#370). This works in more places than HTML widgets and requires fewer dependencies. `str_view()` also no longer requires a pattern so you can use it to display strings with special characters. It now highlights whitespace characters apart from space since otherwise they are often confusing. It's also now vectorised over both `string` and `pattern` (#407). It defaults to displaying all matches, making `str_view_all()` redundant (and hence deprecated) (#455).",NA
+stringr,1,`str_extract()` can now optionally extract a capturing group instead of the complete match (#420).,NA

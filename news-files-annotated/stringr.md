@@ -50,7 +50,8 @@
     display strings with special characters. It now highlights
     whitespace characters apart from space since otherwise they are
     often confusing. It's also now vectorised over both `string` and
-    `pattern` (#407).
+    `pattern` (#407). It defaults to displaying all matches, making
+    `str_view_all()` redundant (and hence deprecated) (#455).
 
     !end-bullet!
 -   !begin-bullet!
@@ -69,6 +70,11 @@
 -   !begin-bullet!
     New `str_equal()` compares two character vectors using unicode
     rules, and optionally ignores case (#381).
+
+    !end-bullet!
+-   !begin-bullet!
+    `str_extract()` can now optionally extract a capturing group instead
+    of the complete match (#420).
 
     !end-bullet!
 -   !begin-bullet!
