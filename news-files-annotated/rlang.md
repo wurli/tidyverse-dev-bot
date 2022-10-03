@@ -488,8 +488,8 @@ extensive changes to the display of error messages.
 
     !end-bullet!
 -   !begin-bullet!
-    Many functions deprecated deprecated in rlang 0.2.0 and 0.3.0 have
-    been removed from the package.
+    Many functions deprecated in rlang 0.2.0 and 0.3.0 have been removed
+    from the package.
 
     !end-bullet!
 
