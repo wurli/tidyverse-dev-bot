@@ -6508,3 +6508,4 @@ rlang,1,Many functions deprecated in rlang 0.2.0 and 0.3.0 have been removed fro
 stringr,1,"`str_view()` will use ANSI colouring if available (#370). This works in more places than HTML widgets and requires fewer dependencies. `str_view()` also no longer requires a pattern so you can use it to display strings with special characters. It now highlights whitespace characters apart from space since otherwise they are often confusing. It's also now vectorised over both `string` and `pattern` (#407). It defaults to displaying all matches, making `str_view_all()` redundant (and hence deprecated) (#455).",NA
 stringr,1,`str_extract()` can now optionally extract a capturing group instead of the complete match (#420).,NA
 cli,1,`col_*` and `bg_*` functions how handle zero-length input correctly (#532).,NA
+cli,1,New function `pretty_print_code()` to print function objects with syntax highlighting at the R console.,NA

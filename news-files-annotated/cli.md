@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    New function `pretty_print_code()` to print function objects with
+    syntax highlighting at the R console.
+
+    !end-bullet!
+-   !begin-bullet!
     `col_*` and `bg_*` functions how handle zero-length input correctly
     (#532).
 
