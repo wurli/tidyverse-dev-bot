@@ -6510,3 +6510,4 @@ stringr,1,`str_extract()` can now optionally extract a capturing group instead o
 cli,1,`col_*` and `bg_*` functions how handle zero-length input correctly (#532).,NA
 cli,1,New function `pretty_print_code()` to print function objects with syntax highlighting at the R console.,NA
 stringr,1,`str_flatten_comma()` is a special case of `str_flatten()` designed for comman separated flattening and can handle the special case of Oxford commas with two elements (#444).,NA
+stringr,1,A new data source for `sentences` has fixed many small errors.,NA

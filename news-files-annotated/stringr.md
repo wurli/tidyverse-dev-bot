@@ -132,7 +132,7 @@
 
     !end-bullet!
 -   !begin-bullet!
-    Many typos in `sentences` have been fixed (@romatik, #299)
+    A new data source for `sentences` has fixed many small errors.
 
     !end-bullet!
 -   !begin-bullet!
