@@ -3,6 +3,18 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Passing `...` to `across()` is now deprecated because the evaluation
+    timing of `...` is ambiguous. Now instead of (e.g.)
+    `across(a:b, mean, na.rm = TRUE)` you should write
+    `across(a:b, ~ mean(.x, na.rm = TRUE))`.
+
+    !end-bullet!
+-   !begin-bullet!
+    `case_when()` now supports the `.default` argument (@mgirlich,
+    #1017).
+
+    !end-bullet!
+-   !begin-bullet!
     `distinct()` returns columns ordered the way you request, not the
     same as the input data (@mgirlich).
 

@@ -6512,3 +6512,6 @@ cli,1,New function `pretty_print_code()` to print function objects with syntax h
 stringr,1,`str_flatten_comma()` is a special case of `str_flatten()` designed for comman separated flattening and can handle the special case of Oxford commas with two elements (#444).,NA
 stringr,1,A new data source for `sentences` has fixed many small errors.,NA
 dbplyr,1,"`distinct()` returns columns ordered the way you request, not the same as the input data (@​mgirlich).",NA
+dbplyr,1,"Passing `...` to `across()` is now deprecated because the evaluation timing of `...` is ambiguous. Now instead of (e.g.) `across(a:b, mean, na.rm = TRUE)` you should write `across(a:b, ~ mean(.x, na.rm = TRUE))`.",NA
+dbplyr,1,"`case_when()` now supports the `.default` argument (@​mgirlich, #1017).",NA
+stringr,1,Many tweaks to the documentation to make it more useful and consistent.,NA
