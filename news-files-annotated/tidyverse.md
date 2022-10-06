@@ -3,7 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    tidyverse now installs ragg (#310).
+
+    !end-bullet!
+-   !begin-bullet!
     Add lubridate to the core tidyverse (#157).
+
     !end-bullet!
 
 !end-bullets-1!

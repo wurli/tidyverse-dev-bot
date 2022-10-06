@@ -6516,3 +6516,5 @@ dbplyr,1,"Passing `...` to `across()` is now deprecated because the evaluation t
 dbplyr,1,"`case_when()` now supports the `.default` argument (@​mgirlich, #1017).",NA
 stringr,1,Many tweaks to the documentation to make it more useful and consistent.,NA
 purrr,1,`pluck()` no longer replaces 0-length vectors with `default`; it now only applies absent and `NULL` components (#480).,NA
+tidyverse,1,tidyverse now installs ragg (#310).,NA
+tidyverse,1,Add lubridate to the core tidyverse (#157).,NA
