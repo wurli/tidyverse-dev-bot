@@ -6515,3 +6515,4 @@ dbplyr,1,"`distinct()` returns columns ordered the way you request, not the same
 dbplyr,1,"Passing `...` to `across()` is now deprecated because the evaluation timing of `...` is ambiguous. Now instead of (e.g.) `across(a:b, mean, na.rm = TRUE)` you should write `across(a:b, ~ mean(.x, na.rm = TRUE))`.",NA
 dbplyr,1,"`case_when()` now supports the `.default` argument (@​mgirlich, #1017).",NA
 stringr,1,Many tweaks to the documentation to make it more useful and consistent.,NA
+purrr,1,`pluck()` no longer replaces 0-length vectors with `default`; it now only applies absent and `NULL` components (#480).,NA

@@ -284,7 +284,7 @@
     !end-bullet!
 -   !begin-bullet!
     `pluck()` no longer replaces 0-length vectors with `default`; it now
-    only applies absent and `NULL` components.
+    only applies absent and `NULL` components (#480).
 
     !end-bullet!
 -   !begin-bullet!
