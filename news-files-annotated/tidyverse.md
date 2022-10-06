@@ -3,6 +3,16 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    We now advertise `library(conflicted)` because it resolves many
+    conflict problems and silences tidyverse's automated report (#218).
+
+    !end-bullet!
+-   !begin-bullet!
+    `tidyverse_sitrep()` correctly displays installed package versions
+    and highlights development versions of pacakges (#222).
+
+    !end-bullet!
+-   !begin-bullet!
     tidyverse now installs ragg (#310).
 
     !end-bullet!
