@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `distinct()` returns columns ordered the way you request, not the
+    same as the input data (@mgirlich).
+
+    !end-bullet!
+-   !begin-bullet!
     Variables that are neither found in the data nor in the environment
     now produce an error (@mgirlich, #907).
 
