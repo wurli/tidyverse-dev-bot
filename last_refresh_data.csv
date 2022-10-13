@@ -5878,28 +5878,6 @@ tidyverse,1,"If conflicted package is loaded, omit display of conflicts. This in
 tidyverse,1,"`tidyverse_deps()` now succeeds even if a dependency of a dependency is missing (#152, @​PoGibas). It no longer includes dependencies that are needed by the tidyverse package but are not strictly part of the tidyverse (i.e. cli, crayon, and rstudioapi).",NA
 tidyverse,1,"`tidyverse_deps()` and `tidyverse_update()` gain a new `repos` argument that gets passed to the base function `available.packages()` (@​zkamvar, #82)",NA
 tidyverse,1,"`tidyverse_packages()` correctly returns packages names (#93, #106, @​coatless)",NA
-<<<<<<< HEAD
-readr,1,"Help files below `man/` have been re-generated, so that they give rise to valid HTML5. (This is the impetus for this release, to keep the package safely on CRAN.)",NA
-readr,1,"`mini-gapminder-africa.csv` and friends are new example datasets accessible via `readr_example()`, which have been added to illustrate reading multiple files at once, into a single data frame.",NA
-stringr,1,New `str_sub_all()` to extract multiple substrings from each string.,NA
-rlang,1,Many functions deprecated in rlang 0.2.0 and 0.3.0 have been removed from the package.,NA
-stringr,1,"`str_view()` will use ANSI colouring if available (#370). This works in more places than HTML widgets and requires fewer dependencies. `str_view()` also no longer requires a pattern so you can use it to display strings with special characters. It now highlights whitespace characters apart from space since otherwise they are often confusing. It's also now vectorised over both `string` and `pattern` (#407). It defaults to displaying all matches, making `str_view_all()` redundant (and hence deprecated) (#455).",NA
-stringr,1,`str_extract()` can now optionally extract a capturing group instead of the complete match (#420).,NA
-cli,1,`col_*` and `bg_*` functions how handle zero-length input correctly (#532).,NA
-cli,1,New function `pretty_print_code()` to print function objects with syntax highlighting at the R console.,NA
-stringr,1,`str_flatten_comma()` is a special case of `str_flatten()` designed for comman separated flattening and can handle the special case of Oxford commas with two elements (#444).,NA
-stringr,1,A new data source for `sentences` has fixed many small errors.,NA
-dbplyr,1,"`distinct()` returns columns ordered the way you request, not the same as the input data (@​mgirlich).",NA
-dbplyr,1,"Passing `...` to `across()` is now deprecated because the evaluation timing of `...` is ambiguous. Now instead of (e.g.) `across(a:b, mean, na.rm = TRUE)` you should write `across(a:b, ~ mean(.x, na.rm = TRUE))`.",NA
-dbplyr,1,"`case_when()` now supports the `.default` argument (@​mgirlich, #1017).",NA
-stringr,1,Many tweaks to the documentation to make it more useful and consistent.,NA
-purrr,1,`pluck()` no longer replaces 0-length vectors with `default`; it now only applies absent and `NULL` components (#480).,NA
-tidyverse,1,tidyverse now installs ragg (#310).,NA
-tidyverse,1,Add lubridate to the core tidyverse (#157).,NA
-tidyverse,1,We now advertise `library(conflicted)` because it resolves many conflict problems and silences tidyverse's automated report (#218).,NA
-tidyverse,1,`tidyverse_sitrep()` correctly displays installed package versions and highlights development versions of pacakges (#222).,NA
-broom,1,"Migrated 'ggplot2' from strong to weak dependency, i.e. moved from",NA
-=======
 tidyverse,1,`tidyverse_sitrep()` gives you a situation report on your install of the tidyverse (#203),NA
 tidyverse,1,Require modern versions of all packages (#85),NA
 tidyverse,1,Work with RStudio 1.0 and earlier (#88).,NA
@@ -5916,4 +5894,3 @@ tidyverse,2,"• Removed DBI (since very different API, #16)",Membership changes
 tidyverse,2,• Added feather (#15),Membership changes:
 tidyverse,1,"`tidyverse_deps()` and `tidyverse_packages()` are now exported so you can more easily see the make up of the tidyverse, and what package versions you have (#18, #23)",NA
 tidyverse,1,`suppressPackageStartupMessages()` now suppresses all messages during loading (#19). `suppressPackageStartupMessages()` is called automatically for all tidyverse packages (#27).,NA
->>>>>>> e7dcdcd (fix dropped lines)
