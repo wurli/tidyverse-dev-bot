@@ -9,12 +9,13 @@ remove_old_bullets <- function(x, file = "last_refresh_data.csv", overwrite = TR
     return(tibble())
   }
   
-  cli::cli_alert("Reading {.file {file}}")
-  prev <- read_csv(file, show_col_types = FALSE)
-  
   by <- c("package", "bullets_level", "text", "parent_text")
   
-  # Makes development easier
+  prev <- get_prev_bullets(file, pattern = select(x, all_of(by)))
+  prev_rows <- nrow(prev)
+  
+  # Makes development easier - check that cols are the same and maybe overwrite
+  # if not
   if (!identical(colnames(prev), by)) {
     
     stopifnot(interactive())
@@ -34,7 +35,26 @@ remove_old_bullets <- function(x, file = "last_refresh_data.csv", overwrite = TR
     return(x)
     
   }
-
+  
+  # If a new package is present, treat those bullets as if they've already
+  # been tweeted - i.e. just add them to the cache. Future *new* bullets
+  # will then be tweeted as normal
+  for (pkg in x$package) {
+    
+    if (!pkg %in% prev$package) {
+      
+      cli::cli_alert_info("New package {.pkg {pkg}} detected - these bullets will be cached but not tweeted")
+      
+      prev <- rows_insert(
+        x = prev,
+        y = x |> select(all_of(by)) |> filter(package == pkg),
+        by = by
+      )
+      
+    }
+    
+  }
+  
   out <- rows_delete(
     x = x,
     y = prev |> select(all_of(by)),
@@ -62,7 +82,7 @@ remove_old_bullets <- function(x, file = "last_refresh_data.csv", overwrite = TR
       by = by,
       conflict = "ignore"
     )
-    n <- nrow(already_tweeted) - nrow(prev)
+    n <- nrow(already_tweeted) - prev_rows
     cli::cli_alert("Adding {.val {n}} new rows to {.file {file}}")
     write_csv(already_tweeted, "last_refresh_data.csv")
   } else {
@@ -71,5 +91,19 @@ remove_old_bullets <- function(x, file = "last_refresh_data.csv", overwrite = TR
   
   out
   
+  
+}
+
+get_prev_bullets <- function(file, pattern) {
+  
+  if (!file.exists(file)) {
+    cli::cli_alert("Creating new file {.file {file}}")
+    x <- pattern |> filter(FALSE)
+    readr::write_csv(x, file)
+    return(x)
+  }
+  
+  cli::cli_alert("Reading {.file {file}}")
+  readr::read_csv(file, show_col_types = FALSE)
   
 }

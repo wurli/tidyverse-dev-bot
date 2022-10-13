@@ -1,4 +1,4 @@
-get_news_data <- function(files = list.files("news-files-annotates", full.names = TRUE)) {
+get_news_data <- function(files = list.files("news-files-annotated", full.names = TRUE)) {
   
   # For notifications
   force(files)
@@ -47,7 +47,7 @@ news_to_df <- function(text, pkg, bullet_syms = c("\U2022", "\U2023", "\U2043"))
       bullets_end     = str_detect(text, ann$bullets_end),
       bullets_level   = cumsum(bullets_start) - cumsum(bullets_end),
       bullet_start    = lag(str_detect(text, ann$bullet_start), default = FALSE),
-      bullet_end      = lead(str_detect(text, ann$bullet_end), 1, default = FALSE),
+      bullet_end      = str_detect(text, ann$bullet_end),
       is_bullet       = as.logical(cumsum(bullet_start) - cumsum(bullet_end)),
       bullet_id       = cumsum(bullet_start) + ifelse(is_bullet, 0, NA),
       codeblock_start = lag(str_detect(text, ann$codeblock_start), default = FALSE),
