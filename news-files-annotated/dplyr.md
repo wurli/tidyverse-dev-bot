@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `arrange()` now works correctly when `across()` calls are used as
+    the 2nd (or more) ordering expression (#6495).
+
+    !end-bullet!
+-   !begin-bullet!
     Joins now reference the correct column in `y` when a type error is
     thrown while joining on two columns with different names (#6465).
 
