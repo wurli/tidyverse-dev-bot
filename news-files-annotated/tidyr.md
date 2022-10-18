@@ -3,6 +3,18 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `chop()`, `drop_na()`, `fill()`, `pivot_longer()`, `pivot_wider()`,
+    `separate_rows()`, `unite()`, `unnest_longer()`, and
+    `unnest_wider()` now error if you supply named selection (#1104).
+
+    !end-bullet!
+-   !begin-bullet!
+    Add new datasets `who2`, `household`, `cms_patient_experience` and
+    `cms_patient_care` to demonstrate various tidying challenges
+    (#1333).
+
+    !end-bullet!
+-   !begin-bullet!
     `pivot_longer()` now throws a slightly better error message when
     `values_ptypes` or `names_ptypes` is provided and the coercion can't
     be made (#1364).

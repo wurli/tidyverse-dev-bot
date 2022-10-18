@@ -5895,3 +5895,5 @@ tidyverse,2,• Added feather (#15),Membership changes:
 tidyverse,1,"`tidyverse_deps()` and `tidyverse_packages()` are now exported so you can more easily see the make up of the tidyverse, and what package versions you have (#18, #23)",NA
 tidyverse,1,`suppressPackageStartupMessages()` now suppresses all messages during loading (#19). `suppressPackageStartupMessages()` is called automatically for all tidyverse packages (#27).,NA
 dplyr,1,`arrange()` now works correctly when `across()` calls are used as the 2nd (or more) ordering expression (#6495).,NA
+tidyr,1,"`chop()`, `drop_na()`, `fill()`, `pivot_longer()`, `pivot_wider()`, `separate_rows()`, `unite()`, `unnest_longer()`, and `unnest_wider()` now error if you supply named selection (#1104).",NA
+tidyr,1,"Add new datasets `who2`, `household`, `cms_patient_experience` and `cms_patient_care` to demonstrate various tidying challenges (#1333).",NA
