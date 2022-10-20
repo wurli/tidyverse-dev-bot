@@ -28,10 +28,6 @@
 
     !end-bullet!
 -   !begin-bullet!
-    `str_split_fixed()` now pads with `NA` rather than `" "` (#195).
-
-    !end-bullet!
--   !begin-bullet!
     `regex()` and friends now generate class names with `stringr_`
     prefix (#384).
 
