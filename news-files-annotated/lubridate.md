@@ -44,6 +44,11 @@
     have a recycled `isdst` field.
     !end-bullet!
 -   !begin-bullet!
+    [#1069](https://github.com/tidyverse/lubridate/issues/1069) Internal
+    code handling the addition of period months and years no longer
+    generates partially recycled POSIXlt objects.
+    !end-bullet!
+-   !begin-bullet!
     Fix rounding of POSIXlt objects
     !end-bullet!
 -   !begin-bullet!
