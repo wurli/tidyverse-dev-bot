@@ -5898,3 +5898,4 @@ dplyr,1,`arrange()` now works correctly when `across()` calls are used as the 2n
 tidyr,1,"`chop()`, `drop_na()`, `fill()`, `pivot_longer()`, `pivot_wider()`, `separate_rows()`, `unite()`, `unnest_longer()`, and `unnest_wider()` now error if you supply named selection (#1104).",NA
 tidyr,1,"Add new datasets `who2`, `household`, `cms_patient_experience` and `cms_patient_care` to demonstrate various tidying challenges (#1333).",NA
 tidyr,1,"tidyr errors (including input validation) have been thorougly reviewed and should generally be more likely to point you in the right direction (#1313, #1400).",NA
+lubridate,1,[#1044](https://github.com/tidyverse/lubridate/issues/1044) POSIXlt results returned by `fast_strptime()` and `parse_date_time2()` now have a recycled `isdst` field.,NA

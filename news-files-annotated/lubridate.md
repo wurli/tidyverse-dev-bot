@@ -34,6 +34,11 @@
 !begin-bullets-2!
 
 -   !begin-bullet!
+    [#1044](https://github.com/tidyverse/lubridate/issues/1044) POSIXlt
+    results returned by `fast_strptime()` and `parse_date_time2()` now
+    have a recycled `isdst` field.
+    !end-bullet!
+-   !begin-bullet!
     Fix rounding of POSIXlt objects
     !end-bullet!
 -   !begin-bullet!
