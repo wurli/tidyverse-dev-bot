@@ -5899,3 +5899,4 @@ tidyr,1,"`chop()`, `drop_na()`, `fill()`, `pivot_longer()`, `pivot_wider()`, `se
 tidyr,1,"Add new datasets `who2`, `household`, `cms_patient_experience` and `cms_patient_care` to demonstrate various tidying challenges (#1333).",NA
 tidyr,1,"tidyr errors (including input validation) have been thorougly reviewed and should generally be more likely to point you in the right direction (#1313, #1400).",NA
 lubridate,1,[#1044](https://github.com/tidyverse/lubridate/issues/1044) POSIXlt results returned by `fast_strptime()` and `parse_date_time2()` now have a recycled `isdst` field.,NA
+lubridate,1,"[#941](https://github.com/tidyverse/lubridate/issues/941) `format_ISO8601()` gained a new option `usetz=""Z""` to format time zones with a ""Z"" and convert the time to the UTC time zone.",NA

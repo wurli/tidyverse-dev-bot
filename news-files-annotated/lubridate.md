@@ -26,6 +26,11 @@
     `%within` method with signature (Interval, list), which was
     documented but not implemented.
     !end-bullet!
+-   !begin-bullet!
+    [#941](https://github.com/tidyverse/lubridate/issues/941)
+    `format_ISO8601()` gained a new option `usetz="Z"` to format time
+    zones with a "Z" and convert the time to the UTC time zone.
+    !end-bullet!
 
 !end-bullets-1!
 
