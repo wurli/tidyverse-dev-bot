@@ -5901,3 +5901,5 @@ tidyr,1,"tidyr errors (including input validation) have been thorougly reviewed 
 lubridate,1,[#1044](https://github.com/tidyverse/lubridate/issues/1044) POSIXlt results returned by `fast_strptime()` and `parse_date_time2()` now have a recycled `isdst` field.,NA
 lubridate,1,"[#941](https://github.com/tidyverse/lubridate/issues/941) `format_ISO8601()` gained a new option `usetz=""Z""` to format time zones with a ""Z"" and convert the time to the UTC time zone.",NA
 lubridate,1,[#1069](https://github.com/tidyverse/lubridate/issues/1069) Internal code handling the addition of period months and years no longer generates partially recycled POSIXlt objects.,NA
+lubridate,1,[#1017](https://github.com/tidyverse/lubridate/issues/1017) `week_start` argument in all lubridate functions now accepts full and abbreviated names of the days of the week.,NA
+lubridate,1,The assignment value `wday<-` can be a string either in English or as provided by the current locale.,NA

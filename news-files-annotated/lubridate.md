@@ -5,6 +5,15 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    [#1017](https://github.com/tidyverse/lubridate/issues/1017)
+    `week_start` argument in all lubridate functions now accepts full
+    and abbreviated names of the days of the week.
+    !end-bullet!
+-   !begin-bullet!
+    The assignment value `wday<-` can be a string either in English or
+    as provided by the current locale.
+    !end-bullet!
+-   !begin-bullet!
     Date rounding functions accept a date-time `unit` argument for
     rounding to a vector of date-times.
     !end-bullet!
