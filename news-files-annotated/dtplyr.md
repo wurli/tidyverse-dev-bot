@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `names_glue` now works in `pivot_wider()` when `names_from` contains
+    `NA`s (#394)
+
+    !end-bullet!
+-   !begin-bullet!
     `full_join()` now produces output with correctly named columns when
     a non-default value for `suffix` is supplied. Previously the
     `suffix` argument was ignored (#382).
