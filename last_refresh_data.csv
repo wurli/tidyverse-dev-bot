@@ -5905,3 +5905,5 @@ lubridate,1,[#1017](https://github.com/tidyverse/lubridate/issues/1017) `week_st
 lubridate,1,The assignment value `wday<-` can be a string either in English or as provided by the current locale.,NA
 rlang,1,rlang is now compliant with `-Wstrict-prototypes` as requested by CRAN (#1508).,NA
 dtplyr,1,`names_glue` now works in `pivot_wider()` when `names_from` contains `NA`s (#394),NA
+lubridate,1,"[#1074](https://github.com/tidyverse/lubridate/issues/1074) Fix concatination of named Period, Interval and Duration vectors.",NA
+lubridate,1,"Change implementation of `c.Period`, `c.Duration` and `c.Interval` from S4 to S3.",NA

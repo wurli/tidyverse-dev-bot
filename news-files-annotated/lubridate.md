@@ -48,6 +48,10 @@
 !begin-bullets-2!
 
 -   !begin-bullet!
+    [#1074](https://github.com/tidyverse/lubridate/issues/1074) Fix
+    concatination of named Period, Interval and Duration vectors.
+    !end-bullet!
+-   !begin-bullet!
     [#1044](https://github.com/tidyverse/lubridate/issues/1044) POSIXlt
     results returned by `fast_strptime()` and `parse_date_time2()` now
     have a recycled `isdst` field.
@@ -83,11 +87,22 @@
 
 !end-bullets-2!
 
+### INTERNALS
+
+!begin-bullets-3!
+
+-   !begin-bullet!
+    Change implementation of `c.Period`, `c.Duration` and `c.Interval`
+    from S4 to S3.
+    !end-bullet!
+
+!end-bullets-3!
+
 # Version 1.8.0
 
 ### NEW FEATURES
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     [#960](https://github.com/tidyverse/lubridate/issues/960)
@@ -95,11 +110,11 @@
     (e.g `c(date, datetime)` works as expected)
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 ### BUG FIXES
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     [#994](https://github.com/tidyverse/lubridate/issues/994)
@@ -117,24 +132,24 @@
 
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 ### CHANGES
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     [#966](https://github.com/tidyverse/lubridate/pull/966) Lubridate is
     now built with cpp11 (contribution of @DavisVaughan)
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # Version 1.7.10
 
 ### NEW FEATURES
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     [#955](https://github.com/tidyverse/lubridate/pull/955) Add `type`
@@ -145,11 +160,11 @@
     formats and apply them in turn
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 ### BUG FIXES
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     [#926](https://github.com/tidyverse/lubridate/issues/926) Fix
@@ -159,13 +174,13 @@
     Fix incorrect skipping of digits during parsing of the `%z` format
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 # Version 1.7.9.2
 
 ### NEW FEATURES
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     [#914](https://github.com/tidyverse/lubridate/issues/914) New
@@ -182,11 +197,11 @@
     parsing functions `ym()` and `my()`
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 ### BUG FIXES
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     [#930](https://github.com/tidyverse/lubridate/issues/930)
@@ -194,24 +209,24 @@
     fields (not integers)
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 # Version 1.7.9
 
 ### NEW FEATURES
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     [#871](https://github.com/tidyverse/lubridate/issues/893) Add
     `vctrs` support
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 ### BUG FIXES
 
-!begin-bullets-11!
+!begin-bullets-12!
 
 -   !begin-bullet!
     [#890](https://github.com/tidyverse/lubridate/issues/890) Correctly
@@ -235,13 +250,13 @@
     dmonth function
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-12!
 
 # Version 1.7.8
 
 ### NEW FEATURES
 
-!begin-bullets-12!
+!begin-bullets-13!
 
 -   !begin-bullet!
     (breaking) Year and month durations now assume 365.25 days in a year
@@ -319,11 +334,11 @@
     NAs to all internal components of a Period object
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
 
 ### BUG FIXES
 
-!begin-bullets-13!
+!begin-bullets-14!
 
 -   !begin-bullet!
     [#682](https://github.com/tidyverse/lubridate/issues/682) Fix
@@ -345,13 +360,13 @@
     far ignored.
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-14!
 
 # Version 1.7.4
 
 ### NEW FEATURES
 
-!begin-bullets-14!
+!begin-bullets-15!
 
 -   !begin-bullet!
     [#658](https://github.com/tidyverse/lubridate/issues/658) `%within%`
@@ -359,11 +374,11 @@
     if it occurs within any of the supplied intervals.
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-15!
 
 ### CHANGES
 
-!begin-bullets-15!
+!begin-bullets-16!
 
 -   !begin-bullet!
     [#661](https://github.com/tidyverse/lubridate/issues/661) Throw
@@ -379,11 +394,11 @@
     inferred.
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-16!
 
 ### BUG FIXES
 
-!begin-bullets-16!
+!begin-bullets-17!
 
 -   !begin-bullet!
     [#664](https://github.com/tidyverse/lubridate/issues/664) Fix lookup
@@ -394,13 +409,13 @@
     timezone memoization
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-17!
 
 # Version 1.7.3
 
 ### BUG FIXES
 
-!begin-bullets-17!
+!begin-bullets-18!
 
 -   !begin-bullet!
     [#643](https://github.com/tidyverse/lubridate/issues/643),
@@ -409,13 +424,13 @@
     caching of system timezone.
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-18!
 
 # Version 1.7.2
 
 ### NEW FEATURES
 
-!begin-bullets-18!
+!begin-bullets-19!
 
 -   !begin-bullet!
     Durations, Periods and difftimes are now comparable with each other.
@@ -433,21 +448,21 @@
     support for ISO 8601 formats in periods and durations constructor
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-19!
 
 ### CHANGES
 
-!begin-bullets-19!
+!begin-bullets-20!
 
 -   !begin-bullet!
     Correct license to the originally intended GPL (\>= 2)
     !end-bullet!
 
-!end-bullets-19!
+!end-bullets-20!
 
 ### BUG FIXES
 
-!begin-bullets-20!
+!begin-bullets-21!
 
 -   !begin-bullet!
     [#605](https://github.com/tidyverse/lubridate/issues/605) Fix wrong
@@ -465,13 +480,13 @@
     Fix UBSAN errors in update.cpp
     !end-bullet!
 
-!end-bullets-20!
+!end-bullets-21!
 
 # Version 1.7.1
 
 ### BUG FIXES
 
-!begin-bullets-21!
+!begin-bullets-22!
 
 -   !begin-bullet!
     [#575](https://github.com/tidyverse/lubridate/issues/598),
@@ -488,13 +503,13 @@
     parsing of `ymd` strings by `as_datetime`.
     !end-bullet!
 
-!end-bullets-21!
+!end-bullets-22!
 
 # Version 1.7.0
 
 ### NEW FEATURES
 
-!begin-bullets-22!
+!begin-bullets-23!
 
 -   !begin-bullet!
     Reduced memory footprint on `trunc_multi_unit` so that it overwrites
@@ -570,11 +585,11 @@
     ([#516](https://github.com/tidyverse/lubridate/issues/516),[#308](https://github.com/tidyverse/lubridate/issues/308),[#307](https://github.com/tidyverse/lubridate/issues/307)).
     !end-bullet!
 
-!end-bullets-22!
+!end-bullets-23!
 
 ### CHANGES
 
-!begin-bullets-23!
+!begin-bullets-24!
 
 -   !begin-bullet!
     [#401](https://github.com/tidyverse/lubridate/issues/401)
@@ -593,11 +608,11 @@
     original intent, and was always documented as such.
     !end-bullet!
 
-!end-bullets-23!
+!end-bullets-24!
 
 ### BUG FIXES
 
-!begin-bullets-24!
+!begin-bullets-25!
 
 -   !begin-bullet!
     [#314](https://github.com/tidyverse/lubridate/issues/314),
@@ -695,13 +710,13 @@
     when running in non-English locales
     !end-bullet!
 
-!end-bullets-24!
+!end-bullets-25!
 
 # Version 1.6.0
 
 ### NEW FEATURES
 
-!begin-bullets-25!
+!begin-bullets-26!
 
 -   !begin-bullet!
     [#464](https://github.com/tidyverse/lubridate/issues/464) New
@@ -781,11 +796,11 @@
     parsing functions understand 24:00:00 in datetime strings.
     !end-bullet!
 
-!end-bullets-25!
+!end-bullets-26!
 
 ### CHANGES
 
-!begin-bullets-26!
+!begin-bullets-27!
 
 -   !begin-bullet!
     Low letter specs for HMS (hms,hm,ms) in `parse_date_time` and
@@ -834,11 +849,11 @@
     output in documentation examples was removed.
     !end-bullet!
 
-!end-bullets-26!
+!end-bullets-27!
 
 ### BUG FIXES
 
-!begin-bullets-27!
+!begin-bullets-28!
 
 -   !begin-bullet!
     [#479](https://github.com/tidyverse/lubridate/issues/479) Fix the
@@ -871,13 +886,13 @@
     lengths.
     !end-bullet!
 
-!end-bullets-27!
+!end-bullets-28!
 
 # Version 1.5.6
 
 ### NEW FEATURES
 
-!begin-bullets-28!
+!begin-bullets-29!
 
 -   !begin-bullet!
     [#390](https://github.com/tidyverse/lubridate/issues/390)
@@ -916,11 +931,11 @@
     parsers now handle negative components.
     !end-bullet!
 
-!end-bullets-28!
+!end-bullets-29!
 
 ### CHANGES
 
-!begin-bullets-29!
+!begin-bullets-30!
 
 -   !begin-bullet!
     [#391](https://github.com/tidyverse/lubridate/issues/391) `ymd`
@@ -936,11 +951,11 @@
     `POSIXlt` object. That is, its `lt` argument defaults to `TRUE`.
     !end-bullet!
 
-!end-bullets-29!
+!end-bullets-30!
 
 ### BUG FIXES
 
-!begin-bullets-30!
+!begin-bullets-31!
 
 -   !begin-bullet!
     `interval` constructor treats timezones correctly and works with UTC
@@ -967,13 +982,13 @@
     larger than day units
     !end-bullet!
 
-!end-bullets-30!
+!end-bullets-31!
 
 # Version 1.5.0
 
 ### NEW FEATURES
 
-!begin-bullets-31!
+!begin-bullets-32!
 
 -   !begin-bullet!
     New `time_length` method.
@@ -1011,11 +1026,11 @@
     settors and accessors for `qday` (quarter day).
     !end-bullet!
 
-!end-bullets-31!
+!end-bullets-32!
 
 ### CHANGES
 
-!begin-bullets-32!
+!begin-bullets-33!
 
 -   !begin-bullet!
     New maintainer Vitalie Spinu (@vspinu)
@@ -1056,11 +1071,11 @@
     Made necessary changes to accommodate new zoo-based `fst` objects.
     !end-bullet!
 
-!end-bullets-32!
+!end-bullets-33!
 
 ### BUG FIXES
 
-!begin-bullets-33!
+!begin-bullets-34!
 
 -   !begin-bullet!
     [#360](https://github.com/tidyverse/lubridate/issues/360) Fix c
@@ -1141,13 +1156,13 @@
     Correctly handle NA subscripting in `round_date`.
     !end-bullet!
 
-!end-bullets-33!
+!end-bullets-34!
 
 # Version 1.4.0
 
 ### CHANGES
 
-!begin-bullets-34!
+!begin-bullets-35!
 
 -   !begin-bullet!
     [#219](https://github.com/tidyverse/lubridate/issues/219) In
@@ -1158,11 +1173,11 @@
     \> 68 as 19yy to comply with `strptime`.
     !end-bullet!
 
-!end-bullets-34!
+!end-bullets-35!
 
 ### BUG FIXES
 
-!begin-bullets-35!
+!begin-bullets-36!
 
 -   !begin-bullet!
     [#266](https://github.com/tidyverse/lubridate/issues/266) Include
@@ -1212,13 +1227,13 @@
     Fixed setdiff for discontinuous intervals.
     !end-bullet!
 
-!end-bullets-35!
+!end-bullets-36!
 
 # Version 1.3.3
 
 ### CHANGES
 
-!begin-bullets-36!
+!begin-bullets-37!
 
 -   !begin-bullet!
     New low level C parser for numeric formats and two new front-end R
@@ -1231,11 +1246,11 @@
 
     !end-bullet!
 
-!end-bullets-36!
+!end-bullets-37!
 
 ### BUG FIXES
 
-!begin-bullets-37!
+!begin-bullets-38!
 
 -   !begin-bullet!
     olson_time_zones now supports Solaris OS
@@ -1244,11 +1259,11 @@
     infinite recursion on parsing non-existing leap times was fixed
     !end-bullet!
 
-!end-bullets-37!
+!end-bullets-38!
 
 # Version 1.3.2
 
-!begin-bullets-38!
+!begin-bullets-39!
 
 -   !begin-bullet!
     Lubridate's s4 methods no longer use the representation argument,
@@ -1256,13 +1271,13 @@
     lubridate is no longer backwards compatible with R \<3.0.0.
     !end-bullet!
 
-!end-bullets-38!
+!end-bullets-39!
 
 # Version 1.3.0
 
 ### CHANGES
 
-!begin-bullets-39!
+!begin-bullets-40!
 
 -   !begin-bullet!
     v1.3.0. treats math with month and year Periods more consistently.
@@ -1287,11 +1302,11 @@
     http://korea.gnu.org/gnustats/
     !end-bullet!
 
-!end-bullets-39!
+!end-bullets-40!
 
 ### NEW FEATURES
 
-!begin-bullets-40!
+!begin-bullets-41!
 
 -   !begin-bullet!
     lubridate parser and stamp functions now handle ISO8601 date format
@@ -1338,11 +1353,11 @@
     POSIXct date-time
     !end-bullet!
 
-!end-bullets-40!
+!end-bullets-41!
 
 ### BUG FIXES
 
-!begin-bullets-41!
+!begin-bullets-42!
 
 -   !begin-bullet!
     fixed bug in way update.POSIXct and update.POSIXlt handle dates that
@@ -1375,20 +1390,20 @@
     `decimal_date` no longer returns NaN for first second of the year
     !end-bullet!
 
-!end-bullets-41!
+!end-bullets-42!
 
 # Version 1.2.0
 
 ### CHANGES
 
-!begin-bullets-42!
+!begin-bullets-43!
 
 -   !begin-bullet!
     lubridate 1.2.0 is significantly faster than lubridate 1.1.0. This
     is largely thanks to a parser rewrite submitted by Vitalie Spinu.
     Thank you, Vitalie. Some metrics:
 
-    !begin-bullets-43!
+    !begin-bullets-44!
     -   !begin-bullet!
         parser speed up - 60x faster
         !end-bullet!
@@ -1399,7 +1414,7 @@
         `force_tz` speed up - 3x faster
         !end-bullet!
 
-    !end-bullets-43!
+    !end-bullets-44!
     !end-bullet!
 -   !begin-bullet!
     Development for 1.2.0 has also focused on improving the way we work
@@ -1433,11 +1448,11 @@
 
     !end-bullet!
 
-!end-bullets-42!
+!end-bullets-43!
 
 ### NEW FEATURES
 
-!begin-bullets-44!
+!begin-bullets-45!
 
 -   !begin-bullet!
     `stamp` allows users to print dates in whatever form they like.
@@ -1497,11 +1512,11 @@
 
     !end-bullet!
 
-!end-bullets-44!
+!end-bullets-45!
 
 ### BUG FIXES
 
-!begin-bullets-45!
+!begin-bullets-46!
 
 -   !begin-bullet!
     date parsers now handle NAs
@@ -1540,13 +1555,13 @@
 
     !end-bullet!
 
-!end-bullets-45!
+!end-bullets-46!
 
 # Version 1.1.0
 
 ### CHANGES
 
-!begin-bullets-46!
+!begin-bullets-47!
 
 -   !begin-bullet!
     lubridate no longer overwrites base R methods for +, - , \*, /, %%,
@@ -1582,11 +1597,11 @@
 
     !end-bullet!
 
-!end-bullets-46!
+!end-bullets-47!
 
 ### NEW FEATURES
 
-!begin-bullets-47!
+!begin-bullets-48!
 
 -   !begin-bullet!
     intervals are now more useful and lubridate has more ways to
@@ -1610,12 +1625,12 @@
 
     !end-bullet!
 
-!end-bullets-47!
+!end-bullets-48!
 
 Users can still acheive a numerical result by using as.numeric() on
 input before performing modulo.
 
-!begin-bullets-48!
+!begin-bullets-49!
 
 -   !begin-bullet!
     Periods, durations, and intervals can now all be put into a data
@@ -1647,11 +1662,11 @@ input before performing modulo.
 
     !end-bullet!
 
-!end-bullets-48!
+!end-bullets-49!
 
 # Version 0.2.6
 
-!begin-bullets-49!
+!begin-bullets-50!
 
 -   !begin-bullet!
     use `test_package` to avoid incompatibility with current version of
@@ -1663,22 +1678,22 @@ input before performing modulo.
 
     !end-bullet!
 
-!end-bullets-49!
+!end-bullets-50!
 
 # Version 0.2.5
 
-!begin-bullets-50!
+!begin-bullets-51!
 
 -   !begin-bullet!
     added ymdThms() for parsing ISO 8061 formatted combned dates and
     times
     !end-bullet!
 
-!end-bullets-50!
+!end-bullets-51!
 
 ### BUG FIXES
 
-!begin-bullets-51!
+!begin-bullets-52!
 
 -   !begin-bullet!
     removed bug in parsing dates with "T" in them
@@ -1689,23 +1704,23 @@ input before performing modulo.
 
     !end-bullet!
 
-!end-bullets-51!
+!end-bullets-52!
 
 # Version 0.2.4
 
-!begin-bullets-52!
+!begin-bullets-53!
 
 -   !begin-bullet!
     Add citations to JSS article
     !end-bullet!
 
-!end-bullets-52!
+!end-bullets-53!
 
 # Version 0.2.3
 
 ### NEW FEATURES
 
-!begin-bullets-53!
+!begin-bullets-54!
 
 -   !begin-bullet!
     ymd_hms(), hms(), and ms() functions can now parse dates that
@@ -1720,11 +1735,11 @@ input before performing modulo.
 
     !end-bullet!
 
-!end-bullets-53!
+!end-bullets-54!
 
 ### BUG FIXES
 
-!begin-bullets-54!
+!begin-bullets-55!
 
 -   !begin-bullet!
     lubridate no longer overwrites months(), start(), and end() from
@@ -1738,13 +1753,13 @@ input before performing modulo.
 
     !end-bullet!
 
-!end-bullets-54!
+!end-bullets-55!
 
 # Version 0.2.2
 
 ### NEW FEATURES
 
-!begin-bullets-55!
+!begin-bullets-56!
 
 -   !begin-bullet!
     made division, modulo, and integer division operations compatible
@@ -1756,23 +1771,23 @@ input before performing modulo.
 
     !end-bullet!
 
-!end-bullets-55!
+!end-bullets-56!
 
 ### BUG FIXES
 
-!begin-bullets-56!
+!begin-bullets-57!
 
 -   !begin-bullet!
     fixed bug in division, modulo, and integer operations with timespans
     !end-bullet!
 
-!end-bullets-56!
+!end-bullets-57!
 
 # Version 0.2.1
 
 ### NEW FEATURES
 
-!begin-bullets-57!
+!begin-bullets-58!
 
 -   !begin-bullet!
     created parsing functions ymd_hm ymd_h dmy_hms dmy_hm dmy_h mdy_hms
@@ -1780,18 +1795,18 @@ input before performing modulo.
     ymd_hms().
     !end-bullet!
 
-!end-bullets-57!
+!end-bullets-58!
 
 ### BUG FIXES
 
-!begin-bullets-58!
+!begin-bullets-59!
 
 -   !begin-bullet!
     fixed bug in add_dates(). duration objects can now be successfully
     added to numeric objects.
     !end-bullet!
 
-!end-bullets-58!
+!end-bullets-59!
 
 ------------------------------------------------------------------------
 
@@ -1799,7 +1814,7 @@ input before performing modulo.
 
 ### NEW FEATURES
 
-!begin-bullets-59!
+!begin-bullets-60!
 
 -   !begin-bullet!
     division between timespans: each timespan class (durations, periods,
@@ -1842,11 +1857,11 @@ input before performing modulo.
 
     !end-bullet!
 
-!end-bullets-59!
+!end-bullets-60!
 
 ### MINOR CHANGES
 
-!begin-bullets-60!
+!begin-bullets-61!
 
 -   !begin-bullet!
     added a package help page with functions listed by purpose
@@ -1863,11 +1878,11 @@ input before performing modulo.
 
     !end-bullet!
 
-!end-bullets-60!
+!end-bullets-61!
 
 ### BUG FIXES
 
-!begin-bullets-61!
+!begin-bullets-62!
 
 -   !begin-bullet!
     rewrote as.period() to create only positive periods.
@@ -1882,4 +1897,4 @@ input before performing modulo.
 
     !end-bullet!
 
-!end-bullets-61!
+!end-bullets-62!
