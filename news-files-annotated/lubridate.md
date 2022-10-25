@@ -84,6 +84,9 @@
     [#1002](https://github.com/tidyverse/lubridate/issues/1002) Parsing
     only with format `j` now works on numeric inputs.
     !end-bullet!
+-   !begin-bullet!
+    `stamp()` now correctly errors when no formats could be guessed.
+    !end-bullet!
 
 !end-bullets-2!
 
