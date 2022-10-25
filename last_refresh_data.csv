@@ -5908,3 +5908,4 @@ dtplyr,1,`names_glue` now works in `pivot_wider()` when `names_from` contains `N
 lubridate,1,"[#1074](https://github.com/tidyverse/lubridate/issues/1074) Fix concatination of named Period, Interval and Duration vectors.",NA
 lubridate,1,"Change implementation of `c.Period`, `c.Duration` and `c.Interval` from S4 to S3.",NA
 lubridate,1,`stamp()` now correctly errors when no formats could be guessed.,NA
+lubridate,1,[#1003](https://github.com/tidyverse/lubridate/issues/1003) Correctly handle r and R formats in locales which have no p format,NA

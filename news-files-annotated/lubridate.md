@@ -48,6 +48,10 @@
 !begin-bullets-2!
 
 -   !begin-bullet!
+    [#1003](https://github.com/tidyverse/lubridate/issues/1003)
+    Correctly handle r and R formats in locales which have no p format
+    !end-bullet!
+-   !begin-bullet!
     [#1074](https://github.com/tidyverse/lubridate/issues/1074) Fix
     concatination of named Period, Interval and Duration vectors.
     !end-bullet!
