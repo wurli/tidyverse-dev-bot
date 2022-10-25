@@ -5,6 +5,17 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    [#1061](https://github.com/tidyverse/lubridate/issues/1061) Make
+    `year<-`, `month<-` etc. accessors truly generic. In order to make
+    them work with arbitrary class XYZ, it's enough to define a
+    `reclass_date.XYZ` method.
+    !end-bullet!
+-   !begin-bullet!
+    [#1061](https://github.com/tidyverse/lubridate/issues/1061) Add
+    support for `year<-`, `month<-` etc. accessors for `data.table`'s
+    IDate and ITime objects.
+    !end-bullet!
+-   !begin-bullet!
     [#1017](https://github.com/tidyverse/lubridate/issues/1017)
     `week_start` argument in all lubridate functions now accepts full
     and abbreviated names of the days of the week.

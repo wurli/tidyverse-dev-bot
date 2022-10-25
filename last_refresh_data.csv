@@ -5909,3 +5909,5 @@ lubridate,1,"[#1074](https://github.com/tidyverse/lubridate/issues/1074) Fix con
 lubridate,1,"Change implementation of `c.Period`, `c.Duration` and `c.Interval` from S4 to S3.",NA
 lubridate,1,`stamp()` now correctly errors when no formats could be guessed.,NA
 lubridate,1,[#1003](https://github.com/tidyverse/lubridate/issues/1003) Correctly handle r and R formats in locales which have no p format,NA
+lubridate,1,"[#1061](https://github.com/tidyverse/lubridate/issues/1061) Make `year<-`, `month<-` etc. accessors truly generic. In order to make them work with arbitrary class XYZ, it's enough to define a `reclass_date.XYZ` method.",NA
+lubridate,1,"[#1061](https://github.com/tidyverse/lubridate/issues/1061) Add support for `year<-`, `month<-` etc. accessors for `data.table`'s IDate and ITime objects.",NA
