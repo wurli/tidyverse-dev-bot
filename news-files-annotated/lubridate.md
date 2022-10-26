@@ -62,6 +62,10 @@
     `format_ISO8601()` gained a new option `usetz="Z"` to format time
     zones with a "Z" and convert the time to the UTC time zone.
     !end-bullet!
+-   !begin-bullet!
+    [#931](https://github.com/tidyverse/lubridate/issues/931) Usage of
+    `Period` objects in rounding functions is explicitly documented.
+    !end-bullet!
 
 !end-bullets-1!
 
