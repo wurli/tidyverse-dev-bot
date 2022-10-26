@@ -5,6 +5,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    [#1055](https://github.com/tidyverse/lubridate/issues/1055)
+    Implement `as.integer` method for Duration, Period and Interval
+    classes.
+    !end-bullet!
+-   !begin-bullet!
     [#1061](https://github.com/tidyverse/lubridate/issues/1061) Make
     `year<-`, `month<-` etc. accessors truly generic. In order to make
     them work with arbitrary class XYZ, it's enough to define a
