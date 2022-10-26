@@ -5,6 +5,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    [#1042](https://github.com/tidyverse/lubridate/issues/1042)
+    `as_date` with character inputs accepts multiple formats in `format`
+    argument. When `format` is supplied, the input string is parsed with
+    `parse_date_time` instead of the old `strptime`.
+    !end-bullet!
+-   !begin-bullet!
     [#1055](https://github.com/tidyverse/lubridate/issues/1055)
     Implement `as.integer` method for Duration, Period and Interval
     classes.
