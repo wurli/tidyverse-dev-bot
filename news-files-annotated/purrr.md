@@ -86,9 +86,8 @@
 !begin-bullets-3!
 
 -   !begin-bullet!
-    `as_function()`, `at_depth()`, and the `...f` argument to
-    `partial()` are no longer supported. They have been defunct for
-    quite some time.
+    `as_function()` and the `...f` argument to `partial()` are no longer
+    supported. They have been defunct for quite some time.
 
     !end-bullet!
 -   !begin-bullet!

@@ -5915,3 +5915,4 @@ lubridate,1,"[#1055](https://github.com/tidyverse/lubridate/issues/1055) Impleme
 lubridate,1,"[#1042](https://github.com/tidyverse/lubridate/issues/1042) `as_date` with character inputs accepts multiple formats in `format` argument. When `format` is supplied, the input string is parsed with `parse_date_time` instead of the old `strptime`.",NA
 broom,1,"Fixed a bug where `augment()` results would not include residuals when the response term included a function call (#1121, #946, #937, #124).",NA
 lubridate,1,[#931](https://github.com/tidyverse/lubridate/issues/931) Usage of `Period` objects in rounding functions is explicitly documented.,NA
+purrr,1,`as_function()` and the `...f` argument to `partial()` are no longer supported. They have been defunct for quite some time.,NA
