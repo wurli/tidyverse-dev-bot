@@ -12,7 +12,7 @@
 
     !begin-bullets-2!
     -   !begin-bullet!
-        Only vectors of length 1 are recycled: previously,
+        Only vectors of length 1 are recycled: previously, (e.g.)
         `str_detect(letters, c("x", "y"))` worked, but it now errors.
 
         !end-bullet!
@@ -23,13 +23,21 @@
         !end-bullet!
 
     !end-bullets-2!
-    Additionally, many more non-vectorised arguments now throw errors,
-    rather than warnings, if supplied a vector.
+    Additionally, many more arguments now throw errors, rather than
+    warnings, if supplied the wrong type of input.
 
     !end-bullet!
 -   !begin-bullet!
     `regex()` and friends now generate class names with `stringr_`
     prefix (#384).
+
+    !end-bullet!
+-   !begin-bullet!
+    `str_detect()`, `str_starts()`, `str_ends()` and `str_subset()` now
+    error when used with either an empty string (`""`) or a
+    `boundary()`. These operations didn't really make sense
+    (`str_detect(x, "")` returned `TRUE` for all non-empty strings) and
+    made it easy to make mistakes when programming with patterns.
 
     !end-bullet!
 
@@ -134,6 +142,11 @@
     !end-bullet!
 -   !begin-bullet!
     A new data source for `sentences` has fixed many small errors.
+
+    !end-bullet!
+-   !begin-bullet!
+    `str_extract()` and `str_exctract_all()` now work correctly when
+    `pattern` is a `boundary()`.
 
     !end-bullet!
 -   !begin-bullet!

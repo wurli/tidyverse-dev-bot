@@ -5916,3 +5916,7 @@ lubridate,1,"[#1042](https://github.com/tidyverse/lubridate/issues/1042) `as_dat
 broom,1,"Fixed a bug where `augment()` results would not include residuals when the response term included a function call (#1121, #946, #937, #124).",NA
 lubridate,1,[#931](https://github.com/tidyverse/lubridate/issues/931) Usage of `Period` objects in rounding functions is explicitly documented.,NA
 purrr,1,`as_function()` and the `...f` argument to `partial()` are no longer supported. They have been defunct for quite some time.,NA
+stringr,2,"• Only vectors of length 1 are recycled: previously, (e.g.) `str_detect(letters, c(""x"", ""y""))` worked, but it now errors.",stringr functions now consistently implement the tidyverse recycling rules (#372). Overall this is a fairly minor change as stringi was already very close to the tidyverse rules. There are only two major changes:
+stringr,1,"Additionally, many more arguments now throw errors, rather than warnings, if supplied the wrong type of input.",NA
+stringr,1,"`str_detect()`, `str_starts()`, `str_ends()` and `str_subset()` now error when used with either an empty string (`""""`) or a `boundary()`. These operations didn't really make sense (`str_detect(x, """")` returned `TRUE` for all non-empty strings) and made it easy to make mistakes when programming with patterns.",NA
+stringr,1,`str_extract()` and `str_exctract_all()` now work correctly when `pattern` is a `boundary()`.,NA
