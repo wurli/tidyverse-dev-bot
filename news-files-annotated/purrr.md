@@ -411,9 +411,19 @@
 
 !end-bullets-11!
 
-# purrr 0.3.4
+# purrr 0.3.5
 
 !begin-bullets-12!
+
+-   !begin-bullet!
+    Fixes for CRAN checks.
+    !end-bullet!
+
+!end-bullets-12!
+
+# purrr 0.3.4
+
+!begin-bullets-13!
 
 -   !begin-bullet!
     Fixed issue in `list_modify()` that prevented lists from being
@@ -431,11 +441,11 @@
 
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
 
 # purrr 0.3.3
 
-!begin-bullets-13!
+!begin-bullets-14!
 
 -   !begin-bullet!
     Maintenance release.
@@ -451,21 +461,21 @@
 
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-14!
 
 # purrr 0.3.2
 
-!begin-bullets-14!
+!begin-bullets-15!
 
 -   !begin-bullet!
     Fix protection issues reported by rchk.
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-15!
 
 # purrr 0.3.1
 
-!begin-bullets-15!
+!begin-bullets-16!
 
 -   !begin-bullet!
     `reduce()` now forces arguments (#643).
@@ -490,13 +500,13 @@
 
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-16!
 
 # purrr 0.3.0
 
 ## Breaking changes
 
-!begin-bullets-16!
+!begin-bullets-17!
 
 -   !begin-bullet!
     `modify()` and variants are now wrapping `[[<-` instead of `[<-`.
@@ -525,11 +535,11 @@
 
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-17!
 
 ## Plucking
 
-!begin-bullets-17!
+!begin-bullets-18!
 
 -   !begin-bullet!
     New `chuck()` function. This is a strict variant of `pluck()` that
@@ -557,11 +567,11 @@
 
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-18!
 
 ## Mapping
 
-!begin-bullets-18!
+!begin-bullets-19!
 
 -   !begin-bullet!
     New `.else` argument for `map_if()` and `modify_if()`. They take an
@@ -646,11 +656,11 @@
 
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-19!
 
 ## Rates
 
-!begin-bullets-19!
+!begin-bullets-20!
 
 -   !begin-bullet!
     New `rate_backoff()` and `rate_delay()` functions to create rate
@@ -669,7 +679,7 @@
 
     !end-bullet!
 
-!end-bullets-19!
+!end-bullets-20!
 
 ## `partial()`
 
@@ -678,7 +688,7 @@ quasiquotation to control the timing of evaluation, and the
 `rlang::call_modify()` syntax to control the position of partialised
 arguments.
 
-!begin-bullets-20!
+!begin-bullets-21!
 
 -   !begin-bullet!
     `partial()` now supports empty `... =` argument to specify the
@@ -726,11 +736,11 @@ arguments.
     !end-codeblock!
     !end-bullet!
 
-!end-bullets-20!
+!end-bullets-21!
 
 ## Minor improvements and fixes
 
-!begin-bullets-21!
+!begin-bullets-22!
 
 -   !begin-bullet!
     The tibble package is now in Suggests rather than Imports. This
@@ -853,7 +863,7 @@ arguments.
 
     !end-bullet!
 
-!end-bullets-21!
+!end-bullets-22!
 
 ## Life cycle
 
@@ -862,7 +872,7 @@ arguments.
 We have standardised the purrr API for reverse iteration with a common
 `.dir` argument.
 
-!begin-bullets-22!
+!begin-bullets-23!
 
 -   !begin-bullet!
     `reduce_right()` is soft-deprecated and replaced by a new `.dir`
@@ -938,14 +948,14 @@ We have standardised the purrr API for reverse iteration with a common
     !end-codeblock!
     !end-bullet!
 
-!end-bullets-22!
+!end-bullets-23!
 
 ### Simplification of `partial()`
 
 The interface of `partial()` has been simplified (see more about
 `partial()` below):
 
-!begin-bullets-23!
+!begin-bullets-24!
 
 -   !begin-bullet!
     The `.lazy` argument of `partial()` is soft-deprecated in favour of
@@ -960,7 +970,7 @@ The interface of `partial()` has been simplified (see more about
 
     !end-bullet!
 
-!end-bullets-23!
+!end-bullets-24!
 
 ### Retirement of `invoke()`
 
@@ -968,7 +978,7 @@ The interface of `partial()` has been simplified (see more about
 that retired functions are no longer under active development, but
 continue to be maintained undefinitely in the package.
 
-!begin-bullets-24!
+!begin-bullets-25!
 
 -   !begin-bullet!
     `invoke()` is retired in favour of the `exec()` function, reexported
@@ -1008,11 +1018,11 @@ continue to be maintained undefinitely in the package.
     !end-codeblock!
     !end-bullet!
 
-!end-bullets-24!
+!end-bullets-25!
 
 ### Other lifecycle changes
 
-!begin-bullets-25!
+!begin-bullets-26!
 
 -   !begin-bullet!
     `%@%` is soft-deprecated, please use the operator exported in rlang
@@ -1054,27 +1064,27 @@ continue to be maintained undefinitely in the package.
 
     !end-bullet!
 
-!end-bullets-25!
+!end-bullets-26!
 
 # purrr 0.2.5
 
-!begin-bullets-26!
+!begin-bullets-27!
 
 -   !begin-bullet!
     This is a maintenance release following the release of dplyr 0.7.5.
     !end-bullet!
 
-!end-bullets-26!
+!end-bullets-27!
 
 # purrr 0.2.4
 
-!begin-bullets-27!
+!begin-bullets-28!
 
 -   !begin-bullet!
     Fixes for R 3.1.
     !end-bullet!
 
-!end-bullets-27!
+!end-bullets-28!
 
 # purrr 0.2.3
 
@@ -1082,7 +1092,7 @@ continue to be maintained undefinitely in the package.
 
 We noticed the following issues during reverse dependencies checks:
 
-!begin-bullets-28!
+!begin-bullets-29!
 
 -   !begin-bullet!
     If `reduce()` fails with this message:
@@ -1099,7 +1109,7 @@ We noticed the following issues during reverse dependencies checks:
 
     !end-bullet!
 
-!end-bullets-28!
+!end-bullets-29!
 
 ## Dependencies
 
@@ -1111,7 +1121,7 @@ packages.
 There have also been two changes to eliminate name conflicts between
 purrr and dplyr:
 
-!begin-bullets-29!
+!begin-bullets-30!
 
 -   !begin-bullet!
     `order_by()`, `sort_by()` and `split_by()` have been removed.
@@ -1125,7 +1135,7 @@ purrr and dplyr:
 
     !end-bullet!
 
-!end-bullets-29!
+!end-bullets-30!
 
 ## pluck()
 
@@ -1151,7 +1161,7 @@ to the equivalent pluck:
 
 ## Map helpers
 
-!begin-bullets-30!
+!begin-bullets-31!
 
 -   !begin-bullet!
     `as_function()` is now `as_mapper()` because it is a tranformation
@@ -1192,11 +1202,11 @@ to the equivalent pluck:
 
     !end-bullet!
 
-!end-bullets-30!
+!end-bullets-31!
 
 ## Map functions
 
-!begin-bullets-31!
+!begin-bullets-32!
 
 -   !begin-bullet!
     All map functions now treat `NULL` the same way as an empty vector
@@ -1224,7 +1234,7 @@ to the equivalent pluck:
 
     !end-bullet!
 
-!end-bullets-31!
+!end-bullets-32!
 
 ## Modify functions
 
@@ -1236,7 +1246,7 @@ The modify functions are S3 generics. However their default methods
 should be sufficient for most classes since they rely on the semantics
 of `[<-`. `modify.default()` is thus a shorthand for `x[] <- map(x, f)`.
 
-!begin-bullets-32!
+!begin-bullets-33!
 
 -   !begin-bullet!
     `at_depth()` has been renamed to `modify_depth()`.
@@ -1249,11 +1259,11 @@ of `[<-`. `modify.default()` is thus a shorthand for `x[] <- map(x, f)`.
 
     !end-bullet!
 
-!end-bullets-32!
+!end-bullets-33!
 
 ## New functions
 
-!begin-bullets-33!
+!begin-bullets-34!
 
 -   !begin-bullet!
     `auto_browse(f)` returns a new function that automatically calls
@@ -1286,11 +1296,11 @@ of `[<-`. `modify.default()` is thus a shorthand for `x[] <- map(x, f)`.
 
     !end-bullet!
 
-!end-bullets-33!
+!end-bullets-34!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-34!
+!begin-bullets-35!
 
 -   !begin-bullet!
     Thanks to @dchiu911, the unit test coverage of purrr is now much
@@ -1371,13 +1381,13 @@ of `[<-`. `modify.default()` is thus a shorthand for `x[] <- map(x, f)`.
 
     !end-bullet!
 
-!end-bullets-34!
+!end-bullets-35!
 
 # purrr 0.2.2.1
 
 This is a compatibility release with dplyr 0.6.0.
 
-!begin-bullets-35!
+!begin-bullets-36!
 
 -   !begin-bullet!
     All data-frame based mappers have been removed in favour of new
@@ -1388,11 +1398,11 @@ This is a compatibility release with dplyr 0.6.0.
     make the dependencies much lighter.
     !end-bullet!
 
-!end-bullets-35!
+!end-bullets-36!
 
 # purrr 0.2.2
 
-!begin-bullets-36!
+!begin-bullets-37!
 
 -   !begin-bullet!
     Fix for dev tibble support.
@@ -1410,11 +1420,11 @@ This is a compatibility release with dplyr 0.6.0.
 
     !end-bullet!
 
-!end-bullets-36!
+!end-bullets-37!
 
 # purrr 0.2.1
 
-!begin-bullets-37!
+!begin-bullets-38!
 
 -   !begin-bullet!
     `as_function()` gains a `.null` argument that for character and
@@ -1436,18 +1446,18 @@ This is a compatibility release with dplyr 0.6.0.
 
     !end-bullet!
 
-!end-bullets-37!
+!end-bullets-38!
 
 # purrr 0.2.0
 
 ## New functions
 
-!begin-bullets-38!
+!begin-bullets-39!
 
 -   !begin-bullet!
     There are two handy infix functions:
 
-    !begin-bullets-39!
+    !begin-bullets-40!
     -   !begin-bullet!
         `x %||% y` is shorthand for `if (is.null(x)) y else x` (#109).
         !end-bullet!
@@ -1455,7 +1465,7 @@ This is a compatibility release with dplyr 0.6.0.
         `x %@% "a"` is shorthand for `attr(x, "a", exact = TRUE)` (#69).
         !end-bullet!
 
-    !end-bullets-39!
+    !end-bullets-40!
     !end-bullet!
 -   !begin-bullet!
     `accumulate()` has been added to handle recursive folding. It is
@@ -1521,7 +1531,7 @@ This is a compatibility release with dplyr 0.6.0.
 
     !end-bullet!
 
-!end-bullets-38!
+!end-bullets-39!
 
 ## Row based functionals
 
@@ -1529,7 +1539,7 @@ We are still figuring out what belongs in dplyr and what belongs in
 purrr. Expect much experimentation and many changes with these
 functions.
 
-!begin-bullets-40!
+!begin-bullets-41!
 
 -   !begin-bullet!
     `map()` now always returns a list. Data frame support has been moved
@@ -1555,11 +1565,11 @@ functions.
 
     !end-bullet!
 
-!end-bullets-40!
+!end-bullets-41!
 
 ## Bug fixes and minor changes
 
-!begin-bullets-41!
+!begin-bullets-42!
 
 -   !begin-bullet!
     `as_function()`, which converts formulas etc to functions, is now
@@ -1585,11 +1595,11 @@ functions.
 
     !end-bullet!
 
-!end-bullets-41!
+!end-bullets-42!
 
 ## Deprecated functions
 
-!begin-bullets-42!
+!begin-bullets-43!
 
 -   !begin-bullet!
     `flatmap()` -\> use `map()` followed by the appropriate `flatten()`.
@@ -1609,4 +1619,4 @@ functions.
 
     !end-bullet!
 
-!end-bullets-42!
+!end-bullets-43!

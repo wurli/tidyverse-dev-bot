@@ -5920,3 +5920,4 @@ stringr,2,"• Only vectors of length 1 are recycled: previously, (e.g.) `str_de
 stringr,1,"Additionally, many more arguments now throw errors, rather than warnings, if supplied the wrong type of input.",NA
 stringr,1,"`str_detect()`, `str_starts()`, `str_ends()` and `str_subset()` now error when used with either an empty string (`""""`) or a `boundary()`. These operations didn't really make sense (`str_detect(x, """")` returned `TRUE` for all non-empty strings) and made it easy to make mistakes when programming with patterns.",NA
 stringr,1,`str_extract()` and `str_exctract_all()` now work correctly when `pattern` is a `boundary()`.,NA
+purrr,1,Fixes for CRAN checks.,NA
