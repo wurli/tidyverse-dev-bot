@@ -5921,3 +5921,7 @@ stringr,1,"Additionally, many more arguments now throw errors, rather than warni
 stringr,1,"`str_detect()`, `str_starts()`, `str_ends()` and `str_subset()` now error when used with either an empty string (`""""`) or a `boundary()`. These operations didn't really make sense (`str_detect(x, """")` returned `TRUE` for all non-empty strings) and made it easy to make mistakes when programming with patterns.",NA
 stringr,1,`str_extract()` and `str_exctract_all()` now work correctly when `pattern` is a `boundary()`.,NA
 purrr,1,Fixes for CRAN checks.,NA
+pillar,1,"Fix printing of very small numbers (#615, #619).",NA
+pillar,1,Use constructors in `vec_cast()` (#587).,NA
+pillar,1,Require vctrs \>= 0.5.0,NA
+pillar,1,Polish `?pillar_options` (#583).,NA
