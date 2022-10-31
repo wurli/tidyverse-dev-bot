@@ -5925,3 +5925,6 @@ pillar,1,"Fix printing of very small numbers (#615, #619).",NA
 pillar,1,Use constructors in `vec_cast()` (#587).,NA
 pillar,1,Require vctrs \>= 0.5.0,NA
 pillar,1,Polish `?pillar_options` (#583).,NA
+ggplot2,1,"A `linewidth` aesthetic has been introduced and supersedes the `size` aesthetic for scaling the width of lines in line based geoms. `size` will remain functioning but deprecated for these geoms and it is recommended to update all code to reflect the new aesthetic. For geoms that have *both* point sizing and linewidth sizing (`geom_pointrange()` and `geom_sf`) `size` now **only** refers to sizing of points which can leads to a visual change in old code (@​thomasp85, #3672)",NA
+ggplot2,1,The default line width for polygons in `geom_sf()` have been decreased to 0.2 to reflect that this is usually used for demarking borders where a thinner line is better suited. This change was made since we already induced a visual change in `geom_sf()` with the introduction of the `linewidth` aesthetic.,NA
+ggplot2,1,"`scale_*_viridis_b()` now uses the full range of the viridis scales (@​gregleleu, #4737)",NA
