@@ -6,13 +6,11 @@
 
 -   !begin-bullet!
     stringr functions now consistently implement the tidyverse recycling
-    rules (#372). Overall this is a fairly minor change as stringi was
-    already very close to the tidyverse rules. There are only two major
-    changes:
+    rules (#372). There are two main changes:
 
     !begin-bullets-2!
     -   !begin-bullet!
-        Only vectors of length 1 are recycled: previously, (e.g.)
+        Only vectors of length 1 are recycled. Previously, (e.g.)
         `str_detect(letters, c("x", "y"))` worked, but it now errors.
 
         !end-bullet!
@@ -37,7 +35,7 @@
     error when used with either an empty string (`""`) or a
     `boundary()`. These operations didn't really make sense
     (`str_detect(x, "")` returned `TRUE` for all non-empty strings) and
-    made it easy to make mistakes when programming with patterns.
+    made it easy to make mistakes when programming.
 
     !end-bullet!
 
@@ -53,17 +51,6 @@
 
     !end-bullet!
 -   !begin-bullet!
-    `str_view()` will use ANSI colouring if available (#370). This works
-    in more places than HTML widgets and requires fewer dependencies.
-    `str_view()` also no longer requires a pattern so you can use it to
-    display strings with special characters. It now highlights
-    whitespace characters apart from space since otherwise they are
-    often confusing. It's also now vectorised over both `string` and
-    `pattern` (#407). It defaults to displaying all matches, making
-    `str_view_all()` redundant (and hence deprecated) (#455).
-
-    !end-bullet!
--   !begin-bullet!
     New `vignette("from-base")` by @sastoudt provides a comprehensive
     comparison between base R functions and their stringr equivalents.
     It's designed to help you move to stringr if you're already familiar
@@ -73,12 +60,12 @@
 -   !begin-bullet!
     New `str_escape()` escapes regular expression metacharacters,
     providing an alternative to `fixed()` if you want to compose a
-    pattern from external strings (#408).
+    pattern from user supplied strings (#408).
 
     !end-bullet!
 -   !begin-bullet!
     New `str_equal()` compares two character vectors using unicode
-    rules, and optionally ignores case (#381).
+    rules, optionally ignoring case (#381).
 
     !end-bullet!
 -   !begin-bullet!
@@ -87,9 +74,9 @@
 
     !end-bullet!
 -   !begin-bullet!
-    `str_flatten_comma()` is a special case of `str_flatten()` designed
-    for comman separated flattening and can handle the special case of
-    Oxford commas with two elements (#444).
+    New `str_flatten_comma()` is a special case of `str_flatten()`
+    designed for comma separated flattening and can correctly apply the
+    Oxford commas when there are only two elements (#444).
 
     !end-bullet!
 -   !begin-bullet!
@@ -98,17 +85,16 @@
 
     !end-bullet!
 -   !begin-bullet!
-    New `str_split_i()` function to extract only a single piece from a
-    string (#278, @bfgray3).
+    New `str_split_i()` extract a single piece from a string (#278,
+    @bfgray3).
 
     !end-bullet!
 -   !begin-bullet!
-    New `str_like()` function which allows the use of SQL wildcards
-    (#280, @rjpat).
+    New `str_like()` allows the use of SQL wildcards (#280, @rjpat).
 
     !end-bullet!
 -   !begin-bullet!
-    New `str_rank()` to complete set of order/rank/sort functions
+    New `str_rank()` to complete the set of order/rank/sort functions
     (#353).
 
     !end-bullet!
@@ -120,6 +106,29 @@
     New `str_unique()` is a wrapper around `stri_unique()` and returns
     unique string values in a character vector (#249, @seasmith).
 
+    !end-bullet!
+-   !begin-bullet!
+    `str_view()` uses ANSI colouring rather than an HTML widget (#370).
+    This works in more places and requires fewer dependencies. It
+    includes a number of other small improvements:
+
+    !begin-bullets-4!
+    -   !begin-bullet!
+        It no longer requires a pattern so you can use it to display
+        strings with special characters.
+        !end-bullet!
+    -   !begin-bullet!
+        It highlights unusual whitespace characters.
+        !end-bullet!
+    -   !begin-bullet!
+        It's vectorised over both string`and`pattern\` (#407).
+        !end-bullet!
+    -   !begin-bullet!
+        It defaults to displaying all matches, making `str_view_all()`
+        redundant (and hence deprecated) (#455).
+        !end-bullet!
+
+    !end-bullets-4!
     !end-bullet!
 -   !begin-bullet!
     New `str_width()` returns the display width of a string (#380).
@@ -134,7 +143,7 @@
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     Better error message if you supply a non-string pattern (#378).
@@ -184,7 +193,7 @@
 
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 # stringr 1.4.1
 
@@ -192,7 +201,7 @@ Hot patch release to resolve R CMD check failures.
 
 # stringr 1.4.0
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     `str_interp()` now renders lists consistently independent on the
@@ -216,11 +225,11 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # stringr 1.3.1
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     `str_replace_all()` with a named vector now respects modifier
@@ -240,13 +249,13 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 # stringr 1.3.0
 
 ## API changes
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     During package build, you may see
@@ -255,16 +264,16 @@ Hot patch release to resolve R CMD check failures.
     and `perl()` have now been removed.
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 ## New features
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     `str_glue()` and `str_glue_data()` provide convenient wrappers
     around `glue` and `glue_data()` from the
-    [glue](http://glue.tidyverse.org/) package (#157).
+    [glue](https://glue.tidyverse.org/) package (#157).
 
     !end-bullet!
 -   !begin-bullet!
@@ -291,11 +300,11 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 ## Bug fixes and minor improvements
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     `str_trunc()` now preserves NAs (@ClaytonJY, #162)
@@ -312,13 +321,13 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 # stringr 1.2.0
 
 ## API changes
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     `str_match_all()` now returns NA if an optional group doesn't match
@@ -326,11 +335,11 @@ Hot patch release to resolve R CMD check failures.
     `str_match()` and other match failures (#134).
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 ## New features
 
-!begin-bullets-11!
+!begin-bullets-12!
 
 -   !begin-bullet!
     In `str_replace()`, `replacement` can now be a function that is
@@ -350,11 +359,11 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-12!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-12!
+!begin-bullets-13!
 
 -   !begin-bullet!
     `str_order()` and `str_sort()` gain explicit `numeric` argument for
@@ -374,11 +383,11 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
 
 # stringr 1.1.0
 
-!begin-bullets-13!
+!begin-bullets-14!
 
 -   !begin-bullet!
     Add sample datasets: `fruit`, `words` and `sentences`.
@@ -430,15 +439,15 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-14!
 
 # stringr 1.0.0
 
-!begin-bullets-14!
+!begin-bullets-15!
 
 -   !begin-bullet!
     stringr is now powered by
-    [stringi](https://github.com/Rexamine/stringi) instead of base R
+    [stringi](https://github.com/gagolews/stringi) instead of base R
     regular expressions. This improves unicode and support, and makes
     most operations considerably faster. If you find stringr inadequate
     for your string processing needs, I highly recommend looking at
@@ -513,11 +522,11 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-15!
 
 # stringr 0.6.2
 
-!begin-bullets-15!
+!begin-bullets-16!
 
 -   !begin-bullet!
     fixed path in `str_wrap` example so works for more R installations.
@@ -528,11 +537,11 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-16!
 
 # stringr 0.6.1
 
-!begin-bullets-16!
+!begin-bullets-17!
 
 -   !begin-bullet!
     Zero input to `str_split_fixed` returns 0 row matrix with `n`
@@ -544,11 +553,11 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-17!
 
 # stringr 0.6
 
-!begin-bullets-17!
+!begin-bullets-18!
 
 -   !begin-bullet!
     new modifier `perl` that switches to Perl regular expressions
@@ -561,11 +570,11 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-18!
 
 # stringr 0.5
 
-!begin-bullets-18!
+!begin-bullets-19!
 
 -   !begin-bullet!
     new `str_wrap` function which gives `strwrap` output in a more
@@ -600,11 +609,11 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-19!
 
 # stringr 0.4
 
-!begin-bullets-19!
+!begin-bullets-20!
 
 -   !begin-bullet!
     all functions now vectorised with respect to string, pattern (and
@@ -643,11 +652,11 @@ Hot patch release to resolve R CMD check failures.
     it)
     !end-bullet!
 
-!end-bullets-19!
+!end-bullets-20!
 
 # stringr 0.3
 
-!begin-bullets-20!
+!begin-bullets-21!
 
 -   !begin-bullet!
     fixed() now also escapes \|
@@ -667,11 +676,11 @@ Hot patch release to resolve R CMD check failures.
     add fixed() function to allow matching of fixed strings.
     !end-bullet!
 
-!end-bullets-20!
+!end-bullets-21!
 
 # stringr 0.2
 
-!begin-bullets-21!
+!begin-bullets-22!
 
 -   !begin-bullet!
     str_length now returns correct results when used with factors
@@ -688,4 +697,4 @@ Hot patch release to resolve R CMD check failures.
     str_split no longer uses strsplit to preserve trailing breaks
     !end-bullet!
 
-!end-bullets-21!
+!end-bullets-22!
