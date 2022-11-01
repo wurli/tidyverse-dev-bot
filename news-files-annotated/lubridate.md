@@ -74,6 +74,11 @@
 !begin-bullets-2!
 
 -   !begin-bullet!
+    [#1072](https://github.com/tidyverse/lubridate/issues/1072) Names
+    are now handled correctly when combining multiple Period or Interval
+    objects.
+    !end-bullet!
+-   !begin-bullet!
     [#1003](https://github.com/tidyverse/lubridate/issues/1003)
     Correctly handle r and R formats in locales which have no p format
     !end-bullet!
