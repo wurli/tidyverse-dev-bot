@@ -5946,3 +5946,4 @@ stringr,2,"• It defaults to displaying all matches, making `str_view_all()` re
 stringr,1,`str_glue()` and `str_glue_data()` provide convenient wrappers around `glue` and `glue_data()` from the [glue](https://glue.tidyverse.org/) package (#157).,NA
 stringr,1,"stringr is now powered by [stringi](https://github.com/gagolews/stringi) instead of base R regular expressions. This improves unicode and support, and makes most operations considerably faster. If you find stringr inadequate for your string processing needs, I highly recommend looking at stringi in more detail.",NA
 lubridate,1,[#1072](https://github.com/tidyverse/lubridate/issues/1072) Names are now handled correctly when combining multiple Period or Interval objects.,NA
+dtplyr,1,"`min_rank()`, `dense_rank()`, `percent_rank()`, & `cume_dist()` are now translated to their `data.table` equivalents (#396)",NA

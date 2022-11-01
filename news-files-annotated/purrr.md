@@ -374,12 +374,6 @@
 
     !end-bullet!
 -   !begin-bullet!
-    `lmap()` now always returns a list, even if `.x` is a data frame.
-    This makes it more consistent with other functions in the `map`
-    family.
-
-    !end-bullet!
--   !begin-bullet!
     `lmap_if()` correctly handles `.else` functions (#847).
 
     !end-bullet!

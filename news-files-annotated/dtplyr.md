@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `min_rank()`, `dense_rank()`, `percent_rank()`, & `cume_dist()` are
+    now translated to their `data.table` equivalents (#396)
+
+    !end-bullet!
+-   !begin-bullet!
     `names_glue` now works in `pivot_wider()` when `names_from` contains
     `NA`s (#394)
 
