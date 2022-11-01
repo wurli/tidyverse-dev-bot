@@ -74,7 +74,7 @@
 
     !end-bullet!
 -   !begin-bullet!
-    `transpose()` has been deprecated in favour of `list_transpose()`
+    `transpose()` has been superseded in favour of `list_transpose()`
     (#875). It has built-in simplification.
 
     !end-bullet!
