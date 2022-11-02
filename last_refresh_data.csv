@@ -5954,3 +5954,8 @@ lubridate,1,`lubridate` is now relying on `timechange` package for update and ti
 lubridate,1,`lubridate`'s updating logic is now built on top of `timechange` package.,NA
 dplyr,1,`cur_data()` and `cur_data_all()` are now soft-deprecated in favor of `pick()` (#6204).,NA
 dplyr,1,"New `pick()` to access a subset of columns from the current group. `pick()` is intended as a replacement for `across(.fns = NULL)`, `cur_data()`, and `cur_data_all()`. We feel that `pick()` is a much more evocative name when you are just trying to select a subset of columns from your data (#6204).",NA
+purrr,1,The `lift_*` family of functions has been deprecated. We no longer believe these to be a good fit for purrr because they rely on a style of function manipulation that is very uncommon in R code (#871).,NA
+purrr,1,All map `_raw()` variants have been deprecated because they are of limited use and you can now use `map_vec()` instead (#903).,NA
+purrr,1,"In `map_chr()`, automatic conversion from logical, integer, and double to character is now deprecated. Use an explicit `as.character()` if needed (#904).",NA
+purrr,1,`map_call()` has been removed. It was made defunct in 0.3.0 (Jan 2019).,NA
+purrr,1,"`simplify()`, `simplify_all()`, and `as_vector()` have been superseded in favour of `list_simplify()`. It provides a more consistent definition of simplification (#900).",NA
