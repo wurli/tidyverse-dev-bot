@@ -5952,3 +5952,5 @@ lubridate,1,`roll` argument to updating and time-zone manipulation functions is 
 lubridate,1,"Updating a date with timezone (e.g. `tzs = ""UTC""`) now returns a POSIXct.",NA
 lubridate,1,`lubridate` is now relying on `timechange` package for update and time-zone computation. Google's CCTZ code is no longer part of the package.,NA
 lubridate,1,`lubridate`'s updating logic is now built on top of `timechange` package.,NA
+dplyr,1,`cur_data()` and `cur_data_all()` are now soft-deprecated in favor of `pick()` (#6204).,NA
+dplyr,1,"New `pick()` to access a subset of columns from the current group. `pick()` is intended as a replacement for `across(.fns = NULL)`, `cur_data()`, and `cur_data_all()`. We feel that `pick()` is a much more evocative name when you are just trying to select a subset of columns from your data (#6204).",NA
