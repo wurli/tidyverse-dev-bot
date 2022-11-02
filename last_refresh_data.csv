@@ -5948,3 +5948,7 @@ stringr,1,"stringr is now powered by [stringi](https://github.com/gagolews/strin
 lubridate,1,[#1072](https://github.com/tidyverse/lubridate/issues/1072) Names are now handled correctly when combining multiple Period or Interval objects.,NA
 dtplyr,1,"`min_rank()`, `dense_rank()`, `percent_rank()`, & `cume_dist()` are now translated to their `data.table` equivalents (#396)",NA
 purrr,1,`transpose()` has been superseded in favour of `list_transpose()` (#875). It has built-in simplification.,NA
+lubridate,1,`roll` argument to updating and time-zone manipulation functions is deprecated in favor of a new `roll_dst` parameter.,NA
+lubridate,1,"Updating a date with timezone (e.g. `tzs = ""UTC""`) now returns a POSIXct.",NA
+lubridate,1,`lubridate` is now relying on `timechange` package for update and time-zone computation. Google's CCTZ code is no longer part of the package.,NA
+lubridate,1,`lubridate`'s updating logic is now built on top of `timechange` package.,NA

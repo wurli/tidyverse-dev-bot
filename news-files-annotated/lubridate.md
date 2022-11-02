@@ -5,6 +5,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `roll` argument to updating and time-zone manipulation functions is
+    deprecated in favor of a new `roll_dst` parameter.
+    !end-bullet!
+-   !begin-bullet!
     [#1042](https://github.com/tidyverse/lubridate/issues/1042)
     `as_date` with character inputs accepts multiple formats in `format`
     argument. When `format` is supplied, the input string is parsed with
@@ -122,6 +126,10 @@
 -   !begin-bullet!
     `stamp()` now correctly errors when no formats could be guessed.
     !end-bullet!
+-   !begin-bullet!
+    Updating a date with timezone (e.g. `tzs = "UTC"`) now returns a
+    POSIXct.
+    !end-bullet!
 
 !end-bullets-2!
 
@@ -129,6 +137,15 @@
 
 !begin-bullets-3!
 
+-   !begin-bullet!
+    `lubridate` is now relying on `timechange` package for update and
+    time-zone computation. Google's CCTZ code is no longer part of the
+    package.
+    !end-bullet!
+-   !begin-bullet!
+    `lubridate`'s updating logic is now built on top of `timechange`
+    package.
+    !end-bullet!
 -   !begin-bullet!
     Change implementation of `c.Period`, `c.Duration` and `c.Interval`
     from S4 to S3.
