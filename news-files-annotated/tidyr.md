@@ -3,6 +3,16 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `pivot_longer(values_drop_na = TRUE)` is faster when there aren't
+    any missing values to drop (#1392, @mgirlich).
+
+    !end-bullet!
+-   !begin-bullet!
+    `replace_na()` is faster when there aren't any missing values to
+    replace (#1392, @mgirlich).
+
+    !end-bullet!
+-   !begin-bullet!
     tidyr errors (including input validation) have been thorougly
     reviewed and should generally be more likely to point you in the
     right direction (#1313, #1400).

@@ -5959,3 +5959,5 @@ purrr,1,All map `_raw()` variants have been deprecated because they are of limit
 purrr,1,"In `map_chr()`, automatic conversion from logical, integer, and double to character is now deprecated. Use an explicit `as.character()` if needed (#904).",NA
 purrr,1,`map_call()` has been removed. It was made defunct in 0.3.0 (Jan 2019).,NA
 purrr,1,"`simplify()`, `simplify_all()`, and `as_vector()` have been superseded in favour of `list_simplify()`. It provides a more consistent definition of simplification (#900).",NA
+tidyr,1,"`pivot_longer(values_drop_na = TRUE)` is faster when there aren't any missing values to drop (#1392, @​mgirlich).",NA
+tidyr,1,"`replace_na()` is faster when there aren't any missing values to replace (#1392, @​mgirlich).",NA
