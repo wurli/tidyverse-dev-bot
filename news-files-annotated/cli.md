@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    New `keypress()` function to read a single keypress from a terminal.
+
+    !end-bullet!
+-   !begin-bullet!
     New function `pretty_print_code()` to print function objects with
     syntax highlighting at the R console.
 
