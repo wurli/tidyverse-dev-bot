@@ -78,6 +78,10 @@
 !begin-bullets-2!
 
 -   !begin-bullet!
+    [#1036](https://github.com/tidyverse/lubridate/issues/1036)
+    `%within%` now correctly works with flipped intervals
+    !end-bullet!
+-   !begin-bullet!
     [#1085](https://github.com/tidyverse/lubridate/issues/1085)
     `as_datetime()` now preserves the time zone of the POSIXt input.
     !end-bullet!
