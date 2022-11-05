@@ -78,6 +78,10 @@
 !begin-bullets-2!
 
 -   !begin-bullet!
+    [#1085](https://github.com/tidyverse/lubridate/issues/1085)
+    `as_datetime()` now preserves the time zone of the POSIXt input.
+    !end-bullet!
+-   !begin-bullet!
     [#1072](https://github.com/tidyverse/lubridate/issues/1072) Names
     are now handled correctly when combining multiple Period or Interval
     objects.
