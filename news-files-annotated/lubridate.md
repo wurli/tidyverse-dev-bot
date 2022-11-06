@@ -1,4 +1,6 @@
-# Version 1.8.0.9000
+# lubridate (development version)
+
+# Version 1.9.0
 
 ### NEW FEATURES
 
