@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    The default `data` argument for `augment.coxph()` and
+    `augment.survreg()` has been transitioned from `NULL` to
+    `model.frame(x)` (#1126 by `@capnrefsmmat`).
+    !end-bullet!
+-   !begin-bullet!
     Migrated 'ggplot2' from strong to weak dependency, i.e. moved from
     `Imports` to `Suggests`.
     !end-bullet!
