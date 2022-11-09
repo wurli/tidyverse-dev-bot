@@ -26,6 +26,11 @@
     has length zero, and when it is wider than `width`.
 
     !end-bullet!
+-   !begin-bullet!
+    New `hash_file_md5()` function to calculate the MD5 hash of one or
+    more files.
+
+    !end-bullet!
 
 !end-bullets-1!
 
