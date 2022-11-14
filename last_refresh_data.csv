@@ -5971,3 +5971,4 @@ lubridate,1,[#1036](https://github.com/tidyverse/lubridate/issues/1036) `%within
 broom,1,The default `data` argument for `augment.coxph()` and `augment.survreg()` has been transitioned from `NULL` to `model.frame(x)` (#1126 by `@​capnrefsmmat`).,NA
 cli,1,New `hash_file_md5()` function to calculate the MD5 hash of one or more files.,NA
 modelr,1,Relax test for R-devel,NA
+lubridate,1,[#1090](https://github.com/tidyverse/lubridate/issues/1090) timechange has been moved from Depends to Imports.,NA
