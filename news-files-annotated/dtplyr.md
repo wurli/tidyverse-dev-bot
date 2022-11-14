@@ -8,6 +8,14 @@
 
     !end-bullet!
 -   !begin-bullet!
+    `pick()` is now translated (#341)
+
+    !end-bullet!
+-   !begin-bullet!
+    `across()` output can now be used as a data frame (#341)
+
+    !end-bullet!
+-   !begin-bullet!
     `names_glue` now works in `pivot_wider()` when `names_from` contains
     `NA`s (#394)
 
