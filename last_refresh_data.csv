@@ -5978,3 +5978,4 @@ dbplyr,1,"Add translation for `case_match()` (@​mgirlich, #1020).",NA
 dbplyr,1,"The translation of `round()` for Redshift now respects the `digits` argument (@​owenjonesuob, #1033).",NA
 dbplyr,1,"Redshift does not try to use named windows anymore (@​owenjonesuob, #1035).",NA
 dbplyr,1,"`as.POSIXct()` is now translated correctly for SQL Server, this fixes `copy_inline()` with such columns (@​krlmlr, #1011).",NA
+dplyr,1,`summarise()` now correctly recycles named 0-column data frames (#6509).,NA

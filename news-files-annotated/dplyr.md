@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `summarise()` now correctly recycles named 0-column data frames
+    (#6509).
+
+    !end-bullet!
+-   !begin-bullet!
     `.cols` and `.fns` are now required arguments in `across()`,
     `c_across()`, `if_any()`, and `if_all()`. In general, we now
     recommend that you use `pick()` instead of empty calls to `across()`
