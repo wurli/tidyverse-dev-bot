@@ -5975,3 +5975,6 @@ lubridate,1,[#1090](https://github.com/tidyverse/lubridate/issues/1090) timechan
 dtplyr,1,`pick()` is now translated (#341),NA
 dtplyr,1,`across()` output can now be used as a data frame (#341),NA
 dbplyr,1,"Add translation for `case_match()` (@​mgirlich, #1020).",NA
+dbplyr,1,"The translation of `round()` for Redshift now respects the `digits` argument (@​owenjonesuob, #1033).",NA
+dbplyr,1,"Redshift does not try to use named windows anymore (@​owenjonesuob, #1035).",NA
+dbplyr,1,"`as.POSIXct()` is now translated correctly for SQL Server, this fixes `copy_inline()` with such columns (@​krlmlr, #1011).",NA
