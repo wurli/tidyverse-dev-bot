@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Add translation for `case_match()` (@mgirlich, #1020).
+
+    !end-bullet!
+-   !begin-bullet!
     Passing `...` to `across()` is now deprecated because the evaluation
     timing of `...` is ambiguous. Now instead of (e.g.)
     `across(a:b, mean, na.rm = TRUE)` you should write
