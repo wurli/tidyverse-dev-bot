@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `pick()`, from dplyr 1.1.0, is now translated (@mgirlich, #1044).
+
+    !end-bullet!
+-   !begin-bullet!
     The translation of `round()` for Redshift now respects the `digits`
     argument (@owenjonesuob, #1033).
 
