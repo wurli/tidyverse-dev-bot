@@ -3,6 +3,53 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `.by` is a new experimental inline alternative to `group_by()` that
+    supports *temporary* grouping in the following key dplyr verbs:
+    `mutate()`, `summarise()`, `filter()`, and the `slice()` family
+    (#6528).
+
+    Rather than:
+
+    !begin-codeblock!
+        starwars %>%
+          group_by(species, homeworld) %>%
+          summarise(mean_height = mean(height))
+
+    !end-codeblock!
+    You can now write:
+
+    !begin-codeblock!
+        starwars %>%
+          summarise(
+            mean_height = mean(height),
+            .by = c(species, homeworld)
+          )
+
+    !end-codeblock!
+    The most useful reason to do this is because grouping with `.by` is
+    *temporary* and only affects the verb it is being applied to. An
+    ungrouped data frame went into the `summarise()` call, so an
+    ungrouped data frame will come out; with `.by`, you never need to
+    remember to `ungroup()` afterwards.
+
+    Additionally, using `summarise()` or `slice()` with `.by` will never
+    sort the results by the group key, unlike with `group_by()`.
+    Instead, the results are returned using the existing ordering of the
+    groups from the original data. We feel this is more predictable,
+    better maintains any ordering you might have already applied with a
+    previous call to `arrange()`, and provides a way to maintain the
+    current ordering without having to resort to factors.
+
+    This exciting feature was inspired by
+    [data.table](https://CRAN.R-project.org/package=data.table), where
+    the equivalent syntax looks like:
+
+    !begin-codeblock!
+        starwars[, .(mean_height = mean(height)), by = .(species, homeworld)]
+
+    !end-codeblock!
+    !end-bullet!
+-   !begin-bullet!
     `summarise()` now correctly recycles named 0-column data frames
     (#6509).
 
