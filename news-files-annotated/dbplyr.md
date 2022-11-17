@@ -3,6 +3,13 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    The rank functions `row_number()`, `min_rank()`, `rank()`,
+    `dense_rank()`, `percent_rank()`, and `cume_dist()` now give missing
+    values the rank NA to match the behaviour of local data (@mgirlich,
+    #991).
+
+    !end-bullet!
+-   !begin-bullet!
     `pick()`, from dplyr 1.1.0, is now translated (@mgirlich, #1044).
 
     !end-bullet!
