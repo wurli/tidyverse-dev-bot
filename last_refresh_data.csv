@@ -6000,3 +6000,4 @@ dplyr,1,"```
 starwars[, .(mean_height = mean(height)), by = .(species, homeworld)]
 ```",NA
 dplyr,1,`group_walk()` gains an explict `.keep` argument (#6530).,NA
+dplyr,1,`n_distinct()` now errors if you don't give it any input (#6535).,NA

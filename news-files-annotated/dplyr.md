@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `n_distinct()` now errors if you don't give it any input (#6535).
+
+    !end-bullet!
+-   !begin-bullet!
     `group_walk()` gains an explict `.keep` argument (#6530).
 
     !end-bullet!
