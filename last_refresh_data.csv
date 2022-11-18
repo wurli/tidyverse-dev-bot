@@ -5999,3 +5999,4 @@ dplyr,1,"The most useful reason to do this is because grouping with `.by` is *te
 dplyr,1,"```
 starwars[, .(mean_height = mean(height)), by = .(species, homeworld)]
 ```",NA
+dplyr,1,`group_walk()` gains an explict `.keep` argument (#6530).,NA

@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `group_walk()` gains an explict `.keep` argument (#6530).
+
+    !end-bullet!
+-   !begin-bullet!
     `.by` is a new experimental inline alternative to `group_by()` that
     supports *temporary* grouping in the following key dplyr verbs:
     `mutate()`, `summarise()`, `filter()`, and the `slice()` family
