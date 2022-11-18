@@ -6001,3 +6001,5 @@ starwars[, .(mean_height = mean(height)), by = .(species, homeworld)]
 ```",NA
 dplyr,1,`group_walk()` gains an explict `.keep` argument (#6530).,NA
 dplyr,1,`n_distinct()` now errors if you don't give it any input (#6535).,NA
+dplyr,1,`c_across()` now evaluates `all_of()` correctly and no longer allows you to accidentally select grouping variables (#6522).,NA
+dplyr,1,`c_across()` now throws a more informative error if you try to rename during column selection (#6522).,NA

@@ -3,6 +3,16 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `c_across()` now evaluates `all_of()` correctly and no longer allows
+    you to accidentally select grouping variables (#6522).
+
+    !end-bullet!
+-   !begin-bullet!
+    `c_across()` now throws a more informative error if you try to
+    rename during column selection (#6522).
+
+    !end-bullet!
+-   !begin-bullet!
     `n_distinct()` now errors if you don't give it any input (#6535).
 
     !end-bullet!
