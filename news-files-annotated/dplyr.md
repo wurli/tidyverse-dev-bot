@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `slice()` now errors if any expressions in `...` are named. This
+    helps avoid accidentally misspelling an optional argument, such as
+    `.by` (#6554).
+
+    !end-bullet!
+-   !begin-bullet!
     `c_across()` now evaluates `all_of()` correctly and no longer allows
     you to accidentally select grouping variables (#6522).
 
