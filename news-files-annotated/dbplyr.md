@@ -10,6 +10,11 @@
 
     !end-bullet!
 -   !begin-bullet!
+    The `.by` argument, from dplyr 1.1.0, is now supported (@mgirlich,
+    #1051).
+
+    !end-bullet!
+-   !begin-bullet!
     `pick()`, from dplyr 1.1.0, is now translated (@mgirlich, #1044).
 
     !end-bullet!

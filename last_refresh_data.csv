@@ -6004,3 +6004,4 @@ dplyr,1,`n_distinct()` now errors if you don't give it any input (#6535).,NA
 dplyr,1,`c_across()` now evaluates `all_of()` correctly and no longer allows you to accidentally select grouping variables (#6522).,NA
 dplyr,1,`c_across()` now throws a more informative error if you try to rename during column selection (#6522).,NA
 dplyr,1,"`slice()` now errors if any expressions in `...` are named. This helps avoid accidentally misspelling an optional argument, such as `.by` (#6554).",NA
+dbplyr,1,"The `.by` argument, from dplyr 1.1.0, is now supported (@​mgirlich, #1051).",NA
