@@ -16,6 +16,10 @@
 !begin-bullets-2!
 
 -   !begin-bullet!
+    [#1091](https://github.com/tidyverse/lubridate/issues/1091) Fix
+    formatting of numeric inputs to parse_date_time.
+    !end-bullet!
+-   !begin-bullet!
     [#1092](https://github.com/tidyverse/lubridate/issues/1092) Fix
     regression in `ymd_hm` on locales where `p` format is not defined.
     !end-bullet!
