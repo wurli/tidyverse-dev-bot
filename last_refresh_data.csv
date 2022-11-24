@@ -6009,3 +6009,4 @@ tidyr,1,"The `...` argument of both `pivot_longer()` and `pivot_wider()` has bee
 lubridate,1,[#1098](https://github.com/tidyverse/lubridate/issues/1098) Roll over the month boundary in `make_dateime()` when units exceed their maximal values.,NA
 lubridate,1,"`as_datetime()` accepts multiple formats in format argument, just like `as_date()` does.",NA
 lubridate,1,"[#1097](https://github.com/tidyverse/lubridate/issues/1097) Fix `as_date(""character"")` to work correctly with formats that include extra characters.",NA
+lubridate,1,[#1092](https://github.com/tidyverse/lubridate/issues/1092) Fix regression in `ymd_hm` on locales where `p` format is not defined.,NA

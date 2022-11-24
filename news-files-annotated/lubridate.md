@@ -16,6 +16,10 @@
 !begin-bullets-2!
 
 -   !begin-bullet!
+    [#1092](https://github.com/tidyverse/lubridate/issues/1092) Fix
+    regression in `ymd_hm` on locales where `p` format is not defined.
+    !end-bullet!
+-   !begin-bullet!
     [#1097](https://github.com/tidyverse/lubridate/issues/1097) Fix
     `as_date("character")` to work correctly with formats that include
     extra characters.
