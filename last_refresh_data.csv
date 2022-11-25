@@ -6011,3 +6011,4 @@ lubridate,1,"`as_datetime()` accepts multiple formats in format argument, just l
 lubridate,1,"[#1097](https://github.com/tidyverse/lubridate/issues/1097) Fix `as_date(""character"")` to work correctly with formats that include extra characters.",NA
 lubridate,1,[#1092](https://github.com/tidyverse/lubridate/issues/1092) Fix regression in `ymd_hm` on locales where `p` format is not defined.,NA
 lubridate,1,[#1091](https://github.com/tidyverse/lubridate/issues/1091) Fix formatting of numeric inputs to parse_date_time.,NA
+pillar,1,The default for `pillar.min_title_chars` has been bumped up to 20 characters so that title truncuation only affects very long variables (#582).,NA
