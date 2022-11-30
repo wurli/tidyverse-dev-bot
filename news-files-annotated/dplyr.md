@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `slice()` with no inputs now returns 0 rows. This is mostly for
+    theoretical consistency (#6573).
+
+    !end-bullet!
+-   !begin-bullet!
     `rename_with()` now disallows renaming in the `.cols` tidy-selection
     (#6561).
 

@@ -6019,3 +6019,4 @@ dplyr,1,"`reframe()` has been added in response to valid concern from the commun
 dplyr,1,Returning 0 or \>1 rows per group in `summarise()` is now deprecated in favor of using `reframe()`. See the NEWS bullet about `reframe()` for more details (#6382).,NA
 dplyr,1,`rename_with()` now disallows renaming in the `.cols` tidy-selection (#6561).,NA
 dplyr,1,`rename_with()` now checks that the result of `.fn` is the right type and size (#6561).,NA
+dplyr,1,`slice()` with no inputs now returns 0 rows. This is mostly for theoretical consistency (#6573).,NA
