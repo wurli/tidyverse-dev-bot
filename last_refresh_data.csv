@@ -6021,3 +6021,4 @@ dplyr,1,`rename_with()` now disallows renaming in the `.cols` tidy-selection (#6
 dplyr,1,`rename_with()` now checks that the result of `.fn` is the right type and size (#6561).,NA
 dplyr,1,`slice()` with no inputs now returns 0 rows. This is mostly for theoretical consistency (#6573).,NA
 ggplot2,1,The `lwd` alias now correctly replaced by `linewidth` instead of `size` (@​teunbrand based on @​clauswilke's suggestion #5051).,NA
+ggplot2,1,"Fixed spurious warning when `weight` aesthetic was used in `stat_smooth()` (@​teunbrand based on @​clauswilke's suggestion, #5053).",NA

@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed spurious warning when `weight` aesthetic was used in
+    `stat_smooth()` (@teunbrand based on @clauswilke's suggestion,
+    #5053).
+    !end-bullet!
+-   !begin-bullet!
     The `lwd` alias now correctly replaced by `linewidth` instead of
     `size` (@teunbrand based on @clauswilke's suggestion #5051).
     !end-bullet!
