@@ -6022,3 +6022,5 @@ dplyr,1,`rename_with()` now checks that the result of `.fn` is the right type an
 dplyr,1,`slice()` with no inputs now returns 0 rows. This is mostly for theoretical consistency (#6573).,NA
 ggplot2,1,The `lwd` alias now correctly replaced by `linewidth` instead of `size` (@​teunbrand based on @​clauswilke's suggestion #5051).,NA
 ggplot2,1,"Fixed spurious warning when `weight` aesthetic was used in `stat_smooth()` (@​teunbrand based on @​clauswilke's suggestion, #5053).",NA
+pillar,1,"Use bullets to format details (#582, #617).",NA
+pillar,1,"The default for `pillar.min_title_chars` has been bumped up to 20 characters so that title truncuation only affects very long variables (#582, #620).",NA

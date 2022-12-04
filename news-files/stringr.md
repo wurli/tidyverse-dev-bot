@@ -1,5 +1,7 @@
 # stringr (development version)
 
+# stringr 1.5.0
+
 ## Breaking changes
 
 * stringr functions now consistently implement the tidyverse recycling rules
