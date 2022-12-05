@@ -6026,3 +6026,5 @@ pillar,1,"Use bullets to format details (#582, #617).",NA
 pillar,1,"The default for `pillar.min_title_chars` has been bumped up to 20 characters so that title truncuation only affects very long variables (#582, #620).",NA
 pillar,1,"Avoid warning with S4 character classes (tidyverse/tibble#1367, #625).",NA
 pillar,1,"Show colnames() hint only when needed (tidyverse/tibble#1488, #622).",NA
+dbplyr,1,"`fill()` can now fill downup and updown (@​mgirlich, #1057).",NA
+dbplyr,1,"`fill()` can now order by non-numeric columns also in the up direction (@​mgirlich, #1057).",NA
