@@ -6030,3 +6030,4 @@ dbplyr,1,"`fill()` can now fill downup and updown (@​mgirlich, #1057).",NA
 dbplyr,1,"`fill()` can now order by non-numeric columns also in the up direction (@​mgirlich, #1057).",NA
 dbplyr,1,`filter()` now works when using a window function and an external vector (#1048).,NA
 dbplyr,2,"• `left/inner_join()` + `left/inner_join()` (@​mgirlich, #865).","dbplyr now needs less subqueries resulting in shorter, more readable and in some cases even faster SQL. The following combination of verbs now avoids a subquery if possible:"
+dbplyr,1,"`last()` is now correctly translated when no window frame is specified (@​mgirlich, #1063).",NA
