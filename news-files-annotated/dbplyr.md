@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `filter()` now works when using a window function and an external
+    vector (#1048).
+
+    !end-bullet!
+-   !begin-bullet!
     `fill()` can now fill downup and updown (@mgirlich, #1057).
 
     !end-bullet!
@@ -196,6 +201,10 @@
     -   !begin-bullet!
         `summarise()` + `filter()` now translates to `HAVING` where
         possible (@mgirlich, #877).
+
+        !end-bullet!
+    -   !begin-bullet!
+        `left/inner_join()` + `left/inner_join()` (@mgirlich, #865).
 
         !end-bullet!
 

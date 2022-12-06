@@ -6028,3 +6028,5 @@ pillar,1,"Avoid warning with S4 character classes (tidyverse/tibble#1367, #625).
 pillar,1,"Show colnames() hint only when needed (tidyverse/tibble#1488, #622).",NA
 dbplyr,1,"`fill()` can now fill downup and updown (@​mgirlich, #1057).",NA
 dbplyr,1,"`fill()` can now order by non-numeric columns also in the up direction (@​mgirlich, #1057).",NA
+dbplyr,1,`filter()` now works when using a window function and an external vector (#1048).,NA
+dbplyr,2,"• `left/inner_join()` + `left/inner_join()` (@​mgirlich, #865).","dbplyr now needs less subqueries resulting in shorter, more readable and in some cases even faster SQL. The following combination of verbs now avoids a subquery if possible:"
