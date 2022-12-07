@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed a regression in `geom_hex()` where aesthetics were replicated
+    across bins (@thomasp85, #5037 and #5044)
+    !end-bullet!
+-   !begin-bullet!
     Fixed spurious warning when `weight` aesthetic was used in
     `stat_smooth()` (@teunbrand based on @clauswilke's suggestion,
     #5053).
