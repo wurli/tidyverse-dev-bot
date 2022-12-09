@@ -15,6 +15,10 @@
     The `lwd` alias now correctly replaced by `linewidth` instead of
     `size` (@teunbrand based on @clauswilke's suggestion #5051).
     !end-bullet!
+-   !begin-bullet!
+    Fixed a regression in `Coord$train_panel_guides()` where names of
+    guides were dropped (@maxsutton, #5063)
+    !end-bullet!
 
 !end-bullets-1!
 
