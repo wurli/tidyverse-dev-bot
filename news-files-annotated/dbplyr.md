@@ -3,6 +3,18 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `NA`s in `blob()`s are correctly translated to `NULL` (#983).
+
+    !end-bullet!
+-   !begin-bullet!
+    HANA backend correctly translates `as.character()` (#1027).
+
+    !end-bullet!
+-   !begin-bullet!
+    Correct translation for `median()` for SQL server (#1008).
+
+    !end-bullet!
+-   !begin-bullet!
     `last()` is now correctly translated when no window frame is
     specified (@mgirlich, #1063).
 
