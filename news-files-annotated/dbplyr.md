@@ -3,7 +3,7 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
-    `NA`s in `blob()`s are correctly translated to `NULL` (#983).
+    Postgres backend generates correct literals for Dates (#727).
 
     !end-bullet!
 -   !begin-bullet!
