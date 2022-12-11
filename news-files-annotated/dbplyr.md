@@ -7,6 +7,10 @@
 
     !end-bullet!
 -   !begin-bullet!
+    `NA`s in `blob()`s are correctly translated to `NULL` (#983).
+
+    !end-bullet!
+-   !begin-bullet!
     HANA backend correctly translates `as.character()` (#1027).
 
     !end-bullet!
