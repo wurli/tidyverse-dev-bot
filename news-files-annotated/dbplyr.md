@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `stringr::str_like()` (new in 1.5.0) is translated to the closest
+    `LIKE` equivalent (@rjpat, #509)
+
+    !end-bullet!
+-   !begin-bullet!
     Postgres backend generates correct literals for Dates (#727).
 
     !end-bullet!

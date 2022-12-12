@@ -6037,3 +6037,4 @@ dbplyr,1,`NA`s in `blob()`s are correctly translated to `NULL` (#983).,NA
 dbplyr,1,HANA backend correctly translates `as.character()` (#1027).,NA
 dbplyr,1,Correct translation for `median()` for SQL server (#1008).,NA
 dbplyr,1,Postgres backend generates correct literals for Dates (#727).,NA
+dbplyr,1,"`stringr::str_like()` (new in 1.5.0) is translated to the closest `LIKE` equivalent (@​rjpat, #509)",NA
