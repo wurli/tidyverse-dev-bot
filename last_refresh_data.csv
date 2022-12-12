@@ -6038,3 +6038,40 @@ dbplyr,1,HANA backend correctly translates `as.character()` (#1027).,NA
 dbplyr,1,Correct translation for `median()` for SQL server (#1008).,NA
 dbplyr,1,Postgres backend generates correct literals for Dates (#727).,NA
 dbplyr,1,"`stringr::str_like()` (new in 1.5.0) is translated to the closest `LIKE` equivalent (@​rjpat, #509)",NA
+dbplyr,1,In preparation for dplyr 1.1.0:,NA
+dbplyr,2,"• The `.by` argument is supported (@​mgirlich, #1051).",In preparation for dplyr 1.1.0:
+dbplyr,2,"• Passing `...` to `across()` is deprecated because the evaluation timing of `...` is ambiguous. Now instead of (e.g.) `across(a:b, mean, na.rm = TRUE)` use",In preparation for dplyr 1.1.0:
+dbplyr,2,"• `pick()` is translated (@​mgirlich, #1044).",In preparation for dplyr 1.1.0:
+dbplyr,2,"• `case_match()` is translated (@​mgirlich, #1020).",In preparation for dplyr 1.1.0:
+dbplyr,2,"• `case_when()` now supports the `.default` argument (@​mgirlich, #1017).",In preparation for dplyr 1.1.0:
+dbplyr,1,"dbplyr now needs fewer subqueries resulting in shorter, more readable and in some cases even faster SQL. The following combination of verbs now avoids a subquery if possible:",NA
+dbplyr,2,"• `*_join()` + `select()` (@​mgirlich, #876).","dbplyr now needs fewer subqueries resulting in shorter, more readable and in some cases even faster SQL. The following combination of verbs now avoids a subquery if possible:"
+dbplyr,2,"• `select()` + `*_join()` (@​mgirlich, #875).","dbplyr now needs fewer subqueries resulting in shorter, more readable and in some cases even faster SQL. The following combination of verbs now avoids a subquery if possible:"
+dbplyr,2,"• `mutate()` + `filter()` and `filter()` + `filter()` (@​mgirlich, #792).","dbplyr now needs fewer subqueries resulting in shorter, more readable and in some cases even faster SQL. The following combination of verbs now avoids a subquery if possible:"
+dbplyr,2,"• `distinct()` (@​mgirlich, #880).","dbplyr now needs fewer subqueries resulting in shorter, more readable and in some cases even faster SQL. The following combination of verbs now avoids a subquery if possible:"
+dbplyr,2,"• `summarise()` + `filter()` now translates to `HAVING` where possible (@​mgirlich, #877).","dbplyr now needs fewer subqueries resulting in shorter, more readable and in some cases even faster SQL. The following combination of verbs now avoids a subquery if possible:"
+dbplyr,2,"• `left/inner_join()` + `left/inner_join()` (@​mgirlich, #865).","dbplyr now needs fewer subqueries resulting in shorter, more readable and in some cases even faster SQL. The following combination of verbs now avoids a subquery if possible:"
+dbplyr,1,"Joins now don't use the table alias ""LHS"" and ""RHS"" unless necessary (@​mgirlich).",NA
+dbplyr,1,"When using common table expressions the results of joins and set operations are now reused (@​mgirlich, #978).",NA
+dbplyr,1,"When possible, dbplyr now uses `SELECT *` after a join instead of explicitly selecting every column (@​mgirlich, #898).",NA
+dbplyr,1,"`fill()` can now fill ""downup"" and ""updown"" (@​mgirlich, #1057).",NA
+dbplyr,2,• Generates correct literals for Dates (#727).,Postgres
+dbplyr,1,HANA:,NA
+dbplyr,2,• Correctly translates `as.character()` (#1027).,HANA:
+dbplyr,2,• `copy_inline()` now works for Hana (#950),HANA:
+dbplyr,1,Redshift:,NA
+dbplyr,2,"• `round()` now respects the `digits` argument (@​owenjonesuob, #1033).",Redshift:
+dbplyr,2,"• No longer tries to use named windows anymore (@​owenjonesuob, #1035).",Redshift:
+dbplyr,2,"• `copy_inline()` now works for Redshift (#949, thanks to @​ejneer for an initial implementation).",Redshift:
+dbplyr,1,Snowflake:,NA
+dbplyr,1,"numeric functions: `all()`, `any()`, `log10()`, `round()`, `cor()`, `cov()` and `sd()`.",NA
+dbplyr,1,"date functions: `day()`, `mday()`, `wday()`, `yday()`, `week()`, `isoweek()`, `month()`, `quarter()`, `isoyear()`, `seconds()`, `minutes()`, `hours()`, `days()`, `weeks()`, `months()`, `years()` and `floor_date()`.",NA
+dbplyr,1,"string functions: `grepl()`, `paste()`, `paste0()`, `str_c()`, `str_locate()`, `str_detect()`, `str_replace()`, `str_replace_all()`, `str_remove()`, `str_remove_all()`, `str_trim()`, `str_squish()` and `str_flatten()` (@​fh-afrachioni, #860).",NA
+dbplyr,1,SQL server:,NA
+dbplyr,2,"• `as.POSIXct()` now translated correctly (@​krlmlr, #1011).",SQL server:
+dbplyr,2,• `median()` now translated correctly (#1008).,SQL server:
+dbplyr,2,"• `pivot_wider()` works again for MS SQL (@​mgirlich, #929).",SQL server:
+dbplyr,1,"Terdata: \* Querying Teradata databases works again. Unfortunately, the fix requires every column to be explicitly selected again (@​mgirlich, #966).",NA
+dbplyr,1,Oracle:,NA
+dbplyr,2,"• `slice_sample()` now works for Oracle (@​mgirlich, #986).",Oracle:
+dbplyr,2,• `copy_inline()` now works for Oracle (#972),Oracle:
