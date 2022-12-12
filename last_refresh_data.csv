@@ -6075,3 +6075,35 @@ dbplyr,1,"Terdata: \* Querying Teradata databases works again. Unfortunately, th
 dbplyr,1,Oracle:,NA
 dbplyr,2,"• `slice_sample()` now works for Oracle (@​mgirlich, #986).",Oracle:
 dbplyr,2,• `copy_inline()` now works for Oracle (#972),Oracle:
+dbplyr,1,"Variables that aren't found in either the data or in the environment now produce an error (@​mgirlich, #907).",NA
+dbplyr,1,"dbplyr now produces fewer subqueries resulting in shorter, more readable, and, in some cases, faster SQL. The following combination of verbs now avoids a subquery if possible:",NA
+dbplyr,2,"• `*_join()` + `select()` (@​mgirlich, #876).","dbplyr now produces fewer subqueries resulting in shorter, more readable, and, in some cases, faster SQL. The following combination of verbs now avoids a subquery if possible:"
+dbplyr,2,"• `select()` + `*_join()` (@​mgirlich, #875).","dbplyr now produces fewer subqueries resulting in shorter, more readable, and, in some cases, faster SQL. The following combination of verbs now avoids a subquery if possible:"
+dbplyr,2,"• `mutate()` + `filter()` and `filter()` + `filter()` (@​mgirlich, #792).","dbplyr now produces fewer subqueries resulting in shorter, more readable, and, in some cases, faster SQL. The following combination of verbs now avoids a subquery if possible:"
+dbplyr,2,"• `distinct()` (@​mgirlich, #880).","dbplyr now produces fewer subqueries resulting in shorter, more readable, and, in some cases, faster SQL. The following combination of verbs now avoids a subquery if possible:"
+dbplyr,2,"• `summarise()` + `filter()` now translates to `HAVING` (@​mgirlich, #877).","dbplyr now produces fewer subqueries resulting in shorter, more readable, and, in some cases, faster SQL. The following combination of verbs now avoids a subquery if possible:"
+dbplyr,2,"• `left/inner_join()` + `left/inner_join()` (@​mgirlich, #865).","dbplyr now produces fewer subqueries resulting in shorter, more readable, and, in some cases, faster SQL. The following combination of verbs now avoids a subquery if possible:"
+dbplyr,1,"dbplyr now uses `SELECT *` after a join instead of explicitly selecting every column, where possible (@​mgirlich, #898).",NA
+dbplyr,1,"Joins only use the table aliases (""LHS"" and ""RHS"") if necessary (@​mgirlich).",NA
+dbplyr,1,"When using common table expressions, the results of joins and set operations are now reused (@​mgirlich, #978).",NA
+dbplyr,1,"Keyword highlighting can now be customised via the option `dbplyr_highlight`. Turn it off via `options(dbplyr_highlight = FALSE)` or pass a custom ansi style, e.g. `options(dbplyr_highlight = cli::combine_ansi_styles(""bold"", ""cyan""))` (@​mgirlich, #974).",NA
+dbplyr,1,"The rank functions (`row_number()`, `min_rank()`, `rank()`, `dense_rank()`, `percent_rank()`, and `cume_dist()`) now give missing values the rank NA to match the behaviour of dplyr (@​mgirlich, #991).",NA
+dbplyr,1,"`fill()` can now fill ""downup"" and ""updown"" (@​mgirlich, #1057), and now order by non-numeric columns also in the up direction (@​mgirlich, #1057).",NA
+dbplyr,1,"`group_by()` + renamed columns works once again (@​mgirlich, #928).",NA
+dbplyr,1,"`last()` is correctly translated when no window frame is specified (@​mgirlich, #1063).",NA
+dbplyr,1,"`setOldClass()` uses a namespace, fixing an installation issue (@​mgirlich, #927).",NA
+dbplyr,1,"`sql()` is now translated differently. The `...` are now evaluated locally instead of being translated with `translate_sql()` (@​mgirlich, #952).",NA
+dbplyr,1,MySQL:,NA
+dbplyr,2,"• `str_flatten()` uses `collapse = """"` by default (@​fh-afrachioni, #993)",MySQL:
+dbplyr,1,PostgreSQL:,NA
+dbplyr,2,• Generates correct literals for Dates (#727).,PostgreSQL:
+dbplyr,2,"• `str_flatten()` uses `collapse = """"` by default (@​fh-afrachioni, #993)",PostgreSQL:
+dbplyr,2,"• `rows_*()` use the column types of `x` when auto copying (@​mgirlich, #909).",PostgreSQL:
+dbplyr,2,"• `str_flatten()` uses `collapse = """"` by default (@​fh-afrachioni, #993)",Redshift:
+dbplyr,1,"`str_flatten()` uses `collapse = """"` by default (@​fh-afrachioni, #993)",NA
+dbplyr,1,SQLite:,NA
+dbplyr,2,"• `quantile()` gives a better error saying that it is not supported (@​mgirlich, #1000).",SQLite:
+dbplyr,2,"• Always use 1 and 0 as literals for logicals (@​krlmlr, #934).",SQL server:
+dbplyr,1,Teradata:,NA
+dbplyr,2,"• Querying works again. Unfortunately, the fix requires every column to once again by explicitly selected (@​mgirlich, #966).",Teradata:
+dbplyr,2,"• New translations for `as.Date()`, `week()`, `quarter()`, `paste()`, `startsWith()`, `row_number()`, `weighted.mean()`, `lead()`, `lag()`, and `cumsum()` (@​overmar, #913).",Teradata:

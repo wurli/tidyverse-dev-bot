@@ -35,7 +35,7 @@
     !end-bullets-2!
     !end-bullet!
 -   !begin-bullet!
-    Variables that are neither found in the data nor in the environment
+    Variables that aren't found in either the data or in the environment
     now produce an error (@mgirlich, #907).
 
     !end-bullet!
@@ -47,85 +47,120 @@
 !begin-bullets-3!
 
 -   !begin-bullet!
-    dbplyr now needs fewer subqueries resulting in shorter, more
-    readable and in some cases even faster SQL. The following
-    combination of verbs now avoids a subquery if possible:
+    dbplyr now produces fewer subqueries resulting in shorter, more
+    readable, and, in some cases, faster SQL. The following combination
+    of verbs now avoids a subquery if possible:
 
     !begin-bullets-4!
     -   !begin-bullet!
         `*_join()` + `select()` (@mgirlich, #876).
-
         !end-bullet!
     -   !begin-bullet!
         `select()` + `*_join()` (@mgirlich, #875).
-
         !end-bullet!
     -   !begin-bullet!
         `mutate()` + `filter()` and `filter()` + `filter()` (@mgirlich,
         #792).
-
         !end-bullet!
     -   !begin-bullet!
         `distinct()` (@mgirlich, #880).
-
         !end-bullet!
     -   !begin-bullet!
-        `summarise()` + `filter()` now translates to `HAVING` where
-        possible (@mgirlich, #877).
-
+        `summarise()` + `filter()` now translates to `HAVING`
+        (@mgirlich, #877).
         !end-bullet!
     -   !begin-bullet!
         `left/inner_join()` + `left/inner_join()` (@mgirlich, #865).
-
         !end-bullet!
 
     !end-bullets-4!
     !end-bullet!
 -   !begin-bullet!
-    Joins now don't use the table alias "LHS" and "RHS" unless necessary
+    dbplyr now uses `SELECT *` after a join instead of explicitly
+    selecting every column, where possible (@mgirlich, #898).
+
+    !end-bullet!
+-   !begin-bullet!
+    Joins only use the table aliases ("LHS" and "RHS") if necessary
     (@mgirlich).
 
     !end-bullet!
 -   !begin-bullet!
-    When using common table expressions the results of joins and set
+    When using common table expressions, the results of joins and set
     operations are now reused (@mgirlich, #978).
-
-    !end-bullet!
--   !begin-bullet!
-    When possible, dbplyr now uses `SELECT *` after a join instead of
-    explicitly selecting every column (@mgirlich, #898).
 
     !end-bullet!
 
 !end-bullets-3!
 
-## Improved translations
+## Improved error messages
 
 !begin-bullets-5!
 
 -   !begin-bullet!
-    `fill()` can now fill "downup" and "updown" (@mgirlich, #1057).
+    Many errors have been improved and now show the function where the
+    error happened instead of a helper function (@mgirlich, #907).
 
     !end-bullet!
 -   !begin-bullet!
-    `fill()` can now order by non-numeric columns also in the up
-    direction (@mgirlich, #1057).
+    Errors produced by the database, e.g. in `collect()` or `rows_*()`,
+    now show the verb where the error happened (@mgirlich).
 
     !end-bullet!
 -   !begin-bullet!
-    The rank functions `row_number()`, `min_rank()`, `rank()`,
-    `dense_rank()`, `percent_rank()`, and `cume_dist()` now give missing
-    values the rank NA to match the behaviour of local data (@mgirlich,
-    #991).
+    `window_order()` now produces a better error message when applied to
+    a data frame (@mgirlich, #947).
 
     !end-bullet!
 -   !begin-bullet!
-    `last()` is now correctly translated when no window frame is
-    specified (@mgirlich, #1063).
+    Using a named `across()` now gives a clear error message (@mgirlich,
+    #761).
+
+    !end-bullet!
+
+!end-bullets-5!
+
+## Minor improvements and bug fixes
+
+!begin-bullets-6!
+
+-   !begin-bullet!
+    Keyword highlighting can now be customised via the option
+    `dbplyr_highlight`. Turn it off via
+    `options(dbplyr_highlight = FALSE)` or pass a custom ansi style,
+    e.g. `options(dbplyr_highlight = cli::combine_ansi_styles("bold", "cyan"))`
+    (@mgirlich, #974).
+
+    !end-bullet!
+-   !begin-bullet!
+    The rank functions (`row_number()`, `min_rank()`, `rank()`,
+    `dense_rank()`, `percent_rank()`, and `cume_dist()`) now give
+    missing values the rank NA to match the behaviour of dplyr
+    (@mgirlich, #991).
 
     !end-bullet!
 -   !begin-bullet!
     `NA`s in `blob()`s are correctly translated to `NULL` (#983).
+
+    !end-bullet!
+-   !begin-bullet!
+    `copy_inline()` gains a `types` argument to specify the SQL column
+    types (@mgirlich, #963).
+
+    !end-bullet!
+-   !begin-bullet!
+    `cur_column()` is now supported (@mgirlich, #951).
+
+    !end-bullet!
+-   !begin-bullet!
+    `distinct()` returns columns ordered the way you request, not the
+    same as the input data (@mgirlich).
+
+    !end-bullet!
+-   !begin-bullet!
+    `fill()` can now fill "downup" and "updown" (@mgirlich, #1057), and
+    now order by non-numeric columns also in the up direction
+    (@mgirlich, #1057).
 
     !end-bullet!
 -   !begin-bullet!
@@ -134,25 +169,36 @@
 
     !end-bullet!
 -   !begin-bullet!
-    A call to `sql()` is now translated differently. The `...` are now
-    evaluated locally instead of being translated with `translate_sql()`
-    (@mgirlich, #952).\
+    `group_by()` + renamed columns works once again (@mgirlich, #928).
 
     !end-bullet!
 -   !begin-bullet!
-    Postgres
+    `last()` is correctly translated when no window frame is specified
+    (@mgirlich, #1063).
 
-    !begin-bullets-6!
-    -   !begin-bullet!
-        Generates correct literals for Dates (#727).
-        !end-bullet!
-
-    !end-bullets-6!
     !end-bullet!
+-   !begin-bullet!
+    `setOldClass()` uses a namespace, fixing an installation issue
+    (@mgirlich, #927).
+
+    !end-bullet!
+-   !begin-bullet!
+    `sql()` is now translated differently. The `...` are now evaluated
+    locally instead of being translated with `translate_sql()`
+    (@mgirlich, #952).
+
+    !end-bullet!
+
+!end-bullets-6!
+
+## Backend specific improvements
+
+!begin-bullets-7!
+
 -   !begin-bullet!
     HANA:
 
-    !begin-bullets-7!
+    !begin-bullets-8!
     -   !begin-bullet!
         Correctly translates `as.character()` (#1027).
         !end-bullet!
@@ -160,12 +206,54 @@
         `copy_inline()` now works for Hana (#950)
         !end-bullet!
 
-    !end-bullets-7!
+    !end-bullets-8!
+    !end-bullet!
+-   !begin-bullet!
+    MySQL:
+
+    !begin-bullets-9!
+    -   !begin-bullet!
+        `str_flatten()` uses `collapse = ""` by default (@fh-afrachioni,
+        #993)
+        !end-bullet!
+
+    !end-bullets-9!
+    !end-bullet!
+-   !begin-bullet!
+    Oracle:
+
+    !begin-bullets-10!
+    -   !begin-bullet!
+        `slice_sample()` now works for Oracle (@mgirlich, #986).
+        !end-bullet!
+    -   !begin-bullet!
+        `copy_inline()` now works for Oracle (#972)
+        !end-bullet!
+
+    !end-bullets-10!
+    !end-bullet!
+-   !begin-bullet!
+    PostgreSQL:
+
+    !begin-bullets-11!
+    -   !begin-bullet!
+        Generates correct literals for Dates (#727).
+        !end-bullet!
+    -   !begin-bullet!
+        `str_flatten()` uses `collapse = ""` by default (@fh-afrachioni,
+        #993)
+        !end-bullet!
+    -   !begin-bullet!
+        `rows_*()` use the column types of `x` when auto copying
+        (@mgirlich, #909).
+        !end-bullet!
+
+    !end-bullets-11!
     !end-bullet!
 -   !begin-bullet!
     Redshift:
 
-    !begin-bullets-8!
+    !begin-bullets-12!
     -   !begin-bullet!
         `round()` now respects the `digits` argument (@owenjonesuob,
         #1033).
@@ -178,8 +266,12 @@
         `copy_inline()` now works for Redshift (#949, thanks to @ejneer
         for an initial implementation).
         !end-bullet!
+    -   !begin-bullet!
+        `str_flatten()` uses `collapse = ""` by default (@fh-afrachioni,
+        #993)
+        !end-bullet!
 
-    !end-bullets-8!
+    !end-bullets-12!
     !end-bullet!
 -   !begin-bullet!
     Snowflake:
@@ -206,9 +298,25 @@
 
     !end-bullet!
 -   !begin-bullet!
+    `str_flatten()` uses `collapse = ""` by default (@fh-afrachioni,
+    #993)
+
+    !end-bullet!
+-   !begin-bullet!
+    SQLite:
+
+    !begin-bullets-13!
+    -   !begin-bullet!
+        `quantile()` gives a better error saying that it is not
+        supported (@mgirlich, #1000).
+        !end-bullet!
+
+    !end-bullets-13!
+    !end-bullet!
+-   !begin-bullet!
     SQL server:
 
-    !begin-bullets-9!
+    !begin-bullets-14!
     -   !begin-bullet!
         `as.POSIXct()` now translated correctly (@krlmlr, #1011).
         !end-bullet!
@@ -218,121 +326,34 @@
     -   !begin-bullet!
         `pivot_wider()` works again for MS SQL (@mgirlich, #929).
         !end-bullet!
-
-    !end-bullets-9!
-    !end-bullet!
--   !begin-bullet!
-    Terdata: \* Querying Teradata databases works again. Unfortunately,
-    the fix requires every column to be explicitly selected again
-    (@mgirlich, #966).
-
-    !end-bullet!
--   !begin-bullet!
-    New translations for Teradata: `as.Date()`, `week()`, `quarter()`,
-    `paste()`, `startsWith()`, `row_number()`, `weighted.mean()`,
-    `lead()`, `lag()`, and `cumsum()` (@overmar, #913).
-
-    !end-bullet!
--   !begin-bullet!
-    Oracle:
-
-    !begin-bullets-10!
     -   !begin-bullet!
-        `slice_sample()` now works for Oracle (@mgirlich, #986).
-        !end-bullet!
-    -   !begin-bullet!
-        `copy_inline()` now works for Oracle (#972)
+        Always use 1 and 0 as literals for logicals (@krlmlr, #934).
         !end-bullet!
 
-    !end-bullets-10!
+    !end-bullets-14!
     !end-bullet!
 -   !begin-bullet!
-    `str_flatten()` uses `collapse = ""` by default, consistent with
-    `stringr`, for Snowflake, Redshift, Postgres, and MySQL
-    (@fh-afrachioni, #993).
+    Teradata:
 
+    !begin-bullets-15!
+    -   !begin-bullet!
+        Querying works again. Unfortunately, the fix requires every
+        column to once again by explicitly selected (@mgirlich, #966).
+        !end-bullet!
+    -   !begin-bullet!
+        New translations for `as.Date()`, `week()`, `quarter()`,
+        `paste()`, `startsWith()`, `row_number()`, `weighted.mean()`,
+        `lead()`, `lag()`, and `cumsum()` (@overmar, #913).
+        !end-bullet!
+
+    !end-bullets-15!
     !end-bullet!
 
-!end-bullets-5!
-
-## Improved error messages
-
-!begin-bullets-11!
-
--   !begin-bullet!
-    Many errors have been improved and now show the function where the
-    error happened instead of a helper function (@mgirlich, #907).
-
-    !end-bullet!
--   !begin-bullet!
-    Errors produced by the database, e.g. in `collect()` or `rows_*()`,
-    now show the verb where the error happened (@mgirlich).
-
-    !end-bullet!
--   !begin-bullet!
-    `window_order()` now produces a better error message when applied to
-    a data frame (@mgirlich, #947).
-
-    !end-bullet!
--   !begin-bullet!
-    Using a named `across()` now gives a clear error message (@mgirlich,
-    #761).
-
-    !end-bullet!
--   !begin-bullet!
-    Using `quantile()` for SQLite now gives a better error saying that
-    it is not supported (@mgirlich, #1000).
-
-    !end-bullet!
-
-!end-bullets-11!
-
-## Minor improvements and bug fixes
-
-!begin-bullets-12!
-
--   !begin-bullet!
-    The keyword highlighting can now be customised via the option
-    `dbplyr_highlight`. Turn it off via
-    `options(dbplyr_highlight = FALSE)` or pass a custom ansi style,
-    e.g. `options(dbplyr_highlight = cli::combine_ansi_styles("bold", "cyan"))`
-    (@mgirlich, #974).
-
-    !end-bullet!
--   !begin-bullet!
-    `distinct()` returns columns ordered the way you request, not the
-    same as the input data (@mgirlich).
-
-    !end-bullet!
--   !begin-bullet!
-    `cur_column()` is now supported (@mgirlich, #951).
-
-    !end-bullet!
--   !begin-bullet!
-    Grouping by renamed columns works again (@mgirlich, #928).
-
-    !end-bullet!
--   !begin-bullet!
-    Fixed an installation issue due to missing namespace for
-    `setOldClass()` (@mgirlich, #927).
-
-    !end-bullet!
--   !begin-bullet!
-    `copy_inline()` gains a `types` argument to specify the SQL column
-    types (@mgirlich, #963).
-
-    !end-bullet!
--   !begin-bullet!
-    `rows_*()` now uses the column types of `x` when auto copying a
-    local data frame to a Postgres database (@mgirlich, #909).
-
-    !end-bullet!
-
-!end-bullets-12!
+!end-bullets-7!
 
 # dbplyr 2.2.1
 
-!begin-bullets-13!
+!begin-bullets-16!
 
 -   !begin-bullet!
     Querying Oracle databases works again. Unfortunately, the fix
@@ -359,13 +380,13 @@
 
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-16!
 
 # dbplyr 2.2.0
 
 ## New features
 
-!begin-bullets-14!
+!begin-bullets-17!
 
 -   !begin-bullet!
     SQL formatting has been considerably improved with new wrapping and
@@ -400,11 +421,11 @@
 
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-17!
 
 ## Improvements to SQL generation
 
-!begin-bullets-15!
+!begin-bullets-18!
 
 -   !begin-bullet!
     When possible, dbplyr now uses `SELECT *` instead of explicitly
@@ -418,7 +439,7 @@
 -   !begin-bullet!
     Improved translations for specific backends:
 
-    !begin-bullets-16!
+    !begin-bullets-19!
     -   !begin-bullet!
         `as.Date()` for Oracle (@mgirlich, #661).
         !end-bullet!
@@ -451,7 +472,7 @@
         `union()` for Hive (@mgirlich, #663).
         !end-bullet!
 
-    !end-bullets-16!
+    !end-bullets-19!
     !end-bullet!
 -   !begin-bullet!
     The backend function `dbplyr_fill0()` (used for databases that lack
@@ -504,11 +525,11 @@
 
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-18!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-17!
+!begin-bullets-20!
 
 -   !begin-bullet!
     New `pillar::tbl_format_header()` method for lazy tables: Printing a
@@ -632,11 +653,11 @@
 
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-20!
 
 # dbplyr 2.1.1
 
-!begin-bullets-18!
+!begin-bullets-21!
 
 -   !begin-bullet!
     New support for Snowflake (@edgararuiz)
@@ -662,13 +683,13 @@
 
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-21!
 
 # dbplyr 2.1.0
 
 ## New features
 
-!begin-bullets-19!
+!begin-bullets-22!
 
 -   !begin-bullet!
     Thanks to @mgirlich, dbplyr gains support for key verbs from tidyr:
@@ -692,11 +713,11 @@
 
     !end-bullet!
 
-!end-bullets-19!
+!end-bullets-22!
 
 ## SQL translation
 
-!begin-bullets-20!
+!begin-bullets-23!
 
 -   !begin-bullet!
     All backends: `str_sub()`, `substr()` and `substring()` get better
@@ -708,7 +729,7 @@
 -   !begin-bullet!
     MS SQL:
 
-    !begin-bullets-21!
+    !begin-bullets-24!
     -   !begin-bullet!
         `as.integer()` and `as.integer64()` translations cast first to
         `NUMERIC` to avoid CASTing weirdness (@DavidPatShuiFong, #496).
@@ -723,7 +744,7 @@
 
         !end-bullet!
 
-    !end-bullets-21!
+    !end-bullets-24!
     !end-bullet!
 -   !begin-bullet!
     Redshift: `lag()` and `lead()` lose the `default` parameter since
@@ -736,11 +757,11 @@
 
     !end-bullet!
 
-!end-bullets-20!
+!end-bullets-23!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-22!
+!begin-bullets-25!
 
 -   !begin-bullet!
     RPostgreSQL backend warns if `temporary = TRUE` since temporary
@@ -776,13 +797,13 @@
 
     !end-bullet!
 
-!end-bullets-22!
+!end-bullets-25!
 
 # dbplyr 2.0.0
 
 ## dplyr 1.0.0 compatibility
 
-!begin-bullets-23!
+!begin-bullets-26!
 
 -   !begin-bullet!
     `across()` is now translated into individual SQL statements (#480).
@@ -806,11 +827,11 @@
 
     !end-bullet!
 
-!end-bullets-23!
+!end-bullets-26!
 
 ## SQL generation
 
-!begin-bullets-24!
+!begin-bullets-27!
 
 -   !begin-bullet!
     Documentation has been radically improved with new topics for each
@@ -863,11 +884,11 @@
 
     !end-bullet!
 
-!end-bullets-24!
+!end-bullets-27!
 
 ## SQL translation
 
-!begin-bullets-25!
+!begin-bullets-28!
 
 -   !begin-bullet!
     Experimental new SAP HANA backend (#233). Requires the latest
@@ -877,7 +898,7 @@
 -   !begin-bullet!
     All backends:
 
-    !begin-bullets-26!
+    !begin-bullets-29!
     -   !begin-bullet!
         You can now use `::` in translations, so that (e.g.)
         `dbplyr::n()` is translated to `count(*)` (#207).
@@ -914,7 +935,7 @@
 
         !end-bullet!
 
-    !end-bullets-26!
+    !end-bullets-29!
     !end-bullet!
 -   !begin-bullet!
     [blob](https://blob.tidyverse.org/) vectors can now be used with
@@ -955,7 +976,7 @@
 -   !begin-bullet!
     New RedShift translations when used with `RPostgres::Redshift()`.
 
-    !begin-bullets-27!
+    !begin-bullets-30!
     -   !begin-bullet!
         `str_replace()` errors since there's no Redshift translation,
         and `str_replace_all()` uses `REGEXP_REPLACE()` (#446).
@@ -974,7 +995,7 @@
 
         !end-bullet!
 
-    !end-bullets-27!
+    !end-bullets-30!
     !end-bullet!
 -   !begin-bullet!
     SQLite gains translations for lubridate functions `today()`,
@@ -984,14 +1005,14 @@
 
     !end-bullet!
 
-!end-bullets-25!
+!end-bullets-28!
 
 ## Extensibility
 
 If you are the author of a dbplyr backend, please see
 `vignette("backend-2")` for details.
 
-!begin-bullets-28!
+!begin-bullets-31!
 
 -   !begin-bullet!
     New `dbplyr_edition()` generic allows you to opt-in to the 2nd
@@ -1020,7 +1041,7 @@ If you are the author of a dbplyr backend, please see
     A number of `db_*` generics have been replaced with new SQL
     generation generics:
 
-    !begin-bullets-29!
+    !begin-bullets-32!
     -   !begin-bullet!
         `dplyr::db_analyze()` -\> `dbplyr::sql_table_analyze()`
         !end-bullet!
@@ -1037,7 +1058,7 @@ If you are the author of a dbplyr backend, please see
         `dplyr::db_save_query()` -\> `dbplyr::sql_query_save()`
         !end-bullet!
 
-    !end-bullets-29!
+    !end-bullets-32!
     This makes them easier to test and is an important part of the
     process of moving all database generics in dbplyr (#284).
 
@@ -1046,7 +1067,7 @@ If you are the author of a dbplyr backend, please see
     A number of other generics have been renamed to facilitate the move
     from dplyr to dbplyr:
 
-    !begin-bullets-30!
+    !begin-bullets-33!
     -   !begin-bullet!
         `dplyr::sql_select()` -\> `dbplyr::sql_query_select()`
         !end-bullet!
@@ -1066,7 +1087,7 @@ If you are the author of a dbplyr backend, please see
         `dplyr::db_desc()` -\> `dbplyr::db_connection_describe()`
         !end-bullet!
 
-    !end-bullets-30!
+    !end-bullets-33!
     !end-bullet!
 -   !begin-bullet!
     New `db_temporary_table()` generic makes it easier to work with
@@ -1086,11 +1107,11 @@ If you are the author of a dbplyr backend, please see
 
     !end-bullet!
 
-!end-bullets-28!
+!end-bullets-31!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-31!
+!begin-bullets-34!
 
 -   !begin-bullet!
     All old lazy eval shims have been removed. These have been
@@ -1143,11 +1164,11 @@ If you are the author of a dbplyr backend, please see
 
     !end-bullet!
 
-!end-bullets-31!
+!end-bullets-34!
 
 # dbplyr 1.4.4
 
-!begin-bullets-32!
+!begin-bullets-35!
 
 -   !begin-bullet!
     Internally `DBI::dbExecute()` now uses `immediate = TRUE`; this
@@ -1186,11 +1207,11 @@ If you are the author of a dbplyr backend, please see
 
     !end-bullet!
 
-!end-bullets-32!
+!end-bullets-35!
 
 # dbplyr 1.4.3
 
-!begin-bullets-33!
+!begin-bullets-36!
 
 -   !begin-bullet!
     dbplyr now uses RPostgres (instead of RPostgreSQL) and RMariaDB
@@ -1227,11 +1248,11 @@ If you are the author of a dbplyr backend, please see
 
     !end-bullet!
 
-!end-bullets-33!
+!end-bullets-36!
 
 # dbplyr 1.4.2
 
-!begin-bullets-34!
+!begin-bullets-37!
 
 -   !begin-bullet!
     Fix bug when partially evaluating unquoting quosure containing a
@@ -1243,13 +1264,13 @@ If you are the author of a dbplyr backend, please see
 
     !end-bullet!
 
-!end-bullets-34!
+!end-bullets-37!
 
 # dbplyr 1.4.1
 
 Minor improvements to SQL generation
 
-!begin-bullets-35!
+!begin-bullets-38!
 
 -   !begin-bullet!
     `x %in% y` strips names of `y` (#269).
@@ -1270,13 +1291,13 @@ Minor improvements to SQL generation
 
     !end-bullet!
 
-!end-bullets-35!
+!end-bullets-38!
 
 # dbplyr 1.4.0
 
 ## Breaking changes
 
-!begin-bullets-36!
+!begin-bullets-39!
 
 -   !begin-bullet!
     `` Error: `con` must not be NULL ``: If you see this error, it
@@ -1294,11 +1315,11 @@ Minor improvements to SQL generation
 
     !end-bullet!
 
-!end-bullets-36!
+!end-bullets-39!
 
 ## New features
 
-!begin-bullets-37!
+!begin-bullets-40!
 
 -   !begin-bullet!
     MySQL/MariaDB (https://mariadb.com/kb/en/library/window-functions/)
@@ -1310,7 +1331,7 @@ Minor improvements to SQL generation
 -   !begin-bullet!
     Overall, dplyr generates many fewer subqueries:
 
-    !begin-bullets-38!
+    !begin-bullets-41!
     -   !begin-bullet!
         Joins and semi-joins no longer add an unneeded subquery (#236).
         This is facilitated by the new `bare_identifier_ok` argument to
@@ -1325,7 +1346,7 @@ Minor improvements to SQL generation
 
         !end-bullet!
 
-    !end-bullets-38!
+    !end-bullets-41!
     !end-bullet!
 -   !begin-bullet!
     New `vignette("sql")` describes some advantages of dbplyr over SQL
@@ -1345,11 +1366,11 @@ Minor improvements to SQL generation
 
     !end-bullet!
 
-!end-bullets-37!
+!end-bullets-40!
 
 ## SQL translations
 
-!begin-bullets-39!
+!begin-bullets-42!
 
 -   !begin-bullet!
     New translations for some lubridate functions: `today()`, `now()`,
@@ -1424,7 +1445,7 @@ Minor improvements to SQL generation
 
     !end-bullet!
 
-!end-bullets-39!
+!end-bullets-42!
 
 ### SQL simulation
 
@@ -1432,7 +1453,7 @@ SQL simulation makes it possible to see what dbplyr will translate SQL
 to, without having an active database connection, and is used for
 testing and generating reprexes.
 
-!begin-bullets-40!
+!begin-bullets-43!
 
 -   !begin-bullet!
     SQL simulation has been overhauled. It now works reliably, is better
@@ -1449,16 +1470,16 @@ testing and generating reprexes.
 
     !end-bullet!
 
-!end-bullets-40!
+!end-bullets-43!
 
 ## Database specific improvements
 
-!begin-bullets-41!
+!begin-bullets-44!
 
 -   !begin-bullet!
     MySQL/MariaDB
 
-    !begin-bullets-42!
+    !begin-bullets-45!
     -   !begin-bullet!
         Translations also applied to connections via the odbc package
         (@colearendt, #238)
@@ -1475,45 +1496,45 @@ testing and generating reprexes.
 
         !end-bullet!
 
-    !end-bullets-42!
+    !end-bullets-45!
     !end-bullet!
 -   !begin-bullet!
     Oracle
 
-    !begin-bullets-43!
+    !begin-bullets-46!
     -   !begin-bullet!
         New custom translation for `paste()` and `paste0()` (@cderv,
         #221)
         !end-bullet!
 
-    !end-bullets-43!
+    !end-bullets-46!
     !end-bullet!
 -   !begin-bullet!
     Postgres
 
-    !begin-bullets-44!
+    !begin-bullets-47!
     -   !begin-bullet!
         Basic support for regular expressions via `str_detect()` and\
         `str_replace_all()` (@colearendt, #168).
         !end-bullet!
 
-    !end-bullets-44!
+    !end-bullets-47!
     !end-bullet!
 -   !begin-bullet!
     SQLite
 
-    !begin-bullets-45!
+    !begin-bullets-48!
     -   !begin-bullet!
         `explain()` translation now generates `EXPLAIN QUERY PLAN` which
         generates a higher-level, more human friendly explanation.
         !end-bullet!
 
-    !end-bullets-45!
+    !end-bullets-48!
     !end-bullet!
 -   !begin-bullet!
     SQL server
 
-    !begin-bullets-46!
+    !begin-bullets-49!
     -   !begin-bullet!
         Improved translation for `as.logical(x)` to `CAST(x as BIT)`
         (#250).
@@ -1534,14 +1555,14 @@ testing and generating reprexes.
 
         !end-bullet!
 
-    !end-bullets-46!
+    !end-bullets-49!
     !end-bullet!
 
-!end-bullets-41!
+!end-bullets-44!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-47!
+!begin-bullets-50!
 
 -   !begin-bullet!
     Aggregation functions only warn once per session about the use of
@@ -1632,21 +1653,21 @@ testing and generating reprexes.
 
     !end-bullet!
 
-!end-bullets-47!
+!end-bullets-50!
 
 # dbplyr 1.3.0
 
-!begin-bullets-48!
+!begin-bullets-51!
 
 -   !begin-bullet!
     Now supports for dplyr 0.8.0 (#190) and R 3.1.0
     !end-bullet!
 
-!end-bullets-48!
+!end-bullets-51!
 
 ## API changes
 
-!begin-bullets-49!
+!begin-bullets-52!
 
 -   !begin-bullet!
     Calls of the form `dplyr::foo()` are now evaluated in the database,
@@ -1666,11 +1687,11 @@ testing and generating reprexes.
 
     !end-bullet!
 
-!end-bullets-49!
+!end-bullets-52!
 
 ## SQL translation
 
-!begin-bullets-50!
+!begin-bullets-53!
 
 -   !begin-bullet!
     `x %in% y` is now translated to `FALSE` if `y` is empty (@mgirlich,
@@ -1697,7 +1718,7 @@ testing and generating reprexes.
 -   !begin-bullet!
     MS SQL
 
-    !begin-bullets-51!
+    !begin-bullets-54!
     -   !begin-bullet!
         Cumulative summary functions now work (#157)
         !end-bullet!
@@ -1706,12 +1727,12 @@ testing and generating reprexes.
         complex operations, such as `%in%`, to work properly (#93)
         !end-bullet!
 
-    !end-bullets-51!
+    !end-bullets-54!
     !end-bullet!
 -   !begin-bullet!
     Oracle
 
-    !begin-bullets-52!
+    !begin-bullets-55!
     -   !begin-bullet!
         Custom `db_drop_table()` now only drops tables if they exist
         (#3306)
@@ -1723,35 +1744,35 @@ testing and generating reprexes.
         Custom `db_explain()` translation (#3471)
         !end-bullet!
 
-    !end-bullets-52!
+    !end-bullets-55!
     !end-bullet!
 -   !begin-bullet!
     SQLite
 
-    !begin-bullets-53!
+    !begin-bullets-56!
     -   !begin-bullet!
         Correct translation for `as.numeric()`/`as.double()`
         (@chris-park, #171).
         !end-bullet!
 
-    !end-bullets-53!
+    !end-bullets-56!
     !end-bullet!
 -   !begin-bullet!
     Redshift
 
-    !begin-bullets-54!
+    !begin-bullets-57!
     -   !begin-bullet!
         `substr()` translation improved (#3339)
         !end-bullet!
 
-    !end-bullets-54!
+    !end-bullets-57!
     !end-bullet!
 
-!end-bullets-50!
+!end-bullets-53!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-55!
+!begin-bullets-58!
 
 -   !begin-bullet!
     `copy_to()` will only remove existing table when `overwrite = TRUE`
@@ -1773,38 +1794,38 @@ testing and generating reprexes.
 
     !end-bullet!
 
-!end-bullets-55!
+!end-bullets-58!
 
 # dbplyr 1.2.2
 
-!begin-bullets-56!
+!begin-bullets-59!
 
 -   !begin-bullet!
     R CMD check fixes
     !end-bullet!
 
-!end-bullets-56!
+!end-bullets-59!
 
 # dbplyr 1.2.1
 
-!begin-bullets-57!
+!begin-bullets-60!
 
 -   !begin-bullet!
     Forward compatibility fixes for rlang 0.2.0
     !end-bullet!
 
-!end-bullets-57!
+!end-bullets-60!
 
 # dbplyr 1.2.0
 
 ## New top-level translations
 
-!begin-bullets-58!
+!begin-bullets-61!
 
 -   !begin-bullet!
     New translations for
 
-    !begin-bullets-59!
+    !begin-bullets-62!
     -   !begin-bullet!
         MS Access (#2946) (@DavisVaughan)
         !end-bullet!
@@ -1818,7 +1839,7 @@ testing and generating reprexes.
         Redshift.
         !end-bullet!
 
-    !end-bullets-59!
+    !end-bullets-62!
     !end-bullet!
 -   !begin-bullet!
     dbplyr now supplies appropriate translations for the RMariaDB and
@@ -1828,11 +1849,11 @@ testing and generating reprexes.
 
     !end-bullet!
 
-!end-bullets-58!
+!end-bullets-61!
 
 ## New features
 
-!begin-bullets-60!
+!begin-bullets-63!
 
 -   !begin-bullet!
     `copy_to()` can now "copy" tbl_sql in the same src, providing
@@ -1850,11 +1871,11 @@ testing and generating reprexes.
 
     !end-bullet!
 
-!end-bullets-60!
+!end-bullets-63!
 
 ## Tools for developers
 
-!begin-bullets-61!
+!begin-bullets-64!
 
 -   !begin-bullet!
     `db_compute()` gains an `analyze` argument to match `db_copy_to()`.
@@ -1883,11 +1904,11 @@ testing and generating reprexes.
 
     !end-bullet!
 
-!end-bullets-61!
+!end-bullets-64!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-62!
+!begin-bullets-65!
 
 -   !begin-bullet!
     Multiple `head()` calls in a row now collapse to a single call. This
@@ -1958,16 +1979,16 @@ testing and generating reprexes.
 
     !end-bullet!
 
-!end-bullets-62!
+!end-bullets-65!
 
 ## Database specific improvements
 
-!begin-bullets-63!
+!begin-bullets-66!
 
 -   !begin-bullet!
     MS SQL
 
-    !begin-bullets-64!
+    !begin-bullets-67!
     -   !begin-bullet!
         Better support for temporary tables (@Hong-Revo)
 
@@ -1980,7 +2001,7 @@ testing and generating reprexes.
 
         !end-bullet!
 
-    !end-bullets-64!
+    !end-bullets-67!
     !end-bullet!
 -   !begin-bullet!
     MySQL: `copy_to()` (via `db_write_table()`) correctly translates
@@ -2004,13 +2025,13 @@ testing and generating reprexes.
 
     !end-bullet!
 
-!end-bullets-63!
+!end-bullets-66!
 
 # dbplyr 1.1.0
 
 ## New features
 
-!begin-bullets-65!
+!begin-bullets-68!
 
 -   !begin-bullet!
     `full_join()` over non-overlapping columns `by = character()`
@@ -2035,11 +2056,11 @@ testing and generating reprexes.
 
     !end-bullet!
 
-!end-bullets-65!
+!end-bullets-68!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-66!
+!begin-bullets-69!
 
 -   !begin-bullet!
     `x %in% c(1)` now generates the same SQL as `x %in% 1` (#2898).
@@ -2088,13 +2109,13 @@ testing and generating reprexes.
 
     !end-bullet!
 
-!end-bullets-66!
+!end-bullets-69!
 
 # dbplyr 1.0.0
 
 ## New features
 
-!begin-bullets-67!
+!begin-bullets-70!
 
 -   !begin-bullet!
     `tbl()` and `copy_to()` now work directly with DBI connections
@@ -2144,22 +2165,22 @@ testing and generating reprexes.
 
     !end-bullet!
 
-!end-bullets-67!
+!end-bullets-70!
 
 ## Deprecated and defunct
 
-!begin-bullets-68!
+!begin-bullets-71!
 
 -   !begin-bullet!
     `query()` is no longer exported. It hasn't been useful for a while
     so this shouldn't break any code.
     !end-bullet!
 
-!end-bullets-68!
+!end-bullets-71!
 
 ## Verb-level SQL generation
 
-!begin-bullets-69!
+!begin-bullets-72!
 
 -   !begin-bullet!
     Partial evaluation occurs immediately when you execute a verb (like
@@ -2176,7 +2197,7 @@ testing and generating reprexes.
 -   !begin-bullet!
     SQL joins have been improved:
 
-    !begin-bullets-70!
+    !begin-bullets-73!
     -   !begin-bullet!
         SQL joins always use the `ON ...` syntax, avoiding `USING ...`
         even for natural joins. Improved handling of tables with columns
@@ -2214,7 +2235,7 @@ testing and generating reprexes.
 
         !end-bullet!
 
-    !end-bullets-70!
+    !end-bullets-73!
     !end-bullet!
 -   !begin-bullet!
     `group_by()` can now perform an inline mutate for database backends
@@ -2248,11 +2269,11 @@ testing and generating reprexes.
 
     !end-bullet!
 
-!end-bullets-69!
+!end-bullets-72!
 
 ## Vector-level SQL generation
 
-!begin-bullets-71!
+!begin-bullets-74!
 
 -   !begin-bullet!
     New `as.sql()` safely coerces an input to SQL.
@@ -2271,7 +2292,7 @@ testing and generating reprexes.
 -   !begin-bullet!
     Translation of inline scalars:
 
-    !begin-bullets-72!
+    !begin-bullets-75!
     -   !begin-bullet!
         Logical values are now translated differently depending on the
         backend. The default is to use "true" and "false" which is the
@@ -2294,7 +2315,7 @@ testing and generating reprexes.
 
         !end-bullet!
 
-    !end-bullets-72!
+    !end-bullets-75!
     !end-bullet!
 -   !begin-bullet!
     `::` and `:::` are handled correctly (#2321)
@@ -2345,11 +2366,11 @@ testing and generating reprexes.
 
     !end-bullet!
 
-!end-bullets-71!
+!end-bullets-74!
 
 ## Backends
 
-!begin-bullets-73!
+!begin-bullets-76!
 
 -   !begin-bullet!
     `copy_to()` now uses `db_write_table()` instead of
@@ -2401,11 +2422,11 @@ testing and generating reprexes.
 
     !end-bullet!
 
-!end-bullets-73!
+!end-bullets-76!
 
 ## Minor bug fixes and improvements
 
-!begin-bullets-74!
+!begin-bullets-77!
 
 -   !begin-bullet!
     `collect()` once again defaults to return all rows in the data
@@ -2490,11 +2511,11 @@ testing and generating reprexes.
 
     !end-bullet!
 
-!end-bullets-74!
+!end-bullets-77!
 
 ## Lazy ops
 
-!begin-bullets-75!
+!begin-bullets-78!
 
 -   !begin-bullet!
     \[API\] The signature of `op_base` has changed to
@@ -2504,7 +2525,7 @@ testing and generating reprexes.
 -   !begin-bullet!
     \[API\] `translate_sql()` and `partial_eval()` have been refined:
 
-    !begin-bullets-76!
+    !begin-bullets-79!
     -   !begin-bullet!
         `translate_sql()` no longer takes a vars argument; instead call
         `partial_eval()` yourself.
@@ -2526,7 +2547,7 @@ testing and generating reprexes.
 
         !end-bullet!
 
-    !end-bullets-76!
+    !end-bullets-79!
     !end-bullet!
 -   !begin-bullet!
     \[API\] `op_vars()` now returns a list of quoted expressions. This
@@ -2535,4 +2556,4 @@ testing and generating reprexes.
 
     !end-bullet!
 
-!end-bullets-75!
+!end-bullets-78!
