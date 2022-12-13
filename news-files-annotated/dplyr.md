@@ -276,10 +276,6 @@
 
     !end-bullet!
 -   !begin-bullet!
-    `funs()`, deprecated in 0.8.0, is now defunct (#6387).
-
-    !end-bullet!
--   !begin-bullet!
     `select_vars()`, `rename_vars()`, `select_var()` and
     `current_var()`, deprecated in 0.8.4, are now defunct (#6387).
 
