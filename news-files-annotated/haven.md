@@ -1,8 +1,20 @@
 # haven (development version)
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    Fix bug in string variable width calculation that treated `NA`
+    values as width
+    2.  `NA` values are now treated as blanks for width calculations
+        (#699).
+
+    !end-bullet!
+
+!end-bullets-1!
+
 # haven 2.5.1
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     All `labelled()` vectors now have left-aligned column headers when
@@ -21,24 +33,24 @@
 
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # haven 2.5.0
 
 ## New author
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     @gorcha is now a haven author in recognition of his significant and
     sustained contributions.
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 ## File writing improvements
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     All `write_` functions can now write custom variable widths by
@@ -96,16 +108,16 @@
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 ## Other improvements and fixes
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     Updated to ReadStat 1.1.8 RC.
 
-    !begin-bullets-5!
+    !begin-bullets-6!
     -   !begin-bullet!
         Fix bug when writing formats to XPT files (#650).
         !end-bullet!
@@ -113,7 +125,7 @@
         Fix off by one error in indexing for strL variables (#437).
         !end-bullet!
 
-    !end-bullets-5!
+    !end-bullets-6!
     !end-bullet!
 -   !begin-bullet!
     `labelled()` vectors now throw a warning when combining two vectors
@@ -139,11 +151,11 @@
 
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 ## Dependency changes
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     R 3.4 is now the minimum supported version, in line with [tidyverse
@@ -161,21 +173,21 @@
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 # haven 2.4.3
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     Fix build failure on Solaris.
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 # haven 2.4.2
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     Updated to ReadStat 1.1.7 RC (#620).
@@ -203,23 +215,23 @@
 
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 # haven 2.4.1
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     Fix buglet when combining `labelled()` with identical labels.
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 # haven 2.4.0
 
 ## New features
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     `labelled_spss()` gains full vctrs support thanks to the hard work
@@ -241,11 +253,11 @@
 
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-11!
+!begin-bullets-12!
 
 -   !begin-bullet!
     Updated to ReadStat 1.1.5. Most importantly this includes support
@@ -289,11 +301,11 @@
 
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-12!
 
 # haven 2.3.1
 
-!begin-bullets-12!
+!begin-bullets-13!
 
 -   !begin-bullet!
     Add missing methods so `median()`, `quantile()` and `summary()` work
@@ -305,11 +317,11 @@
 
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
 
 # haven 2.3.0
 
-!begin-bullets-13!
+!begin-bullets-14!
 
 -   !begin-bullet!
     `labelled()` gains the necessary support to work seemlessly in dplyr
@@ -328,7 +340,7 @@
 
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-14!
 
 # haven 2.2.0
 
@@ -337,7 +349,7 @@
 Thanks to the hard work of @mikmart, all `read_*()` functions gain three
 new arguments that allow you to read in only part of a large file:
 
-!begin-bullets-14!
+!begin-bullets-15!
 
 -   !begin-bullet!
     `col_select`: selects columns to read with a tidyselect interface
@@ -350,14 +362,14 @@ new arguments that allow you to read in only part of a large file:
     `n_max`: limits the number of rows to read.
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-15!
 
 This also brings with it a deprecation: `cols_only` in `read_sas()` has
 been deprecated in favour of the new `col_select` argument.
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-15!
+!begin-bullets-16!
 
 -   !begin-bullet!
     `as_factor()` allows non-unique labels when `levels = "label"`. This
@@ -392,17 +404,17 @@ been deprecated in favour of the new `col_select` argument.
 
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-16!
 
 # haven 2.1.1
 
-!begin-bullets-16!
+!begin-bullets-17!
 
 -   !begin-bullet!
     Fixes for R CMD check
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-17!
 
 # haven 2.1.0
 
@@ -420,12 +432,12 @@ attributes (#219).
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-17!
+!begin-bullets-18!
 
 -   !begin-bullet!
     `as_factor()`:
 
-    !begin-bullets-18!
+    !begin-bullets-19!
     -   !begin-bullet!
         Is faster when input doesn't contain any missing values
         (@hughparsonage).
@@ -438,7 +450,7 @@ attributes (#219).
         @zkamvar).
         !end-bullet!
 
-    !end-bullets-18!
+    !end-bullets-19!
     !end-bullet!
 -   !begin-bullet!
     `write_dta()` now checks that the labelled values are integers, not
@@ -448,7 +460,7 @@ attributes (#219).
 -   !begin-bullet!
     Updated to latest ReadStat from @evanmiller:
 
-    !begin-bullets-19!
+    !begin-bullets-20!
     -   !begin-bullet!
         `read_por()` can now read files from SPSS 25 (#412)
         !end-bullet!
@@ -478,16 +490,16 @@ attributes (#219).
         (#395)
         !end-bullet!
 
-    !end-bullets-19!
+    !end-bullets-20!
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-18!
 
 # haven 2.0.0
 
 ## BREAKING CHANGES
 
-!begin-bullets-20!
+!begin-bullets-21!
 
 -   !begin-bullet!
     `labelled()` and `labelled_spss()` now produce objects with class
@@ -503,11 +515,11 @@ attributes (#219).
 
     !end-bullet!
 
-!end-bullets-20!
+!end-bullets-21!
 
 ## Minor improvements
 
-!begin-bullets-21!
+!begin-bullets-22!
 
 -   !begin-bullet!
     `labelled()` and `labelled_spss()` now support adding the `label`
@@ -523,11 +535,11 @@ attributes (#219).
 
     !end-bullet!
 
-!end-bullets-21!
+!end-bullets-22!
 
 # haven 1.1.2
 
-!begin-bullets-22!
+!begin-bullets-23!
 
 -   !begin-bullet!
     haven can read and write non-ASCII paths in R 3.5 (#371).
@@ -567,7 +579,7 @@ attributes (#219).
 -   !begin-bullet!
     Update to latest readstat.
 
-    !begin-bullets-23!
+    !begin-bullets-24!
     -   !begin-bullet!
         Fixes out of memory error (#342)
         !end-bullet!
@@ -578,7 +590,7 @@ attributes (#219).
         Negative integer labelled values were tagged as missing (#367)
         !end-bullet!
 
-    !end-bullets-23!
+    !end-bullets-24!
     !end-bullet!
 -   !begin-bullet!
     Fix for when `as_factor()` with option `levels="labels"` is used on
@@ -586,16 +598,16 @@ attributes (#219).
 
     !end-bullet!
 
-!end-bullets-22!
+!end-bullets-23!
 
 # haven 1.1.1
 
-!begin-bullets-24!
+!begin-bullets-25!
 
 -   !begin-bullet!
     Update to latest readstat. Includes:
 
-    !begin-bullets-25!
+    !begin-bullets-26!
     -   !begin-bullet!
         SPSS: empty charater columns now read as character (#311)
         !end-bullet!
@@ -615,7 +627,7 @@ attributes (#219).
         SAS: can now handle Windows Vietnamese character set (#336)
         !end-bullet!
 
-    !end-bullets-25!
+    !end-bullets-26!
     !end-bullet!
 -   !begin-bullet!
     `read_por()` and `read_xpt()` now correctly preserve attributes if
@@ -650,16 +662,16 @@ attributes (#219).
 
     !end-bullet!
 
-!end-bullets-24!
+!end-bullets-25!
 
 # haven 1.1.0
 
-!begin-bullets-26!
+!begin-bullets-27!
 
 -   !begin-bullet!
     Update to latest readstat. Includes:
 
-    !begin-bullets-27!
+    !begin-bullets-28!
     -   !begin-bullet!
         SAS: support Win baltic code page (#231)
         !end-bullet!
@@ -679,7 +691,7 @@ attributes (#219).
         SPSS: fixes for 0 byte strings (#245)
         !end-bullet!
 
-    !end-bullets-27!
+    !end-bullets-28!
     !end-bullet!
 -   !begin-bullet!
     Share `as_factor()` with forcats package (#256)
@@ -727,11 +739,11 @@ attributes (#219).
 
     !end-bullet!
 
-!end-bullets-26!
+!end-bullets-27!
 
 # haven 1.0.0
 
-!begin-bullets-28!
+!begin-bullets-29!
 
 -   !begin-bullet!
     The ReadStat library is stored in a subdirectory of `src` (#209,
@@ -746,7 +758,7 @@ attributes (#219).
 -   !begin-bullet!
     Update to latest ReadStat (#65). Includes:
 
-    !begin-bullets-29!
+    !begin-bullets-30!
     -   !begin-bullet!
         Support for binary (aka Ross) compression for SAS (#31).
         !end-bullet!
@@ -765,7 +777,7 @@ attributes (#219).
         output file (#171).
         !end-bullet!
 
-    !end-bullets-29!
+    !end-bullets-30!
     !end-bullet!
 -   !begin-bullet!
     Added support for reading and writing variable formats. Similarly to
@@ -919,11 +931,11 @@ attributes (#219).
 
     !end-bullet!
 
-!end-bullets-28!
+!end-bullets-29!
 
 # haven 0.2.0
 
-!begin-bullets-30!
+!begin-bullets-31!
 
 -   !begin-bullet!
     fixed a bug in `as_factor.labelled`, which generated `<NA>`{=html}'s
@@ -976,14 +988,14 @@ attributes (#219).
 
     !end-bullet!
 
-!end-bullets-30!
+!end-bullets-31!
 
 # haven 0.1.1
 
-!begin-bullets-31!
+!begin-bullets-32!
 
 -   !begin-bullet!
     Fixed memory initialisation problems found by valgrind.
     !end-bullet!
 
-!end-bullets-31!
+!end-bullets-32!
