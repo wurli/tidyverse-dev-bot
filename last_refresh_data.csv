@@ -6108,3 +6108,4 @@ dbplyr,1,Teradata:,NA
 dbplyr,2,"• Querying works again. Unfortunately, the fix requires every column to once again by explicitly selected (@​mgirlich, #966).",Teradata:
 dbplyr,2,"• New translations for `as.Date()`, `week()`, `quarter()`, `paste()`, `startsWith()`, `row_number()`, `weighted.mean()`, `lead()`, `lag()`, and `cumsum()` (@​overmar, #913).",Teradata:
 haven,1,Fix bug in string variable width calculation that treated `NA` values as width 2. `NA` values are now treated as blanks for width calculations (#699).,NA
+dplyr,1,`where()` is re-exported from tidyselect (#6597).,NA
