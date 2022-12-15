@@ -1,4 +1,6 @@
-# broom 1.0.1.9000
+# broom (development version)
+
+# broom 1.0.2
 
 !begin-bullets-1!
 
@@ -18,8 +20,6 @@
     !end-bullet!
 
 !end-bullets-1!
-
-To be released as broom 1.0.2.
 
 # broom 1.0.1
 
