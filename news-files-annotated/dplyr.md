@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `with_groups()` is superseded in favour of `.by` (#6582).
+
+    !end-bullet!
+-   !begin-bullet!
     `where()` is re-exported from tidyselect (#6597).
 
     !end-bullet!
@@ -79,9 +83,8 @@
     !end-bullet!
 -   !begin-bullet!
     `.by` is a new experimental inline alternative to `group_by()` that
-    supports *temporary* grouping in the following key dplyr verbs:
-    `mutate()`, `summarise()`, `filter()`, and the `slice()` family
-    (#6528).
+    supports per-operation grouping for `mutate()`, `summarise()`,
+    `filter()`, and the `slice()` family (#6528).
 
     Rather than:
 
@@ -102,10 +105,10 @@
 
     !end-codeblock!
     The most useful reason to do this is because grouping with `.by` is
-    *temporary* and only affects the verb it is being applied to. An
-    ungrouped data frame went into the `summarise()` call, so an
-    ungrouped data frame will come out; with `.by`, you never need to
-    remember to `ungroup()` afterwards.
+    *temporary* and only affects a single operation. An ungrouped data
+    frame went into the `summarise()` call, so an ungrouped data frame
+    will come out; with `.by`, you never need to remember to `ungroup()`
+    afterwards.
 
     Additionally, using `summarise()` or `slice()` with `.by` will never
     sort the results by the group key, unlike with `group_by()`.
