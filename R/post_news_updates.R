@@ -3,17 +3,40 @@ post_news_updates <- function(x) {
   force(x)
   
   if (length(x) == 0) {
-    cli::cli_alert_info("Nothing to post!")
+    cli_alert_info("Nothing to post!")
     return(invisible(x))
   }
   
-  cli::cli_h2("Posting tweets")
+  cli_h2("Posting tweets")
   
-  x |> 
-    group_by(package, tweet_id) |> 
-    summarise(across(tweet, post_thread), .groups = "drop")
+  threads <- x |> 
+    group_split(package, tweet_id) 
   
-  cli::cli_alert_success("All tweets posted successfully")
+  n_posted <- 0L
+  
+  for (thread in threads) {
+    
+    res <- tryCatch(
+      post_thread(thread),
+      error = function(e) {
+        cli_warn(c(
+          "Posting failed",
+          i = "Failure on thread {paste(thread, collapse = '\n\n')}",
+          i = "Original error: {paste(e$message, e$body)}"
+        ))
+        FALSE
+      }
+    )
+    
+    if (isFALSE(res)) break
+    
+    n_posted <- n_posted + 1L
+    
+  }
+  
+  cli_alert_success(
+    "{.val {n_posted}}/{.val {length(threads)}} threads posted successfully"
+  )
   
   invisible(TRUE)
   
@@ -29,14 +52,14 @@ post_thread <- function(x) {
   
   # Post nothing
   if (length(x) == 0) {
-    cli::cli_warn("Not posting anything")
+    cli_warn("Not posting anything")
     return(invisible(x))
   }
   
   # Post a single tweet - not a thread
   if (length(x) == 1) {
     try_post(status = x)
-    cli::cli_alert_success("Tweet posted successfully! {.emph {first(x)}}")
+    cli_alert_success("Tweet posted successfully! {.emph {first(x)}}")
     return(invisible(x))
   }
   
@@ -49,7 +72,7 @@ post_thread <- function(x) {
       next_id
     })
   
-  cli::cli_alert_success(
+  cli_alert_success(
     "Thread of {.val {length(x)}} tweets posted successfully! {.emph {first(x)}}"
   )
   
@@ -78,7 +101,7 @@ try_post <- function(status, ..., .tries = 3) {
   if (!isTRUE(res)) {
     # {cli} strings shouldn't start with a dot
     n_tries <- .tries
-    cli::cli_abort(c(
+    cli_abort(c(
       "Could not post tweet after {.val {n_tries}} tries",
       i = "Here's the error: {res}"
     ))
@@ -96,7 +119,7 @@ last_status_id <- function() {
   n <- length(id)
   
   if (n != 1) {
-    cli::cli_warn(c(
+    cli_warn(c(
       "Non-unique status ids returned",
       i = "Expected 1; got {.val {n}}",
       i = "Returned ids: {.val {id}}"

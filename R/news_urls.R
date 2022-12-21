@@ -1,7 +1,7 @@
 news_urls <- function(..., .package = NULL, .for_humans = FALSE) {
   
   if (is.null(.package)) {
-    cli::cli_h2("Getting URLs to {.code NEWS.md} files")
+    cli_h2("Getting URLs to {.code NEWS.md} files")
   }
   
   # Commented code can be used to dynamically produce `org`. It's hard-coded

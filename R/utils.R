@@ -39,7 +39,7 @@ str_segment <- function(x,
           # If a 'piece' doesn't fit, return it as-is (dealt with elsewhere)
           if (!tweet_is_valid(piece, padding)) {
             if (strict) {
-              cli::cli_abort(c(
+              cli_abort(c(
                 "Could not break string into segments of width <= {.val {width}} ",
                 i = "Splitting strings based on delimiter {.val {split}}",
                 i = "Check string {.emph {piece}}"
@@ -95,6 +95,6 @@ dput_styled <- function(x, ...) {
   dput(x, con, ...)
   close(con)
   out <- out |> styler::style_text()
-  cli::cat_line(out)
+  cat_line(out)
   invisible(out)
 }

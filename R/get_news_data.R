@@ -3,7 +3,7 @@ get_news_data <- function(files = list.files("news-files-annotated", full.names 
   # For notifications
   force(files)
   
-  cli::cli_h2("Formatting news as a tidy dataframe")
+  cli_h2("Formatting news as a tidy dataframe")
   
   if (length(files) == 0) {
     return(tibble())
@@ -26,7 +26,7 @@ get_news_data <- function(files = list.files("news-files-annotated", full.names 
 # news_to_df(read_lines("test.md"))
 news_to_df <- function(text, pkg, bullet_syms = c("\U2022", "\U2023", "\U2043")) {
   
-  cli::cli_alert("Formatting {.file NEWS.md} as a dataset for package {.pkg {pkg}}")
+  cli_alert("Formatting {.file NEWS.md} as a dataset for package {.pkg {pkg}}")
   
   # Annotations which delimit bullet lists, bullets and code blocks
   ann <- list(

@@ -2,7 +2,7 @@ make_tweets <- function(x, simplify = TRUE) {
   
   force(x)
   
-  cli::cli_h2("Making tweets from news data")
+  cli_h2("Making tweets from news data")
   
   if (nrow(x) == 0) {
     return(tibble())
@@ -32,11 +32,8 @@ make_tweets <- function(x, simplify = TRUE) {
 
 make_single_tweet <- function(x, is_codeblock, package) {
   
-  header <- paste0("{", package, "} update:")
-  footer <- paste0(
-    "#RStats #Tidyverse\n\n",
-    news_urls(.package = package, .for_humans = TRUE)
-  )
+  header <- paste0("{", package, "} update:\n#RStats #Tidyverse")
+  footer <- news_urls(.package = package, .for_humans = TRUE)
   
   # 1. Try a single tweet
   tweet <- paste(c(header, x, footer), collapse = "\n\n")

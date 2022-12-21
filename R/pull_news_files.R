@@ -7,7 +7,7 @@ pull_news_files <- function(urls,
   # For notifications
   force(urls)
   
-  cli::cli_h2("Pulling {.code NEWS.md} files from GitHub")
+  cli_h2("Pulling {.code NEWS.md} files from GitHub")
   
   hash_loc    <- file.path(dir, hashes)
   prev_hashes <- if (file.exists(hash_loc)) read_rds(file.path(dir, hashes)) else list()
@@ -21,7 +21,7 @@ pull_news_files <- function(urls,
       news <- tryCatch(
         read_file(url),
         error = function(e) {
-          cli::cli_warn(c(
+          cli_warn(c(
             "Could not read news for package {.pkg {pkg}}",
             i = "Here's the error: {e$message}"
           ))
@@ -38,11 +38,11 @@ pull_news_files <- function(urls,
       file <- glue("{dir}/{pkg}.md")
       
       if (identical(hash, prev_hashes[[pkg]])) {
-        cli::cli_alert("No changes to news for package {.pkg {pkg}}")
+        cli_alert("No changes to news for package {.pkg {pkg}}")
         return(if (include_old) file else NULL)
       }
       
-      cli::cli_alert("Caching news file for package {.pkg {pkg}}")
+      cli_alert("Caching news file for package {.pkg {pkg}}")
       
       # Sorry
       prev_hashes[[pkg]] <<- hash

@@ -145,7 +145,7 @@ chop_up_tweet <- function(x, is_code = FALSE, padding = 7, width = .max_tweet_le
     
   }
   
-  cli::cli_abort(c(
+  cli_abort(c(
     "Could not break text into valid tweets",
     i = "Using {.arg is_code} = {.val {is_code}} and {.arg width} = {.val {width}}",
     i = "Check {.emph {x}}",

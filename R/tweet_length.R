@@ -19,3 +19,7 @@ tweet_is_valid <- function(x, pad = NULL) {
 tweet_length <- function(x) {
   tweet_info(x, "weightedLength")
 }
+
+# Load twitter-text library
+.ct <- V8::v8()
+.ct$source("twitter-text-3.1.0.min.js")

@@ -1,5 +1,11 @@
 # purrr (development version)
 
+* Fixed an invalid C signature for `pluck()` (#1018).
+
+* Set `Biarch: true` to build purrr on 32-bit Windows on R < 4.2.0 (#1017).
+
+# purrr 1.0.0
+
 ## Breaking changes
 
 ### Core purpose refinements
@@ -176,13 +182,17 @@
 
 ### `list_` functions`
 
-* New `list_update()` which is similar to `list_modify()` but doesn't work
+* New `list_assign()` which is similar to `list_modify()` but doesn't work
   recursively (#822).
 
 * `list_modify()` no longer recurses into data frames (and other objects built 
-  on top of lists that are fundamentally non-list like) (#810).
+  on top of lists that are fundamentally non-list like) (#810). You can
+  revert to the previous behaviour by setting `.is_node = is.list`.
 
 ## Minor improvements and bug fixes
+
+* `capture_output()` correctly uses `conditionMessage()` instead of directly
+  interrogating the `message` field (#1010).
 
 * `modify()` no longer works with calls or pairlists.
 

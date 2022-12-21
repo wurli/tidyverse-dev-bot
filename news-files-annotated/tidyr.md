@@ -3,6 +3,17 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    All functions deprecated in tidyr 1.0 and 1.2 (the old lazyeval
+    functions ending in `_` and various arguments to `unnest()`) now
+    warn on every use. They will be made defunct in 2024 (#1406).
+
+    !end-bullet!
+-   !begin-bullet!
+    `pivot_wider()` is now faster when `names_sep` is provided
+    (@mgirlich, #1426).
+
+    !end-bullet!
+-   !begin-bullet!
     The `...` argument of both `pivot_longer()` and `pivot_wider()` has
     been moved to the front of the function signature, after the
     required arguments but before the optional ones. Additionally,
@@ -698,7 +709,7 @@
     !end-bullet!
 -   !begin-bullet!
     `pivot_wider()` gains a `names_sort` argument which allows you to
-    sort column names in order. The default, `FALSE`, orders columms by
+    sort column names in order. The default, `FALSE`, orders columns by
     their first appearance (#839). In a future version, I'll consider
     changing the default to `TRUE`.
 
@@ -1460,7 +1471,7 @@ It also uses the new tidyselect package as selecting backend.
 -   !begin-bullet!
     Following the switch to tidy evaluation, you might see warnings
     about the "variable context not set". This is most likely caused by
-    supplyng helpers like `everything()` to underscored versions of
+    supplying helpers like `everything()` to underscored versions of
     tidyr verbs. Helpers should be always be evaluated lazily. To fix
     this, just quote the helper with a formula:
     `drop_na(df,   ~everything())`.
@@ -1749,7 +1760,7 @@ changes:
 
     !end-bullet!
 -   !begin-bullet!
-    tidyr functions that create new columns are more aggresive about
+    tidyr functions that create new columns are more aggressive about
     re-encoding the column names as UTF-8.
 
     !end-bullet!
@@ -2017,8 +2028,8 @@ objects (like models) with one element per group.
     !end-bullet!
 -   !begin-bullet!
     `gather()` has better defaults if `key` and `value` are not
-    supplied. If `...` is ommitted, `gather()` selects all columns
-    (#28). Performance is now comparable to `reshape2::melt()` (#18).
+    supplied. If `...` is omitted, `gather()` selects all columns (#28).
+    Performance is now comparable to `reshape2::melt()` (#18).
 
     !end-bullet!
 -   !begin-bullet!

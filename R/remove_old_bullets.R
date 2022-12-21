@@ -3,7 +3,7 @@ remove_old_bullets <- function(x, file = "last_refresh_data.csv", overwrite = TR
   # For notifications
   force(x)
   
-  cli::cli_h2("Discarding text which has already been posted")
+  cli_h2("Discarding text which has already been posted")
   
   if (nrow(x) == 0) {
     return(tibble())
@@ -43,7 +43,7 @@ remove_old_bullets <- function(x, file = "last_refresh_data.csv", overwrite = TR
     
     if (!pkg %in% prev$package) {
       
-      cli::cli_alert_info("New package {.pkg {pkg}} detected - these bullets will be cached but not tweeted")
+      cli_alert_info("New package {.pkg {pkg}} detected - these bullets will be cached but not tweeted")
       
       prev <- rows_insert(
         x = prev,
@@ -63,16 +63,16 @@ remove_old_bullets <- function(x, file = "last_refresh_data.csv", overwrite = TR
   )
 
   if (nrow(out) == 0) {
-    cli::cli_alert_info("No new updates found")
+    cli_alert_info("No new updates found")
   } else {
     msg_text <- out |>
       count(package) |>
       rowwise() |>
-      mutate(text = cli::format_inline("{.val {n}} from {.pkg {package}}")) |>
+      mutate(text = format_inline("{.val {n}} from {.pkg {package}}")) |>
       ungroup() |>
       pull(text)
     
-    cli::cli_alert_info("New updates found: {msg_text}") 
+    cli_alert_info("New updates found: {msg_text}") 
   }
   
   if (overwrite) {
@@ -83,10 +83,10 @@ remove_old_bullets <- function(x, file = "last_refresh_data.csv", overwrite = TR
       conflict = "ignore"
     )
     n <- nrow(already_tweeted) - prev_rows
-    cli::cli_alert("Adding {.val {n}} new rows to {.file {file}}")
+    cli_alert("Adding {.val {n}} new rows to {.file {file}}")
     write_csv(already_tweeted, "last_refresh_data.csv")
   } else {
-    cli::cli_alert_warning("Not overwriting {.file {file}} with new data")
+    cli_alert_warning("Not overwriting {.file {file}} with new data")
   }
   
   out
@@ -97,13 +97,13 @@ remove_old_bullets <- function(x, file = "last_refresh_data.csv", overwrite = TR
 get_prev_bullets <- function(file, pattern) {
   
   if (!file.exists(file)) {
-    cli::cli_alert("Creating new file {.file {file}}")
+    cli_alert("Creating new file {.file {file}}")
     x <- pattern |> filter(FALSE)
     readr::write_csv(x, file)
     return(x)
   }
   
-  cli::cli_alert("Reading {.file {file}}")
+  cli_alert("Reading {.file {file}}")
   readr::read_csv(file, show_col_types = FALSE)
   
 }
