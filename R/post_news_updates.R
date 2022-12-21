@@ -10,7 +10,8 @@ post_news_updates <- function(x) {
   cli_h2("Posting tweets")
   
   threads <- x |> 
-    group_split(package, tweet_id) 
+    group_split(package, tweet_id) |> 
+    map(pull, tweet)
   
   n_posted <- 0L
   
