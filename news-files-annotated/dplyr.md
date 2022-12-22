@@ -565,6 +565,18 @@ vctrs package, bringing greater consistent and improved performance.
 
     !end-bullet!
 -   !begin-bullet!
+    Anonymous functions supplied with `function()` and `\()` are now
+    inlined by `across()` if possible, which slightly improves
+    performance and makes possible further optimisations in the future.
+
+    !end-bullet!
+-   !begin-bullet!
+    Functions supplied to `across()` are no longer masked by columns
+    (#6545). For instance, `across(1:2, mean)` will now work as expected
+    even if there is a column called `mean`.
+
+    !end-bullet!
+-   !begin-bullet!
     `arrange()` now correctly ignores `NULL` inputs (#6193).
 
     !end-bullet!
