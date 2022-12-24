@@ -6120,3 +6120,13 @@ purrr,1,Fixed an invalid C signature for `pluck()` (#1018).,NA
 purrr,1,Set `Biarch: true` to build purrr on 32-bit Windows on R \< 4.2.0 (#1017).,NA
 tidyr,1,All functions deprecated in tidyr 1.0 and 1.2 (the old lazyeval functions ending in `_` and various arguments to `unnest()`) now warn on every use. They will be made defunct in 2024 (#1406).,NA
 tidyr,1,"`pivot_wider()` is now faster when `names_sep` is provided (@​mgirlich, #1426).",NA
+hms,1,Harmonize yaml formatting.,NA
+hms,1,Revert changes to matrix section.,NA
+hms,1,Merged cran-1.1.2 into main.,NA
+tibble,1,Remove legacy expectation (#1468).,NA
+tibble,1,Use lambda in `across()` in vignette for compatibility with dplyr 1.1.0 (#1485).,NA
+tibble,1,Merge pull request #1481 from tidyverse/snapshot-main-rcc-smoke-null.,NA
+tibble,1,Harmonize yaml formatting.,NA
+tibble,1,Revert changes to matrix section.,NA
+tibble,1,Merge pull request #1475 from tidyverse/snapshot-main-rcc-smoke-null.,NA
+tibble,1,Merge pull request #1474 from IndrajeetPatil/doc_edits.,NA
