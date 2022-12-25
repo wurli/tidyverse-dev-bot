@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `ggsave()` warns when multiple `filename`s are given, and only
+    writes to the first file (@teunbrand, #5114).
+    !end-bullet!
+-   !begin-bullet!
     Fixed a regression in `geom_hex()` where aesthetics were replicated
     across bins (@thomasp85, #5037 and #5044)
     !end-bullet!
