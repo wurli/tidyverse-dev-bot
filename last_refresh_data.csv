@@ -6131,3 +6131,4 @@ tibble,1,Revert changes to matrix section.,NA
 tibble,1,Merge pull request #1475 from tidyverse/snapshot-main-rcc-smoke-null.,NA
 tibble,1,Merge pull request #1474 from IndrajeetPatil/doc_edits.,NA
 ggplot2,1,"`ggsave()` warns when multiple `filename`s are given, and only writes to the first file (@​teunbrand, #5114).",NA
+dbplyr,1,"Compatibility with purrr 1.0.0 (@​mgirlich, #1085).",NA
