@@ -40,7 +40,7 @@
     better maintains any ordering you might have already applied with a
     previous call to `arrange()`, and provides a way to maintain the
     current ordering without having to resort to factors.
-    `with_groups()` is superseded in favour of `.by` (#6582).
+    `with_groups()` is superseded in favor of `.by` (#6582).
 
     This feature was inspired by
     [data.table](https://CRAN.R-project.org/package=data.table), where
@@ -92,7 +92,7 @@
 
     !end-bullet!
 -   !begin-bullet!
-    Joins been completely overhauled to enable more flexible join
+    Joins have been completely overhauled to enable more flexible join
     operations and provide more tools for quality control. Many of these
     changes are inspired by data.table's join syntax (#5914, #5661,
     #5413, #2240).
@@ -265,8 +265,8 @@
 -   !begin-bullet!
     `across()`, `c_across()`, `if_any()`, and `if_all()` now require the
     `.cols` and `.fns` arguments. In general, we now recommend that you
-    use `pick()` instead of a bare `across()` or `across()` with no
-    `.fns` (e.g. `across(c(x, y))`. (#6523).
+    use `pick()` instead of an empty `across()` call or `across()` with
+    no `.fns` (e.g. `across(c(x, y))`. (#6523).
 
     !begin-bullets-7!
     -   !begin-bullet!
@@ -279,7 +279,7 @@
     -   !begin-bullet!
         Relying on the previous default of `.fns = NULL` is not yet
         formally soft-deprecated, because there was no good alternative
-        until now, but itis discouraged and will be soft-deprecated in
+        until now, but it is discouraged and will be soft-deprecated in
         the next minor release.
 
         !end-bullet!
@@ -296,7 +296,7 @@
 -   !begin-bullet!
     `all_equal()` is deprecated. We've advised against it for some time,
     and we explicitly recommend you use `all.equal()`, manually
-    reordering the rows and columns (#6324).
+    reordering the rows and columns as needed (#6324).
 
     !end-bullet!
 -   !begin-bullet!
@@ -318,9 +318,9 @@
 
     !end-bullet!
 -   !begin-bullet!
-    Using `summarise()` to produce a 0 or \>1 rows "summary" deprecated
-    in favour of the new `reframe()`. See the NEWS bullet about
-    `reframe()` for more details (#6382).
+    Using `summarise()` to produce a 0 or \>1 row "summary" is
+    deprecated in favor of the new `reframe()`. See the NEWS bullet
+    about `reframe()` for more details (#6382).
 
     !end-bullet!
 -   !begin-bullet!
@@ -382,7 +382,7 @@
 ## vctrs
 
 Many of dplyr's vector functions have been rewritten to make use of the
-vctrs package, bringing greater consistent and improved performance.
+vctrs package, bringing greater consistency and improved performance.
 
 !begin-bullets-10!
 
@@ -533,7 +533,7 @@ vctrs package, bringing greater consistent and improved performance.
 
 !end-bullets-10!
 
-## Minor improvements and bug fiees
+## Minor improvements and bug fixes
 
 !begin-bullets-14!
 
