@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `fct_inorder()` now works when not all levels appear in the data
+    (#262).
+
+    !end-bullet!
+-   !begin-bullet!
     `fct_unique()` now captures implicit missing values if present
     (#293).
 

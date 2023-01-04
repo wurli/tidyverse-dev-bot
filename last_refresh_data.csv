@@ -6137,3 +6137,4 @@ tidyr,1,"`pivot_longer()` no longer supports interpreting `values_ptypes = list(
 tidyr,1,"`pivot_longer_spec()`, `pivot_wider_spec()`, `build_longer_spec()`, and `build_wider_spec()` have all gained an `error_call` argument, resulting in better error reporting in `pivot_longer()` and `pivot_wider()` (#1408).",NA
 forcats,1,`fct_unique()` now captures implicit missing values if present (#293).,NA
 forcats,1,`fct_other()` no longer generates a warning if no levels are replaced with other (#265).,NA
+forcats,1,`fct_inorder()` now works when not all levels appear in the data (#262).,NA
