@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `nest()`, `complete()`, `expand()`, and `fill()` now document their
+    support for grouped data frames created by `dplyr::group_by()`
+    (#952).
+
+    !end-bullet!
+-   !begin-bullet!
     `pivot_longer_spec()`, `pivot_wider_spec()`, `build_longer_spec()`,
     and `build_wider_spec()` have all gained an `error_call` argument,
     resulting in better error reporting in `pivot_longer()` and
