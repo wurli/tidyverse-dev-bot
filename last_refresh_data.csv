@@ -6141,3 +6141,4 @@ forcats,1,`fct_inorder()` now works when not all levels appear in the data (#262
 tidyr,1,"`nest()`, `complete()`, `expand()`, and `fill()` now document their support for grouped data frames created by `dplyr::group_by()` (#952).",NA
 forcats,1,`fct_infreq()` gains the ability to weight by another variable using the `w` argument (#261).,NA
 forcats,1,`fct_expand()` gains an `after` argument so that you can choose where the new levels are placed (#138).,NA
+forcats,1,"`fct_relevel()`, `fct_cross()`, and `fct_expand()` now error if you name the arguments in `...` since those names are ignored and your code probably doesn't do what you think it does (#319).",NA
