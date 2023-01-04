@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `fct_infreq()` gains the ability to weight by another variable using
+    the `w` argument (#261).
+
+    !end-bullet!
+-   !begin-bullet!
     `fct_inorder()` now works when not all levels appear in the data
     (#262).
 
