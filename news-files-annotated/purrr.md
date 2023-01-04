@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed an issue where progress bars weren't being closed when user
+    interrupts or errors were encountered during a `map()` call (#1024).
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed an invalid C signature for `pluck()` (#1018).
 
     !end-bullet!

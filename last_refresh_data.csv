@@ -6142,3 +6142,4 @@ tidyr,1,"`nest()`, `complete()`, `expand()`, and `fill()` now document their sup
 forcats,1,`fct_infreq()` gains the ability to weight by another variable using the `w` argument (#261).,NA
 forcats,1,`fct_expand()` gains an `after` argument so that you can choose where the new levels are placed (#138).,NA
 forcats,1,"`fct_relevel()`, `fct_cross()`, and `fct_expand()` now error if you name the arguments in `...` since those names are ignored and your code probably doesn't do what you think it does (#319).",NA
+purrr,1,Fixed an issue where progress bars weren't being closed when user interrupts or errors were encountered during a `map()` call (#1024).,NA
