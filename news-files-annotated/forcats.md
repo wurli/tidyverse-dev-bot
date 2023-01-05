@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `fct_lump_n()` and `fct_lump_prop()` will now create an "Other"
+    level even if it only consists of a single level. This makes them
+    consistent with the other `fct_lump_*` functions (#274).
+
+    !end-bullet!
+-   !begin-bullet!
     `fct_relevel()`, `fct_cross()`, and `fct_expand()` now error if you
     name the arguments in `...` since those names are ignored and your
     code probably doesn't do what you think it does (#319).
