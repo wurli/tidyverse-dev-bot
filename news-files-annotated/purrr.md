@@ -363,7 +363,7 @@
 
 !end-bullets-10!
 
-### `list_` functions\`
+### `list_` functions
 
 !begin-bullets-11!
 
