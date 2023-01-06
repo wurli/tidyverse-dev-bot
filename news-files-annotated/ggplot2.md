@@ -3,6 +3,14 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `scale_*_binned()` handles zero-range limits more gracefully
+    (@teunbrand, #5066)
+    !end-bullet!
+-   !begin-bullet!
+    Binned scales are now compatible with `trans = "date"` and
+    `trans = "time"` (@teunbrand, #4217).
+    !end-bullet!
+-   !begin-bullet!
     `ggsave()` warns when multiple `filename`s are given, and only
     writes to the first file (@teunbrand, #5114).
     !end-bullet!

@@ -1,5 +1,9 @@
 # ggplot2 (development version)
 
+* `scale_*_binned()` handles zero-range limits more gracefully (@teunbrand, 
+  #5066)
+* Binned scales are now compatible with `trans = "date"` and `trans = "time"` 
+  (@teunbrand, #4217).
 * `ggsave()` warns when multiple `filename`s are given, and only writes to the
   first file (@teunbrand, #5114).
 * Fixed a regression in `geom_hex()` where aesthetics were replicated across 
@@ -10,7 +14,7 @@
   (@teunbrand based on @clauswilke's suggestion #5051).
 * Fixed a regression in `Coord$train_panel_guides()` where names of guides were 
   dropped (@maxsutton, #5063)
-  
+
 # ggplot2 3.4.0
 This is a minor release focusing on tightening up the internals and ironing out
 some inconsistencies in the API. The biggest change is the addition of the 
