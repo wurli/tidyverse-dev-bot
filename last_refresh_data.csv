@@ -6149,3 +6149,6 @@ purrr,1,"As of purrr 1.0.0, the `map()` family of functions wraps all errors gen
 purrr,1,`map()` errors with named inputs also report the name of the element that errored.,NA
 ggplot2,1,"`scale_*_binned()` handles zero-range limits more gracefully (@​teunbrand, #5066)",NA
 ggplot2,1,"Binned scales are now compatible with `trans = ""date""` and `trans = ""time""` (@​teunbrand, #4217).",NA
+ggplot2,1,"Renamed computed aesthetic in `stat_ecdf()` to `ecdf`, to prevent incorrect scale transformations (@​teunbrand, #5113 and #5112).",NA
+ggplot2,1,"Fixed misbehaviour of `draw_key_boxplot()` and `draw_key_crossbar()` with skewed key aspect ratio (@​teunbrand, #5082).",NA
+ggplot2,1,"`ggsave()` warns when multiple `filename`s are given, and only writes to the first file (@​teunbrand, #5114)",NA

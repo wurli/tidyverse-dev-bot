@@ -3,6 +3,14 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Renamed computed aesthetic in `stat_ecdf()` to `ecdf`, to prevent
+    incorrect scale transformations (@teunbrand, #5113 and #5112).
+    !end-bullet!
+-   !begin-bullet!
+    Fixed misbehaviour of `draw_key_boxplot()` and `draw_key_crossbar()`
+    with skewed key aspect ratio (@teunbrand, #5082).
+    !end-bullet!
+-   !begin-bullet!
     `scale_*_binned()` handles zero-range limits more gracefully
     (@teunbrand, #5066)
     !end-bullet!
@@ -12,7 +20,7 @@
     !end-bullet!
 -   !begin-bullet!
     `ggsave()` warns when multiple `filename`s are given, and only
-    writes to the first file (@teunbrand, #5114).
+    writes to the first file (@teunbrand, #5114)
     !end-bullet!
 -   !begin-bullet!
     Fixed a regression in `geom_hex()` where aesthetics were replicated
