@@ -12,6 +12,18 @@
     objects, files.
 
     !end-bullet!
+-   !begin-bullet!
+    cli now shows progress bars after one second by default, if they are
+    less than half way at the point. (Or after two seconds,
+    unconditionally, as before.) See the the `cli.progress_show_after`
+    option in `?cli-config` for details (#542).
+
+    !end-bullet!
+-   !begin-bullet!
+    `format_inline()` now has a new argument `keep_newlines`, and it
+    keeps newline characters by default.
+
+    !end-bullet!
 
 !end-bullets-1!
 

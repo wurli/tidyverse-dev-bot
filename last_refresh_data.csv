@@ -6153,3 +6153,5 @@ ggplot2,1,"Renamed computed aesthetic in `stat_ecdf()` to `ecdf`, to prevent inc
 ggplot2,1,"Fixed misbehaviour of `draw_key_boxplot()` and `draw_key_crossbar()` with skewed key aspect ratio (@​teunbrand, #5082).",NA
 ggplot2,1,"`ggsave()` warns when multiple `filename`s are given, and only writes to the first file (@​teunbrand, #5114)",NA
 cli,1,"The progressr progress handler now reports progress correctly (@​HenrikBengtsson, #558).",NA
+cli,1,"cli now shows progress bars after one second by default, if they are less than half way at the point. (Or after two seconds, unconditionally, as before.) See the the `cli.progress_show_after` option in `?cli-config` for details (#542).",NA
+cli,1,"`format_inline()` now has a new argument `keep_newlines`, and it keeps newline characters by default.",NA
