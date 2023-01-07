@@ -6152,3 +6152,4 @@ ggplot2,1,"Binned scales are now compatible with `trans = ""date""` and `trans =
 ggplot2,1,"Renamed computed aesthetic in `stat_ecdf()` to `ecdf`, to prevent incorrect scale transformations (@​teunbrand, #5113 and #5112).",NA
 ggplot2,1,"Fixed misbehaviour of `draw_key_boxplot()` and `draw_key_crossbar()` with skewed key aspect ratio (@​teunbrand, #5082).",NA
 ggplot2,1,"`ggsave()` warns when multiple `filename`s are given, and only writes to the first file (@​teunbrand, #5114)",NA
+cli,1,"The progressr progress handler now reports progress correctly (@​HenrikBengtsson, #558).",NA

@@ -3,8 +3,14 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    The progressr progress handler now reports progress correctly
+    (@HenrikBengtsson, #558).
+
+    !end-bullet!
+-   !begin-bullet!
     New `hash_*sha1()` functions to calculate the SHA-1 hash of strings,
     objects, files.
+
     !end-bullet!
 
 !end-bullets-1!
