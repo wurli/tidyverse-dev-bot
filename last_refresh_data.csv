@@ -6161,3 +6161,8 @@ tidyr,1,"`unnest_longer()` now uses `""""` in the index column for fully unnamed
 tidyr,1,"`unnest_longer()` now consistently drops rows with either `NULL` or empty vectors (like `integer()`) by default. Set the new `keep_empty` argument to `TRUE` to retain them. Previously, `keep_empty = TRUE` was implicitly being used for `NULL`, while `keep_empty = FALSE` was being used for empty vectors, which was inconsistent with all other tidyr verbs with this argument (#1363).",NA
 tidyr,1,`unnest_longer()` has gained a `keep_empty` argument like `unnest()` (#1339).,NA
 ggplot2,1,"Automatic breaks in `scale_*_binned()` should no longer be out-of-bounds, and automatic limits expand to include these (@​teunbrand, #5095, #5100).",NA
+forcats,1,`fct_explicit_na()` is deprecated in favour of `fct_na_value_to_level()`.,NA
+forcats,1,New `fct_na_value_to_level()` and `fct_na_level_to_value()` to convert NA values to NA levels and vice versa (#337).,NA
+forcats,1,`fct_collapse()` can now use `other_level = NA` (#291).,NA
+forcats,1,`fct_count()` works with factors that contain `NA`s in levels.,NA
+ggplot2,1,"Added `scale_linewidth_manual()` and `scale_linewidth_identity()` to support the `linewidth` aesthetic (@​teunbrand, #5050).",NA

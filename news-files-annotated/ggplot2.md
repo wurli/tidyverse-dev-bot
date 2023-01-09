@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Added `scale_linewidth_manual()` and `scale_linewidth_identity()` to
+    support the `linewidth` aesthetic (@teunbrand, #5050).
+    !end-bullet!
+-   !begin-bullet!
     Automatic breaks in `scale_*_binned()` should no longer be
     out-of-bounds, and automatic limits expand to include these
     (@teunbrand, #5095, #5100).
