@@ -3,6 +3,34 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `unpack()` does a better job of reporting column name duplication
+    issues and gives better advice about how to resolve them using
+    `names_sep`. This also improves errors from functions that use
+    `unpack()`, like `unnest()` and `unnest_wider()` (#1425, #1367).
+
+    !end-bullet!
+-   !begin-bullet!
+    `unnest_longer()` now uses `""` in the index column for fully
+    unnamed vectors. It also now consistently uses `NA` in the index
+    column for empty vectors that are "kept" by `keep_empty = TRUE`
+    (#1442).
+
+    !end-bullet!
+-   !begin-bullet!
+    `unnest_longer()` now consistently drops rows with either `NULL` or
+    empty vectors (like `integer()`) by default. Set the new
+    `keep_empty` argument to `TRUE` to retain them. Previously,
+    `keep_empty = TRUE` was implicitly being used for `NULL`, while
+    `keep_empty = FALSE` was being used for empty vectors, which was
+    inconsistent with all other tidyr verbs with this argument (#1363).
+
+    !end-bullet!
+-   !begin-bullet!
+    `unnest_longer()` has gained a `keep_empty` argument like `unnest()`
+    (#1339).
+
+    !end-bullet!
+-   !begin-bullet!
     `nest()`, `complete()`, `expand()`, and `fill()` now document their
     support for grouped data frames created by `dplyr::group_by()`
     (#952).
