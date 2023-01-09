@@ -1,5 +1,7 @@
 # cli (development version)
 
+# cli 3.6.0
+
 !begin-bullets-1!
 
 -   !begin-bullet!

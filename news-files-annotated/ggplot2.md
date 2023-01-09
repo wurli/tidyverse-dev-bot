@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Automatic breaks in `scale_*_binned()` should no longer be
+    out-of-bounds, and automatic limits expand to include these
+    (@teunbrand, #5095, #5100).
+    !end-bullet!
+-   !begin-bullet!
     Renamed computed aesthetic in `stat_ecdf()` to `ecdf`, to prevent
     incorrect scale transformations (@teunbrand, #5113 and #5112).
     !end-bullet!
