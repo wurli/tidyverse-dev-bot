@@ -20,8 +20,9 @@
 
     !end-bullet!
 -   !begin-bullet!
-    `format_inline()` now has a new argument `keep_newlines`, and it
-    keeps newline characters by default.
+    `format_inline()` now has a new argument `keep_whitespace`, and it
+    keeps whitespace, including newline and form feed characters by
+    default.
 
     !end-bullet!
 

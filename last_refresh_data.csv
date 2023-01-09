@@ -6155,3 +6155,4 @@ ggplot2,1,"`ggsave()` warns when multiple `filename`s are given, and only writes
 cli,1,"The progressr progress handler now reports progress correctly (@​HenrikBengtsson, #558).",NA
 cli,1,"cli now shows progress bars after one second by default, if they are less than half way at the point. (Or after two seconds, unconditionally, as before.) See the the `cli.progress_show_after` option in `?cli-config` for details (#542).",NA
 cli,1,"`format_inline()` now has a new argument `keep_newlines`, and it keeps newline characters by default.",NA
+cli,1,"`format_inline()` now has a new argument `keep_whitespace`, and it keeps whitespace, including newline and form feed characters by default.",NA
