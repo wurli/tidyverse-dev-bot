@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `unnest()`, `unchop()`, `unnest_longer()`, and `unnest_wider()`
+    better handle lists with additional classes (#1327).
+
+    !end-bullet!
+-   !begin-bullet!
     `chop()`, `unpack()`, and `unchop()` have all gained `...`, which
     must be empty (#1447).
 
