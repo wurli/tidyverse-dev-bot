@@ -3,6 +3,18 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `fct_reorder()` now removes `NA` values in `.x` with a warning (like
+    `ggplot2::geom_point()` and friends). You can suppress the warning
+    by setting `.na_rm = TRUE` (#315).
+
+    !end-bullet!
+-   !begin-bullet!
+    `fct_reorder()` gains a new `.default` argument that controls the
+    placement of empty levels (including levels that might become empty
+    after removing missing values in `.x`) (#266).
+
+    !end-bullet!
+-   !begin-bullet!
     `fct_explicit_na()` is deprecated in favour of
     `fct_na_value_to_level()`.
 
