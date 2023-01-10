@@ -6166,3 +6166,6 @@ forcats,1,New `fct_na_value_to_level()` and `fct_na_level_to_value()` to convert
 forcats,1,`fct_collapse()` can now use `other_level = NA` (#291).,NA
 forcats,1,`fct_count()` works with factors that contain `NA`s in levels.,NA
 ggplot2,1,"Added `scale_linewidth_manual()` and `scale_linewidth_identity()` to support the `linewidth` aesthetic (@​teunbrand, #5050).",NA
+tidyr,1,"`chop()`, `unpack()`, and `unchop()` have all gained `...`, which must be empty (#1447).",NA
+tidyr,1,"`nest()`, `unnest()`, `pack()`, `unpack()`, `chop()`, and `unchop()` now consistently disallow renaming during tidy-selection. Renaming is never meaningful in these functions, and previously either had no effect or caused problems (#1449).",NA
+tidyr,1,"`pack()`, `unpack()`, `chop()`, and `unchop()` have all gained `error_call` arguments, which in turn improves some of the error calls shown in `nest()` and various `unnest()` adjacent functions (#1446).",NA
