@@ -6170,3 +6170,4 @@ tidyr,1,"`chop()`, `unpack()`, and `unchop()` have all gained `...`, which must 
 tidyr,1,"`nest()`, `unnest()`, `pack()`, `unpack()`, `chop()`, and `unchop()` now consistently disallow renaming during tidy-selection. Renaming is never meaningful in these functions, and previously either had no effect or caused problems (#1449).",NA
 tidyr,1,"`pack()`, `unpack()`, `chop()`, and `unchop()` have all gained `error_call` arguments, which in turn improves some of the error calls shown in `nest()` and various `unnest()` adjacent functions (#1446).",NA
 tidyr,1,"`unnest()`, `unchop()`, `unnest_longer()`, and `unnest_wider()` better handle lists with additional classes (#1327).",NA
+ggplot2,1,"Using two ordered factors as facetting variables in `facet_grid(..., as.table = FALSE)` now throws a warning instead of an error (@​teunbrand, #5109).",NA

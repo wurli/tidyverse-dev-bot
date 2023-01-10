@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Using two ordered factors as facetting variables in
+    `facet_grid(..., as.table = FALSE)` now throws a warning instead of
+    an error (@teunbrand, #5109).
+    !end-bullet!
+-   !begin-bullet!
     Added `scale_linewidth_manual()` and `scale_linewidth_identity()` to
     support the `linewidth` aesthetic (@teunbrand, #5050).
     !end-bullet!
