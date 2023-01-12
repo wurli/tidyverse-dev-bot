@@ -6173,3 +6173,4 @@ tidyr,1,"`unnest()`, `unchop()`, `unnest_longer()`, and `unnest_wider()` better 
 ggplot2,1,"Using two ordered factors as facetting variables in `facet_grid(..., as.table = FALSE)` now throws a warning instead of an error (@​teunbrand, #5109).",NA
 forcats,1,`fct_reorder()` now removes `NA` values in `.x` with a warning (like `ggplot2::geom_point()` and friends). You can suppress the warning by setting `.na_rm = TRUE` (#315).,NA
 forcats,1,`fct_reorder()` gains a new `.default` argument that controls the placement of empty levels (including levels that might become empty after removing missing values in `.x`) (#266).,NA
+forcats,1,"All functions now validate their inputs, giving more useful errors if you accidentally misspecify an input.",NA

@@ -16,6 +16,11 @@
 !begin-bullets-2!
 
 -   !begin-bullet!
+    All functions now validate their inputs, giving more useful errors
+    if you accidentally misspecify an input.
+
+    !end-bullet!
+-   !begin-bullet!
     `fct_collapse()` can now use `other_level = NA` (#291).
 
     !end-bullet!
@@ -66,15 +71,15 @@
 
     !end-bullet!
 -   !begin-bullet!
-    `fct_reorder()` now removes `NA` values in `.x` with a warning (like
-    `ggplot2::geom_point()` and friends). You can suppress the warning
-    by setting `.na_rm = TRUE` (#315).
+    `fct_reorder()` and `fct_reorder2()` now remove `NA` values in `.x`
+    with a warning (like `ggplot2::geom_point()` and friends). You can
+    suppress the warning by setting `.na_rm = TRUE` (#315).
 
     !end-bullet!
 -   !begin-bullet!
-    `fct_reorder()` gains a new `.default` argument that controls the
-    placement of empty levels (including levels that might become empty
-    after removing missing values in `.x`) (#266).
+    `fct_reorder()` and `fct_reorder2()` gain a new `.default` argument
+    that controls the placement of empty levels (including levels that
+    might become empty after removing missing values in `.x`) (#266).
 
     !end-bullet!
 -   !begin-bullet!
