@@ -1,5 +1,7 @@
 # dbplyr (development version)
 
+# dbplyr 2.3.0
+
 !begin-bullets-1!
 
 -   !begin-bullet!
