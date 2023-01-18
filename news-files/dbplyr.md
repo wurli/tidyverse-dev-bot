@@ -1,5 +1,26 @@
 # dbplyr (development version)
 
+* `across()` now uses the original value when a column is overriden to match
+  the behaviour of dplyr. For example `mutate(df, across(c(x, y), ~ .x / x))`
+  now produces
+  
+  ```
+  SELECT `x` / `x` AS `x`, `y` / `x` AS `y`
+  FROM `df`
+  ```
+  
+  instead of
+  
+  ```
+  SELECT `x`, `y` / `x` AS `y`
+  FROM (
+    SELECT `x` / `x` AS `x`, `y`
+    FROM `df`
+  ) 
+  ```
+  
+  (@mgirlich, #1015).
+
 # dbplyr 2.3.0
 
 * Compatibility with purrr 1.0.0 (@mgirlich, #1085).
@@ -14,7 +35,7 @@
   * The `.by` argument is supported (@mgirlich, #1051).
   * Passing `...` to `across()` is deprecated because the evaluation timing 
     of `...` is ambiguous. Now instead of (e.g.) 
-    `across(a:b, mean, na.rm = TRUE)` use 
+    `across(a:b, mean, na.rm = TRUE)` use  `across(a:b, \(x) mean(x, na.rm = TRUE)`
   * `pick()` is translated (@mgirlich, #1044).
   * `case_match()` is translated (@mgirlich, #1020).
   * `case_when()` now supports the `.default` argument (@mgirlich, #1017).

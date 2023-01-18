@@ -6178,3 +6178,18 @@ tidyr,1,All built in datasets are now standard tibbles (#1459).,NA
 tidyr,1,"`unnest_wider()` now generates automatic names for *partially* unnamed vectors. Previously it only generated them for fully unnamed vectors, resulting in a strange mix of automatic names and name-repaired names (#1367).",NA
 tidyr,1,`unnest_wider()` now errors if any values being unnested are unnamed and `names_sep` is not provided (#1367).,NA
 tidyr,1,"`nest()` has gained a new argument, `.by`, which allows you to specify the columns to nest by (rather than the columns to nest, i.e. through `...`). Additionally, the `.key` argument is no longer deprecated, and is used whenever `...` isn't specified (#1458).",NA
+dbplyr,1,"`across()` now uses the original value when a column is overriden to match the behaviour of dplyr. For example `mutate(df, across(c(x, y), ~ .x / x))` now produces",NA
+dbplyr,1,"```
+SELECT `x` / `x` AS `x`, `y` / `x` AS `y`
+FROM `df`
+```",NA
+dbplyr,1,instead of,NA
+dbplyr,1,"```
+SELECT `x`, `y` / `x` AS `y`
+FROM (
+  SELECT `x` / `x` AS `x`, `y`
+  FROM `df`
+) 
+```",NA
+dbplyr,1,"(@​mgirlich, #1015).",NA
+dbplyr,2,"• Passing `...` to `across()` is deprecated because the evaluation timing of `...` is ambiguous. Now instead of (e.g.) `across(a:b, mean, na.rm = TRUE)` use `across(a:b, \(x) mean(x, na.rm = TRUE)`",In preparation for dplyr 1.1.0:
