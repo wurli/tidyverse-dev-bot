@@ -555,6 +555,11 @@ vctrs package, bringing greater consistency and improved performance.
 
     !end-bullet!
 -   !begin-bullet!
+    Joins on very wide tables are no longer bottlenecked by the
+    application of `suffix` (#6642).
+
+    !end-bullet!
+-   !begin-bullet!
     `*_join()` now error if you supply them with additional arguments
     that aren't used (#6228).
 
