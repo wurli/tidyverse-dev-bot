@@ -3,8 +3,13 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    The C level `r_dyn_*_push_back()` utilities are now faster (#1542).
+
+    !end-bullet!
+-   !begin-bullet!
     rlang is now compliant with `-Wstrict-prototypes` as requested by
     CRAN (#1508).
+
     !end-bullet!
 
 !end-bullets-1!
