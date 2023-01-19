@@ -6193,3 +6193,4 @@ FROM (
 ```",NA
 dbplyr,1,"(@​mgirlich, #1015).",NA
 dbplyr,2,"• Passing `...` to `across()` is deprecated because the evaluation timing of `...` is ambiguous. Now instead of (e.g.) `across(a:b, mean, na.rm = TRUE)` use `across(a:b, \(x) mean(x, na.rm = TRUE)`",In preparation for dplyr 1.1.0:
+dbplyr,1,"Fixed an issue when there where at least 3 joins and renamed variables (@​mgirlich, #1101).",NA

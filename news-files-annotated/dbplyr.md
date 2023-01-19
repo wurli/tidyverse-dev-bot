@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed an issue when there where at least 3 joins and renamed
+    variables (@mgirlich, #1101).
+
+    !end-bullet!
+-   !begin-bullet!
     `across()` now uses the original value when a column is overriden to
     match the behaviour of dplyr. For example
     `mutate(df, across(c(x, y), ~ .x / x))` now produces
