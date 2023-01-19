@@ -582,6 +582,11 @@ vctrs package, bringing greater consistency and improved performance.
 
     !end-bullet!
 -   !begin-bullet!
+    `across()` will now error when supplied `...` without a `.fns`
+    argument (#6638).
+
+    !end-bullet!
+-   !begin-bullet!
     `arrange()` now correctly ignores `NULL` inputs (#6193).
 
     !end-bullet!
