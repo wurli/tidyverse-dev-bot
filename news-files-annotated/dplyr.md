@@ -5,9 +5,9 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
-    `.by` is an experimental alternative to `group_by()` that supports
-    per-operation grouping for `mutate()`, `summarise()`, `filter()`,
-    and the `slice()` family (#6528).
+    `.by`/`by` is an experimental alternative to `group_by()` that
+    supports per-operation grouping for `mutate()`, `summarise()`,
+    `filter()`, and the `slice()` family (#6528).
 
     Rather than:
 
