@@ -16,6 +16,10 @@
 !begin-bullets-2!
 
 -   !begin-bullet!
+    [#1104](https://github.com/tidyverse/lubridate/issues/1104) Fix
+    incorrect parsing of months when %a format is present.
+    !end-bullet!
+-   !begin-bullet!
     [#1091](https://github.com/tidyverse/lubridate/issues/1091) Fix
     formatting of numeric inputs to parse_date_time.
     !end-bullet!
