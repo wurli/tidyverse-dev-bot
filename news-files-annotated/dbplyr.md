@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed an issue when using a window function after a `summarise()`
+    and `select()` (@mgirlich, #1104).
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed an issue when there where at least 3 joins and renamed
     variables (@mgirlich, #1101).
 

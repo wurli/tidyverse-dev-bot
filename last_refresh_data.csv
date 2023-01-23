@@ -6198,3 +6198,4 @@ rlang,1,The C level `r_dyn_*_push_back()` utilities are now faster (#1542).,NA
 haven,1,"The experimental `write_sas()` function has been deprecated (#224). The sas7bdat file format is complex and undocumented, and as such writing SAS files is not officially supported by ReadStat. `write_xpt()` should be used instead - it produces files in the SAS transport format, which has limitations but will be reliably read by SAS.",NA
 dplyr,1,"`.by`/`by` is an experimental alternative to `group_by()` that supports per-operation grouping for `mutate()`, `summarise()`, `filter()`, and the `slice()` family (#6528). Rather than:",NA
 lubridate,1,[#1104](https://github.com/tidyverse/lubridate/issues/1104) Fix incorrect parsing of months when %a format is present.,NA
+dbplyr,1,"Fixed an issue when using a window function after a `summarise()` and `select()` (@​mgirlich, #1104).",NA
