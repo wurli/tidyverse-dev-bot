@@ -6199,3 +6199,5 @@ haven,1,"The experimental `write_sas()` function has been deprecated (#224). The
 dplyr,1,"`.by`/`by` is an experimental alternative to `group_by()` that supports per-operation grouping for `mutate()`, `summarise()`, `filter()`, and the `slice()` family (#6528). Rather than:",NA
 lubridate,1,[#1104](https://github.com/tidyverse/lubridate/issues/1104) Fix incorrect parsing of months when %a format is present.,NA
 dbplyr,1,"Fixed an issue when using a window function after a `summarise()` and `select()` (@​mgirlich, #1104).",NA
+tidyr,1,"`nest()` has gained a `.by` argument which allows you to specify the columns to nest by (rather than the columns to nest, i.e. through `...`). Additionally, the `.key` argument is no longer deprecated, and is used whenever `...` isn't specified (#1458).",NA
+tidyr,1,`pivot_longer()` has gained a `cols_vary` argument for controlling the ordering of the output rows relative to their original row number (#1312).,NA
