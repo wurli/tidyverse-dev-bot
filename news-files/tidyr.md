@@ -1,5 +1,7 @@
 # tidyr (development version)
 
+# tidyr 1.3.0
+
 ## New features
 
 * New family of consistent string separating functions:

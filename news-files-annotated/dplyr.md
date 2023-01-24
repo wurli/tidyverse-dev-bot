@@ -711,6 +711,11 @@ vctrs package, bringing greater consistency and improved performance.
 
     !end-bullet!
 -   !begin-bullet!
+    `rename()` now contains examples of using `all_of()` and `any_of()`
+    to rename using a named character vector (#6644).
+
+    !end-bullet!
+-   !begin-bullet!
     `rename_with()` now disallows renaming in the `.cols` tidy-selection
     (#6561).
 
