@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Catch unsupported argument `pivot_wider(id_expand = TRUE)` and
+    `pivot_longer(cols_vary)` (@mgirlich, #1109).
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed an issue when using a window function after a `summarise()`
     and `select()` (@mgirlich, #1104).
 
