@@ -53,6 +53,10 @@
     Fixed a regression in `Coord$train_panel_guides()` where names of
     guides were dropped (@maxsutton, #5063)
     !end-bullet!
+-   !begin-bullet!
+    `update_geom_defaults()` and `update_stat_defaults()` now return
+    properly classed objects and have updated docs (@dkahle, #5146)
+    !end-bullet!
 
 !end-bullets-1!
 
