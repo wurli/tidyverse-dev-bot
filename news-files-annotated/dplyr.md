@@ -726,6 +726,11 @@ vctrs package, bringing greater consistency and improved performance.
 
     !end-bullet!
 -   !begin-bullet!
+    `rows_insert()` now checks that `y` contains the `by` columns
+    (#6652).
+
+    !end-bullet!
+-   !begin-bullet!
     `setequal()` ignores differences between freely coercible types
     (e.g. integer and double) (#6114) and ignores duplicated rows
     (#6057).
