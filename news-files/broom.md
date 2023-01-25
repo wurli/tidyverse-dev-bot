@@ -1,5 +1,10 @@
 # broom (development version)
 
+# broom 1.0.3
+
+* Addressed test failures on R-devel.
+* Fixed bug in `tidy.multinom()` where the `conf.level` argument would be ignored.
+
 # broom 1.0.2
 
 * The default `data` argument for `augment.coxph()` and `augment.survreg()` has been transitioned from `NULL` to `model.frame(x)` (#1126 by `@capnrefsmmat`).

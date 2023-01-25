@@ -6206,3 +6206,5 @@ tidyr,1,`unnest_longer()` gains a `keep_empty` argument like `unnest()` (#1339).
 tidyr,1,`pivot_longer()` gains a `cols_vary` argument for controlling the ordering of the output rows relative to their original row number (#1312).,NA
 tidyr,1,"New datasets `who2`, `household`, `cms_patient_experience`, and `cms_patient_care` to demonstrate various tidying challenges (#1333).",NA
 dbplyr,1,"Catch unsupported argument `pivot_wider(id_expand = TRUE)` and `pivot_longer(cols_vary)` (@​mgirlich, #1109).",NA
+broom,1,Addressed test failures on R-devel.,NA
+broom,1,Fixed bug in `tidy.multinom()` where the `conf.level` argument would be ignored.,NA

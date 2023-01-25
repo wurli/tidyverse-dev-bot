@@ -1,8 +1,22 @@
 # broom (development version)
 
-# broom 1.0.2
+# broom 1.0.3
 
 !begin-bullets-1!
+
+-   !begin-bullet!
+    Addressed test failures on R-devel.
+    !end-bullet!
+-   !begin-bullet!
+    Fixed bug in `tidy.multinom()` where the `conf.level` argument would
+    be ignored.
+    !end-bullet!
+
+!end-bullets-1!
+
+# broom 1.0.2
+
+!begin-bullets-2!
 
 -   !begin-bullet!
     The default `data` argument for `augment.coxph()` and
@@ -19,11 +33,11 @@
     #124).
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # broom 1.0.1
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     Improves performance of `tidy.lm()` and `tidy.glm()` for full-rank
@@ -45,7 +59,7 @@
     release)
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 # broom 1.0.0
 
@@ -62,12 +76,12 @@ can read those guidelines
 
 We've also made notable changes to error handling in this release:
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     Adds minimal ellipsis checking to warn on commonly misspecified
     arguments passed through ellipses. Notably:
-    !begin-bullets-4!
+    !begin-bullets-5!
     -   !begin-bullet!
         `tidy()` methods will now warn when supplied an `exponentiate`
         argument if it will be ignored.
@@ -77,7 +91,7 @@ We've also made notable changes to error handling in this release:
         argument if it will be ignored.
         !end-bullet!
 
-    !end-bullets-4!
+    !end-bullets-5!
     !end-bullet!
 -   !begin-bullet!
     The warning regarding tidiers only maintained via dispatch to `lm`
@@ -88,11 +102,11 @@ We've also made notable changes to error handling in this release:
     `(g)lm` method in the same session, broom will warn again (#1101).
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 Other fixes and improvements:
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     Add `exponentiate` argument to `tidy.boot()` (#1039).
@@ -130,7 +144,7 @@ Other fixes and improvements:
     `@grantmcdermott`).
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # broom 0.8.0
 
@@ -140,11 +154,11 @@ date with other packages in the tidymodels.
 
 In the big picture, this release:
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     Makes many improvements to documentation:
-    !begin-bullets-7!
+    !begin-bullets-8!
     -   !begin-bullet!
         All tidiers now have example code demonstrating usage in their
         documentation. Tidiers for base packages as well as selected
@@ -162,7 +176,7 @@ In the big picture, this release:
         been workshopped to run reliably.
         !end-bullet!
 
-    !end-bullets-7!
+    !end-bullets-8!
     !end-bullet!
 -   !begin-bullet!
     Clarifies errors and warnings for deprecated and unmaintained
@@ -174,11 +188,11 @@ In the big picture, this release:
     easier navigability of the source code.
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 ### Bug fixes and other improvements
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     Fix `glance.fixest` error when model includes only fixed effects and
@@ -209,7 +223,7 @@ In the big picture, this release:
     packages.
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 # broom 0.7.12
 
@@ -219,7 +233,7 @@ same person.
 
 # broom 0.7.11
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     Addressed issue with the ordering of original observations in
@@ -241,11 +255,11 @@ same person.
     `@ddsjoberg`).
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 # broom 0.7.10
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     Clarifies error when `pysch::mediate` output is dispatched to
@@ -278,11 +292,11 @@ same person.
     Various bug fixes and improvements to documentation.
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 # broom 0.7.9
 
-!begin-bullets-11!
+!begin-bullets-12!
 
 -   !begin-bullet!
     Fixes confidence intervals in `tidy.crr()`, which were previously
@@ -297,11 +311,11 @@ same person.
     releases. (`#1034` by `@krivit`)
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-12!
 
 # broom 0.7.8
 
-!begin-bullets-12!
+!begin-bullets-13!
 
 -   !begin-bullet!
     Fixed bug in `glance.ergm` related to handling of MCMC details.
@@ -310,11 +324,11 @@ same person.
     Address breakages in unit tests for {fixest} tidiers.
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
 
 # broom 0.7.7
 
-!begin-bullets-13!
+!begin-bullets-14!
 
 -   !begin-bullet!
     Fixed bug in `tidy.epi.2by2` that resulted in errors with new
@@ -336,11 +350,11 @@ same person.
     Various bug fixes and improvements to documentation
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-14!
 
 # broom 0.7.6
 
-!begin-bullets-14!
+!begin-bullets-15!
 
 -   !begin-bullet!
     Fixed bug in `augment` tidiers resulting in `.fitted` and `.se.fit`
@@ -369,11 +383,11 @@ same person.
     Various bug fixes and improvements to documentation
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-15!
 
 # broom 0.7.5
 
-!begin-bullets-15!
+!begin-bullets-16!
 
 -   !begin-bullet!
     Fixed bug in the `nnet::multinom` tidier in the case that the
@@ -384,7 +398,7 @@ same person.
     Various bug fixes and improvements to documentation
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-16!
 
 # broom 0.7.4
 
@@ -393,7 +407,7 @@ and improves functionality of many existing tidiers!
 
 #### New Tidiers
 
-!begin-bullets-16!
+!begin-bullets-17!
 
 -   !begin-bullet!
     Add tidiers for `Rchoice` objects (`#961` by `@vincentarelbundock`
@@ -416,14 +430,14 @@ and improves functionality of many existing tidiers!
     `@vincentarelbundock` and `@Diego-MX`)
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-17!
 
 This release also restores tidiers for `felm` objects from the `lfe`
 package, which was recently unarchived from CRAN.
 
 #### Improvements to existing tidiers
 
-!begin-bullets-17!
+!begin-bullets-18!
 
 -   !begin-bullet!
     `tidy.emmGrid` can now return `std.error` and `conf.*` columns at
@@ -458,7 +472,7 @@ package, which was recently unarchived from CRAN.
     Various bug fixes and improvements to documentation and errors.
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-18!
 
 # broom 0.7.3
 
@@ -479,7 +493,7 @@ allowing such objects to fall back to the `lm`/`glm` tidier methods:
 
 In addition,
 
-!begin-bullets-18!
+!begin-bullets-19!
 
 -   !begin-bullet!
     Restores tidiers for `summary.lm` objects (`#953` by
@@ -493,17 +507,17 @@ In addition,
     Various bug fixes and improvements to documentation and errors.
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-19!
 
 # broom 0.7.2
 
-!begin-bullets-19!
+!begin-bullets-20!
 
 -   !begin-bullet!
     Various bug fixes and improvements to documentation and errors.
     !end-bullet!
 
-!end-bullets-19!
+!end-bullets-20!
 
 # broom 0.7.1
 
@@ -512,7 +526,7 @@ new features and bug fixes!
 
 #### New tidiers
 
-!begin-bullets-20!
+!begin-bullets-21!
 
 -   !begin-bullet!
     Add tidiers for `margins` objects. (`#700` by `@grantmcdermott`)
@@ -525,7 +539,7 @@ new features and bug fixes!
     Add `glance.coeftest()` method (`#932` by `@grantmcdermott`)
     !end-bullet!
 
-!end-bullets-20!
+!end-bullets-21!
 
 #### Improvements to existing tidiers
 
@@ -537,7 +551,7 @@ labeled `.lower` and `.upper`! (`#908` by `@grantmcdermott`, `#925` by
 
 In addition...
 
-!begin-bullets-21!
+!begin-bullets-22!
 
 -   !begin-bullet!
     Extended the `glance.aov()` method to include an `r.squared` column!
@@ -555,11 +569,11 @@ In addition...
     A number of improvements to documentation throughout the package.
     !end-bullet!
 
-!end-bullets-21!
+!end-bullets-22!
 
 #### Bug fixes
 
-!begin-bullets-22!
+!begin-bullets-23!
 
 -   !begin-bullet!
     Fixed `newdata` warning message in `augment.*()` output when the
@@ -599,7 +613,7 @@ In addition...
     `exponentiate = FALSE`.
     !end-bullet!
 
-!end-bullets-22!
+!end-bullets-23!
 
 #### Deprecations
 
@@ -615,7 +629,7 @@ arguments.
 
 ### Big picture changes
 
-!begin-bullets-23!
+!begin-bullets-24!
 
 -   !begin-bullet!
     We have changed how we report degrees of freedom for `lm` objects
@@ -667,14 +681,14 @@ arguments.
 
     !end-bullet!
 
-!end-bullets-23!
+!end-bullets-24!
 
 ### Deprecations
 
 This release of `broom` soft-deprecates the following functions and
 tidier methods:
 
-!begin-bullets-24!
+!begin-bullets-25!
 
 -   !begin-bullet!
     Tidier methods for data frames, rowwise data frames, vectors and
@@ -704,12 +718,12 @@ tidier methods:
     deprecated in favor of `skimr::skim()`
     !end-bullet!
 
-!end-bullets-24!
+!end-bullets-25!
 
 We have also gone forward with our planned mixed model deprecations, and
 have removed the following methods, which now live in `broom.mixed`:
 
-!begin-bullets-25!
+!begin-bullets-26!
 
 -   !begin-bullet!
     `tidy.brmsfit()`
@@ -727,11 +741,11 @@ have removed the following methods, which now live in `broom.mixed`:
     `tidyMCMC()`, `tidy.rjags()`, `tidy.stanfit()`
     !end-bullet!
 
-!end-bullets-25!
+!end-bullets-26!
 
 ### Minor breaking changes
 
-!begin-bullets-26!
+!begin-bullets-27!
 
 -   !begin-bullet!
     `augment.factanal()` now returns a tibble with columns names `.fs1`,
@@ -755,13 +769,13 @@ have removed the following methods, which now live in `broom.mixed`:
 
     !end-bullet!
 
-!end-bullets-26!
+!end-bullets-27!
 
 ## A refactoring of `augment()` methods
 
 The internals of `augment.*()` methods have largely been overhauled.
 
-!begin-bullets-27!
+!begin-bullets-28!
 
 -   !begin-bullet!
     If you pass a dataset to `augment()` via the `data` or `newdata`
@@ -797,11 +811,11 @@ The internals of `augment.*()` methods have largely been overhauled.
 
     !end-bullet!
 
-!end-bullets-27!
+!end-bullets-28!
 
 ## New tidiers
 
-!begin-bullets-28!
+!begin-bullets-29!
 
 -   !begin-bullet!
     `anova` objects from the `car` package (#754)
@@ -860,11 +874,11 @@ The internals of `augment.*()` methods have largely been overhauled.
     information about degrees of freedom in an `aov` object.
     !end-bullet!
 
-!end-bullets-28!
+!end-bullets-29!
 
 ## Improvements to existing tidiers
 
-!begin-bullets-29!
+!begin-bullets-30!
 
 -   !begin-bullet!
     `tidy.felm()` now has a `robust = TRUE/FALSE` option that supports
@@ -946,11 +960,11 @@ The internals of `augment.*()` methods have largely been overhauled.
 
     !end-bullet!
 
-!end-bullets-29!
+!end-bullets-30!
 
 ### Bug fixes
 
-!begin-bullets-30!
+!begin-bullets-31!
 
 -   !begin-bullet!
     Bug fix for `tidy.survreg()` when `robust` is set to `TRUE` in model
@@ -994,11 +1008,11 @@ The internals of `augment.*()` methods have largely been overhauled.
     Bug fix for `tidy.polr()` when passed `conf.int = TRUE` (#498)
     !end-bullet!
 
-!end-bullets-30!
+!end-bullets-31!
 
 ### Other changes
 
-!begin-bullets-31!
+!begin-bullets-32!
 
 -   !begin-bullet!
     Many `glance()` methods now return a `nobs` column, which contains
@@ -1050,11 +1064,11 @@ The internals of `augment.*()` methods have largely been overhauled.
 
     !end-bullet!
 
-!end-bullets-31!
+!end-bullets-32!
 
 ## For developers and contributors
 
-!begin-bullets-32!
+!begin-bullets-33!
 
 -   !begin-bullet!
     Moved core tests to the `modeltests` package.
@@ -1077,54 +1091,54 @@ The internals of `augment.*()` methods have largely been overhauled.
 
     !end-bullet!
 
-!end-bullets-32!
+!end-bullets-33!
 
 # broom 0.5.6
 
-!begin-bullets-33!
+!begin-bullets-34!
 
 -   !begin-bullet!
     Fix failing CRAN checks to due `tibble 3.0.0` release. Removed
     `xergm` dependency.
     !end-bullet!
 
-!end-bullets-33!
+!end-bullets-34!
 
 # broom 0.5.5
 
-!begin-bullets-34!
+!begin-bullets-35!
 
 -   !begin-bullet!
     Remove tidiers for robust package and drop robust dependency
     (temporarily)
     !end-bullet!
 
-!end-bullets-34!
+!end-bullets-35!
 
 # broom 0.5.4
 
-!begin-bullets-35!
+!begin-bullets-36!
 
 -   !begin-bullet!
     Fixes failing CRAN checks as the joineRML package has been removed
     from CRAN
     !end-bullet!
 
-!end-bullets-35!
+!end-bullets-36!
 
 # broom 0.5.3
 
-!begin-bullets-36!
+!begin-bullets-37!
 
 -   !begin-bullet!
     Fixes failing CRAN checks due to new matrix classing in R 4.0.0
     !end-bullet!
 
-!end-bullets-36!
+!end-bullets-37!
 
 # broom 0.5.2
 
-!begin-bullets-37!
+!begin-bullets-38!
 
 -   !begin-bullet!
     Fixes failing CRAN checks
@@ -1137,18 +1151,18 @@ The internals of `augment.*()` methods have largely been overhauled.
 
     !end-bullet!
 
-!end-bullets-37!
+!end-bullets-38!
 
 # broom 0.5.1
 
-!begin-bullets-38!
+!begin-bullets-39!
 
 -   !begin-bullet!
     `tidy()`, `glance()` and `augment()` are now re-exported from the
     [generics](https://github.com/r-lib/generics) package.
     !end-bullet!
 
-!end-bullets-38!
+!end-bullets-39!
 
 # broom 0.5.0
 
@@ -1200,7 +1214,7 @@ pending support for matrix-columns in tibbles.
 
 **Developers** are likely to experience issues:
 
-!begin-bullets-39!
+!begin-bullets-40!
 
 -   !begin-bullet!
     subsetting tibbles with `[`, which returns a tibble rather than a
@@ -1226,13 +1240,13 @@ pending support for matrix-columns in tibbles.
 
     !end-bullet!
 
-!end-bullets-39!
+!end-bullets-40!
 
 ## New vignettes
 
 This version of `broom` includes several new vignettes:
 
-!begin-bullets-40!
+!begin-bullets-41!
 
 -   !begin-bullet!
     `vignette("available-methods", package = "broom")` contains a table
@@ -1251,11 +1265,11 @@ This version of `broom` includes several new vignettes:
 
     !end-bullet!
 
-!end-bullets-40!
+!end-bullets-41!
 
 Several old vignettes have also been updated:
 
-!begin-bullets-41!
+!begin-bullets-42!
 
 -   !begin-bullet!
     `vignette("bootstrapping", package = "broom")` now relies on the
@@ -1265,11 +1279,11 @@ Several old vignettes have also been updated:
     based workflow.
     !end-bullet!
 
-!end-bullets-41!
+!end-bullets-42!
 
 ## Deprecations
 
-!begin-bullets-42!
+!begin-bullets-43!
 
 -   !begin-bullet!
     Matrix and vector tidiers have been deprecated in favor of
@@ -1290,11 +1304,11 @@ Several old vignettes have also been updated:
 
     !end-bullet!
 
-!end-bullets-42!
+!end-bullets-43!
 
 ## Other changes
 
-!begin-bullets-43!
+!begin-bullets-44!
 
 -   !begin-bullet!
     The `alpha` argument has been removed from `quantreg` tidy methods
@@ -1463,7 +1477,7 @@ Several old vignettes have also been updated:
 
     !end-bullet!
 
-!end-bullets-43!
+!end-bullets-44!
 
 ## Contributors
 
@@ -1515,7 +1529,7 @@ all again!
 
 # broom 0.4.4
 
-!begin-bullets-44!
+!begin-bullets-45!
 
 -   !begin-bullet!
     Fixed gam tidiers to work with "Gam" objects, due to an update in
@@ -1527,11 +1541,11 @@ all again!
 
     !end-bullet!
 
-!end-bullets-44!
+!end-bullets-45!
 
 # broom 0.4.3
 
-!begin-bullets-45!
+!begin-bullets-46!
 
 -   !begin-bullet!
     Changed the deprecated `dplyr::failwith` to `purrr::possibly`
@@ -1591,11 +1605,11 @@ all again!
 
     !end-bullet!
 
-!end-bullets-45!
+!end-bullets-46!
 
 # broom 0.4.2
 
-!begin-bullets-46!
+!begin-bullets-47!
 
 -   !begin-bullet!
     Added tidiers for `lsmobj` and `ref.grid` objects from the lsmeans
@@ -1634,11 +1648,11 @@ all again!
 
     !end-bullet!
 
-!end-bullets-46!
+!end-bullets-47!
 
 # broom 0.4.1
 
-!begin-bullets-47!
+!begin-bullets-48!
 
 -   !begin-bullet!
     Added AppVeyor, codecov.io, and code of conduct
@@ -1704,11 +1718,11 @@ all again!
 
     !end-bullet!
 
-!end-bullets-47!
+!end-bullets-48!
 
 # broom 0.4.0
 
-!begin-bullets-48!
+!begin-bullets-49!
 
 -   !begin-bullet!
     Added tidiers for geeglm, nlrq, roc, boot, bgterm, kappa, binWidth,
@@ -1745,11 +1759,11 @@ all again!
 
     !end-bullet!
 
-!end-bullets-48!
+!end-bullets-49!
 
 # broom 0.3.7
 
-!begin-bullets-49!
+!begin-bullets-50!
 
 -   !begin-bullet!
     Added tidiers for "plm" (panel linear model) objects from the plm
@@ -1793,11 +1807,11 @@ all again!
 
     !end-bullet!
 
-!end-bullets-49!
+!end-bullets-50!
 
 # broom 0.3.6
 
-!begin-bullets-50!
+!begin-bullets-51!
 
 -   !begin-bullet!
     Fixed bug in `tidy.pairwise.htest`, which now can handle cases where
@@ -1827,11 +1841,11 @@ all again!
 
     !end-bullet!
 
-!end-bullets-50!
+!end-bullets-51!
 
 # broom 0.3.5
 
-!begin-bullets-51!
+!begin-bullets-52!
 
 -   !begin-bullet!
     Fixed small bug in `felm` where the `.fitted` and `.resid` columns
@@ -1850,11 +1864,11 @@ all again!
 
     !end-bullet!
 
-!end-bullets-51!
+!end-bullets-52!
 
 # broom 0.3.4
 
-!begin-bullets-52!
+!begin-bullets-53!
 
 -   !begin-bullet!
     The behavior of `augment`, particularly with regard to missing data
@@ -1862,7 +1876,7 @@ all again!
     `augment_columns` function been made consistent across the following
     models:
 
-    !begin-bullets-53!
+    !begin-bullets-54!
     -   !begin-bullet!
         `lm`
 
@@ -1888,15 +1902,15 @@ all again!
 
         !end-bullet!
 
-    !end-bullets-53!
+    !end-bullets-54!
     !end-bullet!
 
-!end-bullets-52!
+!end-bullets-53!
 
 Unit tests in `tests/testthat/test-augment.R` were added to ensure
 consistency across these models.
 
-!begin-bullets-54!
+!begin-bullets-55!
 
 -   !begin-bullet!
     `tidy`, `augment` and `glance` methods were added for `rowwise_df`
@@ -1904,14 +1918,14 @@ consistency across these models.
     simple patterns such as:
     !end-bullet!
 
-!end-bullets-54!
+!end-bullets-55!
 
 regressions \<- mtcars %\>% group_by(cyl) %\>% do(mod = lm(mpg \~ wt,
 .)) regressions %\>% tidy(mod) regressions %\>% augment(mod)
 
 See `?rowwise_df_tidiers` for more.
 
-!begin-bullets-55!
+!begin-bullets-56!
 
 -   !begin-bullet!
     Added `tidy` and `glance` methods for `Arima` objects, and `tidy`
@@ -1928,16 +1942,16 @@ See `?rowwise_df_tidiers` for more.
 
     !end-bullet!
 
-!end-bullets-55!
+!end-bullets-56!
 
 # broom 0.3
 
-!begin-bullets-56!
+!begin-bullets-57!
 
 -   !begin-bullet!
     Tidiers have been added for S3 objects from the following packages:
 
-    !begin-bullets-57!
+    !begin-bullets-58!
     -   !begin-bullet!
         `lme4`
 
@@ -1963,7 +1977,7 @@ See `?rowwise_df_tidiers` for more.
 
         !end-bullet!
 
-    !end-bullets-57!
+    !end-bullets-58!
     !end-bullet!
 -   !begin-bullet!
     `tidy` and `glance` methods for data.frames have also been added,
@@ -1983,11 +1997,11 @@ See `?rowwise_df_tidiers` for more.
 
     !end-bullet!
 
-!end-bullets-56!
+!end-bullets-57!
 
 # broom 0.2
 
-!begin-bullets-58!
+!begin-bullets-59!
 
 -   !begin-bullet!
     Added "augment" S3 generic and various implementations. "augment"
@@ -2021,4 +2035,4 @@ See `?rowwise_df_tidiers` for more.
 
     !end-bullet!
 
-!end-bullets-58!
+!end-bullets-59!
