@@ -5,9 +5,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
-    `.by`/`by` is an experimental alternative to `group_by()` that
-    supports per-operation grouping for `mutate()`, `summarise()`,
-    `filter()`, and the `slice()` family (#6528).
+    [`.by`/`by`](https://dplyr.tidyverse.org/dev/reference/dplyr_by.html)
+    is an experimental alternative to `group_by()` that supports
+    per-operation grouping for `mutate()`, `summarise()`, `filter()`,
+    and the `slice()` family (#6528).
 
     Rather than:
 
@@ -27,20 +28,19 @@
           )
 
     !end-codeblock!
-    The most useful reason to do this is because grouping with `.by` is
-    *temporary* and only affects a single operation. An ungrouped data
-    frame went into the `summarise()` call, so an ungrouped data frame
-    will come out; with `.by`, you never need to remember to `ungroup()`
-    afterwards.
+    The most useful reason to do this is because `.by` only affects a
+    single operation. In the example above, an ungrouped data frame went
+    into the `summarise()` call, so an ungrouped data frame will come
+    out; with `.by`, you never need to remember to `ungroup()`
+    afterwards and you never need to use the `.groups` argument.
 
-    Additionally, using `summarise()` or `slice()` with `.by` will never
-    sort the results by the group key, unlike with `group_by()`.
-    Instead, the results are returned using the existing ordering of the
-    groups from the original data. We feel this is more predictable,
-    better maintains any ordering you might have already applied with a
+    Additionally, using `summarise()` with `.by` will never sort the
+    results by the group key, unlike with `group_by()`. Instead, the
+    results are returned using the existing ordering of the groups from
+    the original data. We feel this is more predictable, better
+    maintains any ordering you might have already applied with a
     previous call to `arrange()`, and provides a way to maintain the
     current ordering without having to resort to factors.
-    `with_groups()` is superseded in favor of `.by` (#6582).
 
     This feature was inspired by
     [data.table](https://CRAN.R-project.org/package=data.table), where
@@ -50,6 +50,8 @@
         starwars[, .(mean_height = mean(height)), by = .(species, homeworld)]
 
     !end-codeblock!
+    `with_groups()` is superseded in favor of `.by` (#6582).
+
     !end-bullet!
 -   !begin-bullet!
     `reframe()` is a new experimental verb that creates a new data frame
@@ -155,10 +157,10 @@
         row in `x` matches multiple rows in `y`. For equality joins and
         rolling joins, where this is usually surprising, this defaults
         to signalling a `"warning"`, but still returns all of the
-        matches. For inequality joins and cross joins, where multiple
-        matches are usually expected, this defaults to returning `"all"`
-        of the matches. You can also return only the `"first"` or
-        `"last"` match, `"any"` of the matches, or you can `"error"`.
+        matches. For inequality joins, where multiple matches are
+        usually expected, this defaults to returning `"all"` of the
+        matches. You can also return only the `"first"` or `"last"`
+        match, `"any"` of the matches, or you can `"error"`.
 
         !end-bullet!
     -   !begin-bullet!
@@ -210,7 +212,7 @@
 
     !end-bullet!
 -   !begin-bullet!
-    `symdiff()` function computes the symmetric difference (#4811).
+    `symdiff()` computes the symmetric difference (#4811).
 
     !end-bullet!
 
@@ -241,8 +243,8 @@
     !end-bullet!
 -   !begin-bullet!
     `bench_tbls()`, `compare_tbls()`, `compare_tbls2()`, `eval_tbls()`,
-    `eval_tbl()`, `location()` and `changes()`, deprecated in 1.0.0, are
-    now defunct (#6387).
+    `eval_tbls2()`, `location()` and `changes()`, deprecated in 1.0.0,
+    are now defunct (#6387).
 
     !end-bullet!
 -   !begin-bullet!
@@ -252,7 +254,7 @@
     !end-bullet!
 -   !begin-bullet!
     `select_vars()`, `rename_vars()`, `select_var()` and
-    `current_var()`, deprecated in 0.8.4, are now defunct (#6387).
+    `current_vars()`, deprecated in 0.8.4, are now defunct (#6387).
 
     !end-bullet!
 
@@ -357,6 +359,7 @@
     !end-bullet!
 -   !begin-bullet!
     `transmute()` is superseded in favour of `mutate(.keep = "none")`
+    (#6414).
 
     !end-bullet!
 
@@ -445,14 +448,14 @@ vctrs package, bringing greater consistency and improved performance.
 
     !begin-bullets-12!
     -   !begin-bullet!
-        Discards `NULL` inputs are up front.
+        Discards `NULL` inputs up front.
 
         !end-bullet!
     -   !begin-bullet!
         No longer iterates over the columns of data frame input.
         Instead, a row is now only coalesced if it is entirely missing,
-        which is consistent with `vctrs::vec_equal_na()` and greatly
-        simplifies the implementation.
+        which is consistent with `vctrs::vec_detect_missing()` and
+        greatly simplifies the implementation.
 
         !end-bullet!
     -   !begin-bullet!
@@ -3893,8 +3896,8 @@ loaded, you'll get a message reminding you to load dtplyr.
 ### Tibble
 
 Functions related to the creation and coercion of `tbl_df`s, now live in
-their own package: [tibble](https://www.rstudio.com/blog/tibble-1-0-0/).
-See `vignette("tibble")` for more details.
+their own package: [tibble](https://posit.co/blog/tibble-1-0-0/). See
+`vignette("tibble")` for more details.
 
 !begin-bullets-93!
 
