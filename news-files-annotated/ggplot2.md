@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `geom_text()` drops observations where `angle = NA` instead of
+    throwing an error (@teunbrand, #2757).
+    !end-bullet!
+-   !begin-bullet!
     Using two ordered factors as facetting variables in
     `facet_grid(..., as.table = FALSE)` now throws a warning instead of
     an error (@teunbrand, #5109).
