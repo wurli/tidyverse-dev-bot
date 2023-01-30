@@ -1,5 +1,7 @@
 # dplyr (development version)
 
+# dplyr 1.1.0
+
 ## New features
 
 !begin-bullets-1!

@@ -1,5 +1,7 @@
 # forcats (development version)
 
+# forcats 1.0.0
+
 ## New features
 
 * New `fct_na_value_to_level()` and `fct_na_level_to_value()` to convert 

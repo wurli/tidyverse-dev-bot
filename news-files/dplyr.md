@@ -1,5 +1,7 @@
 # dplyr (development version)
 
+# dplyr 1.1.0
+
 ## New features
 
 * [`.by`/`by`](https://dplyr.tidyverse.org/dev/reference/dplyr_by.html) is an
