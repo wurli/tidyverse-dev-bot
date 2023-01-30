@@ -1,5 +1,11 @@
 remove_old_bullets <- function(x, file = "last_refresh_data.csv", overwrite = TRUE) {
   
+  if (nrow(x) == 0) {
+    return(tibble())
+  }
+  
+  cli_h2("Discarding text which has already been posted")
+  
   # Sometimes, for a particular bullet id, `text` will be a vector of length >
   # 1. If rows are deleted only based on the value of `text`, this can lead to a
   # small chunk of a tweet getting omitted, e.g. if a typo is corrected in the
@@ -14,12 +20,6 @@ remove_old_bullets <- function(x, file = "last_refresh_data.csv", overwrite = TR
       bullet_hash = hash(text),
       .before = text
     )
-  
-  cli_h2("Discarding text which has already been posted")
-  
-  if (nrow(x) == 0) {
-    return(tibble())
-  }
   
   by <- c("package", "bullet_id", "bullet_hash", "text")
   
