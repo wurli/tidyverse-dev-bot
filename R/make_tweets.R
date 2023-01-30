@@ -26,7 +26,8 @@ make_tweets <- function(x, simplify = TRUE) {
   
   out |> 
     select(package, tweet_id, tweet) |> 
-    unnest(tweet)
+    unnest(tweet) |> 
+    mutate(tweet_order = row_number(), .before = tweet)
   
 }
 

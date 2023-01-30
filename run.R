@@ -10,7 +10,7 @@ cli_h1("Tweeting news updates")
 # Run *all* the stuff
 news_urls() |> 
   pull_news_files(include_old = FALSE, overwrite = TRUE) |> 
-  annotate_news_files() |> 
+  annotate_news_files(dir = "news-files-annotated") |> 
   get_news_data() |> 
   limit_update_sizes(n = 10) |> 
   remove_old_bullets(overwrite = TRUE) |> 

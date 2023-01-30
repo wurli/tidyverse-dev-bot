@@ -1,22 +1,30 @@
-get_news_data <- function(files = list.files("news-files-annotated", full.names = TRUE)) {
+get_news_data <- function(files = list.files("news-files-annotated", full.names = TRUE),
+                          text = NULL) {
   
   # For notifications
   force(files)
   
   cli_h2("Formatting news as a tidy dataframe")
   
-  if (length(files) == 0) {
-    return(tibble())
+  text <- if (!is.null(text)) {
+    text
+  } else {
+    
+    if (length(files) == 0) {
+      return(tibble())
+    }
+    
+    if (is.null(names(files))) {
+      files <- files |> 
+        set_names(basename) |> 
+        set_names(str_remove, "\\.md$") 
+    }
+    
+    map(files, read_lines)
+    
   }
   
-  if (is.null(names(files))) {
-    files <- files |> 
-      set_names(basename) |> 
-      set_names(str_remove, "\\.md$") 
-  }
-  
-  bullets_data <- files |> 
-    map(read_lines) |> 
+  text |> 
     imap(news_to_df) |> 
     bind_rows(.id = "package")
   
