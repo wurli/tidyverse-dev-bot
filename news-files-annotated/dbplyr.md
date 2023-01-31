@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Moved argument `auto_index` after `...` in `*_join()` (@mgirlich,
+    #1115).
+
+    !end-bullet!
+-   !begin-bullet!
     Removed dependency on assertthat (@mgirlich, #1112).
 
     !end-bullet!
