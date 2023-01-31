@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Removed dependency on assertthat (@mgirlich, #1112).
+
+    !end-bullet!
+-   !begin-bullet!
     Catch unsupported argument `pivot_wider(id_expand = TRUE)` and
     `pivot_longer(cols_vary)` (@mgirlich, #1109).
 

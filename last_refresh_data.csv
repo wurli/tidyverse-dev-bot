@@ -6120,3 +6120,22 @@ tidyverse,28,6469f6df097d83fd7a635dac4b9df398,"• Removed DBI (since very diffe
 tidyverse,28,6469f6df097d83fd7a635dac4b9df398,• Added feather (#15)
 tidyverse,31,a7182bd4e74d47184e95394a12c64b27,"`tidyverse_deps()` and `tidyverse_packages()` are now exported so you can more easily see the make up of the tidyverse, and what package versions you have (#18, #23)"
 tidyverse,32,ea1d0fe525d0063080066ae30b1e5db1,`suppressPackageStartupMessages()` now suppresses all messages during loading (#19). `suppressPackageStartupMessages()` is called automatically for all tidyverse packages (#27).
+dbplyr,1,9ba90983899440eefc9d282294482b84,"Removed dependency on assertthat (@​mgirlich, #1112)."
+dbplyr,2,2f55564766edc9d04d742c1ef90d978a,"Catch unsupported argument `pivot_wider(id_expand = TRUE)` and `pivot_longer(cols_vary)` (@​mgirlich, #1109)."
+dbplyr,3,0c7762ee43811ee9012ef8aac13c0815,"Fixed an issue when using a window function after a `summarise()` and `select()` (@​mgirlich, #1104)."
+dbplyr,4,6f5b38acb60f74d23acb11b14f096f5f,"Fixed an issue when there where at least 3 joins and renamed variables (@​mgirlich, #1101)."
+dbplyr,5,f8727655923321e58ecf929362af640f,"`across()` now uses the original value when a column is overriden to match the behaviour of dplyr. For example `mutate(df, across(c(x, y), ~ .x / x))` now produces"
+dbplyr,5,f8727655923321e58ecf929362af640f,"```
+SELECT `x` / `x` AS `x`, `y` / `x` AS `y`
+FROM `df`
+```"
+dbplyr,5,f8727655923321e58ecf929362af640f,instead of
+dbplyr,5,f8727655923321e58ecf929362af640f,"```
+SELECT `x`, `y` / `x` AS `y`
+FROM (
+  SELECT `x` / `x` AS `x`, `y`
+  FROM `df`
+) 
+```"
+dbplyr,5,f8727655923321e58ecf929362af640f,"(@​mgirlich, #1015)."
+dbplyr,6,87c1e220f9a433c76f1ff196d2f85817,"Compatibility with purrr 1.0.0 (@​mgirlich, #1085)."
