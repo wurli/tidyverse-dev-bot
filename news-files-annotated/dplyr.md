@@ -490,6 +490,11 @@ vctrs package, bringing greater consistency and improved performance.
         `nth(x, n = 2.5)` is now an error.
 
         !end-bullet!
+    -   !begin-bullet!
+        No longer support indexing into scalar objects, like `<lm>` or
+        scalar S4 objects (#6670).
+
+        !end-bullet!
 
     !end-bullets-13!
     Additionally, they have all gained an `na_rm` argument since they
