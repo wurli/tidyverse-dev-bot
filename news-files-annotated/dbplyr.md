@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `mutate()` after `distinct()` now again produces a subquery to
+    produce the correct result (@mgirlich, #1119).
+
+    !end-bullet!
+-   !begin-bullet!
     Moved argument `auto_index` after `...` in `*_join()` (@mgirlich,
     #1115).
 
