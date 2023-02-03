@@ -3,6 +3,13 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    The rank functions (`row_number()`, `min_rank()`, `rank()`,
+    `dense_rank()`, `percent_rank()`, and `cume_dist()`) now work again
+    for variables wrapped in `desc()`, e.g. `row_number(desc(x))`
+    (@mgirlich, #1118).
+
+    !end-bullet!
+-   !begin-bullet!
     `mutate()` after `distinct()` now again produces a subquery to
     produce the correct result (@mgirlich, #1119).
 
