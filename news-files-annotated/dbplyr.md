@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed an issue when using `filter()` on a summarised variable
+    (@mgirlich, #1128).
+
+    !end-bullet!
+-   !begin-bullet!
     `across()` and `pick()` can be used (again) in `distinct()`
     (@mgirlich, #1125).
 

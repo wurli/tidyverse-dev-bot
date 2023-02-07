@@ -6240,3 +6240,26 @@ dplyr,1,5bc37d9db73bcf042ad0414739b19198,"```
 starwars[, .(mean_height = mean(height)), by = .(species, homeworld)]
 ```"
 dplyr,1,5bc37d9db73bcf042ad0414739b19198,`with_groups()` is superseded in favor of `.by` (#6582).
+dbplyr,1,39d09186b4134d27a004f3e54149e207,"Fixed an issue when using `filter()` on a summarised variable (@​mgirlich, #1128)."
+dbplyr,2,0b3e1c0443e7f0a6a9fe30d534cc1dc8,"`across()` and `pick()` can be used (again) in `distinct()` (@​mgirlich, #1125)."
+dbplyr,3,2db7ba9bee40698a9dec629feeffcf29,"The rank functions (`row_number()`, `min_rank()`, `rank()`, `dense_rank()`, `percent_rank()`, and `cume_dist()`) now work again for variables wrapped in `desc()`, e.g. `row_number(desc(x))` (@​mgirlich, #1118)."
+dbplyr,4,b67e7e9c14e35da0e97977862db4d716,"`mutate()` after `distinct()` now again produces a subquery to produce the correct result (@​mgirlich, #1119)."
+dbplyr,5,d98d06668cd5a9df09014fdf0bce5307,"Moved argument `auto_index` after `...` in `*_join()` (@​mgirlich, #1115)."
+dbplyr,6,9ba90983899440eefc9d282294482b84,"Removed dependency on assertthat (@​mgirlich, #1112)."
+dbplyr,7,2f55564766edc9d04d742c1ef90d978a,"Catch unsupported argument `pivot_wider(id_expand = TRUE)` and `pivot_longer(cols_vary)` (@​mgirlich, #1109)."
+dbplyr,8,0c7762ee43811ee9012ef8aac13c0815,"Fixed an issue when using a window function after a `summarise()` and `select()` (@​mgirlich, #1104)."
+dbplyr,9,6f5b38acb60f74d23acb11b14f096f5f,"Fixed an issue when there where at least 3 joins and renamed variables (@​mgirlich, #1101)."
+dbplyr,10,f8727655923321e58ecf929362af640f,"`across()` now uses the original value when a column is overriden to match the behaviour of dplyr. For example `mutate(df, across(c(x, y), ~ .x / x))` now produces"
+dbplyr,10,f8727655923321e58ecf929362af640f,"```
+SELECT `x` / `x` AS `x`, `y` / `x` AS `y`
+FROM `df`
+```"
+dbplyr,10,f8727655923321e58ecf929362af640f,instead of
+dbplyr,10,f8727655923321e58ecf929362af640f,"```
+SELECT `x`, `y` / `x` AS `y`
+FROM (
+  SELECT `x` / `x` AS `x`, `y`
+  FROM `df`
+) 
+```"
+dbplyr,10,f8727655923321e58ecf929362af640f,"(@​mgirlich, #1015)."
