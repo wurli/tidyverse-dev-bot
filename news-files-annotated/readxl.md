@@ -1,5 +1,23 @@
 # readxl (development version)
 
+Embeds a development version of libxls, which is based on the most
+recent released version, v1.6.2. The libxls project is hosted at
+<https://github.com/libxls/libxls>. The reason for embedding a
+development version is to ship a version of libxls that incorporates the
+fix for this CVE (#679):
+
+!begin-bullets-1!
+
+-   !begin-bullet!
+    [CVE-2021-27836](https://nvd.nist.gov/vuln/detail/CVE-2021-27836)
+    !end-bullet!
+
+!end-bullets-1!
+
+Other small readxl-specific patches have been made to the embedded
+libxls code to comply with CRAN requests, such as avoiding the use of
+`sprintf()`.
+
 # readxl 1.4.1
 
 Help files below `man/` have been re-generated, so that they give rise
@@ -12,7 +30,7 @@ This release is mostly about substantial internal changes that should
 not be noticeable to most users (but that set the stage for future
 work):
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     Updating the embedded version of libxls (more below)
@@ -25,11 +43,11 @@ work):
     branches
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 However, there are a few small features / bug fixes:
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     "Date or Not Date": The classification of number formats as being
@@ -54,11 +72,11 @@ However, there are a few small features / bug fixes:
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 ## Dependency and licensing changes
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     readxl is now licensed as MIT (#632).
@@ -80,7 +98,7 @@ However, there are a few small features / bug fixes:
     and you can learn more about the cumulative changes in its release
     notes:
 
-    !begin-bullets-4!
+    !begin-bullets-5!
     -   !begin-bullet!
         [v1.6.2](https://github.com/libxls/libxls/releases/tag/v1.6.2)
         !end-bullet!
@@ -100,7 +118,7 @@ However, there are a few small features / bug fixes:
         [v1.5.1](https://github.com/libxls/libxls/releases/tag/v1.5.1)
         !end-bullet!
 
-    !end-bullets-4!
+    !end-bullets-5!
     !end-bullet!
 -   !begin-bullet!
     readxl has switched from Rcpp to cpp11 and now requires C++11 (#659,
@@ -114,7 +132,7 @@ However, there are a few small features / bug fixes:
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 # readxl 1.3.1
 
@@ -133,7 +151,7 @@ development version in the interim. The libxls project is now officially
 hosted at <https://github.com/libxls/libxls>. In particular, libxls
 v1.5.0 addresses these two CVEs:
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     [CVE-2018-20452](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-20452)
@@ -142,7 +160,7 @@ v1.5.0 addresses these two CVEs:
     [CVE-2018-20450](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-20450)
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # readxl 1.2.0
 
@@ -154,7 +172,7 @@ package](https://www.tidyverse.org/blog/2018/11/tibble-2.0.0-pre-announce/).
 The readxl default is `.name_repair = "unique"`, keeping with the readxl
 convention to ensure column names are neither missing nor duplicated.
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     [Column
@@ -170,7 +188,7 @@ convention to ensure column names are neither missing nor duplicated.
     defaulting to `.name_repair = "unique"`. Otherwise, the legacy
     function `tibble::repair_names(prefix = "X", sep = "__")` is used,
     replicating the behaviour of readxl v1.1.0.
-    !begin-bullets-7!
+    !begin-bullets-8!
     -   !begin-bullet!
         Consider a spreadsheet with three columns: one unnamed and two
         named `x`.
@@ -185,7 +203,7 @@ convention to ensure column names are neither missing nor duplicated.
         Legacy column names: `X__1`, `x`, `x__1`
         !end-bullet!
 
-    !end-bullets-7!
+    !end-bullets-8!
     !end-bullet!
 -   !begin-bullet!
     Once per session, readxl emits a message stating that it works best
@@ -193,11 +211,11 @@ convention to ensure column names are neither missing nor duplicated.
     hard minimum version requirement in a future version of readxl.
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 ## Other changes
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     `read_excel()` and friends gain a `progress` argument that controls
@@ -227,7 +245,7 @@ convention to ensure column names are neither missing nor duplicated.
 
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 ## Dependency changes
 
@@ -239,7 +257,7 @@ SHA associated to the embedded libxls in a `Note`.
 
 # readxl 1.1.0
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     `read_excel()` and `excel_sheets()` associate a larger set of file
@@ -247,7 +265,7 @@ SHA associated to the embedded libxls in a `Note`.
     file with a nonstandard or missing extension. This is about deciding
     whether to treat a file as xls or xlsx. (#342, #411, #457)
 
-    !begin-bullets-10!
+    !begin-bullets-11!
     -   !begin-bullet!
         `excel_format()` is the newly-exported format-guessing function.
         !end-bullet!
@@ -263,13 +281,13 @@ SHA associated to the embedded libxls in a `Note`.
         handy for files that lack an extension.
         !end-bullet!
 
-    !end-bullets-10!
+    !end-bullets-11!
     !end-bullet!
 -   !begin-bullet!
     Embedded libxls has been updated to address security
     vulnerabilitities identified in late 2017 (#441, #442).
 
-    !begin-bullets-11!
+    !begin-bullets-12!
     -   !begin-bullet!
         [CVE-2017-12110](https://talosintelligence.com/vulnerability_reports/TALOS-2017-0462),
         [CVE-2017-2896](https://talosintelligence.com/vulnerability_reports/TALOS-2017-0403),
@@ -289,7 +307,7 @@ SHA associated to the embedded libxls in a `Note`.
         a while: CVE-2017-12111 since 2014 and CVE-2017-2919 since 2012.
         !end-bullet!
 
-    !end-bullets-11!
+    !end-bullets-12!
     !end-bullet!
 -   !begin-bullet!
     xlsx structured as a "minimal conformant SpreadsheetML package" can
@@ -333,13 +351,13 @@ SHA associated to the embedded libxls in a `Note`.
 
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 # readxl 1.0.0
 
 ## Sheet geometry
 
-!begin-bullets-12!
+!begin-bullets-13!
 
 -   !begin-bullet!
     `range` is a new argument for reading a rectangular range, possibly
@@ -359,7 +377,7 @@ SHA associated to the embedded libxls in a `Note`.
     format other than "General". Such cells may still exist in the
     returned tibble, with value `NA`, depending on the sheet geometry.
 
-    !begin-bullets-13!
+    !begin-bullets-14!
     -   !begin-bullet!
         Eliminates a source of trailing rows (#203) and columns (#236,
         #162, #146) consisting entirely of `NA`.
@@ -382,7 +400,7 @@ SHA associated to the embedded libxls in a `Note`.
         explicit row skipping. (#224, #194, #178, #156, #101)
         !end-bullet!
 
-    !end-bullets-13!
+    !end-bullets-14!
     !end-bullet!
 -   !begin-bullet!
     User-supplied `col_names` are processed relative to user-supplied
@@ -392,11 +410,11 @@ SHA associated to the embedded libxls in a `Note`.
 
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
 
 ## Column types and coercion
 
-!begin-bullets-14!
+!begin-bullets-15!
 
 -   !begin-bullet!
     `"list"` is a new accepted value for `col_types`. Loads data as a
@@ -447,7 +465,7 @@ SHA associated to the embedded libxls in a `Note`.
 -   !begin-bullet!
     Coercions and cell data:
 
-    !begin-bullets-15!
+    !begin-bullets-16!
     -   !begin-bullet!
         Numeric data that appears in a date column is coerced to a date.
         Throws a warning. (#277, #266)
@@ -480,17 +498,17 @@ SHA associated to the embedded libxls in a `Note`.
         as such. (#134, @zeehio)
         !end-bullet!
 
-    !end-bullets-15!
+    !end-bullets-16!
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-15!
 
 ## Compatibility
 
 Many 3rd party tools write xls and xlsx that comply with the spec, but
 that are quite different from files produced by Excel.
 
-!begin-bullets-16!
+!begin-bullets-17!
 
 -   !begin-bullet!
     Namespace prefixes are now stripped from element names and
@@ -524,11 +542,11 @@ that are quite different from files produced by Excel.
 
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-17!
 
 ## Other
 
-!begin-bullets-17!
+!begin-bullets-18!
 
 -   !begin-bullet!
     `read_xls()` and `read_xlsx()` are now exposed, such that files
@@ -568,15 +586,15 @@ that are quite different from files produced by Excel.
 
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-18!
 
 # readxl 0.1.1
 
-!begin-bullets-18!
+!begin-bullets-19!
 
 -   !begin-bullet!
     Add support for correctly reading strings in .xlsx files containing
     escaped unicode characters (e.g. `_x005F_`). (#51, @jmarshallnz)
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-19!
