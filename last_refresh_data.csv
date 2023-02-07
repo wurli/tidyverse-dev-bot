@@ -6273,3 +6273,26 @@ dbplyr,7,9ba90983899440eefc9d282294482b84,"Removed dependency on assertthat (@�
 dbplyr,8,2f55564766edc9d04d742c1ef90d978a,"Catch unsupported argument `pivot_wider(id_expand = TRUE)` and `pivot_longer(cols_vary)` (@​mgirlich, #1109)."
 dbplyr,9,0c7762ee43811ee9012ef8aac13c0815,"Fixed an issue when using a window function after a `summarise()` and `select()` (@​mgirlich, #1104)."
 dbplyr,10,6f5b38acb60f74d23acb11b14f096f5f,"Fixed an issue when there where at least 3 joins and renamed variables (@​mgirlich, #1101)."
+dplyr,1,8e30499e941d9066a7c82da4465094d3,`rename_with()` now includes an example of using `paste0(recycle0 = TRUE)` to correctly handle empty selections (#6688).
+dplyr,2,5bc37d9db73bcf042ad0414739b19198,"[`.by`/`by`](https://dplyr.tidyverse.org/reference/dplyr_by.html) is an experimental alternative to `group_by()` that supports per-operation grouping for `mutate()`, `summarise()`, `filter()`, and the `slice()` family (#6528). Rather than:"
+dplyr,2,5bc37d9db73bcf042ad0414739b19198,"```
+starwars %>%
+  group_by(species, homeworld) %>%
+  summarise(mean_height = mean(height))
+```"
+dplyr,2,5bc37d9db73bcf042ad0414739b19198,You can now write:
+dplyr,2,5bc37d9db73bcf042ad0414739b19198,"```
+starwars %>%
+  summarise(
+    mean_height = mean(height),
+    .by = c(species, homeworld)
+  )
+```"
+dplyr,2,5bc37d9db73bcf042ad0414739b19198,"The most useful reason to do this is because `.by` only affects a single operation. In the example above, an ungrouped data frame went into the `summarise()` call, so an ungrouped data frame will come out; with `.by`, you never need to remember to `ungroup()` afterwards and you never need to use the `.groups` argument. Additionally, using `summarise()` with `.by` will never sort the results by the group key, unlike with `group_by()`. Instead, the results are returned using the existing ordering of the groups from the original data. We feel this is more predictable, better maintains any ordering you might have already applied with a previous call to `arrange()`, and provides a way to maintain the current ordering without having to resort to factors. This feature was inspired by [data.table](https://CRAN.R-project.org/package=data.table), where the equivalent syntax looks like:"
+dplyr,2,5bc37d9db73bcf042ad0414739b19198,"```
+starwars[, .(mean_height = mean(height)), by = .(species, homeworld)]
+```"
+dplyr,2,5bc37d9db73bcf042ad0414739b19198,`with_groups()` is superseded in favor of `.by` (#6582).
+dplyr,3,fa3babb7116e14e0793f737bb02c444c,"`reframe()` is a new experimental verb that creates a new data frame by applying functions to columns of an existing data frame. It is very similar to `summarise()`, with two big differences:"
+dplyr,3,fa3babb7116e14e0793f737bb02c444c,"• `reframe()` can return an arbitrary number of rows per group, while `summarise()` reduces each group down to a single row."
+dplyr,3,fa3babb7116e14e0793f737bb02c444c,"• `reframe()` always returns an ungrouped data frame, while `summarise()` might return a grouped or rowwise data frame, depending on the scenario."
