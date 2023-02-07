@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `quantile()` and `median()` now error for SQL Server when used in
+    `summarise()` and for PostgreSQL when used in `mutate()` as they
+    can't be properly translated (@mgirlich, #1110).
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed an issue when using `filter()` on a summarised variable
     (@mgirlich, #1128).
 

@@ -6263,3 +6263,13 @@ FROM (
 ) 
 ```"
 dbplyr,10,f8727655923321e58ecf929362af640f,"(@​mgirlich, #1015)."
+dbplyr,1,2251dd7be1714567c712ddc9fe4e91b7,"`quantile()` and `median()` now error for SQL Server when used in `summarise()` and for PostgreSQL when used in `mutate()` as they can't be properly translated (@​mgirlich, #1110)."
+dbplyr,2,39d09186b4134d27a004f3e54149e207,"Fixed an issue when using `filter()` on a summarised variable (@​mgirlich, #1128)."
+dbplyr,3,0b3e1c0443e7f0a6a9fe30d534cc1dc8,"`across()` and `pick()` can be used (again) in `distinct()` (@​mgirlich, #1125)."
+dbplyr,4,2db7ba9bee40698a9dec629feeffcf29,"The rank functions (`row_number()`, `min_rank()`, `rank()`, `dense_rank()`, `percent_rank()`, and `cume_dist()`) now work again for variables wrapped in `desc()`, e.g. `row_number(desc(x))` (@​mgirlich, #1118)."
+dbplyr,5,b67e7e9c14e35da0e97977862db4d716,"`mutate()` after `distinct()` now again produces a subquery to produce the correct result (@​mgirlich, #1119)."
+dbplyr,6,d98d06668cd5a9df09014fdf0bce5307,"Moved argument `auto_index` after `...` in `*_join()` (@​mgirlich, #1115)."
+dbplyr,7,9ba90983899440eefc9d282294482b84,"Removed dependency on assertthat (@​mgirlich, #1112)."
+dbplyr,8,2f55564766edc9d04d742c1ef90d978a,"Catch unsupported argument `pivot_wider(id_expand = TRUE)` and `pivot_longer(cols_vary)` (@​mgirlich, #1109)."
+dbplyr,9,0c7762ee43811ee9012ef8aac13c0815,"Fixed an issue when using a window function after a `summarise()` and `select()` (@​mgirlich, #1104)."
+dbplyr,10,6f5b38acb60f74d23acb11b14f096f5f,"Fixed an issue when there where at least 3 joins and renamed variables (@​mgirlich, #1101)."
