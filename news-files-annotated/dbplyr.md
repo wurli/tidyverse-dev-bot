@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    The `rows_*()` function work again for tables in a schema in
+    PostgreSQL (@mgirlich, #1133).
+
+    !end-bullet!
+-   !begin-bullet!
     `mutate()` + `filter()` now again produces a new query if the
     `mutate()` uses a window function or SQL (@mgirlich, #1135).
 
