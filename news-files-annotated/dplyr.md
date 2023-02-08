@@ -3,9 +3,21 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    The developer documentation in `?dplyr_extending` has been refreshed
+    and brought up to date with all changes made in 1.1.0 (#6695).
+
+    !end-bullet!
+-   !begin-bullet!
+    R \>=3.5.0 is now explicitly required. This is in line with the
+    tidyverse policy of supporting the [5 most recent versions of
+    R](https://www.tidyverse.org/blog/2019/04/r-version-support/).
+
+    !end-bullet!
+-   !begin-bullet!
     `rename_with()` now includes an example of using
     `paste0(recycle0 = TRUE)` to correctly handle empty selections
     (#6688).
+
     !end-bullet!
 
 !end-bullets-1!
