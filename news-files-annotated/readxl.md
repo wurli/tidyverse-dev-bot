@@ -1,10 +1,10 @@
 # readxl (development version)
 
-Embeds a development version of libxls, which is based on the most
-recent released version, v1.6.2. The libxls project is hosted at
-<https://github.com/libxls/libxls>. The reason for embedding a
-development version is to ship a version of libxls that incorporates the
-fix for this CVE (#679):
+This release embeds a development version of libxls
+(<https://github.com/libxls/libxls>), which is based on the most recent
+released version, v1.6.2. The reason for embedding a development version
+is to ship a version of libxls that incorporates the fix for this CVE
+(#679):
 
 !begin-bullets-1!
 
@@ -17,6 +17,8 @@ fix for this CVE (#679):
 Other small readxl-specific patches have been made to the embedded
 libxls code to comply with CRAN requests, such as avoiding the use of
 `sprintf()`.
+
+readxl no longer declares the use of C++11.
 
 # readxl 1.4.1
 
