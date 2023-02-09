@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    The `datetime_scale()` scale constructor is now exported for use in
+    extension packages (@teunbrand, #4701).
+    !end-bullet!
+-   !begin-bullet!
     `geom_text()` drops observations where `angle = NA` instead of
     throwing an error (@teunbrand, #2757).
     !end-bullet!

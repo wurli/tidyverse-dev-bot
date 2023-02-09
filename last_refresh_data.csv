@@ -6385,3 +6385,13 @@ rlang,7,ab136a888c60ab4a896ffe213593869d,Fixed an issue that caused a failure ab
 rlang,8,f6369c1c276a8ca4f16297784d043d05,Fixed an issue that caused multiline calls in backtraces.
 rlang,9,4475efca225f7230ed47b4a232d96ede,The C API function `r_lgl_which()` now propagates the names of the input (#1471).
 rlang,10,0f0e787b1ec24cd227ea503bc55e5384,"The `pkg_version_info()` function now allows `==` for package version comparison (#1469, @​kryekuzhinieri)."
+ggplot2,1,f710ce1c08db4e9fafa42319c72df652,"The `datetime_scale()` scale constructor is now exported for use in extension packages (@​teunbrand, #4701)."
+ggplot2,2,a121b551ee9c5a4843f9ca36b48f5bcc,"`geom_text()` drops observations where `angle = NA` instead of throwing an error (@​teunbrand, #2757)."
+ggplot2,3,f63f21b8667b4a86fb8cc87a0c5deabf,"Using two ordered factors as facetting variables in `facet_grid(..., as.table = FALSE)` now throws a warning instead of an error (@​teunbrand, #5109)."
+ggplot2,4,c7d7f1973473fb5f25b41120bf6d8750,"Added `scale_linewidth_manual()` and `scale_linewidth_identity()` to support the `linewidth` aesthetic (@​teunbrand, #5050)."
+ggplot2,5,0525ab048411ba25012272e3eda042d4,"Automatic breaks in `scale_*_binned()` should no longer be out-of-bounds, and automatic limits expand to include these (@​teunbrand, #5095, #5100)."
+ggplot2,6,17b44ae76a2a4342b5e495997d970a86,"Renamed computed aesthetic in `stat_ecdf()` to `ecdf`, to prevent incorrect scale transformations (@​teunbrand, #5113 and #5112)."
+ggplot2,7,4c89f530903704f10b3badaf246c0957,"Fixed misbehaviour of `draw_key_boxplot()` and `draw_key_crossbar()` with skewed key aspect ratio (@​teunbrand, #5082)."
+ggplot2,8,16aff1333d53f9c54ab0ea1fbde2f6de,"`scale_*_binned()` handles zero-range limits more gracefully (@​teunbrand, #5066)"
+ggplot2,9,92b02b9a17deb051c4fecfec7a139383,"Binned scales are now compatible with `trans = ""date""` and `trans = ""time""` (@​teunbrand, #4217)."
+ggplot2,10,3ed939a33f474c2f8766a415a9339e69,"`ggsave()` warns when multiple `filename`s are given, and only writes to the first file (@​teunbrand, #5114)"
