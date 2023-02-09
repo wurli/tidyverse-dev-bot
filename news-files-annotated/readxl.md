@@ -1,5 +1,7 @@
 # readxl (development version)
 
+# readxl 1.4.2
+
 This release contains no user-facing changes.
 
 !begin-bullets-1!

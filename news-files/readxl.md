@@ -1,5 +1,7 @@
 # readxl (development version)
 
+# readxl 1.4.2
+
 This release contains no user-facing changes.
 
 * We embed a development version of libxls (<https://github.com/libxls/libxls>), which is based on the most recent released version, v1.6.2.
