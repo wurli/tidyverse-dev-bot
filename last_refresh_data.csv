@@ -6405,3 +6405,13 @@ ggplot2,7,17b44ae76a2a4342b5e495997d970a86,"Renamed computed aesthetic in `stat_
 ggplot2,8,4c89f530903704f10b3badaf246c0957,"Fixed misbehaviour of `draw_key_boxplot()` and `draw_key_crossbar()` with skewed key aspect ratio (@​teunbrand, #5082)."
 ggplot2,9,16aff1333d53f9c54ab0ea1fbde2f6de,"`scale_*_binned()` handles zero-range limits more gracefully (@​teunbrand, #5066)"
 ggplot2,10,92b02b9a17deb051c4fecfec7a139383,"Binned scales are now compatible with `trans = ""date""` and `trans = ""time""` (@​teunbrand, #4217)."
+readr,1,9bd8fc164560d55caeb0b06f3384cb3d,No user-facing changes. Patch release with internal changes requested by CRAN.
+readr,2,dec5f4dfd2a889751cbaecc1b92356e3,"Help files below `man/` have been re-generated, so that they give rise to valid HTML5. (This is the impetus for this release, to keep the package safely on CRAN.)"
+readr,3,60d3931d7088be9f2dab0b65b07137d1,"`mini-gapminder-africa.csv` and friends are new example datasets accessible via `readr_example()`, which have been added to illustrate reading multiple files at once, into a single data frame."
+readr,4,bf812ae3733ef3b59a81f01cb1a192f8,"`read_table()`, `read_log()`, and `read_delim_chunked()` (and friends) gain the `show_col_types` argument found elsewhere. All `read_*()` functions now respect the `show_col_types` argument or option, even when using the first edition parsing engine (#1331)."
+readr,5,d813e20e37b8f11dc3e11ca7f0deda50,`show_progress()` uses `rlang::is_interactive()` instead of `base::interactive()` (#1356).
+readr,6,000cb2b111e23ab58520cc7837209807,"`read_builtin()` does more argument checking, so that we catch obviously malformed input before passing along to `utils::data()` (#1361)."
+readr,7,ccb804ceea034666b43e9840813d8a66,`chickens.csv` and `whitespace-sample.txt` are new example datasets accessible via `readr_example()` (#1354).
+readr,8,5f98d3b24c98d0aaece7721cb47f81d8,Jenny Bryan is now the maintainer.
+readr,9,f3fd1f66aa11ceb1ae813711eb769269,Fix buffer overflow when trying to parse an integer from a field that is over 64 characters long (#1326)
+readr,10,8b7fe5b633028c5609c36cd2d0ca0e09,"All readr functions again read eagerly by default. Unfortunately many users experienced frustration from the drawbacks of lazy reading, in particular locking files on Windows, so it was decided to disable lazy reading default. However `options(readr.read_lazy = TRUE)` can be used to set the default to by lazy if desired."

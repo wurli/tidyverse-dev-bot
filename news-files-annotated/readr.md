@@ -1,8 +1,17 @@
 # readr (development version)
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    No user-facing changes. Patch release with internal changes
+    requested by CRAN.
+    !end-bullet!
+
+!end-bullets-1!
+
 # readr 2.1.3
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     Help files below `man/` have been re-generated, so that they give
@@ -17,11 +26,11 @@
 
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # readr 2.1.2
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     `read_table()`, `read_log()`, and `read_delim_chunked()` (and
@@ -47,11 +56,11 @@
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 # readr 2.1.1
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     Jenny Bryan is now the maintainer.
@@ -63,11 +72,11 @@
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 # readr 2.1.0
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     All readr functions again read eagerly by default. Unfortunately
@@ -82,11 +91,11 @@
     lazily or not (#1266)
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 # readr 2.0.2
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     minor test tweak for compatibility with testthat 3.1.0 (#@lionel-,
@@ -100,11 +109,11 @@
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # readr 2.0.1
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     `options(readr.show_col_types = FALSE)` now works as intended
@@ -132,7 +141,7 @@
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 # readr 2.0.0
 
@@ -155,7 +164,7 @@ temporarily change the edition of readr for a section of code.
 
 e.g.
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     `with_edition(1, read_csv("my_file.csv"))` will read `my_file.csv`
@@ -169,7 +178,7 @@ e.g.
 
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 ### Lazy reading
 
@@ -277,7 +286,7 @@ license.
 
 ### Deprecated or superseded functions and features
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     `melt_csv()`, `melt_delim()`, `melt_tsv()` and `melt_fwf()` have
@@ -302,11 +311,11 @@ license.
 
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 ### Other second edition changes
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     `read_*_chunked()` functions now include their specification as an
@@ -359,11 +368,11 @@ license.
 
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 ## Additional features and fixes
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     The BH package is no longer a dependency. The boost C++ headers in
@@ -445,13 +454,13 @@ license.
 
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 # readr 1.4.0
 
 ## Breaking changes
 
-!begin-bullets-11!
+!begin-bullets-12!
 
 -   !begin-bullet!
     `write_*()` functions first argument is now `file` instead of
@@ -466,11 +475,11 @@ license.
 
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-12!
 
 ## New features
 
-!begin-bullets-12!
+!begin-bullets-13!
 
 -   !begin-bullet!
     It is now possible to generate a column specification from any
@@ -526,11 +535,11 @@ license.
 
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
 
 ## Additional features and fixes
 
-!begin-bullets-13!
+!begin-bullets-14!
 
 -   !begin-bullet!
     The full problem field is now displayed in the problems tibble, as
@@ -636,11 +645,11 @@ license.
 
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-14!
 
 # readr 1.3.1
 
-!begin-bullets-14!
+!begin-bullets-15!
 
 -   !begin-bullet!
     Column specifications are now coloured when printed. This makes it
@@ -670,7 +679,7 @@ license.
 
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-15!
 
 # readr 1.3.0
 
@@ -701,7 +710,7 @@ is to call subset with no arguments on your object, e.g. `x[]`.
 
 ## Bugfixes
 
-!begin-bullets-15!
+!begin-bullets-16!
 
 -   !begin-bullet!
     `hms` objects with NA values are now written without whitespace
@@ -723,7 +732,7 @@ is to call subset with no arguments on your object, e.g. `x[]`.
     Fixes compilation with R \< 3.3.0
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-16!
 
 # readr 1.2.1
 
@@ -809,7 +818,7 @@ drawbacks of either method.
 
 ### Additional new features
 
-!begin-bullets-16!
+!begin-bullets-17!
 
 -   !begin-bullet!
     `melt_*()` functions added for reading ragged data (#760,
@@ -893,11 +902,11 @@ drawbacks of either method.
     in-memory object (#610, #76).
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-17!
 
 ## Bug Fixes
 
-!begin-bullets-17!
+!begin-bullets-18!
 
 -   !begin-bullet!
     `standardise_path()` now uses a case-insensitive comparison for the
@@ -974,11 +983,11 @@ drawbacks of either method.
     (#767)
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-18!
 
 # readr 1.1.1
 
-!begin-bullets-18!
+!begin-bullets-19!
 
 -   !begin-bullet!
     Point release for test compatibility with tibble v1.3.1.
@@ -989,7 +998,7 @@ drawbacks of either method.
     global locale.
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-19!
 
 # readr 1.1.0
 
@@ -997,7 +1006,7 @@ drawbacks of either method.
 
 ### Parser improvements
 
-!begin-bullets-19!
+!begin-bullets-20!
 
 -   !begin-bullet!
     `parse_factor()` gains a `include_na` argument, to include `NA` in
@@ -1032,11 +1041,11 @@ drawbacks of either method.
     written with a trailing `.0` (#526).
     !end-bullet!
 
-!end-bullets-19!
+!end-bullets-20!
 
 ### Whitespace / fixed width improvements
 
-!begin-bullets-20!
+!begin-bullets-21!
 
 -   !begin-bullet!
     `fwf_cols()` allows for specifying the `col_positions` argument of
@@ -1064,11 +1073,11 @@ drawbacks of either method.
     (#608).
     !end-bullet!
 
-!end-bullets-20!
+!end-bullets-21!
 
 ## Writing to connections
 
-!begin-bullets-21!
+!begin-bullets-22!
 
 -   !begin-bullet!
     `write_*()` functions now support writing to binary connections. In
@@ -1080,11 +1089,11 @@ drawbacks of either method.
     `write_lines()` now accepts a list of raw vectors (#542).
     !end-bullet!
 
-!end-bullets-21!
+!end-bullets-22!
 
 ## Miscellaneous features
 
-!begin-bullets-22!
+!begin-bullets-23!
 
 -   !begin-bullet!
     `col_euro_double()`, `parse_euro_double()`, `col_numeric()`, and
@@ -1106,11 +1115,11 @@ drawbacks of either method.
     (#631, @noamross)
     !end-bullet!
 
-!end-bullets-22!
+!end-bullets-23!
 
 ## Bugfixes
 
-!begin-bullets-23!
+!begin-bullets-24!
 
 -   !begin-bullet!
     `parse_factor()` now converts data to UTF-8 based on the supplied
@@ -1140,7 +1149,7 @@ drawbacks of either method.
     (#641).
     !end-bullet!
 
-!end-bullets-23!
+!end-bullets-24!
 
 # readr 1.0.0
 
@@ -1215,7 +1224,7 @@ You can now access the guessing algorithm from R. `guess_parser()` will
 tell you which parser readr will select for a character vector (#377).
 We've made a number of fixes to the guessing algorithm:
 
-!begin-bullets-24!
+!begin-bullets-25!
 
 -   !begin-bullet!
     New example `extdata/challenge.csv` which is carefully created to
@@ -1242,12 +1251,12 @@ We've made a number of fixes to the guessing algorithm:
 
     !end-bullet!
 
-!end-bullets-24!
+!end-bullets-25!
 
 We have made a number of improvements to the reification of the
 `col_types`, `col_names` and the actual data:
 
-!begin-bullets-25!
+!begin-bullets-26!
 
 -   !begin-bullet!
     If `col_types` is too long, it is subsetted correctly (#372,
@@ -1272,13 +1281,13 @@ We have made a number of improvements to the reification of the
 
     !end-bullet!
 
-!end-bullets-25!
+!end-bullets-26!
 
 ## Column parsing
 
 The date time parsers recognise three new format strings:
 
-!begin-bullets-26!
+!begin-bullets-27!
 
 -   !begin-bullet!
     `%I` for 12 hour time format (#340).
@@ -1293,13 +1302,13 @@ The date time parsers recognise three new format strings:
 
     !end-bullet!
 
-!end-bullets-26!
+!end-bullets-27!
 
 `%y` and `%Y` are now strict and require 2 or 4 characters respectively.
 
 Date and time parsing functions received a number of small enhancements:
 
-!begin-bullets-27!
+!begin-bullets-28!
 
 -   !begin-bullet!
     `parse_time()` returns `hms` objects rather than a custom `time`
@@ -1329,7 +1338,7 @@ Date and time parsing functions received a number of small enhancements:
 
     !end-bullet!
 
-!end-bullets-27!
+!end-bullets-28!
 
 `parse_number()` is slightly more flexible - it now parses numbers up to
 the first ill-formed character. For example `parse_number("-3-")` and
@@ -1342,7 +1351,7 @@ fixed a major bug where parsing negative numbers yielded positive values
 
 ## New readers and writers
 
-!begin-bullets-28!
+!begin-bullets-29!
 
 -   !begin-bullet!
     `read_file_raw()` reads a complete file into a single raw vector
@@ -1376,11 +1385,11 @@ fixed a major bug where parsing negative numbers yielded positive values
 
     !end-bullet!
 
-!end-bullets-28!
+!end-bullets-29!
 
 ## Minor features and bug fixes
 
-!begin-bullets-29!
+!begin-bullets-30!
 
 -   !begin-bullet!
     Printing double values now uses an
@@ -1431,7 +1440,7 @@ fixed a major bug where parsing negative numbers yielded positive values
 -   !begin-bullet!
     `read_fwf()` received a number of improvements:
 
-    !begin-bullets-30!
+    !begin-bullets-31!
     -   !begin-bullet!
         `read_fwf()` now can now reliably read only a partial set of
         columns (#322, #353, #469)
@@ -1455,7 +1464,7 @@ fixed a major bug where parsing negative numbers yielded positive values
 
         !end-bullet!
 
-    !end-bullets-30!
+    !end-bullets-31!
     !end-bullet!
 -   !begin-bullet!
     `read_lines()` ignores embedded null's in strings (#338) and gains a
@@ -1489,28 +1498,28 @@ fixed a major bug where parsing negative numbers yielded positive values
 
     !end-bullet!
 
-!end-bullets-29!
+!end-bullets-30!
 
 # readr 0.2.2
 
-!begin-bullets-31!
+!begin-bullets-32!
 
 -   !begin-bullet!
     Fix bug when checking empty values for missingness (caused valgrind
     issue and random crashes).
     !end-bullet!
 
-!end-bullets-31!
+!end-bullets-32!
 
 # readr 0.2.1
 
-!begin-bullets-32!
+!begin-bullets-33!
 
 -   !begin-bullet!
     Fixes so that readr works on Solaris.
     !end-bullet!
 
-!end-bullets-32!
+!end-bullets-33!
 
 # readr 0.2.0
 
@@ -1522,7 +1531,7 @@ itself is), but you can now easily override the default timezone,
 decimal separator, grouping mark, day & month names, date format, and
 encoding. This has lead to a number of changes:
 
-!begin-bullets-33!
+!begin-bullets-34!
 
 -   !begin-bullet!
     `read_csv()`, `read_tsv()`, `read_fwf()`, `read_table()`,
@@ -1555,13 +1564,13 @@ encoding. This has lead to a number of changes:
 
     !end-bullet!
 
-!end-bullets-33!
+!end-bullets-34!
 
 See `vignette("locales")` for more details.
 
 ## File parsing improvements
 
-!begin-bullets-34!
+!begin-bullets-35!
 
 -   !begin-bullet!
     `cols()` lets you pick the default column type for columns not
@@ -1587,7 +1596,7 @@ See `vignette("locales")` for more details.
 -   !begin-bullet!
     In `read_csv()`, `read_tsv()`, `read_delim()` etc:
 
-    !begin-bullets-35!
+    !begin-bullets-36!
     -   !begin-bullet!
         `comment` argument allows you to ignore comments (#68).
 
@@ -1611,17 +1620,17 @@ See `vignette("locales")` for more details.
 
         !end-bullet!
 
-    !end-bullets-35!
+    !end-bullets-36!
     !end-bullet!
 
-!end-bullets-34!
+!end-bullets-35!
 
 ## Column parsing improvements
 
 Readr gains `vignette("column-types")` which describes how the defaults
 work and how to override them (#122).
 
-!begin-bullets-36!
+!begin-bullets-37!
 
 -   !begin-bullet!
     `parse_character()` gains better support for embedded nulls: any
@@ -1644,7 +1653,7 @@ work and how to override them (#122).
 -   !begin-bullet!
     `parse_date()` and `parse_datetime()`:
 
-    !begin-bullets-37!
+    !begin-bullets-38!
     -   !begin-bullet!
         `parse_datetime()` no longer incorrectly reads partial dates
         (e.g. 19, 1900, 1900-01) (#136). These triggered common false
@@ -1679,7 +1688,7 @@ work and how to override them (#122).
 
         !end-bullet!
 
-    !end-bullets-37!
+    !end-bullets-38!
     !end-bullet!
 -   !begin-bullet!
     `parse_number()` is a somewhat flexible numeric parser designed to
@@ -1695,12 +1704,12 @@ work and how to override them (#122).
 
     !end-bullet!
 
-!end-bullets-36!
+!end-bullets-37!
 
 As well as improvements to the parser, I've also made a number of tweaks
 to the heuristics that readr uses to guess column types:
 
-!begin-bullets-38!
+!begin-bullets-39!
 
 -   !begin-bullet!
     New `parse_guess()` and `col_guess()` to explicitly guess column
@@ -1724,11 +1733,11 @@ to the heuristics that readr uses to guess column types:
 
     !end-bullet!
 
-!end-bullets-38!
+!end-bullets-39!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-39!
+!begin-bullets-40!
 
 -   !begin-bullet!
     Now use R's platform independent `iconv` wrapper, thanks to BDR
@@ -1819,7 +1828,7 @@ to the heuristics that readr uses to guess column types:
     format (#135). `write_tsv()` is a helpful wrapper for tab separated
     files.
 
-    !begin-bullets-40!
+    !begin-bullets-41!
     -   !begin-bullet!
         Quotes are only used when they're needed (#116): when the string
         contains a quote, the delimiter, a new line or NA.
@@ -1845,7 +1854,7 @@ to the heuristics that readr uses to guess column types:
 
         !end-bullet!
 
-    !end-bullets-40!
+    !end-bullets-41!
     !end-bullet!
 -   !begin-bullet!
     `write_rds()` and `read_rds()` wrap around `readRDS()` and
@@ -1853,4 +1862,4 @@ to the heuristics that readr uses to guess column types:
 
     !end-bullet!
 
-!end-bullets-39!
+!end-bullets-40!
