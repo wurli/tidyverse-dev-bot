@@ -36,8 +36,9 @@
 
     !end-bullet!
 -   !begin-bullet!
-    `mutate()` after `distinct()` now again produces a subquery to
-    produce the correct result (@mgirlich, #1119).
+    `mutate()` and `select()` after `distinct()` now again produce a
+    subquery to generate the correct translation (@mgirlich, #1119,
+    #1141).
 
     !end-bullet!
 -   !begin-bullet!
