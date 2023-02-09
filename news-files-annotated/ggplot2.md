@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed bug in `coord_sf()` where graticule lines didn't obey
+    `panel.grid.major`'s linewidth setting (@teunbrand, #5179)
+    !end-bullet!
+-   !begin-bullet!
     The `datetime_scale()` scale constructor is now exported for use in
     extension packages (@teunbrand, #4701).
     !end-bullet!
