@@ -6354,3 +6354,13 @@ dplyr,4,5bc37d9db73bcf042ad0414739b19198,"```
 starwars[, .(mean_height = mean(height)), by = .(species, homeworld)]
 ```"
 dplyr,4,5bc37d9db73bcf042ad0414739b19198,`with_groups()` is superseded in favor of `.by` (#6582).
+readxl,1,c5ef89ff9014a29c5e42b0efb2000c6f,"We embed a development version of libxls (<https://github.com/libxls/libxls>), which is based on the most recent released version, v1.6.2. The reason for embedding a development version is to ship a version of libxls that incorporates the fix for this CVE (#679):"
+readxl,1,c5ef89ff9014a29c5e42b0efb2000c6f,• [CVE-2021-27836](https://nvd.nist.gov/vuln/detail/CVE-2021-27836)
+readxl,3,e4e3708502c2155a464fba9b76dd28d5,readxl no longer declares the use of C++11.
+readxl,4,52fa7cf1cb28e11b119482026d0b047c,readxl should once again compile on Alpine Linux.
+readxl,5,5dcd0c4f087170de87002c471676d917,"Other small readxl-specific patches have been made to the embedded libxls code to comply with CRAN requests, such as avoiding the use of `sprintf()`."
+readxl,6,ad551e126cdd56b1f849cd06d7a91386,Updating the embedded version of libxls (more below)
+readxl,7,8b9707388900d64c7505f63d4b2e5d74,Switching from Rcpp to cpp11 (more below)
+readxl,8,f71660959b69dc93d022127b5a022229,Refactoring to reduce duplication between the `.xls` and `.xlsx` branches
+readxl,9,89989fb267bf6a9fc9f678a755140c08,"""Date or Not Date"": The classification of number formats as being datetime-ish is more sophisticated and should no longer be so easily fooled by, e.g., colours or currencies. This affects cell and column type guessing, hopefully for the better (#388, #559, @​nacnudus, @​reviewher)."
+readxl,10,774eb694c9a8d98ffa1ec571bff3a3a6,"Cell location is determined more robustly in `.xlsx` files, guarding against the idiosyncratic way in which certain 3rd party tools include (or, rather, do not include) cell location in individual cell nodes (#648, #671)."

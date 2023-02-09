@@ -1,13 +1,17 @@
 # readxl (development version)
 
-This release embeds a development version of libxls (<https://github.com/libxls/libxls>), which is based on the most recent released version, v1.6.2.
+This release contains no user-facing changes.
+
+* We embed a development version of libxls (<https://github.com/libxls/libxls>), which is based on the most recent released version, v1.6.2.
 The reason for embedding a development version is to ship a version of libxls that incorporates the fix for this CVE (#679):
 
-  * [CVE-2021-27836](https://nvd.nist.gov/vuln/detail/CVE-2021-27836)
+  - [CVE-2021-27836](https://nvd.nist.gov/vuln/detail/CVE-2021-27836)
+  
+* readxl no longer declares the use of C++11.
 
-Other small readxl-specific patches have been made to the embedded libxls code to comply with CRAN requests, such as avoiding the use of `sprintf()`.
+* readxl should once again compile on Alpine Linux.
 
-readxl no longer declares the use of C++11. 
+* Other small readxl-specific patches have been made to the embedded libxls code to comply with CRAN requests, such as avoiding the use of `sprintf()`.
 
 # readxl 1.4.1
 
@@ -206,7 +210,7 @@ Many 3rd party tools write xls and xlsx that comply with the spec, but that are 
 
 * `read_xls()` and `read_xlsx()` are now exposed, such that files without an `.xls` or `.xlsx` extension can be read. (#85, @jirkalewandowski)
 
-* The [Lotus 1-2-3 leap year bug](https://docs.microsoft.com/en-US/office/troubleshoot/excel/wrongly-assumes-1900-is-leap-year) is now accounted for, i.e. date-times prior to March 1, 1900 import correctly. Date-times on the non-existent leap day February 29, 1900 import as NA and throw a warning. (#264, #148, #292)
+* The [Lotus 1-2-3 leap year bug](https://learn.microsoft.com/en-US/office/troubleshoot/excel/wrongly-assumes-1900-is-leap-year) is now accounted for, i.e. date-times prior to March 1, 1900 import correctly. Date-times on the non-existent leap day February 29, 1900 import as NA and throw a warning. (#264, #148, #292)
 
 * The tibble package is now imported (#175, @krlmlr) and `tibble::repair_names()` is used to prevent empty, `NA`, or duplicated column names. (#216, #208, #199 #182, #53, #247).
 
