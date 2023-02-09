@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `case_match()` now works with strings on the left hand side
+    (@mgirlich, #1143).
+
+    !end-bullet!
+-   !begin-bullet!
     The `rows_*()` function work again for tables in a schema in
     PostgreSQL (@mgirlich, #1133).
 

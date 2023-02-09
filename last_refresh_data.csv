@@ -6365,3 +6365,23 @@ readxl,8,f71660959b69dc93d022127b5a022229,Refactoring to reduce duplication betw
 readxl,9,89989fb267bf6a9fc9f678a755140c08,"""Date or Not Date"": The classification of number formats as being datetime-ish is more sophisticated and should no longer be so easily fooled by, e.g., colours or currencies. This affects cell and column type guessing, hopefully for the better (#388, #559, @​nacnudus, @​reviewher)."
 readxl,10,774eb694c9a8d98ffa1ec571bff3a3a6,"Cell location is determined more robustly in `.xlsx` files, guarding against the idiosyncratic way in which certain 3rd party tools include (or, rather, do not include) cell location in individual cell nodes (#648, #671)."
 dbplyr,7,fb68c46ecafe8779a1ee36e2a8f79529,"`mutate()` and `select()` after `distinct()` now again produce a subquery to generate the correct translation (@​mgirlich, #1119, #1141)."
+dbplyr,1,5108b6627e7eed7844cba836aa6406bf,"`case_match()` now works with strings on the left hand side (@​mgirlich, #1143)."
+dbplyr,2,fb1ec50355a17671d04751753d4b9265,"The `rows_*()` function work again for tables in a schema in PostgreSQL (@​mgirlich, #1133)."
+dbplyr,3,aa39cd378238c03694cb8b30f65a7de0,"`mutate()` + `filter()` now again produces a new query if the `mutate()` uses a window function or SQL (@​mgirlich, #1135)."
+dbplyr,4,2251dd7be1714567c712ddc9fe4e91b7,"`quantile()` and `median()` now error for SQL Server when used in `summarise()` and for PostgreSQL when used in `mutate()` as they can't be properly translated (@​mgirlich, #1110)."
+dbplyr,5,39d09186b4134d27a004f3e54149e207,"Fixed an issue when using `filter()` on a summarised variable (@​mgirlich, #1128)."
+dbplyr,6,0b3e1c0443e7f0a6a9fe30d534cc1dc8,"`across()` and `pick()` can be used (again) in `distinct()` (@​mgirlich, #1125)."
+dbplyr,7,2db7ba9bee40698a9dec629feeffcf29,"The rank functions (`row_number()`, `min_rank()`, `rank()`, `dense_rank()`, `percent_rank()`, and `cume_dist()`) now work again for variables wrapped in `desc()`, e.g. `row_number(desc(x))` (@​mgirlich, #1118)."
+dbplyr,8,fb68c46ecafe8779a1ee36e2a8f79529,"`mutate()` and `select()` after `distinct()` now again produce a subquery to generate the correct translation (@​mgirlich, #1119, #1141)."
+dbplyr,9,d98d06668cd5a9df09014fdf0bce5307,"Moved argument `auto_index` after `...` in `*_join()` (@​mgirlich, #1115)."
+dbplyr,10,9ba90983899440eefc9d282294482b84,"Removed dependency on assertthat (@​mgirlich, #1112)."
+rlang,1,db6bfde560df2ec505c44c1224997072,`new_data_mask()` is now slightly faster due to a smaller initial mask size and usage of the C level function `R_NewEnv()` on R \>=4.1.0 (#1553).
+rlang,2,43fc3296fc1578af4c9db186595dad5d,The C level `r_dyn_*_push_back()` utilities are now faster (#1542).
+rlang,3,e9bd18941fb9ae785222da157dfe3199,rlang is now compliant with `-Wstrict-prototypes` as requested by CRAN (#1508).
+rlang,4,c10348bae601f3a0079755c860bddb1e,`as_closure(seq.int)` now works (#1468).
+rlang,5,637c9311bb18234db17a98ab3ae249bd,rlang no longer stores errors and backtraces in a `org:r-lib` environment on the search path.
+rlang,6,646cfe267906ad5b7b359e6a6dfcbdc9,The low-level function `error_call()` is now exported (#1474).
+rlang,7,ab136a888c60ab4a896ffe213593869d,Fixed an issue that caused a failure about a missing `is_character` function when rlang is installed alongside an old version of vctrs (#1482).
+rlang,8,f6369c1c276a8ca4f16297784d043d05,Fixed an issue that caused multiline calls in backtraces.
+rlang,9,4475efca225f7230ed47b4a232d96ede,The C API function `r_lgl_which()` now propagates the names of the input (#1471).
+rlang,10,0f0e787b1ec24cd227ea503bc55e5384,"The `pkg_version_info()` function now allows `==` for package version comparison (#1469, @​kryekuzhinieri)."

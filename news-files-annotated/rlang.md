@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `new_data_mask()` is now slightly faster due to a smaller initial
+    mask size and usage of the C level function `R_NewEnv()` on R
+    \>=4.1.0 (#1553).
+
+    !end-bullet!
+-   !begin-bullet!
     The C level `r_dyn_*_push_back()` utilities are now faster (#1542).
 
     !end-bullet!
