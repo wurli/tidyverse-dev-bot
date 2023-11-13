@@ -22,7 +22,7 @@ remove_old_bullets <- function(new_updates,
                                prev_updates_file = "previous_updates.csv", 
                                overwrite_prev_updates = TRUE) {
   
-  if (nrow(x) == 0) {
+  if (nrow(new_updates) == 0) {
     return(tibble())
   }
   
@@ -38,7 +38,7 @@ remove_old_bullets <- function(new_updates,
   # will then be tweeted as normal. This allows me to add new packages to
   # the bot without posting the whole history.
   prev_updates <- prev_updates |> 
-    insert_new_packages(new_updates)
+    insert_new_packages(new_updates, by)
   
   bullets_to_post <- new_updates |> 
     remove_previously_posted_bullets(prev_updates)
@@ -133,6 +133,24 @@ remove_previously_posted_bullets <- function(new_updates, prev_updates, similari
   
 }
 
+insert_new_packages <- function(old_updates, new_updates, by) {
+  new_package_updates <- new_updates |> 
+    anti_join(old_updates, by = "package")
+  
+  if (nrow(new_package_updates) > 0L) {
+    new_pkgs <- unique(new_package_updates$package)
+    cli_alert_info("New package(s) {.pkg {new_pkgs}} detected - these bullets will be cached but not tweeted")
+    
+    old_updates <- old_updates |> 
+      rows_insert(
+        new_package_updates |> select(all_of(by)),
+        by = by
+      )
+  }
+  
+  old_updates
+}
+
 remove_old_bullets_summary_message <- function(x) {
   if (nrow(x) == 0) {
     cli_alert_info("No new updates found")
@@ -163,7 +181,6 @@ get_prev_bullets <- function(file, template) {
     col_types = readr::cols(
       package     = readr::col_character(),
       bullet_id   = readr::col_integer(),
-      bullet_hash = readr::col_character(),
       text        = readr::col_character()
     )
   ) 

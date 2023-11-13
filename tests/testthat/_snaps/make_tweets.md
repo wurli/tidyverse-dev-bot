@@ -11,10 +11,9 @@
           {testpkg} update:
           #RStats #Tidyverse
           
-          [`.by`/`by`](https://dplyr.tidyverse.org/dev/reference/dplyr_by.html)
-          is an experimental alternative to `group_by()` that supports per-
-          operation grouping for `mutate()`, `summarise()`, `filter()`, and the
-          `slice()` family (#6528). Rather than:
+          `.by`/`by` is an experimental alternative to `group_by()` that
+          supports per-operation grouping for `mutate()`, `summarise()`,
+          `filter()`, and the `slice()` family (#6528). Rather than:
           
           ```
           starwars %>%
@@ -51,8 +50,8 @@
           provides a way to maintain the current ordering without having to
           resort to factors.
        7. (7/8)
-          This feature was inspired by [data.table](https://CRAN.R-project.org/
-          package=data.table), where the equivalent syntax looks like:
+          This feature was inspired by data.table, where the equivalent syntax
+          looks like:
        8. (8/8)
           ```
           starwars[, .(mean_height = mean(height)), by = .(species, homeworld)]
@@ -243,10 +242,8 @@
           general, we instead recommend that you use the new `.locale` argument
           to precisely specify the desired locale.
        4. (4/4)
-          For a full explanation please read the associated [grouping](https://
-          github.com/tidyverse/tidyups/blob/main/006-dplyr-group-by-ordering.md)
-          and [ordering](https://github.com/tidyverse/tidyups/blob/main/003-
-          dplyr-radix-ordering.md) tidyups.
+          For a full explanation please read the associated grouping and
+          ordering tidyups.
       -- 24 ----------------------------------
        1. {testpkg} update:
           #RStats #Tidyverse

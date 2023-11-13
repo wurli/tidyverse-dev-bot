@@ -5936,6 +5936,7 @@ tidyr,198,"```
 x <- ""d""
 drop_na(df, starts_with(x))
 <<<<<<< HEAD
+<<<<<<< HEAD
 ```"
 tidyr,198,fd83bd334c02ab60a9e9bc651e8b474a,While these special rules is in contrast to most dplyr and tidyr verbs (where both the data and the context are in scope) they make sense for selecting functions and should provide more robust and helpful semantics.
 tidyr,199,468525e1e3ac43cf239410607d110440,Patch tests to be compatible with dev tibble
@@ -7039,6 +7040,552 @@ cli,23,"Style attributes with underscores have new names with dashes instead: `v
 cli,24,cli now does not crash at the end of the R session on Arm Windows (#494; @​kevinushey)
 cli,25,"Vectors are truncated at 20 elements now by default, instead of 100 (#430)."
 cli,26,"20 new spinners from the awesome [cli-spinners](https://github.com/sindresorhus/cli-spinners) package, and from @​HenrikBengtsson in #469. Run this to demo them, some need UTF-8 and emoji support:"
+=======
+```"
+tidyr,198,While these special rules is in contrast to most dplyr and tidyr verbs (where both the data and the context are in scope) they make sense for selecting functions and should provide more robust and helpful semantics.
+tidyr,199,Patch tests to be compatible with dev tibble
+tidyr,200,Register C functions
+tidyr,201,Added package docs
+tidyr,202,Patch tests to be compatible with dev dplyr.
+tidyr,203,Patch test to be compatible with dev tibble
+tidyr,204,Changed deprecation message of `extract_numeric()` to point to `readr::parse_number()` rather than `readr::parse_numeric()`
+tidyr,205,"`drop_na()` removes observations which have `NA` in the given variables. If no variables are given, all variables are considered (#194, @​janschulz)."
+tidyr,206,`extract_numeric()` has been deprecated (#213).
+tidyr,207,Renamed `table4` and `table5` to `table4a` and `table4b` to make their connection more clear. The `key` and `value` variables in `table2` have been renamed to `type` and `count`.
+tidyr,208,"`expand()`, `crossing()`, and `nesting()` now silently drop zero-length inputs."
+tidyr,209,`crossing_()` and `nesting_()` are versions of `crossing()` and `nesting()` that take a list as input.
+tidyr,210,`full_seq()` works correctly for dates and date/times.
+tidyr,211,"Restored compatibility with R \< 3.3.0 by avoiding `getS3method(envir = )` (#205, @​krlmlr)."
+tidyr,212,"`separate_rows()` separates observations with multiple delimited values into separate rows (#69, @​aaronwolen)."
+tidyr,213,`complete()` preserves grouping created by dplyr (#168).
+tidyr,214,`expand()` (and hence `complete()`) preserves the ordered attribute of factors (#165).
+tidyr,215,"`full_seq()` preserve attributes for dates and date/times (#156), and sequences no longer need to start at 0."
+tidyr,216,"`gather()` can now gather together list columns (#175), and `gather_.data.frame(na.rm = TRUE)` now only removes missing values if they're actually present (#173)."
+tidyr,217,`nest()` returns correct output if every variable is nested (#186).
+tidyr,218,"`separate()` fills from right-to-left (not left-to-right!) when fill = ""left"" (#170, @​dgrtwo)."
+tidyr,219,"`separate()` and `unite()` now automatically drop removed variables from grouping (#159, #177)."
+tidyr,220,"`spread()` gains a `sep` argument. If not-null, this will name columns as ""key`<sep>`{=html}value"". Additionally, if sep is `NULL` missing values will be converted to `<NA>` (#68)."
+tidyr,221,`spread()` works in the presence of list-columns (#199)
+tidyr,222,`unnest()` works with non-syntactic names (#190).
+tidyr,223,"`unnest()` gains a `sep` argument. If non-null, this will rename the columns of nested data frames to include both the original column name, and the nested column name, separated by `.sep` (#184)."
+tidyr,224,`unnest()` gains `.id` argument that works the same way as `bind_rows()`. This is useful if you have a named list of data frames or vectors (#125).
+tidyr,225,Moved in useful sample datasets from the DSR package.
+tidyr,226,Made compatible with both dplyr 0.4 and 0.5.
+tidyr,227,tidyr functions that create new columns are more aggressive about re-encoding the column names as UTF-8.
+tidyr,228,Fixed bug in `nest()` where nested data was ending up in the wrong row (#158).
+tidyr,229,"`nest()` now produces a single list of data frames called ""data"" rather than a list column for each variable. Nesting variables are not included in nested data frames. It also works with grouped data frames made by `dplyr::group_by()`. You can override the default column name with `.key`."
+tidyr,230,"`unnest()` gains a `.drop` argument which controls what happens to other list columns. By default, they're kept if the output doesn't require row duplication; otherwise they're dropped."
+tidyr,231,`unnest()` now has `mutate()` semantics for `...` - this allows you to unnest transformed columns more easily. (Previously it used select semantics).
+tidyr,232,"`expand()` once again allows you to evaluate arbitrary expressions like `full_seq(year)`. If you were previously using `c()` to created nested combinations, you'll now need to use `nesting()` (#85, #121)."
+tidyr,233,`nesting()` and `crossing()` allow you to create nested and crossed data frames from individual vectors. `crossing()` is similar to `base::expand.grid()`
+tidyr,234,"`full_seq(x, period)` creates the full sequence of values from `min(x)` to `max(x)` every `period` values."
+tidyr,235,`fill()` fills in `NULL`s in list-columns.
+tidyr,236,`fill()` gains a direction argument so that it can fill either upwards or downwards (#114).
+tidyr,237,"`gather()` now stores the key column as character, by default. To revert to the previous behaviour of using a factor (which allows you to preserve the ordering of the columns), use `key_factor = TRUE` (#96)."
+tidyr,238,"All tidyr verbs do the right thing for grouped data frames created by `group_by()` (#122, #129, #81)."
+tidyr,239,`seq_range()` has been removed. It was never used or announced.
+tidyr,240,"`spread()` once again creates columns of mixed type when `convert = TRUE` (#118, @​jennybc). `spread()` with `drop = FALSE` handles zero-length factors (#56). `spread()`ing a data frame with only key and value columns creates a one row output (#41)."
+tidyr,241,"`unite()` now removes old columns before adding new (#89, @​krlmlr)."
+tidyr,242,"`separate()` now warns if defunct ... argument is used (#151, @​krlmlr)."
+tidyr,243,Fixed bug where attributes of non-gather columns were lost (#104)
+tidyr,244,"New `complete()` provides a wrapper around `expand()`, `left_join()` and `replace_na()` for a common task: completing a data frame with missing combinations of variables."
+tidyr,245,`fill()` fills in missing values in a column with the last non-missing value (#4).
+tidyr,246,New `replace_na()` makes it easy to replace missing values with something meaningful for your data.
+tidyr,247,`nest()` is the complement of `unnest()` (#3).
+tidyr,248,"`unnest()` can now work with multiple list-columns at the same time. If you don't supply any columns names, it will unlist all list-columns (#44). `unnest()` can also handle columns that are lists of data frames (#58)."
+tidyr,249,tidyr no longer depends on reshape2. This should fix issues if you also try to load reshape (#88).
+tidyr,250,`%>%` is re-exported from magrittr.
+tidyr,251,`expand()` now supports nesting and crossing (see examples for details). This comes at the expense of creating new variables inline (#46).
+tidyr,252,`expand_` does SE evaluation correctly so you can pass it a character vector of columns names (or list of formulas etc) (#70).
+tidyr,253,`extract()` is 10x faster because it now uses stringi instead of base R regular expressions. It also returns NA instead of throwing an error if the regular expression doesn't match (#72).
+tidyr,254,`extract()` and `separate()` preserve character vectors when `convert` is TRUE (#99).
+tidyr,255,"The internals of `spread()` have been rewritten, and now preserve all attributes of the input `value` column. This means that you can now spread date (#62) and factor (#35) inputs."
+tidyr,256,`spread()` gives a more informative error message if `key` or `value` don't exist in the input data (#36).
+tidyr,257,"`separate()` only displays the first 20 failures (#50). It has finer control over what happens if there are two few matches: you can fill with missing values on either the ""left"" or the ""right"" (#49). `separate()` no longer throws an error if the number of pieces aren't as expected - instead it uses drops extra values and fills on the right and gives a warning."
+tidyr,258,"If the input is NA `separate()` and `extract()` both return silently return NA outputs, rather than throwing an error. (#77)"
+tidyr,259,Experimental `unnest()` method for lists has been removed.
+tidyr,260,Experimental `expand()` function (#21).
+tidyr,261,"Experiment `unnest()` function for converting named lists into data frames. (#3, #22)"
+tidyr,262,`extract_numeric()` preserves negative signs (#20).
+tidyr,263,"`gather()` has better defaults if `key` and `value` are not supplied. If `...` is omitted, `gather()` selects all columns (#28). Performance is now comparable to `reshape2::melt()` (#18)."
+tidyr,264,"`separate()` gains `extra` argument which lets you control what happens to extra pieces. The default is to throw an ""error"", but you can also ""merge"" or ""drop""."
+tidyr,265,"`spread()` gains `drop` argument, which allows you to preserve missing factor levels (#25). It converts factor value variables to character vectors, instead of embedding a matrix inside the data frame (#35)."
+xml2,1,Hadley Wickham is now (again) the maintainer.
+xml2,2,xml2 has been re-licensed as MIT (#317).
+xml2,3,`xml_find_all.xml_node()` fails more informatively the `xpath` parameter is the wrong type (@​michaelchirico)
+xml2,4,"`xml_find_all.xml_nodeset()` gains a `flatten` argument to control whether to return a single nodeset or a list of nodesets (#311, @​jakejh)"
+xml2,5,"`write_xml()` and `write_html()` now return NULL invisibly, as they did prior to version 1.3.0 (#307)"
+xml2,6,"`XPtr` gets explicit copy constructor and assignment operator definitions, which were two missing components of the [Rule of three](https://en.wikipedia.org/wiki/Rule_of_three_(C%2B%2B_programming)) (@​michaelchirico)"
+xml2,7,Windows: update to libxml2 2.9.10 and libxslt 1.1.34 and add ucrt libs
+xml2,8,`read_html()` and `read_xml()` now error if passed strings of length greater than one (#121)
+xml2,9,`read_xml.raw()` had an inadvertent regression in 1.3.0 and is now again fixed (#300)
+xml2,10,"Compilation fix on macOS 10.15.4 (@​kevinushey, #296)"
+xml2,11,`read_html()` now again works with HTML files with non-ASCII encodings (#293).
+xml2,12,Removes the Rcpp dependency
+xml2,13,Fix compilation issue on macOS versions after High Sierra when not using homebrew supplied libxml2
+xml2,14,"Fix potential dangling pointer with internal `asXmlChar()` function (@​michaelquinn32, #287)."
+xml2,15,`as_xml_document()` now handles cases with text nodes trailing normal nodes (#274).
+xml2,16,"`xml_add_child()` can now create nodes with a `par` attribute. These previously errored due to partial name matching of the `parent` function in the internal `create_node()` function. (@​jennybc, #285)"
+xml2,17,"`libxml2_version()` now returns a semantic version rather than alphanumeric version, so ""2.9.10"" \> ""2.9.9"" (#277)"
+xml2,18,"Export S4 classes with documentation, so they can be used in other packages without Warnings (@​nuest, #267)"
+xml2,19,"xml2 now has a pkgdown site! <https://xml2.r-lib.org> (@​jayhesselberth, #211)."
+xml2,20,Windows: upgrade to libxml2 2.9.8
+xml2,21,"print methods now match the type of document, e.g. `read_html()` prints as ""{html_document}"" rather than ""{xml_document}"" (#227)"
+xml2,22,"Generic xml2 error are now forwarded as R errors. Previously these errors were output to stderr, so could not be suppressed (#209)."
+xml2,23,"Fix for ICU 59+ defaulting to use char16_t, which is only available in C++11 (#231)"
+xml2,24,No longer uses the C connections API
+xml2,25,Better error message when trying to run `download_xml()` without the curl package installed (#262)
+xml2,26,xml2 classes are now registered for use with S4 by calling `setOldClass()` (#248)
+xml2,27,Nodes with nested data type definition entities now work without crashing (#241)
+xml2,28,Test failure fixed due to behavior change with relative paths in libxml2 2.9.9 (#245).
+xml2,29,`read_xml()` now has a better error message when given zero length character inputs (#212).
+xml2,30,`read_xml()` and `read_html()` now automatically check if the response succeeded before trying to read from a HTTP response (#255).
+xml2,31,`xml_root()` can now create root nodes with namespaces (#239)
+xml2,32,`xml_set_attr()` no longer crashes if you try to set the same namespace on the same node multiple times (#253).
+xml2,33,`xml_set_attr()` now recycles the values if needed (#221)
+xml2,34,"`xml_structure()` gains a `file` argument, to support writing to a file rather than the console (#244)."
+xml2,35,`as_list()` on `xml_document` objects did not properly include the root node in the returned list. Previous behavior can be obtained by using `as_list()[[1L]]` in place of `as_list()`.
+xml2,36,`download_xml()` and `download_html()` helper functions to make it easy to download files (#193).
+xml2,37,`xml_attr()` can now set attributes with no value (#198).
+xml2,38,`xml_serialize()` and `xml_unserialize()` now create file connections when given character input (#179).
+xml2,39,"`xml_find_first()` no longer de-duplicates results, so the results are always the same length as the inputs (as documented) (#194)."
+xml2,40,xml2 can now build using libxml2 2.7.0
+xml2,41,Use Rcpp symbol registration and visibility to prevent symbol conflicts on Linux
+xml2,42,"`xml_add_child()` now requires less resources to insert a node when called with `.where = 0L` (@​heckendorfc, #175)."
+xml2,43,Fixed failing examples due to a change in an external resource.
+xml2,44,"This is a small point release addressing installation issues found with older libxml2 versions shipped with RedHat Linux 6 / CentOS 6 (#163, #164)."
+xml2,45,`write_xml()` and `write_html()` now accept connections as well as filenames for output. (#157)
+xml2,46,`xml_add_child()` now takes a `.where` argument specifying where to add the new children. (#138)
+xml2,47,"`as_xml()` generic function to convert R objects to xml. The most important method is for lists and enables full roundtrip support for going to and back from xml for lists and enables full roundtrip support to and from XML. (#137, #143)"
+xml2,48,`xml_new_root()` can be used to create a new document and a root node in one step (#131).
+xml2,49,`xml_add_parent()` inserts a new node between the node and its parent (#129)
+xml2,50,"Add `xml_validate()` to validate a document against an xml schema (#31, @​jeroenooms)."
+xml2,51,Export `xml2_types.h` to allow for extension packages such as xslt.
+xml2,52,`xml_comment()` allows you to add comment nodes to a document. (#111)
+xml2,53,`xml_cdata()` allows you to add CDATA nodes to a document. (#128)
+xml2,54,Add `xml_set_text()` and `xml_set_name()` equivalent to `xml_text<-` and `xml_name<-`. (#130).
+xml2,55,"Add `xml_set_attr()` and `xml_set_attrs()` equivalent to `xml_attr<-` and `xml_attrs<-`. (#109, #130)"
+xml2,56,Add `write_html()` method (#133).
+xml2,57,`xml_new_document()` now explicitly sets the encoding (default UTF-8) (#142)
+xml2,58,Document formatting options for `write_xml()` (#132)
+xml2,59,Add missing methods for xml_missing objects. (#134)
+xml2,60,Bugfix for xml_length.xml_nodeset that caused it to fail unconditionally. (#140)
+xml2,61,`is.na()` now returns `TRUE` for `xml_missing` objects. (#139)
+xml2,62,Trim non-breaking spaces in `xml_text(trim = TRUE)` (#151).
+xml2,63,"Allow setting non-character attributes (values are coerced to characters). (@​sjp, #117, #122)."
+xml2,64,"Fixed return value in call to vapply in xml_integer.xml_nodeset. (@​ddiez, #146, #147)."
+xml2,65,"Allow docs missing a root element to be created and printed. (@​sjp, #126, #121)."
+xml2,66,"xml_add\_\* methods now return invisibly. (@​sjp, #124)"
+xml2,67,"`as_list()` now preserves element names when attributes exist, and escapes XML attributes that conflict with special R attributes (@​peterfoley, #115)."
+xml2,68,"All C++ functions now use `checked_get()` instead of `get()` where possible, so NULL XPtrs properly throw an error rather than crashing. (@​jimhester, #101, #104)."
+xml2,69,"`xml_integer()` and `xml_double()` functions to make it easy to extract integer and double text from nodes (@​jimhester, #97, #99)."
+xml2,70,"xml2 now supports modification and creation of XML nodes. New functions `xml_new_document()`, `xml_new_child()`, `xml_new_sibling()`, `xml_set_namespace()`, , `xml_remove()`, `xml_replace()`, `xml_root()` and replacement methods for `xml_name()`, `xml_attr()`, `xml_attrs()` and `xml_text()` (@​jimhester, #9 #76)"
+xml2,71,"`xml_ns()` now keeps namespace prefixes that point to the same URI (@​jimhester, #35, #95)."
+xml2,72,"`read_xml()` and `read_html()` methods added for `httr::response()` objects. (@​jimhester, #63, #93)"
+xml2,73,"`xml_child()` function to make selecting children a little easier (@​jimhester, #23, #94)"
+xml2,74,"`xml_find_one()` has been deprecated in favor of `xml_find_first()` (@​jimhester, #58, #92)"
+xml2,75,"`xml_read()` functions now default to passing the document's namespace object. Namespace definitions can now be removed as well as added and `xml_ns_strip()` added to remove all default namespaces from a document. (@​jimhester, #28, #89)"
+xml2,76,"`xml_read()` gains a `options` argument to control all available parsing options, including `HUGE` to turn off limits for parsing very large documents and now drops blank text nodes by default, mimicking default behavior of XML package. (@​jimhester, #49, #62, #85, #88)"
+xml2,77,"`xml_write()` expands the path on filenames, so directories can be specified with '\~/' (@​jimhester, #86, #80)"
+xml2,78,"`xml_find_one()` now returns a 'xml_missing' node object if there are 0 matches (@​jimhester, #55, #53, hadley/rvest#82)."
+xml2,79,"`xml_find_num()`, `xml_find_chr()`, `xml_find_lgl()` functions added to return numeric, character and logical results from XPath expressions. (@​jimhester, #55)"
+xml2,80,`xml_name()` and `xml_text()` always correctly encode returned value as UTF-8 (#54).
+xml2,81,Improved configure script - now works again on R-devel on windows.
+xml2,82,"Compiles with older versions of libxml2.,"
+xml2,83,Make configure script more cross platform.
+xml2,84,Add `xml_length()` to count the number of children (#32).
+tidyverse,1,We now advertise `library(conflicted)` because it resolves many conflict problems and silences tidyverse's automated report (#218).
+tidyverse,2,`tidyverse_sitrep()` correctly displays installed package versions and highlights development versions of pacakges (#222).
+tidyverse,3,tidyverse now installs ragg (#310).
+tidyverse,4,Add lubridate to the core tidyverse (#157).
+tidyverse,5,Text version of the citation now lists all authors (#269).
+tidyverse,6,All packages have been bumped to their latest versions.
+tidyverse,7,Messaging uses modern approach to avoid red text in RStudio (#296).
+tidyverse,8,"tidyverse now installs dtplyr (#216), googledrive, and googlesheets4 (#229). All packages have been bumped to their latest versions."
+tidyverse,9,License changed to MIT (#235).
+tidyverse,10,"The tidyverse now has an associated paper at the [Journal of Open Source Software](https://joss.theoj.org/) that you can use to cite the tidyverse if you use it in a paper - see `citation(""tidyverse"")` for details."
+tidyverse,11,"Eliminate repeats in the package list when loading an odd number of packages (#94, #100, @​dchiu911)"
+tidyverse,12,"Packages attached from same library they were initially loaded from (#171, @​gabrocsardi)"
+tidyverse,13,"If conflicted package is loaded, omit display of conflicts. This includes fix to `tidyverse_conflicts()` to avoid accidentally triggering conflicted shims (#136)."
+tidyverse,14,"`tidyverse_deps()` now succeeds even if a dependency of a dependency is missing (#152, @​PoGibas). It no longer includes dependencies that are needed by the tidyverse package but are not strictly part of the tidyverse (i.e. cli, crayon, and rstudioapi)."
+tidyverse,15,"`tidyverse_deps()` and `tidyverse_update()` gain a new `repos` argument that gets passed to the base function `available.packages()` (@​zkamvar, #82)"
+tidyverse,16,"`tidyverse_packages()` correctly returns packages names (#93, #106, @​coatless)"
+tidyverse,17,`tidyverse_sitrep()` gives you a situation report on your install of the tidyverse (#203)
+tidyverse,18,Require modern versions of all packages (#85)
+tidyverse,19,Work with RStudio 1.0 and earlier (#88).
+tidyverse,20,"stringr and forcats have been added to the core tidyverse, so they are attached by `library(tidyverse)`."
+tidyverse,21,reprex joins the tidyverse to make it easier to create reproducible examples (#47)
+tidyverse,22,"On attach, tidyverse now makes better use of the horizontal space, printing packages and versions in two columns (#59). It only prints packages that it attaches, not packages that you've already attached. Development versions are highlighted in red. You can now suppress this startup message by setting `options(tidyverse.quiet = TRUE)`"
+tidyverse,23,"`tidyverse_conflicts()` now prints all conflicts that involve at least one tidyverse package; Previously it only omitted any intra-tidyverse conflicts (#26). I've also tweaked the display of conflicts to hopefully make it more clear which function is the ""winner""."
+tidyverse,24,"`tidyverse_update()` now just gives you the code you need to update the packges, since in general it's not possible to update packages that are already loaded."
+tidyverse,25,feather is now *actually* in suggests.
+tidyverse,26,Moved feather from Imports to Suggests - feather is part of the tidyverse but it's installation requirements (C++11 + little-endian) make it painful in many scenarios (#36).
+tidyverse,27,Added a `NEWS.md` file to track changes to the package.
+tidyverse,28,Membership changes:
+tidyverse,28,"• Removed DBI (since very different API, #16)"
+tidyverse,28,• Added feather (#15)
+tidyverse,31,"`tidyverse_deps()` and `tidyverse_packages()` are now exported so you can more easily see the make up of the tidyverse, and what package versions you have (#18, #23)"
+tidyverse,32,`suppressPackageStartupMessages()` now suppresses all messages during loading (#19). `suppressPackageStartupMessages()` is called automatically for all tidyverse packages (#27).
+broom,1,Moved forward with deprecation of tidiers for objects from the sp package. See resources linked in [tidymodels/broom#1142](https://github.com/tidymodels/broom/issues/1142) for more information on migration from retiring spatial packages.
+broom,2,Corrected confidence interval values for precision components in `tidy.betareg()` output (#1169).
+broom,3,Fixed bug in tidier for `car::linearHypothesis()` output with long formulas (#1171).
+broom,4,Added support for columns `adj.r.squared` and `npar` in `glance()` method for objects outputted from `mgcv::gam()` (#1172).
+broom,5,`tidy.coxph()` will now pass its ellipses `...` to `summary()` internally (#1151 by `@​ste-tuf`).
+broom,6,Transitioned the deprecation of the `region` argument to `tidy.SpatialPolygonsDataFrame` from a warn- to a hard-deprecation (#1142).
+broom,7,Removed maptools and rgeos as Suggested packages ahead of their retirement. sp tidiers will be removed from a future release of the package (#1142).
+broom,8,Addressed bug in mlogit tidiers where `augment.mlogit()` would fail if supplied a model fitted with a non-default `dfidx()` (#1156 by `@​gregmacfarlane`).
+broom,9,Addressed bug in ANOVA tidiers where `tidy.anova()` would fail if passed a model with many predictors (#1159 by `@​jwilliman`).
+broom,10,"Addressed warnings in ANOVA tidiers for unrecognized column names `Resid..Df`, `Resid..Dev`, and `Deviance`; those columns will be renamed `df.residual`, `residual.deviance`, and `deviance`, respectively (#1159 by `@​jwilliman`)."
+broom,11,"Added an `intercept` argument to `tidy.aov()`, a logical indicating whether to include information on the intercept as the first row of results (#1144 by `@​victor-vscn`)."
+broom,12,Moved forward with soft-deprecation of tidiers for objects from the sp package ahead of the retirement of the rgeos and maptools packages later this year. sp tidiers will be removed from a future release of the package (#1142).
+broom,13,Fixed bug in `augment.glm()` where the `.std.resid` column always contained standardized deviance residuals regardless of the value passed to the `type.residuals` argument (#1147).
+broom,14,Addressed test failures on R-devel.
+broom,15,Fixed bug in `tidy.multinom()` where the `conf.level` argument would be ignored.
+broom,16,The default `data` argument for `augment.coxph()` and `augment.survreg()` has been transitioned from `NULL` to `model.frame(x)` (#1126 by `@​capnrefsmmat`).
+broom,17,"Migrated 'ggplot2' from strong to weak dependency, i.e. moved from `Imports` to `Suggests`."
+broom,18,"Fixed a bug where `augment()` results would not include residuals when the response term included a function call (#1121, #946, #937, #124)."
+broom,19,Improves performance of `tidy.lm()` and `tidy.glm()` for full-rank fits (#1112 by `@​capnrefsmmat`).
+broom,20,"Moves forward with deprecation of tidiers for sparse matrices outputted from the Matrix package, initially soft-deprecated in broom 0.5.0. The Matrix tidiers were light wrappers around coercion methods that will now be deprecated from Matrix itself in the upcoming 1.4-2 release. The affected methods are `tidy.sparseMatrix()`, `tidy.dgCMatrix()`, and `tidy.dgTMatrix()`. Note that `tidy.confusionMatrix()`, for relevant objects outputted from the caret package, is unaffected (#1113)."
+broom,21,`tidy.anova()` works again with `anova` objects from the `lme4` package (broken by addition of the `terms` column in the previous release)
+broom,22,Adds minimal ellipsis checking to warn on commonly misspecified arguments passed through ellipses. Notably:
+broom,23,`tidy()` methods will now warn when supplied an `exponentiate` argument if it will be ignored.
+broom,24,`augment()` methods will now warn when supplied a `newdata` argument if it will be ignored.
+broom,25,"The warning regarding tidiers only maintained via dispatch to `lm` and `glm` is now displayed only once per session, per unique dispatch. That is, if a `class_a` object is tidied using a `(g)lm` method, broom will not warn when tidying `class_a` objects for the rest of the session, but if a `class_b` object is tidied using a `(g)lm` method in the same session, broom will warn again (#1101)."
+broom,26,Add `exponentiate` argument to `tidy.boot()` (#1039).
+broom,27,Update in `tidy.htest()` converting matrix-columns to vector-columns (#1081).
+broom,28,Address failures in `tidy.glht()` with `conf.int = TRUE` (#1103).
+broom,29,Address failures in `tidy.zoo()` when input data does not have `colnames` (#1080).
+broom,30,Transition tidiers for bivariate linear or spline-based interpolation---using list tidiers to interface with objects from the akima package is now considered off-label. See the interp package for a FOSS alternative.
+broom,31,"Address failures in `tidy.svyolr()` when `p.values = TRUE`. Instead of aliasing `tidy.polr()` directly, `tidy.svyolr()` lightly wraps that method and warns if `p.values` is supplied (#1107)."
+broom,32,Adds a `term` column and introduces support for `car::lht()` output in `tidy.anova()` (#1106 by `@​grantmcdermott`).
+broom,33,"Adds a dedicated `glance.anova` method (which previously dispatched to the\ deprecated `glance.data.frame()` tidier, #1106 by `@​grantmcdermott`)."
+broom,34,Makes many improvements to documentation:
+broom,35,All tidiers now have example code demonstrating usage in their documentation. Tidiers for base packages as well as selected others also include sample code for visualization of results with ggplot2.
+broom,36,"Code examples in the documentation largely now follow consistent style---these changes were made largely to reflect the tidyverse style guide, addressing spacing, object naming, and commenting, among other things."
+broom,37,Examples previously marked with `\dontrun` or `\donttest` have been workshopped to run reliably.
+broom,38,Clarifies errors and warnings for deprecated and unmaintained tidiers.
+broom,39,Ensures that tidiers are placed in files named according to the model-supplying package rather than the model object class for easier navigability of the source code.
+broom,40,"Fix `glance.fixest` error when model includes only fixed effects and no regressors (`#1018` by `@​arcruz0`, `#1088` by `@​vincentarelbundock`)."
+broom,41,"Address excessive messaging from `tidy.speedlm` (`#1084` by `@​cgoo4`, `#1087` by `@​vincentarelbundock`)."
+broom,42,"Add `nobs` column to the output of `glance.svyglm` (`#1085` by `@​fschaffner`, `#1086` by `@​vincentarelbundock`)."
+broom,43,Ensure `tidy.prcomp` description entries use consistent punctuation (`#1072` by `@​PursuitOfDataScience`).
+broom,44,Address breaking changes in `glance.fixest` and `tidy.btergm`.
+broom,45,Simplify handling of `MASS::polr` output in the corresponding `tidy` and `augment` methods.
+broom,46,Align continuous integration with current standards in tidymodels packages.
+broom,47,Addressed issue with the ordering of original observations in `augment.rqs`. Now function preserves the original `data.frame` names also when the input `data.frame` only has one column (`#1052` by `@​ilapros`).
+broom,48,Addressed warning from `tidy.rma` when `x$ddf` has length greater than 1 (`#1064` by `@​wviechtb`).
+broom,49,Fix errors in `glance.lavaan` in anticipation of upcoming `tidyr` release (`#1067` by `@​DavisVaughan`).
+broom,50,Corrected the confidence interval in `tidy.crr()`. The `tidy.crr(conf.level=)` argument was previously ignored (`#1068` by `@​ddsjoberg`).
+broom,51,Clarifies error when `pysch::mediate` output is dispatched to `tidy.mediate` (`#1037` by `@​LukasWallrich`).
+broom,52,Allows user to specify confidence level for `tidy.rma` (`#1041` by `@​TarenSanders`)
+broom,53,Clarifies documentation related to usage of `augment_columns()`; most package users should use `augment()` in favor of `augment_columns()`. See `?augment_columns` for more details.
+broom,54,Extends support for `emmeans` by fixing non-standard column names in case of asymptotically derived inferential statistics. (`#1046` by `@​crsh`)
+broom,55,"Fixes use of index columns in `augment.mlogit` and adds `.resid` column to output. (`#1045`, `#1053`, `#1055`, and `#1056` by `@​jamesrrae` and `@​gregmacfarlane`)"
+broom,56,Correct column naming of standard error measures in `glance.survfit()`.
+broom,57,Various bug fixes and improvements to documentation.
+broom,58,"Fixes confidence intervals in `tidy.crr()`, which were previously exponentiated when `exponentiate = FALSE` (`#1023` by `@​leejasme`)"
+broom,59,"Deprecates `Rchoice` tidiers, as the newest 0.3-3 release requires R 4.0+ and does not re-export needed generics."
+broom,60,Updates to `ergm` tidiers in anticipation of changes in later releases. (`#1034` by `@​krivit`)
+broom,61,Fixed bug in `glance.ergm` related to handling of MCMC details.
+broom,62,Address breakages in unit tests for {fixest} tidiers.
+broom,63,Fixed bug in `tidy.epi.2by2` that resulted in errors with new version of `epiR` (`#1028` by `@​nt-williams`)
+broom,64,Added `exponentiate` argument to `tidy.gam()` tidier applicable for parametric terms (`#1013` by `@​ddsjoberg`)
+broom,65,Added `exponentiate` argument to `tidy.negbin()` tidier (`#1011` by `@​ddsjoberg`)
+broom,66,Fixed failures in `spdep` tidiers following breaking changes in the most recent release
+broom,67,Various bug fixes and improvements to documentation
+broom,68,Fixed bug in `augment` tidiers resulting in `.fitted` and `.se.fit` array columns.
+broom,69,Fixed bug that made column `y` non-numeric after `tidy_xyz` (`#973` by `@​jiho`)
+broom,70,Added tidiers for `MASS:glm.nb` (`#998` by `@​joshyam-k`)
+broom,71,Fixed bug in `tidy.fixest` that sometimes prevented arguments like `se` from being used (`#1001` by `@​karldw`)
+broom,72,Fixed bug in `tidy.fixest` that resulted in errors when columns with name `x` are present (`#1007` by `@​grantmcdermott`)
+broom,73,Moved forward with planned deprecation of `gamlss` tidiers in favor of those provided in `broom.mixed`
+broom,74,Various bug fixes and improvements to documentation
+broom,75,Fixed bug in the `nnet::multinom` tidier in the case that the response variable has only two levels (`#993` by `@​vincentarelbundock` and `@​hughjonesd`)
+broom,76,Various bug fixes and improvements to documentation
+broom,77,Add tidiers for `Rchoice` objects (`#961` by `@​vincentarelbundock` and `@​Nateme16`)
+broom,78,Add tidiers for objects produced by `car::leveneTest` (`#968` by `@​vincentarelbundock` and `@​mkirzon`)
+broom,79,Add tidiers for objects produced by `cmprsk::crr` (`#971` and `#552` by `@​vincentarelbundock` and `@​margarethannum`)
+broom,80,Add an `augment()` method for `gam` objects (`#975` and `#645` by `@​vincentarelbundock`)
+broom,81,Add tidiers for `vars` objects (`#979` and `#161` by `@​vincentarelbundock` and `@​Diego-MX`)
+broom,82,`tidy.emmGrid` can now return `std.error` and `conf.*` columns at the same time. (`#962` by `@​vincentarelbundock` and `@​jmbarbone`)
+broom,83,`tidy.garch` can now produce confidence intervals (`#964` by `@​vincentarelbundock` and `@​IndrajeetPatil`)
+broom,84,`tidy.coxph` can now report confidence intervals on models utilizing penalized/clustering terms (`#966` by `@​vincentarelbundock` and `@​matthieu-faron`)
+broom,85,`augment.lm` now works when some regression weights are equal to zero (`#965` by `@​vincentarelbundock` and `@​vnijs`)
+broom,86,"`tidy.coxph` can now handle models utilizing penalized/clustering terms (`#966` and `#969` by `@​vincentarelbundock`, `@​matthieu-faron`, and `@​KZARCA`)"
+broom,87,Fix bug in `tidy.speedglm` on R 4.0.0+ (`#974` by `@​uqzwang`)
+broom,88,tidy.multinom works with matrix response (`#977` and `#666` by `@​vincentarelbundock` and `@​atyre2`)
+broom,89,Various bug fixes and improvements to documentation and errors.
+broom,90,Restores tidiers for `summary.lm` objects (`#953` by `@​grantmcdermott`)
+broom,91,"Deprecate tidiers for the `lfe` package, which was archived from CRAN."
+broom,92,Various bug fixes and improvements to documentation and errors.
+broom,93,Various bug fixes and improvements to documentation and errors.
+broom,94,Add tidiers for `margins` objects. (`#700` by `@​grantmcdermott`)
+broom,95,Added tidier methods for `mlogit` objects (`#887` by `@​gregmacfarlane`)
+broom,96,Add `glance.coeftest()` method (`#932` by `@​grantmcdermott`)
+broom,97,Extended the `glance.aov()` method to include an `r.squared` column!
+broom,98,`glance.survfit()` now passes `...` to `summary.survfit()` to allow for adjustment of RMST and other measures (`#880` by `@​vincentarelbundock`)
+broom,99,Several unsupported model objects that subclass `glm` and `lm` now error more informatively.
+broom,100,A number of improvements to documentation throughout the package.
+broom,101,Fixed `newdata` warning message in `augment.*()` output when the `newdata` didn't contain the response variable---augment methods no longer expect the response variable in the supplied `newdata` argument. (`#897` by `@​rudeboybert`)
+broom,102,Fixed a bug related to `tidy.geeglm()` not being sensitive to the `exponentiate` argument (`#867`)
+broom,103,Fixed `augment.fixest()` returning residuals in the `.fitted` column. The method also now takes a `type.residuals` argument and defaults to the same `type.predict` argument as the `fixest` `predict()` method. (`#877` by `@​karldw`)
+broom,104,"Fix `tidy.felm` confidence interval bug. Replaces ""robust"" argument with ""se.type"". (`#919` by `@​grantmcdermott`; supersedes `#818` by `@​kuriwaki`)"
+broom,105,Fix a bug in `tidy.drc()` where some term labels would result in the overwriting of entries in the `curve` column (`#914`)
+broom,106,Fixed bug related to univariate zoo series in `tidy.zoo()` (`#916` by `@​WillemVervoort`)
+broom,107,"Fixed a bug related to `tidy.prcomp()` assigning the wrong PC labels from ""loadings"" and ""scores"" matrices (`#910` by `@​tavareshugo`)"
+broom,108,Fixed `tidy.polr()` bug where p-values could only be returned if `exponentiate = FALSE`.
+broom,109,"We have changed how we report degrees of freedom for `lm` objects (#212, #273). This is especially important for instructors in statistics courses. Previously the `df` column in `glance.lm()` reported the rank of the design matrix. Now it reports degrees of freedom of the numerator for the overall F-statistic. This is equal to the rank of the model matrix minus one (unless you omit an intercept column), so the new `df` should be the old `df` minus one."
+broom,110,"We are moving away from supporting `summary.*()` objects. In particular, we have removed `tidy.summary.lm()` as part of a major overhaul of internals. Instead of calling `tidy()` on `summary`-like objects, please call `tidy()` directly on model objects moving forward."
+broom,111,"We have removed all support for the `quick` argument in `tidy()` methods. This is to simplify internals and is for maintainability purposes. We anticipate this will not influence many users as few people seemed to use it. If this majorly cramps your style, let us know, as we are considering a new verb to return only model parameters. In the meantime, `stats::coef()` together with `tibble::enframe()` provides most of the functionality of `tidy(..., quick = TRUE)`."
+broom,112,"All `conf.int` arguments now default to `FALSE`, and all `conf.level` arguments now default to `0.95`. This should primarily affect `tidy.survreg()`, which previously always returned confidence intervals, although there are some others."
+broom,113,"Tidiers for `emmeans`-objects use the arguments `conf.int` and `conf.level` instead of relying on the argument names native to the `emmeans::summary()`-methods (i.e., `infer` and `level`). Similarly, `multcomp`-tidiers now include a call to `summary()` as previous behavior was akin to setting the now removed argument `quick = TRUE`. Both families of tidiers now use the `adj.p.value` column name when appropriate. Finally, `emmeans`-, `multcomp`-, and `TukeyHSD`-tidiers now consistently use the column names `contrast` and `null.value` instead of `comparison`, `level1` and `level2`, or `lhs` and `rhs` (see #692)."
+broom,114,"Tidier methods for data frames, rowwise data frames, vectors and matrices"
+broom,115,`bootstrap()`
+broom,116,`confint_tidy()`
+broom,117,`fix_data_frame()`
+broom,118,`finish_glance()`
+broom,119,`augment.glmRob()`
+broom,120,`tidy.table()` and `tidy.ftable()` have been deprecated in favor of `tibble::as_tibble()`
+broom,121,`tidy.summaryDefault()` and `glance.summaryDefault()` have been deprecated in favor of `skimr::skim()`
+broom,122,`tidy.brmsfit()`
+broom,123,"`tidy.merMod()`, `glance.merMod()`, `augment.merMod()`"
+broom,124,"`tidy.lme()`, `glance.lme()`, `augment.lme()`"
+broom,125,"`tidy.stanreg()`, `glance.stanreg()`"
+broom,126,"`tidyMCMC()`, `tidy.rjags()`, `tidy.stanfit()`"
+broom,127,"`augment.factanal()` now returns a tibble with columns names `.fs1`, `.fs2`, ..., instead of `factor1`, `factor2`, ... (#650)"
+broom,128,"We have renamed the output of `augment.htest()`. In particular, we have renamed the `.residuals` column to `.resid` and the `.stdres` to `.std.resid` for consistency. These changes will only affect chi-squared tests."
+broom,129,`tidy.ridgelm()` now always return a `GCV` column and never returns an `xm` column. (#533 by @​jmuhlenkamp)
+broom,130,`tidy.dist()` no longer supports the `upper` argument.
+broom,131,"If you pass a dataset to `augment()` via the `data` or `newdata` arguments, you are now guaranteed that the augmented dataset will have exactly the same number of rows as the original dataset. This differs from previous behavior primarily when there are missing values. Previously `augment()` would drop rows containing `NA`. This should no longer be the case."
+broom,132,`augment.*()` methods no longer accept an `na.action` argument.
+broom,133,"In previous versions, several `augment.*()` methods inherited the `augment.lm()` method, but required additions to the `augment.lm()` method itself. We have shifted away from this approach in favor of re-implementing many `augment.*()` methods as standalone methods making use of internal helper functions. As a result, `augment.lm()` and some related methods have deprecated (previously unused) arguments."
+broom,134,`augment()` tries to give an informative error when `data` isn't the original training data.
+broom,135,The `.resid` column in the output of `augment().*` methods is now consistently defined as `y - y_hat`
+broom,136,`anova` objects from the `car` package (#754)
+broom,137,`pam` objects from the `cluster` package (#637 by @​abbylsmith)
+broom,138,`drm` objects from the `drc` package (#574 by @​edild)
+broom,139,`summary_emm` objects from the `emmeans` package (#691 by @​crsh)
+broom,140,`epi.2by2` objects from the `epiR` package (#711)
+broom,141,`fixest` objects from the `fixest` package (#785 by @​karldw)
+broom,142,`regsubsets` objects from the `leaps` package (#535)
+broom,143,`lm.beta` objects from the `lm.beta` package (#545 by @​mattle24)
+broom,144,"`rma` objects from the `metafor` package (#674 by @​malcolmbarrett, @​softloud)"
+broom,145,"`mfx`, `logitmfx`, `negbinmfx`, `poissonmfx`, `probitmfx`, and `betamfx` objects from the`mfx` package (#700 by @​grantmcdermott)"
+broom,146,"`lmrob` and `glmrob` objects from the `robustbase` package (#205, #505)"
+broom,147,`sarlm` objects from the `spatialreg` package (#847 by @​gregmacfarlane and @​petrhrobar)
+broom,148,`speedglm` objects from the `speedglm` package (#685)
+broom,149,`svyglm` objects from the `survey` package (#611)
+broom,150,`systemfit` objects from the `systemfit` package (by @​jaspercooper)
+broom,151,"We have restored a simplified version of `glance.aov()`, which used to inherit from the `glance.lm()` method and now contains only the following columns: `logLik`, `AIC`, `BIC, deviance`, `df.residual`, and `nobs` (see #212). Note that `tidy.aov()` gives more complete information about degrees of freedom in an `aov` object."
+broom,152,`tidy.felm()` now has a `robust = TRUE/FALSE` option that supports robust and cluster standard errors. (#781 by @​kuriwaki)
+broom,153,Make `.fitted` values respect `type.predict` argument of `augment.clm()`. (#617)
+broom,154,Return factor rather than numeric class predictions in `.fitted` of `augment.polr()`. (#619) Add an option to return `p.values` in `tidy.polr()`. (#833 by @​LukasWallrich)
+broom,155,`tidy.kmeans()` now uses the names of the input variables in the output by default. Set `col.names = NULL` to recover the old behavior.
+broom,156,"Previously, F-statistics for weak instruments were returned through `glance.ivreg()`. F-statistics are now returned through `tidy.ivreg(instruments = TRUE)`. Default is `tidy.ivreg(instruments = FALSE)`. `glance.ivreg()` still returns Wu-Hausman and Sargan test statistics."
+broom,157,`glance.biglm()` now returns a `df.residual` column.
+broom,158,"`tidy.prcomp()` argument `matrix` gained new options `""scores""`, `""loadings""`, and `""eigenvalues""`. (#557 by @​GegznaV)"
+broom,159,`tidy_optim()` now provides the standard error if the Hessian is present. (#529 by @​billdenney)
+broom,160,`tidy.htest()` column names are now run through `make.names()` to ensure syntactic correctness. (#549 by @​karissawhiting)
+broom,161,`tidy.lmodel2()` now returns a `p.value` column. (#570)
+broom,162,`tidy.lsmobj()` gained a `conf.int` argument for consistency with other tidiers.
+broom,163,`tidy.polr()` now returns p-values if `p.values` is set to TRUE and the model does not contain factors with more than two levels.
+broom,164,`tidy.zoo()` now doesn't change column names that have spaces or other special characters (previously they were converted to `data.frame` friendly column names by `make.names`.)
+broom,165,`glance.lavaan()` now uses lavaan extractor functions instead of subsetting the fit object manually. (#835)
+broom,166,`glance.lm()` no longer errors when only an intercept is provided as an explanatory variable. (#865)
+broom,167,"Bug fix for `tidy.survreg()` when `robust` is set to `TRUE` in model fitting (#842, #728)"
+broom,168,Bug fixes in `glance.lavaan()`: address confidence interval error (#577) and correct reported `nobs` and `norig` (#835)
+broom,169,Bug fix in muhaz tidiers to ensure output is always a `tibble` (#824)
+broom,170,Several `glance.*()` methods have been refactored in order to return a one-row tibble even when the model matrix is rank-deficient (#823)
+broom,171,Bug fix to return confidence intervals correct in `tidy.drc()` (#798)
+broom,172,"Added default methods for objects that subclass `glm` and `lm` in order to error more informatively. (#749, #736, #708, #186)"
+broom,173,Bug fix to allow `augment.kmeans()` to work with masked data (#609)
+broom,174,Bug fix to allow `augment.Mclust()` to work on univariate data (#490)
+broom,175,Bug fix to allow `tidy.htest()` to supports equal variances (#608)
+broom,176,Bug fix to better allow `tidy.boot()` to support confidence intervals (#581)
+broom,177,Bug fix for `tidy.polr()` when passed `conf.int = TRUE` (#498)
+broom,178,"Many `glance()` methods now return a `nobs` column, which contains the number of data points used to fit the model! (#597 by @​vincentarelbundock)"
+broom,179,"`tidy()` no longer checks for a log or logit link when `exponentiate = TRUE`, and we have refactored to remove extraneous `exponentiate` arguments. If you set `exponentiate = TRUE`, we assume you know what you are doing and that you want exponentiated coefficients (and confidence intervals if `conf.int = TRUE`) regardless of link function."
+broom,180,We now use `rlang::arg_match()` when possible instead of `arg.match()` to give more informative errors on argument mismatches.
+broom,181,The package's site has moved from https://broom.tidyverse.org/ to https://broom.tidymodels.org/.
+broom,182,Revised several vignettes and moved them to the tidymodels.org website. The existing vignettes will now simply link to the revised versions.
+broom,183,Many improvements to consistency and clarity of documentation.
+broom,184,Various warnings resulting from changes to the tidyr API in v1.0.0 have been fixed. (#870)
+broom,185,Removed dependencies on reshape2 and superseded functions in dplyr.
+broom,186,All documentation now links to help files rather than topics.
+broom,187,Moved core tests to the `modeltests` package.
+broom,188,"Generally, after this release, the broom dev team will first ask that attempts to add tidier methods supporting a model object are first directed to the model-owning package. An article describing best practices in doing so can be found on the {tidymodels} website at https://www.tidymodels.org/learn/develop/broom/, and we will continue adding additional resources to that article as we develop them. In the case that the maintainer is uninterested in taking on the tidier methods, please note this in your issue or PR."
+broom,189,Added a new vignette discussing how to implement new tidier methods in non-broom packages.
+broom,190,Fix failing CRAN checks to due `tibble 3.0.0` release. Removed `xergm` dependency.
+broom,191,Remove tidiers for robust package and drop robust dependency (temporarily)
+broom,192,Fixes failing CRAN checks as the joineRML package has been removed from CRAN
+broom,193,Fixes failing CRAN checks due to new matrix classing in R 4.0.0
+broom,194,Fixes failing CRAN checks
+broom,195,Changes to accommodate ergm 3.10 release. `tidy.ergm()` no longer has a `quick` argument. The old default of `quick = FALSE` is now the only option.
+broom,196,"`tidy()`, `glance()` and `augment()` are now re-exported from the [generics](https://github.com/r-lib/generics) package."
+broom,197,"subsetting tibbles with `[`, which returns a tibble rather than a vector."
+broom,198,"setting rownames on tibbles, which is deprecated."
+broom,199,"using matrix and vector tidiers, now deprecated."
+broom,200,handling the additional tibble classes `tbl_df` and `tbl` beyond the `data.frame` class
+broom,201,linking to defunct documentation files -- broom recently moved all tidiers to a `roxygen2` template based documentation system.
+broom,202,"`vignette(""available-methods"", package = ""broom"")` contains a table detailing which tidying methods are available"
+broom,203,"`vignette(""adding-tidiers"", package = ""broom"")` is an *in-progress* guide for contributors on how to add new tidiers to broom"
+broom,204,"`vignette(""glossary"", package = ""broom"")` contains tables describing acceptable argument names and column names for the *in-progress* new specification."
+broom,205,"`vignette(""bootstrapping"", package = ""broom"")` now relies on the `rsample` package and a `tidyr::nest`-`purrr::map`-`tidyr::unnest` workflow. This is now the recommended workflow for working with multiple models, as opposed to the old `dplyr::rowwise`-`dplyr::do` based workflow."
+broom,206,Matrix and vector tidiers have been deprecated in favor of `tibble::as_tibble` and `tibble::enframe`
+broom,207,Dataframe tidiers and rowwise dataframe tidiers have been deprecated
+broom,208,`bootstrap()` has been deprecated in favor of the [`rsample`](https://rsample.tidymodels.org/)
+broom,209,`inflate` has been removed from `broom`
+broom,210,The `alpha` argument has been removed from `quantreg` tidy methods
+broom,211,"The `separate.levels` argument has been removed from `tidy.TukeyHSD`. To obtain the effect of `separate.levels = TRUE`, users may `tidyr::separate` after tidying. This is consistent with the `multcomp` tidier behavior."
+broom,212,"The `fe.error` argument was removed from `tidy.felm`. When fixed effects are tidier, their standard errors are now always included."
+broom,213,The `diag` argument in `tidy.dist` has been renamed `diagonal`
+broom,214,Advice to help beginners make PRs (#397 by @​karldw)
+broom,215,"`glance` support for `arima` objects fit with `method = ""CSS""` (#396 by @​josue-rodriguez)"
+broom,216,A bug fix to re-enable tidying `glmnet` objects with `family = multinomial` (#395 by @​erleholgersen)
+broom,217,A bug fix to allow tidying `quantreg` intercept only models (#378 by @​erleholgersen)
+broom,218,A bug fix for `aovlist` objects (#377 by @​mvevans89)
+broom,219,Support for `glmnetUtils` objects (#352 by @​Hong-Revo)
+broom,220,A bug fix to allow `tidy_emmeans` to handle column names with dashes (#351 by @​bmannakee)
+broom,221,`augment.felm` no longer returns `.fe_` and `.comp` columns
+broom,222,Support saved formulas in `augment.felm` (#347 by @​ShreyasSingh)
+broom,223,`confint_tidy` now drops rows of all `NA` (#345 by @​atyre2)
+broom,224,A new tidier for `caret::confusionMatrix` objects (#344 by @​mkuehn10)
+broom,225,Tidiers for `Kendall::Kendall` objects (#343 by @​cimentadaj)
+broom,226,A new tidying method for `car::durbinWatsonTest` objects (#341 by @​mkuehn10)
+broom,227,`glance` throws an informative error for `quantreg:rq` models fit with multiple `tau` values (#338 by @​bfgray3)
+broom,228,`tidy.glmnet` gains the ability to retain zero-valued coefficients with a `return_zeros` argument that defaults to `FALSE` (#337 by @​bfgray3)
+broom,229,`tidy.manova` now retains a `Residuals` row (#334 by @​jarvisc1)
+broom,230,"Tidiers for `ordinal::clm`, `ordinal::clmm`, `survey::svyolr` and `MASS::polr` ordinal model objects (#332 by @​larmarange)"
+broom,231,Support for `anova` objects from `car::Anova` (#325 by @​mariusbarth)
+broom,232,Tidiers for `tseries::garch` models (#323 by @​wilsonfreitas)
+broom,233,Removed dependency on `psych` package (#313 by @​nutterb)
+broom,234,Improved error messages (#303 by @​michaelweylandt)
+broom,235,Compatibility with new `rstanarm` and `loo` packages (#298 by @​jgabry)
+broom,236,Support for tidying lists return by `irlba::irlba`
+broom,237,A truly huge increase in unit tests (#267 by @​dchiu911)
+broom,238,Bug fix for `tidy.prcomp` when missing labels (#265 by @​corybrunson)
+broom,239,Added a `pkgdown` site at https://broom.tidyverse.org/ (#260 by @​jayhesselberth)
+broom,240,Added tidiers for `AER::ivreg` models (#247 by @​hughjonesd)
+broom,241,Added tidiers for the `lavaan` package (#233 by @​puterleat)
+broom,242,Added `conf.int` argument to `tidy.coxph` (#220 by @​larmarange)
+broom,243,Added `augment` method for chi-squared tests (#138 by @​larmarange)
+broom,244,changed default se.type for `tidy.rq` to match that of `quantreg::summary.rq()` (#404 by @​ethchr)
+broom,245,Added argument `quick` for `tidy.plm` and `tidy.felm` (#502 and #509 by @​MatthieuStigler)
+broom,246,Many small improvements throughout
+broom,247,"Fixed gam tidiers to work with ""Gam"" objects, due to an update in gam 1.15. This fixes failing CRAN tests"
+broom,248,Improved test coverage (thanks to #267 from Derek Chiu)
+broom,249,Changed the deprecated `dplyr::failwith` to `purrr::possibly`
+broom,250,`augment` and `glance` on NULLs now return an empty data frame
+broom,251,Deprecated the `inflate()` function in favor of `tidyr::crossing`
+broom,252,Fixed confidence intervals in the gmm tidier (thanks to #242 from David Hugh-Jones)
+broom,253,Fixed a bug in bootstrap tidiers (thanks to #167 from Jeremy Biesanz)
+broom,254,Fixed tidy.lm with `quick = TRUE` to return terms as character rather than factor (thanks to #191 from Matteo Sostero)
+broom,255,Added tidiers for `ivreg` objects from the AER package (thanks to #245 from David Hugh-Jones)
+broom,256,Added tidiers for `survdiff` objects from the survival package (thanks to #147 from Michał Bojanowski)
+broom,257,Added tidiers for `emmeans` from the emmeans package (thanks to #252 from Matthew Kay)
+broom,258,"Added tidiers for `speedlm` and `speedglm` from the speedglm package (#685, thanks to #248 from David Hugh-Jones)"
+broom,259,Added tidiers for `muhaz` objects from the muhaz package (thanks to #251 from Andreas Bender)
+broom,260,Added tidiers for `decompose` and `stl` objects from stats (thanks to #165 from Aaron Jacobs)
+broom,261,Added tidiers for `lsmobj` and `ref.grid` objects from the lsmeans package
+broom,262,Added tidiers for `betareg` objects from the betareg package
+broom,263,Added tidiers for `lmRob` and `glmRob` objects from the robust package
+broom,264,Added tidiers for `brms` objects from the brms package (thanks to #149 from Paul Buerkner)
+broom,265,Fixed tidiers for orcutt 2.0
+broom,266,Changed `tidy.glmnet` to filter out rows where estimate == 0.
+broom,267,Updates to `rstanarm` tidiers (thanks to #177 from Jonah Gabry)
+broom,268,Fixed issue with survival package 2.40-1 (thanks to #180 from Marcus Walz)
+broom,269,"Added AppVeyor, codecov.io, and code of conduct"
+broom,270,"Changed name of ""NA's"" column in summaryDefault output to ""na"""
+broom,271,"Fixed `tidy.TukeyHSD` to include `term` column. Also added `separate.levels` argument, with option to separate `comparison` into `level1` and `level2`"
+broom,272,"Fixed `tidy.manova` to use correct column name for test (previously, always `pillai`)"
+broom,273,Added `kde_tidiers` to tidy kernel density estimates
+broom,274,Added `orcutt_tidiers` to tidy the results of `cochrane.orcutt` orcutt package
+broom,275,Added `tidy.dist` to tidy the distance matrix output of `dist` from the stats package
+broom,276,Added `tidy` and `glance` for `lmodel2` objects from the lmodel2 package
+broom,277,Added tidiers for `poLCA` objects from the poLCA package
+broom,278,Added tidiers for sparse matrices from the Matrix package
+broom,279,Added tidiers for `prcomp` objects
+broom,280,Added tidiers for `Mclust` objects from the Mclust package
+broom,281,Added tidiers for `acf` objects
+broom,282,"Fixed to be compatible with dplyr 0.5, which is being submitted to CRAN"
+broom,283,"Added tidiers for geeglm, nlrq, roc, boot, bgterm, kappa, binWidth, binDesign, rcorr, stanfit, rjags, gamlss, and mle2 objects."
+broom,284,"Added `tidy` methods for lists, including u, d, v lists from `svd`, and x, y, z lists used by `image` and `persp`"
+broom,285,"Added `quick` argument to `tidy.lm`, `tidy.nls`, and `tidy.biglm`, to create a smaller and faster version of the output."
+broom,286,"Changed `rowwise_df_tidiers` to allow the original data to be saved as a list column, then provided as a column name to `augment`. This required removing `data` from the `augment` S3 signature. Also added `tests-rowwise.R`"
+broom,287,Fixed various issues in ANOVA output
+broom,288,Fixed various issues in lme4 output
+broom,289,Fixed issues in tests caused by dev version of ggplot2
+broom,290,"Added tidiers for ""plm"" (panel linear model) objects from the plm package."
+broom,291,Added `tidy.coeftest` for coeftest objects from the lmtest package.
+broom,292,"Set up `tidy.lm` to work with ""mlm"" (multiple linear model) objects (those with multiple response columns)."
+broom,293,"Added `tidy` and `glance` for ""biglm"" and ""bigglm"" objects from the biglm package."
+broom,294,Fixed bug in `tidy.coxph` when one-row matrices are returned
+broom,295,Added `tidy.power.htest`
+broom,296,Added `tidy` and `glance` for `summaryDefault` objects
+broom,297,"Added tidiers for ""lme"" (linear mixed effects models) from the nlme package"
+broom,298,Added `tidy` and `glance` for `multinom` objects from the nnet package.
+broom,299,"Fixed bug in `tidy.pairwise.htest`, which now can handle cases where the grouping variable is numeric."
+broom,300,Added `tidy.aovlist` method. This added `stringr` package to IMPORTS to trim whitespace from the beginning and end of the `term` and `stratum` columns. This also required adjusting `tidy.aov` so that it could handle strata that are missing p-values.
+broom,301,Set up `glance.lm` to work with `aov` objects along with `lm` objects.
+broom,302,"Added `tidy` and `glance` for matrix objects, with `tidy.matrix` converting a matrix to a data frame with rownames included, and `glance.matrix` returning the same result as `glance.data.frame`."
+broom,303,Changed DESCRIPTION Authors@​R to new format
+broom,304,Fixed small bug in `felm` where the `.fitted` and `.resid` columns were matrices rather than vectors.
+broom,305,"Added tidiers for `rlm` (robust linear model) and `gam` (generalized additive model) objects, including adjustments to ""lm"" tidiers in order to handle them. See `?rlm_tidiers` and `?gam_tidiers` for more."
+broom,306,Removed rownames from `tidy.cv.glmnet` output
+broom,307,"The behavior of `augment`, particularly with regard to missing data and the `na.exclude` argument, has through the use of the `augment_columns` function been made consistent across the following models:"
+broom,308,`lm`
+broom,309,`glm`
+broom,310,`nls`
+broom,311,`merMod` (`lme4`)
+broom,312,`survreg` (`survival`)
+broom,313,`coxph` (`survival`)
+broom,314,"`tidy`, `augment` and `glance` methods were added for `rowwise_df` objects, and are set up to apply across their rows. This allows for simple patterns such as:"
+broom,315,"Added `tidy` and `glance` methods for `Arima` objects, and `tidy` for `pairwise.htest` objects."
+broom,316,"Fixes for CRAN: change package description to title case, removed NOTES, mostly by adding `globals.R` to declare global variables."
+broom,317,This is the original version published on CRAN.
+broom,318,Tidiers have been added for S3 objects from the following packages:
+broom,319,`lme4`
+broom,320,`glmnet`
+broom,321,`survival`
+broom,322,`zoo`
+broom,323,`felm`
+broom,324,`MASS` (`ridgelm` objects)
+broom,325,"`tidy` and `glance` methods for data.frames have also been added, and `augment.data.frame` produces an error (rather than returning the same data.frame)."
+broom,326,`stderror` has been changed to `std.error` (affects many functions) to be consistent with broom's naming conventions for columns.
+broom,327,"A function `bootstrap` has been added based on [this example](https://github.com/tidyverse/dplyr/issues/269), to perform the common use case of bootstrapping models."
+broom,328,"Added ""augment"" S3 generic and various implementations. ""augment"" does something different from tidy: it adds columns to the original dataset, including predictions, residuals, or cluster assignments. This was originally described as ""fortify"" in ggplot2."
+broom,329,"Added ""glance"" S3 generic and various implementations. ""glance"" produces a *one-row* data frame summary, which is necessary for tidy outputs with values like R\^2 or F-statistics."
+broom,330,Re-wrote intro broom vignette/README to introduce all three methods.
+broom,331,Wrote a new kmeans vignette.
+broom,332,"Added tidying methods for multcomp, sp, and map objects (from fortify-multcomp, fortify-sp, and fortify-map from ggplot2)."
+broom,333,"Because this integrates substantial amounts of ggplot2 code (with permission), added Hadley Wickham as an author in DESCRIPTION."
+cli,1,"`ansi_collapse(x, trunc = 1, style = ""head"")` now indeed show one element if `length(x) == 2`, as documented (@​salim-b, #572)."
+cli,2,"`ansi_collapse()` gains a `sep2` argument to specify a seperate separator for length-two inputs. It defaults to `"" and ""` which, in conjunction with the other defaults, produces a collapsed string that fully adheres to the [serial comma](https://en.wikipedia.org/wiki/Serial_comma) rules. (@​salim-b, #569)"
+cli,3,"`ansi_string()` is now an exported function (@​multimeric, #573)."
+cli,4,ANSI hyperlinks are now turned off on the RStudio render plane (#581).
+cli,5,"The progressr progress handler now reports progress correctly (@​HenrikBengtsson, #558)."
+cli,6,"New `hash_*sha1()` functions to calculate the SHA-1 hash of strings, objects, files."
+cli,7,"cli now shows progress bars after one second by default, if they are less than half way at the point. (Or after two seconds, unconditionally, as before.) See the the `cli.progress_show_after` option in `?cli-config` for details (#542)."
+cli,8,"`format_inline()` now has a new argument `keep_whitespace`, and it keeps whitespace, including newline and form feed characters by default."
+cli,9,New `keypress()` function to read a single key press from a terminal.
+cli,10,New function `pretty_print_code()` to print function objects with syntax highlighting at the R console.
+cli,11,`col_*` and `bg_*` functions how handle zero-length input correctly (#532).
+cli,12,New function `ansi_collapse()` to collapse character vectors into a single string.
+cli,13,"`ansi_strtrim()` now handles some edge cases better, when `ellipsis` has length zero, and when it is wider than `width`."
+cli,14,New `hash_file_md5()` function to calculate the MD5 hash of one or more files.
+cli,15,cli has better error messages now.
+cli,16,"New `format_inline()` argument: `collapse`, to collapse multi-line output, potentially because of `\f` characters."
+cli,17,New experimental styles to create ANSI hyperlinks in RStudio and terminals that support them. See `?cli::links` for details (#513).
+cli,18,Expressions that start and end with a `{}` substitution are now styled correctly. E.g. `{.code {var1} + {var2}}` (#517).
+cli,19,New `{.obj_type_friendly}` inline style to format the type of an R object in a user friendly way (#463).
+cli,20,"Improved vector collapsing behavior. cli now shows both the beginning and end of the collapsed vector, by default (#419)."
+cli,21,Nested `cli()` calls work now (#497).
+cli,22,Return values now work as they should within `cli()` calls (#496).
+cli,23,"Style attributes with underscores have new names with dashes instead: `vec_sep`, `vec_last`, `vec_trunc`, `string-quote`. The old names still work, but the new ones take precedence (#483)."
+cli,24,cli now does not crash at the end of the R session on Arm Windows (#494; @​kevinushey)
+cli,25,"Vectors are truncated at 20 elements now by default, instead of 100 (#430)."
+cli,26,"20 new spinners from the awesome [cli-spinners](https://github.com/sindresorhus/cli-spinners) package, and from @​HenrikBengtsson in #469. Run this to demo them, some need UTF-8 and emoji support:"
+>>>>>>> 1b8eb09 (fix bugs and update tests)
 cli,26,"```
 >>>>>>> 9592342 (make remove_old_bullets() more intelligent)
 new <- c(""dots13"", ""dots8Bit"", ""sand"", ""material"", ""weather"", ""christmas"",
@@ -7275,6 +7822,7 @@ dbplyr,111,"```
 SELECT `x` / `x` AS `x`, `y` / `x` AS `y`
 FROM `df`
 <<<<<<< HEAD
+<<<<<<< HEAD
 ```"
 dbplyr,111,ffbfd1a3442e8513e0cad384dcf8760d,instead of
 dbplyr,111,ffbfd1a3442e8513e0cad384dcf8760d,"```
@@ -7282,6 +7830,10 @@ dbplyr,111,ffbfd1a3442e8513e0cad384dcf8760d,"```
 =======
 ```"
 dbplyr,111,instead of
+=======
+```"
+dbplyr,111,instead of
+>>>>>>> 1b8eb09 (fix bugs and update tests)
 dbplyr,111,"```
 >>>>>>> 9592342 (make remove_old_bullets() more intelligent)
 SELECT `x`, `y` / `x` AS `y`
@@ -7289,6 +7841,7 @@ FROM (
   SELECT `x` / `x` AS `x`, `y`
   FROM `df`
 ) 
+<<<<<<< HEAD
 <<<<<<< HEAD
 ```"
 <<<<<<< HEAD
@@ -8092,6 +8645,364 @@ dbplyr,462,Added support for `sd()` for aggregate and window functions (#2887) (
 dbplyr,463,"You can now use the magrittr pipe within expressions, e.g. `mutate(mtcars, cyl %>% as.character())`."
 dbplyr,464,"If a translation was supplied for a summarise function, but not for the equivalent windowed variant, the expression would be translated to `NULL` with a warning. Now `sql_variant()` checks that all aggregate functions have matching window functions so that correct translations or clean errors will be generated (#2887)"
 dbplyr,465,"`tbl()` and `copy_to()` now work directly with DBI connections (#2423, #2576), so there is no longer a need to generate a dplyr src."
+=======
+```"
+dbplyr,111,"(@​mgirlich, #1015)."
+dbplyr,112,"Restricted length of table aliases to avoid truncation on certain backends (e.g., Postgres) (@​fh-mthomson, #1096)"
+dbplyr,113,"Compatibility with purrr 1.0.0 (@​mgirlich, #1085)."
+dbplyr,114,"`stringr::str_like()` (new in 1.5.0) is translated to the closest `LIKE` equivalent (@​rjpat, #509)"
+dbplyr,115,In preparation for dplyr 1.1.0:
+dbplyr,116,"The `.by` argument is supported (@​mgirlich, #1051)."
+dbplyr,117,"Passing `...` to `across()` is deprecated because the evaluation timing of `...` is ambiguous. Now instead of (e.g.) `across(a:b, mean, na.rm = TRUE)` use `across(a:b, \(x) mean(x, na.rm = TRUE)`"
+dbplyr,118,"`pick()` is translated (@​mgirlich, #1044)."
+dbplyr,119,"`case_match()` is translated (@​mgirlich, #1020)."
+dbplyr,120,"`case_when()` now supports the `.default` argument (@​mgirlich, #1017)."
+dbplyr,121,"Variables that aren't found in either the data or in the environment now produce an error (@​mgirlich, #907)."
+dbplyr,122,"dbplyr now produces fewer subqueries resulting in shorter, more readable, and, in some cases, faster SQL. The following combination of verbs now avoids a subquery if possible:"
+dbplyr,123,"`*_join()` + `select()` (@​mgirlich, #876)."
+dbplyr,124,"`select()` + `*_join()` (@​mgirlich, #875)."
+dbplyr,125,"`mutate()` + `filter()` and `filter()` + `filter()` (@​mgirlich, #792)."
+dbplyr,126,"`distinct()` (@​mgirlich, #880)."
+dbplyr,127,"`summarise()` + `filter()` now translates to `HAVING` (@​mgirlich, #877)."
+dbplyr,128,"`left/inner_join()` + `left/inner_join()` (@​mgirlich, #865)."
+dbplyr,129,"dbplyr now uses `SELECT *` after a join instead of explicitly selecting every column, where possible (@​mgirlich, #898)."
+dbplyr,130,"Joins only use the table aliases (""LHS"" and ""RHS"") if necessary (@​mgirlich)."
+dbplyr,131,"When using common table expressions, the results of joins and set operations are now reused (@​mgirlich, #978)."
+dbplyr,132,"Many errors have been improved and now show the function where the error happened instead of a helper function (@​mgirlich, #907)."
+dbplyr,133,"Errors produced by the database, e.g. in `collect()` or `rows_*()`, now show the verb where the error happened (@​mgirlich)."
+dbplyr,134,"`window_order()` now produces a better error message when applied to a data frame (@​mgirlich, #947)."
+dbplyr,135,"Using a named `across()` now gives a clear error message (@​mgirlich, #761)."
+dbplyr,136,"Keyword highlighting can now be customised via the option `dbplyr_highlight`. Turn it off via `options(dbplyr_highlight = FALSE)` or pass a custom ansi style, e.g. `options(dbplyr_highlight = cli::combine_ansi_styles(""bold"", ""cyan""))` (@​mgirlich, #974)."
+dbplyr,137,"The rank functions (`row_number()`, `min_rank()`, `rank()`, `dense_rank()`, `percent_rank()`, and `cume_dist()`) now give missing values the rank NA to match the behaviour of dplyr (@​mgirlich, #991)."
+dbplyr,138,`NA`s in `blob()`s are correctly translated to `NULL` (#983).
+dbplyr,139,"`copy_inline()` gains a `types` argument to specify the SQL column types (@​mgirlich, #963)."
+dbplyr,140,"`cur_column()` is now supported (@​mgirlich, #951)."
+dbplyr,141,"`distinct()` returns columns ordered the way you request, not the same as the input data (@​mgirlich)."
+dbplyr,142,"`fill()` can now fill ""downup"" and ""updown"" (@​mgirlich, #1057), and now order by non-numeric columns also in the up direction (@​mgirlich, #1057)."
+dbplyr,143,`filter()` now works when using a window function and an external vector (#1048).
+dbplyr,144,"`group_by()` + renamed columns works once again (@​mgirlich, #928)."
+dbplyr,145,"`last()` is correctly translated when no window frame is specified (@​mgirlich, #1063)."
+dbplyr,146,"`setOldClass()` uses a namespace, fixing an installation issue (@​mgirlich, #927)."
+dbplyr,147,"`sql()` is now translated differently. The `...` are now evaluated locally instead of being translated with `translate_sql()` (@​mgirlich, #952)."
+dbplyr,148,HANA:
+dbplyr,149,Correctly translates `as.character()` (#1027).
+dbplyr,150,`copy_inline()` now works for Hana (#950)
+dbplyr,151,MySQL:
+dbplyr,152,"`str_flatten()` uses `collapse = """"` by default (@​fh-afrachioni, #993)"
+dbplyr,153,Oracle:
+dbplyr,154,"`slice_sample()` now works for Oracle (@​mgirlich, #986)."
+dbplyr,155,`copy_inline()` now works for Oracle (#972)
+dbplyr,156,PostgreSQL:
+dbplyr,157,Generates correct literals for Dates (#727).
+dbplyr,158,"`str_flatten()` uses `collapse = """"` by default (@​fh-afrachioni, #993)"
+dbplyr,159,"`rows_*()` use the column types of `x` when auto copying (@​mgirlich, #909)."
+dbplyr,160,Redshift:
+dbplyr,161,"`round()` now respects the `digits` argument (@​owenjonesuob, #1033)."
+dbplyr,162,"No longer tries to use named windows anymore (@​owenjonesuob, #1035)."
+dbplyr,163,"`copy_inline()` now works for Redshift (#949, thanks to @​ejneer for an initial implementation)."
+dbplyr,164,"`str_flatten()` uses `collapse = """"` by default (@​fh-afrachioni, #993)"
+dbplyr,165,Snowflake:
+dbplyr,166,"numeric functions: `all()`, `any()`, `log10()`, `round()`, `cor()`, `cov()` and `sd()`."
+dbplyr,167,"date functions: `day()`, `mday()`, `wday()`, `yday()`, `week()`, `isoweek()`, `month()`, `quarter()`, `isoyear()`, `seconds()`, `minutes()`, `hours()`, `days()`, `weeks()`, `months()`, `years()` and `floor_date()`."
+dbplyr,168,"string functions: `grepl()`, `paste()`, `paste0()`, `str_c()`, `str_locate()`, `str_detect()`, `str_replace()`, `str_replace_all()`, `str_remove()`, `str_remove_all()`, `str_trim()`, `str_squish()` and `str_flatten()` (@​fh-afrachioni, #860)."
+dbplyr,169,"`str_flatten()` uses `collapse = """"` by default (@​fh-afrachioni, #993)"
+dbplyr,170,SQLite:
+dbplyr,171,"`quantile()` gives a better error saying that it is not supported (@​mgirlich, #1000)."
+dbplyr,172,SQL server:
+dbplyr,173,"`as.POSIXct()` now translated correctly (@​krlmlr, #1011)."
+dbplyr,174,`median()` now translated correctly (#1008).
+dbplyr,175,"`pivot_wider()` works again for MS SQL (@​mgirlich, #929)."
+dbplyr,176,"Always use 1 and 0 as literals for logicals (@​krlmlr, #934)."
+dbplyr,177,Teradata:
+dbplyr,178,"Querying works again. Unfortunately, the fix requires every column to once again by explicitly selected (@​mgirlich, #966)."
+dbplyr,179,"New translations for `as.Date()`, `week()`, `quarter()`, `paste()`, `startsWith()`, `row_number()`, `weighted.mean()`, `lead()`, `lag()`, and `cumsum()` (@​overmar, #913)."
+dbplyr,180,"Querying Oracle databases works again. Unfortunately, the fix requires every column to be explicitly selected again (@​mgirlich, #908)."
+dbplyr,181,"`semi_join()` and `anti_join()` work again for Spark (@​mgirlich, #915)."
+dbplyr,182,"`str_c()` is now translated to `||` in Oracle (@​mgirlich, #921)."
+dbplyr,183,"`sd()`, `var()`, `cor()` and `cov()` now give clear error messages on databases that don't support them."
+dbplyr,184,`any()` and `all()` gain default translations for all backends.
+dbplyr,185,"SQL formatting has been considerably improved with new wrapping and indenting. `show_query()` creates more readable queries by printing the keywords in blue (@​mgirlich, #644). When possible dbplyr now uses `SELECT *` instead of explicitly selecting every column (@​mgirlich)."
+dbplyr,186,"Added support for `rows_insert()`, `rows_append()`, `rows_update()`, `rows_patch()`, `rows_upsert()`, and `rows_delete()` (@​mgirlich, #736)."
+dbplyr,187,"Added `copy_inline()` as a `copy_to()` equivalent that does not need write access (@​mgirlich, #628)."
+dbplyr,188,"`remote_query()`, `show_query()`, `compute()` and `collect()` have an experimental `cte` argument. If `TRUE` the SQL query will use common table expressions instead of nested queries (@​mgirlich, #638)."
+dbplyr,189,"New `in_catalog()`, which works like `in_schema()`, but allows creation of table identifiers consisting of three components: catalog, schema, name (#806, @​krlmlr)."
+dbplyr,190,"When possible, dbplyr now uses `SELECT *` instead of explicitly selecting every column (@​mgirlich)."
+dbplyr,191,"New translation for `cut()` (@​mgirlich, #697)."
+dbplyr,192,Improved translations for specific backends:
+dbplyr,193,"`as.Date()` for Oracle (@​mgirlich, #661)."
+dbplyr,194,"`case_when()` with a final clause of the form `TRUE ~ ...` uses `ELSE ...` for SQLite (@​mgirlich, #754)."
+dbplyr,195,"`day()`, `week()`, `isoweek()`, and `isoyear()` for Postgres (@​mgirlich, #675)."
+dbplyr,196,`explain()` for ROracle (@​mgirlich).
+dbplyr,197,"`fill()` for SQL Server (#651, @​mgirlich) and RPostgreSQL (@​mgirlich)."
+dbplyr,198,"`quantile()` for SQL Server (@​mgirlich, #620)."
+dbplyr,199,"`str_flatten()` for Redshift (@​hdplsa, #804)"
+dbplyr,200,"`slice_sample()` for MySQL/MariaDB and SQL Server (@​mgirlich, #617)."
+dbplyr,201,"`union()` for Hive (@​mgirlich, #663)."
+dbplyr,202,"The backend function `dbplyr_fill0()` (used for databases that lack `IGNORE NULLS` support) now respects database specific translations (@​rsund, #753)."
+dbplyr,203,"Calls of the form `stringr::foo()` or `lubridate::foo()` are now evaluated in the database, rather than locally (#197)."
+dbplyr,204,"Unary plus (e.g. `db %>% filter(x == +1)`) now works (@​mgirlich, #674)."
+dbplyr,205,"`is.na()`, `ifelse()`, `if_else()`, `case_when()`, and `if()` generate slightly more compact SQL (@​mgirlich, #738)."
+dbplyr,206,"`if_else()` now supports the `missing` argument (@​mgirlich, #641)."
+dbplyr,207,"`n()` now respects the window frame (@​mgirlich, #700)."
+dbplyr,208,"`quantile()` no longer errors when using the `na.rm` argument (@​mgirlich, #600)."
+dbplyr,209,"`remote_name()` now returns a name in more cases where it makes sense (@​mgirlich, #850)."
+dbplyr,210,"The partial evaluation code is now more aligned with `dtplyr`. This makes it easier to transfer bug fixes and new features from one package to the other. In this process the second argument of `partial_eval()` was changed to a lazy frame instead of a character vector of variables (@​mgirlich, #766). Partially evaluated expressions with infix operations are now correctly translated. For example `translate_sql(!!expr(2 - 1) * x)` now works (@​mgirlich, #634)."
+dbplyr,211,"New `pillar::tbl_format_header()` method for lazy tables: Printing a lazy table where all rows are displayed also shows the exact number of rows in the header. The threshold is controlled by `getOption(""pillar.print_min"")`, with a default of 10 (#796, @​krlmlr)."
+dbplyr,212,The 1st edition extension mechanism is formally deprecated (#507).
+dbplyr,213,"`across()`, `if_any()` and `if_all()` now defaults to `.cols = everything()` (@​mgirlich, #760). If `.fns` is not provided `if_any()` and `if_all()` work like a parallel version of `any()`/`any()` (@​mgirlich, #734)."
+dbplyr,214,"`across()`, `if_any()`, and `if_all()` can now translate evaluated lists and functions (@​mgirlich, #796), and accept the name of a list of functions (@​mgirlich, #817)."
+dbplyr,215,"Multiple `across()` calls in `mutate()` and `transmute()` can now access freshly created variables (@​mgirlich, #802)."
+dbplyr,216,"`add_count()` now doesn't change the groups of the input (@​mgirlich, #614)."
+dbplyr,217,"`compute()` can now handle when `name` is named by unnaming it first (@​mgirlich, #623), and now works when `temporary = TRUE` for Oracle (@​mgirlich, #621)."
+dbplyr,218,"`distinct()` now supports `.keep_all = TRUE` (@​mgirlich, #756)."
+dbplyr,219,"`expand()` now works in DuckDB (@​mgirlich, #712)."
+dbplyr,220,"`explain()` passes `...` to methods (@​mgirlich, #783), and works for Redshift (@​mgirlich, #740)."
+dbplyr,221,"`filter()` throws an error if you supply a named argument (@​mgirlich, #764)."
+dbplyr,222,"Joins disambiguates columns that only differ in case (@​mgirlich, #702). New arguments `x_as` and `y_as` allow you to control the table alias used in SQL query (@​mgirlich, #637). Joins with `na_matches = ""na""` now work for DuckDB (@​mgirlich, #704)."
+dbplyr,223,"`mutate()` and `transmute()` use named windows if a window definition is used at least twice and the backend supports named windows (@​mgirlich, #624)."
+dbplyr,224,"`mutate()` now supports the arguments `.keep`, `.before`, and `.after` (@​mgirlich, #802)."
+dbplyr,225,`na.rm = FALSE` only warns once every 8 hours across all functions (#899).
+dbplyr,226,"`nesting()` now supports the `.name_repair` argument (@​mgirlich, #654)."
+dbplyr,227,"`pivot_longer()` can now pivot a column named `name` (@​mgirlich, #692), can repair names (@​mgirlich, #694), and can work with multiple `names_from` columns (@​mgirlich, #693)."
+dbplyr,228,"`pivot_wider(values_fn = )` and `pivot_longer(values_transform = )` can now be formulas (@​mgirlich, #745)."
+dbplyr,229,"`pivot_wider()` now supports the arguments `names_vary`, `names_expand`, and `unused_fn` (@​mgirlich, #774)."
+dbplyr,230,"`remote_name()` now returns a name in more cases where it makes sense (@​mgirlich, #850)."
+dbplyr,231,`sql_random()` is now exported.
+dbplyr,232,"`ungroup()` removes variables in `...` from grouping (@​mgirlich, #689)."
+dbplyr,233,"`transmute()` now keeps grouping variables (@​mgirlich, #802)."
+dbplyr,234,New support for Snowflake (@​edgararuiz)
+dbplyr,235,"`compute()`, `sql_table_index()`, and `sql_query_wrap()` now work with schemas (@​mgirlich, #595)."
+dbplyr,236,`if_any()` and `if_all()` are now translated.
+dbplyr,237,"`group_by()` now ungroups when the dots argument is empty and `.add` is `FALSE` (@​mgirlich, #615)."
+dbplyr,238,"`sql_escape_date()` and `sql_escape_datetime` gain methods for MS Access (@​erikvona, #608)."
+dbplyr,239,"Thanks to @​mgirlich, dbplyr gains support for key verbs from tidyr: `pivot_longer()` (#532), `pivot_wider()` (#543), `expand()` (#538), `complete()` (#538), `replace_na()` (#538), `fill()` (#566)."
+dbplyr,240,@​mgirlich is now a dbplyr author in recognition of his significant and sustained contributions.
+dbplyr,241,"`across()` implementation has been rewritten to support more inputs: it now translates formulas (#525), works with SQL functions that don't have R translations (#534), and work with `NULL` (#554)"
+dbplyr,242,"`summarise()` now supports argument `.groups` (@​mgirlich, #584)."
+dbplyr,243,"All backends: `str_sub()`, `substr()` and `substring()` get better translations (#577). Most importantly, the results of using negative locations should match the underlying R implementations more closely."
+dbplyr,244,MS SQL:
+dbplyr,245,"`as.integer()` and `as.integer64()` translations cast first to `NUMERIC` to avoid CASTing weirdness (@​DavidPatShuiFong, #496)."
+dbplyr,246,Assumes a boolean context inside of `[` (#546)
+dbplyr,247,`str_sub()` with `end = -1` now works (#577).
+dbplyr,248,"Redshift: `lag()` and `lead()` lose the `default` parameter since it's not supported (@​hdplsa, #548)."
+dbplyr,249,"SQLite: custom translation of `full_join()` and `right_join()` (@​mgirlich, #536)."
+dbplyr,250,RPostgreSQL backend warns if `temporary = TRUE` since temporary tables are not supported by `RPostgreSQL::dbWriteTable()` (#574).
+dbplyr,251,`count()` method provides closer match to dplyr semantics (#347).
+dbplyr,252,"`distinct()` now respects grouping (@​mgirlich, #535)."
+dbplyr,253,"`db_connection_describe()` no longer uses partial matching (@​mgirlich, #564)."
+dbplyr,254,`pull()` no longer `select()`s the result when there's already only one variable (#562).
+dbplyr,255,"`select()` no longer relocates grouping variables to the front (@​mgirlich, #568). and informs when adding missing grouping variables (@​mgirlich, #559)."
+dbplyr,256,`tbl.src_dbi(...)` now passed on to `tbl_sql()` (#530).
+dbplyr,257,`across()` is now translated into individual SQL statements (#480).
+dbplyr,258,`rename()` and `select()` support dplyr 1.0.0 tidyselect syntax (apart from predicate functions which can't easily work on computed queries) (#502).
+dbplyr,259,`relocate()` makes it easy to move columns (#494) and `rename_with()` makes it easy to rename columns programmatically (#502).
+dbplyr,260,"`slice_min()`, `slice_max()`, and `slice_order()` are now supported. `slice_head()` and `slice_tail()` throw clear error messages (#394)"
+dbplyr,261,Documentation has been radically improved with new topics for each major verb and each backend giving more details about the SQL translation.
+dbplyr,262,"`intersect()`, `union()` and `setdiff()` gain an `all` argument to add the `ALL` argument (#414)."
+dbplyr,263,"Join functions gains a `na_matches` argument that allows you to control whether or not `NA` (`NULL`) values match other `NA` values. The default is `""never""`, which is the usual behaviour in databases. You can set `na_matches = ""na""` to match R's usual join behaviour (#180). Additional arguments error (instead of being silently swallowed) (#382)."
+dbplyr,264,Joins now only use aliases where needed to disambiguate columns; this should make generated queries more readable.
+dbplyr,265,"Subqueries no longer include an `ORDER BY` clause. This is not part of the SQL spec, and has very limited support across databases. Now such queries generate a warning suggesting that you move your `arrange()` call later in the pipeline (#276). (There's one exception: `ORDER BY` is still generated if `LIMIT` is present; this tends to affect the returns rows but not necessarily their order)."
+dbplyr,266,Subquery names are now scoped within the query. This makes query text deterministic which helps some query optimisers/cachers (#336).
+dbplyr,267,`sql_optimise()` now can partially optimise a pipeline; due to an unfortunate bug it previously gave up too easily.
+dbplyr,268,"`in_schema()` quotes each input individually (#287) (use `sql()` to opt out of quoting, if needed). And `DBI::Id()` should work anywhere that `in_schema()` does."
+dbplyr,269,Experimental new SAP HANA backend (#233). Requires the latest version of odbc.
+dbplyr,270,All backends:
+dbplyr,271,"You can now use `::` in translations, so that (e.g.) `dbplyr::n()` is translated to `count(*)` (#207)."
+dbplyr,272,`[[` can now also translate numeric indices (#520).
+dbplyr,273,`%/%` now generates a clear error message; previously it was translated to `/` which is not correct (#108).
+dbplyr,274,`n()` is translated to `count(*)` instead of `count()` (#343).
+dbplyr,275,`sub_str()` translation is more consistent in edge cases (@​ianmcook).
+dbplyr,276,"All `median()` (@​lorenzwalthert, #483), `pmin()`, `pmax()` (#479), `sd()` and `var()` functions have an `na.rm` argument that warns once when not `TRUE`. This makes them consistent with `mean()` and `sum()`."
+dbplyr,277,`substring()` is now translated the same way as `substr()` (#378).
+dbplyr,278,"[blob](https://blob.tidyverse.org/) vectors can now be used with `!!` and `!!!` operators, for example in `filter()` (@​okhoma, #433)"
+dbplyr,279,MySQL uses standard SQL for index creation.
+dbplyr,280,"MS SQL translation does better a distinguishing between bit and boolean (#377, #318). `if` and `ifelse` once again generate `IIF`, creating simpler expressions. `as.*()` function uses `TRY_CAST()` instead of `CAST()` for version 11+ (2012+) (@​DavidPatShuiFong, #380)."
+dbplyr,281,odbc no longer translates `count()`; this was an accidental inclusion.
+dbplyr,282,"Oracle translation now depends on Oracle 12c, and uses a ""row-limiting"" clause for `head()`. It gains translations for `today()` and `now()`, and improved `as.Date()` translation (@​rlh1994, #267)."
+dbplyr,283,"PostgreSQL: new translations for lubridate period functions `years()`, `months()`, `days()`, and `floor_date()` (@​bkkkk, #333) and stringr functions `str_squish()`, `str_remove()`, and `str_remove_all()` (@​shosaco)."
+dbplyr,284,New RedShift translations when used with `RPostgres::Redshift()`.
+dbplyr,285,"`str_replace()` errors since there's no Redshift translation, and `str_replace_all()` uses `REGEXP_REPLACE()` (#446)."
+dbplyr,286,`paste()` and `paste0()` use `||` (#458).
+dbplyr,287,`as.numeric()` and `as.double()` cast to `FLOAT` (#408).
+dbplyr,288,`substr()` and `str_sub()` use `SUBSTRING()` (#327).
+dbplyr,289,"SQLite gains translations for lubridate functions `today()`, `now()`, `year()`, `month()`, `day()`, `hour()`, `minute()`, `second()`,`yday()` (#262), and correct translation for `median()` (#357)."
+dbplyr,290,New `dbplyr_edition()` generic allows you to opt-in to the 2nd edition of the dbplyr API.
+dbplyr,291,"`db_write_table()` now calls `DBI::dbWriteTable()` instead of nine generics that formerly each did a small part: `db_create_indexes()`, `db_begin()`, `db_rollback()`, `db_commit()`, `db_list_tables()`, `drop_drop_table()`, `db_has_table()`, `db_create_table()`, and `db_data_types()`. You can now delete the methods for these generics. `db_query_rows()` is no longer used; it appears that it hasn't been used for some time, so if you have a method, you can delete it."
+dbplyr,292,`DBI::dbQuoteIdentifier()` is now used instead of `sql_escape_ident()` and `DBI::dbQuoteString()` instead of `sql_escape_string()`.
+dbplyr,293,A number of `db_*` generics have been replaced with new SQL generation generics:
+dbplyr,294,`dplyr::db_analyze()` -\> `dbplyr::sql_table_analyze()`
+dbplyr,295,`dplyr::db_create_index()` -\> `dbplyr::sql_table_index()`
+dbplyr,296,`dplyr::db_explain()` -\> `dbplyr::sql_queriy_explain()`
+dbplyr,297,`dplyr::db_query_fields()` -\> `dbplyr::sql_query_fields()`
+dbplyr,298,`dplyr::db_save_query()` -\> `dbplyr::sql_query_save()` This makes them easier to test and is an important part of the process of moving all database generics in dbplyr (#284).
+dbplyr,299,A number of other generics have been renamed to facilitate the move from dplyr to dbplyr:
+dbplyr,300,`dplyr::sql_select()` -\> `dbplyr::sql_query_select()`
+dbplyr,301,`dplyr::sql_join()` -\> `dbplyr::sql_query_join()`
+dbplyr,302,`dplyr::sql_semi_join()` -\> `dbplyr::sql_query_semi_join()`
+dbplyr,303,`dplyr::sql_set_op()` -\> `dbplyr::sql_query_set_op()`
+dbplyr,304,`dplyr::sql_subquery()` -\> `dbplyr::sql_query_wrap()`
+dbplyr,305,`dplyr::db_desc()` -\> `dbplyr::db_connection_describe()`
+dbplyr,306,New `db_temporary_table()` generic makes it easier to work with databases that require temporary tables to be specially named.
+dbplyr,307,"New `sql_expr_matches()` generic allows databases to use more efficient alternatives when determine if two values ""match"" (i.e. like equality but a pair of `NULL`s will also match). For more details, see <https://modern-sql.com/feature/is-distinct-from>"
+dbplyr,308,New `sql_join_suffix()` allows backends to control the default suffixes used (#254).
+dbplyr,309,All old lazy eval shims have been removed. These have been deprecated for some time.
+dbplyr,310,Date-time escaping methods for Athena and Presto have moved to the packages where they belong.
+dbplyr,311,Attempting to embed a Shiny reactive in a query now gives a helpful error (#439).
+dbplyr,312,`copy_lahman()` and `copy_nycflights13()` (and hence `nycflights13_sqlite()`) and friends now return DBI connections rather than the now deprecated `src_dbi()` (#440).
+dbplyr,313,"`copy_to()` can now `overwrite` when table is specified with schema (#489), and gains an `in_transaction` argument used to optionally suppress the transaction wrapper (#368)."
+dbplyr,314,`distinct()` no longer duplicates column if grouped (#354).
+dbplyr,315,`transmute()` now correctly tracks variables it needs when creating subqueries (#313).
+dbplyr,316,`mutate()` grouping variables no longer generates a downstream error (#396)
+dbplyr,317,`mutate()` correctly generates subqueries when you re-use the same variable three or more times (#412).
+dbplyr,318,"`window_order()` overrides ordering, rather than appending to it."
+dbplyr,319,"Internally `DBI::dbExecute()` now uses `immediate = TRUE`; this improves support for session-scoped temporary tables in MS SQL (@​krlmlr, #438)."
+dbplyr,320,"Subqueries with `ORDER BY` use `TOP 9223372036854775807` instead of `TOP 100 PERCENT` on SQL Server for compatibility with Azure Data Warehouse (#337, @​alexkyllo)."
+dbplyr,321,"`escape()` now supports `blob` vectors using new `sql_escape_raw()` generic. It enables using [blob](https://blob.tidyverse.org/) variables in dplyr verbs, for example to filter nvarchar values by UTF-16 blobs (see https://github.com/r-dbi/DBI/issues/215#issuecomment-356376133). (@​okhoma, #433)"
+dbplyr,322,"Added `setOldClass()` calls for `""ident""` and `""ident_q""` classes for compatibility with dplyr 1.0.0 (#448, @​krlmlr)."
+dbplyr,323,"Postgres `str_detect()` translation uses same argument names as stringr, and gains a `negate` argument (#444)."
+dbplyr,324,"`semi_join()` and `anti_join()` now correctly support the `sql_on` argument (#443, @​krlmlr)."
+dbplyr,325,dbplyr now uses RPostgres (instead of RPostgreSQL) and RMariaDB (instead of RMySQL) for its internal tests and data functions (#427).
+dbplyr,326,"The Date and POSIXt methods for `escape()` now use exported `sql_escape_date()` and `sql_escape_datetime()` generics to allow backend specific formatting of date and datetime literals. These are used to provide methods for Athena and Presto backends (@​OssiLehtinen, #384, #391)."
+dbplyr,327,"`first()`, `last()`, `nth()`, `lead()` and `lag()` now respect the `window_frame()` (@​krlmlr, #366)."
+dbplyr,328,"SQL server: new translations for `str_flatten()` (@​PauloJhonny, #405)."
+dbplyr,329,"SQL server: temporary datasets are now session-local, not global (#401)."
+dbplyr,330,"Postgres: correct `str_detect()`, `str_replace()` and `str_replace_all()` translation (@​shosaco, #362)."
+dbplyr,331,Fix bug when partially evaluating unquoting quosure containing a single symbol (#317)
+dbplyr,332,Fixes for rlang and dpylr compatibility.
+dbplyr,333,`x %in% y` strips names of `y` (#269).
+dbplyr,334,"Enhancements for scoped verbs (`mutate_all()`, `summarise_if()`, `filter_at()` etc) (#296, #306)."
+dbplyr,335,MS SQL use `TOP 100 PERCENT` as stop-gap to allow subqueries with `ORDER BY` (#277).
+dbplyr,336,"Window functions now translated correctly for Hive (#293, @​cderv)."
+dbplyr,337,"`` Error: `con` must not be NULL ``: If you see this error, it probably means that you have forgotten to pass `con` down to a dbplyr function. Previously, dbplyr defaulted to using `simulate_dbi()` which introduced subtle escaping bugs. (It's also possible I have forgotten to pass it somewhere that the dbplyr tests don't pick up, so if you can't figure it out, please let me know)."
+dbplyr,338,"Subsetting (`[[`, `$`, and `[`) functions are no longer evaluated locally. This makes the translation more consistent and enables useful new idioms for modern databases (#200)."
+dbplyr,339,"MySQL/MariaDB (https://mariadb.com/kb/en/library/window-functions/) and SQLite (https://www.sqlite.org/windowfunctions.html) translations gain support for window functions, available in Maria DB 10.2, MySQL 8.0, and SQLite 3.25 (#191)."
+dbplyr,340,"Overall, dplyr generates many fewer subqueries:"
+dbplyr,341,Joins and semi-joins no longer add an unneeded subquery (#236). This is facilitated by the new `bare_identifier_ok` argument to `sql_render()`; the previous argument was called `root` and confused me.
+dbplyr,342,"Many sequences of `select()`, `rename()`, `mutate()`, and `transmute()` can be collapsed into a single query, instead of always generating a subquery (#213)."
+dbplyr,343,"New `vignette(""sql"")` describes some advantages of dbplyr over SQL (#205) and gives some advice about writing literal SQL inside of dplyr, when you need to (#196)."
+dbplyr,344,"New `vignette(""reprex"")` gives some hints on creating reprexes that work anywhere (#117). This is supported by a new `tbl_memdb()` that matches the existing `tbl_lazy()`."
+dbplyr,345,"All `..._join()` functions gain an `sql_on` argument that allows specifying arbitrary join predicates in SQL code (#146, @​krlmlr)."
+dbplyr,346,"New translations for some lubridate functions: `today()`, `now()`, `year()`, `month()`, `day()`, `hour()`, `minute()`, `second()`, `quarter()`, `yday()` (@​colearendt, @​derekmorr). Also added new translation for `as.POSIXct()`."
+dbplyr,347,"New translations for stringr functions: `str_c()`, `str_sub()`, `str_length()`, `str_to_upper()`, `str_to_lower()`, and `str_to_title()` (@​colearendt). Non-translated stringr functions throw a clear error."
+dbplyr,348,"New translations for bitwise operations: `bitwNot()`, `bitwAnd()`, `bitwOr()`, `bitwXor()`, `bitwShiftL()`, and `bitwShiftR()`. Unlike the base R functions, the translations do not coerce arguments to integers (@​davidchall, #235)."
+dbplyr,349,New translation for `x[y]` to `CASE WHEN y THEN x END`. This enables `sum(a[b == 0])` to work as you expect from R (#202). `y` needs to be a logical expression; if not you will likely get a type error from your database.
+dbplyr,350,"New translations for `x$y` and `x[[""y""]]` to `x.y`, enabling you to index into nested fields in databases that provide them (#158)."
+dbplyr,351,The `.data` and `.env` pronouns of tidy evaluation are correctly translated (#132).
+dbplyr,352,"New translation for `median()` and `quantile()`. Works for all ANSI compliant databases (SQL Server, Postgres, MariaDB, Teradata) and has custom translations for Hive. Thanks to @​edavidaja for researching the SQL variants! (#169)"
+dbplyr,353,`na_if()` is correct translated to `NULLIF()` (rather than `NULL_IF`) (#211).
+dbplyr,354,"`n_distinct()` translation throws an error when given more than one argument. (#101, #133)."
+dbplyr,355,"New default translations for `paste()`, `paste0()`, and the hyperbolic functions (these previously were only available for ODBC databases)."
+dbplyr,356,"Corrected translations of `pmin()` and `pmax()` to `LEAST()` and `GREATEST()` for ANSI compliant databases (#118), to `MIN()` and `MAX()` for SQLite, and to an error for SQL server."
+dbplyr,357,New translation for `switch()` to the simple form of `CASE WHEN` (#192).
+dbplyr,358,"SQL simulation has been overhauled. It now works reliably, is better documented, and always uses ANSI escaping (i.e. `` ` `` for field names and `'` for strings)."
+dbplyr,359,"`tbl_lazy()` now actually puts a `dbplyr::src` in the `$src` field. This shouldn't affect any downstream code unless you were previously working around this weird difference between `tbl_lazy` and `tbl_sql` classes. It also includes the `src` class in its class, and when printed, shows the generated SQL (#111)."
+dbplyr,360,MySQL/MariaDB
+dbplyr,361,"Translations also applied to connections via the odbc package (@​colearendt, #238)"
+dbplyr,362,"Basic support for regular expressions via `str_detect()` and\ `str_replace_all()` (@​colearendt, #168)."
+dbplyr,363,"Improved translation for `as.logical(x)` to `IF(x, TRUE, FALSE)`."
+dbplyr,364,Oracle
+dbplyr,365,"New custom translation for `paste()` and `paste0()` (@​cderv, #221)"
+dbplyr,366,Postgres
+dbplyr,367,"Basic support for regular expressions via `str_detect()` and\ `str_replace_all()` (@​colearendt, #168)."
+dbplyr,368,SQLite
+dbplyr,369,"`explain()` translation now generates `EXPLAIN QUERY PLAN` which generates a higher-level, more human friendly explanation."
+dbplyr,370,SQL server
+dbplyr,371,Improved translation for `as.logical(x)` to `CAST(x as BIT)` (#250).
+dbplyr,372,"Translates `paste()`, `paste0()`, and `str_c()` to `+`."
+dbplyr,373,`copy_to()` method applies temporary table name transformation earlier so that you can now overwrite temporary tables (#258).
+dbplyr,374,`db_write_table()` method uses correct argument name for passing along field types (#251).
+dbplyr,375,Aggregation functions only warn once per session about the use of `na.rm = TRUE` (#216).
+dbplyr,376,"table names generated by `random_table_name()` have the prefix ""dbplyr\_"", which makes it easier to find them programmatically (@​mattle24, #111)"
+dbplyr,377,Functions that are only available in a windowed (`mutate()`) query now throw an error when called in a aggregate (`summarise()`) query (#129)
+dbplyr,378,"`arrange()` understands the `.by_group` argument, making it possible sort by groups if desired. The default is `FALSE` (#115)"
+dbplyr,379,"`distinct()` now handles computed variables like `distinct(df, y = x + y)` (#154)."
+dbplyr,380,"`escape()`, `sql_expr()` and `build_sql()` no longer accept `con = NULL` as a shortcut for `con = simulate_dbi()`. This made it too easy to forget to pass `con` along, introducing extremely subtle escaping bugs. `win_over()` gains a `con` argument for the same reason."
+dbplyr,381,New `escape_ansi()` always uses ANSI SQL 92 standard escaping (for use in examples and documentation).
+dbplyr,382,"`mutate(df, x = NULL)` drops `x` from the output, just like when working with local data frames (#194)."
+dbplyr,383,"`partial_eval()` processes inlined functions (including rlang lambda functions). This makes dbplyr work with more forms of scoped verbs like `df %>% summarise_all(~ mean(.))`, `df %>% summarise_all(list(mean))` (#134)."
+dbplyr,384,"`sql_aggregate()` now takes an optional argument `f_r` for passing to `check_na_rm()`. This allows the warning to show the R function name rather than the SQL function name (@​sverchkov, #153)."
+dbplyr,385,`sql_infix()` gains a `pad` argument for the rare operator that doesn't need to be surrounded by spaces.
+dbplyr,386,"`sql_prefix()` no longer turns SQL functions into uppercase, allowing for correct translation of case-sensitive SQL functions (#181, @​mtoto)."
+dbplyr,387,`summarise()` gives a clear error message if you refer to a variable created in that same `summarise()` (#114).
+dbplyr,388,New `sql_call2()` which is to `rlang::call2()` as `sql_expr()` is to `rlang::expr()`.
+dbplyr,389,`show_query()` and `explain()` use `cat()` rather than message.
+dbplyr,390,"`union()`, `union_all()`, `setdiff()` and `intersect()` do a better job of matching columns across backends (#183)."
+dbplyr,391,Now supports for dplyr 0.8.0 (#190) and R 3.1.0
+dbplyr,392,"Calls of the form `dplyr::foo()` are now evaluated in the database, rather than locally (#197)."
+dbplyr,393,`vars` argument to `tbl_sql()` has been formally deprecated; it hasn't actually done anything for a while (#3254).
+dbplyr,394,"`src` and `tbl` objects now include a class generated from the class of the underlying connection object. This makes it possible for dplyr backends to implement different behaviour at the dplyr level, when needed. (#2293)"
+dbplyr,395,"`x %in% y` is now translated to `FALSE` if `y` is empty (@​mgirlich, #160)."
+dbplyr,396,New `as.integer64(x)` translation to `CAST(x AS BIGINT)` (#3305)
+dbplyr,397,"`case_when` now translates with a ELSE clause if a formula of the form `TRUE~<RHS>` is provided . (@​cderv, #112)"
+dbplyr,398,`cummean()` now generates `AVG()` not `MEAN()` (#157)
+dbplyr,399,`str_detect()` now uses correct parameter order (#3397)
+dbplyr,400,MS SQL
+dbplyr,401,Cumulative summary functions now work (#157)
+dbplyr,402,"`ifelse()` uses `CASE WHEN` instead of `IIF`; this allows more complex operations, such as `%in%`, to work properly (#93)"
+dbplyr,403,Oracle
+dbplyr,404,Custom `db_drop_table()` now only drops tables if they exist (#3306)
+dbplyr,405,Custom `setdiff()` translation (#3493)
+dbplyr,406,Custom `db_explain()` translation (#3471)
+dbplyr,407,SQLite
+dbplyr,408,"Correct translation for `as.numeric()`/`as.double()` (@​chris-park, #171)."
+dbplyr,409,Redshift
+dbplyr,410,`substr()` translation improved (#3339)
+dbplyr,411,"`copy_to()` will only remove existing table when `overwrite = TRUE` and the table already exists, eliminating a confusing ""NOTICE"" from PostgreSQL (#3197)."
+dbplyr,412,`partial_eval()` handles unevaluated formulas (#184).
+dbplyr,413,`pull.tbl_sql()` now extracts correctly from grouped tables (#3562).
+dbplyr,414,"`sql_render.op()` now correctly forwards the `con` argument (@​kevinykuo, #73)."
+dbplyr,415,R CMD check fixes
+dbplyr,416,Forward compatibility fixes for rlang 0.2.0
+dbplyr,417,New translations for
+dbplyr,418,MS Access (#2946) (@​DavisVaughan)
+dbplyr,419,"Oracle, via odbc or ROracle (#2928, #2732, @​edgararuiz)"
+dbplyr,420,Teradata.
+dbplyr,421,Redshift.
+dbplyr,422,dbplyr now supplies appropriate translations for the RMariaDB and RPostgres packages (#3154). We generally recommend using these packages in favour of the older RMySQL and RPostgreSQL packages as they are fully DBI compliant and tested with DBItest.
+dbplyr,423,"`copy_to()` can now ""copy"" tbl_sql in the same src, providing another way to cache a query into a temporary table (#3064). You can also `copy_to` tbl_sqls from another source, and `copy_to()` will automatically collect then copy."
+dbplyr,424,"Initial support for stringr functions: `str_length()`, `str_to_upper()`, `str_to_lower()`, `str_replace_all()`, `str_detect()`, `str_trim()`. Regular expression support varies from database to database, but most simple regular expressions should be ok."
+dbplyr,425,`db_compute()` gains an `analyze` argument to match `db_copy_to()`.
+dbplyr,426,"New `remote_name()`, `remote_con()`, `remote_src()`, `remote_query()` and `remote_query_plan()` provide a standard API for get metadata about a remote tbl (#3130, #2923, #2824)."
+dbplyr,427,New `sql_expr()` is a more convenient building block for low-level SQL translation (#3169).
+dbplyr,428,"New `sql_aggregate()` and `win_aggregate()` for generating SQL and windowed SQL functions for aggregates. These take one argument, `x`, and warn if `na.rm` is not `TRUE` (#3155). `win_recycled()` is equivalent to `win_aggregate()` and has been soft-deprecated."
+dbplyr,429,`db_write_table` now needs to return the table name
+dbplyr,430,Multiple `head()` calls in a row now collapse to a single call. This avoids a printing problem with MS SQL (#3084).
+dbplyr,431,`escape()` now works with integer64 values from the bit64 package (#3230)
+dbplyr,432,"`if`, `ifelse()`, and `if_else()` now correctly scope the false condition so that it only applies to non-NULL conditions (#3157)"
+dbplyr,433,"`ident()` and `ident_q()` handle 0-length inputs better, and should be easier to use with S3 (#3212)"
+dbplyr,434,"`in_schema()` should now work in more places, particularly in `copy_to()` (#3013, @​baileych)"
+dbplyr,435,SQL generation for joins no longer gets stuck in a endless loop if you request an empty suffix (#3220).
+dbplyr,436,`mutate()` has better logic for splitting a single mutate into multiple subqueries (#3095).
+dbplyr,437,"Improved `paste()` and `paste0()` support in MySQL, PostgreSQL (#3168), and RSQLite (#3176). MySQL and PostgreSQL gain support for `str_flatten()` which behaves like `paste(x, collapse = ""-"")` (but for technical reasons can't be implemented as a straightforward translation of `paste()`)."
+dbplyr,438,`same_src.tbl_sql()` now performs correct comparison instead of always returning `TRUE`. This means that `copy = TRUE` once again allows you to perform cross-database joins (#3002).
+dbplyr,439,"`select()` queries no longer alias column names unnecessarily (#2968, @​DavisVaughan)."
+dbplyr,440,"`select()` and `rename()` are now powered by tidyselect, fixing a few renaming bugs (#3132, #2943, #2860)."
+dbplyr,441,`summarise()` once again performs partial evaluation before database submission (#3148).
+dbplyr,442,`test_src()` makes it easier to access a single test source.
+dbplyr,443,MS SQL
+dbplyr,444,Better support for temporary tables (@​Hong-Revo)
+dbplyr,445,"Different translations for filter/mutate contexts for: `NULL` evaluation (`is.na()`, `is.null()`), logical operators (`!`, `&`, `&&`, `|`, `||`), and comparison operators (`==`, `!=`, `<`, `>`, `>=`, `<=`)"
+dbplyr,446,MySQL: `copy_to()` (via `db_write_table()`) correctly translates logical variables to integers (#3151).
+dbplyr,447,odbc: improved `n()` translation in windowed context.
+dbplyr,448,SQLite: improved `na_if` translation (@​cwarden)
+dbplyr,449,PostgreSQL: translation for `grepl()` added (@​zozlak)
+dbplyr,450,"Oracle: changed VARVHAR to VARCHAR2 datatype (@​washcycle, #66)"
+dbplyr,451,`full_join()` over non-overlapping columns `by = character()` translated to `CROSS JOIN` (#2924).
+dbplyr,452,"`case_when()` now translates to SQL ""CASE WHEN"" (#2894)"
+dbplyr,453,`x %in% c(1)` now generates the same SQL as `x %in% 1` (#2898).
+dbplyr,454,"New `window_order()` and `window_frame()` give you finer control over the window functions that dplyr creates (#2874, #2593)."
+dbplyr,455,Added SQL translations for Oracle (@​edgararuiz).
+dbplyr,456,`x %in% c(1)` now generates the same SQL as `x %in% 1` (#2898).
+dbplyr,457,"`head(tbl, 0)` is now supported (#2863)."
+dbplyr,458,`select()`ing zero columns gives a more information error message (#2863).
+dbplyr,459,"Variables created in a join are now disambiguated against other variables in the same table, not just variables in the other table (#2823)."
+dbplyr,460,PostgreSQL gains a better translation for `round()` (#60).
+dbplyr,461,"Added custom `db_analyze_table()` for MS SQL, Oracle, Hive and Impala (@​edgararuiz)"
+dbplyr,462,Added support for `sd()` for aggregate and window functions (#2887) (@​edgararuiz)
+dbplyr,463,"You can now use the magrittr pipe within expressions, e.g. `mutate(mtcars, cyl %>% as.character())`."
+dbplyr,464,"If a translation was supplied for a summarise function, but not for the equivalent windowed variant, the expression would be translated to `NULL` with a warning. Now `sql_variant()` checks that all aggregate functions have matching window functions so that correct translations or clean errors will be generated (#2887)"
+dbplyr,465,"`tbl()` and `copy_to()` now work directly with DBI connections (#2423, #2576), so there is no longer a need to generate a dplyr src."
+>>>>>>> 1b8eb09 (fix bugs and update tests)
 dbplyr,465,"```
 >>>>>>> 9592342 (make remove_old_bullets() more intelligent)
 library(dplyr)
@@ -8101,6 +9012,7 @@ copy_to(con, mtcars)
 
 mtcars2 <- tbl(con, ""mtcars"")
 mtcars2
+<<<<<<< HEAD
 <<<<<<< HEAD
 ```"
 dbplyr,466,2782add1facab842699cc7fa720a5378,`glimpse()` now works with remote tables (#2665)
@@ -8320,6 +9232,110 @@ dplyr,30,The developer documentation in `?dplyr_extending` has been refreshed an
 dplyr,31,`rename_with()` now includes an example of using `paste0(recycle0 = TRUE)` to correctly handle empty selections (#6688).
 dplyr,32,R \>=3.5.0 is now explicitly required. This is in line with the tidyverse policy of supporting the [5 most recent versions of R](https://www.tidyverse.org/blog/2019/04/r-version-support/).
 dplyr,33,"[`.by`/`by`](https://dplyr.tidyverse.org/reference/dplyr_by.html) is an experimental alternative to `group_by()` that supports per-operation grouping for `mutate()`, `summarise()`, `filter()`, and the `slice()` family (#6528). Rather than:"
+=======
+```"
+dbplyr,466,`glimpse()` now works with remote tables (#2665)
+dbplyr,467,"dplyr has gained a basic SQL optimiser, which collapses certain nested SELECT queries into a single query (#1979). This will improve query execution performance for databases with less sophisticated query optimisers, and fixes certain problems with ordering and limits in subqueries (#1979). A big thanks goes to @​hhoeflin for figuring out this optimisation."
+dbplyr,468,"`compute()` and `collapse()` now preserve the ""ordering"" of rows. This only affects the computation of window functions, as the rest of SQL does not care about row order (#2281)."
+dbplyr,469,`copy_to()` gains an `overwrite` argument which allows you to overwrite an existing table. Use with care! (#2296)
+dbplyr,470,"New `in_schema()` function makes it easy to refer to tables in schema: `in_schema(""my_schema_name"", ""my_table_name"")`."
+dbplyr,471,`query()` is no longer exported. It hasn't been useful for a while so this shouldn't break any code.
+dbplyr,472,Partial evaluation occurs immediately when you execute a verb (like `filter()` or `mutate()`) rather than happening when the query is executed (#2370).
+dbplyr,473,"`mutate.tbl_sql()` will now generate as many subqueries as necessary so that you can refer to variables that you just created (like in mutate with regular dataframes) (#2481, #2483)."
+dbplyr,474,SQL joins have been improved:
+dbplyr,475,"SQL joins always use the `ON ...` syntax, avoiding `USING ...` even for natural joins. Improved handling of tables with columns of the same name (#1997, @​javierluraschi). They now generate SQL more similar to what you'd write by hand, eliminating a layer or two of subqueries (#2333)"
+dbplyr,476,"\[API\] They now follow the same rules for including duplicated key variables that the data frame methods do, namely that key variables are only kept from `x`, and never from `y` (#2410)"
+dbplyr,477,"\[API\] The `sql_join()` generic now gains a `vars` argument which lists the variables taken from the left and right sides of the join. If you have a custom `sql_join()` method, you'll need to update how your code generates joins, following the template in `sql_join.generic()`."
+dbplyr,478,`full_join()` throws a clear error when you attempt to use it with a MySQL backend (#2045)
+dbplyr,479,"`right_join()` and `full_join()` now return results consistent with local data frame sources when there are records in the right table with no match in the left table. `right_join()` returns values of `by` columns from the right table. `full_join()` returns coalesced values of `by` columns from the left and right tables (#2578, @​ianmcook)"
+dbplyr,480,`group_by()` can now perform an inline mutate for database backends (#2422).
+dbplyr,481,"The SQL generation set operations (`intersect()`, `setdiff()`, `union()`, and `union_all()`) have been considerably improved. By default, the component SELECT are surrounded with parentheses, except on SQLite. The SQLite backend will now throw an error if you attempt a set operation on a query that contains a LIMIT, as that is not supported in SQLite (#2270). All set operations match column names across inputs, filling in non-matching variables with NULL (#2556)."
+dbplyr,482,`rename()` and `group_by()` now combine correctly (#1962)
+dbplyr,483,`tbl_lazy()` and `lazy_tbl()` have been exported. These help you test generated SQL with out an active database connection.
+dbplyr,484,`ungroup()` correctly resets grouping variables (#2704).
+dbplyr,485,New `as.sql()` safely coerces an input to SQL.
+dbplyr,486,"More translators for `as.character()`, `as.integer()` and `as.double()` (#2775)."
+dbplyr,487,New `ident_q()` makes it possible to specifier identifiers that do not need to be quoted.
+dbplyr,488,Translation of inline scalars:
+dbplyr,489,"Logical values are now translated differently depending on the backend. The default is to use ""true"" and ""false"" which is the SQL-99 standard, but not widely support. SQLite translates to ""0"" and ""1"" (#2052)."
+dbplyr,490,`Inf` and `-Inf` are correctly escaped
+dbplyr,491,Better test for whether or not a double is similar to an integer and hence needs a trailing 0.0 added (#2004).
+dbplyr,492,Quoting defaults to `DBI::dbEscapeString()` and `DBI::dbQuoteIdentifier()` respectively.
+dbplyr,493,`::` and `:::` are handled correctly (#2321)
+dbplyr,494,`x %in% 1` is now correctly translated to `x IN (1)` (#511).
+dbplyr,495,`ifelse()` and `if_else()` use correct argument names in SQL translation (#2225).
+dbplyr,496,"`ident()` now returns an object with class `c(""ident"", ""character"")`. It no longer contains ""sql"" to indicate that this is not already escaped."
+dbplyr,497,`is.na()` and `is.null()` gain extra parens in SQL translation to preserve correct precedence (#2302).
+dbplyr,498,"\[API\] `log(x, b)` is now correctly translated to the SQL `log(b, x)` (#2288). SQLite does not support the 2-argument log function so it is translated to `log(x) / log(b)`."
+dbplyr,499,"`nth(x, i)` is now correctly translated to `nth_value(x, i)`."
+dbplyr,500,`n_distinct()` now accepts multiple variables (#2148).
+dbplyr,501,"\[API\] `substr()` is now translated to SQL, correcting for the difference in the third argument. In R, it's the position of the last character, in SQL it's the length of the string (#2536)."
+dbplyr,502,`win_over()` escapes expression using current database rules.
+dbplyr,503,`copy_to()` now uses `db_write_table()` instead of `db_create_table()` and `db_insert_into()`. `db_write_table.DBIConnection()` uses `dbWriteTable()`.
+dbplyr,504,"New `db_copy_to()`, `db_compute()` and `db_collect()` allow backends to override the entire database process behind `copy_to()`, `compute()` and `collect()`. `db_sql_render()` allow additional control over the SQL rendering process."
+dbplyr,505,All generics whose behaviour can vary from database to database now provide a DBIConnection method. That means that you can easily scan the NAMESPACE to see the extension points.
+dbplyr,506,`sql_escape_logical()` allows you to control the translation of literal logicals (#2614).
+dbplyr,507,"`src_desc()` has been replaced by `db_desc()` and now dispatches on the connection, eliminating the last method that required dispatch on the class of the src."
+dbplyr,508,"`win_over()`, `win_rank()`, `win_recycled()`, `win_cumulative()`, `win_current_group()` and `win_current_order()` are now exported. This should make it easier to provide customised SQL for window functions (#2051, #2126)."
+dbplyr,509,SQL translation for Microsoft SQL Server (@​edgararuiz)
+dbplyr,510,SQL translation for Apache Hive (@​edgararuiz)
+dbplyr,511,SQL translation for Apache Impala (@​edgararuiz)
+dbplyr,512,`collect()` once again defaults to return all rows in the data (#1968). This makes it behave the same as `as.data.frame()` and `as_tibble()`.
+dbplyr,513,`collect()` only regroups by variables present in the data (#2156)
+dbplyr,514,"`collect()` will automatically LIMIT the result to the `n`, the number of rows requested. This will provide the query planner with more information that it may be able to use to improve execution time (#2083)."
+dbplyr,515,`common_by()` gets a better error message for unexpected inputs (#2091)
+dbplyr,516,"`copy_to()` no longer checks that the table doesn't exist before creation, instead preferring to fall back on the database for error messages. This should reduce both false positives and false negative (#1470)"
+dbplyr,517,"`copy_to()` now succeeds for MySQL if a character column contains `NA` (#1975, #2256, #2263, #2381, @​demorenoc, @​eduardgrebe)."
+dbplyr,518,`copy_to()` now returns its output invisibly (since you're often just calling for the side-effect).
+dbplyr,519,`distinct()` reports improved variable information for SQL backends. This means that it is more likely to work in the middle of a pipeline (#2359).
+dbplyr,520,Ungrouped `do()` on database backends now collects all data locally first (#2392).
+dbplyr,521,Call `dbFetch()` instead of the deprecated `fetch()` (#2134). Use `DBI::dbExecute()` for non-query SQL commands (#1912)
+dbplyr,522,"`explain()` and `show_query()` now invisibly return the first argument, making them easier to use inside a pipeline."
+dbplyr,523,"`print.tbl_sql()` displays ordering (#2287) and prints table name, if known."
+dbplyr,524,"`print(df, n = Inf)` and `head(df, n = Inf)` now work with remote tables (#2580)."
+dbplyr,525,`db_desc()` and `sql_translate_env()` get defaults for DBIConnection.
+dbplyr,526,"Formatting now works by overriding the `tbl_sum()` generic instead of `print()`. This means that the output is more consistent with tibble, and that `format()` is now supported also for SQL sources (tidyverse/dbplyr#14)."
+dbplyr,527,"\[API\] The signature of `op_base` has changed to `op_base(x, vars, class)`"
+dbplyr,528,\[API\] `translate_sql()` and `partial_eval()` have been refined:
+dbplyr,529,`translate_sql()` no longer takes a vars argument; instead call `partial_eval()` yourself.
+dbplyr,530,"Because it no longer needs the environment `translate_sql()_` now works with a list of dots, rather than a `lazy_dots`."
+dbplyr,531,`partial_eval()` now takes a character vector of variable names rather than a tbl.
+dbplyr,532,This leads to a simplification of the `op` data structure: dots is now a list of expressions rather than a `lazy_dots`.
+dbplyr,533,\[API\] `op_vars()` now returns a list of quoted expressions. This enables escaping to happen at the correct time (i.e. when the connection is known).
+dplyr,1,`left_join()` and friends now return a specialized error message if they detect that your join would return more rows than dplyr can handle (#6912).
+dplyr,2,`slice_*()` now throw the correct error if you forget to name `n` while also prefixing the call with `dplyr::` (#6946).
+dplyr,3,"`join_by()` now allows its helper functions to be namespaced with `dplyr::`, like `join_by(dplyr::between(x, lower, upper))` (#6838)."
+dplyr,4,`dplyr_reconstruct()`'s default method has been rewritten to avoid materializing duckplyr queries too early (#6947).
+dplyr,5,"Updated the `storms` data to include 2022 data (#6937, @​steveharoz)."
+dplyr,6,"Updated the `starwars` data to use a new API, because the old one is defunct. There are very minor changes to the data itself (#6938, @​steveharoz)."
+dplyr,7,`mutate_each()` and `summarise_each()` now throw correct deprecation messages (#6869).
+dplyr,8,"`setequal()` now requires the input data frames to be compatible, similar to the other set methods like `setdiff()` or `intersect()` (#6786)."
+dplyr,9,`count()` better documents that it has a `.drop` argument (#6820).
+dplyr,10,Fixed tests to maintain compatibility with the next version of waldo (#6823).
+dplyr,11,Joins better handle key columns will all `NA`s (#6804).
+dplyr,12,"Mutating joins now warn about multiple matches much less often. At a high level, a warning was previously being thrown when a one-to-many or many-to-many relationship was detected between the keys of `x` and `y`, but is now only thrown for a many-to-many relationship, which is much rarer and much more dangerous than one-to-many because it can result in a Cartesian explosion in the number of rows returned from the join (#6731, #6717). We've accomplished this in two steps:"
+dplyr,13,"`multiple` now defaults to `""all""`, and the options of `""error""` and `""warning""` are now deprecated in favor of using `relationship` (see below). We are using an accelerated deprecation process for these two options because they've only been available for a few weeks, and `relationship` is a clearly superior alternative."
+dplyr,14,"The mutating joins gain a new `relationship` argument, allowing you to optionally enforce one of the following relationship constraints between the keys of `x` and `y`: `""one-to-one""`, `""one-to-many""`, `""many-to-one""`, or `""many-to-many""`. For example, `""many-to-one""` enforces that each row in `x` can match at most 1 row in `y`. If a row in `x` matches \>1 rows in `y`, an error is thrown. This option serves as the replacement for `multiple = ""error""`. The default behavior of `relationship` doesn't assume that there is any relationship between `x` and `y`. However, for equality joins it will check for the presence of a many-to-many relationship, and will warn if it detects one. This change unfortunately does mean that if you have set `multiple = ""all""` to avoid a warning and you happened to be doing a many-to-many style join, then you will need to replace `multiple = ""all""` with `relationship = ""many-to-many""` to silence the new warning, but we believe this should be rare since many-to-many relationships are fairly uncommon."
+dplyr,15,"Fixed a major performance regression in `case_when()`. It is still a little slower than in dplyr 1.0.10, but we plan to improve this further in the future (#6674)."
+dplyr,16,"Fixed a performance regression related to `nth()`, `first()`, and `last()` (#6682)."
+dplyr,17,Fixed an issue where expressions involving infix operators had an abnormally large amount of overhead (#6681).
+dplyr,18,`group_data()` on ungrouped data frames is faster (#6736).
+dplyr,19,`n()` is a little faster when there are many groups (#6727).
+dplyr,20,"`pick()` now returns a 1 row, 0 column tibble when `...` evaluates to an empty selection. This makes it more compatible with [tidyverse recycling rules](https://vctrs.r-lib.org/reference/theory-faq-recycling.html) in some edge cases (#6685)."
+dplyr,21,`if_else()` and `case_when()` again accept logical conditions that have attributes (#6678).
+dplyr,22,`arrange()` can once again sort the `numeric_version` type from base R (#6680).
+dplyr,23,`slice_sample()` now works when the input has a column named `replace`. `slice_min()` and `slice_max()` now work when the input has columns named `na_rm` or `with_ties` (#6725).
+dplyr,24,`nth()` now errors informatively if `n` is `NA` (#6682).
+dplyr,25,Joins now throw a more informative error when `y` doesn't have the same source as `x` (#6798).
+dplyr,26,"All major dplyr verbs now throw an informative error message if the input data frame contains a column named `NA` or `""""` (#6758)."
+dplyr,27,Deprecation warnings thrown by `filter()` now mention the correct package where the problem originated from (#6679).
+dplyr,28,Fixed an issue where using `<-` within a grouped `mutate()` or `summarise()` could cross contaminate other groups (#6666).
+dplyr,29,"The compatibility vignette has been replaced with a more general vignette on using dplyr in packages, `vignette(""in-packages"")` (#6702)."
+dplyr,30,The developer documentation in `?dplyr_extending` has been refreshed and brought up to date with all changes made in 1.1.0 (#6695).
+dplyr,31,`rename_with()` now includes an example of using `paste0(recycle0 = TRUE)` to correctly handle empty selections (#6688).
+dplyr,32,R \>=3.5.0 is now explicitly required. This is in line with the tidyverse policy of supporting the [5 most recent versions of R](https://www.tidyverse.org/blog/2019/04/r-version-support/).
+dplyr,33,"[`.by`/`by`](https://dplyr.tidyverse.org/reference/dplyr_by.html) is an experimental alternative to `group_by()` that supports per-operation grouping for `mutate()`, `summarise()`, `filter()`, and the `slice()` family (#6528). Rather than:"
+>>>>>>> 1b8eb09 (fix bugs and update tests)
 dplyr,33,"```
 starwars %>%
   group_by(species, homeworld) %>%
@@ -8333,6 +9349,7 @@ starwars %>%
     mean_height = mean(height),
     .by = c(species, homeworld)
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 ```"
 <<<<<<< HEAD
@@ -8512,6 +9529,10 @@ dplyr,33,5bc37d9db73bcf042ad0414739b19198,"```
 =======
 ```"
 dplyr,33,"The most useful reason to do this is because `.by` only affects a single operation. In the example above, an ungrouped data frame went into the `summarise()` call, so an ungrouped data frame will come out; with `.by`, you never need to remember to `ungroup()` afterwards and you never need to use the `.groups` argument. Additionally, using `summarise()` with `.by` will never sort the results by the group key, unlike with `group_by()`. Instead, the results are returned using the existing ordering of the groups from the original data. We feel this is more predictable, better maintains any ordering you might have already applied with a previous call to `arrange()`, and provides a way to maintain the current ordering without having to resort to factors. This feature was inspired by [data.table](https://CRAN.R-project.org/package=data.table), where the equivalent syntax looks like:"
+=======
+```"
+dplyr,33,"The most useful reason to do this is because `.by` only affects a single operation. In the example above, an ungrouped data frame went into the `summarise()` call, so an ungrouped data frame will come out; with `.by`, you never need to remember to `ungroup()` afterwards and you never need to use the `.groups` argument. Additionally, using `summarise()` with `.by` will never sort the results by the group key, unlike with `group_by()`. Instead, the results are returned using the existing ordering of the groups from the original data. We feel this is more predictable, better maintains any ordering you might have already applied with a previous call to `arrange()`, and provides a way to maintain the current ordering without having to resort to factors. This feature was inspired by [data.table](https://CRAN.R-project.org/package=data.table), where the equivalent syntax looks like:"
+>>>>>>> 1b8eb09 (fix bugs and update tests)
 dplyr,33,"```
 >>>>>>> 9592342 (make remove_old_bullets() more intelligent)
 starwars[, .(mean_height = mean(height)), by = .(species, homeworld)]
@@ -11542,6 +12563,7 @@ list_modify(x, foo = NULL)
 # After:
 list_modify(x, foo = zap())
 <<<<<<< HEAD
+<<<<<<< HEAD
 ```"
 purrr,142,3925cf3fe9291f4eb1cf3ae2a4d6489b,"This change is motivated by the ambiguity of `NULL` as a deletion sentinel because `NULL` is also a valid value in lists. In the future, `NULL` will set an element to `NULL` rather than removing the element."
 purrr,143,bb4d8d6cc88e37a95b6210c287e34dfc,"`rerun()` is now in the questioning stage because we are no longer convinced NSE functions are a good fit for purrr. Also, `rerun(n, x)` can just as easily be expressed as `map(1:n, ~ x)` (with the added benefit of being passed the current index as argument to the lambda)."
@@ -11799,6 +12821,134 @@ readr,49,`write_file()` now forces its argument before opening the output file (
 readr,50,"`write_*()` functions first argument is now `file` instead of `path`, for consistency with the `read_*()` functions. `path` has been deprecated and will be removed in a future version of readr (#1110, @​brianrice2)"
 readr,51,"`write_*()` functions now output any NaN values in the same way as NA values, controlled by the `na=` argument. (#1082)."
 readr,52,It is now possible to generate a column specification from any tibble (or data.frame) with `as.col_spec()` and convert any column specification to a short representation with `as.character()`
+=======
+```"
+purrr,142,"This change is motivated by the ambiguity of `NULL` as a deletion sentinel because `NULL` is also a valid value in lists. In the future, `NULL` will set an element to `NULL` rather than removing the element."
+purrr,143,"`rerun()` is now in the questioning stage because we are no longer convinced NSE functions are a good fit for purrr. Also, `rerun(n, x)` can just as easily be expressed as `map(1:n, ~ x)` (with the added benefit of being passed the current index as argument to the lambda)."
+purrr,144,`map_call()` is defunct.
+purrr,145,This is a maintenance release following the release of dplyr 0.7.5.
+purrr,146,Fixes for R 3.1.
+purrr,147,"If `reduce()` fails with this message: `` Error: `.x` is empty, and no `.init` supplied ``, this is because `reduce()` now returns `.init` when `.x` is empty. Fix the problem by supplying an appropriate argument to `.init`, or by providing special behaviour when `.x` has length 0."
+purrr,148,"The type predicates have been migrated to rlang. Consequently the `bare-type-predicates` documentation topic is no longer in purrr, which might cause a warning if you cross-reference it."
+purrr,149,"`order_by()`, `sort_by()` and `split_by()` have been removed. `order_by()` conflicted with `dplyr::order_by()` and the complete family doesn't feel that useful. Use tibbles instead (#217)."
+purrr,150,`contains()` has been renamed to `has_element()` to avoid conflicts with dplyr (#217).
+purrr,151,"`as_function()` is now `as_mapper()` because it is a tranformation that makes sense primarily for mapping functions, not in general (#298). `.null` has been renamed to `.default` to better reflect its intent (#298). `.default` is returned whenever an element is absent or empty (#231, #254). `as_mapper()` sanitises primitive functions by transforming them to closures with standardised argument names (using `rlang::as_closure()`). For instance `+` is transformed to `function(.x, .y) .x + .y`. This results in proper argument matching so that `map(1:10, partial(`-`, .x = 5))` produces `list(5 - 1, 5 - 2, ...)`."
+purrr,152,"Recursive indexing can now extract objects out of environments (#213) and S4 objects (#200), as well as lists."
+purrr,153,"`attr_getter()` makes it possible to extract from attributes like `map(list(iris, mtcars), attr_getter(""row.names""))`."
+purrr,154,"The argument list for formula-functions has been tweaked so that you can refer to arguments by position with `..1`, `..2`, and so on. This makes it possible to use the formula shorthand for functions with more than two arguments (#289)."
+purrr,155,"`possibly()`, `safely()` and friends no longer capture interrupts: this means that you can now terminate a mapper using one of these with Escape or Ctrl + C (#314)"
+purrr,156,"All map functions now treat `NULL` the same way as an empty vector (#199), and return an empty vector if any input is an empty vector."
+purrr,157,All `map()` functions now force their arguments in the same way that base R does for `lapply()` (#191). This makes `map()` etc easier to use when generating functions.
+purrr,158,"A new family of ""indexed"" map functions, `imap()`, `imap_lgl()` etc, provide a short-hand for `map2(x, names(x))` or `map2(x, seq_along(x))` (#240)."
+purrr,159,The data frame suffix `_df` has been (soft) deprecated in favour of `_dfr` to more clearly indicate that it's a row-bind. All variants now also have a `_dfc` for column binding (#167). (These will not be terribly useful until `dplyr::bind_rows()`/`dplyr::bind_cols()` have better semantics for vectors.)
+purrr,160,`at_depth()` has been renamed to `modify_depth()`.
+purrr,161,"`modify_depth()` gains new `.ragged` argument, and negative depths are now computed relative to the deepest component of the list (#236)."
+purrr,162,`auto_browse(f)` returns a new function that automatically calls `browser()` if `f` throws an error (#281).
+purrr,163,`vec_depth()` computes the depth (i.e. the number of levels of indexing) or a vector (#243).
+purrr,164,"`reduce2()` and `reduce2_right()` make it possible to reduce with a 3 argument function where the first argument is the accumulated value, the second argument is `.x`, and the third argument is `.y` (#163)."
+purrr,165,`list_modify()` extends `stats::modifyList()` to replace by position if the list is not named.(#201). `list_merge()` operates similarly to `list_modify()` but combines instead of replacing (#322).
+purrr,166,The legacy function `update_list()` is basically a version of `list_modify` that evaluates formulas within the list. It is likely to be deprecated in the future in favour of a tidyeval interface such as a list method for `dplyr::mutate()`.
+purrr,167,"Thanks to @​dchiu911, the unit test coverage of purrr is now much greater."
+purrr,168,All predicate functions are re-exported from rlang (#124).
+purrr,169,`compact()` now works with standard mapper conventions (#282).
+purrr,170,"`cross_n()` has been renamed to `cross()`. The `_n` suffix was removed for consistency with `pmap()` (originally called `map_n()` at the start of the project) and `transpose()` (originally called `zip_n()`). Similarly, `cross_d()` has been renamed to `cross_df()` for consistency with `map_df()`."
+purrr,171,`every()` and `some()` now return `NA` if present in the input (#174).
+purrr,172,`invoke()` uses a more robust approach to generate the argument list (#249) It no longer uses lazyeval to figure out which enviroment a character `f` comes from.
+purrr,173,`is_numeric()` and `is_scalar_numeric()` are deprecated because they don't test for what you might expect at first sight.
+purrr,174,`reduce()` now throws an error if `.x` is empty and `.init` is not supplied.
+purrr,175,"Deprecated functions `flatmap()`, `map3()`, `map_n()`, `walk3()`, `walk_n()`, `zip2()`, `zip3()`, `zip_n()` have been removed."
+purrr,176,`pmap()` coerces data frames to lists to avoid the expensive `[.data.frame` which provides security that is unneeded here (#220).
+purrr,177,`rdunif()` checks its inputs for validity (#211).
+purrr,178,"`set_names()` can now take a function to tranform the names programmatically (#276), and you can supply names in `...` to reduce typing even more more (#316). `set_names()` is now powered by `rlang::set_names()`."
+purrr,179,`safely()` now actually uses the `quiet` argument (#296).
+purrr,180,`transpose()` now matches by name if available (#164). You can override the default choice with the new `.names` argument.
+purrr,181,The function argument of `detect()` and `detect_index()` have been renamed from `.p` to `.f`. This is because they have mapper semantics rather than predicate semantics.
+purrr,182,"All data-frame based mappers have been removed in favour of new functions and idioms in the tidyverse. `dmap()`, `dmap_at()`, `dmap_if()`, `invoke_rows()`, `slice_rows()`, `map_rows()`, `by_slice()`, `by_row()`, and `unslice()` have been moved to purrrlyr. This is a bit of an aggresive change but it allows us to make the dependencies much lighter."
+purrr,183,Fix for dev tibble support.
+purrr,184,`as_function()` now supports list arguments which allow recursive indexing using either names or positions. They now always stop when encountering the first NULL (#173).
+purrr,185,`accumulate` and `reduce` correctly pass extra arguments to the worker function.
+purrr,186,"`as_function()` gains a `.null` argument that for character and numeric values allows you to specify what to return for null/absent elements (#110). This can be used with any map function, e.g. `map_int(x, 1, .null = NA)`"
+purrr,187,`as_function()` is now generic.
+purrr,188,New `is_function()` that returns `TRUE` only for regular functions.
+purrr,189,Fix crash on GCC triggered by `invoke_rows()`.
+purrr,190,There are two handy infix functions:
+purrr,191,`x %||% y` is shorthand for `if (is.null(x)) y else x` (#109).
+purrr,192,"`x %@​% ""a""` is shorthand for `attr(x, ""a"", exact = TRUE)` (#69)."
+purrr,193,"`accumulate()` has been added to handle recursive folding. It is shortand for `Reduce(f, .x, accumulate = TRUE)` and follows a similar syntax to `reduce()` (#145). A right-hand version `accumulate_right()` was also added."
+purrr,194,`map_df()` row-binds output together. It's the equivalent of `plyr::ldply()` (#127)
+purrr,195,"`flatten()` is now type-stable and always returns a list. To return a simpler vector, use `flatten_lgl()`, `flatten_int()`, `flatten_dbl()`, `flatten_chr()`, or `flatten_df()`."
+purrr,196,"`invoke()` has been overhauled to be more useful: it now works similarly to `map_call()` when `.x` is NULL, and hence `map_call()` has been deprecated. `invoke_map()` is a vectorised complement to `invoke()` (#125), and comes with typed variants `invoke_map_lgl()`, `invoke_map_int()`, `invoke_map_dbl()`, `invoke_map_chr()`, and `invoke_map_df()`."
+purrr,197,"`transpose()` replaces `zip2()`, `zip3()`, and `zip_n()` (#128). The name more clearly reflects the intent (transposing the first and second levels of list). It no longer has fields argument or the `.simplify` argument; instead use the new `simplify_all()` function."
+purrr,198,"`safely()`, `quietly()`, and `possibly()` are experimental functions for working with functions with side-effects (e.g. printed output, messages, warnings, and errors) (#120). `safely()` is a version of `try()` that modifies a function (rather than an expression), and always returns a list with two components, `result` and `error`."
+purrr,199,`list_along()` and `rep_along()` generalise the idea of `seq_along()`. (#122).
+purrr,200,`is_null()` is the snake-case version of `is.null()`.
+purrr,201,"`pmap()` (parallel map) replaces `map_n()` (#132), and has typed-variants suffixed `pmap_lgl()`, `pmap_int()`, `pmap_dbl()`, `pmap_chr()`, and `pmap_df()`."
+purrr,202,"`set_names()` is a snake-case alternative to `setNames()` with stricter equality checking, and more convenient defaults for pipes: `x %>% set_names()` is equivalent to `setNames(x, x)` (#119)."
+purrr,203,"`map()` now always returns a list. Data frame support has been moved to `map_df()` and `dmap()`. The latter supports sliced data frames as a shortcut for the combination of `by_slice()` and `dmap()`: `x %>% by_slice(dmap, fun, .collate = ""rows"")`. The conditional variants `dmap_at()` and `dmap_if()` also support sliced data frames and will recycle scalar results to the slice size."
+purrr,204,"`map_rows()` has been renamed to `invoke_rows()`. As other rows-based functionals, it collates results inside lists by default, but with column collation this function is equivalent to `plyr::mdply()`."
+purrr,205,"The rows-based functionals gain a `.to` option to name the output column as well as a `.collate` argument. The latter allows to collate the output in lists (by default), on columns or on rows. This makes these functions more flexible and more predictable."
+purrr,206,"`as_function()`, which converts formulas etc to functions, is now exported (#123)."
+purrr,207,`rerun()` is correctly scoped (#95)
+purrr,208,`update_list()` can now modify an element called `x` (#98).
+purrr,209,"`map*()` now use custom C code, rather than relying on `lapply()`, `mapply()` etc. The performance characteristcs are very similar, but it allows us greater control over the output (#118)."
+purrr,210,"`map_lgl()` now has second argument `.f`, not `.p` (#134)."
+purrr,211,`flatmap()` -\> use `map()` followed by the appropriate `flatten()`.
+purrr,212,`map_call()` -\> `invoke()`.
+purrr,213,`map_n()` -\> `pmap()`; `walk_n()` -\> `pwalk()`.
+purrr,214,"`map3(x, y, z)` -\> `map_n(list(x, y, z))`; `walk3(x, y, z) ->`pwalk(list(x, y, z))\`"
+readr,1,No user-facing changes. Patch release with internal changes requested by CRAN.
+readr,2,"Help files below `man/` have been re-generated, so that they give rise to valid HTML5. (This is the impetus for this release, to keep the package safely on CRAN.)"
+readr,3,"`mini-gapminder-africa.csv` and friends are new example datasets accessible via `readr_example()`, which have been added to illustrate reading multiple files at once, into a single data frame."
+readr,4,"`read_table()`, `read_log()`, and `read_delim_chunked()` (and friends) gain the `show_col_types` argument found elsewhere. All `read_*()` functions now respect the `show_col_types` argument or option, even when using the first edition parsing engine (#1331)."
+readr,5,`show_progress()` uses `rlang::is_interactive()` instead of `base::interactive()` (#1356).
+readr,6,"`read_builtin()` does more argument checking, so that we catch obviously malformed input before passing along to `utils::data()` (#1361)."
+readr,7,`chickens.csv` and `whitespace-sample.txt` are new example datasets accessible via `readr_example()` (#1354).
+readr,8,Jenny Bryan is now the maintainer.
+readr,9,Fix buffer overflow when trying to parse an integer from a field that is over 64 characters long (#1326)
+readr,10,"All readr functions again read eagerly by default. Unfortunately many users experienced frustration from the drawbacks of lazy reading, in particular locking files on Windows, so it was decided to disable lazy reading default. However `options(readr.read_lazy = TRUE)` can be used to set the default to by lazy if desired."
+readr,11,New `readr.read_lazy` global option to control if readr reads files lazily or not (#1266)
+readr,12,"minor test tweak for compatibility with testthat 3.1.0 (#@​lionel-, #1304)"
+readr,13,"`write_rds()` gains a `text=` argument, to control using a text based object representation, like the `ascii=` argument in `saveRDS()` (#1270)"
+readr,14,`options(readr.show_col_types = FALSE)` now works as intended (#1250)
+readr,15,`read_delim_chunked()` now again correctly respects the `chunk_size` parameter (#1248)
+readr,16,"`type_convert()` gains a `guess_integer` argument, passed to `guess_parser()` (@​jmbarbone, #1264)"
+readr,17,"`read_tsv()` now correctly passes the `quote` and `na` arguments to `vroom::vroom()` (#1254, #1255)"
+readr,18,Avoid spurious byte compilation errors due to the programmatically generated `spec_*()` functions.
+readr,19,"`with_edition(1, read_csv(""my_file.csv""))` will read `my_file.csv` with the first edition of readr."
+readr,20,`readr::local_edition(1)` placed at the top of your function or script will use the first edition for the rest of the function or script.
+readr,21,"`melt_csv()`, `melt_delim()`, `melt_tsv()` and `melt_fwf()` have been superseded by functions in the same name in the meltr package. The versions in readr have been deprecated. These functions rely on the first edition parsing code and would be challenging to update to the new parser. When the first edition parsing code is eventually removed from readr they will be removed."
+readr,22,"`read_table2()` has been renamed to `read_table()`, as most users expect `read_table()` to work like `utils::read.table()`. If you want the previous strict behavior of the `read_table()` you can use `read_fwf()` with `fwf_empty()` directly (#717)."
+readr,23,"Normalizing newlines in files with just carriage returns `\r` is no longer supported. The last major OS to use only CR as the newline was 'classic' Mac OS, which had its final release in 2001."
+readr,24,`read_*_chunked()` functions now include their specification as an attribute (#1143)
+readr,25,All `read_*()` functions gain a `col_select` argument to more easily choose which columns to select.
+readr,26,All `read_*()` functions gain a `id` argument to optionally store the file paths when reading multiple files.
+readr,27,All `read_*()` functions gain a `name_repair` argument to control how column names are repaired.
+readr,28,All `read_*()` and `write_*()` functions gain a `num_threads` argument to control the number of processing threads they use (#1201)
+readr,29,"All `write_*()` and `format_*()` functions gain `quote` and `escape` arguments, to explicitly control how fields are quoted and how double quotes are escaped. (#653, #759, #844, #993, #1018, #1083)"
+readr,30,All `write_*()` functions gain a `progress` argument and display a progress bar when writing (#791).
+readr,31,"write_excel_csv() now defaults to `quote = ""all""` (#759)"
+readr,32,"write_tsv() now defaults to `quote = ""none""` (#993)"
+readr,33,`read_table()` now handles skipped lines with unpaired quotes properly (#1180)
+readr,34,"The BH package is no longer a dependency. The boost C++ headers in BH have thousands of files, so can take a long time to extract and compiling them takes a great deal of memory, which made readr difficult to compile on systems with limited memory (#1147)."
+readr,35,"readr now uses the tzdb package when parsing date-times (@​DavisVaughan, r-lib/vroom#273)"
+readr,36,Chunked readers now support files with more than `INT_MAX` (\~ 2 Billion) number of lines (#1177)
+readr,37,Memory no longer inadvertently leaks when reading memory from R connections (#1161)
+readr,38,Invalid date formats no longer can potentially crash R (#1151)
+readr,39,`col_factor()` now throws a more informative error message if given non-character levels (#1140)
+readr,40,`problems()` now takes `.Last.value` as its default argument. This lets you run `problems()` without an argument to see the problems in the previously read dataset.
+readr,41,"`read_delim()` fails when sample of parsing problems contains non-ASCII characters (@​hidekoji, #1136)"
+readr,42,`read_log()` gains a `trim_ws` argument (#738)
+readr,43,"`read_rds()` and `write_rds()` gain a `refhook` argument, to pass functions that handle references objects (#1206)"
+readr,44,`read_rds()` can now read .Rds files from URLs (#1186)
+readr,45,"`read_*()` functions gain a `show_col_types` argument, if set to `FALSE` this turns off showing the column types unconditionally."
+readr,46,`type_convert()` now throws a warning if the input has no character columns (#1020)
+readr,47,`write_csv()` now errors if given a matrix column (#1171)
+readr,48,`write_csv()` now again is able to write data with duplicated column names (#1169)
+readr,49,`write_file()` now forces its argument before opening the output file (#1158)
+readr,50,"`write_*()` functions first argument is now `file` instead of `path`, for consistency with the `read_*()` functions. `path` has been deprecated and will be removed in a future version of readr (#1110, @​brianrice2)"
+readr,51,"`write_*()` functions now output any NaN values in the same way as NA values, controlled by the `na=` argument. (#1082)."
+readr,52,It is now possible to generate a column specification from any tibble (or data.frame) with `as.col_spec()` and convert any column specification to a short representation with `as.character()`
+>>>>>>> 1b8eb09 (fix bugs and update tests)
 readr,52,"```
 >>>>>>> 9592342 (make remove_old_bullets() more intelligent)
 s <- as.col_spec(iris)
@@ -13597,6 +14747,7 @@ tidyr,199,"```
 x <- ""d""
 drop_na(df, starts_with(x))
 <<<<<<< HEAD
+<<<<<<< HEAD
 ```"
 tidyr,199,fd83bd334c02ab60a9e9bc651e8b474a,While these special rules is in contrast to most dplyr and tidyr verbs (where both the data and the context are in scope) they make sense for selecting functions and should provide more robust and helpful semantics.
 tidyr,200,468525e1e3ac43cf239410607d110440,Patch tests to be compatible with dev tibble
@@ -13934,3 +15085,172 @@ tidyverse,28,Membership changes:
 tidyverse,29,"Removed DBI (since very different API, #16)"
 tidyverse,30,Added feather (#15)
 >>>>>>> 9592342 (make remove_old_bullets() more intelligent)
+=======
+```"
+tidyr,199,While these special rules is in contrast to most dplyr and tidyr verbs (where both the data and the context are in scope) they make sense for selecting functions and should provide more robust and helpful semantics.
+tidyr,200,Patch tests to be compatible with dev tibble
+tidyr,201,Register C functions
+tidyr,202,Added package docs
+tidyr,203,Patch tests to be compatible with dev dplyr.
+tidyr,204,Patch test to be compatible with dev tibble
+tidyr,205,Changed deprecation message of `extract_numeric()` to point to `readr::parse_number()` rather than `readr::parse_numeric()`
+tidyr,206,"`drop_na()` removes observations which have `NA` in the given variables. If no variables are given, all variables are considered (#194, @​janschulz)."
+tidyr,207,`extract_numeric()` has been deprecated (#213).
+tidyr,208,Renamed `table4` and `table5` to `table4a` and `table4b` to make their connection more clear. The `key` and `value` variables in `table2` have been renamed to `type` and `count`.
+tidyr,209,"`expand()`, `crossing()`, and `nesting()` now silently drop zero-length inputs."
+tidyr,210,`crossing_()` and `nesting_()` are versions of `crossing()` and `nesting()` that take a list as input.
+tidyr,211,`full_seq()` works correctly for dates and date/times.
+tidyr,212,"Restored compatibility with R \< 3.3.0 by avoiding `getS3method(envir = )` (#205, @​krlmlr)."
+tidyr,213,"`separate_rows()` separates observations with multiple delimited values into separate rows (#69, @​aaronwolen)."
+tidyr,214,`complete()` preserves grouping created by dplyr (#168).
+tidyr,215,`expand()` (and hence `complete()`) preserves the ordered attribute of factors (#165).
+tidyr,216,"`full_seq()` preserve attributes for dates and date/times (#156), and sequences no longer need to start at 0."
+tidyr,217,"`gather()` can now gather together list columns (#175), and `gather_.data.frame(na.rm = TRUE)` now only removes missing values if they're actually present (#173)."
+tidyr,218,`nest()` returns correct output if every variable is nested (#186).
+tidyr,219,"`separate()` fills from right-to-left (not left-to-right!) when fill = ""left"" (#170, @​dgrtwo)."
+tidyr,220,"`separate()` and `unite()` now automatically drop removed variables from grouping (#159, #177)."
+tidyr,221,"`spread()` gains a `sep` argument. If not-null, this will name columns as ""key`<sep>`{=html}value"". Additionally, if sep is `NULL` missing values will be converted to `<NA>` (#68)."
+tidyr,222,`spread()` works in the presence of list-columns (#199)
+tidyr,223,`unnest()` works with non-syntactic names (#190).
+tidyr,224,"`unnest()` gains a `sep` argument. If non-null, this will rename the columns of nested data frames to include both the original column name, and the nested column name, separated by `.sep` (#184)."
+tidyr,225,`unnest()` gains `.id` argument that works the same way as `bind_rows()`. This is useful if you have a named list of data frames or vectors (#125).
+tidyr,226,Moved in useful sample datasets from the DSR package.
+tidyr,227,Made compatible with both dplyr 0.4 and 0.5.
+tidyr,228,tidyr functions that create new columns are more aggressive about re-encoding the column names as UTF-8.
+tidyr,229,Fixed bug in `nest()` where nested data was ending up in the wrong row (#158).
+tidyr,230,"`nest()` now produces a single list of data frames called ""data"" rather than a list column for each variable. Nesting variables are not included in nested data frames. It also works with grouped data frames made by `dplyr::group_by()`. You can override the default column name with `.key`."
+tidyr,231,"`unnest()` gains a `.drop` argument which controls what happens to other list columns. By default, they're kept if the output doesn't require row duplication; otherwise they're dropped."
+tidyr,232,`unnest()` now has `mutate()` semantics for `...` - this allows you to unnest transformed columns more easily. (Previously it used select semantics).
+tidyr,233,"`expand()` once again allows you to evaluate arbitrary expressions like `full_seq(year)`. If you were previously using `c()` to created nested combinations, you'll now need to use `nesting()` (#85, #121)."
+tidyr,234,`nesting()` and `crossing()` allow you to create nested and crossed data frames from individual vectors. `crossing()` is similar to `base::expand.grid()`
+tidyr,235,"`full_seq(x, period)` creates the full sequence of values from `min(x)` to `max(x)` every `period` values."
+tidyr,236,`fill()` fills in `NULL`s in list-columns.
+tidyr,237,`fill()` gains a direction argument so that it can fill either upwards or downwards (#114).
+tidyr,238,"`gather()` now stores the key column as character, by default. To revert to the previous behaviour of using a factor (which allows you to preserve the ordering of the columns), use `key_factor = TRUE` (#96)."
+tidyr,239,"All tidyr verbs do the right thing for grouped data frames created by `group_by()` (#122, #129, #81)."
+tidyr,240,`seq_range()` has been removed. It was never used or announced.
+tidyr,241,"`spread()` once again creates columns of mixed type when `convert = TRUE` (#118, @​jennybc). `spread()` with `drop = FALSE` handles zero-length factors (#56). `spread()`ing a data frame with only key and value columns creates a one row output (#41)."
+tidyr,242,"`unite()` now removes old columns before adding new (#89, @​krlmlr)."
+tidyr,243,"`separate()` now warns if defunct ... argument is used (#151, @​krlmlr)."
+tidyr,244,Fixed bug where attributes of non-gather columns were lost (#104)
+tidyr,245,"New `complete()` provides a wrapper around `expand()`, `left_join()` and `replace_na()` for a common task: completing a data frame with missing combinations of variables."
+tidyr,246,`fill()` fills in missing values in a column with the last non-missing value (#4).
+tidyr,247,New `replace_na()` makes it easy to replace missing values with something meaningful for your data.
+tidyr,248,`nest()` is the complement of `unnest()` (#3).
+tidyr,249,"`unnest()` can now work with multiple list-columns at the same time. If you don't supply any columns names, it will unlist all list-columns (#44). `unnest()` can also handle columns that are lists of data frames (#58)."
+tidyr,250,tidyr no longer depends on reshape2. This should fix issues if you also try to load reshape (#88).
+tidyr,251,`%>%` is re-exported from magrittr.
+tidyr,252,`expand()` now supports nesting and crossing (see examples for details). This comes at the expense of creating new variables inline (#46).
+tidyr,253,`expand_` does SE evaluation correctly so you can pass it a character vector of columns names (or list of formulas etc) (#70).
+tidyr,254,`extract()` is 10x faster because it now uses stringi instead of base R regular expressions. It also returns NA instead of throwing an error if the regular expression doesn't match (#72).
+tidyr,255,`extract()` and `separate()` preserve character vectors when `convert` is TRUE (#99).
+tidyr,256,"The internals of `spread()` have been rewritten, and now preserve all attributes of the input `value` column. This means that you can now spread date (#62) and factor (#35) inputs."
+tidyr,257,`spread()` gives a more informative error message if `key` or `value` don't exist in the input data (#36).
+tidyr,258,"`separate()` only displays the first 20 failures (#50). It has finer control over what happens if there are two few matches: you can fill with missing values on either the ""left"" or the ""right"" (#49). `separate()` no longer throws an error if the number of pieces aren't as expected - instead it uses drops extra values and fills on the right and gives a warning."
+tidyr,259,"If the input is NA `separate()` and `extract()` both return silently return NA outputs, rather than throwing an error. (#77)"
+tidyr,260,Experimental `unnest()` method for lists has been removed.
+tidyr,261,Experimental `expand()` function (#21).
+tidyr,262,"Experiment `unnest()` function for converting named lists into data frames. (#3, #22)"
+tidyr,263,`extract_numeric()` preserves negative signs (#20).
+tidyr,264,"`gather()` has better defaults if `key` and `value` are not supplied. If `...` is omitted, `gather()` selects all columns (#28). Performance is now comparable to `reshape2::melt()` (#18)."
+tidyr,265,"`separate()` gains `extra` argument which lets you control what happens to extra pieces. The default is to throw an ""error"", but you can also ""merge"" or ""drop""."
+tidyr,266,"`spread()` gains `drop` argument, which allows you to preserve missing factor levels (#25). It converts factor value variables to character vectors, instead of embedding a matrix inside the data frame (#35)."
+xml2,1,"`xml_serialize()` now includes the document type so that `xml_unserialize()` works also for HTML documents (#407, @​HenrikBengtsson)."
+xml2,2,"Remove unused dependencies on glue, withr and lifecycle (@​mgirlich)."
+xml2,3,"`print()` is faster for very long `xml_nodeset` inputs (#366, @​michaelchirico)."
+xml2,4,"Small speedup for `xml_find_all()` (@​mgirlich, #393)."
+xml2,5,Fixes for R CMD check problems.
+xml2,6,Fixes for R CMD check problems.
+xml2,7,Windows: update to libxml2 2.10.3
+xml2,8,Hadley Wickham is now (again) the maintainer.
+xml2,9,xml2 has been re-licensed as MIT (#317).
+xml2,10,`xml_find_all.xml_node()` fails more informatively the `xpath` parameter is the wrong type (@​michaelchirico)
+xml2,11,"`xml_find_all.xml_nodeset()` gains a `flatten` argument to control whether to return a single nodeset or a list of nodesets (#311, @​jakejh)"
+xml2,12,"`write_xml()` and `write_html()` now return NULL invisibly, as they did prior to version 1.3.0 (#307)"
+xml2,13,"`XPtr` gets explicit copy constructor and assignment operator definitions, which were two missing components of the [Rule of three](https://en.wikipedia.org/wiki/Rule_of_three_(C%2B%2B_programming)) (@​michaelchirico)"
+xml2,14,Windows: update to libxml2 2.9.10 and libxslt 1.1.34 and add ucrt libs
+xml2,15,`read_html()` and `read_xml()` now error if passed strings of length greater than one (#121)
+xml2,16,`read_xml.raw()` had an inadvertent regression in 1.3.0 and is now again fixed (#300)
+xml2,17,"Compilation fix on macOS 10.15.4 (@​kevinushey, #296)"
+xml2,18,`read_html()` now again works with HTML files with non-ASCII encodings (#293).
+xml2,19,Removes the Rcpp dependency
+xml2,20,Fix compilation issue on macOS versions after High Sierra when not using homebrew supplied libxml2
+xml2,21,"Fix potential dangling pointer with internal `asXmlChar()` function (@​michaelquinn32, #287)."
+xml2,22,`as_xml_document()` now handles cases with text nodes trailing normal nodes (#274).
+xml2,23,"`xml_add_child()` can now create nodes with a `par` attribute. These previously errored due to partial name matching of the `parent` function in the internal `create_node()` function. (@​jennybc, #285)"
+xml2,24,"`libxml2_version()` now returns a semantic version rather than alphanumeric version, so ""2.9.10"" \> ""2.9.9"" (#277)"
+xml2,25,"Export S4 classes with documentation, so they can be used in other packages without Warnings (@​nuest, #267)"
+xml2,26,"xml2 now has a pkgdown site! <https://xml2.r-lib.org> (@​jayhesselberth, #211)."
+xml2,27,Windows: upgrade to libxml2 2.9.8
+xml2,28,"print methods now match the type of document, e.g. `read_html()` prints as ""{html_document}"" rather than ""{xml_document}"" (#227)"
+xml2,29,"Generic xml2 error are now forwarded as R errors. Previously these errors were output to stderr, so could not be suppressed (#209)."
+xml2,30,"Fix for ICU 59+ defaulting to use char16_t, which is only available in C++11 (#231)"
+xml2,31,No longer uses the C connections API
+xml2,32,Better error message when trying to run `download_xml()` without the curl package installed (#262)
+xml2,33,xml2 classes are now registered for use with S4 by calling `setOldClass()` (#248)
+xml2,34,Nodes with nested data type definition entities now work without crashing (#241)
+xml2,35,Test failure fixed due to behavior change with relative paths in libxml2 2.9.9 (#245).
+xml2,36,`read_xml()` now has a better error message when given zero length character inputs (#212).
+xml2,37,`read_xml()` and `read_html()` now automatically check if the response succeeded before trying to read from a HTTP response (#255).
+xml2,38,`xml_root()` can now create root nodes with namespaces (#239)
+xml2,39,`xml_set_attr()` no longer crashes if you try to set the same namespace on the same node multiple times (#253).
+xml2,40,`xml_set_attr()` now recycles the values if needed (#221)
+xml2,41,"`xml_structure()` gains a `file` argument, to support writing to a file rather than the console (#244)."
+xml2,42,`as_list()` on `xml_document` objects did not properly include the root node in the returned list. Previous behavior can be obtained by using `as_list()[[1L]]` in place of `as_list()`.
+xml2,43,`download_xml()` and `download_html()` helper functions to make it easy to download files (#193).
+xml2,44,`xml_attr()` can now set attributes with no value (#198).
+xml2,45,`xml_serialize()` and `xml_unserialize()` now create file connections when given character input (#179).
+xml2,46,"`xml_find_first()` no longer de-duplicates results, so the results are always the same length as the inputs (as documented) (#194)."
+xml2,47,xml2 can now build using libxml2 2.7.0
+xml2,48,Use Rcpp symbol registration and visibility to prevent symbol conflicts on Linux
+xml2,49,"`xml_add_child()` now requires less resources to insert a node when called with `.where = 0L` (@​heckendorfc, #175)."
+xml2,50,Fixed failing examples due to a change in an external resource.
+xml2,51,"This is a small point release addressing installation issues found with older libxml2 versions shipped with RedHat Linux 6 / CentOS 6 (#163, #164)."
+xml2,52,`write_xml()` and `write_html()` now accept connections as well as filenames for output. (#157)
+xml2,53,`xml_add_child()` now takes a `.where` argument specifying where to add the new children. (#138)
+xml2,54,"`as_xml()` generic function to convert R objects to xml. The most important method is for lists and enables full roundtrip support for going to and back from xml for lists and enables full roundtrip support to and from XML. (#137, #143)"
+xml2,55,`xml_new_root()` can be used to create a new document and a root node in one step (#131).
+xml2,56,`xml_add_parent()` inserts a new node between the node and its parent (#129)
+xml2,57,"Add `xml_validate()` to validate a document against an xml schema (#31, @​jeroenooms)."
+xml2,58,Export `xml2_types.h` to allow for extension packages such as xslt.
+xml2,59,`xml_comment()` allows you to add comment nodes to a document. (#111)
+xml2,60,`xml_cdata()` allows you to add CDATA nodes to a document. (#128)
+xml2,61,Add `xml_set_text()` and `xml_set_name()` equivalent to `xml_text<-` and `xml_name<-`. (#130).
+xml2,62,"Add `xml_set_attr()` and `xml_set_attrs()` equivalent to `xml_attr<-` and `xml_attrs<-`. (#109, #130)"
+xml2,63,Add `write_html()` method (#133).
+xml2,64,`xml_new_document()` now explicitly sets the encoding (default UTF-8) (#142)
+xml2,65,Document formatting options for `write_xml()` (#132)
+xml2,66,Add missing methods for xml_missing objects. (#134)
+xml2,67,Bugfix for xml_length.xml_nodeset that caused it to fail unconditionally. (#140)
+xml2,68,`is.na()` now returns `TRUE` for `xml_missing` objects. (#139)
+xml2,69,Trim non-breaking spaces in `xml_text(trim = TRUE)` (#151).
+xml2,70,"Allow setting non-character attributes (values are coerced to characters). (@​sjp, #117, #122)."
+xml2,71,"Fixed return value in call to vapply in xml_integer.xml_nodeset. (@​ddiez, #146, #147)."
+xml2,72,"Allow docs missing a root element to be created and printed. (@​sjp, #126, #121)."
+xml2,73,"xml_add\_\* methods now return invisibly. (@​sjp, #124)"
+xml2,74,"`as_list()` now preserves element names when attributes exist, and escapes XML attributes that conflict with special R attributes (@​peterfoley, #115)."
+xml2,75,"All C++ functions now use `checked_get()` instead of `get()` where possible, so NULL XPtrs properly throw an error rather than crashing. (@​jimhester, #101, #104)."
+xml2,76,"`xml_integer()` and `xml_double()` functions to make it easy to extract integer and double text from nodes (@​jimhester, #97, #99)."
+xml2,77,"xml2 now supports modification and creation of XML nodes. New functions `xml_new_document()`, `xml_new_child()`, `xml_new_sibling()`, `xml_set_namespace()`, , `xml_remove()`, `xml_replace()`, `xml_root()` and replacement methods for `xml_name()`, `xml_attr()`, `xml_attrs()` and `xml_text()` (@​jimhester, #9 #76)"
+xml2,78,"`xml_ns()` now keeps namespace prefixes that point to the same URI (@​jimhester, #35, #95)."
+xml2,79,"`read_xml()` and `read_html()` methods added for `httr::response()` objects. (@​jimhester, #63, #93)"
+xml2,80,"`xml_child()` function to make selecting children a little easier (@​jimhester, #23, #94)"
+xml2,81,"`xml_find_one()` has been deprecated in favor of `xml_find_first()` (@​jimhester, #58, #92)"
+xml2,82,"`xml_read()` functions now default to passing the document's namespace object. Namespace definitions can now be removed as well as added and `xml_ns_strip()` added to remove all default namespaces from a document. (@​jimhester, #28, #89)"
+xml2,83,"`xml_read()` gains a `options` argument to control all available parsing options, including `HUGE` to turn off limits for parsing very large documents and now drops blank text nodes by default, mimicking default behavior of XML package. (@​jimhester, #49, #62, #85, #88)"
+xml2,84,"`xml_write()` expands the path on filenames, so directories can be specified with '\~/' (@​jimhester, #86, #80)"
+xml2,85,"`xml_find_one()` now returns a 'xml_missing' node object if there are 0 matches (@​jimhester, #55, #53, hadley/rvest#82)."
+xml2,86,"`xml_find_num()`, `xml_find_chr()`, `xml_find_lgl()` functions added to return numeric, character and logical results from XPath expressions. (@​jimhester, #55)"
+xml2,87,`xml_name()` and `xml_text()` always correctly encode returned value as UTF-8 (#54).
+xml2,88,Improved configure script - now works again on R-devel on windows.
+xml2,89,"Compiles with older versions of libxml2.,"
+xml2,90,Make configure script more cross platform.
+xml2,91,Add `xml_length()` to count the number of children (#32).
+tidyverse,1,lubridate is now a member of the core tidyverse (#157)!
+tidyverse,2,tidyverse now installs ragg (#310).
+tidyverse,3,Loading the tidyverse now advertises `library(conflicted)` because it resolves many conflict problems and silences tidyverse's automated report (#218).
+tidyverse,4,`tidyverse_sitrep()` correctly displays installed package versions and highlights development versions of packages (#222).
+tidyverse,28,Membership changes:
+tidyverse,29,"Removed DBI (since very different API, #16)"
+tidyverse,30,Added feather (#15)
+>>>>>>> 1b8eb09 (fix bugs and update tests)
