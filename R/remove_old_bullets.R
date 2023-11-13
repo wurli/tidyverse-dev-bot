@@ -1,4 +1,26 @@
-remove_old_bullets <- function(x, file = "last_refresh_data.csv", overwrite = TRUE) {
+#' Discard bullets which have already been posted 
+#'
+#' 1. Takes the new news updates to be posted (a data frame containing bullets)
+#' 2. Creates a hash for each bullet point - sub-bullets will be given the same 
+#'    hash as their parent bullet
+#' 3. Removes bullets from the input dataset if they're present in a CSV of
+#'    previously posted bullets
+#' 4. Adds the new bullets to post to the list of previously posted bullets, 
+#'    and overwrites the CSV
+#'
+#' @param x A data frame holding the full NEWS.md files for packages which 
+#'   have recently received an update
+#' @param prev_update_file The name of a file containing previously posted
+#'   updates as a CSV
+#' @param overwrite_prev_updates Whether to overwrite `prev_updates_file`
+#'
+#' @return
+#' @export
+#'
+#' @examples
+remove_old_bullets <- function(x, 
+                               prev_updates_file = "previous_updates.csv", 
+                               overwrite_prev_updates = TRUE) {
   
   if (nrow(x) == 0) {
     return(tibble())
@@ -14,28 +36,27 @@ remove_old_bullets <- function(x, file = "last_refresh_data.csv", overwrite = TR
   # part of a tweet changes, the whole thing will be posted again, even if it's
   # a long thread.
   x <- x |> 
-    with_groups(
-      c(package, bullet_id),
-      mutate,
+    mutate(
+      .by = c(package, bullet_id),
       bullet_hash = hash(text),
       .before = text
     )
   
   by <- c("package", "bullet_id", "bullet_hash", "text")
   
-  prev <- get_prev_bullets(file, pattern = select(x, all_of(by)))
-  prev_rows <- nrow(prev)
+  prev_update <- get_prev_bullets(prev_updates_file, template = select(x, all_of(by)))
+  prev_rows <- nrow(prev_update)
   
   # Makes development easier - check that cols are the same and maybe overwrite
-  # if not
-  if (!identical(colnames(prev), by)) {
+  # if not. This should generally not get run.
+  if (!identical(colnames(prev_update), by)) {
     
     stopifnot(interactive())
     
     choice <- menu(
       title = paste0(
         "Old data has different columns to new data. Do you want to overwrite?\n",
-        "Old:", paste(colnames(prev), collapse = ", "), "\n",
+        "Old:", paste(colnames(prev_update), collapse = ", "), "\n",
         "New:", paste(by, collapse = ", ")
       ),
       choices = c("Overwrite", "Stop")
@@ -51,44 +72,40 @@ remove_old_bullets <- function(x, file = "last_refresh_data.csv", overwrite = TR
   # If a new package is present, treat those bullets as if they've already
   # been tweeted - i.e. just add them to the cache. Future *new* bullets
   # will then be tweeted as normal
-  for (pkg in unique(x$package)) {
+  new_package_updates <- x |> 
+    anti_join(prev_update, by = "package")
+  
+  if (nrow(new_package_updates) > 0L) {
+    new_pkgs <- unique(new_package_updates$package)
+    cli_alert_info("New package(s) {.pkg {new_pkgs}} detected - these bullets will be cached but not tweeted")
     
-    if (!pkg %in% prev$package) {
-      
-      cli_alert_info("New package {.pkg {pkg}} detected - these bullets will be cached but not tweeted")
-      
-      prev <- rows_insert(
-        x = prev,
-        y = x |> select(all_of(by)) |> filter(package == pkg),
+    prev_update <- prev_update |> 
+      rows_insert(
+        new_package_updates |> select(all_of(by)),
         by = by
       )
-      
-    }
-    
   }
   
   out <- rows_delete(
     x = x,
-    y = prev |> select(all_of(by)),
+    y = prev_update |> select(all_of(by)),
     by = by,
     unmatched = "ignore"
   )
 
   remove_old_bullets_summary_message(out)
   
-  if (!overwrite) {
-    cli_alert_warning("Not overwriting {.file {file}} with new data")
-  } else {
+  if (overwrite_prev_updates) {
     already_tweeted <- rows_insert(
-      x = prev,
+      x = prev_update,
       y = x |> select(all_of(by)),
       by = by,
       conflict = "ignore"
     )
     
     n <- nrow(already_tweeted) - prev_rows
-    cli_alert("Adding {.val {n}} new rows to {.file {file}}")
-    write_csv(already_tweeted, file)
+    cli_alert("Adding {.val {n}} new rows to {.file {prev_updates_file}}")
+    write_csv(already_tweeted, prev_updates_file)
   } 
   
   out |> 
@@ -111,11 +128,11 @@ remove_old_bullets_summary_message <- function(x) {
   }
 }
 
-get_prev_bullets <- function(file, pattern) {
+get_prev_bullets <- function(file, template) {
   
   if (!file.exists(file)) {
     cli_alert("Creating new file {.file {file}}")
-    x <- pattern |> filter(FALSE)
+    x <- template |> filter(FALSE)
     readr::write_csv(x, file)
     return(x)
   }

@@ -19,6 +19,7 @@ annotate_news_files <- function(files = list.files("news-files", "\\.md$", full.
   
   files <- set_names(files, ~ . |> basename() |> str_remove("\\.[^.]+$"))
   file_exists <- map_lgl(files, file.exists) 
+  
   if (!all(file_exists)) {
     cli_abort(c(
       "Could not find file(s)",
@@ -36,7 +37,6 @@ annotate_news_files <- function(files = list.files("news-files", "\\.md$", full.
   
   cli_h2("Adding annotations to news data for easier parsing")
   
-  # Use pandoc to convert the docs directly from the URL
   annotated_readme_locs <- files |> 
     imap(function(path, pkg) {
       
