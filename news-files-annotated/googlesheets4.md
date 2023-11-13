@@ -1,5 +1,63 @@
 # googlesheets4 (development version)
 
+# googlesheets4 1.1.1
+
+!begin-bullets-1!
+
+-   !begin-bullet!
+    `gs4_auth(subject =)` is a new argument that can be used with
+    `gs4_auth(path =)`, i.e. when using a service account. The `path`
+    and `subject` arguments are ultimately processed by
+    `gargle::credentials_service_account()` and support the use of a
+    service account to impersonate a normal user.
+
+    !end-bullet!
+-   !begin-bullet!
+    `gs4_scopes()` is a new function to access scopes relevant to the
+    Sheets and Drive APIs. When called without arguments, `gs4_scopes()`
+    returns a named vector of scopes, where the names are the associated
+    short aliases. `gs4_scopes()` can also be called with a character
+    vector; any element that's recognized as a short alias is replaced
+    with the associated full scope (#291).
+
+    !end-bullet!
+-   !begin-bullet!
+    Various internal changes to sync up with gargle v1.5.0.
+
+    !end-bullet!
+
+!end-bullets-1!
+
+# googlesheets4 1.1.0
+
+## Syncing up with gargle
+
+Version 1.3.0 of gargle introduced some changes around OAuth and
+googlesheets4 is syncing with up that:
+
+!begin-bullets-2!
+
+-   !begin-bullet!
+    `gs4_oauth_client()` is a new function to replace the now-deprecated
+    `gs4_oauth_app()`.
+    !end-bullet!
+-   !begin-bullet!
+    The new `client` argument of `gs4_auth_configure()` replaces the
+    now-deprecated `app` argument.
+    !end-bullet!
+-   !begin-bullet!
+    The documentation of `gs4_auth_configure()` emphasizes that the
+    preferred way to "bring your own OAuth client" is by providing the
+    JSON downloaded from Google Developers Console.
+    !end-bullet!
+
+!end-bullets-2!
+
+## Other
+
+`gs4_auth()` now warns if the user specifies both `email` and `path`,
+because this is almost always an error.
+
 # googlesheets4 1.0.1
 
 The mere existence of an invalid named range no longer prevents
@@ -29,7 +87,7 @@ Informative messages now route through `cli::cli_inform()`, instead of
 ## User interface
 
 The user interface has gotten more stylish, thanks to the cli package
-(<https://cli.r-lib.org>).
+(https://cli.r-lib.org).
 
 All informational messages, warnings, and errors are now emitted via
 cli, which uses rlang's condition functions under-the-hood.
@@ -40,18 +98,16 @@ googlesheets4 now throws errors with class `"googlesheets4_error"`
 from googlesheets4 (#163). Unless it's explicitly set to `TRUE`, the
 default is to message.
 
-`local_gs4_quiet()` and `with_gs4_quiet()` are
-[withr-style](https://withr.r-lib.org) convenience helpers for setting
-`googlesheets4_quiet = TRUE`.
+`local_gs4_quiet()` and `with_gs4_quiet()` are withr-style convenience
+helpers for setting `googlesheets4_quiet = TRUE`.
 
 ## Other changes
 
 The deprecated `sheets_*()` functions have now been removed, as promised
 in the warning they have been throwing for over a year. No functionality
 has been removed, this is just the result of the function (re-)naming
-scheme adopted in googlesheets4 \>= 0.2.0. More details are in [this
-developer
-documentation](https://googlesheets4.tidyverse.org/articles/articles/function-class-names.html#previous-use-of-sheets-prefix).
+scheme adopted in googlesheets4 \>= 0.2.0. More details are in this
+developer documentation.
 
 The `na` argument of `read_sheet()` has become more capable and more
 consistent with readr. Specifically, `na = character()` (or the general
@@ -71,7 +127,7 @@ called.
 
 ## Dependency changes
 
-!begin-bullets-1!
+!begin-bullets-3!
 
 -   !begin-bullet!
     cli is new in Imports.
@@ -83,11 +139,10 @@ called.
 
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-3!
 
 R 3.4 is now the oldest version that is explicitly supported and tested,
-as per the [tidyverse
-policy](https://www.tidyverse.org/blog/2019/04/r-version-support/).
+as per the tidyverse policy.
 
 # googlesheets4 0.3.0
 
@@ -108,8 +163,7 @@ different Google identities.
 
 googlesheets4 can now write and modify Sheets.
 
-Several new articles are available at
-[googlesheets4.tidyverse.org](https://googlesheets4.tidyverse.org/articles/index.html).
+Several new articles are available at googlesheets4.tidyverse.org.
 
 ## Function naming scheme
 
@@ -117,7 +171,7 @@ The universal `sheets_` prefix has been replaced by a scheme that
 conveys more information about the scope of the function. There are
 three prefixes:
 
-!begin-bullets-2!
+!begin-bullets-4!
 
 -   !begin-bullet!
     `gs4_`: refers variously to the googlesheets4 package, v4 of the
@@ -130,13 +184,11 @@ three prefixes:
     `range_`: operations on a range of cells
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-4!
 
 The addition of write/edit functionality resulted in many new functions
 and the original naming scheme proved to be problematic. The article
-[Function and class
-names](https://googlesheets4.tidyverse.org/articles/articles/function-class-names.html)
-contains more detail.
+Function and class names contains more detail.
 
 Any function present in the previous CRAN release, v0.1.1, still works,
 but triggers a warning with strong encouragement to switch to the
@@ -149,7 +201,7 @@ modification. These functions are ready for general use but are still
 marked experimental, as they may see some refinement based on user
 feedback.
 
-!begin-bullets-3!
+!begin-bullets-5!
 
 -   !begin-bullet!
     `gs4_create()` creates a new Google Sheet and, optionally, writes
@@ -175,14 +227,14 @@ feedback.
     `range_delete()` deletes a range of cells.
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-5!
 
 ## (Work)sheet operations
 
 The `sheet_*()` family of functions operate on the (work)sheets inside
 an existing (spread)Sheet:
 
-!begin-bullets-4!
+!begin-bullets-6!
 
 -   !begin-bullet!
     (`sheet_write()` and `sheet_append()` are described above.)
@@ -213,7 +265,7 @@ an existing (spread)Sheet:
     `sheet_resize()` changes the number of rows or columns in a sheet.
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-6!
 
 ## Range operations
 
@@ -252,41 +304,39 @@ a reprex.
 
 The S3 class `sheets_Spreadsheet` is renamed to
 `googlesheets4_spreadsheet`, a consequence of rationalizing all internal
-and external classes (detailed in the article [Function and class
-names](https://googlesheets4.tidyverse.org/articles/articles/function-class-names.html)).
+and external classes (detailed in the article Function and class names).
 `googlesheets4_spreadsheet` is the class that holds metadata for a Sheet
-and it is connected to the API's
-[`Spreadsheet`](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets#resource:-spreadsheet)
-schema. The return value of `gs4_get()` has this class.
+and it is connected to the API's `Spreadsheet` schema. The return value
+of `gs4_get()` has this class.
 
 ## Bug fixes
 
-!begin-bullets-5!
+!begin-bullets-7!
 
 -   !begin-bullet!
     `read_sheet()` passes its `na` argument down to the helpers that
     parse cells, so that `na` actually has the documented effect (#73).
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-7!
 
 # googlesheets4 0.1.1
 
-!begin-bullets-6!
+!begin-bullets-8!
 
 -   !begin-bullet!
     Patch release to modify a test fixture, to be compatible with tibble
     v3.0. Related to tibble's increased type strictness.
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-8!
 
 # googlesheets4 0.1.0
 
-!begin-bullets-7!
+!begin-bullets-9!
 
 -   !begin-bullet!
     Added a `NEWS.md` file to track changes to the package.
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-9!

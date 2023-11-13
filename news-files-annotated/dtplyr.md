@@ -1,23 +1,158 @@
 # dtplyr (development version)
 
+## New features
+
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `reframe()` is now translated.
+
+    !end-bullet!
+-   !begin-bullet!
+    `consecutive_id()` is now mapped to `data.table::rleid()`. Note:
+    `rleid()` only accepts vector inputs and cannot be used with data
+    frame inputs.
+
+    !end-bullet!
+-   !begin-bullet!
+    `case_match()` is now translated to `fcase()`.
+
+    !end-bullet!
+
+!end-bullets-1!
+
+## Minor improvements and bug fixes
+
+!begin-bullets-2!
+
+-   !begin-bullet!
+    Can use `.data` in `lead()`/`lag()` (#441)
+
+    !end-bullet!
+-   !begin-bullet!
+    Can namespace calls to `desc()` (#427).
+
+    !end-bullet!
+-   !begin-bullet!
+    `case_when(.default = )` now works.
+
+    !end-bullet!
+-   !begin-bullet!
+    `.by` no longer alters grouping in prior steps (#439)
+
+    !end-bullet!
+-   !begin-bullet!
+    Arguments to `$` and `[[` calls are no longer prepended with `..`
+    (#434)
+
+    !end-bullet!
+-   !begin-bullet!
+    Grouping now works with non-standard column names (#451)
+
+    !end-bullet!
+
+!end-bullets-2!
+
+# dtplyr 1.3.1
+
+!begin-bullets-3!
+
+-   !begin-bullet!
+    Fix for failing R CMD check.
+
+    !end-bullet!
+-   !begin-bullet!
+    `dtplyr` no longer directly depends on `crayon`.
+
+    !end-bullet!
+
+!end-bullets-3!
+
+# dtplyr 1.3.0
+
+## Breaking changes
+
+!begin-bullets-4!
+
+-   !begin-bullet!
+    dplyr and tidyr verbs no longer dispatch to dtplyr translations when
+    used directly on data.table objects. `lazy_dt()` must now explicitly
+    be called by the user (#312).
+    !end-bullet!
+
+!end-bullets-4!
+
+## New features
+
+!begin-bullets-5!
+
+-   !begin-bullet!
+    `across()` output can now be used as a data frame (#341).
+
+    !end-bullet!
+-   !begin-bullet!
+    `.by`/`by` has been implemented for `mutate()`, `summarise()`,
+    `filter()`, and the `slice()` family (#399).
+
+    !end-bullet!
+-   !begin-bullet!
+    New translations for `add_count()`, `pick()` (#341), and `unite()`.
+
+    !end-bullet!
+-   !begin-bullet!
     `min_rank()`, `dense_rank()`, `percent_rank()`, & `cume_dist()` are
-    now translated to their `data.table` equivalents (#396)
+    now mapped to their `data.table` equivalents (#396).
+
+    !end-bullet!
+
+!end-bullets-5!
+
+## Performance improvements
+
+!begin-bullets-6!
+
+-   !begin-bullet!
+    `arrange()` now utilizes `setorder()` when possible for improved
+    performance (#364).
 
     !end-bullet!
 -   !begin-bullet!
-    `pick()` is now translated (#341)
+    `select()` now drops columns by reference when possible for improved
+    performance (#367).
 
     !end-bullet!
 -   !begin-bullet!
-    `across()` output can now be used as a data frame (#341)
+    `slice()` uses an intermediate variable to reduce computation time
+    of row selection (#377).
+
+    !end-bullet!
+
+!end-bullets-6!
+
+## Minor improvements and bug fixes
+
+!begin-bullets-7!
+
+-   !begin-bullet!
+    dtplyr no longer directly depends on `ellipsis`.
 
     !end-bullet!
 -   !begin-bullet!
-    `names_glue` now works in `pivot_wider()` when `names_from` contains
-    `NA`s (#394)
+    Chained operations properly prevent modify-by-reference (#210).
+
+    !end-bullet!
+-   !begin-bullet!
+    `across()`, `if_any()`, and `if_all()` evaluate the `.cols` argument
+    in the environment from which the function was called.
+
+    !end-bullet!
+-   !begin-bullet!
+    `count()` properly handles grouping variables (#356).
+
+    !end-bullet!
+-   !begin-bullet!
+    `desc()` now supports use of `.data` pronoun inside in `arrange()`
+    (#346).
 
     !end-bullet!
 -   !begin-bullet!
@@ -27,54 +162,14 @@
 
     !end-bullet!
 -   !begin-bullet!
-    Chained operations properly prevent modify-by-reference (#210)
+    `if_any()` and `if_all()` now work without specifying the `.fns`
+    argument (@mgirlich, #325) and for a list of functions specified in
+    the (@mgirlich, #335).
 
     !end-bullet!
 -   !begin-bullet!
-    `dplyr` and `tidyr` verbs no longer dispatch to `dtplyr`
-    translations when used directly on `data.table` objects. `lazy_dt()`
-    must now explicitly be called by the user. (#312)
-
-    !end-bullet!
--   !begin-bullet!
-    An error now occurs when `where()` is used for selection (#271)
-
-    !end-bullet!
--   !begin-bullet!
-    Anonymous functions are translated correctly in `mutate`/`summarize`
-    (#362)
-
-    !end-bullet!
--   !begin-bullet!
-    Custom functions can pass a quosure to `col` arg in `separate()`
-    (#359)
-
-    !end-bullet!
--   !begin-bullet!
-    `glue::glue()` and `stringr::str_glue()` now work inside
-    `mutate()`/`transmute()` without needing to specify `.envir`
-
-    !end-bullet!
--   !begin-bullet!
-    Can use `.data` pronoun inside `desc()` in `arrange()` (#346)
-
-    !end-bullet!
--   !begin-bullet!
-    New translations:
-
-    !begin-bullets-2!
-    -   !begin-bullet!
-        `add_count()`
-        !end-bullet!
-    -   !begin-bullet!
-        `unite()`
-        !end-bullet!
-
-    !end-bullets-2!
-    !end-bullet!
--   !begin-bullet!
-    `if_any()` and `if_all()` now work for a list of functions specified
-    in the `.fns` argument(@mgirlich, #335).
+    `pivot_wider()`'s `names_glue` now works even when `names_from`
+    contains `NA`s (#394).
 
     !end-bullet!
 -   !begin-bullet!
@@ -83,64 +178,46 @@
 
     !end-bullet!
 -   !begin-bullet!
-    The `.cols` argument of `across()`, `if_any()`, and `if_all()` is
-    evaluated in the environment from which `across` was called.
+    `mutate()` can now use `.keep`.
 
     !end-bullet!
 -   !begin-bullet!
-    `if_any()` and `if_all()` now work without specifying the `.fns`
-    argument (@mgirlich, #325).
+    `mutate()`/`summarize()` correctly translates anonymous functions
+    (#362).
 
     !end-bullet!
 -   !begin-bullet!
-    `mutate()` can now use `.keep`
+    `mutate()`/`transmute()` now supports `glue::glue()` and
+    `stringr::str_glue()` without specifying `.envir`.
 
     !end-bullet!
 -   !begin-bullet!
-    `dtplyr` no longer directly depends on `ellipsis`
-
-    !end-bullet!
--   !begin-bullet!
-    `count()` properly handles grouping variables (#356)
-
-    !end-bullet!
--   !begin-bullet!
-    `select()` now drops columns by reference when possible for improved
-    performance (#367)
-
-    !end-bullet!
--   !begin-bullet!
-    `arrange()` now utilizes `setorder()` when possible for improved
-    performance (#364)
-
-    !end-bullet!
--   !begin-bullet!
-    `slice()` uses an intermediate variable to reduce computation time
-    of row selection (#377)
+    `where()` now clearly errors because dtplyr doesn't support
+    selection by predicate (#271).
 
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-7!
 
 # dtplyr 1.2.2
 
-!begin-bullets-3!
+!begin-bullets-8!
 
 -   !begin-bullet!
     Hot patch release to resolve R CMD check failures.
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-8!
 
 # dtplyr 1.2.1
 
-!begin-bullets-4!
+!begin-bullets-9!
 
 -   !begin-bullet!
     Fix for upcoming rlang release.
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-9!
 
 # dtplyr 1.2.0
 
@@ -152,12 +229,12 @@ recognition of their significant and sustained contributions. Along with
 
 ## New features
 
-!begin-bullets-5!
+!begin-bullets-10!
 
 -   !begin-bullet!
     dtplyr gains translations for many more tidyr verbs:
 
-    !begin-bullets-6!
+    !begin-bullets-11!
     -   !begin-bullet!
         `drop_na()` (@markfairbanks, #194)
         !end-bullet!
@@ -183,7 +260,7 @@ recognition of their significant and sustained contributions. Along with
         `separate()` (@markfairbanks, #269)
         !end-bullet!
 
-    !end-bullets-6!
+    !end-bullets-11!
     !end-bullet!
 -   !begin-bullet!
     `tally()` gains a translation (@mgirlich, #201).
@@ -194,11 +271,11 @@ recognition of their significant and sustained contributions. Along with
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-10!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-7!
+!begin-bullets-12!
 
 -   !begin-bullet!
     `slice()` helpers (`slice_head()`, `slice_tail()`, `slice_min()`,
@@ -211,7 +288,7 @@ recognition of their significant and sustained contributions. Along with
     (@markfairbanks, #231), and handles named selections (@eutwt #293).
     It ˜ow handles `.fns` arguments in more forms (@eutwt #288):
 
-    !begin-bullets-8!
+    !begin-bullets-13!
     -   !begin-bullet!
         Anonymous functions, such as `function(x) x + 1`
         !end-bullet!
@@ -219,7 +296,7 @@ recognition of their significant and sustained contributions. Along with
         Formulas which don't require a function call, such as `~ 1`
         !end-bullet!
 
-    !end-bullets-8!
+    !end-bullets-13!
     !end-bullet!
 -   !begin-bullet!
     `arrange(dt, desc(col))` is translated to `dt[order(-col)]` in order
@@ -359,13 +436,13 @@ recognition of their significant and sustained contributions. Along with
 
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-12!
 
 # dtplyr 1.1.0
 
 ## New features
 
-!begin-bullets-9!
+!begin-bullets-14!
 
 -   !begin-bullet!
     All verbs now have (very basic) documentation pointing back to the
@@ -383,7 +460,7 @@ recognition of their significant and sustained contributions. Along with
     dtplyr has been bought up to compatibility with dplyr 1.0.0. This
     includes new translations for:
 
-    !begin-bullets-10!
+    !begin-bullets-15!
     -   !begin-bullet!
         `across()`, `if_any()`, `if_all()` (#154).
 
@@ -406,7 +483,7 @@ recognition of their significant and sustained contributions. Along with
 
         !end-bullet!
 
-    !end-bullets-10!
+    !end-bullets-15!
     And `rename()` and `select()` now support dplyr 1.0.0 tidyselect
     syntax (apart from predicate functions which can't easily work on
     lazily evaluated data tables).
@@ -418,11 +495,11 @@ recognition of their significant and sustained contributions. Along with
 
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-14!
 
 ## Translation improvements
 
-!begin-bullets-11!
+!begin-bullets-16!
 
 -   !begin-bullet!
     `compute()` now creates an intermediate assignment within the
@@ -450,7 +527,7 @@ recognition of their significant and sustained contributions. Along with
 -   !begin-bullet!
     Translation of individual expressions:
 
-    !begin-bullets-12!
+    !begin-bullets-17!
     -   !begin-bullet!
         `x[[1]]` is now translated correctly.
 
@@ -471,14 +548,14 @@ recognition of their significant and sustained contributions. Along with
 
         !end-bullet!
 
-    !end-bullets-12!
+    !end-bullets-17!
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-16!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-13!
+!begin-bullets-18!
 
 -   !begin-bullet!
     Grouped filter, mutate, and slice no longer affect ordering of
@@ -503,11 +580,11 @@ recognition of their significant and sustained contributions. Along with
 
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-18!
 
 # dtplyr 1.0.1
 
-!begin-bullets-14!
+!begin-bullets-19!
 
 -   !begin-bullet!
     Better handling for `.data` and `.env` pronouns (#138).
@@ -544,11 +621,11 @@ recognition of their significant and sustained contributions. Along with
 
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-19!
 
 # dtplyr 1.0.0
 
-!begin-bullets-15!
+!begin-bullets-20!
 
 -   !begin-bullet!
     Converted from eager approach to lazy approach. You now must use
@@ -588,11 +665,11 @@ recognition of their significant and sustained contributions. Along with
 
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-20!
 
 # dtplyr 0.0.3
 
-!begin-bullets-16!
+!begin-bullets-21!
 
 -   !begin-bullet!
     Maintenance release for CRAN checks.
@@ -612,22 +689,22 @@ recognition of their significant and sustained contributions. Along with
 
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-21!
 
 # dtplyr 0.0.2
 
-!begin-bullets-17!
+!begin-bullets-22!
 
 -   !begin-bullet!
     This is a compatibility release. It makes dtplyr compatible with
     dplyr 0.6.0 in addition to dplyr 0.5.0.
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-22!
 
 # dtplyr 0.0.1
 
-!begin-bullets-18!
+!begin-bullets-23!
 
 -   !begin-bullet!
     `distinct()` gains `.keep_all` argument (#30, #31).
@@ -655,4 +732,4 @@ recognition of their significant and sustained contributions. Along with
 
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-23!

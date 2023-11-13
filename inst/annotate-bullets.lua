@@ -62,3 +62,8 @@ function CodeBlock(el)
     pandoc.Str("!end-codeblock!")
   }
 end
+
+-- Strip URLs from hyperlinks, turning them into regular text
+function Link(link)
+  return link.content
+end

@@ -1,5 +1,23 @@
 # xml2 (development version)
 
+* `xml_serialize()` now includes the document type so that `xml_unserialize()` works also for HTML documents (#407, @HenrikBengtsson).
+
+* Remove unused dependencies on glue, withr and lifecycle (@mgirlich).
+
+* `print()` is faster for very long `xml_nodeset` inputs (#366, @michaelchirico).
+
+# xml2 1.3.5
+
+* Small speedup for `xml_find_all()` (@mgirlich, #393).
+
+* Fixes for R CMD check problems.
+
+# xml2 1.3.4
+
+* Fixes for R CMD check problems.
+
+* Windows: update to libxml2 2.10.3
+
 # xml2 1.3.3
 
 * Hadley Wickham is now (again) the maintainer.

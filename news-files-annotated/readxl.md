@@ -1,5 +1,9 @@
 # readxl (development version)
 
+# readxl 1.4.3
+
+This release contains no user-facing changes.
+
 # readxl 1.4.2
 
 This release contains no user-facing changes.
@@ -8,14 +12,14 @@ This release contains no user-facing changes.
 
 -   !begin-bullet!
     We embed a development version of libxls
-    (<https://github.com/libxls/libxls>), which is based on the most
+    (https://github.com/libxls/libxls), which is based on the most
     recent released version, v1.6.2. The reason for embedding a
     development version is to ship a version of libxls that incorporates
     the fix for this CVE (#679):
 
     !begin-bullets-2!
     -   !begin-bullet!
-        [CVE-2021-27836](https://nvd.nist.gov/vuln/detail/CVE-2021-27836)
+        CVE-2021-27836
         !end-bullet!
 
     !end-bullets-2!
@@ -103,38 +107,36 @@ However, there are a few small features / bug fixes:
     !end-bullet!
 -   !begin-bullet!
     readxl now states its support for R \>= 3.4 explicitly. Why 3.4?
-    Because the [tidyverse
-    policy](https://www.tidyverse.org/blog/2019/04/r-version-support/)
-    is to support the current version, the devel version, and four
-    previous versions of R. It was necessary to introduce a minimum R
-    version, in order to state a minimum version for a package listed in
-    `LinkingTo`.
+    Because the tidyverse policy is to support the current version, the
+    devel version, and four previous versions of R. It was necessary to
+    introduce a minimum R version, in order to state a minimum version
+    for a package listed in `LinkingTo`.
 
     !end-bullet!
 -   !begin-bullet!
     readxl embeds libxls v1.6.2 (the previous release embedded v1.5.0).
-    The libxls project is hosted at <https://github.com/libxls/libxls>
-    and you can learn more about the cumulative changes in its release
+    The libxls project is hosted at https://github.com/libxls/libxls and
+    you can learn more about the cumulative changes in its release
     notes:
 
     !begin-bullets-6!
     -   !begin-bullet!
-        [v1.6.2](https://github.com/libxls/libxls/releases/tag/v1.6.2)
+        v1.6.2
         !end-bullet!
     -   !begin-bullet!
-        [v1.6.1](https://github.com/libxls/libxls/releases/tag/v1.6.1)
+        v1.6.1
         !end-bullet!
     -   !begin-bullet!
-        [v1.6.0](https://github.com/libxls/libxls/releases/tag/v1.6.0)
+        v1.6.0
         !end-bullet!
     -   !begin-bullet!
-        [v1.5.3](https://github.com/libxls/libxls/releases/tag/v1.5.3)
+        v1.5.3
         !end-bullet!
     -   !begin-bullet!
-        [v1.5.2](https://github.com/libxls/libxls/releases/tag/v1.5.2)
+        v1.5.2
         !end-bullet!
     -   !begin-bullet!
-        [v1.5.1](https://github.com/libxls/libxls/releases/tag/v1.5.1)
+        v1.5.1
         !end-bullet!
 
     !end-bullets-6!
@@ -167,16 +169,16 @@ in readxl.
 readxl embeds libxls v1.5.0. This is the first *official* release of
 libxls in several years, although readxl has been tracking the
 development version in the interim. The libxls project is now officially
-hosted at <https://github.com/libxls/libxls>. In particular, libxls
-v1.5.0 addresses these two CVEs:
+hosted at https://github.com/libxls/libxls. In particular, libxls v1.5.0
+addresses these two CVEs:
 
 !begin-bullets-7!
 
 -   !begin-bullet!
-    [CVE-2018-20452](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-20452)
+    CVE-2018-20452
     !end-bullet!
 -   !begin-bullet!
-    [CVE-2018-20450](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-20450)
+    CVE-2018-20450
     !end-bullet!
 
 !end-bullets-7!
@@ -185,18 +187,15 @@ v1.5.0 addresses these two CVEs:
 
 ## Column name repair
 
-readxl exposes the `.name_repair` argument that is [coming to version
-2.0.0 of the tibble
-package](https://www.tidyverse.org/blog/2018/11/tibble-2.0.0-pre-announce/).
-The readxl default is `.name_repair = "unique"`, keeping with the readxl
-convention to ensure column names are neither missing nor duplicated.
+readxl exposes the `.name_repair` argument that is coming to version
+2.0.0 of the tibble package. The readxl default is
+`.name_repair = "unique"`, keeping with the readxl convention to ensure
+column names are neither missing nor duplicated.
 
 !begin-bullets-8!
 
 -   !begin-bullet!
-    [Column
-    Names](https://readxl.tidyverse.org/articles/articles/column-names.html)
-    is a new article about this feature.
+    Column Names is a new article about this feature.
     !end-bullet!
 -   !begin-bullet!
     readxl delegates name repair to tibble, therefore the installed
@@ -247,10 +246,8 @@ convention to ensure column names are neither missing nor duplicated.
 
     !end-bullet!
 -   !begin-bullet!
-    readxl has a [new
-    article](https://readxl.tidyverse.org/articles/articles/multiple-header-rows.html)
-    on reading Excel files with multiple header rows (#486, #492
-    @apreshill).
+    readxl has a new article on reading Excel files with multiple header
+    rows (#486, #492 @apreshill).
 
     !end-bullet!
 -   !begin-bullet!
@@ -271,7 +268,7 @@ convention to ensure column names are neither missing nor duplicated.
 readxl is now tested back to R \>= 3.1.
 
 Embedded libxls has been updated, using the source in
-<https://github.com/libxls/libxls>. readxl's DESCRIPTION now records the
+https://github.com/libxls/libxls. readxl's DESCRIPTION now records the
 SHA associated to the embedded libxls in a `Note`.
 
 # readxl 1.1.0
@@ -308,22 +305,16 @@ SHA associated to the embedded libxls in a `Note`.
 
     !begin-bullets-13!
     -   !begin-bullet!
-        [CVE-2017-12110](https://talosintelligence.com/vulnerability_reports/TALOS-2017-0462),
-        [CVE-2017-2896](https://talosintelligence.com/vulnerability_reports/TALOS-2017-0403),
-        and
-        [CVE-2017-2897](https://talosintelligence.com/vulnerability_reports/TALOS-2017-0404)
-        were demonstrated to affect readxl v1.0.0. These have been
-        addressed in libxls and the embedded version of libxls
-        incorporates those fixes.
+        CVE-2017-12110, CVE-2017-2896, and CVE-2017-2897 were
+        demonstrated to affect readxl v1.0.0. These have been addressed
+        in libxls and the embedded version of libxls incorporates those
+        fixes.
         !end-bullet!
     -   !begin-bullet!
-        Although
-        [CVE-2017-12111](https://talosintelligence.com/vulnerability_reports/TALOS-2017-0463)
-        and
-        [CVE-2017-2919](https://talosintelligence.com/vulnerability_reports/TALOS-2017-0426)
-        mention readxl, the notices clarify that these CVEs do not
-        actually affect readxl. Both have been fixed in libxls for quite
-        a while: CVE-2017-12111 since 2014 and CVE-2017-2919 since 2012.
+        Although CVE-2017-12111 and CVE-2017-2919 mention readxl, the
+        notices clarify that these CVEs do not actually affect readxl.
+        Both have been fixed in libxls for quite a while: CVE-2017-12111
+        since 2014 and CVE-2017-2919 since 2012.
         !end-bullet!
 
     !end-bullets-13!
@@ -551,8 +542,7 @@ that are quite different from files produced by Excel.
     !end-bullet!
 -   !begin-bullet!
     The `numFmtId` attribute is no longer accessed when it does not
-    exist (xlsx written by <https://www.epplussoftware.com>). (#191,
-    #229)
+    exist (xlsx written by https://www.epplussoftware.com). (#191, #229)
 
     !end-bullet!
 -   !begin-bullet!
@@ -574,11 +564,10 @@ that are quite different from files produced by Excel.
 
     !end-bullet!
 -   !begin-bullet!
-    The [Lotus 1-2-3 leap year
-    bug](https://learn.microsoft.com/en-US/office/troubleshoot/excel/wrongly-assumes-1900-is-leap-year)
-    is now accounted for, i.e. date-times prior to March 1, 1900 import
-    correctly. Date-times on the non-existent leap day February 29, 1900
-    import as NA and throw a warning. (#264, #148, #292)
+    The Lotus 1-2-3 leap year bug is now accounted for, i.e. date-times
+    prior to March 1, 1900 import correctly. Date-times on the
+    non-existent leap day February 29, 1900 import as NA and throw a
+    warning. (#264, #148, #292)
 
     !end-bullet!
 -   !begin-bullet!

@@ -1,9 +1,24 @@
-Version 1.9.1.9000 (dev)
-========================
+Version 1.9.2.9000
+==================
+
+### NEW FEATURES
+
+* [#682](https://github.com/tidyverse/lubridate/issues/682#issuecomment-1635910435) Add type="year_start/end" argument to `quarter()` which produces a complete description of the quarter.
+
+### BUG FIXES
+
+* [#1109](https://github.com/tidyverse/lubridate/issues/1109) Fix recycling of the year slot in `as.period(unit = "month")` with Periods and Intervals.
+
+Version 1.9.2
+=============
 
 ### BUG FIXES
 
 * [#1104](https://github.com/tidyverse/lubridate/issues/1104) Fix incorrect parsing of months when %a format is present.
+
+### OTHER
+
+* Adapt to internal name changes in R-devel
 
 Version 1.9.1
 =============

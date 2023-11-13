@@ -1,0 +1,291 @@
+package,bullet_id,text
+broom,1,Moved forward with deprecation of tidiers for objects from the sp package. See resources linked in tidymodels/broom#1142 for more information on migration from retiring spatial packages.
+broom,2,Corrected confidence interval values for precision components in `tidy.betareg()` output (#1169).
+broom,3,Fixed bug in tidier for `car::linearHypothesis()` output with long formulas (#1171).
+broom,4,Added support for columns `adj.r.squared` and `npar` in `glance()` method for objects outputted from `mgcv::gam()` (#1172).
+broom,5,`tidy.coxph()` will now pass its ellipses `...` to `summary()` internally (#1151 by `@​ste-tuf`).
+broom,6,Transitioned the deprecation of the `region` argument to `tidy.SpatialPolygonsDataFrame` from a warn- to a hard-deprecation (#1142).
+broom,7,Removed maptools and rgeos as Suggested packages ahead of their retirement. sp tidiers will be removed from a future release of the package (#1142).
+broom,8,Addressed bug in mlogit tidiers where `augment.mlogit()` would fail if supplied a model fitted with a non-default `dfidx()` (#1156 by `@​gregmacfarlane`).
+broom,9,Addressed bug in ANOVA tidiers where `tidy.anova()` would fail if passed a model with many predictors (#1159 by `@​jwilliman`).
+broom,10,"Addressed warnings in ANOVA tidiers for unrecognized column names `Resid..Df`, `Resid..Dev`, and `Deviance`; those columns will be renamed `df.residual`, `residual.deviance`, and `deviance`, respectively (#1159 by `@​jwilliman`)."
+cli,1,"`ansi_collapse(x, trunc = 1, style = ""head"")` now indeed show one element if `length(x) == 2`, as documented (@​salim-b, #572)."
+cli,2,"`ansi_collapse()` gains a `sep2` argument to specify a seperate separator for length-two inputs. It defaults to `"" and ""` which, in conjunction with the other defaults, produces a collapsed string that fully adheres to the serial comma rules. (@​salim-b, #569)"
+cli,3,"`ansi_string()` is now an exported function (@​multimeric, #573)."
+cli,4,ANSI hyperlinks are now turned off on the RStudio render plane (#581).
+cli,5,"The progressr progress handler now reports progress correctly (@​HenrikBengtsson, #558)."
+cli,6,"New `hash_*sha1()` functions to calculate the SHA-1 hash of strings, objects, files."
+cli,7,"cli now shows progress bars after one second by default, if they are less than half way at the point. (Or after two seconds, unconditionally, as before.) See the the `cli.progress_show_after` option in `?cli-config` for details (#542)."
+cli,8,"`format_inline()` now has a new argument `keep_whitespace`, and it keeps whitespace, including newline and form feed characters by default."
+cli,9,New `keypress()` function to read a single key press from a terminal.
+cli,10,New function `pretty_print_code()` to print function objects with syntax highlighting at the R console.
+crayon,1,"crayon functions now mark their output with the right encoding, if their input was marked (#136, #138)."
+crayon,2,crayon now does not fail to install from source if the utils package is not loaded (#133).
+crayon,3,"You can use the new `cli.default_num_colors` option to set the default number of ANSI colors, only if ANSI support is otherwise detected. See the details in the manual of `num_ansi_colors()`. (From cli.)"
+crayon,4,crayon now install cleanly on R 3.4.x and R 3.5.x on Windows (#131).
+crayon,5,Better ANSI support detection if there is an active `sink()`.
+crayon,6,Support ANSI markup in RStudio jobs.
+crayon,7,ANSI color support detection works correctly now in older RStudio (#112).
+crayon,8,ANSI color support detection works correctly now on older R versions (#109).
+crayon,9,Overhauled and much improved detection of ANSI color support and number of ANSI colors.
+crayon,10,`NO_COLOR` environment variable disables color (#64)
+dbplyr,1,"Functions qualified with the base namespace are now also translated, e.g. `base::paste0(x, ""_1"")` is now translated (@​mgirlich, #1022)."
+dbplyr,2,`lead()` translation coerces `n` to an integer.
+dbplyr,3,"`sql_translator()` now checks for duplicated definitions (@​krlmlr, #1374)."
+dbplyr,4,`reframe()` now gives an informative error that it isn't supported (#1148).
+dbplyr,5,MySQL/MariaDB:
+dbplyr,5,"• Fix translation of `as.integer()` for MySQL (@​krlmlr, #1375)."
+dbplyr,5,"• New `simulate_mariadb()` (@​krlmlr, #1375)."
+dbplyr,8,Oracle
+dbplyr,8,• Fix translation of `as.Date()` applied to a string (#1389).
+dbplyr,10,"Using `compute(temporary = FALSE)` without providing a name is now deprecated (@​mgirlich, #1154)."
+dplyr,1,`left_join()` and friends now return a specialized error message if they detect that your join would return more rows than dplyr can handle (#6912).
+dplyr,2,`slice_*()` now throw the correct error if you forget to name `n` while also prefixing the call with `dplyr::` (#6946).
+dplyr,3,"`join_by()` now allows its helper functions to be namespaced with `dplyr::`, like `join_by(dplyr::between(x, lower, upper))` (#6838)."
+dplyr,4,`dplyr_reconstruct()`'s default method has been rewritten to avoid materializing duckplyr queries too early (#6947).
+dplyr,5,"Updated the `storms` data to include 2022 data (#6937, @​steveharoz)."
+dplyr,6,"Updated the `starwars` data to use a new API, because the old one is defunct. There are very minor changes to the data itself (#6938, @​steveharoz)."
+dplyr,7,`mutate_each()` and `summarise_each()` now throw correct deprecation messages (#6869).
+dplyr,8,"`setequal()` now requires the input data frames to be compatible, similar to the other set methods like `setdiff()` or `intersect()` (#6786)."
+dplyr,9,`count()` better documents that it has a `.drop` argument (#6820).
+dplyr,10,Fixed tests to maintain compatibility with the next version of waldo (#6823).
+dtplyr,1,`reframe()` is now translated.
+dtplyr,2,`consecutive_id()` is now mapped to `data.table::rleid()`. Note: `rleid()` only accepts vector inputs and cannot be used with data frame inputs.
+dtplyr,3,`case_match()` is now translated to `fcase()`.
+dtplyr,4,Can use `.data` in `lead()`/`lag()` (#441)
+dtplyr,5,Can namespace calls to `desc()` (#427).
+dtplyr,6,`case_when(.default = )` now works.
+dtplyr,7,`.by` no longer alters grouping in prior steps (#439)
+dtplyr,8,Arguments to `$` and `[[` calls are no longer prepended with `..` (#434)
+dtplyr,9,Grouping now works with non-standard column names (#451)
+dtplyr,10,Fix for failing R CMD check.
+forcats,1,New `fct_na_value_to_level()` and `fct_na_level_to_value()` to convert NA values to NA levels and vice versa (#337).
+forcats,2,"All functions now validate their inputs, giving more useful errors if you accidentally misspecify an input."
+forcats,3,`fct_collapse()` can now use `other_level = NA` (#291).
+forcats,4,`fct_count()` works with factors that contain `NA`s in levels.
+forcats,5,`fct_explicit_na()` is deprecated in favour of `fct_na_value_to_level()`.
+forcats,6,`fct_expand()` gains an `after` argument so that you can choose where the new levels are placed (#138).
+forcats,7,`fct_infreq()` gains the ability to weight by another variable using the `w` argument (#261).
+forcats,8,`fct_inorder()` now works when not all levels appear in the data (#262).
+forcats,9,`fct_lump_prop()` and friends now work correctly if you supply weights and have empty levels (#292).
+forcats,10,"`fct_lump_n()` and `fct_lump_prop()` will now create an ""Other"" level even if it only consists of a single level. This makes them consistent with the other `fct_lump_*` functions (#274)."
+ggplot2,1,"In the theme element hierarchy, parent elements that are a strict subclass of child elements now confer their subclass upon the children (#5457)."
+ggplot2,2,"`ggsave()` no longer sometimes creates new directories, which is now controlled by the new `create.dir` argument (#5489)."
+ggplot2,3,`guide_coloursteps(even.steps = FALSE)` now draws one rectangle per interval instead of many small ones (#5481).
+ggplot2,4,(internal) guide building is now part of `ggplot_build()` instead of `ggplot_gtable()` to allow guides to observe unmapped data (#5483).
+ggplot2,5,"`geom_violin()` gains a `bounds` argument analogous to `geom_density()`s (@​eliocamp, #5493)."
+ggplot2,6,"Legend titles no longer take up space if they've been removed by setting `legend.title = element_blank()` (@​teunbrand, #3587)."
+ggplot2,7,"New function `check_device()` for testing the availability of advanced graphics features introduced in R 4.1.0 onwards (@​teunbrand, #5332)."
+ggplot2,8,"Failing to fit or predict in `stat_smooth()` now gives a warning and omits the failed group, instead of throwing an error (@​teunbrand, #5352)."
+ggplot2,9,"`resolution()` has a small tolerance, preventing spuriously small resolutions due to rounding errors (@​teunbrand, #2516)."
+ggplot2,10,"`stage()` now works correctly, even with aesthetics that do not have scales (#5408)"
+googledrive,1,"`drive_auth(subject =)` is a new argument that can be used with `drive_auth(path =)`, i.e. when using a service account. The `path` and `subject` arguments are ultimately processed by `gargle::credentials_service_account()` and support the use of a service account to impersonate a normal user (#413)."
+googledrive,2,All requests now route through `gargle::request_retry()` (#380).
+googledrive,3,"`drive_scopes()` is a new function to access scopes relevant to the Drive API. When called without arguments, `drive_scopes()` returns a named vector of scopes, where the names are the associated short aliases. `drive_scopes()` can also be called with a character vector; any element that's recognized as a short alias is replaced with the associated full scope (#430)."
+googledrive,4,Various internal changes to sync up with gargle v1.5.0.
+googledrive,5,`drive_oauth_client()` is a new function to replace the now-deprecated `drive_oauth_app()`.
+googledrive,6,The new `client` argument of `drive_auth_configure()` replaces the now-deprecated `app` argument.
+googledrive,7,"The documentation of `drive_auth_configure()` emphasizes that the preferred way to ""bring your own OAuth client"" is by providing the JSON downloaded from Google Developers Console."
+googledrive,8,Team Drives is being renamed to shared drives from Google Workspace blog
+googledrive,9,Upcoming changes to the Google Drive API and Google Picker API from the Google Cloud blog
+googledrive,10,`shortcut_create()`: creates a shortcut to a specific Drive file (or folder).
+googlesheets4,1,"`gs4_auth(subject =)` is a new argument that can be used with `gs4_auth(path =)`, i.e. when using a service account. The `path` and `subject` arguments are ultimately processed by `gargle::credentials_service_account()` and support the use of a service account to impersonate a normal user."
+googlesheets4,2,"`gs4_scopes()` is a new function to access scopes relevant to the Sheets and Drive APIs. When called without arguments, `gs4_scopes()` returns a named vector of scopes, where the names are the associated short aliases. `gs4_scopes()` can also be called with a character vector; any element that's recognized as a short alias is replaced with the associated full scope (#291)."
+googlesheets4,3,Various internal changes to sync up with gargle v1.5.0.
+googlesheets4,4,`gs4_oauth_client()` is a new function to replace the now-deprecated `gs4_oauth_app()`.
+googlesheets4,5,The new `client` argument of `gs4_auth_configure()` replaces the now-deprecated `app` argument.
+googlesheets4,6,"The documentation of `gs4_auth_configure()` emphasizes that the preferred way to ""bring your own OAuth client"" is by providing the JSON downloaded from Google Developers Console."
+googlesheets4,7,cli is new in Imports.
+googlesheets4,8,"googlesheets4 Suggests testthat \>= 3.0.0 and, specifically, uses third edition features."
+googlesheets4,9,"`gs4_`: refers variously to the googlesheets4 package, v4 of the Google Sheets API, or to operations on one or more (spread)Sheets"
+googlesheets4,10,`sheet_`: operations on one or more (work)sheets
+haven,1,Fix for upcoming R-devel change.
+haven,2,Updated to ReadStat 1.1.9.
+haven,2,"• Fix various SAS catalog file reading bugs (#529, #653, #680, #696, #705)."
+haven,2,• Increase maximum SAS page file size to 16MiB (#697).
+haven,2,• Ignore invalid SAV timestamp strings (#683).
+haven,2,• Fix compiler warnings (#707).
+haven,7,"The experimental `write_sas()` function has been deprecated (#224). The sas7bdat file format is complex and undocumented, and as such writing SAS files is not officially supported by ReadStat. `write_xpt()` should be used instead - it produces files in the SAS transport format, which has limitations but will be reliably read by SAS."
+haven,8,"`write_*()` functions gain a new `adjust_tz` argument to allow more control over time zone conversion for date-time variables (#702). Thanks to @​jmobrien for the detailed issue and feedback. Stata, SPSS and SAS do not have a concept of time zone. Since haven 2.4.0 date-time values in non-UTC time zones are implicitly converted when writing to ensure the time displayed in Stata/SPSS/SAS will match the time displayed to the user in R (see #555). This is the behaviour when `adjust_tz = TRUE` (the default). Although this is in line with general user expectations it can cause issues when the time zone is important, for e.g. when looking at differences between time points, since the underlying numeric data is changed to preserve the displayed time. Use `adjust_tz = FALSE` to write the time as the corresponding UTC value, which will appear different to the user but preserves the underlying numeric data."
+haven,9,"`write_*()` functions previously returned the data frame with minor alterations made to date-time variables. These functions now invisibly return the original input data frame unchanged (@​jmobrien, #702)."
+haven,10,Fix bug in string variable width calculation that treated `NA` values as width 2. `NA` values are now treated as blanks for width calculations (#699).
+hms,1,Internal changes only.
+hms,2,Merged cran-1.1.3 into main.
+hms,3,Internal changes only.
+hms,4,"Fix method consistency, checked by R-devel."
+hms,5,Use rlang instead of ellipsis (#106).
+hms,6,"Fix method consistency, checked by R-devel."
+hms,7,Use rlang instead of ellipsis (#106).
+hms,8,Re-rendered documentation for compatibility with R-devel.
+hms,9,Avoid blanket import for lifecycle package for compatibility with upcoming rlang.
+hms,10,"Establish compatibility with development version of testthat (#101, @​lionel-)."
+httr,1,Add support for seeking in uploads (#741).
+httr,2,Suppress another use of httpbin.
+httr,3,More aggressively skip httpbin using tests.
+httr,4,Remove vignette contents and point to httr2.
+httr,5,Suppress use of httpbin in examples and tests because it has become unreliable.
+httr,6,"An internal helper that checks for an interactive session in the OOB flow now honors the `""rlang_interactive""` global option, in case it's necessary to declare the session to be interactive (enough) for OOB (@​jennybc, #734)."
+httr,7,Fix intermittent failing test.
+httr,8,Fix failing test.
+httr,9,Fix failing test.
+httr,10,"`parse_url()` now refers to RFC3986 for the parsing of the URL's scheme, with a bit more permissive syntax (@​ymarcon, #615)."
+lubridate,1,"#682 Add type=""year_start/end"" argument to `quarter()` which produces a complete description of the quarter."
+lubridate,2,"#1109 Fix recycling of the year slot in `as.period(unit = ""month"")` with Periods and Intervals."
+lubridate,3,#1104 Fix incorrect parsing of months when %a format is present.
+lubridate,4,Adapt to internal name changes in R-devel
+lubridate,5,"`as_datetime()` accepts multiple formats in format argument, just like `as_date()` does."
+lubridate,6,#1091 Fix formatting of numeric inputs to parse_date_time.
+lubridate,7,#1092 Fix regression in `ymd_hm` on locales where `p` format is not defined.
+lubridate,8,"#1097 Fix `as_date(""character"")` to work correctly with formats that include extra characters."
+lubridate,9,#1098 Roll over the month boundary in `make_dateime()` when units exceed their maximal values.
+lubridate,10,#1090 timechange has been moved from Depends to Imports.
+magrittr,1,Fixed a C level protection issue in `%>%` (#256).
+magrittr,2,"New eager pipe `%!>%` for sequential evaluation (#247). Consider using `force()` in your functions instead to make them strict, if sequentiality is required. See the examples in `?""pipe-eager""`."
+magrittr,3,"Fixed an issue that could cause pipe invocations to fail in versions of R built with `--enable-strict-barrier`. (#239, @​kevinushey)"
+magrittr,4,Fixed issue caused by objects with certain names being present in the calling environment (#233).
+magrittr,5,Fixed regression in `freduce()` with long lists (kcf-jackson/sketch#5).
+magrittr,6,Minimal performance cost.
+magrittr,7,Minimal impact on backtraces.
+magrittr,8,No impact on reference counts.
+magrittr,9,Can now use the placeholder `.` with the splicing operator `!!!` from rlang (#191).
+magrittr,10,"Piped arguments are now persistent. They can be evaluated after the pipeline has returned, which fixes subtle issues with function factories (#159, #195)."
+modelr,1,Fixes for R CMD check
+modelr,2,Relax test for R-devel
+modelr,3,Redocument to fix HTML issues in .Rd
+modelr,4,Eliminate direct dplyr dependency in favour of vctrs.
+modelr,5,Reimplement `typical.ordered()` for R-devel compatibility.
+modelr,6,Minor documentation fixes and updates for deprecated functions.
+modelr,7,R CMD check documentation fix
+modelr,8,Fix to `data_grid()` to work with dev tidyr.
+modelr,9,"`add_predictions()`, `gather_predictions()`, and `spread_predictions()` more carefully pass along `type` parameter in order to avoid problems with predict methods that don't deal with `type = NULL` (#92)."
+modelr,10,"`add_predictions()`, `gather_predictions()`, and `spread_predictions()` gain a `type` parameter which is passed through to `stats::predict()` (#34, @​pmenzel)"
+pillar,1,Internal changes only.
+pillar,2,Merged cran-1.9.0 into main.
+pillar,3,Internal changes only.
+pillar,4,Internal changes only.
+pillar,5,"Math operations on `num()` objects no longer perform type checks. This allows, e.g., multiplying a `num()` with a logical (#630, #632)."
+pillar,6,"The default for the `pillar.min_title_chars` option has been bumped up to 20 characters so that title truncuation only affects very long variables. Use `options(pillar.min_title_chars = 5)` to reset to the previous default (#582, #620)."
+pillar,7,"Use info bullets to format details (#582, #617, #627, #635)."
+pillar,8,"`colonnade()`, `extra_cols()` and `squeeze()` are now hard-deprecated (#272, #374, #631)."
+pillar,9,"Show `colnames()` hint only when needed (tidyverse/tibble#1488, #622)."
+pillar,10,"Fix printing of very small numbers (#615, #619)."
+purrr,1,Fixed valgrind issue.
+purrr,2,Deprecation infrastructure in `map_chr()` now has much less overhead leading to improved performance (#1089).
+purrr,3,purrr now requires R 3.5.0.
+purrr,4,"As of purrr 1.0.0, the `map()` family of functions wraps all errors generated by `.f` inside an wrapper error that tracks the iteration index. As of purrr 1.0.1, this error now has a custom class (`purrr_error_indexed`), `location` and `name` fields, and is documented in `?purrr_error_indexed` (#1027)."
+purrr,5,`map()` errors with named inputs also report the name of the element that errored.
+purrr,6,Fixed an issue where progress bars weren't being closed when user interrupts or errors were encountered during a `map()` call (#1024).
+purrr,7,Fixed an invalid C signature for `pluck()` (#1018).
+purrr,8,Set `Biarch: true` to build purrr on 32-bit Windows on R \< 4.2.0 (#1017).
+purrr,9,`cross()` and all its variants have been deprecated in favour of `tidyr::expand_grid()`. These functions were slow and buggy and we no longer think they are the right approach to solving this problem. See #768 for more information.
+purrr,10,"`update_list()` (#858) and `rerun()` (#877), and the use of tidyselect with `map_at()` and friends (#874) have been deprecated. These functions use some form of non-standard evaluation which we now believe is a poor fit for purrr."
+readr,1,No user-facing changes. Patch release with internal changes requested by CRAN.
+readr,2,"Help files below `man/` have been re-generated, so that they give rise to valid HTML5. (This is the impetus for this release, to keep the package safely on CRAN.)"
+readr,3,"`mini-gapminder-africa.csv` and friends are new example datasets accessible via `readr_example()`, which have been added to illustrate reading multiple files at once, into a single data frame."
+readr,4,"`read_table()`, `read_log()`, and `read_delim_chunked()` (and friends) gain the `show_col_types` argument found elsewhere. All `read_*()` functions now respect the `show_col_types` argument or option, even when using the first edition parsing engine (#1331)."
+readr,5,`show_progress()` uses `rlang::is_interactive()` instead of `base::interactive()` (#1356).
+readr,6,"`read_builtin()` does more argument checking, so that we catch obviously malformed input before passing along to `utils::data()` (#1361)."
+readr,7,`chickens.csv` and `whitespace-sample.txt` are new example datasets accessible via `readr_example()` (#1354).
+readr,8,Jenny Bryan is now the maintainer.
+readr,9,Fix buffer overflow when trying to parse an integer from a field that is over 64 characters long (#1326)
+readr,10,"All readr functions again read eagerly by default. Unfortunately many users experienced frustration from the drawbacks of lazy reading, in particular locking files on Windows, so it was decided to disable lazy reading default. However `options(readr.read_lazy = TRUE)` can be used to set the default to by lazy if desired."
+readxl,1,"We embed a development version of libxls (https://github.com/libxls/libxls), which is based on the most recent released version, v1.6.2. The reason for embedding a development version is to ship a version of libxls that incorporates the fix for this CVE (#679):"
+readxl,1,• CVE-2021-27836
+readxl,3,readxl no longer declares the use of C++11.
+readxl,4,readxl should once again compile on Alpine Linux.
+readxl,5,"Other small readxl-specific patches have been made to the embedded libxls code to comply with CRAN requests, such as avoiding the use of `sprintf()`."
+readxl,6,Updating the embedded version of libxls (more below)
+readxl,7,Switching from Rcpp to cpp11 (more below)
+readxl,8,Refactoring to reduce duplication between the `.xls` and `.xlsx` branches
+readxl,9,"""Date or Not Date"": The classification of number formats as being datetime-ish is more sophisticated and should no longer be so easily fooled by, e.g., colours or currencies. This affects cell and column type guessing, hopefully for the better (#388, #559, @​nacnudus, @​reviewher)."
+readxl,10,"Cell location is determined more robustly in `.xlsx` files, guarding against the idiosyncratic way in which certain 3rd party tools include (or, rather, do not include) cell location in individual cell nodes (#648, #671)."
+reprex,1,"The ad placed by `reprex(advertise = TRUE)` has been tweaked for `venue = ""gh""` (and, therefore, for its aliases `""so""` and `""ds""`) and `venue = ""slack""` (#395)."
+reprex,2,"reprex takes advantage of rlang 1.0.0's improved support for backtraces in knitted documents and sets the option `rlang_backtrace_on_error_report = ""full""` (#377)."
+reprex,3,"`reprex_rtf()` (a shortcut for `reprex(venue = ""rtf"")`) now works on Windows, even if one of the (possibly temporary) filepaths contains a space, e.g. because the username contains a space (#409, @​cderv)."
+reprex,4,"The RStudio addin no longer displays a warning about condition length when selecting 'current file' as the reprex source (#391, @​bisaloo)."
+reprex,5,Internal matters:
+reprex,5,"• Help files below `man/` have been re-generated, so that they give rise to valid HTML5. (This is the impetus for this release, to keep the package safely on CRAN.)"
+reprex,5,"• reprex's condition signalling has been updated to use the current approaches provided by the cli, rlang, and lifecycle packages."
+reprex,8,"When `reprex()` is called without `expr` or `input`, in a context where the user's clipboard can't be reached from R, the default is now to consult the current selection for reprex source. Previously this was only available via the `reprex_selection()` addin. Note that this ""current selection"" default behaviour propagates to convenience wrappers around `reprex()`, such as `reprex_locale()` and venue-specific functions like `reprex_r()`, and to the un-`reprex()` functions, such as `reprex_clean()`."
+reprex,9,"In this context, the file containing the (un)rendered reprex is opened so the user can manually copy its contents."
+reprex,10,"To reprex in the current working directory,\ Previously: `reprex(outfile = NA)`\ Now: `reprex(wd = ""."")`\ More generally, usage looks like `reprex(wd = ""path/to/desired/wd"")`."
+rlang,1,Fixed an off-by-one typo in the traceback source column location (#1633).
+rlang,2,"`abort()` now respects the base R global option, `options(show.error.messages = FALSE)` (#1630)."
+rlang,3,`obj_type_friendly()` now only displays the first class of S3 objects (#1622).
+rlang,4,`expr_label()` now has back-compatility with respect to changes made by R version 4.4 and `is.atomic(NULL)` (#1655)
+rlang,5,Performance improvement in `.rlang_cli_compat()` (#1657).
+rlang,6,`englue()` now allows omitting `{{`. This is to make it easier to embed in external functions that need to support either `{` and `{{` (#1601).
+rlang,7,Fix for CRAN checks.
+rlang,8,"`stop_input_type()` now handles `I()` input literally in `arg` (#1607, @​simonpcouch)."
+rlang,9,"`parse_expr()` and `parse_exprs()` are now faster when `getOption(""keep.source"")` is `TRUE` (#1603)."
+rlang,10,`dots_splice()` is deprecated. This function was previously in the questioning lifecycle stage as we were moving towards the explicit `!!!` splicing style.
+rstudioapi,1,Added `setGhostText()` for setting ghost text in the current editor.
+rstudioapi,2,Added `getDelegatedAzureToken` for Posit Workbench users needing to expose OAuth2 tokens for Azure services that have already had permissions configured
+rstudioapi,3,`documentPath()` now marks the encoding of file paths as UTF-8. (#257)
+rstudioapi,4,"`getSourceEditorContext()` gains the `id` argument, to be used to request the editor context for a document with an already-known ID. (#251)"
+rstudioapi,5,"Added `documentOpen()`, for opening a document in RStudio and optionally navigating the cursor to a particular point in the file. The method is synchronous and returns the document ID upon completion."
+rstudioapi,6,Fixed an issue where `rstudioapi::askForSecret()` would erroneously fall back to using `rstudioapi::askForPassword()` during Knit.
+rstudioapi,7,"Added `registerCommandCallback`, `registerCommandStreamCallback`, and `unregisterCommandCallback`, used to execute a callback after an IDE command is executed."
+rstudioapi,8,Fixed an issue where `rstudioapi::insertText()` would fail. (#208)
+rstudioapi,9,Fixed an issue where remote `rstudioapi` calls would erroneously use a previous response in some cases.
+rstudioapi,10,Allow `navigateToFile` to accept an empty file. This file will default to the file currently in view in the active column.
+rvest,1,Re-document to fix HTML issues in `.Rd`.
+rvest,2,Fixes for CRAN
+rvest,3,"`html_table()` converts empty tables to empty tibbles (@​epiben, #327)."
+rvest,4,"`html_table()` correctly handles tables with cells that contain blank values for `rowspan` and/or `colspan`, so that e.g. `<td rowspan="""">` is parsed as `<td rowspan=1>` (@​epiben, #323)."
+rvest,5,Fix broken example
+rvest,6,"New `html_text2()` provides a more natural rendering of HTML nodes into text, converting `<br>` into ""`\n`{=tex}"", and removing non-significant whitespace (#175). By default, it also converts `&nbsp;` into regular spaces, which you can suppress with `preserve_nbsp = TRUE` (#284)."
+rvest,7,"`html_table()` has been re-written from scratch to more closely mimic the algorithm that browsers use for parsing tables. This should mean that there are far fewer tables for which it fails to produce some output (#63, #204, #215). The `fill` argument has been deprecated since it is no longer needed. `html_table()` now returns a tibble rather than a data frame to be compatible with the rest of the tidyverse (#199). Its performance has been considerably improved (#237). It also gains a `na.strings` argument to control what values are converted to `NA` (#107), and a `convert` argument to control whether to run the conversion (#311)."
+rvest,8,"New `html_form_submit()` allows you to submit a form directly, without needing to create a session (#300)."
+rvest,9,rvest is now licensed as MIT (#287).
+rvest,10,"rvest now imports xml2 rather than depending on it. This is cleaner because it avoids attaching all the xml2 functions that you're less likely to use. To reduce the change of breakages, rvest re-exports xml2 functions `read_html()` and `url_absolute()`, but your code may now need an explicit `library(xml2)`."
+stringr,1,"`str_trunc()` now correctly truncates strings when `side` is `""left""` or `""center""` (@​UchidaMizuki, #512)."
+stringr,2,stringr functions now consistently implement the tidyverse recycling rules (#372). There are two main changes:
+stringr,2,"• Only vectors of length 1 are recycled. Previously, (e.g.) `str_detect(letters, c(""x"", ""y""))` worked, but it now errors."
+stringr,2,"• `str_c()` ignores `NULLs`, rather than treating them as length 0 vectors."
+stringr,4,"Additionally, many more arguments now throw errors, rather than warnings, if supplied the wrong type of input."
+stringr,5,`regex()` and friends now generate class names with `stringr_` prefix (#384).
+stringr,6,"`str_detect()`, `str_starts()`, `str_ends()` and `str_subset()` now error when used with either an empty string (`""""`) or a `boundary()`. These operations didn't really make sense (`str_detect(x, """")` returned `TRUE` for all non-empty strings) and made it easy to make mistakes when programming."
+stringr,7,Many tweaks to the documentation to make it more useful and consistent.
+stringr,8,"New `vignette(""from-base"")` by @​sastoudt provides a comprehensive comparison between base R functions and their stringr equivalents. It's designed to help you move to stringr if you're already familiar with base R string functions (#266)."
+stringr,9,"New `str_escape()` escapes regular expression metacharacters, providing an alternative to `fixed()` if you want to compose a pattern from user supplied strings (#408)."
+tibble,1,Skip tests if packages are missing.
+tibble,2,Skip tests if packages are missing.
+tibble,3,Merge pull request #1565 from tidyverse/snapshot-main-rcc-smoke-null.
+tibble,4,Merge pull request #1562 from tidyverse/snapshot-main-rcc-smoke-null.
+tibble,5,Merge pull request #1561 from tidyverse/snapshot-main-rcc-full-config-os-macos-latest-r-release.
+tibble,6,Merge pull request #1560 from tidyverse/snapshot-main-R-CMD-check-base-null.
+tibble,7,Fix rendering if suggested packages are missing.
+tibble,8,Override :: to avoid failures in tests without suggested packages.
+tibble,9,Merge branch 'docs'.
+tibble,10,Snapshot updates for rcc-smoke (null) (#1548).
+tidyr,1,"`pivot_wider` now uses `.by` and `|>` syntax for the dplyr helper message to identify duplicates (@​boshek, #1516)"
+tidyr,2,"New family of consistent string separating functions: `separate_wider_delim()`, `separate_wider_position()`, `separate_wider_regex()`, `separate_longer_delim()`, and `separate_longer_position()`. These functions are thorough refreshes of `separate()` and `extract()`, featuring improved performance, greater consistency, a polished API, and a new approach for handling problems. They use stringr and supersede `extract()`, `separate()`, and `separate_rows()` (#1304). The named character vector interface used in `separate_wider_regex()` is very similar to the nc package by Toby Dylan Hocking."
+tidyr,3,"`nest()` gains a `.by` argument which allows you to specify the columns to nest by (rather than the columns to nest, i.e. through `...`). Additionally, the `.key` argument is no longer deprecated, and is used whenever `...` isn't specified (#1458)."
+tidyr,4,`unnest_longer()` gains a `keep_empty` argument like `unnest()` (#1339).
+tidyr,5,`pivot_longer()` gains a `cols_vary` argument for controlling the ordering of the output rows relative to their original row number (#1312).
+tidyr,6,"New datasets `who2`, `household`, `cms_patient_experience`, and `cms_patient_care` to demonstrate various tidying challenges (#1333)."
+tidyr,7,"The `...` argument of both `pivot_longer()` and `pivot_wider()` has been moved to the front of the function signature, after the required arguments but before the optional ones. Additionally, `pivot_longer_spec()`, `pivot_wider_spec()`, `build_longer_spec()`, and `build_wider_spec()` have all gained `...` arguments in a similar location. This change allows us to more easily add new features to the pivoting functions without breaking existing CRAN packages and user scripts. `pivot_wider()` provides temporary backwards compatible support for the case of a single unnamed argument that previously was being positionally matched to `id_cols`. This one special case still works, but will throw a warning encouraging you to explicitly name the `id_cols` argument. To read more about this pattern, see Data, dots, details in the tidyverse design guide (#1350)."
+tidyr,8,All functions deprecated in tidyr 1.0 and 1.2 (the old lazyeval functions ending in `_` and various arguments to `unnest()`) now warn on every use. They will be made defunct in 2024 (#1406).
+tidyr,9,"`unnest_longer()` now consistently drops rows with either `NULL` or empty vectors (like `integer()`) by default. Set the new `keep_empty` argument to `TRUE` to retain them. Previously, `keep_empty = TRUE` was implicitly being used for `NULL`, while `keep_empty = FALSE` was being used for empty vectors, which was inconsistent with all other tidyr verbs with this argument (#1363)."
+tidyr,10,"`unnest_longer()` now uses `""""` in the index column for fully unnamed vectors. It also now consistently uses `NA` in the index column for empty vectors that are ""kept"" by `keep_empty = TRUE` (#1442)."
+tidyverse,1,lubridate is now a member of the core tidyverse (#157)!
+tidyverse,2,tidyverse now installs ragg (#310).
+tidyverse,3,Loading the tidyverse now advertises `library(conflicted)` because it resolves many conflict problems and silences tidyverse's automated report (#218).
+tidyverse,4,`tidyverse_sitrep()` correctly displays installed package versions and highlights development versions of packages (#222).
+tidyverse,5,Text version of the citation now lists all authors (#269).
+tidyverse,6,All packages have been bumped to their latest versions.
+tidyverse,7,Messaging uses modern approach to avoid red text in RStudio (#296).
+tidyverse,8,"tidyverse now installs dtplyr (#216), googledrive, and googlesheets4 (#229). All packages have been bumped to their latest versions."
+tidyverse,9,License changed to MIT (#235).
+tidyverse,10,"The tidyverse now has an associated paper at the Journal of Open Source Software that you can use to cite the tidyverse if you use it in a paper - see `citation(""tidyverse"")` for details."
+xml2,1,"`xml_serialize()` now includes the document type so that `xml_unserialize()` works also for HTML documents (#407, @​HenrikBengtsson)."
+xml2,2,"Remove unused dependencies on glue, withr and lifecycle (@​mgirlich)."
+xml2,3,"`print()` is faster for very long `xml_nodeset` inputs (#366, @​michaelchirico)."
+xml2,4,"Small speedup for `xml_find_all()` (@​mgirlich, #393)."
+xml2,5,Fixes for R CMD check problems.
+xml2,6,Fixes for R CMD check problems.
+xml2,7,Windows: update to libxml2 2.10.3
+xml2,8,Hadley Wickham is now (again) the maintainer.
+xml2,9,xml2 has been re-licensed as MIT (#317).
+xml2,10,`xml_find_all.xml_node()` fails more informatively the `xpath` parameter is the wrong type (@​michaelchirico)

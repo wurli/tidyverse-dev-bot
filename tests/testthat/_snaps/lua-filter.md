@@ -1,7 +1,8 @@
-# Lua annotation works
+# The lua filter works
 
     Code
-      cat(annotated)
+      cat_line(system2("pandoc", c(test_file, "-t markdown", paste("--lua-filter",
+        lua_filter)), stdout = TRUE))
     Output
       # dplyr (development version)
       

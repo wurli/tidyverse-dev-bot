@@ -2,7 +2,7 @@ pull_news_files <- function(urls,
                             dir = "news-files", 
                             hashes = "hashes.rds", 
                             include_old = FALSE,
-                            overwrite = TRUE) {
+                            update_cache = TRUE) {
   
   # For notifications
   force(urls)
@@ -44,7 +44,6 @@ pull_news_files <- function(urls,
       
       cli_alert("Caching news file for package {.pkg {pkg}}")
       
-      # Sorry
       prev_hashes[[pkg]] <<- hash
       
       write_file(news, file)
@@ -54,7 +53,7 @@ pull_news_files <- function(urls,
     }) |> 
     compact() 
   
-  if (overwrite) write_rds(prev_hashes, hash_loc)
+  if (update_cache) write_rds(prev_hashes, hash_loc)
   
   out
   

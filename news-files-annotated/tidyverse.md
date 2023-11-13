@@ -1,15 +1,11 @@
 # tidyverse (development version)
 
+# tidyverse 2.0.0
+
 !begin-bullets-1!
 
 -   !begin-bullet!
-    We now advertise `library(conflicted)` because it resolves many
-    conflict problems and silences tidyverse's automated report (#218).
-
-    !end-bullet!
--   !begin-bullet!
-    `tidyverse_sitrep()` correctly displays installed package versions
-    and highlights development versions of pacakges (#222).
+    lubridate is now a member of the core tidyverse (#157)!
 
     !end-bullet!
 -   !begin-bullet!
@@ -17,7 +13,14 @@
 
     !end-bullet!
 -   !begin-bullet!
-    Add lubridate to the core tidyverse (#157).
+    Loading the tidyverse now advertises `library(conflicted)` because
+    it resolves many conflict problems and silences tidyverse's
+    automated report (#218).
+
+    !end-bullet!
+-   !begin-bullet!
+    `tidyverse_sitrep()` correctly displays installed package versions
+    and highlights development versions of packages (#222).
 
     !end-bullet!
 
@@ -63,10 +66,9 @@
 !begin-bullets-4!
 
 -   !begin-bullet!
-    The tidyverse now has an associated paper at the [Journal of Open
-    Source Software](https://joss.theoj.org/) that you can use to cite
-    the tidyverse if you use it in a paper - see `citation("tidyverse")`
-    for details.
+    The tidyverse now has an associated paper at the Journal of Open
+    Source Software that you can use to cite the tidyverse if you use it
+    in a paper - see `citation("tidyverse")` for details.
 
     !end-bullet!
 -   !begin-bullet!

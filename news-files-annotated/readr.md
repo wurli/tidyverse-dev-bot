@@ -1,5 +1,7 @@
 # readr (development version)
 
+# readr 2.1.4
+
 !begin-bullets-1!
 
 -   !begin-bullet!
@@ -148,8 +150,7 @@
 ## second edition changes
 
 readr 2.0.0 is a major release of readr and introduces a new second
-edition parsing and writing engine implemented via the
-[vroom](https://vroom.r-lib.org/) package.
+edition parsing and writing engine implemented via the vroom package.
 
 This engine takes advantage of lazy reading, multi-threading and
 performance characteristics of modern SSD drives to significantly
@@ -612,8 +613,7 @@ license.
     !end-bullet!
 -   !begin-bullet!
     Uses of `tibble::data_frame` updated to `tibble::tibble`
-    ([tidyverse/dplyr#4069](https://github.com/tidyverse/dplyr/issues/4069),
-    @thays42, #1124, @brianrice2)
+    (tidyverse/dplyr#4069, @thays42, #1124, @brianrice2)
 
     !end-bullet!
 -   !begin-bullet!
@@ -1392,13 +1392,10 @@ fixed a major bug where parsing negative numbers yielded positive values
 !begin-bullets-30!
 
 -   !begin-bullet!
-    Printing double values now uses an
-    [implementation](https://github.com/juj/MathGeoLib/blob/master/src/Math/grisu3.c)
-    of the [grisu3
-    algorithm](http://www.cs.tufts.edu/~nr/cs257/archive/florian-loitsch/printf.pdf)
-    which speeds up writing of large numeric data frames by \~10X.
-    (#432) '.0' is appended to whole number doubles, to ensure they will
-    be read as doubles as well. (#483)
+    Printing double values now uses an implementation of the grisu3
+    algorithm which speeds up writing of large numeric data frames by
+    \~10X. (#432) '.0' is appended to whole number doubles, to ensure
+    they will be read as doubles as well. (#483)
 
     !end-bullet!
 -   !begin-bullet!

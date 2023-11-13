@@ -140,9 +140,7 @@
     !end-bullet!
 -   !begin-bullet!
     `fct_c()`, `fct_collapse()` and `fct_recode()` are now explicitly
-    documented as using [dynamic
-    dots](https://rlang.r-lib.org/reference/dyn-dots.html) (@labouz,
-    #234).
+    documented as using dynamic dots (@labouz, #234).
 
     !end-bullet!
 -   !begin-bullet!

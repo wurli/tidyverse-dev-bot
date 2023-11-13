@@ -6,105 +6,33 @@
         cat_ol(x)
       })
     Output
-      -- Bullet 01; section 01; level 01 ---------------------------
-       1. [`.by`/`by`](https://dplyr.tidyverse.org/dev/reference/dplyr_by.html)
-          is an experimental alternative to `group_by()` that supports per-
-          operation grouping for `mutate()`, `summarise()`, `filter()`, and the
-          `slice()` family (#6528). Rather than:
-      -- Bullet 01; section 02; level 01 ---------------------------
-       1. ```
-          starwars %>%
-            group_by(species, homeworld) %>%
-            summarise(mean_height = mean(height))
-          ```
-       2. You can now write:
-      -- Bullet 01; section 03; level 01 ---------------------------
-       1. ```
-          starwars %>%
-            summarise(
-              mean_height = mean(height),
-              .by = c(species, homeworld)
-            )
-          ```
-       2. The most useful reason to do this is because `.by` only affects a
-          single operation. In the example above, an ungrouped data frame went
-          into the `summarise()` call, so an ungrouped data frame will come
-          out; with `.by`, you never need to remember to `ungroup()` afterwards
-          and you never need to use the `.groups` argument. Additionally, using
-          `summarise()` with `.by` will never sort the results by the group key,
-          unlike with `group_by()`. Instead, the results are returned using the
-          existing ordering of the groups from the original data. We feel this
-          is more predictable, better maintains any ordering you might have
-          already applied with a previous call to `arrange()`, and provides
-          a way to maintain the current ordering without having to resort to
-          factors. This feature was inspired by [data.table](https://CRAN.R-
-          project.org/package=data.table), where the equivalent syntax looks
-          like:
-      -- Bullet 01; section 04; level 01 ---------------------------
-       1. ```
-          starwars[, .(mean_height = mean(height)), by = .(species, homeworld)]
-          ```
-       2. `with_groups()` is superseded in favor of `.by` (#6582).
-      -- Bullet 07; section 10; level 01 ---------------------------
-       1. Joins have been completely overhauled to enable more flexible join
-          operations and provide more tools for quality control. Many of these
-          changes are inspired by data.table's join syntax (#5914, #5661, #5413,
-          #2240).
-      -- Bullet 07; section 11; level 02 ---------------------------
-       1. • A *join specification* can now be created through `join_by()`.
-          This allows you to specify both the left and right hand side of
-          a join using unquoted column names, such as `join_by(sale_date
-          == commercial_date)`. Join specifications can be supplied to any
-          `*_join()` function as the `by` argument.
-      -- Bullet 07; section 12; level 02 ---------------------------
-       1. • Join specifications allow for new types of joins:
-      -- Bullet 07; section 13; level 03 ---------------------------
-       1. ‣ Equality joins: The most common join, specified by `==`. For
-          example, `join_by(sale_date == commercial_date)`.
-      -- Bullet 07; section 14; level 03 ---------------------------
-       1. ‣ Inequality joins: For joining on inequalities, i.e.`>=`, `>`, `<`,
-          and `<=`. For example, use `join_by(sale_date >= commercial_date)` to
-          find every commercial that aired before a particular sale.
-      -- Bullet 07; section 15; level 03 ---------------------------
-       1. ‣ Rolling joins: For "rolling" the closest match forward or backwards
-          when there isn't an exact match, specified by using the rolling
-          helper, `closest()`. For example, `join_by(closest(sale_date >=
-          commercial_date))` to find only the most recent commercial that aired
-          before a particular sale.
-      -- Bullet 07; section 16; level 02 ---------------------------
-       1. Note that you cannot use arbitrary expressions in the join conditions,
-          like `join_by(sale_date - 40 >= commercial_date)`. Instead, use
-          `mutate()` to create a new column containing the result of `sale_date
-          - 40` and refer to that by name in `join_by()`.
-      -- Bullet 07; section 16; level 03 ---------------------------
-       1. ‣ Overlap joins: For detecting overlaps between sets of
-          columns, specified by using one of the overlap helpers:
-          `between()`, `within()`, or `overlaps()`. For example, use
-          `join_by(between(commercial_date, sale_date_lower, sale_date))` to
-          find commercials that aired before a particular sale, as long as they
-          occurred after some lower bound, such as 40 days before the sale was
-          made.
-      -- Bullet 07; section 17; level 02 ---------------------------
-       1. • `multiple` is a new argument for controlling what happens when
-          a row in `x` matches multiple rows in `y`. For equality joins and
-          rolling joins, where this is usually surprising, this defaults to
-          signalling a `"warning"`, but still returns all of the matches. For
-          inequality joins, where multiple matches are usually expected, this
-          defaults to returning `"all"` of the matches. You can also return only
-          the `"first"` or `"last"` match, `"any"` of the matches, or you can
-          `"error"`.
-      -- Bullet 07; section 18; level 02 ---------------------------
-       1. • `keep` now defaults to `NULL` rather than `FALSE`. `NULL` implies
-          `keep = FALSE` for equality conditions, but `keep = TRUE` for
-          inequality conditions, since you generally want to preserve both sides
-          of an inequality join.
-      -- Bullet 07; section 19; level 02 ---------------------------
-       1. • `unmatched` is a new argument for controlling what happens when a
-          row would be dropped because it doesn't have a match. For backwards
-          compatibility, the default is `"drop"`, but you can also choose to
-          `"error"` if dropped rows would be surprising.
-      -- Bullet 100; section 104; level 01 ---------------------------
-       1. `rows_insert()` now checks that `y` contains the `by` columns (#6652).
+      -- Bullet 02; section 05; level 01 ---------------------------
+       1. `reframe()` is a new experimental verb that creates a new data frame
+          by applying functions to columns of an existing data frame. It is very
+          similar to `summarise()`, with two big differences:
+      -- Bullet 02; section 06; level 02 ---------------------------
+       1. • `reframe()` can return an arbitrary number of rows per group, while
+          `summarise()` reduces each group down to a single row.
+      -- Bullet 02; section 07; level 02 ---------------------------
+       1. • `reframe()` always returns an ungrouped data frame, while
+          `summarise()` might return a grouped or rowwise data frame, depending
+          on the scenario.
+      -- Bullet 04; section 07; level 01 ---------------------------
+       1. `reframe()` has been added in response to valid concern from the
+          community that allowing `summarise()` to return any number of rows
+          per group increases the chance for accidental bugs. We still feel
+          that this is a powerful technique, and is a principled replacement for
+          `do()`, so we have moved these features to `reframe()` (#6382).
+      -- Bullet 05; section 08; level 01 ---------------------------
+       1. `group_by()` now uses a new algorithm for computing groups. It is
+          often faster than the previous approach (especially when there are
+          many groups), and in most cases there should be no changes. The one
+          exception is with character vectors, see the C locale news bullet
+          below for more details (#4406, #6297).
+      -- Bullet 06; section 09; level 01 ---------------------------
+       1. `arrange()` now uses a faster algorithm for sorting character vectors,
+          which is heavily inspired by data.table's `forder()`. See the C locale
+          news bullet below for more details (#4962).
       -- Bullet 101; section 105; level 01 ---------------------------
        1. `setequal()` ignores differences between freely coercible types (e.g.
           integer and double) (#6114) and ignores duplicated rows (#6057).
@@ -156,55 +84,166 @@
           compatible types.
       -- Bullet 115; section 119; level 01 ---------------------------
        1. `where()` is re-exported from tidyselect (#6597).
-      -- Bullet 22; section 25; level 01 ---------------------------
-       1. `symdiff()` computes the symmetric difference (#4811).
-      -- Bullet 24; section 27; level 01 ---------------------------
-       1. `bench_tbls()`, `compare_tbls()`, `compare_tbls2()`, `eval_tbls()`,
-          `eval_tbls2()`, `location()` and `changes()`, deprecated in 1.0.0, are
-          now defunct (#6387).
-      -- Bullet 26; section 29; level 01 ---------------------------
-       1. `select_vars()`, `rename_vars()`, `select_var()` and `current_vars()`,
-          deprecated in 0.8.4, are now defunct (#6387).
-      -- Bullet 27; section 30; level 01 ---------------------------
-       1. `across()`, `c_across()`, `if_any()`, and `if_all()` now require the
-          `.cols` and `.fns` arguments. In general, we now recommend that you
-          use `pick()` instead of an empty `across()` call or `across()` with no
-          `.fns` (e.g. `across(c(x, y))`. (#6523).
-      -- Bullet 27; section 31; level 02 ---------------------------
-       1. • Relying on the previous default of `.cols = everything()` is
-          deprecated. We have skipped the soft-deprecation stage in this case,
-          because indirect usage of `across()` and friends in this way is rare.
-      -- Bullet 27; section 32; level 02 ---------------------------
-       1. • Relying on the previous default of `.fns = NULL` is not yet formally
-          soft-deprecated, because there was no good alternative until now,
-          but it is discouraged and will be soft-deprecated in the next minor
-          release.
-      -- Bullet 31; section 34; level 01 ---------------------------
-       1. `all_equal()` is deprecated. We've advised against it for some time,
-          and we explicitly recommend you use `all.equal()`, manually reordering
-          the rows and columns as needed (#6324).
-      -- Bullet 36; section 39; level 01 ---------------------------
-       1. Using `summarise()` to produce a 0 or \>1 row "summary" is deprecated
-          in favor of the new `reframe()`. See the NEWS bullet about `reframe()`
-          for more details (#6382).
-      -- Bullet 41; section 44; level 01 ---------------------------
-       1. `transmute()` is superseded in favour of `mutate(.keep = "none")`
-          (#6414).
-      -- Bullet 51; section 55; level 01 ---------------------------
-       1. `coalesce()` (#6265):
-      -- Bullet 51; section 56; level 02 ---------------------------
-       1. • Discards `NULL` inputs up front.
-      -- Bullet 51; section 57; level 02 ---------------------------
-       1. • No longer iterates over the columns of data frame input. Instead,
-          a row is now only coalesced if it is entirely missing, which is
-          consistent with `vctrs::vec_detect_missing()` and greatly simplifies
-          the implementation.
-      -- Bullet 51; section 58; level 02 ---------------------------
+      -- Bullet 17; section 20; level 01 ---------------------------
+       1. `across()` gains an experimental `.unpack` argument to optionally
+          unpack (as in, `tidyr::unpack()`) data frames returned by functions in
+          `.fns` (#6360).
+      -- Bullet 18; section 21; level 01 ---------------------------
+       1. `consecutive_id()` for creating groups based on contiguous runs of the
+          same values, like `data.table::rleid()` (#1534).
+      -- Bullet 19; section 22; level 01 ---------------------------
+       1. `case_match()` is a "vectorised switch" variant of `case_when()` that
+          matches on values rather than logical expressions. It is like a SQL
+          "simple" `CASE WHEN` statement, whereas `case_when()` is like a SQL
+          "searched" `CASE WHEN` statement (#6328).
+      -- Bullet 20; section 23; level 01 ---------------------------
+       1. `cross_join()` is a more explicit and slightly more correct
+          replacement for using `by = character()` during a join (#6604).
+      -- Bullet 21; section 24; level 01 ---------------------------
+       1. `pick()` makes it easy to access a subset of columns from the current
+          group. `pick()` is intended as a replacement for `across(.fns =
+          NULL)`, `cur_data()`, and `cur_data_all()`. We feel that `pick()` is
+          a much more evocative name when you are just trying to select a subset
+          of columns from your data (#6204).
+      -- Bullet 23; section 26; level 01 ---------------------------
+       1. `arrange()` and `group_by()` now use the C locale, not the system
+          locale, when ordering or grouping character vectors. This brings
+          *substantial* performance improvements, increases reproducibility
+          across R sessions, makes dplyr more consistent with data.table, and we
+          believe it should affect little existing code. If it does affect your
+          code, you can use `options(dplyr.legacy_locale = TRUE)` to quickly
+          revert to the previous behavior. However, in general, we instead
+          recommend that you use the new `.locale` argument to precisely specify
+          the desired locale. For a full explanation please read the associated
+          grouping and ordering tidyups.
+      -- Bullet 25; section 28; level 01 ---------------------------
+       1. `frame_data()`, `data_frame_()`, `lst_()` and `tbl_sum()` are no
+          longer re-exported from tibble (#6276, #6277, #6278, #6284).
+      -- Bullet 30; section 33; level 01 ---------------------------
+       1. Passing `...` to `across()` is soft-deprecated because it's
+          ambiguous when those arguments are evaluated. Now, instead of (e.g.)
+          `across(a:b, mean, na.rm = TRUE)` you should write `across(a:b, ~
+          mean(.x, na.rm = TRUE))` (#6073).
+      -- Bullet 32; section 35; level 01 ---------------------------
+       1. `cur_data()` and `cur_data_all()` are soft-deprecated in favour of
+          `pick()` (#6204).
+      -- Bullet 33; section 36; level 01 ---------------------------
+       1. Using `by = character()` to perform a cross join is now soft-
+          deprecated in favor of `cross_join()` (#6604).
+      -- Bullet 34; section 37; level 01 ---------------------------
+       1. `filter()`ing with a 1-column matrix is deprecated (#6091).
+      -- Bullet 35; section 38; level 01 ---------------------------
+       1. `progress_estimate()` is deprecated for all uses (#6387).
+      -- Bullet 37; section 40; level 01 ---------------------------
+       1. All functions deprecated in 1.0.0 (released April 2020) and earlier
+          now warn every time you use them (#6387). This includes `combine()`,
+          `src_local()`, `src_mysql()`, `src_postgres()`, `src_sqlite()`,
+          `rename_vars_()`, `select_vars_()`, `summarise_each_()`,
+          `mutate_each_()`, `as.tbl()`, `tbl_df()`, and a handful of older
+          arguments. They are likely to be made defunct in the next major
+          version (but not before mid 2024).
+      -- Bullet 38; section 41; level 01 ---------------------------
+       1. `slice()`ing with a 1-column matrix is deprecated.
+      -- Bullet 39; section 42; level 01 ---------------------------
+       1. `recode()` is superseded in favour of `case_match()` (#6433).
+      -- Bullet 40; section 43; level 01 ---------------------------
+       1. `recode_factor()` is superseded. We don't have a direct replacement
+          for it yet, but we plan to add one to forcats. In the meantime you can
+          often use `case_match(.ptype = factor(levels = ))` instead (#6433).
+      -- Bullet 42; section 45; level 01 ---------------------------
+       1. The `.keep`, `.before`, and `.after` arguments to `mutate()` have
+          moved from experimental to stable.
+      -- Bullet 43; section 46; level 01 ---------------------------
+       1. The `rows_*()` family of functions have moved from experimental to
+          stable.
+      -- Bullet 44; section 47; level 01 ---------------------------
+       1. `between()` can now work with all vector types, not just numeric and
+          date-time. Additionally, `left` and `right` can now also be vectors
+          (with the same length as `x`), and `x`, `left`, and `right` are
+          cast to the common type before the comparison is made (#6183, #6260,
+          #6478).
+      -- Bullet 45; section 48; level 01 ---------------------------
+       1. `case_when()` (#5106):
+      -- Bullet 45; section 49; level 02 ---------------------------
+       1. • Has a new `.default` argument that is intended to replace usage of
+          `TRUE ~ default_value` as a more explicit and readable way to specify
+          a default value. In the future, we will deprecate the unsafe recycling
+          of the LHS inputs that allows `TRUE ~` to work, so we encourage you to
+          switch to using `.default`.
+      -- Bullet 45; section 50; level 02 ---------------------------
+       1. • No longer requires exact matching of the types of RHS values. For
+          example, the following no longer requires you to use `NA_character_`.
+      -- Bullet 45; section 51; level 02 ---------------------------
+       1. ```
+          x <- c("little", "unknown", "small", "missing", "large")
+          
+          case_when(
+            x %in% c("little", "small") ~ "one",
+            x %in% c("big", "large") ~ "two",
+            x %in% c("missing", "unknown") ~ NA
+          )
+          ```
+      -- Bullet 45; section 52; level 02 ---------------------------
+       1. • Supports a larger variety of RHS value types. For example, you can
+          use a data frame to create multiple columns at once.
+      -- Bullet 45; section 53; level 02 ---------------------------
        1. • Has new `.ptype` and `.size` arguments which allow you to enforce a
           particular output type and size.
-      -- Bullet 67; section 71; level 01 ---------------------------
-       1. Joins on very wide tables are no longer bottlenecked by the
-          application of `suffix` (#6642).
+      -- Bullet 45; section 54; level 02 ---------------------------
+       1. • Has a better error when types or lengths were incompatible (#6261,
+          #6206).
+      -- Bullet 55; section 59; level 01 ---------------------------
+       1. `first()`, `last()`, and `nth()` (#6331):
+      -- Bullet 55; section 60; level 02 ---------------------------
+       1. • When used on a data frame, these functions now return a single row
+          rather than a single column. This is more consistent with the vctrs
+          principle that a data frame is generally treated as a vector of rows.
+      -- Bullet 55; section 61; level 02 ---------------------------
+       1. • The `default` is no longer "guessed", and will always automatically
+          be set to a missing value appropriate for the type of `x`.
+      -- Bullet 55; section 62; level 02 ---------------------------
+       1. • Error if `n` is not an integer. `nth(x, n = 2)` is fine, but `nth(x,
+          n = 2.5)` is now an error.
+      -- Bullet 58; section 62; level 01 ---------------------------
+       1. Additionally, they have all gained an `na_rm` argument since they are
+          summary functions (#6242, with contributions from @​tnederlof).
+      -- Bullet 59; section 63; level 01 ---------------------------
+       1. `if_else()` gains most of the same benefits as `case_when()`. In
+          particular,\ `if_else()` now takes the common type of `true`, `false`,
+          and `missing` to determine the output type, meaning that you can now
+          reliably use `NA`, rather than `NA_character_` and friends (#6243).
+      -- Bullet 60; section 64; level 01 ---------------------------
+       1. `na_if()` (#6329) now casts `y` to the type of `x` before comparison,
+          which makes it clearer that this function is type and size stable
+          on `x`. In particular, this means that you can no longer do
+          `na_if(<tibble>, 0)`, which previously accidentally allowed you to
+          replace any instance of `0` across every column of the tibble with
+          `NA`. `na_if()` was never intended to work this way, and this is
+          considered off-label usage. You can also now replace `NaN` values in
+          `x` with `na_if(x, NaN)`.
+      -- Bullet 61; section 65; level 01 ---------------------------
+       1. `lag()` and `lead()` now cast `default` to the type of `x`, rather
+          than taking the common type. This ensures that these functions are
+          type stable on `x` (#6330).
+      -- Bullet 62; section 66; level 01 ---------------------------
+       1. `row_number()`, `min_rank()`, `dense_rank()`, `ntile()`,
+          `cume_dist()`, and `percent_rank()` are faster and work for more
+          types. You can now rank by multiple columns by supplying a data frame
+          (#6428).
+      -- Bullet 63; section 67; level 01 ---------------------------
+       1. `with_order()` now checks that the size of `order_by` is the same
+          size as `x`, and now works correctly when `order_by` is a data frame
+          (#6334).
+      -- Bullet 64; section 68; level 01 ---------------------------
+       1. Fixed an issue with latest rlang that caused internal tools (such
+          as `mask$eval_all_summarise()`) to be mentioned in error messages
+          (#6308).
+      -- Bullet 65; section 69; level 01 ---------------------------
+       1. Warnings are enriched with contextualised information in `summarise()`
+          and `filter()` just like they have been in `mutate()` and `arrange()`.
+      -- Bullet 66; section 70; level 01 ---------------------------
+       1. Joins now reference the correct column in `y` when a type error is
+          thrown while joining on two columns with different names (#6465).
       -- Bullet 68; section 72; level 01 ---------------------------
        1. `*_join()` now error if you supply them with additional arguments that
           aren't used (#6228).
@@ -219,9 +258,6 @@
        1. Functions supplied to `across()` are no longer masked by columns
           (#6545). For instance, `across(1:2, mean)` will now work as expected
           even if there is a column called `mean`.
-      -- Bullet 72; section 76; level 01 ---------------------------
-       1. `across()` will now error when supplied `...` without a `.fns`
-          argument (#6638).
       -- Bullet 73; section 77; level 01 ---------------------------
        1. `arrange()` now correctly ignores `NULL` inputs (#6193).
       -- Bullet 74; section 78; level 01 ---------------------------
@@ -295,9 +331,6 @@
        1. `relocate()` now retains the last name change when a single column is
           renamed multiple times while it is being moved. This better matches
           the behavior of `rename()` (#6209, with help from @​eutwt).
-      -- Bullet 97; section 101; level 01 ---------------------------
-       1. `rename()` now contains examples of using `all_of()` and `any_of()` to
-          rename using a named character vector (#6644).
       -- Bullet 98; section 102; level 01 ---------------------------
        1. `rename_with()` now disallows renaming in the `.cols` tidy-selection
           (#6561).

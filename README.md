@@ -14,7 +14,7 @@ them to twitter.
     by `tidyverse::tidyverse_packages()`
 
 2.  Annotations are applied to these files using pandoc with a custom
-    lua filter. Annotations indicate where bullets begin and end so that
+    Lua filter. Annotations indicate where bullets begin and end so that
     tweets can be grouped together sensibly.
 
 3.  This data is transformed using R to give individual tweets or
@@ -22,9 +22,14 @@ them to twitter.
     [twitter-text](https://github.com/twitter/twitter-text) javascript
     library is used here to test whether tweets are valid or not.
 
-4.  Tweets are posted using the {rtweet} package
+4.  Updates which have already been posted are excluded by checking against 
+    a CSV database. Upates don't have to exactly match previously posted ones -
+    if they're very similar to previously posted updates, they won't get posted
+    again.
 
-5.  This is run by sourcing `run.R` once every hour using GitHub
+5.  Tweets are posted using the {rtweet} package
+
+6.  This is run by sourcing `run.R` once every hour using GitHub
     Actions
 
 ## Why?

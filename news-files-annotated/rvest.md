@@ -166,7 +166,7 @@ continue to work (albeit with a few new warnings).
     !end-bullet!
 -   !begin-bullet!
     The SelectorGadget vignette is now a web-only article,
-    <https://rvest.tidyverse.org/articles/articles/selectorgadget.html>,
+    https://rvest.tidyverse.org/articles/articles/selectorgadget.html,
     so we can be more generous with screenshots since they're no longer
     bundled with every install of the package. Together with the rewrite
     of the other vignette, this means that rvest is now \~90 Kb instead

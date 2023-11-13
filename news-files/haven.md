@@ -1,10 +1,42 @@
 # haven (development version)
 
+# haven 2.5.3
+
+* Fix for upcoming R-devel change.
+
+# haven 2.5.2
+
+* Updated to ReadStat 1.1.9.
+
+  * Fix various SAS catalog file reading bugs (#529, #653, #680, #696, #705).
+  * Increase maximum SAS page file size to 16MiB (#697).
+  * Ignore invalid SAV timestamp strings (#683).
+  * Fix compiler warnings (#707).
+
 * The experimental `write_sas()` function has been deprecated (#224). The
   sas7bdat file format is complex and undocumented, and as such writing SAS
   files is not officially supported by ReadStat. `write_xpt()` should be used
   instead - it produces files in the SAS transport format, which has
   limitations but will be reliably read by SAS.
+
+* `write_*()` functions gain a new `adjust_tz` argument to allow more control
+  over time zone conversion for date-time variables (#702). Thanks to @jmobrien
+  for the detailed issue and feedback.
+  
+  Stata, SPSS and SAS do not have a concept of time zone. Since haven 2.4.0
+  date-time values in non-UTC time zones are implicitly converted when writing
+  to ensure the time displayed in Stata/SPSS/SAS will match the time displayed
+  to the user in R (see #555). This is the behaviour when `adjust_tz = TRUE`
+  (the default). Although this is in line with general user expectations it can
+  cause issues when the time zone is important, for e.g. when looking at
+  differences between time points, since the underlying numeric data is changed
+  to preserve the displayed time. Use `adjust_tz = FALSE` to write the time as
+  the corresponding UTC value, which will appear different to the user but
+  preserves the underlying numeric data.
+
+* `write_*()` functions previously returned the data frame with minor
+  alterations made to date-time variables. These functions now invisibly return
+  the original input data frame unchanged (@jmobrien, #702).
 
 * Fix bug in string variable width calculation that treated `NA` values as width
   2. `NA` values are now treated as blanks for width calculations (#699).

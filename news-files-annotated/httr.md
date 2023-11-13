@@ -1,28 +1,75 @@
 # httr (development version)
 
-# httr 1.4.4
+# httr 1.4.7
 
 !begin-bullets-1!
+
+-   !begin-bullet!
+    Add support for seeking in uploads (#741).
+
+    !end-bullet!
+-   !begin-bullet!
+    Suppress another use of httpbin.
+
+    !end-bullet!
+-   !begin-bullet!
+    More aggressively skip httpbin using tests.
+
+    !end-bullet!
+-   !begin-bullet!
+    Remove vignette contents and point to httr2.
+
+    !end-bullet!
+
+!end-bullets-1!
+
+# httr 1.4.6
+
+!begin-bullets-2!
+
+-   !begin-bullet!
+    Suppress use of httpbin in examples and tests because it has become
+    unreliable.
+    !end-bullet!
+
+!end-bullets-2!
+
+# httr 1.4.5
+
+!begin-bullets-3!
+
+-   !begin-bullet!
+    An internal helper that checks for an interactive session in the OOB
+    flow now honors the `"rlang_interactive"` global option, in case
+    it's necessary to declare the session to be interactive (enough) for
+    OOB (@jennybc, #734).
+    !end-bullet!
+
+!end-bullets-3!
+
+# httr 1.4.4
+
+!begin-bullets-4!
 
 -   !begin-bullet!
     Fix intermittent failing test.
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-4!
 
 # httr 1.4.3
 
-!begin-bullets-2!
+!begin-bullets-5!
 
 -   !begin-bullet!
     Fix failing test.
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-5!
 
 # httr 1.4.2
 
-!begin-bullets-3!
+!begin-bullets-6!
 
 -   !begin-bullet!
     Fix failing test.
@@ -34,11 +81,11 @@
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-6!
 
 # httr 1.4.1
 
-!begin-bullets-4!
+!begin-bullets-7!
 
 -   !begin-bullet!
     Remove the default `cainfo` option on Windows. Providing a CA bundle
@@ -69,7 +116,7 @@
 
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-7!
 
 # httr 1.4.0
 
@@ -78,7 +125,7 @@
 OAuth2.0 has been made somewhat more flexible in order to support more
 websites:
 
-!begin-bullets-5!
+!begin-bullets-8!
 
 -   !begin-bullet!
     `init_oauth2.0()` passes `use_basic_auth` onwards, enabling basic
@@ -117,11 +164,11 @@ websites:
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-8!
 
 Updates to demos:
 
-!begin-bullets-6!
+!begin-bullets-9!
 
 -   !begin-bullet!
     The Facebook OAuth demo now uses device flow (#510). This allows you
@@ -138,11 +185,11 @@ Updates to demos:
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-9!
 
 ## Minor changes and improvements
 
-!begin-bullets-7!
+!begin-bullets-10!
 
 -   !begin-bullet!
     `cache_info()` now handles un-named flags, as illustrated by
@@ -182,23 +229,23 @@ Updates to demos:
 
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-10!
 
 # httr 1.3.1
 
-!begin-bullets-8!
+!begin-bullets-11!
 
 -   !begin-bullet!
     Re-enable on-disk caching (accidentally disabled in #457) (#475)
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-11!
 
 # httr 1.3.0
 
 ## API changes
 
-!begin-bullets-9!
+!begin-bullets-12!
 
 -   !begin-bullet!
     Deprecated `safe_callback()` has been removed.
@@ -211,11 +258,11 @@ Updates to demos:
 
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-12!
 
 ## New features
 
-!begin-bullets-10!
+!begin-bullets-13!
 
 -   !begin-bullet!
     New `set_callback()` and `get_callback()` set and query callback
@@ -227,7 +274,7 @@ Updates to demos:
     `RETRY()` now retries if an error occurs during the request
     (@asieira, #404), and gains two new arguments:
 
-    !begin-bullets-11!
+    !begin-bullets-14!
     -   !begin-bullet!
         `terminate_on` gives you greater control over which status codes
         should it stop retrying. (@asieira, #404)
@@ -246,14 +293,14 @@ Updates to demos:
 
         !end-bullet!
 
-    !end-bullets-11!
+    !end-bullets-14!
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-13!
 
 ## OAuth
 
-!begin-bullets-12!
+!begin-bullets-15!
 
 -   !begin-bullet!
     New oauth cache files are always added to `.gitignore` and, if it
@@ -292,7 +339,7 @@ Updates to demos:
 -   !begin-bullet!
     `oauth2.0_token()` gains three new arguments:
 
-    !begin-bullets-13!
+    !begin-bullets-16!
     -   !begin-bullet!
         `config_init` allows you to supply additional config for the
         initial request. This is needed for some APIs (e.g. reddit)
@@ -301,9 +348,7 @@ Updates to demos:
         !end-bullet!
     -   !begin-bullet!
         `client_credentials`, allows you to use the OAauth2 *Client
-        Credential Grant*. See [RFC
-        6749](https://tools.ietf.org/html/rfc6749#section-4) for
-        details. (@cderv, #384)
+        Credential Grant*. See RFC 6749 for details. (@cderv, #384)
 
         !end-bullet!
     -   !begin-bullet!
@@ -312,7 +357,7 @@ Updates to demos:
 
         !end-bullet!
 
-    !end-bullets-13!
+    !end-bullets-16!
     !end-bullet!
 -   !begin-bullet!
     `is_interactive` argument to `init_oauth1.0()`, `init_oauth2.0()`
@@ -321,11 +366,11 @@ Updates to demos:
 
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-15!
 
 ## Minor bug fixes and improvements
 
-!begin-bullets-14!
+!begin-bullets-17!
 
 -   !begin-bullet!
     `BROWSER()` prints a message telling you to browse to the URL if
@@ -355,24 +400,24 @@ Updates to demos:
 
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-17!
 
 # httr 1.2.1
 
-!begin-bullets-15!
+!begin-bullets-18!
 
 -   !begin-bullet!
     Fix bug with new cache creation code: need to check that cache isn't
     an empty file.
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-18!
 
 # httr 1.2.0
 
 ## New features
 
-!begin-bullets-16!
+!begin-bullets-19!
 
 -   !begin-bullet!
     `oauth_signature()` no longer prepends 'oauth\_' to additional
@@ -398,11 +443,11 @@ Updates to demos:
 
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-19!
 
 ## Bug fixes and minor improvements
 
-!begin-bullets-17!
+!begin-bullets-20!
 
 -   !begin-bullet!
     No longer uses use custom requests for standard `POST` requests
@@ -471,13 +516,13 @@ Updates to demos:
 
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-20!
 
 # httr 1.1.0
 
 ## New features
 
-!begin-bullets-18!
+!begin-bullets-21!
 
 -   !begin-bullet!
     `stop_for_status()`, `warn_for_status()` and (new)
@@ -496,11 +541,11 @@ Updates to demos:
 
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-21!
 
 ## OAuth
 
-!begin-bullets-19!
+!begin-bullets-22!
 
 -   !begin-bullet!
     `oauth1.0_token()` gains RSA-SHA1 signature support with the
@@ -511,7 +556,7 @@ Updates to demos:
     `oauth2.0_token()` throws an error if it fails to get an access
     token (#250) and gains two new arguments:
 
-    !begin-bullets-20!
+    !begin-bullets-23!
     -   !begin-bullet!
         `user_params` allows you to pass arbitrary additional parameters
         to the token access endpoint when acquiring or refreshing a
@@ -524,7 +569,7 @@ Updates to demos:
 
         !end-bullet!
 
-    !end-bullets-20!
+    !end-bullets-23!
     !end-bullet!
 -   !begin-bullet!
     `oauth_service_token()` checks that its arguments are the correct
@@ -538,11 +583,11 @@ Updates to demos:
 
     !end-bullet!
 
-!end-bullets-19!
+!end-bullets-22!
 
 ## Bug fixes and minor improvements
 
-!begin-bullets-21!
+!begin-bullets-24!
 
 -   !begin-bullet!
     httr no longer bundles `cacert.pem`, and instead it relies on the
@@ -594,11 +639,11 @@ Updates to demos:
 
     !end-bullet!
 
-!end-bullets-21!
+!end-bullets-24!
 
 # httr 1.0.0
 
-!begin-bullets-22!
+!begin-bullets-25!
 
 -   !begin-bullet!
     httr no longer uses the RCurl package. Instead it uses the curl
@@ -632,11 +677,11 @@ Updates to demos:
 
     !end-bullet!
 
-!end-bullets-22!
+!end-bullets-25!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-23!
+!begin-bullets-26!
 
 -   !begin-bullet!
     `cookies` argument to `handle()` is deprecated - cookies are always
@@ -692,11 +737,11 @@ Updates to demos:
 
     !end-bullet!
 
-!end-bullets-23!
+!end-bullets-26!
 
 # httr 0.6.1
 
-!begin-bullets-24!
+!begin-bullets-27!
 
 -   !begin-bullet!
     Correctly parse headers with multiple `:`, thanks to @mmorgan
@@ -718,13 +763,13 @@ Updates to demos:
 
     !end-bullet!
 
-!end-bullets-24!
+!end-bullets-27!
 
 # httr 0.6.0
 
 ## New features
 
-!begin-bullets-25!
+!begin-bullets-28!
 
 -   !begin-bullet!
     New `write_stream()` allows you to process the response from a
@@ -732,9 +777,8 @@ Updates to demos:
 
     !end-bullet!
 -   !begin-bullet!
-    Suport for Google OAuth2 [service
-    accounts](https://developers.google.com/identity/protocols/oauth2/service-account).
-    (#119, thanks to help from @siddharthab).
+    Suport for Google OAuth2 service accounts. (#119, thanks to help
+    from @siddharthab).
 
     !end-bullet!
 -   !begin-bullet!
@@ -758,11 +802,11 @@ Updates to demos:
 
     !end-bullet!
 
-!end-bullets-25!
+!end-bullets-28!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-26!
+!begin-bullets-29!
 
 -   !begin-bullet!
     `vignette("api-packages")` gains more detailed instructions on
@@ -831,11 +875,11 @@ Updates to demos:
 
     !end-bullet!
 
-!end-bullets-26!
+!end-bullets-29!
 
 ## Deprecated and deleted functions
 
-!begin-bullets-27!
+!begin-bullets-30!
 
 -   !begin-bullet!
     `new_token()` has been removed - this was always an internal
@@ -849,11 +893,11 @@ Updates to demos:
 
     !end-bullet!
 
-!end-bullets-27!
+!end-bullets-30!
 
 # httr 0.5
 
-!begin-bullets-28!
+!begin-bullets-31!
 
 -   !begin-bullet!
     You can now save response bodies directly to disk by using the
@@ -878,11 +922,11 @@ Updates to demos:
 
     !end-bullet!
 
-!end-bullets-28!
+!end-bullets-31!
 
 ## Caching
 
-!begin-bullets-29!
+!begin-bullets-32!
 
 -   !begin-bullet!
     Preliminary and experimental support for caching with `cache_info()`
@@ -904,11 +948,11 @@ Updates to demos:
 
     !end-bullet!
 
-!end-bullets-29!
+!end-bullets-32!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-30!
+!begin-bullets-33!
 
 -   !begin-bullet!
     Now possible to specify both handle and url when making a request.
@@ -949,13 +993,13 @@ Updates to demos:
 
     !end-bullet!
 
-!end-bullets-30!
+!end-bullets-33!
 
 # httr 0.4
 
 ## New features
 
-!begin-bullets-31!
+!begin-bullets-34!
 
 -   !begin-bullet!
     New `headers()` and `cookies()` functions to extract headers and
@@ -990,11 +1034,11 @@ Updates to demos:
 
     !end-bullet!
 
-!end-bullets-31!
+!end-bullets-34!
 
 ## Documentation improvements
 
-!begin-bullets-32!
+!begin-bullets-35!
 
 -   !begin-bullet!
     New `quickstart` vignette to help you get up and running with httr.
@@ -1013,11 +1057,11 @@ Updates to demos:
 
     !end-bullet!
 
-!end-bullets-32!
+!end-bullets-35!
 
 ## Minor improvements
 
-!begin-bullets-33!
+!begin-bullets-36!
 
 -   !begin-bullet!
     `authenticate()` now defaults to `type = "basic"` which is pretty
@@ -1069,11 +1113,11 @@ Updates to demos:
 
     !end-bullet!
 
-!end-bullets-33!
+!end-bullets-36!
 
 ## Bug fixes
 
-!begin-bullets-34!
+!begin-bullets-37!
 
 -   !begin-bullet!
     `user_agent()` once again overrides default (closes #97)
@@ -1094,7 +1138,7 @@ Updates to demos:
 
     !end-bullet!
 
-!end-bullets-34!
+!end-bullets-37!
 
 # httr 0.3
 
@@ -1126,7 +1170,7 @@ per project, and you can authenticate from any environment in which you
 can run R. A big thanks go to Craig Citro (@craigcitro) from google, who
 contributed much code and many ideas to make this possible.
 
-!begin-bullets-35!
+!begin-bullets-38!
 
 -   !begin-bullet!
     The OAuth token objects are now reference classes, which mean they
@@ -1177,11 +1221,11 @@ contributed much code and many ideas to make this possible.
 
     !end-bullet!
 
-!end-bullets-35!
+!end-bullets-38!
 
 ## Other improvements
 
-!begin-bullets-36!
+!begin-bullets-39!
 
 -   !begin-bullet!
     HTTP verbs (`GET()`, `POST()` etc) now pass unnamed arguments to
@@ -1240,11 +1284,11 @@ contributed much code and many ideas to make this possible.
 
     !end-bullet!
 
-!end-bullets-36!
+!end-bullets-39!
 
 ## Bug fixes
 
-!begin-bullets-37!
+!begin-bullets-40!
 
 -   !begin-bullet!
     If you supply multiple headers of the same name, the value of the
@@ -1263,11 +1307,11 @@ contributed much code and many ideas to make this possible.
 
     !end-bullet!
 
-!end-bullets-37!
+!end-bullets-40!
 
 # httr 0.2
 
-!begin-bullets-38!
+!begin-bullets-41!
 
 -   !begin-bullet!
     OAuth now uses custom escaping function which is guaranteed to work
@@ -1318,11 +1362,11 @@ contributed much code and many ideas to make this possible.
 
     !end-bullet!
 
-!end-bullets-38!
+!end-bullets-41!
 
 # httr 0.1.1
 
-!begin-bullets-39!
+!begin-bullets-42!
 
 -   !begin-bullet!
     Add new default config: use the standard SSL certificate
@@ -1333,4 +1377,4 @@ contributed much code and many ideas to make this possible.
 
     !end-bullet!
 
-!end-bullets-39!
+!end-bullets-42!
