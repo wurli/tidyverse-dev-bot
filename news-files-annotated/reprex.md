@@ -15,11 +15,9 @@ color (#427).
 
     !end-bullet!
 -   !begin-bullet!
-    reprex takes advantage of rlang 1.0.0's improved [support for
-    backtraces in knitted
-    documents](https://rlang.r-lib.org/reference/rlang_backtrace_on_error.html#errors-in-rmarkdown)
-    and sets the option `rlang_backtrace_on_error_report = "full"`
-    (#377).
+    reprex takes advantage of rlang 1.0.0's improved support for
+    backtraces in knitted documents and sets the option
+    `rlang_backtrace_on_error_report = "full"` (#377).
 
     !end-bullet!
 -   !begin-bullet!
@@ -151,12 +149,11 @@ version of reprex:
 
 !end-bullets-5!
 
-These changes are of special interest to users of the [renv
-package](https://rstudio.github.io/renv/), which uses `.Rprofile` to
-implement a project-specific R package library. Combined with the
-filepath changes (described above), this means an renv user can call
-`reprex(wd = ".")`, to render a reprex with respect to a
-project-specific library.
+These changes are of special interest to users of the renv package,
+which uses `.Rprofile` to implement a project-specific R package
+library. Combined with the filepath changes (described above), this
+means an renv user can call `reprex(wd = ".")`, to render a reprex with
+respect to a project-specific library.
 
 ## Other
 
@@ -210,12 +207,10 @@ HTML preview should work better with more ways of using
     !end-bullet!
 -   !begin-bullet!
     `venue = "so"` (SO = Stack Overflow) has converged with default
-    `venue = "gh"` (GitHub). As of January 2019, SO [supports CommonMark
-    fenced code
-    blocks](https://meta.stackexchange.com/questions/125148/implement-style-fenced-markdown-code-blocks/322000#322000).
-    The only remaining difference is that Stack Overflow does not
-    support the collapsible details tag that we use on GitHub to reduce
-    the clutter from, e.g., session info (#231).
+    `venue = "gh"` (GitHub). As of January 2019, SO supports CommonMark
+    fenced code blocks. The only remaining difference is that Stack
+    Overflow does not support the collapsible details tag that we use on
+    GitHub to reduce the clutter from, e.g., session info (#231).
 
     !end-bullet!
 -   !begin-bullet!
@@ -223,8 +218,7 @@ HTML preview should work better with more ways of using
     into applications like PowerPoint and Keynote. It is experimental
     because it requires a working installation of the highlight command
     line tool, which is left as a somewhat fiddly exercise for the user
-    (#331). `venue = "rtf"` is documented in its [own
-    article](https://reprex.tidyverse.org/articles/articles/rtf.html).
+    (#331). `venue = "rtf"` is documented in its own article.
 
     !end-bullet!
 -   !begin-bullet!
@@ -300,9 +294,8 @@ HTML preview should work better with more ways of using
 
 -   !begin-bullet!
     The `tidyverse_quiet` argument and `reprex.tidyverse_quiet` option
-    also control startup messages from the
-    [tidymodels](https://www.tidymodels.org) meta-package (#326,
-    @juliasilge).
+    also control startup messages from the tidymodels meta-package
+    (#326, @juliasilge).
 
     !end-bullet!
 -   !begin-bullet!
@@ -408,9 +401,7 @@ writing), devel, and the 4 previous versions of R (3.6, 3.5, 3.4, 3.3).
 -   !begin-bullet!
     New experimental venue "rtf" produces syntax highlighted snippets
     suitable for pasting into presentation software such as Keynote or
-    PowerPoint. This venue is discussed in [an
-    article](https://reprex.tidyverse.org/articles/articles/rtf.html)
-    (#26).
+    PowerPoint. This venue is discussed in an article (#26).
 
     !end-bullet!
 -   !begin-bullet!
@@ -423,9 +414,9 @@ writing), devel, and the 4 previous versions of R (3.6, 3.5, 3.4, 3.3).
 
     !end-bullet!
 -   !begin-bullet!
-    Internal file system operations use the [fs](https://fs.r-lib.org)
-    package. This should not make any user-facing changes in reprex and
-    we definitely want to know if it does.
+    Internal file system operations use the fs package. This should not
+    make any user-facing changes in reprex and we definitely want to
+    know if it does.
 
     !end-bullet!
 
@@ -433,13 +424,11 @@ writing), devel, and the 4 previous versions of R (3.6, 3.5, 3.4, 3.3).
 
 # reprex 0.2.0
 
-reprex has a website: <https://reprex.tidyverse.org>. It includes a
+reprex has a website: https://reprex.tidyverse.org. It includes a
 contributed article from @njtierney (#103).
 
-reprex has moved to the [tidyverse
-Organization](https://github.com/tidyverse). It is installed as part of
-the [tidyverse meta-package](https://www.tidyverse.org) and is
-[suggested to those seeking help](https://www.tidyverse.org/help/).
+reprex has moved to the tidyverse Organization. It is installed as part
+of the tidyverse meta-package and is suggested to those seeking help.
 
 `reprex()` gains several arguments and many arguments can now be
 controlled via an option, in case a user wants their own defaults.
@@ -513,12 +502,12 @@ is used. Allows user to define their own default behaviour (#116).
     !end-bullet!
 -   !begin-bullet!
     `venue = "ds"` is a new value, corresponding to
-    <https://www.discourse.org>, which is the platform behind
-    [community.rstudio.com](https://community.rstudio.com). This is
-    currently just an alias for the default `"gh"` GitHub venue, because
-    the formatting appears to be compatible. Adding the `"ds"` value so
-    Discourse can be documented and to guard against the possibility
-    that some formatting is actually unique.
+    https://www.discourse.org, which is the platform behind
+    community.rstudio.com. This is currently just an alias for the
+    default `"gh"` GitHub venue, because the formatting appears to be
+    compatible. Adding the `"ds"` value so Discourse can be documented
+    and to guard against the possibility that some formatting is
+    actually unique.
 
     !end-bullet!
 
@@ -637,8 +626,8 @@ commenting out lines of code relating to the clipboard.
         This made the explicit `upload.fun` argument unnecessary, so
         it's gone. The `upload.fun` option defaults to
         `knitr::imgur_upload`, which means figures produced by the
-        reprex will be uploaded to [imgur.com](https://imgur.com/) and
-        the associated image syntax will be put into the Markdown,
+        reprex will be uploaded to imgur.com and the associated image
+        syntax will be put into the Markdown,
         e.g. `![](https://i.imgur.com/QPU5Cg9.png)`. (#15 @paternogbc)
         !end-bullet!
 
@@ -653,7 +642,7 @@ commenting out lines of code relating to the clipboard.
     `devtools::session_info()` or `sessionInfo()` be appended to reprex
     code (#6 @dgrtwo). When `si = TRUE` and `venue = "gh"` (the
     default), session info is wrapped in a collapsible details tag. See
-    [an example](https://github.com/tidyverse/reprex/issues/55) (#55).
+    an example (#55).
 
     !end-bullet!
 -   !begin-bullet!
@@ -661,8 +650,7 @@ commenting out lines of code relating to the clipboard.
 
     !end-bullet!
 -   !begin-bullet!
-    `reprex()` uses clipboard functionality from
-    [`clipr`](https://CRAN.R-project.org/package=clipr) and thus should
+    `reprex()` uses clipboard functionality from `clipr` and thus should
     work on Windows and suitably prepared Unix-like systems, in addition
     to Mac OS. (#16 @mdlincoln)
 
