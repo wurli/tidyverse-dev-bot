@@ -27,47 +27,28 @@ remove_old_bullets <- function(new_updates,
   }
   
   cli_h2("Discarding text which has already been posted")
-  
-  # Sometimes, for a particular bullet id, `text` will be a vector of length >
-  # 1. If rows are deleted only based on the value of `text`, this can lead to a
-  # small chunk of a tweet getting omitted, e.g. if a typo is corrected in the
-  # NEWS.md file. To avoid this, we just hash the whole `text` vector for that
-  # bullet and use the hash to delete rows. This means that if only a tiny
-  # part of a tweet changes, the whole thing will be posted again, even if it's
-  # a long thread.
-  new_updates <- new_updates |> 
-    mutate(
-      .by = c(package, bullet_id),
-      bullet_hash = hash(text),
-      .before = text
-    )
-  
-  by <- c("package", "bullet_id", "bullet_hash", "text")
+ 
+  by <- c("package", "bullet_id", "text")
   
   prev_updates <- get_prev_bullets(prev_updates_file, template = select(new_updates, all_of(by)))
   prev_rows <- nrow(prev_updates)
   
-  check_previous_update_format_unchanged(prev_updates, by, new_updates)
-  
   # If a new package is present, treat those bullets as if they've already
   # been tweeted - i.e. just add them to the cache. Future *new* bullets
-  # will then be tweeted as normal
+  # will then be tweeted as normal. This allows me to add new packages to
+  # the bot without posting the whole history.
   prev_updates <- prev_updates |> 
     insert_new_packages(new_updates)
   
-  out <- rows_delete(
-    x = new_updates,
-    y = prev_updates |> select(all_of(by)),
-    by = by,
-    unmatched = "ignore"
-  )
+  bullets_to_post <- new_updates |> 
+    remove_previously_posted_bullets(prev_updates)
 
-  remove_old_bullets_summary_message(out)
+  remove_old_bullets_summary_message(bullets_to_post)
   
   if (overwrite_prev_updates) {
     already_tweeted <- rows_insert(
       x = prev_updates,
-      y = new_updates |> select(all_of(by)),
+      y = bullets_to_post |> select(all_of(by)),
       by = by,
       conflict = "ignore"
     )
@@ -77,52 +58,79 @@ remove_old_bullets <- function(new_updates,
     write_csv(already_tweeted, prev_updates_file)
   } 
   
-  out |> 
-    select(-bullet_hash)
+  bullets_to_post
   
 }
 
-# Makes development easier - check that cols are the same and maybe overwrite
-# if not. This should generally not get run.
-check_previous_update_format_unchanged <- function(prev_update, by, x) {
-  if (!identical(colnames(prev_update), by)) {
-    
-    stopifnot(interactive())
-    
-    choice <- menu(
-      title = paste0(
-        "Old data has different columns to new data. Do you want to overwrite?\n",
-        "Old:", paste(colnames(prev_update), collapse = ", "), "\n",
-        "New:", paste(by, collapse = ", ")
-      ),
-      choices = c("Overwrite", "Stop")
+#' Exclude updates already posted
+#'
+#' Sometimes, before a release, a NEWS file goes through polishing, and many
+#' bullets may receive small updates, e.g. rewording or typo fixes. In other
+#' cases, particularly long or complex bullets may undergo several iterations of
+#' minor changes. This function aims to exclude these, as well as those which
+#' are exact matches to previously posted updates, in an effort to reduce bursts
+#' of tweets at such times which may amount to spamming.
+#'
+#' @param new_updates,prev_updates Data frames of new / old updates
+#' @param similarity_cutoff New bullets which have a similarity greater or 
+#'   equal to this cutoff with any previously posted bullets from the same 
+#'   package will be excluded. Similarity is calculated using 
+#'   `stringdist::stringsimmatrix(method = "hamming")`. 
+#'
+#' @return A data frame
+remove_previously_posted_bullets <- function(new_updates, prev_updates, similarity_cutoff = 0.85) {
+  
+  # Sub-bullets collapsed because we want similarity to be calculated per-tweet,
+  # not per-bullet
+  new_updates_collapsed <- new_updates |> 
+    summarise(
+      text = paste(text, collapse = "\n"),
+      .by = c(package, bullet_id)
     )
-    
-    if (choice == 2) stop()
-    
-    write_csv(x, "last_refresh_data.csv")
-    
-    stop("Please re-run the pipeline")
-    
-  }
-}
-
-insert_new_packages <- function(old_updates, new_updates) {
-  new_package_updates <- new_updates |> 
-    anti_join(old_updates, by = "package")
   
-  if (nrow(new_package_updates) > 0L) {
-    new_pkgs <- unique(new_package_updates$package)
-    cli_alert_info("New package(s) {.pkg {new_pkgs}} detected - these bullets will be cached but not tweeted")
+  prev_updates_collapsed <- prev_updates |> 
+    summarise(
+      text = paste(text, collapse = "\n"),
+      .by = c(package, bullet_id)
+    )
+  
+  comparison <- new_updates_collapsed |> 
+    nest_by(pkg = package, .key = "data") |> 
     
-    old_updates <- old_updates |> 
-      rows_insert(
-        new_package_updates |> select(all_of(by)),
-        by = by
+    # Iterate over packages because we don't care if updates are similar to
+    # previous updates from other packages
+    pmap(function(pkg, data) {
+      prev_bullets <- prev_updates_collapsed |> 
+        filter(package == pkg) |>
+        pull(text)
+      
+      stringdist <- stringdist::stringsimmatrix(
+        data$text, prev_bullets,
+        method = "hamming"
       )
+      
+      tibble(
+        data,
+        similarity = apply(stringdist, 1, max),
+        # most_similar = prev_bullets[apply(stringdist, 1, which.max)]
+      )
+    }) |> 
+    bind_rows()
+  
+  n_almost_the_same <- comparison |> 
+    filter(similarity_cutoff < similarity, similarity < 1) |> 
+    nrow()
+  
+  if (n_almost_the_same > 0L) {
+    cli_alert("Not posting {.val {n_almost_the_same}} bullets which are very similar to previous tweets")
   }
   
-  old_updates
+  new_updates |> 
+    anti_join(
+      comparison |> filter(similarity < similarity_cutoff),
+      by = c("package", "bullet_id")
+    )
+  
 }
 
 remove_old_bullets_summary_message <- function(x) {
@@ -159,5 +167,4 @@ get_prev_bullets <- function(file, template) {
       text        = readr::col_character()
     )
   ) 
-  
 }
