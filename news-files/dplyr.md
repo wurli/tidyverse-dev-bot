@@ -1,14 +1,130 @@
 # dplyr (development version)
 
+* `left_join()` and friends now return a specialized error message if they
+  detect that your join would return more rows than dplyr can handle (#6912).
+
+* `slice_*()` now throw the correct error if you forget to name `n` while also
+  prefixing the call with `dplyr::` (#6946).
+
+* `join_by()` now allows its helper functions to be namespaced with `dplyr::`,
+  like `join_by(dplyr::between(x, lower, upper))` (#6838).
+
+* `dplyr_reconstruct()`'s default method has been rewritten to avoid
+  materializing duckplyr queries too early (#6947).
+
+* Updated the `storms` data to include 2022 data (#6937, @steveharoz).
+
+* Updated the `starwars` data to use a new API, because the old one is defunct.
+  There are very minor changes to the data itself (#6938, @steveharoz).
+
+# dplyr 1.1.3
+
+* `mutate_each()` and `summarise_each()` now throw correct deprecation messages
+  (#6869).
+
+* `setequal()` now requires the input data frames to be compatible, similar to
+  the other set methods like `setdiff()` or `intersect()` (#6786).
+
+# dplyr 1.1.2
+
+* `count()` better documents that it has a `.drop` argument (#6820).
+
+* Fixed tests to maintain compatibility with the next version of waldo (#6823).
+
+* Joins better handle key columns will all `NA`s (#6804).
+
+# dplyr 1.1.1
+
+* Mutating joins now warn about multiple matches much less often. At a high
+  level, a warning was previously being thrown when a one-to-many or
+  many-to-many relationship was detected between the keys of `x` and `y`, but is
+  now only thrown for a many-to-many relationship, which is much rarer and much
+  more dangerous than one-to-many because it can result in a Cartesian explosion
+  in the number of rows returned from the join (#6731, #6717).
+  
+  We've accomplished this in two steps:
+  
+  * `multiple` now defaults to `"all"`, and the options of `"error"` and
+    `"warning"` are now deprecated in favor of using `relationship` (see below).
+    We are using an accelerated deprecation process for these two options
+    because they've only been available for a few weeks, and `relationship` is
+    a clearly superior alternative.
+    
+  * The mutating joins gain a new `relationship` argument, allowing you to
+    optionally enforce one of the following relationship constraints between the
+    keys of `x` and `y`: `"one-to-one"`, `"one-to-many"`, `"many-to-one"`, or
+    `"many-to-many"`.
+    
+    For example, `"many-to-one"` enforces that each row in `x` can match at
+    most 1 row in `y`. If a row in `x` matches >1 rows in `y`, an error is
+    thrown. This option serves as the replacement for `multiple = "error"`.
+    
+    The default behavior of `relationship` doesn't assume that there is any
+    relationship between `x` and `y`. However, for equality joins it will check
+    for the presence of a many-to-many relationship, and will warn if it detects
+    one.
+    
+  This change unfortunately does mean that if you have set `multiple = "all"` to
+  avoid a warning and you happened to be doing a many-to-many style join, then
+  you will need to replace `multiple = "all"` with
+  `relationship = "many-to-many"` to silence the new warning, but we believe
+  this should be rare since many-to-many relationships are fairly uncommon.
+
+* Fixed a major performance regression in `case_when()`. It is still a little
+  slower than in dplyr 1.0.10, but we plan to improve this further in the future
+  (#6674).
+
+* Fixed a performance regression related to `nth()`, `first()`, and `last()`
+  (#6682).
+
+* Fixed an issue where expressions involving infix operators had an abnormally
+  large amount of overhead (#6681).
+
+* `group_data()` on ungrouped data frames is faster (#6736).
+
+* `n()` is a little faster when there are many groups (#6727).
+
+* `pick()` now returns a 1 row, 0 column tibble when `...` evaluates to an
+  empty selection. This makes it more compatible with [tidyverse recycling
+  rules](https://vctrs.r-lib.org/reference/theory-faq-recycling.html) in some
+  edge cases (#6685).
+
+* `if_else()` and `case_when()` again accept logical conditions that have
+  attributes (#6678).
+  
+* `arrange()` can once again sort the `numeric_version` type from base R
+  (#6680).
+
+* `slice_sample()` now works when the input has a column named `replace`.
+  `slice_min()` and `slice_max()` now work when the input has columns named
+  `na_rm` or `with_ties` (#6725).
+
+* `nth()` now errors informatively if `n` is `NA` (#6682).
+
+* Joins now throw a more informative error when `y` doesn't have the same
+  source as `x` (#6798).
+  
+* All major dplyr verbs now throw an informative error message if the input
+  data frame contains a column named `NA` or `""` (#6758).
+
+* Deprecation warnings thrown by `filter()` now mention the correct package
+  where the problem originated from (#6679).
+  
+* Fixed an issue where using `<-` within a grouped `mutate()` or `summarise()`
+  could cross contaminate other groups (#6666).
+
+* The compatibility vignette has been replaced with a more general vignette on
+  using dplyr in packages, `vignette("in-packages")` (#6702).
+
 * The developer documentation in `?dplyr_extending` has been refreshed and
   brought up to date with all changes made in 1.1.0 (#6695).
+
+* `rename_with()` now includes an example of using `paste0(recycle0 = TRUE)` to
+  correctly handle empty selections (#6688).
 
 * R >=3.5.0 is now explicitly required. This is in line with the tidyverse
   policy of supporting the [5 most recent versions of
   R](https://www.tidyverse.org/blog/2019/04/r-version-support/).
-
-* `rename_with()` now includes an example of using `paste0(recycle0 = TRUE)` to
-  correctly handle empty selections (#6688).
 
 # dplyr 1.1.0
 
@@ -324,6 +440,11 @@ package, bringing greater consistency and improved performance.
   `if_else()` now takes the common type of `true`, `false`, and `missing` to
   determine the output type, meaning that you can now reliably use `NA`,
   rather than `NA_character_` and friends (#6243).
+  
+  `if_else()` also no longer allows you to supply `NULL` for either `true` or
+  `false`, which was an undocumented usage that we consider to be off-label,
+  because `true` and `false` are intended to be (and documented to be) vector
+  inputs (#6730).
 
 * `na_if()` (#6329) now casts `y` to the type of `x` before comparison, which 
   makes it clearer that this function is type and size stable on `x`. In
@@ -410,7 +531,7 @@ package, bringing greater consistency and improved performance.
 * `group_by_prepare()` loses the `caller_env` argument. It was rarely used
   and it is no longer needed (#6444).
 
-* `group_walk()` gains an explict `.keep` argument (#6530).
+* `group_walk()` gains an explicit `.keep` argument (#6530).
 
 * Warnings emitted inside `mutate()` and variants are now collected and stashed
   away. Run the new `last_dplyr_warnings()` function to see the warnings emitted
@@ -1393,7 +1514,7 @@ Hot patch release to resolve R CMD check failures.
 
   Unwind-protection also makes dplyr more robust in corner cases because it
   ensures the C++ destructors are correctly called in all circumstances
-  (debugger exit, captured condition, restart invokation).
+  (debugger exit, captured condition, restart invocation).
 
 * `sample_n()` and `sample_frac()` gain `...` (#2888). 
 * Improved performance for wide tibbles (#3335).
@@ -1782,7 +1903,7 @@ If you've implemented a database backend for dplyr, please read the [backend new
   applied on this subset of the data. This is robust for the common
   case of checking the type of a column (#2129).
 
-* Summarise and mutate colwise functions pass `...` on the the manipulation
+* Summarise and mutate colwise functions pass `...` on to the manipulation
   functions.
 
 * The performance of colwise verbs like `mutate_all()` is now back to
@@ -1894,7 +2015,7 @@ and so these functions have been deprecated (but remain around for backward comp
   an empty `distinct()` on an ungrouped data frame, namely it uses all
   variables (#2476).
 
-* `copy_to()` now returns it's output invisibly (since you're often just
+* `copy_to()` now returns its output invisibly (since you're often just
    calling for the side-effect).
 
 * `filter()` and `lag()` throw informative error if used with ts objects (#2219)
@@ -2457,7 +2578,7 @@ Until now, dplyr's support for non-UTF8 encodings has been rather shaky. This re
   of observations (@ilarischeinin, #988).
 
 * Joins handles matrix columns better (#1230), and can join `Date` objects
-  with heterogenous representations (some `Date`s are integers, while other
+  with heterogeneous representations (some `Date`s are integers, while other
   are numeric). This also improves `all.equal()` (#1204).
 
 * Fixed `percent_rank()` and `cume_dist()` so that missing values no longer
@@ -2849,7 +2970,7 @@ This is a minor release containing fixes for a number of crashes and issues iden
 * Switched from RC to R6.
 
 * `tally()` and `top_n()` work consistently: neither accidentally
-  evaluates the the `wt` param. (#426, @mnel)
+  evaluates the `wt` param. (#426, @mnel)
 
 * `rename` handles grouped data (#640).
 
@@ -2931,7 +3052,7 @@ This is a minor release containing fixes for a number of crashes and issues iden
 
 * `LazySubset` was confused about input data size (#452).
 
-* Internal `n_distinct()` is stricter about it's inputs: it requires one symbol
+* Internal `n_distinct()` is stricter about its inputs: it requires one symbol
   which must be from the data frame (#567).
 
 * `rbind_*()` handle data frames with 0 rows (#597). They fill character

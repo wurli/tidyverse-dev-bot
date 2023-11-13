@@ -1,10 +1,19 @@
 # tidyr (development version)
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    `pivot_wider` now uses `.by` and `|>` syntax for the dplyr helper
+    message to identify duplicates (@boshek, #1516)
+    !end-bullet!
+
+!end-bullets-1!
+
 # tidyr 1.3.0
 
 ## New features
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     New family of consistent string separating functions:
@@ -15,6 +24,10 @@
     greater consistency, a polished API, and a new approach for handling
     problems. They use stringr and supersede `extract()`, `separate()`,
     and `separate_rows()` (#1304).
+
+    The named character vector interface used in
+    `separate_wider_regex()` is very similar to the
+    [nc](https://github.com/tdhock/nc) package by Toby Dylan Hocking.
 
     !end-bullet!
 -   !begin-bullet!
@@ -42,11 +55,11 @@
 
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 ## Breaking changes
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     The `...` argument of both `pivot_longer()` and `pivot_wider()` has
@@ -70,11 +83,11 @@
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 ## Lifecycle changes
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     All functions deprecated in tidyr 1.0 and 1.2 (the old lazyeval
@@ -82,11 +95,11 @@
     warn on every use. They will be made defunct in 2024 (#1406).
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 ## Rectangling
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     `unnest_longer()` now consistently drops rows with either `NULL` or
@@ -117,13 +130,13 @@
 
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 ## Bug fixes and minor improvements
 
 ### General
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     Most tidyr functions now consistently disallow renaming during
@@ -173,11 +186,11 @@
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 ### Nesting, packing, and chopping
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     `unnest()`, `unchop()`, `unnest_longer()`, and `unnest_wider()`
@@ -204,11 +217,11 @@
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 ### Pivoting
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     `pivot_longer()` no longer supports interpreting
@@ -253,11 +266,11 @@
 
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 ### Missing values
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     `fill()` now works correctly when there is a column named
@@ -276,23 +289,23 @@
 
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 # tidyr 1.2.1
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     Hot patch release to resolve R CMD check failures.
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 # tidyr 1.2.0
 
 ## Breaking changes
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     `complete()` and `expand()` no longer allow you to complete or
@@ -313,11 +326,11 @@
 
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 ## Pivoting
 
-!begin-bullets-11!
+!begin-bullets-12!
 
 -   !begin-bullet!
     `pivot_wider()` gains new `names_expand` and `id_expand` arguments
@@ -352,11 +365,11 @@
 
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-12!
 
 ## Nesting
 
-!begin-bullets-12!
+!begin-bullets-13!
 
 -   !begin-bullet!
     `unnest()` and `unchop()`'s `ptype` argument now accepts a single
@@ -370,11 +383,11 @@
 
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
 
 ## Rectangling
 
-!begin-bullets-13!
+!begin-bullets-14!
 
 -   !begin-bullet!
     `unnest_wider()` and `unnest_longer()` can now unnest multiple
@@ -420,11 +433,11 @@
 
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-14!
 
 ## Grids
 
-!begin-bullets-14!
+!begin-bullets-15!
 
 -   !begin-bullet!
     `complete()` gains a new `explicit` argument for limiting `fill` to
@@ -439,11 +452,11 @@
 
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-15!
 
 ## Missing values
 
-!begin-bullets-15!
+!begin-bullets-16!
 
 -   !begin-bullet!
     `drop_na()`, `replace_na()`, and `fill()` have been updated to
@@ -467,13 +480,13 @@
 
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-16!
 
 ## Bug fixes and minor improvements
 
 ### General
 
-!begin-bullets-16!
+!begin-bullets-17!
 
 -   !begin-bullet!
     @mgirlich is now a tidyr author in recognition of his significant
@@ -496,11 +509,11 @@
 
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-17!
 
 ### Pivoting
 
-!begin-bullets-17!
+!begin-bullets-18!
 
 -   !begin-bullet!
     `pivot_wider()` now gives better advice about how to identify
@@ -569,11 +582,11 @@
 
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-18!
 
 ### Nesting
 
-!begin-bullets-18!
+!begin-bullets-19!
 
 -   !begin-bullet!
     The `nest()` generic now avoids computing on `.data`, making it more
@@ -614,22 +627,22 @@
 
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-19!
 
 ### Rectangling
 
-!begin-bullets-19!
+!begin-bullets-20!
 
 -   !begin-bullet!
     `hoist()` no longer accidentally removes elements that have
     duplicated names (#1259).
     !end-bullet!
 
-!end-bullets-19!
+!end-bullets-20!
 
 ### Grids
 
-!begin-bullets-20!
+!begin-bullets-21!
 
 -   !begin-bullet!
     The grouped data frame methods for `complete()` and `expand()` now
@@ -680,11 +693,11 @@
 
     !end-bullet!
 
-!end-bullets-20!
+!end-bullets-21!
 
 ### Missing values
 
-!begin-bullets-21!
+!begin-bullets-22!
 
 -   !begin-bullet!
     `drop_na()` no longer drops missing values from all columns when a
@@ -697,11 +710,11 @@
 
     !end-bullet!
 
-!end-bullets-21!
+!end-bullets-22!
 
 # tidyr 1.1.4
 
-!begin-bullets-22!
+!begin-bullets-23!
 
 -   !begin-bullet!
     `expand_grid()` is now about twice as fast and `pivot_wider()` is a
@@ -726,11 +739,11 @@
 
     !end-bullet!
 
-!end-bullets-22!
+!end-bullets-23!
 
 # tidyr 1.1.3
 
-!begin-bullets-23!
+!begin-bullets-24!
 
 -   !begin-bullet!
     tidyr verbs no longer have "default" methods for lazyeval fallbacks.
@@ -756,22 +769,22 @@
 
     !end-bullet!
 
-!end-bullets-23!
+!end-bullets-24!
 
 # tidyr 1.1.2
 
-!begin-bullets-24!
+!begin-bullets-25!
 
 -   !begin-bullet!
     `separate_rows()` returns to 1.1.0 behaviour for empty strings
     (@rjpatm, #1014).
     !end-bullet!
 
-!end-bullets-24!
+!end-bullets-25!
 
 # tidyr 1.1.1
 
-!begin-bullets-25!
+!begin-bullets-26!
 
 -   !begin-bullet!
     New tidyr logo!
@@ -789,13 +802,13 @@
 
     !end-bullet!
 
-!end-bullets-25!
+!end-bullets-26!
 
 # tidyr 1.1.0
 
 ## General features
 
-!begin-bullets-26!
+!begin-bullets-27!
 
 -   !begin-bullet!
     `pivot_longer()`, `hoist()`, `unnest_wider()`, and `unnest_longer()`
@@ -811,11 +824,11 @@
 
     !end-bullet!
 
-!end-bullets-26!
+!end-bullets-27!
 
 ## Pivoting improvements
 
-!begin-bullets-27!
+!begin-bullets-28!
 
 -   !begin-bullet!
     Both `pivot_wider()` and `pivot_longer()` are considerably more
@@ -877,11 +890,11 @@
 
     !end-bullet!
 
-!end-bullets-27!
+!end-bullets-28!
 
 ## Rectangling
 
-!begin-bullets-28!
+!begin-bullets-29!
 
 -   !begin-bullet!
     `hoist()` now automatically names pluckers that are a single string
@@ -904,11 +917,11 @@
 
     !end-bullet!
 
-!end-bullets-28!
+!end-bullets-29!
 
 ## Nesting
 
-!begin-bullets-29!
+!begin-bullets-30!
 
 -   !begin-bullet!
     `pack()` and `nest()` gains a `.names_sep` argument allows you to
@@ -925,11 +938,11 @@
 
     !end-bullet!
 
-!end-bullets-29!
+!end-bullets-30!
 
 ## Bug fixes and minor improvements
 
-!begin-bullets-30!
+!begin-bullets-31!
 
 -   !begin-bullet!
     `chop()` now creates list-columns of class `vctrs::list_of()`. This
@@ -1000,27 +1013,27 @@
 
     !end-bullet!
 
-!end-bullets-30!
+!end-bullets-31!
 
 # tidyr 1.0.2
 
-!begin-bullets-31!
+!begin-bullets-32!
 
 -   !begin-bullet!
     Minor fixes for dev versions of rlang, tidyselect, and tibble.
     !end-bullet!
 
-!end-bullets-31!
+!end-bullets-32!
 
 # tidyr 1.0.1
 
-!begin-bullets-32!
+!begin-bullets-33!
 
 -   !begin-bullet!
     Did not exist since I accidentally released v1.0.2
     !end-bullet!
 
-!end-bullets-32!
+!end-bullets-33!
 
 # tidyr 1.0.0
 
@@ -1028,7 +1041,7 @@
 
 See `vignette("in-packages")` for a detailed transition guide.
 
-!begin-bullets-33!
+!begin-bullets-34!
 
 -   !begin-bullet!
     `nest()` and `unnest()` have new syntax. The majority of existing
@@ -1084,7 +1097,7 @@ See `vignette("in-packages")` for a detailed transition guide.
 
     !end-bullet!
 
-!end-bullets-33!
+!end-bullets-34!
 
 ## Pivoting
 
@@ -1160,7 +1173,7 @@ important use case.
 
 `unnest()` has been overhauled:
 
-!begin-bullets-34!
+!begin-bullets-35!
 
 -   !begin-bullet!
     New `keep_empty` parameter ensures that every row in the input gets
@@ -1184,14 +1197,14 @@ important use case.
 
     !end-bullet!
 
-!end-bullets-34!
+!end-bullets-35!
 
 ## Packing and chopping
 
 Under the hood, `nest()` and `unnest()` are implemented with `chop()`,
 `pack()`, `unchop()`, and `unpack()`:
 
-!begin-bullets-35!
+!begin-bullets-36!
 
 -   !begin-bullet!
     `pack()` and `unpack()` allow you to pack and unpack columns into
@@ -1203,7 +1216,7 @@ Under the hood, `nest()` and `unnest()` are implemented with `chop()`,
 
     !end-bullet!
 
-!end-bullets-35!
+!end-bullets-36!
 
 Packing and chopping are interesting primarily because they are the
 atomic operations underlying nesting (and similarly, unchop and
@@ -1212,7 +1225,7 @@ directly very often.
 
 ## New features
 
-!begin-bullets-36!
+!begin-bullets-37!
 
 -   !begin-bullet!
     New `expand_grid()`, a tidy version of `expand.grid()`, is
@@ -1230,11 +1243,11 @@ directly very often.
 
     !end-bullet!
 
-!end-bullets-36!
+!end-bullets-37!
 
 ## Bug fixes and minor improvements
 
-!begin-bullets-37!
+!begin-bullets-38!
 
 -   !begin-bullet!
     `full_seq()` now also works when gaps between observations are
@@ -1294,11 +1307,11 @@ directly very often.
 
     !end-bullet!
 
-!end-bullets-37!
+!end-bullets-38!
 
 # tidyr 0.8.3
 
-!begin-bullets-38!
+!begin-bullets-39!
 
 -   !begin-bullet!
     `crossing()` preserves factor levels (#410), now works with
@@ -1326,11 +1339,11 @@ directly very often.
 
     !end-bullet!
 
-!end-bullets-38!
+!end-bullets-39!
 
 # tidyr 0.8.2
 
-!begin-bullets-39!
+!begin-bullets-40!
 
 -   !begin-bullet!
     `separate()` now accepts `NA` as a column name in the `into`
@@ -1343,24 +1356,24 @@ directly very often.
 
     !end-bullet!
 
-!end-bullets-39!
+!end-bullets-40!
 
 # tidyr 0.8.1
 
-!begin-bullets-40!
+!begin-bullets-41!
 
 -   !begin-bullet!
     `unnest()` weakens test of "atomicity" to restore previous behaviour
     when unnesting factors and dates (#407).
     !end-bullet!
 
-!end-bullets-40!
+!end-bullets-41!
 
 # tidyr 0.8.0
 
 ## Breaking changes
 
-!begin-bullets-41!
+!begin-bullets-42!
 
 -   !begin-bullet!
     There are no deliberate breaking changes in this release. However, a
@@ -1377,11 +1390,11 @@ directly very often.
 
     !end-bullet!
 
-!end-bullets-41!
+!end-bullets-42!
 
 ## New features
 
-!begin-bullets-42!
+!begin-bullets-43!
 
 -   !begin-bullet!
     Increased test coverage from 84% to 99%.
@@ -1393,11 +1406,11 @@ directly very often.
 
     !end-bullet!
 
-!end-bullets-42!
+!end-bullets-43!
 
 ## Bug fixes and minor improvements
 
-!begin-bullets-43!
+!begin-bullets-44!
 
 -   !begin-bullet!
     `complete(data)` now returns `data` rather than throwing an error
@@ -1518,11 +1531,11 @@ directly very often.
 
     !end-bullet!
 
-!end-bullets-43!
+!end-bullets-44!
 
 # tidyr 0.7.2
 
-!begin-bullets-44!
+!begin-bullets-45!
 
 -   !begin-bullet!
     The SE variants `gather_()`, `spread_()` and `nest_()` now treat
@@ -1535,7 +1548,7 @@ directly very often.
 
     !end-bullet!
 
-!end-bullets-44!
+!end-bullets-45!
 
 # tidyr 0.7.1
 
@@ -1564,7 +1577,7 @@ It also uses the new tidyselect package as selecting backend.
 
 ## Breaking changes
 
-!begin-bullets-45!
+!begin-bullets-46!
 
 -   !begin-bullet!
     If you see error messages about objects or functions not found, it
@@ -1641,7 +1654,7 @@ It also uses the new tidyselect package as selecting backend.
 
     !end-bullet!
 
-!end-bullets-45!
+!end-bullets-46!
 
 ## Switch to tidy evaluation
 
@@ -1673,7 +1686,7 @@ variables (the `col` argument of `extract()` and `separate()`, and the
 `key` and `value` arguments of `spread()`). This implies the following
 changes:
 
-!begin-bullets-46!
+!begin-bullets-47!
 
 -   !begin-bullet!
     The arguments for selecting a single variable now support all
@@ -1720,21 +1733,21 @@ changes:
 
     !end-bullet!
 
-!end-bullets-46!
+!end-bullets-47!
 
 # tidyr 0.6.3
 
-!begin-bullets-47!
+!begin-bullets-48!
 
 -   !begin-bullet!
     Patch tests to be compatible with dev tibble
     !end-bullet!
 
-!end-bullets-47!
+!end-bullets-48!
 
 # tidyr 0.6.2
 
-!begin-bullets-48!
+!begin-bullets-49!
 
 -   !begin-bullet!
     Register C functions
@@ -1749,11 +1762,11 @@ changes:
 
     !end-bullet!
 
-!end-bullets-48!
+!end-bullets-49!
 
 # tidyr 0.6.1
 
-!begin-bullets-49!
+!begin-bullets-50!
 
 -   !begin-bullet!
     Patch test to be compatible with dev tibble
@@ -1765,13 +1778,13 @@ changes:
 
     !end-bullet!
 
-!end-bullets-49!
+!end-bullets-50!
 
 # tidyr 0.6.0
 
 ## API changes
 
-!begin-bullets-50!
+!begin-bullets-51!
 
 -   !begin-bullet!
     `drop_na()` removes observations which have `NA` in the given
@@ -1790,11 +1803,11 @@ changes:
 
     !end-bullet!
 
-!end-bullets-50!
+!end-bullets-51!
 
 ## Bug fixes and minor improvements
 
-!begin-bullets-51!
+!begin-bullets-52!
 
 -   !begin-bullet!
     `expand()`, `crossing()`, and `nesting()` now silently drop
@@ -1811,35 +1824,35 @@ changes:
 
     !end-bullet!
 
-!end-bullets-51!
+!end-bullets-52!
 
 # tidyr 0.5.1
 
-!begin-bullets-52!
+!begin-bullets-53!
 
 -   !begin-bullet!
     Restored compatibility with R \< 3.3.0 by avoiding
     `getS3method(envir = )` (#205, @krlmlr).
     !end-bullet!
 
-!end-bullets-52!
+!end-bullets-53!
 
 # tidyr 0.5.0
 
 ## New functions
 
-!begin-bullets-53!
+!begin-bullets-54!
 
 -   !begin-bullet!
     `separate_rows()` separates observations with multiple delimited
     values into separate rows (#69, @aaronwolen).
     !end-bullet!
 
-!end-bullets-53!
+!end-bullets-54!
 
 ## Bug fixes and minor improvements
 
-!begin-bullets-54!
+!begin-bullets-55!
 
 -   !begin-bullet!
     `complete()` preserves grouping created by dplyr (#168).
@@ -1915,18 +1928,18 @@ changes:
 
     !end-bullet!
 
-!end-bullets-54!
+!end-bullets-55!
 
 # tidyr 0.4.1
 
-!begin-bullets-55!
+!begin-bullets-56!
 
 -   !begin-bullet!
     Fixed bug in `nest()` where nested data was ending up in the wrong
     row (#158).
     !end-bullet!
 
-!end-bullets-55!
+!end-bullets-56!
 
 # tidyr 0.4.0
 
@@ -1940,7 +1953,7 @@ the individual observations are stored in a column that is a list of
 data frames. This is a useful structure when you have lists of other
 objects (like models) with one element per group.
 
-!begin-bullets-56!
+!begin-bullets-57!
 
 -   !begin-bullet!
     `nest()` now produces a single list of data frames called "data"
@@ -1963,11 +1976,11 @@ objects (like models) with one element per group.
 
     !end-bullet!
 
-!end-bullets-56!
+!end-bullets-57!
 
 ## Expanding
 
-!begin-bullets-57!
+!begin-bullets-58!
 
 -   !begin-bullet!
     `expand()` once again allows you to evaluate arbitrary expressions
@@ -1987,11 +2000,11 @@ objects (like models) with one element per group.
 
     !end-bullet!
 
-!end-bullets-57!
+!end-bullets-58!
 
 ## Minor bug fixes and improvements
 
-!begin-bullets-58!
+!begin-bullets-59!
 
 -   !begin-bullet!
     `fill()` fills in `NULL`s in list-columns.
@@ -2035,23 +2048,23 @@ objects (like models) with one element per group.
 
     !end-bullet!
 
-!end-bullets-58!
+!end-bullets-59!
 
 # tidyr 0.3.1
 
-!begin-bullets-59!
+!begin-bullets-60!
 
 -   !begin-bullet!
     Fixed bug where attributes of non-gather columns were lost (#104)
     !end-bullet!
 
-!end-bullets-59!
+!end-bullets-60!
 
 # tidyr 0.3.0
 
 ## New features
 
-!begin-bullets-60!
+!begin-bullets-61!
 
 -   !begin-bullet!
     New `complete()` provides a wrapper around `expand()`, `left_join()`
@@ -2081,11 +2094,11 @@ objects (like models) with one element per group.
 
     !end-bullet!
 
-!end-bullets-60!
+!end-bullets-61!
 
 ## Bug fixes and minor improvements
 
-!begin-bullets-61!
+!begin-bullets-62!
 
 -   !begin-bullet!
     tidyr no longer depends on reshape2. This should fix issues if you
@@ -2148,13 +2161,13 @@ objects (like models) with one element per group.
 
     !end-bullet!
 
-!end-bullets-61!
+!end-bullets-62!
 
 # tidyr 0.2.0
 
 ## New functions
 
-!begin-bullets-62!
+!begin-bullets-63!
 
 -   !begin-bullet!
     Experimental `expand()` function (#21).
@@ -2166,11 +2179,11 @@ objects (like models) with one element per group.
 
     !end-bullet!
 
-!end-bullets-62!
+!end-bullets-63!
 
 ## Bug fixes and minor improvements
 
-!begin-bullets-63!
+!begin-bullets-64!
 
 -   !begin-bullet!
     `extract_numeric()` preserves negative signs (#20).
@@ -2196,4 +2209,4 @@ objects (like models) with one element per group.
 
     !end-bullet!
 
-!end-bullets-63!
+!end-bullets-64!

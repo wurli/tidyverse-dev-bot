@@ -1,6 +1,46 @@
 # googledrive (development version)
 
+# googledrive 2.1.1
+
+* `drive_auth(subject =)` is a new argument that can be used with
+  `drive_auth(path =)`, i.e. when using a service account. The `path` and
+  `subject` arguments are ultimately processed by
+  `gargle::credentials_service_account()` and support the use of a service
+  account to impersonate a normal user (#413).
+
+* All requests now route through `gargle::request_retry()` (#380).
+
+* `drive_scopes()` is a new function to access scopes relevant to the Drive API.
+  When called without arguments, `drive_scopes()` returns a named vector of
+  scopes, where the names are the associated short aliases. `drive_scopes()` can
+  also be called with a character vector; any element that's recognized as a
+  short alias is replaced with the associated full scope (#430).
+  
+* Various internal changes to sync up with gargle v1.5.0.
+
+# googledrive 2.1.0
+
+## Syncing up with gargle
+
+Version 1.3.0 of gargle introduced some changes around OAuth and googledrive is syncing up that:
+
+* `drive_oauth_client()` is a new function to replace the now-deprecated `drive_oauth_app()`.
+* The new `client` argument of `drive_auth_configure()` replaces the now-deprecated `app` argument.
+* The documentation of `drive_auth_configure()` emphasizes that the preferred way to "bring your own OAuth client" is by providing the JSON downloaded from Google Developers Console.
+
+## Shared drives
+
+`drive_ls(recursive = TRUE)` now works when the target folder is on a shared drive (#265, @Falnesio).
+
 `drive_mv()` no longer errors with "A shared drive item must have exactly one parent." when moving a file on a shared drive (#377).
+
+## Other
+
+`drive_auth()` now warns if the user specifies both `email` and `path`, because this is almost always an error (#420).
+
+`drive_auth_config()` was deprecated in googledrive 1.0.0 (released 2019-08-19) and is now defunct.
+
+`drive_example()` was deprecated in googledrive 2.0.0 (released 2021-07-08) and is now defunct.
 
 # googledrive 2.0.0
 
@@ -64,7 +104,7 @@ How interacts with googledrive's support for specifying file by filepath:
 
 Further reading about changes to the Drive folder model:
 
-* [Simplifying Google Drive’s folder structure and sharing models](https://cloud.google.com/blog/products/g-suite/simplifying-google-drives-folder-structure-and-sharing-models)
+* [Simplifying Google Drive’s folder structure and sharing models](https://workspace.google.com/blog/product-announcements/simplifying-google-drives-folder-structure-and-sharing-models)
 * [Single-parenting behavior changes](https://developers.google.com/drive/api/v3/ref-single-parent)
 * [Create a shortcut to a Drive file](https://developers.google.com/drive/api/v3/shortcuts)
 * Find files & folders with Google Drive shortcuts: `https://support.google.com/drive/answer/9700156`

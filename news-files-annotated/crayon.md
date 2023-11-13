@@ -1,4 +1,6 @@
-# development version
+# crayon (development version)
+
+# crayon 1.5.2
 
 !begin-bullets-1!
 

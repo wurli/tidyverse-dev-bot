@@ -1,23 +1,40 @@
-<!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
+<!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
-# hms 1.1.2.9002
+# hms 1.1.3.9003
+
+- Internal changes only.
+
+
+# hms 1.1.3.9002
+
+- Merged cran-1.1.3 into main.
+
+
+# hms 1.1.3.9001
 
 - Internal changes only.
 
 
-# hms 1.1.2.9001
+# hms 1.1.3.9000
 
-- Harmonize yaml formatting.
+## Bug fixes
 
-- Revert changes to matrix section.
+- Fix method consistency, checked by R-devel.
 
-- Merged cran-1.1.2 into main.
+## Chore
+
+- Use rlang instead of ellipsis (#106).
 
 
+# hms 1.1.3
 
-# hms 1.1.2.9000
+## Bug fixes
 
-- Internal changes only.
+- Fix method consistency, checked by R-devel.
+
+## Internal
+
+- Use rlang instead of ellipsis (#106).
 
 
 # hms 1.1.2

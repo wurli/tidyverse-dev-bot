@@ -1,7 +1,80 @@
 # googledrive (development version)
 
+# googledrive 2.1.1
+
+!begin-bullets-1!
+
+-   !begin-bullet!
+    `drive_auth(subject =)` is a new argument that can be used with
+    `drive_auth(path =)`, i.e. when using a service account. The `path`
+    and `subject` arguments are ultimately processed by
+    `gargle::credentials_service_account()` and support the use of a
+    service account to impersonate a normal user (#413).
+
+    !end-bullet!
+-   !begin-bullet!
+    All requests now route through `gargle::request_retry()` (#380).
+
+    !end-bullet!
+-   !begin-bullet!
+    `drive_scopes()` is a new function to access scopes relevant to the
+    Drive API. When called without arguments, `drive_scopes()` returns a
+    named vector of scopes, where the names are the associated short
+    aliases. `drive_scopes()` can also be called with a character
+    vector; any element that's recognized as a short alias is replaced
+    with the associated full scope (#430).
+
+    !end-bullet!
+-   !begin-bullet!
+    Various internal changes to sync up with gargle v1.5.0.
+
+    !end-bullet!
+
+!end-bullets-1!
+
+# googledrive 2.1.0
+
+## Syncing up with gargle
+
+Version 1.3.0 of gargle introduced some changes around OAuth and
+googledrive is syncing up that:
+
+!begin-bullets-2!
+
+-   !begin-bullet!
+    `drive_oauth_client()` is a new function to replace the
+    now-deprecated `drive_oauth_app()`.
+    !end-bullet!
+-   !begin-bullet!
+    The new `client` argument of `drive_auth_configure()` replaces the
+    now-deprecated `app` argument.
+    !end-bullet!
+-   !begin-bullet!
+    The documentation of `drive_auth_configure()` emphasizes that the
+    preferred way to "bring your own OAuth client" is by providing the
+    JSON downloaded from Google Developers Console.
+    !end-bullet!
+
+!end-bullets-2!
+
+## Shared drives
+
+`drive_ls(recursive = TRUE)` now works when the target folder is on a
+shared drive (#265, @Falnesio).
+
 `drive_mv()` no longer errors with "A shared drive item must have
 exactly one parent." when moving a file on a shared drive (#377).
+
+## Other
+
+`drive_auth()` now warns if the user specifies both `email` and `path`,
+because this is almost always an error (#420).
+
+`drive_auth_config()` was deprecated in googledrive 1.0.0 (released
+2019-08-19) and is now defunct.
+
+`drive_example()` was deprecated in googledrive 2.0.0 (released
+2021-07-08) and is now defunct.
 
 # googledrive 2.0.0
 
@@ -22,7 +95,7 @@ slightly, with `"allDrives"` replacing `"all"`. This applies to the
 
 Where to learn more:
 
-!begin-bullets-1!
+!begin-bullets-3!
 
 -   !begin-bullet!
     [Team Drives is being renamed to shared
@@ -35,7 +108,7 @@ Where to learn more:
     from the Google Cloud blog
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-3!
 
 ## Single parenting and shortcuts
 
@@ -60,7 +133,7 @@ parent-child relationships with a shortcut.
 
 New functions related to shortcuts:
 
-!begin-bullets-2!
+!begin-bullets-4!
 
 -   !begin-bullet!
     `shortcut_create()`: creates a shortcut to a specific Drive file (or
@@ -73,12 +146,12 @@ New functions related to shortcuts:
     passed through and the shortcuts are replaced by their targets.
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-4!
 
 How interacts with googledrive's support for specifying file by
 filepath:
 
-!begin-bullets-3!
+!begin-bullets-5!
 
 -   !begin-bullet!
     Main principle: shortcuts are first-class Drive files that we assume
@@ -99,7 +172,7 @@ filepath:
     where it unambiguously specifies a parent folder, the `path` **is**
     auto-resolved to its target folder. This is the exception to the "no
     automatic resolution" rule. Functions affected:
-    !begin-bullets-4!
+    !begin-bullets-6!
     -   !begin-bullet!
         `drive_ls(path, ...)`
         !end-bullet!
@@ -118,18 +191,18 @@ filepath:
         `drive_put()`
         !end-bullet!
 
-    !end-bullets-4!
+    !end-bullets-6!
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-5!
 
 Further reading about changes to the Drive folder model:
 
-!begin-bullets-5!
+!begin-bullets-7!
 
 -   !begin-bullet!
     [Simplifying Google Drive's folder structure and sharing
-    models](https://cloud.google.com/blog/products/g-suite/simplifying-google-drives-folder-structure-and-sharing-models)
+    models](https://workspace.google.com/blog/product-announcements/simplifying-google-drives-folder-structure-and-sharing-models)
     !end-bullet!
 -   !begin-bullet!
     [Single-parenting behavior
@@ -144,7 +217,7 @@ Further reading about changes to the Drive folder model:
     `https://support.google.com/drive/answer/9700156`
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-7!
 
 ## User interface
 
@@ -167,7 +240,7 @@ will be removed in a future release. In the current release,
 
 ## Other changes
 
-!begin-bullets-6!
+!begin-bullets-8!
 
 -   !begin-bullet!
     We now share a variety of world-readable, persistent example files
@@ -178,7 +251,7 @@ will be removed in a future release. In the current release,
     `drive_example()` is deprecated in favor of these accessors for
     example files:
 
-    !begin-bullets-7!
+    !begin-bullets-9!
     -   !begin-bullet!
         Plural forms:`drive_examples_remote()`, `drive_examples_local()`
         !end-bullet!
@@ -187,7 +260,7 @@ will be removed in a future release. In the current release,
         `drive_example_local()`
         !end-bullet!
 
-    !end-bullets-7!
+    !end-bullets-9!
     !end-bullet!
 -   !begin-bullet!
     `drive_read_string()` and `drive_read_raw()` are new functions that
@@ -219,7 +292,7 @@ will be removed in a future release. In the current release,
     The `drive_id` S3 class is now implemented more fully, using the
     vctrs package (#93, #364):
 
-    !begin-bullets-8!
+    !begin-bullets-10!
     -   !begin-bullet!
         The `drive_id` class will persist after mundane operations, like
         subsetting.
@@ -232,10 +305,10 @@ will be removed in a future release. In the current release,
         The `id` column of a `dribble` is now an instance of `drive_id`.
         !end-bullet!
 
-    !end-bullets-8!
+    !end-bullets-10!
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-8!
 
 ## Dependency changes
 
@@ -274,7 +347,7 @@ which could apply, for example, to tibble's `.name_repair` argument.
 
 The release of version 1.0.0 marks two events:
 
-!begin-bullets-9!
+!begin-bullets-11!
 
 -   !begin-bullet!
     The overall design of googledrive has survived \~2 years on CRAN,
@@ -286,7 +359,7 @@ The release of version 1.0.0 marks two events:
     compatible.
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-11!
 
 There is also new functionality that makes it less likely you'll create
 multiple files with the same name, without actually meaning to.
@@ -300,7 +373,7 @@ several other packages, such as [bigrquery](https://bigrquery.r-dbi.org)
 and [gmailr](https://gmailr.r-lib.org). This makes user interfaces more
 consistent and makes two new token flows available in googledrive:
 
-!begin-bullets-10!
+!begin-bullets-12!
 
 -   !begin-bullet!
     Application Default Credentials
@@ -310,11 +383,11 @@ consistent and makes two new token flows available in googledrive:
     running on GCE
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-12!
 
 Where to learn more:
 
-!begin-bullets-11!
+!begin-bullets-13!
 
 -   !begin-bullet!
     Help for
@@ -323,7 +396,7 @@ Where to learn more:
     !end-bullet!
 -   !begin-bullet!
     *details for more advanced users*
-    !begin-bullets-12!
+    !begin-bullets-14!
     -   !begin-bullet!
         [Bring your own OAuth app or API
         key](https://googledrive.tidyverse.org/articles/articles/bring-your-own-app.html)
@@ -349,10 +422,10 @@ Where to learn more:
         securely](https://gargle.r-lib.org/articles/articles/managing-tokens-securely.html)
         !end-bullet!
 
-    !end-bullets-12!
+    !end-bullets-14!
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-13!
 
 ### Changes that a user will notice
 
@@ -373,7 +446,7 @@ Google identities.
 
 The arguments and usage of `drive_auth()` have changed.
 
-!begin-bullets-13!
+!begin-bullets-15!
 
 -   !begin-bullet!
     Previous signature (v0.1.3 and earlier)
@@ -410,7 +483,7 @@ The arguments and usage of `drive_auth()` have changed.
     !end-codeblock!
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-15!
 
 For full details see the resources listed in *Where to learn more*
 above. The change that probably affects the most code is the way to
@@ -422,13 +495,13 @@ v1.0.0)
 
 Auth configuration has also changed:
 
-!begin-bullets-14!
+!begin-bullets-16!
 
 -   !begin-bullet!
     `drive_auth_configure()` is a variant of the now-deprecated
     `drive_auth_config()` whose explicit and only job is to *set*
     aspects of the configuration, i.e. the OAuth app or API key.
-    !begin-bullets-15!
+    !begin-bullets-17!
     -   !begin-bullet!
         Use `drive_oauth_app()` (new) and `drive_api_key()` to
         *retrieve* a user-configured app or API key, if such exist.
@@ -439,21 +512,21 @@ Auth configuration has also changed:
         configuration.
         !end-bullet!
 
-    !end-bullets-15!
+    !end-bullets-17!
     !end-bullet!
 -   !begin-bullet!
     `drive_deauth()` is how you go into a de-authorized state, i.e. send
     an API key in lieu of a token.
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-16!
 
 `drive_has_token()` is a new helper that simply reports whether a token
 is in place, without triggering the auth flow.
 
 There are other small changes to the low-level developer-facing API:
 
-!begin-bullets-16!
+!begin-bullets-18!
 
 -   !begin-bullet!
     `generate_request()` has been renamed to `request_generate()`.
@@ -473,7 +546,7 @@ There are other small changes to the low-level developer-facing API:
     `gargle::response_process(response)`, as we do inside googledrive.
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-18!
 
 ## `overwrite = NA / TRUE / FALSE` and `drive_put()`
 
@@ -486,7 +559,7 @@ file by ID, but can be confusing and undesirable for humans.
 
 googledrive v1.0.0 offers some new ways to fight this:
 
-!begin-bullets-17!
+!begin-bullets-19!
 
 -   !begin-bullet!
     All functions that create a new item or rename/move an existing item
@@ -497,7 +570,7 @@ googledrive v1.0.0 offers some new ways to fight this:
     to call `drive_upload()` or `drive_update()`.
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-19!
 
 Changes inspired by #230.
 
@@ -505,7 +578,7 @@ Changes inspired by #230.
 
 These functions gain an `overwrite` argument:
 
-!begin-bullets-18!
+!begin-bullets-20!
 
 -   !begin-bullet!
     `drive_create()` *this whole function is new*
@@ -526,7 +599,7 @@ These functions gain an `overwrite` argument:
     `drive_upload()`
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-20!
 
 The default of `overwrite = NA` corresponds to the current behaviour,
 which is to "Just. Do. It.", i.e. to not consider pre-existing files at
@@ -627,7 +700,7 @@ Minor patch release for compatibility with the imminent release of purrr
 
 # googledrive 0.1.2
 
-!begin-bullets-19!
+!begin-bullets-21!
 
 -   !begin-bullet!
     Internal usage of `glue::collapse()` modified to call
@@ -636,14 +709,14 @@ Minor patch release for compatibility with the imminent release of purrr
     emanating from glue. (#222 @jimhester)
     !end-bullet!
 
-!end-bullets-19!
+!end-bullets-21!
 
 # googledrive 0.1.1
 
-!begin-bullets-20!
+!begin-bullets-22!
 
 -   !begin-bullet!
     initial CRAN release
     !end-bullet!
 
-!end-bullets-20!
+!end-bullets-22!

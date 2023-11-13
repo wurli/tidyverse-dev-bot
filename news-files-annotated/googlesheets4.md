@@ -1,5 +1,63 @@
 # googlesheets4 (development version)
 
+# googlesheets4 1.1.1
+
+!begin-bullets-1!
+
+-   !begin-bullet!
+    `gs4_auth(subject =)` is a new argument that can be used with
+    `gs4_auth(path =)`, i.e. when using a service account. The `path`
+    and `subject` arguments are ultimately processed by
+    `gargle::credentials_service_account()` and support the use of a
+    service account to impersonate a normal user.
+
+    !end-bullet!
+-   !begin-bullet!
+    `gs4_scopes()` is a new function to access scopes relevant to the
+    Sheets and Drive APIs. When called without arguments, `gs4_scopes()`
+    returns a named vector of scopes, where the names are the associated
+    short aliases. `gs4_scopes()` can also be called with a character
+    vector; any element that's recognized as a short alias is replaced
+    with the associated full scope (#291).
+
+    !end-bullet!
+-   !begin-bullet!
+    Various internal changes to sync up with gargle v1.5.0.
+
+    !end-bullet!
+
+!end-bullets-1!
+
+# googlesheets4 1.1.0
+
+## Syncing up with gargle
+
+Version 1.3.0 of gargle introduced some changes around OAuth and
+googlesheets4 is syncing with up that:
+
+!begin-bullets-2!
+
+-   !begin-bullet!
+    `gs4_oauth_client()` is a new function to replace the now-deprecated
+    `gs4_oauth_app()`.
+    !end-bullet!
+-   !begin-bullet!
+    The new `client` argument of `gs4_auth_configure()` replaces the
+    now-deprecated `app` argument.
+    !end-bullet!
+-   !begin-bullet!
+    The documentation of `gs4_auth_configure()` emphasizes that the
+    preferred way to "bring your own OAuth client" is by providing the
+    JSON downloaded from Google Developers Console.
+    !end-bullet!
+
+!end-bullets-2!
+
+## Other
+
+`gs4_auth()` now warns if the user specifies both `email` and `path`,
+because this is almost always an error.
+
 # googlesheets4 1.0.1
 
 The mere existence of an invalid named range no longer prevents
@@ -71,7 +129,7 @@ called.
 
 ## Dependency changes
 
-!begin-bullets-1!
+!begin-bullets-3!
 
 -   !begin-bullet!
     cli is new in Imports.
@@ -83,7 +141,7 @@ called.
 
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-3!
 
 R 3.4 is now the oldest version that is explicitly supported and tested,
 as per the [tidyverse
@@ -117,7 +175,7 @@ The universal `sheets_` prefix has been replaced by a scheme that
 conveys more information about the scope of the function. There are
 three prefixes:
 
-!begin-bullets-2!
+!begin-bullets-4!
 
 -   !begin-bullet!
     `gs4_`: refers variously to the googlesheets4 package, v4 of the
@@ -130,7 +188,7 @@ three prefixes:
     `range_`: operations on a range of cells
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-4!
 
 The addition of write/edit functionality resulted in many new functions
 and the original naming scheme proved to be problematic. The article
@@ -149,7 +207,7 @@ modification. These functions are ready for general use but are still
 marked experimental, as they may see some refinement based on user
 feedback.
 
-!begin-bullets-3!
+!begin-bullets-5!
 
 -   !begin-bullet!
     `gs4_create()` creates a new Google Sheet and, optionally, writes
@@ -175,14 +233,14 @@ feedback.
     `range_delete()` deletes a range of cells.
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-5!
 
 ## (Work)sheet operations
 
 The `sheet_*()` family of functions operate on the (work)sheets inside
 an existing (spread)Sheet:
 
-!begin-bullets-4!
+!begin-bullets-6!
 
 -   !begin-bullet!
     (`sheet_write()` and `sheet_append()` are described above.)
@@ -213,7 +271,7 @@ an existing (spread)Sheet:
     `sheet_resize()` changes the number of rows or columns in a sheet.
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-6!
 
 ## Range operations
 
@@ -261,32 +319,32 @@ schema. The return value of `gs4_get()` has this class.
 
 ## Bug fixes
 
-!begin-bullets-5!
+!begin-bullets-7!
 
 -   !begin-bullet!
     `read_sheet()` passes its `na` argument down to the helpers that
     parse cells, so that `na` actually has the documented effect (#73).
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-7!
 
 # googlesheets4 0.1.1
 
-!begin-bullets-6!
+!begin-bullets-8!
 
 -   !begin-bullet!
     Patch release to modify a test fixture, to be compatible with tibble
     v3.0. Related to tibble's increased type strictness.
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-8!
 
 # googlesheets4 0.1.0
 
-!begin-bullets-7!
+!begin-bullets-9!
 
 -   !begin-bullet!
     Added a `NEWS.md` file to track changes to the package.
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-9!

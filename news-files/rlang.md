@@ -1,12 +1,172 @@
 # rlang (development version)
 
+# rlang 1.1.2
+
+* Fixed an off-by-one typo in the traceback source column location (#1633).
+
+* `abort()` now respects the base R global option,
+  `options(show.error.messages = FALSE)` (#1630).
+
+* `obj_type_friendly()` now only displays the first class of S3 objects (#1622).
+
+* `expr_label()` now has back-compatility with respect to changes made by R version 4.4 and `is.atomic(NULL)` (#1655)
+
+* Performance improvement in `.rlang_cli_compat()` (#1657).
+
+
+# rlang 1.1.1
+
+* `englue()` now allows omitting `{{`. This is to make it easier to
+  embed in external functions that need to support either `{` and `{{`
+  (#1601).
+
+* Fix for CRAN checks.
+
+* `stop_input_type()` now handles `I()` input literally in `arg`
+  (#1607, @simonpcouch).
+
+* `parse_expr()` and `parse_exprs()` are now faster when
+  `getOption("keep.source")` is `TRUE` (#1603).
+
+
+# rlang 1.1.0
+
+## Life cycle changes
+
+* `dots_splice()` is deprecated. This function was previously in
+  the questioning lifecycle stage as we were moving towards the
+  explicit `!!!` splicing style.
+
+* `flatten()`, `squash()`, and their variants are deprecated in favour
+  of `purrr::list_flatten()` and `purrr::list_c()`.
+
+* `child_env()` is deprecated in favour of `env()` which has supported
+  creating child environments for several years now.
+
+
+## Main new features
+
+* `last_error()` and `options(rlang_backtrace_on_error = "full")` now
+  print the full backtrace tree by default (except for some hidden
+  frames). The simplified backtraces tended to hide important context
+  too often. Now we show intervening frames in a lighter colour so
+  that they don't distract from the important parts of the backtraces
+  but are still easily inspectable.
+
+* `global_entrace()`, `last_warnings()`, and `last_messages()` now
+  support knitr documents.
+
+* New `rlang_backtrace_on_warning_report` global option. This is
+  useful in conjunction with `global_entrace()` to get backtraces on
+  warnings inside RMarkdown documents.
+
+* `global_entrace()` and `entrace()` now stop entracing warnings and
+  messages after 20 times. This is to avoid a large overhead when 100s
+  or 1000s of warnings are signalled in a loop (#1473).
+
+* `abort()`, `warn()`, and `inform()` gain an `.inherit` parameter.
+  This controls whether `parent` is inherited. If `FALSE`,
+  `cnd_inherits()` and `try_fetch()` do not match chained conditions
+  across parents.
+
+  It's normally `TRUE` by default, but if a warning is chained to an
+  error or a message is chained to a warning or error (downgraded
+  chaining), `.inherit` defaults to `FALSE` (#1573).
+
+* `try_fetch()` now looks up condition classes across chained errors
+  (#1534). This makes `try_fetch()` insensitive to changes of
+  implementation or context of evaluation that cause a classed error
+  to suddenly get chained to a contextual error.
+
+* `englue()` gained `env`, `error_arg`, and `error_call` arguments to
+  support being wrapped in another function (#1565).
+
+* The data-masking documentation for arguments has been imported from
+  dplyr. You can link to it by starting an argument documentation with
+  this button:
+
+  ```
+  <[`data-masking`][rlang::args_data_masking]>
+  ```
+
+* `enquos()` and friends gain a `.ignore_null` argument (#1450).
+
+* New `env_is_user_facing()` function to determine if an evaluation
+  frame corresponds to a direct usage by the end user (from the global
+  environment or a package being tested) or indirect usage by a third
+  party function. The return value can be overridden by setting the
+  `"rlang_user_facing"` global option.
+
+
+## Miscellaneous fixes and features
+
+* New `check_data_frame()` and `check_logical()` functions in
+  `standalone-types-check.R` (#1587, @mgirlich).
+
+* Added `allow_infinite` argument to `check_number_whole()` (#1588, @mgirlich).
+
+* The lifecycle standalone file has been updated to match the modern
+  lifecycle tools.
+
+* `parse_expr()` now supports vectors of lines (#1540).
+
+* Quosures can now be consistently concatenated to lists of quosures (#1446).
+
+* Fixed a memory issue that caused excessive duplication in `list2()`
+  and friends (#1491).
+
+* Embraced empty arguments are now properly detected and trimmed by
+  `quos()` (#1421).
+
+* Fixed an edge case that caused `enquos(.named = NULL)` to return a
+  named list (#1505).
+
+* `expr_deparse()` now deparses the embrace operator `{{` on a single
+  line (#1511).
+
+* `zap_srcref()` has been rewritten in C for efficiency (#1513).
+
+* `zap_srcref()` now supports expression vectors.
+
+* The non-error path of `check_dots_unnamed()` has been rewritten in C
+  for efficiency (#1528).
+
+* Improved error messages in `englue()` (#1531) and in glue strings in
+  the LHS of `:=` (#1526).
+
+* `englue()` now requires size 1 outputs (#1492). This prevents
+  surprising errors or inconsistencies when an interpolated input of
+  size != 1 makes its way into the glue string.
+
+* `arg_match()` now throws correct error when supplied a missing value
+  or an empty vector (#1519).
+
+* `is_integerish()` now handles negative doubles more consistently
+  with positive ones (@sorhawell, #1530).
+
+* New `check_logical()` in `standalone-types-check.R` (#1560).
+
+* `quo_squash()` now squashes quosures in function position (#1509).
+
+* `is_expression()` now recognises quoted functions (#1499).
+  It now also recognises non-parsable attributes (#1475).
+
+* `obj_address()` now supports the missing argument (#1521).
+
+* Fixed a `check_installed()` issue with packages removed during the
+  current R session (#1561).
+
 * `new_data_mask()` is now slightly faster due to a smaller initial mask size
   and usage of the C level function `R_NewEnv()` on R >=4.1.0 (#1553).
 
 * The C level `r_dyn_*_push_back()` utilities are now faster (#1542).
 
+* The C level `r_lgl_sum()` and `r_lgl_which()` helpers are now faster
+  (#1577, with contributions from @mgirlich).
+
 * rlang is now compliant with `-Wstrict-prototypes` as requested by CRAN
   (#1508).
+
 
 # rlang 1.0.6
 

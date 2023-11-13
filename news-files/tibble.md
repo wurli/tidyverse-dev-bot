@@ -1,81 +1,152 @@
-<!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
+<!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
-# tibble 3.1.8.9005
-
-- Internal changes only.
-
-
-# tibble 3.1.8.9004
-
-- Internal changes only.
-
-
-# tibble 3.1.8.9003
+# tibble 3.2.1.9012
 
 ## Chore
 
-- Remove legacy expectation (#1468).
+- Skip tests if packages are missing.
+
+## Testing
+
+- Skip tests if packages are missing.
+
+
+# tibble 3.2.1.9011
+
+- Merge pull request #1565 from tidyverse/snapshot-main-rcc-smoke-null.
+
+
+# tibble 3.2.1.9010
+
+- Merge pull request #1562 from tidyverse/snapshot-main-rcc-smoke-null.
+
+- Merge pull request #1561 from tidyverse/snapshot-main-rcc-full-config-os-macos-latest-r-release.
+
+
+# tibble 3.2.1.9009
+
+- Merge pull request #1560 from tidyverse/snapshot-main-R-CMD-check-base-null.
+
+
+# tibble 3.2.1.9008
 
 ## Documentation
 
-- Use lambda in `across()` in vignette for compatibility with dplyr 1.1.0 (#1485).
-
-## Uncategorized
-
-- Merge pull request #1481 from tidyverse/snapshot-main-rcc-smoke-null.
+- Fix rendering if suggested packages are missing.
 
 
+# tibble 3.2.1.9007
 
-- Harmonize yaml formatting.
+## Testing
 
-- Revert changes to matrix section.
-
-- Merge pull request #1475 from tidyverse/snapshot-main-rcc-smoke-null.
-
+- Override :: to avoid failures in tests without suggested packages.
 
 
-- Merge pull request #1474 from IndrajeetPatil/doc_edits.
+# tibble 3.2.1.9006
+
+- Merge branch 'docs'.
 
 
+# tibble 3.2.1.9005
+
+## Chore
+
+- Snapshot updates for rcc-smoke (null) (#1548).
 
 
-# tibble 3.1.8.9002
+# tibble 3.2.1.9004
+
+## Documentation
+
+- Alt text (@maelle, #1528, #1539).
+
+
+# tibble 3.2.1.9003
+
+- Merged cran-3.2.1 into main.
+
+
+# tibble 3.2.1.9002
+
+- Internal changes only.
+
+
+# tibble 3.2.1.9001
+
+- Merge pull request #1527 from tidyverse/snapshot-main-rcc-smoke-null.
+
+
+# tibble 3.2.1.9000
+
+- Internal changes only.
+
+
+# tibble 3.2.1
+
+## Internal
+
+- Use symbol instead of string in `.Call()`.
+
+
+# tibble 3.2.0
 
 ## Features
 
-- Correct top-level calls are shown for the vast majority of errors (#1379).
+- Accurate location of the source of an error in error messages (#1379, #1065, #1508).
 
-- Using cli for formatting conditions (#1387).
+- `as_data_frame()` now also refers to `as.data.frame()` in its deprecation message (#1149, #1506).
 
-## Chore
+## Breaking changes
 
-- Check if R version changed (#1365).
+- Deprecated functions and arguments where we could not detect usage by other CRAN packages (#1515):
 
-- Define responsibility for setting row names and class (#1364).
+    - `data_frame_()`, `lst_()`, `frame_data()`
+    
+    - `as_tibble(validate = )`, `as_tibble(NULL)`, `new_tibble(subclass = )`
+    
+    - `add_row()` and `add_column()` for non-data-frame input
+    
+    - `add_column()` for input with non-unique names
+    
+    - corner cases for `tbl[[x]]`
 
-## Documentation
+- Breaking change: Remove `knit_print.trunc_mat()` method (#1516).
 
-- Update example for `nrow` argument to `new_tibble()` (@heavywatal, #1394).
+- Forward `trunc_mat()` to new-style pillar methods (#1517).
 
-- Remove ANSI escapes from invariants article on pkgdown (#1374).
+## Bug fixes
+
+- Allow `glue()` and other classed characters for subassignment (#1150, #1503).
 
 ## Performance
 
 - Reduce overhead of single-column subset assignment (#1363).
 
+## Documentation
 
-# tibble 3.1.8.9001
+- New `vignette("extending")` (#275, #1512).
 
-## Chore
+- Minor updates (#1151, #1070, #1512, #1485).
+
+- Update example for `nrow` argument to `new_tibble()` (@heavywatal, #1394).
+
+- Fix display of mermaid diagrams in `vignette("formats")` (@maelle, #1497, #1498).
+
+- Remove ANSI escapes from invariants article on pkgdown (#1374).
+
+## Internal
 
 - Require vctrs >= 0.4.1 and pillar >= 1.8.1
 
+- Use cli for formatting conditions (#1387).
+
+- Use `vec_as_location(missing = "error")` for better error messages (#741, #1511).
+
+- Remove compatibility code for RSDA package which is broken anyway due to other changes (#923, #1509).
+
 - Skip tests if suggested packages not available (#1246, @MichaelChirico).
 
-
-# tibble 3.1.8.9000
-
-- Internal changes only.
+- Remove obsolete tests (#1513).
 
 
 # tibble 3.1.8
