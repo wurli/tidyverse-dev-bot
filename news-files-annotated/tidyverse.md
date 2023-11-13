@@ -66,10 +66,9 @@
 !begin-bullets-4!
 
 -   !begin-bullet!
-    The tidyverse now has an associated paper at the [Journal of Open
-    Source Software](https://joss.theoj.org/) that you can use to cite
-    the tidyverse if you use it in a paper - see `citation("tidyverse")`
-    for details.
+    The tidyverse now has an associated paper at the Journal of Open
+    Source Software that you can use to cite the tidyverse if you use it
+    in a paper - see `citation("tidyverse")` for details.
 
     !end-bullet!
 -   !begin-bullet!

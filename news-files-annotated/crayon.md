@@ -87,7 +87,7 @@
     !end-bullet!
 -   !begin-bullet!
     Now colors are turned on if ANSICON
-    (<https://github.com/adoxa/ansicon>) is active.
+    (https://github.com/adoxa/ansicon) is active.
 
     !end-bullet!
 -   !begin-bullet!

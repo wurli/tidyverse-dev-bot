@@ -1602,8 +1602,8 @@
     !end-bullets-58!
     !end-bullet!
 -   !begin-bullet!
-    [blob](https://blob.tidyverse.org/) vectors can now be used with
-    `!!` and `!!!` operators, for example in `filter()` (@okhoma, #433)
+    blob vectors can now be used with `!!` and `!!!` operators, for
+    example in `filter()` (@okhoma, #433)
 
     !end-bullet!
 -   !begin-bullet!
@@ -1762,7 +1762,7 @@ If you are the author of a dbplyr backend, please see
     New `sql_expr_matches()` generic allows databases to use more
     efficient alternatives when determine if two values "match"
     (i.e. like equality but a pair of `NULL`s will also match). For more
-    details, see <https://modern-sql.com/feature/is-distinct-from>
+    details, see https://modern-sql.com/feature/is-distinct-from
 
     !end-bullet!
 -   !begin-bullet!
@@ -1848,9 +1848,8 @@ If you are the author of a dbplyr backend, please see
     !end-bullet!
 -   !begin-bullet!
     `escape()` now supports `blob` vectors using new `sql_escape_raw()`
-    generic. It enables using [blob](https://blob.tidyverse.org/)
-    variables in dplyr verbs, for example to filter nvarchar values by
-    UTF-16 blobs (see
+    generic. It enables using blob variables in dplyr verbs, for example
+    to filter nvarchar values by UTF-16 blobs (see
     https://github.com/r-dbi/DBI/issues/215#issuecomment-356376133).
     (@okhoma, #433)
 

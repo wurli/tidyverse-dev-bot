@@ -225,8 +225,8 @@
 !begin-bullets-9!
 
 -   !begin-bullet!
-    R 3.4 is now the minimum supported version, in line with [tidyverse
-    policy](https://www.tidyverse.org/blog/2019/04/r-version-support/).
+    R 3.4 is now the minimum supported version, in line with tidyverse
+    policy.
 
     !end-bullet!
 -   !begin-bullet!

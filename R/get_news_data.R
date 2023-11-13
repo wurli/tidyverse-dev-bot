@@ -25,6 +25,7 @@ get_news_data <- function(files = list.files("news-files-annotated", full.names 
   }
   
   text |> 
+    discard(~ length(.) == 0L) |> 
     imap(news_to_df) |> 
     bind_rows(.id = "package")
   
@@ -40,14 +41,14 @@ news_to_df <- function(text, pkg, bullet_syms = c("\U2022", "\U2023", "\U2043"))
   ann <- list(
     bullets_start   = "!begin-bullets-\\d+!",
     bullets_end     = "!end-bullets-\\d+!",
-    bullet_start    = "!begin-bullet!",
-    bullet_end      = "!end-bullet!",
-    codeblock_start = "!begin-codeblock!",
-    codeblock_end   = "!end-codeblock!"
-  )
+    bullet_start    = fixed("!begin-bullet!"),
+    bullet_end      = fixed("!end-bullet!"),
+    codeblock_start = fixed("!begin-codeblock!"),
+    codeblock_end   = fixed("!end-codeblock!")
+  )  
   
   # out <- tibble(text = text) |> 
-  out <- tibble(text = text) |> 
+  tibble(text = text) |> 
     
     # Helper columns derived from annotations added by the lua filter
     mutate(

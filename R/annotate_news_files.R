@@ -13,9 +13,9 @@
 #'
 #' @return A named list of filepaths to the created documents
 annotate_news_files <- function(files = list.files("news-files", "\\.md$", full.names = TRUE), 
-                                dir = NULL, 
-                                quiet = TRUE,
-                                lua_filter = project_file("annotate-bullets.lua")) {
+  dir = NULL, 
+  quiet = TRUE,
+  lua_filter = project_file("annotate-bullets.lua")) {
   
   files <- set_names(files, ~ . |> basename() |> str_remove("\\.[^.]+$"))
   file_exists <- map_lgl(files, file.exists) 

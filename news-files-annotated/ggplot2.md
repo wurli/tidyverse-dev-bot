@@ -355,12 +355,10 @@ and the upcoming retirement of maptools.
 
 -   !begin-bullet!
     `fortify()` for sp objects (e.g., `SpatialPolygonsDataFrame`) is now
-    deprecated and will be removed soon in support of [the upcoming
-    retirement of rgdal, rgeos, and
-    maptools](https://r-spatial.org/r/2023/05/15/evolution4.html). In
-    advance of the whole removal,
-    `fortify(<SpatialPolygonsDataFrame>, region = ...)` no longer works
-    as of this version (@yutannihilation, #5244).
+    deprecated and will be removed soon in support of the upcoming
+    retirement of rgdal, rgeos, and maptools. In advance of the whole
+    removal, `fortify(<SpatialPolygonsDataFrame>, region = ...)` no
+    longer works as of this version (@yutannihilation, #5244).
     !end-bullet!
 
 !end-bullets-3!
@@ -2116,8 +2114,8 @@ accompanying issue #2890.
     breaking change because it is important to make ggplot2 more
     programmable, and to be more consistent with the rest of the
     tidyverse. The best general (and detailed) introduction to tidy
-    evaluation can be found in the meta programming chapters in
-    [Advanced R](https://adv-r.hadley.nz).
+    evaluation can be found in the meta programming chapters in Advanced
+    R.
 
     The primary developer facing change is that `aes()` now contains
     quosures (expression + environment pairs) rather than symbols, and
@@ -2138,7 +2136,7 @@ accompanying issue #2890.
 
     We recognise that this is a big change and if you're not already
     familiar with rlang, there's a lot to learn. If you are stuck, or
-    need any help, please reach out on <https://community.rstudio.com>.
+    need any help, please reach out on https://community.rstudio.com.
 
     !end-bullet!
 -   !begin-bullet!
@@ -2297,9 +2295,8 @@ accompanying issue #2890.
 !begin-bullets-34!
 
 -   !begin-bullet!
-    ggplot2 now works on R 3.1 onwards, and uses the
-    [vdiffr](https://github.com/r-lib/vdiffr) package for visual
-    testing.
+    ggplot2 now works on R 3.1 onwards, and uses the vdiffr package for
+    visual testing.
 
     !end-bullet!
 -   !begin-bullet!
@@ -3892,7 +3889,7 @@ All defunct functions have been removed.
     uses printer's points, not Adobe (big pts), so sizes are now
     correctly multiplied by 72.27 / 25.4. This is unlikely to noticeably
     affect display, but it's technically correct
-    (<https://youtu.be/hou0lU8WMgo>).
+    (https://youtu.be/hou0lU8WMgo).
 
     !end-bullet!
 -   !begin-bullet!

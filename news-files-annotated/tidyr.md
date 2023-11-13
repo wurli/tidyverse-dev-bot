@@ -26,8 +26,8 @@
     and `separate_rows()` (#1304).
 
     The named character vector interface used in
-    `separate_wider_regex()` is very similar to the
-    [nc](https://github.com/tdhock/nc) package by Toby Dylan Hocking.
+    `separate_wider_regex()` is very similar to the nc package by Toby
+    Dylan Hocking.
 
     !end-bullet!
 -   !begin-bullet!
@@ -77,8 +77,7 @@
     works, but will throw a warning encouraging you to explicitly name
     the `id_cols` argument.
 
-    To read more about this pattern, see [Data, dots,
-    details](https://design.tidyverse.org/dots-position.html) in the
+    To read more about this pattern, see Data, dots, details in the
     tidyverse design guide (#1350).
 
     !end-bullet!
@@ -462,9 +461,7 @@
     `drop_na()`, `replace_na()`, and `fill()` have been updated to
     utilize vctrs. This means that you can use these functions on a
     wider variety of column types, including lubridate's Period types
-    (#1094), data frame columns, and the
-    [rcrd](https://vctrs.r-lib.org/reference/new_rcrd.html) type from
-    vctrs.
+    (#1094), data frame columns, and the rcrd type from vctrs.
 
     !end-bullet!
 -   !begin-bullet!
@@ -798,7 +795,7 @@
     !end-bullet!
 -   !begin-bullet!
     Replace Rcpp with cpp11. See
-    <https://cpp11.r-lib.org/articles/motivations.html> for reasons why.
+    https://cpp11.r-lib.org/articles/motivations.html for reasons why.
 
     !end-bullet!
 
@@ -1069,10 +1066,9 @@ See `vignette("in-packages")` for a detailed transition guide.
 
     !end-bullet!
 -   !begin-bullet!
-    `unnest()` uses the [emerging tidyverse
-    standard](https://www.tidyverse.org/blog/2019/01/tibble-2.0.1/#name-repair)
-    to disambiguate unique names. Use `names_repair = tidyr_legacy` to
-    request the previous approach.
+    `unnest()` uses the emerging tidyverse standard to disambiguate
+    unique names. Use `names_repair = tidyr_legacy` to request the
+    previous approach.
 
     !end-bullet!
 -   !begin-bullet!
@@ -1083,9 +1079,8 @@ See `vignette("in-packages")` for a detailed transition guide.
     break should be less work for everyone.
 
     All other lazyeval functions have been formally deprecated, and will
-    be made defunct in the next major release. (See [lifecycle
-    vignette](https://lifecycle.r-lib.org/articles/stages.html) for
-    details on deprecation stages).
+    be made defunct in the next major release. (See lifecycle vignette
+    for details on deprecation stages).
 
     !end-bullet!
 -   !begin-bullet!
@@ -1154,12 +1149,11 @@ df %>% mutate(name = map_chr(metadata, "name"))
 
 `nest()` and `unnest()` have been updated with new interfaces that are
 more closely aligned to evolving tidyverse conventions. They use the
-theory developed in [vctrs](https://vctrs.r-lib.org) to more
-consistently handle mixtures of input types, and their arguments have
-been overhauled based on the last few years of experience. They are
-supported by a new `vignette("nest")`, which outlines some of the main
-ideas of nested data (it's still very rough, but will get better over
-time).
+theory developed in vctrs to more consistently handle mixtures of input
+types, and their arguments have been overhauled based on the last few
+years of experience. They are supported by a new `vignette("nest")`,
+which outlines some of the main ideas of nested data (it's still very
+rough, but will get better over time).
 
 The biggest change is to their operation with multiple columns:
 `df %>% unnest(x, y, z)` becomes `df %>% unnest(c(x, y, z))` and
@@ -1167,9 +1161,8 @@ The biggest change is to their operation with multiple columns:
 
 I have done my best to ensure that common uses of `nest()` and
 `unnest()` will continue to work, generating an informative warning
-telling you precisely how you need to update your code. Please [file an
-issue](https://github.com/tidyverse/tidyr/issues/new) if I've missed an
-important use case.
+telling you precisely how you need to update your code. Please file an
+issue if I've missed an important use case.
 
 `unnest()` has been overhauled:
 
@@ -1266,9 +1259,9 @@ directly very often.
     !end-bullet!
 -   !begin-bullet!
     All functions that take `...` have been instrumented with functions
-    from the [ellipsis](https://github.com/r-lib/ellipsis/) package to
-    warn if you've supplied arguments that are ignored (typically
-    because you've misspelled an argument name) (#573).
+    from the ellipsis package to warn if you've supplied arguments that
+    are ignored (typically because you've misspelled an argument name)
+    (#573).
 
     !end-bullet!
 -   !begin-bullet!
@@ -1658,8 +1651,7 @@ It also uses the new tidyselect package as selecting backend.
 
 ## Switch to tidy evaluation
 
-tidyr is now a tidy evaluation grammar. See the [programming
-vignette](https://dplyr.tidyverse.org/articles/programming.html) in
+tidyr is now a tidy evaluation grammar. See the programming vignette in
 dplyr for practical information about tidy evaluation.
 
 The tidyr port is a bit special. While the philosophy of tidy evaluation

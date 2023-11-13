@@ -348,9 +348,7 @@ Updates to demos:
         !end-bullet!
     -   !begin-bullet!
         `client_credentials`, allows you to use the OAauth2 *Client
-        Credential Grant*. See [RFC
-        6749](https://www.rfc-editor.org/rfc/rfc6749#section-4) for
-        details. (@cderv, #384)
+        Credential Grant*. See RFC 6749 for details. (@cderv, #384)
 
         !end-bullet!
     -   !begin-bullet!
@@ -779,9 +777,8 @@ Updates to demos:
 
     !end-bullet!
 -   !begin-bullet!
-    Suport for Google OAuth2 [service
-    accounts](https://developers.google.com/identity/protocols/oauth2/service-account).
-    (#119, thanks to help from @siddharthab).
+    Suport for Google OAuth2 service accounts. (#119, thanks to help
+    from @siddharthab).
 
     !end-bullet!
 -   !begin-bullet!

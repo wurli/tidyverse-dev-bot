@@ -152,10 +152,8 @@
     !end-bullet!
 -   !begin-bullet!
     `pick()` now returns a 1 row, 0 column tibble when `...` evaluates
-    to an empty selection. This makes it more compatible with [tidyverse
-    recycling
-    rules](https://vctrs.r-lib.org/reference/theory-faq-recycling.html)
-    in some edge cases (#6685).
+    to an empty selection. This makes it more compatible with tidyverse
+    recycling rules in some edge cases (#6685).
 
     !end-bullet!
 -   !begin-bullet!
@@ -217,8 +215,7 @@
     !end-bullet!
 -   !begin-bullet!
     R \>=3.5.0 is now explicitly required. This is in line with the
-    tidyverse policy of supporting the [5 most recent versions of
-    R](https://www.tidyverse.org/blog/2019/04/r-version-support/).
+    tidyverse policy of supporting the 5 most recent versions of R.
 
     !end-bullet!
 
@@ -231,10 +228,9 @@
 !begin-bullets-6!
 
 -   !begin-bullet!
-    [`.by`/`by`](https://dplyr.tidyverse.org/reference/dplyr_by.html) is
-    an experimental alternative to `group_by()` that supports
-    per-operation grouping for `mutate()`, `summarise()`, `filter()`,
-    and the `slice()` family (#6528).
+    `.by`/`by` is an experimental alternative to `group_by()` that
+    supports per-operation grouping for `mutate()`, `summarise()`,
+    `filter()`, and the `slice()` family (#6528).
 
     Rather than:
 
@@ -268,9 +264,8 @@
     previous call to `arrange()`, and provides a way to maintain the
     current ordering without having to resort to factors.
 
-    This feature was inspired by
-    [data.table](https://CRAN.R-project.org/package=data.table), where
-    the equivalent syntax looks like:
+    This feature was inspired by data.table, where the equivalent syntax
+    looks like:
 
     !begin-codeblock!
         starwars[, .(mean_height = mean(height)), by = .(species, homeworld)]
@@ -460,11 +455,7 @@
     quickly revert to the previous behavior. However, in general, we
     instead recommend that you use the new `.locale` argument to
     precisely specify the desired locale. For a full explanation please
-    read the associated
-    [grouping](https://github.com/tidyverse/tidyups/blob/main/006-dplyr-group-by-ordering.md)
-    and
-    [ordering](https://github.com/tidyverse/tidyups/blob/main/003-dplyr-radix-ordering.md)
-    tidyups.
+    read the associated grouping and ordering tidyups.
 
     !end-bullet!
 -   !begin-bullet!
@@ -1831,11 +1822,10 @@ Hot patch release to resolve R CMD check failures.
 !begin-bullets-39!
 
 -   !begin-bullet!
-    All deprecations now use the
-    [lifecycle](https://lifecycle.r-lib.org), that means by default
-    you'll only see a deprecation warning once per session, and you can
-    control with `options(lifecycle_verbosity = x)` where `x` is one of
-    NULL, "quiet", "warning", and "error".
+    All deprecations now use the lifecycle, that means by default you'll
+    only see a deprecation warning once per session, and you can control
+    with `options(lifecycle_verbosity = x)` where `x` is one of NULL,
+    "quiet", "warning", and "error".
     !end-bullet!
 
 !end-bullets-39!
@@ -1945,8 +1935,7 @@ Hot patch release to resolve R CMD check failures.
 -   !begin-bullet!
     `src_mysql()`, `src_postgres()`, and `src_sqlite()` has been
     deprecated. We've recommended against them for some time. Instead
-    please use the approach described at
-    <https://dbplyr.tidyverse.org/>.
+    please use the approach described at https://dbplyr.tidyverse.org/.
 
     !end-bullet!
 -   !begin-bullet!
@@ -3397,11 +3386,10 @@ two big changes that you should be aware of:
 
 -   !begin-bullet!
     Almost all database related code has been moved out of dplyr and
-    into a new package, [dbplyr](https://github.com/tidyverse/dbplyr/).
-    This makes dplyr simpler, and will make it easier to release fixes
-    for bugs that only affect databases. `src_mysql()`,
-    `src_postgres()`, and `src_sqlite()` will still live dplyr so your
-    existing code continues to work.
+    into a new package, dbplyr. This makes dplyr simpler, and will make
+    it easier to release fixes for bugs that only affect databases.
+    `src_mysql()`, `src_postgres()`, and `src_sqlite()` will still live
+    dplyr so your existing code continues to work.
 
     !end-bullet!
 -   !begin-bullet!
@@ -3440,11 +3428,9 @@ you can do whatever you want with `DBI::dbGetQuery()` and
 `DBI::dbExecute()`.
 
 If you've implemented a database backend for dplyr, please read the
-[backend
-news](https://github.com/tidyverse/dbplyr/blob/main/NEWS.md#backends) to
-see what's changed from your perspective (not much). If you want to
-ensure your package works with both the current and previous version of
-dplyr, see `wrap_dbplyr_obj()` for helpers.
+backend news to see what's changed from your perspective (not much). If
+you want to ensure your package works with both the current and previous
+version of dplyr, see `wrap_dbplyr_obj()` for helpers.
 
 ## UTF-8
 
@@ -4053,7 +4039,7 @@ for backward compatibility).
     !end-bullet!
 -   !begin-bullet!
     Code related to starting and signalling clusters has been moved out
-    to [multidplyr](https://github.com/tidyverse/multidplyr).
+    to multidplyr.
 
     !end-bullet!
 
@@ -4132,8 +4118,7 @@ loaded, you'll get a message reminding you to load dtplyr.
 ### Tibble
 
 Functions related to the creation and coercion of `tbl_df`s, now live in
-their own package: [tibble](https://posit.co/blog/tibble-1-0-0/). See
-`vignette("tibble")` for more details.
+their own package: tibble. See `vignette("tibble")` for more details.
 
 !begin-bullets-98!
 
@@ -5721,8 +5706,8 @@ dplyr 0.2 adds three new verbs:
 
     !end-bullet!
 -   !begin-bullet!
-    Support for [MonetDB](http://www.monetdb.org) tables with
-    `src_monetdb()` (#8, thanks to @hannesmuehleisen).
+    Support for MonetDB tables with `src_monetdb()` (#8, thanks to
+    @hannesmuehleisen).
 
     !end-bullet!
 -   !begin-bullet!

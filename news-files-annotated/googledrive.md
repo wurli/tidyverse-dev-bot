@@ -98,14 +98,12 @@ Where to learn more:
 !begin-bullets-3!
 
 -   !begin-bullet!
-    [Team Drives is being renamed to shared
-    drives](https://workspaceupdates.googleblog.com/2019/04/shared-drives.html)
-    from Google Workspace blog
+    Team Drives is being renamed to shared drives from Google Workspace
+    blog
     !end-bullet!
 -   !begin-bullet!
-    [Upcoming changes to the Google Drive API and Google Picker
-    API](https://cloud.google.com/blog/products/application-development/upcoming-changes-to-the-google-drive-api-and-google-picker-api)
-    from the Google Cloud blog
+    Upcoming changes to the Google Drive API and Google Picker API from
+    the Google Cloud blog
     !end-bullet!
 
 !end-bullets-3!
@@ -201,16 +199,13 @@ Further reading about changes to the Drive folder model:
 !begin-bullets-7!
 
 -   !begin-bullet!
-    [Simplifying Google Drive's folder structure and sharing
-    models](https://workspace.google.com/blog/product-announcements/simplifying-google-drives-folder-structure-and-sharing-models)
+    Simplifying Google Drive's folder structure and sharing models
     !end-bullet!
 -   !begin-bullet!
-    [Single-parenting behavior
-    changes](https://developers.google.com/drive/api/v3/ref-single-parent)
+    Single-parenting behavior changes
     !end-bullet!
 -   !begin-bullet!
-    [Create a shortcut to a Drive
-    file](https://developers.google.com/drive/api/v3/shortcuts)
+    Create a shortcut to a Drive file
     !end-bullet!
 -   !begin-bullet!
     Find files & folders with Google Drive shortcuts:
@@ -222,7 +217,7 @@ Further reading about changes to the Drive folder model:
 ## User interface
 
 The user interface has gotten more stylish, thanks to the cli package
-(<https://cli.r-lib.org>). All informational messages, warnings, and
+(https://cli.r-lib.org). All informational messages, warnings, and
 errors are now emitted via cli, which uses rlang's condition functions
 under-the-hood.
 
@@ -234,9 +229,9 @@ The `verbose` argument of all `drive_*()` functions is deprecated and
 will be removed in a future release. In the current release,
 `verbose = FALSE` is still honored, but generates a warning.
 
-`local_drive_quiet()` and `with_drive_quiet()` are
-[withr-style](https://withr.r-lib.org) convenience helpers for setting
-`googledrive_quiet = TRUE` for some limited scope.
+`local_drive_quiet()` and `with_drive_quiet()` are withr-style
+convenience helpers for setting `googledrive_quiet = TRUE` for some
+limited scope.
 
 ## Other changes
 
@@ -366,12 +361,11 @@ multiple files with the same name, without actually meaning to.
 
 ## Auth from gargle
 
-googledrive's auth functionality now comes from the [gargle
-package](https://gargle.r-lib.org), which provides R infrastructure to
-work with Google APIs, in general. The same transition is happening in
-several other packages, such as [bigrquery](https://bigrquery.r-dbi.org)
-and [gmailr](https://gmailr.r-lib.org). This makes user interfaces more
-consistent and makes two new token flows available in googledrive:
+googledrive's auth functionality now comes from the gargle package,
+which provides R infrastructure to work with Google APIs, in general.
+The same transition is happening in several other packages, such as
+bigrquery and gmailr. This makes user interfaces more consistent and
+makes two new token flows available in googledrive:
 
 !begin-bullets-12!
 
@@ -390,36 +384,28 @@ Where to learn more:
 !begin-bullets-13!
 
 -   !begin-bullet!
-    Help for
-    [`drive_auth()`](https://googledrive.tidyverse.org/reference/drive_auth.html)
-    *all that most users need*
+    Help for `drive_auth()` *all that most users need*
     !end-bullet!
 -   !begin-bullet!
     *details for more advanced users*
     !begin-bullets-14!
     -   !begin-bullet!
-        [Bring your own OAuth app or API
-        key](https://googledrive.tidyverse.org/articles/articles/bring-your-own-app.html)
+        Bring your own OAuth app or API key
         !end-bullet!
     -   !begin-bullet!
-        [How to get your own API
-        credentials](https://gargle.r-lib.org/articles/get-api-credentials.html)
+        How to get your own API credentials
         !end-bullet!
     -   !begin-bullet!
-        [Non-interactive
-        auth](https://gargle.r-lib.org/articles/non-interactive-auth.html)
+        Non-interactive auth
         !end-bullet!
     -   !begin-bullet!
-        [Auth when using R in the
-        browser](https://gargle.r-lib.org/articles/auth-from-web.html)
+        Auth when using R in the browser
         !end-bullet!
     -   !begin-bullet!
-        [How gargle gets
-        tokens](https://gargle.r-lib.org/articles/how-gargle-gets-tokens.html)
+        How gargle gets tokens
         !end-bullet!
     -   !begin-bullet!
-        [Managing tokens
-        securely](https://gargle.r-lib.org/articles/articles/managing-tokens-securely.html)
+        Managing tokens securely
         !end-bullet!
 
     !end-bullets-14!
@@ -437,8 +423,8 @@ way.
 
 googledrive uses a new OAuth "app", owned by a verified Google Cloud
 Project entitled "Tidyverse API Packages", which is the project name you
-will see on the OAuth consent screen. See our new [Privacy
-Policy](https://www.tidyverse.org/google_privacy_policy/) for details.
+will see on the OAuth consent screen. See our new Privacy Policy for
+details.
 
 The local OAuth2 token key-value store now incorporates the associated
 Google user when indexing, which makes it easier to switch between
@@ -626,8 +612,7 @@ googledrive.
 
 `drive_put()` is useful here and refers to the HTTP verb `PUT`: create
 the thing if it doesn't exist or, if it does, replace its contents. A
-good explanation of `PUT` is [RESTful API Design -- PUT vs
-PATCH](https://medium.com/backticks-tildes/restful-api-design-put-vs-patch-4a061aa3ed0b).
+good explanation of `PUT` is RESTful API Design -- PUT vs PATCH.
 
 In pseudo-code, here's the basic idea of `drive_put()`:
 
@@ -652,7 +637,7 @@ if (no hits) {
 All functions that support `...` as a way to pass more parameters to the
 Drive API now have "tidy dots semantics": `!!!` is supported for
 splicing and `!!` can be used on the LHS of `:=`. Full docs are in
-[dynamic dots](https://rlang.r-lib.org/reference/dyn-dots.html).
+dynamic dots.
 
 `drive_find()` now sorts by "recency", by default.
 
@@ -671,7 +656,7 @@ deleting individual files) and is therefore much faster (#203).
 
 Colaboratory notebooks now have some MIME type support, in terms of the
 `type` argument in various functions
-(<https://colab.research.google.com/>). The internal table of known MIME
+(https://colab.research.google.com/). The internal table of known MIME
 types includes `"application/vnd.google.colab"`, which is associated
 with the file extension `.ipynb` and the human-oriented nickname
 `"colab"` (#207).
@@ -684,9 +669,8 @@ of Drive API endpoints with `[` and `[[`, respectively.
 
 R 3.1 is no longer explicitly supported or tested. Our general practice
 is to support the current release (3.6), devel, and the 4 previous
-versions of R (3.5, 3.4, 3.3, 3.2). See [Which versions of R do
-tidyverse packages
-support?](https://www.tidyverse.org/blog/2019/04/r-version-support/).
+versions of R (3.5, 3.4, 3.3, 3.2). See Which versions of R do tidyverse
+packages support?.
 
 gargle and magrittr are newly Imported.
 

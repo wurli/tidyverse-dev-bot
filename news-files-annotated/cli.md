@@ -11,9 +11,7 @@
     `ansi_collapse()` gains a `sep2` argument to specify a seperate
     separator for length-two inputs. It defaults to `" and "` which, in
     conjunction with the other defaults, produces a collapsed string
-    that fully adheres to the [serial
-    comma](https://en.wikipedia.org/wiki/Serial_comma) rules. (@salim-b,
-    #569)
+    that fully adheres to the serial comma rules. (@salim-b, #569)
 
     !end-bullet!
 -   !begin-bullet!
@@ -166,10 +164,9 @@
 
     !end-bullet!
 -   !begin-bullet!
-    20 new spinners from the awesome
-    [cli-spinners](https://github.com/sindresorhus/cli-spinners)
-    package, and from @HenrikBengtsson in #469. Run this to demo them,
-    some need UTF-8 and emoji support:
+    20 new spinners from the awesome cli-spinners package, and from
+    @HenrikBengtsson in #469. Run this to demo them, some need UTF-8 and
+    emoji support:
 
     !begin-codeblock!
     ``` r

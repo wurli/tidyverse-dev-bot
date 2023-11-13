@@ -638,7 +638,7 @@ extensive changes to the display of error messages.
 -   !begin-bullet!
     `abort()` now displays errors as fully bulleted lists. Error headers
     are displayed with a `!` prefix. See
-    <https://rlang.r-lib.org/reference/topic-condition-customisation.html>
+    https://rlang.r-lib.org/reference/topic-condition-customisation.html
     to customise the display of error messages.
 
     !end-bullet!
@@ -664,7 +664,7 @@ extensive changes to the display of error messages.
     cli formatting is now supported. Use `cli::cli_abort()` to get
     advanced formatting of error messages, including indented bulleted
     lists. See
-    <https://rlang.r-lib.org/reference/topic-condition-formatting.html>.
+    https://rlang.r-lib.org/reference/topic-condition-formatting.html.
 
     !end-bullet!
 -   !begin-bullet!
@@ -691,7 +691,7 @@ extensive changes to the display of error messages.
 -   !begin-bullet!
     The tidy eval documentation has been fully rewritten to reflect
     current practices. Access it through the "Tidy evaluation" and
-    "Metaprogramming" menus on <https://rlang.r-lib.org>.
+    "Metaprogramming" menus on https://rlang.r-lib.org.
 
     !end-bullet!
 
@@ -914,7 +914,7 @@ extensive changes to the display of error messages.
 
     !end-bullets-17!
     See
-    <https://rlang.r-lib.org/reference/topic-condition-customisation.html>
+    https://rlang.r-lib.org/reference/topic-condition-customisation.html
     to customise this new display.
 
     !end-bullet!
@@ -956,9 +956,8 @@ extensive changes to the display of error messages.
 
     This special formatting is not applied when `abort()`, `warn()`, and
     `inform()` are called from another namespace than rlang. See
-    <https://rlang.r-lib.org/reference/topic-condition-formatting.html>
-    if you'd like to use cli to format condition messages in your
-    package.
+    https://rlang.r-lib.org/reference/topic-condition-formatting.html if
+    you'd like to use cli to format condition messages in your package.
 
     !end-bullet!
 -   !begin-bullet!
@@ -1500,8 +1499,7 @@ extensive changes to the display of error messages.
 -   !begin-bullet!
     New `hash()` function to generate 128-bit hashes for arbitrary R
     objects using the xxHash library. The implementation is modeled
-    after [xxhashlite](https://github.com/coolbutuseless/xxhashlite),
-    created by @coolbutuseless.
+    after xxhashlite, created by @coolbutuseless.
 
     !end-bullet!
 -   !begin-bullet!
@@ -1646,8 +1644,8 @@ extensive changes to the display of error messages.
 
 -   !begin-bullet!
     Backtraces now include native stacks (e.g. from C code) when the
-    [winch](https://r-prof.github.io/winch/) package is installed and
-    `rlang_trace_use_winch` is set to `TRUE` (@krlmlr).
+    winch package is installed and `rlang_trace_use_winch` is set to
+    `TRUE` (@krlmlr).
 
     !end-bullet!
 -   !begin-bullet!

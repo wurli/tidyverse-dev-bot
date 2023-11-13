@@ -80,8 +80,7 @@
     !end-bullet!
 -   !begin-bullet!
     `XPtr` gets explicit copy constructor and assignment operator
-    definitions, which were two missing components of the [Rule of
-    three](https://en.wikipedia.org/wiki/Rule_of_three_(C%2B%2B_programming))
+    definitions, which were two missing components of the Rule of three
     (@michaelchirico)
 
     !end-bullet!
@@ -192,7 +191,7 @@
 !begin-bullets-11!
 
 -   !begin-bullet!
-    xml2 now has a pkgdown site! <https://xml2.r-lib.org>
+    xml2 now has a pkgdown site! https://xml2.r-lib.org
     (@jayhesselberth, #211).
 
     !end-bullet!

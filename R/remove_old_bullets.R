@@ -8,8 +8,8 @@
 #' 4. Adds the new bullets to post to the list of previously posted bullets, 
 #'    and overwrites the CSV
 #'
-#' @param x A data frame holding the full NEWS.md files for packages which 
-#'   have recently received an update
+#' @param new_updates A data frame holding the full NEWS.md files for packages 
+#'   which have recently received an update
 #' @param prev_update_file The name of a file containing previously posted
 #'   updates as a CSV
 #' @param overwrite_prev_updates Whether to overwrite `prev_updates_file`
@@ -18,7 +18,7 @@
 #' @export
 #'
 #' @examples
-remove_old_bullets <- function(x, 
+remove_old_bullets <- function(new_updates, 
                                prev_updates_file = "previous_updates.csv", 
                                overwrite_prev_updates = TRUE) {
   
@@ -35,7 +35,7 @@ remove_old_bullets <- function(x,
   # bullet and use the hash to delete rows. This means that if only a tiny
   # part of a tweet changes, the whole thing will be posted again, even if it's
   # a long thread.
-  x <- x |> 
+  new_updates <- new_updates |> 
     mutate(
       .by = c(package, bullet_id),
       bullet_hash = hash(text),
@@ -44,11 +44,47 @@ remove_old_bullets <- function(x,
   
   by <- c("package", "bullet_id", "bullet_hash", "text")
   
-  prev_update <- get_prev_bullets(prev_updates_file, template = select(x, all_of(by)))
-  prev_rows <- nrow(prev_update)
+  prev_updates <- get_prev_bullets(prev_updates_file, template = select(new_updates, all_of(by)))
+  prev_rows <- nrow(prev_updates)
   
-  # Makes development easier - check that cols are the same and maybe overwrite
-  # if not. This should generally not get run.
+  check_previous_update_format_unchanged(prev_updates, by, new_updates)
+  
+  # If a new package is present, treat those bullets as if they've already
+  # been tweeted - i.e. just add them to the cache. Future *new* bullets
+  # will then be tweeted as normal
+  prev_updates <- prev_updates |> 
+    insert_new_packages(new_updates)
+  
+  out <- rows_delete(
+    x = new_updates,
+    y = prev_updates |> select(all_of(by)),
+    by = by,
+    unmatched = "ignore"
+  )
+
+  remove_old_bullets_summary_message(out)
+  
+  if (overwrite_prev_updates) {
+    already_tweeted <- rows_insert(
+      x = prev_updates,
+      y = new_updates |> select(all_of(by)),
+      by = by,
+      conflict = "ignore"
+    )
+    
+    n <- nrow(already_tweeted) - prev_rows
+    cli_alert("Adding {.val {n}} new rows to {.file {prev_updates_file}}")
+    write_csv(already_tweeted, prev_updates_file)
+  } 
+  
+  out |> 
+    select(-bullet_hash)
+  
+}
+
+# Makes development easier - check that cols are the same and maybe overwrite
+# if not. This should generally not get run.
+check_previous_update_format_unchanged <- function(prev_update, by, x) {
   if (!identical(colnames(prev_update), by)) {
     
     stopifnot(interactive())
@@ -65,52 +101,28 @@ remove_old_bullets <- function(x,
     if (choice == 2) stop()
     
     write_csv(x, "last_refresh_data.csv")
-    return(x)
+    
+    stop("Please re-run the pipeline")
     
   }
-  
-  # If a new package is present, treat those bullets as if they've already
-  # been tweeted - i.e. just add them to the cache. Future *new* bullets
-  # will then be tweeted as normal
-  new_package_updates <- x |> 
-    anti_join(prev_update, by = "package")
+}
+
+insert_new_packages <- function(old_updates, new_updates) {
+  new_package_updates <- new_updates |> 
+    anti_join(old_updates, by = "package")
   
   if (nrow(new_package_updates) > 0L) {
     new_pkgs <- unique(new_package_updates$package)
     cli_alert_info("New package(s) {.pkg {new_pkgs}} detected - these bullets will be cached but not tweeted")
     
-    prev_update <- prev_update |> 
+    old_updates <- old_updates |> 
       rows_insert(
         new_package_updates |> select(all_of(by)),
         by = by
       )
   }
   
-  out <- rows_delete(
-    x = x,
-    y = prev_update |> select(all_of(by)),
-    by = by,
-    unmatched = "ignore"
-  )
-
-  remove_old_bullets_summary_message(out)
-  
-  if (overwrite_prev_updates) {
-    already_tweeted <- rows_insert(
-      x = prev_update,
-      y = x |> select(all_of(by)),
-      by = by,
-      conflict = "ignore"
-    )
-    
-    n <- nrow(already_tweeted) - prev_rows
-    cli_alert("Adding {.val {n}} new rows to {.file {prev_updates_file}}")
-    write_csv(already_tweeted, prev_updates_file)
-  } 
-  
-  out |> 
-    select(-bullet_hash)
-  
+  old_updates
 }
 
 remove_old_bullets_summary_message <- function(x) {

@@ -283,8 +283,7 @@ Hot patch release to resolve R CMD check failures.
 
 -   !begin-bullet!
     `str_glue()` and `str_glue_data()` provide convenient wrappers
-    around `glue` and `glue_data()` from the
-    [glue](https://glue.tidyverse.org/) package (#157).
+    around `glue` and `glue_data()` from the glue package (#157).
 
     !end-bullet!
 -   !begin-bullet!
@@ -457,12 +456,11 @@ Hot patch release to resolve R CMD check failures.
 !begin-bullets-16!
 
 -   !begin-bullet!
-    stringr is now powered by
-    [stringi](https://github.com/gagolews/stringi) instead of base R
-    regular expressions. This improves unicode and support, and makes
-    most operations considerably faster. If you find stringr inadequate
-    for your string processing needs, I highly recommend looking at
-    stringi in more detail.
+    stringr is now powered by stringi instead of base R regular
+    expressions. This improves unicode and support, and makes most
+    operations considerably faster. If you find stringr inadequate for
+    your string processing needs, I highly recommend looking at stringi
+    in more detail.
 
     !end-bullet!
 -   !begin-bullet!

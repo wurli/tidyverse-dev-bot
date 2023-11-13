@@ -87,7 +87,7 @@ Informative messages now route through `cli::cli_inform()`, instead of
 ## User interface
 
 The user interface has gotten more stylish, thanks to the cli package
-(<https://cli.r-lib.org>).
+(https://cli.r-lib.org).
 
 All informational messages, warnings, and errors are now emitted via
 cli, which uses rlang's condition functions under-the-hood.
@@ -98,18 +98,16 @@ googlesheets4 now throws errors with class `"googlesheets4_error"`
 from googlesheets4 (#163). Unless it's explicitly set to `TRUE`, the
 default is to message.
 
-`local_gs4_quiet()` and `with_gs4_quiet()` are
-[withr-style](https://withr.r-lib.org) convenience helpers for setting
-`googlesheets4_quiet = TRUE`.
+`local_gs4_quiet()` and `with_gs4_quiet()` are withr-style convenience
+helpers for setting `googlesheets4_quiet = TRUE`.
 
 ## Other changes
 
 The deprecated `sheets_*()` functions have now been removed, as promised
 in the warning they have been throwing for over a year. No functionality
 has been removed, this is just the result of the function (re-)naming
-scheme adopted in googlesheets4 \>= 0.2.0. More details are in [this
-developer
-documentation](https://googlesheets4.tidyverse.org/articles/articles/function-class-names.html#previous-use-of-sheets-prefix).
+scheme adopted in googlesheets4 \>= 0.2.0. More details are in this
+developer documentation.
 
 The `na` argument of `read_sheet()` has become more capable and more
 consistent with readr. Specifically, `na = character()` (or the general
@@ -144,8 +142,7 @@ called.
 !end-bullets-3!
 
 R 3.4 is now the oldest version that is explicitly supported and tested,
-as per the [tidyverse
-policy](https://www.tidyverse.org/blog/2019/04/r-version-support/).
+as per the tidyverse policy.
 
 # googlesheets4 0.3.0
 
@@ -166,8 +163,7 @@ different Google identities.
 
 googlesheets4 can now write and modify Sheets.
 
-Several new articles are available at
-[googlesheets4.tidyverse.org](https://googlesheets4.tidyverse.org/articles/index.html).
+Several new articles are available at googlesheets4.tidyverse.org.
 
 ## Function naming scheme
 
@@ -192,9 +188,7 @@ three prefixes:
 
 The addition of write/edit functionality resulted in many new functions
 and the original naming scheme proved to be problematic. The article
-[Function and class
-names](https://googlesheets4.tidyverse.org/articles/articles/function-class-names.html)
-contains more detail.
+Function and class names contains more detail.
 
 Any function present in the previous CRAN release, v0.1.1, still works,
 but triggers a warning with strong encouragement to switch to the
@@ -310,12 +304,10 @@ a reprex.
 
 The S3 class `sheets_Spreadsheet` is renamed to
 `googlesheets4_spreadsheet`, a consequence of rationalizing all internal
-and external classes (detailed in the article [Function and class
-names](https://googlesheets4.tidyverse.org/articles/articles/function-class-names.html)).
+and external classes (detailed in the article Function and class names).
 `googlesheets4_spreadsheet` is the class that holds metadata for a Sheet
-and it is connected to the API's
-[`Spreadsheet`](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets#resource:-spreadsheet)
-schema. The return value of `gs4_get()` has this class.
+and it is connected to the API's `Spreadsheet` schema. The return value
+of `gs4_get()` has this class.
 
 ## Bug fixes
 
