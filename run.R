@@ -25,18 +25,18 @@ annotated_news_files <- updated_news_files |>
 # 4. Read news files into a single data frame
 news_data <- annotated_news_files |> 
   get_news_data()
+  
+# 5. Exclude bullets which have already been posted
+news_data_new <- news_data |> 
+  remove_old_bullets(overwrite_prev_updates = TRUE) 
 
-# 5. Make sure we don't post more than 10 updates per package. This is to
+# 6. Make sure we don't post more than 10 updates per package. This is to
 #    avoid spamming
-news_data_short <- news_data |> 
+news_data_short <- news_data_new |> 
   limit_update_sizes(n = 10)  
   
-# 6. Exclude bullets which have already been posted
-bullets_to_post <- news_data_short |> 
-  remove_old_bullets(overwrite_prev_updates = TRUE) 
-  
 # 7. Turn bullet points into tweets
-tweets <- bullets_to_post |> 
+tweets <- news_data_short |> 
   make_tweets() 
   
 # 8. Post using {rtweet}

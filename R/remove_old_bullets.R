@@ -27,10 +27,8 @@ remove_old_bullets <- function(new_updates,
   }
   
   cli_h2("Discarding text which has already been posted")
- 
-  by <- c("package", "bullet_id", "text")
   
-  prev_updates <- get_prev_bullets(prev_updates_file, template = select(new_updates, all_of(by)))
+  prev_updates <- get_prev_bullets(prev_updates_file)
   prev_rows <- nrow(prev_updates)
   
   # If a new package is present, treat those bullets as if they've already
@@ -38,7 +36,7 @@ remove_old_bullets <- function(new_updates,
   # will then be tweeted as normal. This allows me to add new packages to
   # the bot without posting the whole history.
   prev_updates <- prev_updates |> 
-    insert_new_packages(new_updates, by)
+    insert_new_packages(new_updates)
   
   bullets_to_post <- new_updates |> 
     remove_previously_posted_bullets(prev_updates)
@@ -47,9 +45,9 @@ remove_old_bullets <- function(new_updates,
   
   if (overwrite_prev_updates) {
     already_tweeted <- rows_insert(
-      x = prev_updates,
-      y = bullets_to_post |> select(all_of(by)),
-      by = by,
+      prev_updates, 
+      bullets_to_post |> select(package, bullet_id, text),
+      by = c("package", "bullet_id", "text"),
       conflict = "ignore"
     )
     
@@ -127,13 +125,13 @@ remove_previously_posted_bullets <- function(new_updates, prev_updates, similari
   
   new_updates |> 
     anti_join(
-      comparison |> filter(similarity < similarity_cutoff),
+      comparison |> filter(similarity_cutoff < similarity),
       by = c("package", "bullet_id")
     )
   
 }
 
-insert_new_packages <- function(old_updates, new_updates, by) {
+insert_new_packages <- function(old_updates, new_updates) {
   new_package_updates <- new_updates |> 
     anti_join(old_updates, by = "package")
   
@@ -142,10 +140,7 @@ insert_new_packages <- function(old_updates, new_updates, by) {
     cli_alert_info("New package(s) {.pkg {new_pkgs}} detected - these bullets will be cached but not tweeted")
     
     old_updates <- old_updates |> 
-      rows_insert(
-        new_package_updates |> select(all_of(by)),
-        by = by
-      )
+      bind_rows(new_package_updates)
   }
   
   old_updates
@@ -166,11 +161,11 @@ remove_old_bullets_summary_message <- function(x) {
   }
 }
 
-get_prev_bullets <- function(file, template) {
+get_prev_bullets <- function(file) {
   
   if (!file.exists(file)) {
     cli_alert("Creating new file {.file {file}}")
-    x <- template |> filter(FALSE)
+    x <- tibble(package = character(), bullet_id = double(), text = character())
     readr::write_csv(x, file)
     return(x)
   }

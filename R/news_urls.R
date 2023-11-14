@@ -43,6 +43,7 @@ news_urls <- function(..., .package = NULL, .for_humans = FALSE) {
     haven         = "tidyverse", 
     hms           = "tidyverse", 
     httr          = "r-lib", 
+    httr2         = "r-lib",
     # jsonlite      = "jeroen", # Uses NEWS (not .md) and master instead of main
     lubridate     = "tidyverse",
     magrittr      = "tidyverse", 
@@ -58,8 +59,8 @@ news_urls <- function(..., .package = NULL, .for_humans = FALSE) {
     stringr       = "tidyverse", 
     tibble        = "tidyverse", 
     tidyr         = "tidyverse", 
-    xml2          = "r-lib", 
-    tidyverse     = "tidyverse"
+    tidyverse     = "tidyverse",
+    xml2          = "r-lib"
   )
   
   url_pattern <- if (.for_humans) {
