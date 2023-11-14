@@ -37,3 +37,46 @@ them to twitter.
 If you use R a lot it's interesting to see what features are in the
 works for popular packages. I also wanted to learn more about twitter
 bots and GitHub actions, so this seemed like a good learning exercise.
+
+## Packages
+
+The bot currently posts updates to the following packages:
+
+<!-- 
+news_urls(.for_humans = TRUE) |> 
+  iwalk(function(x, y) {
+      x <- str_remove(x, "/blob.+")
+      cat_line(glue("*  [{y}]({x})"))
+  })
+-->
+
+*  [broom](https://github.com/tidymodels/broom)
+*  [cli](https://github.com/r-lib/cli)
+*  [crayon](https://github.com/r-lib/crayon)
+*  [dbplyr](https://github.com/tidyverse/dbplyr)
+*  [dplyr](https://github.com/tidyverse/dplyr)
+*  [dtplyr](https://github.com/tidyverse/dtplyr)
+*  [forcats](https://github.com/tidyverse/forcats)
+*  [ggplot2](https://github.com/tidyverse/ggplot2)
+*  [googledrive](https://github.com/tidyverse/googledrive)
+*  [googlesheets4](https://github.com/tidyverse/googlesheets4)
+*  [haven](https://github.com/tidyverse/haven)
+*  [hms](https://github.com/tidyverse/hms)
+*  [httr](https://github.com/r-lib/httr)
+*  [httr2](https://github.com/r-lib/httr2)
+*  [lubridate](https://github.com/tidyverse/lubridate)
+*  [magrittr](https://github.com/tidyverse/magrittr)
+*  [modelr](https://github.com/tidyverse/modelr)
+*  [pillar](https://github.com/r-lib/pillar)
+*  [purrr](https://github.com/tidyverse/purrr)
+*  [readr](https://github.com/tidyverse/readr)
+*  [readxl](https://github.com/tidyverse/readxl)
+*  [reprex](https://github.com/tidyverse/reprex)
+*  [rlang](https://github.com/r-lib/rlang)
+*  [rstudioapi](https://github.com/rstudio/rstudioapi)
+*  [rvest](https://github.com/tidyverse/rvest)
+*  [stringr](https://github.com/tidyverse/stringr)
+*  [tibble](https://github.com/tidyverse/tibble)
+*  [tidyr](https://github.com/tidyverse/tidyr)
+*  [tidyverse](https://github.com/tidyverse/tidyverse)
+*  [xml2](https://github.com/r-lib/xml2)

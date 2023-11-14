@@ -13,10 +13,10 @@ rtweet::auth_as(rtweet::rtweet_bot(
 # this is useful when working out where to put line/tweet breaks
 .max_tweet_length <- 280
 
-## usethis namespace: start
 #' @import rlang
 #' @import dplyr
 #' @import cli
 #' @importFrom glue glue
+## usethis namespace: start
 ## usethis namespace: end
 NULL
