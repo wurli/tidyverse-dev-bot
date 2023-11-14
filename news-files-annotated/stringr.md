@@ -3,8 +3,13 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Some minor documentation improvements.
+
+    !end-bullet!
+-   !begin-bullet!
     `str_trunc()` now correctly truncates strings when `side` is
     `"left"` or `"center"` (@UchidaMizuki, #512).
+
     !end-bullet!
 
 !end-bullets-1!

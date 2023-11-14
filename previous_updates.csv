@@ -289,3 +289,12 @@ xml2,7,Windows: update to libxml2 2.10.3
 xml2,8,Hadley Wickham is now (again) the maintainer.
 xml2,9,xml2 has been re-licensed as MIT (#317).
 xml2,10,`xml_find_all.xml_node()` fails more informatively the `xpath` parameter is the wrong type (@​michaelchirico)
+stringr,2,"`str_trunc()` now correctly truncates strings when `side` is `""left""` or `""center""` (@​UchidaMizuki, #512)."
+stringr,3,stringr functions now consistently implement the tidyverse recycling rules (#372). There are two main changes:
+stringr,3,"• Only vectors of length 1 are recycled. Previously, (e.g.) `str_detect(letters, c(""x"", ""y""))` worked, but it now errors."
+stringr,3,"• `str_c()` ignores `NULLs`, rather than treating them as length 0 vectors."
+stringr,5,"Additionally, many more arguments now throw errors, rather than warnings, if supplied the wrong type of input."
+stringr,6,`regex()` and friends now generate class names with `stringr_` prefix (#384).
+stringr,7,"`str_detect()`, `str_starts()`, `str_ends()` and `str_subset()` now error when used with either an empty string (`""""`) or a `boundary()`. These operations didn't really make sense (`str_detect(x, """")` returned `TRUE` for all non-empty strings) and made it easy to make mistakes when programming."
+stringr,8,Many tweaks to the documentation to make it more useful and consistent.
+stringr,9,"New `vignette(""from-base"")` by @​sastoudt provides a comprehensive comparison between base R functions and their stringr equivalents. It's designed to help you move to stringr if you're already familiar with base R string functions (#266)."
