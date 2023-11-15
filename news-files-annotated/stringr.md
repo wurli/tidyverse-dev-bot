@@ -1,4 +1,4 @@
-# stringr (development version)
+# stringr 1.5.1
 
 !begin-bullets-1!
 
