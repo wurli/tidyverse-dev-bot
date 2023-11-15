@@ -6560,3 +6560,4 @@ httr2,69,"`req_stream()` no longer throws an error for non 200 http status codes
 httr2,70,Fix R CMD check failures on CRAN,1,70,FALSE,NA
 httr2,71,Added a `NEWS.md` file to track changes to the package.,1,71,FALSE,NA
 stringr,1,Some minor documentation improvements.,NA,NA,NA,NA
+reprex,1,"`reprex()` no longer includes the full traceback by default, as this is only useful in relatively rare situations, and otherwise adds a bunch of clutter (#448).",NA,NA,NA,NA
