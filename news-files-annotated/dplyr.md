@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `join_by()` now allows its helper functions to be namespaced with
+    `dplyr::`, like `join_by(dplyr::between(x, lower, upper))` (#6838).
+
+    !end-bullet!
+-   !begin-bullet!
     `left_join()` and friends now return a specialized error message if
     they detect that your join would return more rows than dplyr can
     handle (#6912).
@@ -11,11 +16,6 @@
 -   !begin-bullet!
     `slice_*()` now throw the correct error if you forget to name `n`
     while also prefixing the call with `dplyr::` (#6946).
-
-    !end-bullet!
--   !begin-bullet!
-    `join_by()` now allows its helper functions to be namespaced with
-    `dplyr::`, like `join_by(dplyr::between(x, lower, upper))` (#6838).
 
     !end-bullet!
 -   !begin-bullet!
@@ -718,10 +718,10 @@ vctrs package, bringing greater consistency and improved performance.
     !end-bullet!
 -   !begin-bullet!
     `if_else()` gains most of the same benefits as `case_when()`. In
-    particular,\
-    `if_else()` now takes the common type of `true`, `false`, and
-    `missing` to determine the output type, meaning that you can now
-    reliably use `NA`, rather than `NA_character_` and friends (#6243).
+    particular, `if_else()` now takes the common type of `true`,
+    `false`, and `missing` to determine the output type, meaning that
+    you can now reliably use `NA`, rather than `NA_character_` and
+    friends (#6243).
 
     `if_else()` also no longer allows you to supply `NULL` for either
     `true` or `false`, which was an undocumented usage that we consider
@@ -2475,7 +2475,7 @@ Hot patch release to resolve R CMD check failures.
 
     !begin-codeblock!
     ``` r
-    band_members %>% 
+    band_members %>%
       nest_join(band_instruments)
     ```
 
@@ -2488,7 +2488,7 @@ Hot patch release to resolve R CMD check failures.
     !begin-codeblock!
     ``` r
     starwars %>%
-      group_by(species, homeworld) %>% 
+      group_by(species, homeworld) %>%
       group_nest()
 
     starwars %>%
@@ -2505,7 +2505,7 @@ Hot patch release to resolve R CMD check failures.
     !begin-codeblock!
     ``` r
     starwars %>%
-      group_by(species, homeworld) %>%   
+      group_by(species, homeworld) %>%
       group_split()
 
     starwars %>%
@@ -2553,14 +2553,14 @@ Hot patch release to resolve R CMD check failures.
     ``` r
     # 3 groups
     tibble(
-      x = 1:2, 
+      x = 1:2,
       f = factor(c("a", "b"), levels = c("a", "b", "c"))
-    ) %>% 
+    ) %>%
       group_by(f, .drop = FALSE)
 
     # the order of the grouping variables matter
     df <- tibble(
-      x = c(1,2,1,2), 
+      x = c(1,2,1,2),
       f = factor(c("a", "b", "a", "b"), levels = c("a", "b", "c"))
     )
     df %>% group_by(f, x, .drop = FALSE)
@@ -2574,9 +2574,9 @@ Hot patch release to resolve R CMD check failures.
     !begin-codeblock!
     ``` r
     tibble(
-        x = 1:2, 
+        x = 1:2,
         f = factor(c("a", "b"), levels = c("a", "b", "c"))
-      ) %>% 
+      ) %>%
         group_by(f)
     ```
 
@@ -2591,9 +2591,9 @@ Hot patch release to resolve R CMD check failures.
     !begin-codeblock!
     ``` r
     df <- tibble(
-      x = c(1,2,1,2), 
+      x = c(1,2,1,2),
       f = factor(c("a", "b", "a", "b"), levels = c("a", "b", "c"))
-    ) %>% 
+    ) %>%
       group_by(x, f, .drop = FALSE)
 
     df %>% filter(x == 1)
@@ -2800,15 +2800,15 @@ Hot patch release to resolve R CMD check failures.
     !begin-codeblock!
     ``` r
     # the grouping metadata, as a tibble
-    group_by(starwars, homeworld) %>% 
+    group_by(starwars, homeworld) %>%
       group_data()
 
     # the indices
-    group_by(starwars, homeworld) %>% 
-      group_data() %>% 
+    group_by(starwars, homeworld) %>%
+      group_data() %>%
       pull(.rows)
 
-    group_by(starwars, homeworld) %>% 
+    group_by(starwars, homeworld) %>%
       group_rows()
     ```
 

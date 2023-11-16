@@ -6561,3 +6561,70 @@ httr2,70,Fix R CMD check failures on CRAN,1,70,FALSE,NA
 httr2,71,Added a `NEWS.md` file to track changes to the package.,1,71,FALSE,NA
 stringr,1,Some minor documentation improvements.,NA,NA,NA,NA
 reprex,1,"`reprex()` no longer includes the full traceback by default, as this is only useful in relatively rare situations, and otherwise adds a bunch of clutter (#448).",NA,NA,NA,NA
+dplyr,92,"`if_else()` gains most of the same benefits as `case_when()`. In particular, `if_else()` now takes the common type of `true`, `false`, and `missing` to determine the output type, meaning that you can now reliably use `NA`, rather than `NA_character_` and friends (#6243). `if_else()` also no longer allows you to supply `NULL` for either `true` or `false`, which was an undocumented usage that we consider to be off-label, because `true` and `false` are intended to be (and documented to be) vector inputs (#6730).",NA,NA,NA,NA
+dplyr,363,"```
+band_members %>%
+  nest_join(band_instruments)
+```",NA,NA,NA,NA
+dplyr,364,"```
+starwars %>%
+  group_by(species, homeworld) %>%
+  group_nest()
+
+starwars %>%
+  group_nest(species, homeworld)
+```",NA,NA,NA,NA
+dplyr,365,"```
+starwars %>%
+  group_by(species, homeworld) %>%
+  group_split()
+
+starwars %>%
+  group_split(species, homeworld)
+```",NA,NA,NA,NA
+dplyr,368,"```
+# 3 groups
+tibble(
+  x = 1:2,
+  f = factor(c(""a"", ""b""), levels = c(""a"", ""b"", ""c""))
+) %>%
+  group_by(f, .drop = FALSE)
+
+# the order of the grouping variables matter
+df <- tibble(
+  x = c(1,2,1,2),
+  f = factor(c(""a"", ""b"", ""a"", ""b""), levels = c(""a"", ""b"", ""c""))
+)
+df %>% group_by(f, x, .drop = FALSE)
+df %>% group_by(x, f, .drop = FALSE)
+```",NA,NA,NA,NA
+dplyr,368,"```
+tibble(
+    x = 1:2,
+    f = factor(c(""a"", ""b""), levels = c(""a"", ""b"", ""c""))
+  ) %>%
+    group_by(f)
+```",NA,NA,NA,NA
+dplyr,369,"```
+df <- tibble(
+  x = c(1,2,1,2),
+  f = factor(c(""a"", ""b"", ""a"", ""b""), levels = c(""a"", ""b"", ""c""))
+) %>%
+  group_by(x, f, .drop = FALSE)
+
+df %>% filter(x == 1)
+df %>% filter(x == 1, .preserve = TRUE)
+```",NA,NA,NA,NA
+dplyr,397,"```
+# the grouping metadata, as a tibble
+group_by(starwars, homeworld) %>%
+  group_data()
+
+# the indices
+group_by(starwars, homeworld) %>%
+  group_data() %>%
+  pull(.rows)
+
+group_by(starwars, homeworld) %>%
+  group_rows()
+```",NA,NA,NA,NA
