@@ -1,5 +1,7 @@
 # dplyr (development version)
 
+# dplyr 1.1.4
+
 !begin-bullets-1!
 
 -   !begin-bullet!
