@@ -6628,3 +6628,4 @@ group_by(starwars, homeworld) %>%
 group_by(starwars, homeworld) %>%
   group_rows()
 ```",NA,NA,NA,NA
+ggplot2,1,"The spacing between legend keys and their labels, in addition to legends and their titles, is now controlled by the text's `margin` setting. Not specifying margins will automatically add appropriate text margins. To control the spacing within a legend between keys, the new `key.spacing.{x/y}` argument can be used. This leaves the `legend.spacing` dedicated to controlling the spacing between different guides (#5455).",NA,NA,NA,NA

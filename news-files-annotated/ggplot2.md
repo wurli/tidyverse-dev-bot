@@ -3,6 +3,16 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    The spacing between legend keys and their labels, in addition to
+    legends and their titles, is now controlled by the text's `margin`
+    setting. Not specifying margins will automatically add appropriate
+    text margins. To control the spacing within a legend between keys,
+    the new `key.spacing.{x/y}` argument can be used. This leaves the
+    `legend.spacing` dedicated to controlling the spacing between
+    different guides (#5455).
+
+    !end-bullet!
+-   !begin-bullet!
     In the theme element hierarchy, parent elements that are a strict
     subclass of child elements now confer their subclass upon the
     children (#5457).
