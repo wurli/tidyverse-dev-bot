@@ -44,6 +44,18 @@ post_news_updates <- function(x, token = NULL) {
   
 }
 
+# Note that in the event that the refresh token ever stops working (for whatever reason - this 
+# approach doesn't feel robust at all), You can generate a new refresh token like this. NB,
+# this will require you to manually confirm access in the browser:
+# token <- rtweet::rtweet_oauth2(
+#   client = rtweet::rtweet_client(
+#     client_id = Sys.getenv("TWITTER_CLIENT_ID"),
+#     client_secret = Sys.getenv("TWITTER_CLIENT_SECRET"),
+#     app = "tidyverse-dev-bot"
+#   )
+# )
+# 
+# token$refresh_token
 tidyverse_dev_bot_twitter_token <- function(client_id = Sys.getenv("TWITTER_CLIENT_ID"),
                                             client_secret = Sys.getenv("TWITTER_CLIENT_SECRET"),
                                             encryption_key_env_var = "ENCRYPTION_KEY",
