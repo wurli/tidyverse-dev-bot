@@ -33,7 +33,7 @@ jobs:
           TWITTER_ACCESS_SECRET: ${{ secrets.TWITTER_ACCESS_SECRET }}
           TWITTER_CLIENT_ID: ${{ secrets.TWITTER_CLIENT_ID }}
           TWITTER_CLIENT_SECRET: ${{ secrets.TWITTER_CLIENT_SECRET }} 
-          ENCRYPTION_KEY: ${{ ENCRYPTION_KEY }}        
+          ENCRYPTION_KEY: ${{ secrets.ENCRYPTION_KEY }}        
         run: Rscript run.R
         
       - uses: EndBug/add-and-commit@v9
