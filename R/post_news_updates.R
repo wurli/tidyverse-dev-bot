@@ -1,6 +1,7 @@
-post_news_updates <- function(x) {
+post_news_updates <- function(x, token = NULL) {
   
   force(x)
+  token <- token %||% tidyverse_dev_bot_twitter_token()
   
   if (length(x) == 0) {
     cli_alert_info("Nothing to post!")
@@ -18,7 +19,7 @@ post_news_updates <- function(x) {
   for (thread in threads) {
     
     res <- tryCatch(
-      post_thread(thread),
+      post_thread(thread, token),
       error = function(e) {
         cli_warn(c(
           "Posting failed",
@@ -43,7 +44,42 @@ post_news_updates <- function(x) {
   
 }
 
-post_thread <- function(x) {
+tidyverse_dev_bot_twitter_token <- function(client_id = Sys.getenv("TWITTER_CLIENT_ID"),
+                                            client_secret = Sys.getenv("TWITTER_CLIENT_SECRET"),
+                                            encryption_key_env_var = "ENCRYPTION_KEY",
+                                            refresh_token_path = "refresh-token.rds") {
+  
+  client <- rtweet::rtweet_client(
+    client_id = client_id,
+    client_secret = client_secret,
+    app = "tidyverse-dev-bot"
+  )
+  
+  # Have to use this internal function because refreshing updates the refresh 
+  # token, causing httr2::oauth_flow_refresh() to error. Instead, using the
+  # internal function, we can capture the new refresh token and use it to 
+  # overwrite the old one.
+  token <- httr2:::token_refresh(
+    client = client,
+    refresh_token = httr2::secret_read_rds(
+      refresh_token_path, 
+      key = encryption_key_env_var
+    )
+  )
+  
+  cli::cli_alert("Overwriting the refresh token {.path {refresh_token_path}}")
+  
+  httr2::secret_write_rds(
+    token$refresh_token,
+    path = refresh_token_path,
+    key = encryption_key_env_var
+  )
+  
+  token
+  
+}
+
+post_thread <- function(x, token) {
   
   # First bit of a tweet (for cli alerts)
   first <- function(x) {
@@ -59,7 +95,7 @@ post_thread <- function(x) {
   
   # Post a single tweet - not a thread
   if (length(x) == 1) {
-    try_post(status = x)
+    try_post(status = x, token = token)
     cli_alert_success("Tweet posted successfully! {.emph {first(x)}}")
     return(invisible(x))
   }
@@ -67,8 +103,14 @@ post_thread <- function(x) {
   # Post a thread
   x |> 
     reduce(.init = NULL, .f = function(status_id, tweet) {
-      try_post(status = tweet, in_reply_to_status_id = status_id)
-      next_id <- last_status_id()
+      next_id <- if (is.null(status_id)) {
+        try_post(status = tweet, token = token)
+      } else {
+        try_post(
+          status = tweet, token = token, 
+          reply = list(in_reply_to_tweet_id = status_id)
+        )
+      }
       Sys.sleep(1) # API doesn't like things to be too quick
       next_id
     })
@@ -81,13 +123,13 @@ post_thread <- function(x) {
   
 }
 
-try_post <- function(status, ..., .tries = 3) {
+try_post <- function(status, token, ..., .tries = 3) {
   
   for (i in seq_len(.tries)) {
     
     res <- tryCatch(
       {
-        suppressMessages(rtweet::post_tweet(status, ...))
+        tweet_id <- rtweet::tweet_post(status, token = token, ...)$id
         TRUE
       },
       error = function(e) e$message
@@ -108,26 +150,6 @@ try_post <- function(status, ..., .tries = 3) {
     ))
   }
   
-  invisible(TRUE)
+  tweet_id
   
 }
-
-
-last_status_id <- function() {
-  
-  id <- rtweet::get_my_timeline(n = 1)$id_str
-  
-  n <- length(id)
-  
-  if (n != 1) {
-    cli_warn(c(
-      "Non-unique status ids returned",
-      i = "Expected 1; got {.val {n}}",
-      i = "Returned ids: {.val {id}}"
-    ))
-  }
-  
-  id
-  
-}
-

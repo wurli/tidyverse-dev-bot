@@ -32,8 +32,8 @@ news_data_new <- news_data |>
 
 # 6. Make sure we don't post more than 10 updates per package. This is to
 #    avoid spamming
-news_data_short <- news_data_new |> 
-  limit_update_sizes(n = 10)  
+news_data_short <- news_data_new # |> 
+#  limit_update_sizes(n = 10)  
   
 # 7. Turn bullet points into tweets
 tweets <- news_data_short |> 
