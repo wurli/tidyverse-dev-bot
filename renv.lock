@@ -804,7 +804,7 @@
     },
     "httr2": {
       "Package": "httr2",
-      "Version": "1.0.0",
+      "Version": "0.2.2",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -813,15 +813,13 @@
         "cli",
         "curl",
         "glue",
-        "lifecycle",
         "magrittr",
         "openssl",
         "rappdirs",
         "rlang",
-        "vctrs",
         "withr"
       ],
-      "Hash": "e2b30f1fc039a0bab047dd52bb20ef71"
+      "Hash": "5c09fe33064978ede54de42309c8b532"
     },
     "ids": {
       "Package": "ids",
