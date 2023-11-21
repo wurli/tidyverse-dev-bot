@@ -1,12 +1,13 @@
 post_news_updates <- function(x, token = NULL) {
   
   force(x)
-  token <- token %||% tidyverse_dev_bot_twitter_token()
   
   if (length(x) == 0) {
     cli_alert_info("Nothing to post!")
     return(invisible(x))
   }
+
+  token <- token %||% tidyverse_dev_bot_twitter_token()
   
   cli_h2("Posting tweets")
   
