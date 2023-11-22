@@ -76,7 +76,7 @@ remove_old_bullets <- function(new_updates,
 #'   `stringdist::stringsimmatrix(method = "hamming")`. 
 #'
 #' @return A data frame
-remove_previously_posted_bullets <- function(new_updates, prev_updates, similarity_cutoff = 0.85) {
+remove_previously_posted_bullets <- function(new_updates, prev_updates, similarity_cutoff = 0.65) {
   
   # Sub-bullets collapsed because we want similarity to be calculated per-tweet,
   # not per-bullet
