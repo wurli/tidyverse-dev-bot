@@ -1,50 +1,52 @@
-test_that("Removing old bullets works", {
+test_that("removing old bullets works", {
   
-  # Running test will create a new csv of 'previous updates', so create a
-  # temp dir in which to do this
-  dir <- tempfile("test-removing-old-bullets")
-  dir.create(dir)
+  test_pkgs <- c("ggplot2", "dplyr")
   
-  # 1. This is the 'initial' bunch of updates
-  first_update_data <- list(testpkg = "news-sample-outdated.md") |>
-    annotate_news_files() |>
+  prev_news_df <- here::here(glue("tests/testthat/news-prev-{test_pkgs}.md")) |>
+    set_names(test_pkgs) |> 
+    annotate_news_files(dir = NULL) |> 
     get_news_data(text = _) |> 
     cli_silence()
   
-  # 2. This step creates the 'previous updates' csv
-  first_update_data |> 
-    remove_old_bullets(file.path(dir, "last-refresh-data.csv")) |> 
-    cli_silence()
-  
-  # 3. This is the subsequent bumch of updates
-  second_update_data_original <- list(testpkg = "news-sample.md") |>
-    annotate_news_files() |>
+  curr_news_df <- here::here(glue("tests/testthat/news-curr-{test_pkgs}.md")) |>
+    set_names(test_pkgs) |> 
+    annotate_news_files(dir = NULL) |> 
     get_news_data(text = _) |> 
     cli_silence()
   
-  # 4. Try removing bullets already 'posted' in 2.
-  second_update_data_filtered <- second_update_data_original |> 
-    remove_old_bullets(file.path(dir, "last-refresh-data.csv")) |> 
-    cli_silence()
-  
-  # 5. Check that the new bullets to be posted are what they should be
-  news_data_readable <- second_update_data_filtered |> 
-    mutate(
-      title = sprintf(
-        "Bullet %02.f; section %02.f; level %02.f",
-        bullet_id, section_id, bullets_level
-      )
+  output <- curr_news_df |> 
+    remove_previously_posted_bullets(
+      prev_news_df, 
+      method = "jaccard", 
+      similarity_cutoff = 0.95,
+      debug = TRUE
     ) |> 
-    select(title, text) |> 
-    nest_by(title) |>
-    pull(data, title) |> 
-    map(pull, text) 
+    cli_silence()
   
   expect_snapshot(
-    iwalk(news_data_readable, function(x, y) {
-      cat(paste("--", y, "---------------------------\n"))
-      cat_ol(x)
-    })
+    output |> 
+      filter(flag_new) |> 
+      reframe(.by = package, text = list(text)) |> 
+      pwalk(function(package, text) {
+        cli_h1("New updates from {package}")
+        cat_line(text)
+        cat_line("\n\n\n")
+      })
+  )
+  
+  expect_snapshot(
+    output |> 
+      filter(flag_probably_old) |> 
+      select(update = text, most_similar_prev_update = most_similar) |> 
+      as.list() |> 
+      purrr::list_transpose() |> 
+      purrr::walk(function(x) {
+        cli_h1("Update")
+        cat_line(x[1])
+        cli_h1("Most similar previous update")
+        cat_line(x[2])
+        cat_line("\n\n\n")
+      })
   )
   
 })

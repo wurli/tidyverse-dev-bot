@@ -12,15 +12,22 @@
 #'   which have recently received an update
 #' @param prev_update_file The name of a file containing previously posted
 #'   updates as a CSV
-#' @param overwrite_prev_updates Whether to overwrite `prev_updates_file`
+#' @param overwrite_prev_updates Whether to overwrite `prev_updates`
+#' @inheritParams remove_previously_posted_bullets
+#' @inheritParams stringdist::stringsimmatrix
 #'
 #' @return
 #' @export
 #'
 #' @examples
 remove_old_bullets <- function(new_updates, 
-                               prev_updates_file = "previous_updates.csv", 
-                               overwrite_prev_updates = TRUE) {
+                               prev_updates = "previous_updates.csv", 
+                               overwrite_prev_updates = TRUE,
+                               similarity_cutoff = 0.95,
+                               method = c(
+                                 "jaccard", "osa", "lv", "dl", "lcs", "qgram", 
+                                 "cosine", "jw", "soundex"
+                               )) {
   
   if (nrow(new_updates) == 0) {
     return(tibble())
@@ -28,7 +35,9 @@ remove_old_bullets <- function(new_updates,
   
   cli_h2("Discarding text which has already been posted")
   
-  prev_updates <- get_prev_bullets(prev_updates_file)
+  method <- match.arg(method)
+  
+  prev_updates <- get_prev_bullets(prev_updates)
   prev_rows <- nrow(prev_updates)
   
   # If a new package is present, treat those bullets as if they've already
@@ -39,7 +48,11 @@ remove_old_bullets <- function(new_updates,
     insert_new_packages(new_updates)
   
   bullets_to_post <- new_updates |> 
-    remove_previously_posted_bullets(prev_updates)
+    remove_previously_posted_bullets(
+      prev_updates, 
+      similarity_cutoff = similarity_cutoff,
+      method = method
+    )
 
   remove_old_bullets_summary_message(bullets_to_post)
   
@@ -52,8 +65,8 @@ remove_old_bullets <- function(new_updates,
     )
     
     n <- nrow(already_tweeted) - prev_rows
-    cli_alert("Adding {.val {n}} new rows to {.file {prev_updates_file}}")
-    write_csv(already_tweeted, prev_updates_file)
+    cli_alert("Adding {.val {n}} new rows to {.file {prev_updates}}")
+    write_csv(already_tweeted, prev_updates)
   } 
   
   bullets_to_post
@@ -74,9 +87,10 @@ remove_old_bullets <- function(new_updates,
 #'   equal to this cutoff with any previously posted bullets from the same 
 #'   package will be excluded. Similarity is calculated using 
 #'   `stringdist::stringsimmatrix(method = "hamming")`. 
+#' @param ... Passed to [stringdist::stringsimmatrix()]
 #'
 #' @return A data frame
-remove_previously_posted_bullets <- function(new_updates, prev_updates, similarity_cutoff = 0.65) {
+remove_previously_posted_bullets <- function(new_updates, prev_updates, similarity_cutoff, method, ..., debug = FALSE) {
   
   # Sub-bullets collapsed because we want similarity to be calculated per-tweet,
   # not per-bullet
@@ -104,19 +118,28 @@ remove_previously_posted_bullets <- function(new_updates, prev_updates, similari
       
       stringdist <- stringdist::stringsimmatrix(
         data$text, prev_bullets,
-        method = "hamming"
+        method = method,
+        ...
       )
       
       tibble(
         data,
         similarity = apply(stringdist, 1, max),
-        # most_similar = prev_bullets[apply(stringdist, 1, which.max)]
+        most_similar = if (debug) prev_bullets[apply(stringdist, 1, which.max)]
       )
     }) |> 
-    bind_rows()
+    bind_rows() |> 
+    mutate(
+      flag_new = similarity <= similarity_cutoff,
+      flag_probably_old = similarity_cutoff < similarity & similarity < 1
+    )
+  
+  if (debug) {
+    return(comparison)
+  }
   
   n_almost_the_same <- comparison |> 
-    filter(similarity_cutoff < similarity, similarity < 1) |> 
+    filter(too_similar_to_include) |> 
     nrow()
   
   if (n_almost_the_same > 0L) {
@@ -124,8 +147,8 @@ remove_previously_posted_bullets <- function(new_updates, prev_updates, similari
   }
   
   new_updates |> 
-    anti_join(
-      comparison |> filter(similarity_cutoff < similarity),
+    semi_join(
+      comparison |> filter(flag_new),
       by = c("package", "bullet_id")
     )
   
@@ -161,13 +184,17 @@ remove_old_bullets_summary_message <- function(x) {
   }
 }
 
-get_prev_bullets <- function(file) {
+get_prev_bullets <- function(x) {
   
-  if (!file.exists(file)) {
-    cli_alert("Creating new file {.file {file}}")
-    x <- tibble(package = character(), bullet_id = double(), text = character())
-    readr::write_csv(x, file)
+  if (is.data.frame(x)) {
     return(x)
+  }
+  
+  if (!file.exists(x)) {
+    cli_alert("Creating new file {.file {x}}")
+    updates <- tibble(package = character(), bullet_id = double(), text = character())
+    readr::write_csv(updates, file)
+    return(updates)
   }
   
   cli_alert("Reading {.file {file}}")
