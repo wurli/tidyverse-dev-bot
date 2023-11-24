@@ -37,19 +37,19 @@ remove_old_bullets <- function(new_updates,
   
   method <- match.arg(method)
   
-  prev_updates <- get_prev_bullets(prev_updates)
-  prev_rows <- nrow(prev_updates)
+  prev_updates_data <- get_prev_bullets(prev_updates)
+  prev_rows <- nrow(prev_updates_data)
   
   # If a new package is present, treat those bullets as if they've already
   # been tweeted - i.e. just add them to the cache. Future *new* bullets
   # will then be tweeted as normal. This allows me to add new packages to
   # the bot without posting the whole history.
-  prev_updates <- prev_updates |> 
+  prev_updates_data <- prev_updates_data |> 
     insert_new_packages(new_updates)
   
   bullets_to_post <- new_updates |> 
     remove_previously_posted_bullets(
-      prev_updates, 
+      prev_updates_data, 
       similarity_cutoff = similarity_cutoff,
       method = method
     )
@@ -57,15 +57,20 @@ remove_old_bullets <- function(new_updates,
   remove_old_bullets_summary_message(bullets_to_post)
   
   if (overwrite_prev_updates) {
+    stopifnot(
+      is.character(prev_updates),
+      length(prev_updates) == 1L
+    )
+    
     already_tweeted <- rows_insert(
-      prev_updates, 
+      prev_updates_data, 
       bullets_to_post |> select(package, bullet_id, text),
       by = c("package", "bullet_id", "text"),
       conflict = "ignore"
     )
     
     n <- nrow(already_tweeted) - prev_rows
-    cli_alert("Adding {.val {n}} new rows to {.file {prev_updates}}")
+    cli_alert("Adding {.val {n}} new rows to previous updates database")
     write_csv(already_tweeted, prev_updates)
   } 
   
@@ -90,7 +95,12 @@ remove_old_bullets <- function(new_updates,
 #' @param ... Passed to [stringdist::stringsimmatrix()]
 #'
 #' @return A data frame
-remove_previously_posted_bullets <- function(new_updates, prev_updates, similarity_cutoff, method, ..., debug = FALSE) {
+remove_previously_posted_bullets <- function(new_updates, 
+                                             prev_updates = get_prev_bullets(), 
+                                             similarity_cutoff = .95, 
+                                             method = "jaccard", 
+                                             ..., 
+                                             debug = FALSE) {
   
   # Sub-bullets collapsed because we want similarity to be calculated per-tweet,
   # not per-bullet
@@ -112,6 +122,7 @@ remove_previously_posted_bullets <- function(new_updates, prev_updates, similari
     # Iterate over packages because we don't care if updates are similar to
     # previous updates from other packages
     pmap(function(pkg, data) {
+      
       prev_bullets <- prev_updates_collapsed |> 
         filter(package == pkg) |>
         pull(text)
@@ -128,9 +139,9 @@ remove_previously_posted_bullets <- function(new_updates, prev_updates, similari
         most_similar = if (debug) prev_bullets[apply(stringdist, 1, which.max)]
       )
     }) |> 
-    bind_rows() |> 
+    bind_rows() |>
     mutate(
-      flag_new = similarity <= similarity_cutoff,
+      flag_new = similarity_cutoff <= similarity,
       flag_probably_old = similarity_cutoff < similarity & similarity < 1
     )
   
@@ -139,7 +150,7 @@ remove_previously_posted_bullets <- function(new_updates, prev_updates, similari
   }
   
   n_almost_the_same <- comparison |> 
-    filter(too_similar_to_include) |> 
+    filter(flag_probably_old) |> 
     nrow()
   
   if (n_almost_the_same > 0L) {
@@ -184,7 +195,7 @@ remove_old_bullets_summary_message <- function(x) {
   }
 }
 
-get_prev_bullets <- function(x) {
+get_prev_bullets <- function(x = "previous_updates.csv") {
   
   if (is.data.frame(x)) {
     return(x)
@@ -192,17 +203,17 @@ get_prev_bullets <- function(x) {
   
   if (!file.exists(x)) {
     cli_alert("Creating new file {.file {x}}")
-    updates <- tibble(package = character(), bullet_id = double(), text = character())
-    readr::write_csv(updates, file)
+    updates <- tibble(package = character(), bullet_id = character(), text = character())
+    readr::write_csv(updates, x)
     return(updates)
   }
   
-  cli_alert("Reading {.file {file}}")
+  cli_alert("Reading {.file {x}}")
   readr::read_csv(
-    file,
+    x,
     col_types = readr::cols(
       package     = readr::col_character(),
-      bullet_id   = readr::col_integer(),
+      bullet_id   = readr::col_character(),
       text        = readr::col_character()
     )
   ) 

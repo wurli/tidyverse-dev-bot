@@ -131,7 +131,10 @@ news_to_df <- function(text, pkg, bullet_syms = c("\U2022", "\U2023", "\U2043"))
     ) |> 
     fill(bullet_id, parent_text, .direction = "down") |> 
     mutate(parent_text = ifelse(bullets_level == 1, NA_character_, parent_text)) |> 
-    
+    nest_by(bullet_id, .key = "data") |>
+    mutate(bullet_id = hash(paste0(pkg, bullet_id, Sys.time()))) |> 
+    unnest(data) |> 
+    ungroup() |> 
     select(bullets_level, bullet_id, section_id, is_codeblock, text, parent_text)
   
 }
