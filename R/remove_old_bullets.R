@@ -203,7 +203,7 @@ get_prev_bullets <- function(x = "previous_updates.csv") {
   
   if (!file.exists(x)) {
     cli_alert("Creating new file {.file {x}}")
-    updates <- tibble(package = character(), bullet_id = double(), text = character())
+    updates <- tibble(package = character(), bullet_id = character(), text = character())
     readr::write_csv(updates, x)
     return(updates)
   }
@@ -213,7 +213,7 @@ get_prev_bullets <- function(x = "previous_updates.csv") {
     x,
     col_types = readr::cols(
       package     = readr::col_character(),
-      bullet_id   = readr::col_integer(),
+      bullet_id   = readr::col_character(),
       text        = readr::col_character()
     )
   ) 
