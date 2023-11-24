@@ -141,7 +141,7 @@ remove_previously_posted_bullets <- function(new_updates,
     }) |> 
     bind_rows() |>
     mutate(
-      flag_new = similarity_cutoff <= similarity,
+      flag_new = similarity <= similarity_cutoff,
       flag_probably_old = similarity_cutoff < similarity & similarity < 1
     )
   
