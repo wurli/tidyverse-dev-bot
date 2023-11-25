@@ -23,7 +23,7 @@ them to twitter.
     library is used here to test whether tweets are valid or not.
 
 4.  Updates which have already been posted are excluded by checking against 
-    a CSV database. Upates don't have to exactly match previously posted ones -
+    a CSV database. Updates don't have to exactly match previously posted ones -
     if they're very similar to previously posted updates, they won't get posted
     again.
 
