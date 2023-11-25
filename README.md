@@ -29,8 +29,7 @@ them to twitter.
 
 5.  Tweets are posted using the {rtweet} package
 
-6.  This is run by sourcing `run.R` once every hour using GitHub
-    Actions
+This is all automated using GitHub Actions, which simply sources `run.R` once every hour. 
 
 ## Why?
 
