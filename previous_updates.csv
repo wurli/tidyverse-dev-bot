@@ -6571,3 +6571,4 @@ xml2,de69724a485cb67a1844cf03bd1199fb,Make configure script more cross platform.
 xml2,e68bef4972d75ab3d1e22a3297b5d4fa,Add `xml_length()` to count the number of children (#32).,1,91,FALSE,NA
 ggplot2,cb877f9ae6c17fc354b624a826695925,"New `guide_axis_logticks()` can be used to draw logarithmic tick marks as an axis. It supersedes the `annotation_logticks()` function (@​teunbrand, #5325).",NA,NA,NA,NA
 ggplot2,0065a60c03bea0c4ad19ba7b1a9f1a3e,"Glyphs drawing functions of the `draw_key_*()` family can now set `""width""` and `""height""` attributes (in centimetres) to the produced keys to control their displayed size in the legend.",NA,NA,NA,NA
+ggplot2,a7698f404af2065d70a19ea9e65a5ea8,Lines where `linewidth = NA` are now dropped in `geom_sf()` (#5204).,NA,NA,NA,NA

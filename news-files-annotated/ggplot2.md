@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Lines where `linewidth = NA` are now dropped in `geom_sf()` (#5204).
+
+    !end-bullet!
+-   !begin-bullet!
     New `guide_axis_logticks()` can be used to draw logarithmic tick
     marks as an axis. It supersedes the `annotation_logticks()` function
     (@teunbrand, #5325).
