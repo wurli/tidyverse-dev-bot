@@ -23,6 +23,10 @@
     method for objects outputted from `mgcv::gam()` (#1172).
 
     !end-bullet!
+-   !begin-bullet!
+    Corrected coefficients values in `tidy.varest()` output (#1174).
+
+    !end-bullet!
 
 !end-bullets-1!
 
