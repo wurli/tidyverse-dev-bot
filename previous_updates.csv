@@ -6574,3 +6574,6 @@ ggplot2,0065a60c03bea0c4ad19ba7b1a9f1a3e,"Glyphs drawing functions of the `draw_
 ggplot2,a7698f404af2065d70a19ea9e65a5ea8,Lines where `linewidth = NA` are now dropped in `geom_sf()` (#5204).,NA,NA,NA,NA
 broom,c4808b67563c546d4c448e81c6c15d6f,Corrected coefficients values in `tidy.varest()` output (#1174).,NA,NA,NA,NA
 ggplot2,bc7ecb1ad8bc95964bf90ffadd442cb6,The `legend.key` theme element is set to inherit from the `panel.background` theme element. The default themes no longer set the `legend.key` element. This causes a visual change with the default `theme_gray()` (#5549).,NA,NA,NA,NA
+xml2,5f948cd498a3e184a068ce1e29b23b23,"`xml_find_int()` analogous to `xml_find_num()` for returning integers matched by an XPath (#365, @​michaelchirico).",NA,NA,NA,NA
+xml2,f2ce71753c7fb1168f0c01a94ccd15d1,Now compatible with limxml2 2.12.0 and later (@​KNnut).,NA,NA,NA,NA
+xml2,8411f96104ba7aa27c171e87e909ed23,Fix format string issues detected in R-devel.,NA,NA,NA,NA
