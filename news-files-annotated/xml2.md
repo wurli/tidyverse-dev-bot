@@ -3,22 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
-    `xml_find_int()` analogous to `xml_find_num()` for returning
-    integers matched by an XPath (#365, @michaelchirico).
+    Now compatible with libxml2 2.12.0 and later (@KNnut).
 
     !end-bullet!
 -   !begin-bullet!
-    Now compatible with limxml2 2.12.0 and later (@KNnut).
-
-    !end-bullet!
--   !begin-bullet!
-    Fix format string issues detected in R-devel.
-
-    !end-bullet!
--   !begin-bullet!
-    `xml_serialize()` now includes the document type so that
-    `xml_unserialize()` works also for HTML documents (#407,
-    @HenrikBengtsson).
+    Fixed format string issues detected in R-devel.
 
     !end-bullet!
 -   !begin-bullet!
@@ -28,6 +17,17 @@
 -   !begin-bullet!
     `print()` is faster for very long `xml_nodeset` inputs (#366,
     @michaelchirico).
+
+    !end-bullet!
+-   !begin-bullet!
+    `xml_find_int()` analogous to `xml_find_num()` for returning
+    integers matched by an XPath (#365, @michaelchirico).
+
+    !end-bullet!
+-   !begin-bullet!
+    `xml_serialize()` now includes the document type so that
+    `xml_unserialize()` works also for HTML documents (#407,
+    @HenrikBengtsson).
 
     !end-bullet!
 
