@@ -1,5 +1,7 @@
 # haven (development version)
 
+# haven 2.5.4
+
 !begin-bullets-1!
 
 -   !begin-bullet!
