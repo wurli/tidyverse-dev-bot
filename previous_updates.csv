@@ -6577,3 +6577,4 @@ ggplot2,bc7ecb1ad8bc95964bf90ffadd442cb6,The `legend.key` theme element is set t
 xml2,5f948cd498a3e184a068ce1e29b23b23,"`xml_find_int()` analogous to `xml_find_num()` for returning integers matched by an XPath (#365, @​michaelchirico).",NA,NA,NA,NA
 xml2,f2ce71753c7fb1168f0c01a94ccd15d1,Now compatible with limxml2 2.12.0 and later (@​KNnut).,NA,NA,NA,NA
 xml2,8411f96104ba7aa27c171e87e909ed23,Fix format string issues detected in R-devel.,NA,NA,NA,NA
+xml2,74f9052e71e08fbe56fe11ceff1c6ba8,"`xml_attr()`, `xml_attrs()`, `xml_double()`, `xml_integer()`, `xml_length()`, `xml_name()`, `xml_path()`, `xml_text()`, and `xml_type()` no longer use S3 dispatch but instead dispatch in C, leading to considerable performance improvements in many cases (@​mgirlich, #400).",NA,NA,NA,NA
