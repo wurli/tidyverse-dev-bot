@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    New `guide_custom()` function for drawing custom graphical objects
+    (grobs) unrelated to scales in legend positions (#5416).
+
+    !end-bullet!
+-   !begin-bullet!
     `theme()` now supports splicing a list of arguments (#5542).
 
     !end-bullet!
