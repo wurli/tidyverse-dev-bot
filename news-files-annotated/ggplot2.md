@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `theme()` now supports splicing a list of arguments (#5542).
+
+    !end-bullet!
+-   !begin-bullet!
     Contour functions will not fail when `options("OutDec")` is not `.`
     (@eliocamp, #5555).
 
