@@ -1,5 +1,7 @@
 # xml2 (development version)
 
+# xml2 1.3.6
+
 !begin-bullets-1!
 
 -   !begin-bullet!
