@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    The plot's title, subtitle and caption now obey horizontal text
+    margins (#5533).
+
+    !end-bullet!
+-   !begin-bullet!
     New `guide_axis_stack()` to combine other axis guides on top of one
     another.
 
