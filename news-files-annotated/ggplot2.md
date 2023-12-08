@@ -3,6 +3,14 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    The `fill` aesthetic in many geoms now accepts grid's patterns and
+    gradients. For developers of layer extensions, this feature can be
+    enabled by switching from `fill = alpha(fill, alpha)` to
+    `fill = fill_alpha(fill, alpha)` when providing fills to
+    `grid::gpar()` (@teunbrand, #3997).
+
+    !end-bullet!
+-   !begin-bullet!
     The plot's title, subtitle and caption now obey horizontal text
     margins (#5533).
 
