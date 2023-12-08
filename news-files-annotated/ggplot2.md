@@ -3,6 +3,14 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Plot scales now ignore `AsIs` objects constructed with `I(x)`,
+    instead of invoking the identity scale. This allows these columns to
+    co-exist with other layers that need a non-identity scale for the
+    same aesthetic. Also, it makes it easy to specify relative positions
+    (@teunbrand, #5142).
+
+    !end-bullet!
+-   !begin-bullet!
     The `fill` aesthetic in many geoms now accepts grid's patterns and
     gradients. For developers of layer extensions, this feature can be
     enabled by switching from `fill = alpha(fill, alpha)` to
