@@ -6585,3 +6585,6 @@ ggplot2,6bf4f79f4cc17ef8c88881419ac0f2ca,New `guide_axis_stack()` to combine oth
 ggplot2,d67d3157a7bbe9e98908c576dc8f67db,"The plot's title, subtitle and caption now obey horizontal text margins (#5533).",NA,NA,NA,NA
 ggplot2,fed09f81908e8549ef2f39b52b4fc55b,"The `fill` aesthetic in many geoms now accepts grid's patterns and gradients. For developers of layer extensions, this feature can be enabled by switching from `fill = alpha(fill, alpha)` to `fill = fill_alpha(fill, alpha)` when providing fills to `grid::gpar()` (@​teunbrand, #3997).",NA,NA,NA,NA
 ggplot2,c6cf9813ce28c2b16631781c7c6e6345,"Plot scales now ignore `AsIs` objects constructed with `I(x)`, instead of invoking the identity scale. This allows these columns to co-exist with other layers that need a non-identity scale for the same aesthetic. Also, it makes it easy to specify relative positions (@​teunbrand, #5142).",NA,NA,NA,NA
+ggplot2,1a7bb650909cd603ddae5c4562a585b3,`draw_key_label()` now better reflects the appearance of labels.,NA,NA,NA,NA
+ggplot2,6f3fa6423237006369ad09ecde633b08,The `minor_breaks` function argument in scales can now take a function with two arguments: the scale's limits and the scale's major breaks (#3583).,NA,NA,NA,NA
+ggplot2,bc8231fadd7b0b79342dc28c0638621f,(internal) The `ScaleContinuous$get_breaks()` method no longer censors the computed breaks.,NA,NA,NA,NA

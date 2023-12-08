@@ -3,6 +3,21 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `draw_key_label()` now better reflects the appearance of labels.
+
+    !end-bullet!
+-   !begin-bullet!
+    The `minor_breaks` function argument in scales can now take a
+    function with two arguments: the scale's limits and the scale's
+    major breaks (#3583).
+
+    !end-bullet!
+-   !begin-bullet!
+    (internal) The `ScaleContinuous$get_breaks()` method no longer
+    censors the computed breaks.
+
+    !end-bullet!
+-   !begin-bullet!
     Plot scales now ignore `AsIs` objects constructed with `I(x)`,
     instead of invoking the identity scale. This allows these columns to
     co-exist with other layers that need a non-identity scale for the
