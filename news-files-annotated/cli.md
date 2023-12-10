@@ -3,7 +3,7 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
-    `ansi_collapse(x, trunc = 1, style = "head")` now indeed show one
+    `ansi_collapse(x, trunc = 1, style = "head")` now indeed shows one
     element if `length(x) == 2`, as documented (@salim-b, #572).
 
     !end-bullet!
