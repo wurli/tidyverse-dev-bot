@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    When legend titles are larger than the legend, title justification
+    extends to the placement of keys and labels (#1903).
+
+    !end-bullet!
+-   !begin-bullet!
     `draw_key_label()` now better reflects the appearance of labels.
 
     !end-bullet!

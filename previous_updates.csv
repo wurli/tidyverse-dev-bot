@@ -6588,3 +6588,4 @@ ggplot2,c6cf9813ce28c2b16631781c7c6e6345,"Plot scales now ignore `AsIs` objects 
 ggplot2,1a7bb650909cd603ddae5c4562a585b3,`draw_key_label()` now better reflects the appearance of labels.,NA,NA,NA,NA
 ggplot2,6f3fa6423237006369ad09ecde633b08,The `minor_breaks` function argument in scales can now take a function with two arguments: the scale's limits and the scale's major breaks (#3583).,NA,NA,NA,NA
 ggplot2,bc8231fadd7b0b79342dc28c0638621f,(internal) The `ScaleContinuous$get_breaks()` method no longer censors the computed breaks.,NA,NA,NA,NA
+ggplot2,c6183493e793f5345115ab98d5879abd,"When legend titles are larger than the legend, title justification extends to the placement of keys and labels (#1903).",NA,NA,NA,NA
