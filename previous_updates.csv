@@ -6595,3 +6595,4 @@ ggplot2,7664251d9fd482eccbc92a2922ac4c7e,Legend keys that can draw arrows have t
 ggplot2,30d047966ec44e602f83e26e76c05073,`guide_colourbar()` and `guide_coloursteps()` gain an `alpha` argument to set the transparency of the bar (#5085).,NA,NA,NA,NA
 ggplot2,f744f0cd8af1bd68fa715d8d1dbf1d31,`stat_count()` treats `x` as unique in the same manner `unique()` does (#4609).,NA,NA,NA,NA
 ggplot2,ff1e8f98a81807f39d22f4c54312c2f3,"`position_stack()` no longer silently removes missing data, which is now handled by the geom instead of position (#3532).",NA,NA,NA,NA
+ggplot2,677af61095be729885517946e1650deb,"(breaking) In the `scale_{colour/fill}_gradient2()` and `scale_{colour/fill}_steps2()` functions, the `midpoint` argument is transformed by the scale transformation (#3198).",NA,NA,NA,NA
