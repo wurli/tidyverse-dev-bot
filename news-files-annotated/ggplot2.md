@@ -3,6 +3,21 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `guide_colourbar()` and `guide_coloursteps()` gain an `alpha`
+    argument to set the transparency of the bar (#5085).
+
+    !end-bullet!
+-   !begin-bullet!
+    `stat_count()` treats `x` as unique in the same manner `unique()`
+    does (#4609).
+
+    !end-bullet!
+-   !begin-bullet!
+    `position_stack()` no longer silently removes missing data, which is
+    now handled by the geom instead of position (#3532).
+
+    !end-bullet!
+-   !begin-bullet!
     Legend keys that can draw arrows have their size adjusted for
     arrows.
 
