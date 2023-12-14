@@ -3,6 +3,13 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    The new argument `axes` in `facet_grid()` and `facet_wrap()`
+    controls the display of axes at interior panel positions.
+    Additionally, the `axis.labels` argument can be used to only draw
+    tick marks or fully labelled axes (@teunbrand, #4064).
+
+    !end-bullet!
+-   !begin-bullet!
     The `name` argument in most scales is now explicitly the first
     argument (#5535)
 
