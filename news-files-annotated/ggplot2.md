@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Legend keys that can draw arrows have their size adjusted for
+    arrows.
+
+    !end-bullet!
+-   !begin-bullet!
     The `trans` argument in scales and secondary axes has been renamed
     to `transform`. The `trans` argument itself is deprecated. To access
     the transformation from the scale, a new `get_transformation()`
