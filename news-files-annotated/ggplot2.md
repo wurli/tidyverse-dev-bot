@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    When using `geom_dotplot(binaxis = "x")` with a discrete y-variable,
+    dots are now stacked from the y-position rather than from 0
+    (@teunbrand, #5462)
+
+    !end-bullet!
+-   !begin-bullet!
     (breaking) In the `scale_{colour/fill}_gradient2()` and
     `scale_{colour/fill}_steps2()` functions, the `midpoint` argument is
     transformed by the scale transformation (#3198).
