@@ -6597,3 +6597,4 @@ ggplot2,f744f0cd8af1bd68fa715d8d1dbf1d31,`stat_count()` treats `x` as unique in 
 ggplot2,ff1e8f98a81807f39d22f4c54312c2f3,"`position_stack()` no longer silently removes missing data, which is now handled by the geom instead of position (#3532).",NA,NA,NA,NA
 ggplot2,677af61095be729885517946e1650deb,"(breaking) In the `scale_{colour/fill}_gradient2()` and `scale_{colour/fill}_steps2()` functions, the `midpoint` argument is transformed by the scale transformation (#3198).",NA,NA,NA,NA
 ggplot2,0e174fca7e873e7900ae11892e0b9180,"When using `geom_dotplot(binaxis = ""x"")` with a discrete y-variable, dots are now stacked from the y-position rather than from 0 (@​teunbrand, #5462)",NA,NA,NA,NA
+ggplot2,41e8df1840185faff4f456873de336ae,"New `display` argument in `guide_colourbar()` supplants the `raster` argument. In R 4.1.0 and above, `display = ""gradient""` will draw a gradient.",NA,NA,NA,NA
