@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    The `name` argument in most scales is now explicitly the first
+    argument (#5535)
+
+    !end-bullet!
+-   !begin-bullet!
     New `display` argument in `guide_colourbar()` supplants the `raster`
     argument. In R 4.1.0 and above, `display = "gradient"` will draw a
     gradient.
