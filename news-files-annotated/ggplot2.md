@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `coord_polar()` can have free scales in facets (@teunbrand, #2815).
+
+    !end-bullet!
+-   !begin-bullet!
     The new argument `axes` in `facet_grid()` and `facet_wrap()`
     controls the display of axes at interior panel positions.
     Additionally, the `axis.labels` argument can be used to only draw
