@@ -1,111 +1,101 @@
 # ggplot2 (development version)
 
+This is a minor release that turned out quite beefy. It is focused on
+overhauling the guide system: the system responsible for displaying
+information from scales in the guise of axes and legends. As part of
+that overhaul, new guides have been implemented and existing guides have
+been refined. The look and feel of guides has been mostly preserved, but
+their internals and styling options have changed drastically.
+
+Briefly summarising other highlights, we also welcome `coord_radial()`
+as a successor of `coord_polar()`. Initial support for newer graphical
+features, such as pattern fills has been added. The API has changed how
+`I()`/`<AsIs>` vectors interact with the scale system, namely: not at
+all.
+
+## Breaking changes
+
 !begin-bullets-1!
 
 -   !begin-bullet!
-    The `get_guide_data()` function can be used to extract position and
-    label information from the plot (#5004).
+    The guide system. As a whole. See 'new features' for more
+    information. While the S3 guide generics are still in place, the S3
+    methods for `guide_train()`, `guide_merge()`, `guide_geom()`,
+    `guide_transform()`, `guide_gengrob()` have been superseded by the
+    respective ggproto methods. In practice, this will mean that
+    `NextMethod()` or sub-classing ggplot2's guides with the S3 system
+    will no longer work.
 
     !end-bullet!
 -   !begin-bullet!
-    The ggplot object now contains `$layout` which points to the
-    `Layout` ggproto object and will be used by the
-    `ggplot_build.ggplot` method. This was exposed so that package
-    developers may extend the behavior of the `Layout` ggproto object
-    without needing to develop an entirely new `ggplot_build` method
-    (@jtlandis, #5077).
+    By default, `guide_legend()` now only draws a key glyph for a layer
+    when the value is in the layer's data. To revert to the old
+    behaviour, you can still set `show.legend = c({aesthetic} = TRUE)`
+    (@teunbrand, #3648).
 
     !end-bullet!
 -   !begin-bullet!
-    `coord_polar()` can have free scales in facets (@teunbrand, #2815).
-
-    !end-bullet!
--   !begin-bullet!
-    The new argument `axes` in `facet_grid()` and `facet_wrap()`
-    controls the display of axes at interior panel positions.
-    Additionally, the `axis.labels` argument can be used to only draw
-    tick marks or fully labelled axes (@teunbrand, #4064).
-
-    !end-bullet!
--   !begin-bullet!
-    The `name` argument in most scales is now explicitly the first
-    argument (#5535)
-
-    !end-bullet!
--   !begin-bullet!
-    New `display` argument in `guide_colourbar()` supplants the `raster`
-    argument. In R 4.1.0 and above, `display = "gradient"` will draw a
-    gradient.
-
-    !end-bullet!
--   !begin-bullet!
-    When using `geom_dotplot(binaxis = "x")` with a discrete y-variable,
-    dots are now stacked from the y-position rather than from 0
-    (@teunbrand, #5462)
-
-    !end-bullet!
--   !begin-bullet!
-    (breaking) In the `scale_{colour/fill}_gradient2()` and
+    In the `scale_{colour/fill}_gradient2()` and
     `scale_{colour/fill}_steps2()` functions, the `midpoint` argument is
     transformed by the scale transformation (#3198).
 
     !end-bullet!
 -   !begin-bullet!
-    `guide_colourbar()` and `guide_coloursteps()` gain an `alpha`
-    argument to set the transparency of the bar (#5085).
+    The `legend.key` theme element is set to inherit from the
+    `panel.background` theme element. The default themes no longer set
+    the `legend.key` element. This causes a visual change with the
+    default `theme_gray()` (#5549).
 
     !end-bullet!
 -   !begin-bullet!
-    `stat_count()` treats `x` as unique in the same manner `unique()`
-    does (#4609).
+    The `scale_name` argument in `continuous_scale()`,
+    `discrete_scale()` and `binned_scale()` is soft-deprecated. If you
+    have implemented custom scales, be advised to double-check that
+    unnamed arguments ends up where they should (@teunbrand, #1312).
 
     !end-bullet!
 -   !begin-bullet!
-    `position_stack()` no longer silently removes missing data, which is
-    now handled by the geom instead of position (#3532).
+    The `legend.text.align` and `legend.title.align` arguments in
+    `theme()` are deprecated. The `hjust` setting of the `legend.text`
+    and `legend.title` elements continues to fulfill the role of text
+    alignment (@teunbrand, #5347).
 
     !end-bullet!
 -   !begin-bullet!
-    Legend keys that can draw arrows have their size adjusted for
-    arrows.
+    'lines' units in `geom_label()`, often used in the `label.padding`
+    argument, are now are relative to the text size. This causes a
+    visual change, but fixes a misalignment issue between the textbox
+    and text (@teunbrand, #4753)
+
+    !end-bullet!
+-   !begin-bullet!
+    `coord_flip()` has been marked as superseded. The recommended
+    alternative is to swap the `x` and `y` aesthetic and/or using the
+    `orientation` argument in a layer (@teunbrand, #5130).
 
     !end-bullet!
 -   !begin-bullet!
     The `trans` argument in scales and secondary axes has been renamed
     to `transform`. The `trans` argument itself is deprecated. To access
     the transformation from the scale, a new `get_transformation()`
-    method is added to Scale-classes (#5558).
+    method is added to Scale-classes that retrieves the transformation
+    object from the new `Scale$transformation` field (#5558).
 
     !end-bullet!
 -   !begin-bullet!
-    `guide_*()` functions get a new `theme` argument to style individual
-    guides. The `theme()` function has gained additional arguments for
-    styling guides: `legend.key.spacing{.x/.y}`, `legend.frame`,
-    `legend.axis.line`, `legend.ticks`, `legend.ticks.length`,
-    `legend.text.position` and `legend.title.position`. Previous style
-    arguments in the `guide_*()` functions have been soft-deprecated.
+    Providing a numeric vector to `theme(legend.position)` has been
+    deprecated. To set the default legend position inside the plot use
+    `theme(legend.position = "inside", legend.position.inside = c(...))`
+    instead.
 
     !end-bullet!
--   !begin-bullet!
-    When legend titles are larger than the legend, title justification
-    extends to the placement of keys and labels (#1903).
 
-    !end-bullet!
--   !begin-bullet!
-    `draw_key_label()` now better reflects the appearance of labels.
+!end-bullets-1!
 
-    !end-bullet!
--   !begin-bullet!
-    The `minor_breaks` function argument in scales can now take a
-    function with two arguments: the scale's limits and the scale's
-    major breaks (#3583).
+## New features
 
-    !end-bullet!
--   !begin-bullet!
-    (internal) The `ScaleContinuous$get_breaks()` method no longer
-    censors the computed breaks.
+!begin-bullets-2!
 
-    !end-bullet!
 -   !begin-bullet!
     Plot scales now ignore `AsIs` objects constructed with `I(x)`,
     instead of invoking the identity scale. This allows these columns to
@@ -123,57 +113,16 @@
 
     !end-bullet!
 -   !begin-bullet!
-    The plot's title, subtitle and caption now obey horizontal text
-    margins (#5533).
-
-    !end-bullet!
--   !begin-bullet!
-    New `guide_axis_stack()` to combine other axis guides on top of one
-    another.
-
-    !end-bullet!
--   !begin-bullet!
-    New `guide_custom()` function for drawing custom graphical objects
-    (grobs) unrelated to scales in legend positions (#5416).
-
-    !end-bullet!
--   !begin-bullet!
-    `theme()` now supports splicing a list of arguments (#5542).
-
-    !end-bullet!
--   !begin-bullet!
-    Contour functions will not fail when `options("OutDec")` is not `.`
-    (@eliocamp, #5555).
-
-    !end-bullet!
--   !begin-bullet!
-    The `legend.key` theme element is set to inherit from the
-    `panel.background` theme element. The default themes no longer set
-    the `legend.key` element. This causes a visual change with the
-    default `theme_gray()` (#5549).
-
-    !end-bullet!
--   !begin-bullet!
-    Lines where `linewidth = NA` are now dropped in `geom_sf()` (#5204).
-
-    !end-bullet!
--   !begin-bullet!
-    New `guide_axis_logticks()` can be used to draw logarithmic tick
-    marks as an axis. It supersedes the `annotation_logticks()` function
-    (@teunbrand, #5325).
-
-    !end-bullet!
--   !begin-bullet!
-    Glyphs drawing functions of the `draw_key_*()` family can now set
-    `"width"` and `"height"` attributes (in centimetres) to the produced
-    keys to control their displayed size in the legend.
+    New function `check_device()` for testing the availability of
+    advanced graphics features introduced in R 4.1.0 onward (@teunbrand,
+    #5332).
 
     !end-bullet!
 -   !begin-bullet!
     `coord_radial()` is a successor to `coord_polar()` with more
     customisation options. `coord_radial()` can:
 
-    !begin-bullets-2!
+    !begin-bullets-3!
     -   !begin-bullet!
         integrate with the new guide system via a dedicated
         `guide_axis_theta()` to display the angle coordinate.
@@ -192,13 +141,114 @@
         argument.
         !end-bullet!
 
-    !end-bullets-2!
+    !end-bullets-3!
+    !end-bullet!
+
+!end-bullets-2!
+
+### The guide system
+
+The guide system encompassing axes and legends, as the last remaining
+chunk of ggplot2, has been rewritten to use the `<ggproto>` system
+instead of the S3 system. This change was a necessary step to officially
+break open the guide system for extension package developers. The axes
+and legends now inherit from a `<Guide>` class, which makes them
+extensible in the same manner as geoms, stats, facets and coords (#3329,
+@teunbrand)
+
+!begin-bullets-4!
+
+-   !begin-bullet!
+    The most user-facing change is that the styling of guides is rewired
+    through the theme system. Guides now have a `theme` argument that
+    can style individual guides, while `theme()` has gained additional
+    arguments to style guides. Theme elements declared in the guide
+    override theme elements set through the plot. The new theme elements
+    for guides are: `legend.key.spacing{.x/.y}`, `legend.frame`,
+    `legend.axis.line`, `legend.ticks`, `legend.ticks.length`,
+    `legend.text.position` and `legend.title.position`. Previous style
+    options in the arguments of `guide_*()` functions are
+    soft-deprecated.
+
     !end-bullet!
 -   !begin-bullet!
-    By default, `guide_legend()` now only draws a key glyph for a layer
-    when the value is is the layer's data. To revert to the old
-    behaviour, you can still set `show.legend = c({aesthetic} = TRUE)`
-    (@teunbrand, #3648).
+    Unfortunately, we could not fully preserve the function of
+    pre-existing guide extensions written in the S3 system. A fallback
+    for these old guides is encapsulated in the `<GuideOld>` class,
+    which calls the old S3 generics. The S3 methods have been removed as
+    part of cleaning up, so the old guides will still work if the S3
+    methods are reimplemented, but we encourage to switch to the new
+    system (#2728).
+
+    !end-bullet!
+-   !begin-bullet!
+    The `order` argument of guides now strictly needs to be a length-1
+    integer (#4958).
+
+    !end-bullet!
+
+!end-bullets-4!
+
+#### Axes
+
+!begin-bullets-5!
+
+-   !begin-bullet!
+    New `guide_axis_stack()` to combine other axis guides on top of one
+    another.
+
+    !end-bullet!
+-   !begin-bullet!
+    New `guide_axis_theta()` to draw an axis in a circular arc in
+    `coord_radial()`. The guide can be controlled by adding
+    `guides(theta = guide_axis_theta(...))` to a plot.
+
+    !end-bullet!
+-   !begin-bullet!
+    New `guide_axis_logticks()` can be used to draw logarithmic tick
+    marks as an axis. It supersedes the `annotation_logticks()` function
+    (@teunbrand, #5325).
+
+    !end-bullet!
+-   !begin-bullet!
+    `guide_axis()` gains a `minor.ticks` argument to draw minor ticks
+    (#4387).
+
+    !end-bullet!
+-   !begin-bullet!
+    `guide_axis()` gains a `cap` argument that can be used to trim the
+    axis line to extreme breaks (#4907).
+
+    !end-bullet!
+-   !begin-bullet!
+    Primary axis titles are now placed at the primary guide, so that
+    `guides(x = guide_axis(position = "top"))` will display the title at
+    the top by default (#4650).
+
+    !end-bullet!
+-   !begin-bullet!
+    Unknown secondary axis guide positions are now inferred as the
+    opposite of the primary axis guide when the latter has a known
+    `position` (#4650).
+
+    !end-bullet!
+
+!end-bullets-5!
+
+#### Legends
+
+!begin-bullets-6!
+
+-   !begin-bullet!
+    New `guide_custom()` function for drawing custom graphical objects
+    (grobs) unrelated to scales in legend positions (#5416).
+
+    !end-bullet!
+-   !begin-bullet!
+    All legends have acquired a `position` argument, that allows
+    individual guides to deviate from the `legend.position` set in the
+    `theme()` function. This means that legends can now be placed at
+    multiple sides of the plot (#5488).
 
     !end-bullet!
 -   !begin-bullet!
@@ -206,9 +256,183 @@
     legends and their titles, is now controlled by the text's `margin`
     setting. Not specifying margins will automatically add appropriate
     text margins. To control the spacing within a legend between keys,
-    the new `key.spacing.{x/y}` argument can be used. This leaves the
-    `legend.spacing` dedicated to controlling the spacing between
-    different guides (#5455).
+    the new `legend.key.spacing.{x/y}` argument can be used in
+    `theme()`. This leaves the `legend.spacing` theme setting dedicated
+    to solely controlling the spacing between different guides (#5455).
+
+    !end-bullet!
+-   !begin-bullet!
+    `guide_colourbar()` and `guide_coloursteps()` gain an `alpha`
+    argument to set the transparency of the bar (#5085).
+
+    !end-bullet!
+-   !begin-bullet!
+    New `display` argument in `guide_colourbar()` supplants the `raster`
+    argument. In R 4.1.0 and above, `display = "gradient"` will draw a
+    gradient.
+
+    !end-bullet!
+-   !begin-bullet!
+    Legend keys that can draw arrows have their size adjusted for
+    arrows.
+
+    !end-bullet!
+-   !begin-bullet!
+    When legend titles are larger than the legend, title justification
+    extends to the placement of keys and labels (#1903).
+
+    !end-bullet!
+-   !begin-bullet!
+    Glyph drawing functions of the `draw_key_*()` family can now set
+    `"width"` and `"height"` attributes (in centimetres) to the produced
+    keys to control their displayed size in the legend.
+
+    !end-bullet!
+-   !begin-bullet!
+    `coord_sf()` now uses customisable guides provided in the scales or
+    `guides()` function (@teunbrand).
+
+    !end-bullet!
+
+!end-bullets-6!
+
+## Improvements
+
+!begin-bullets-7!
+
+-   !begin-bullet!
+    `guide_coloursteps(even.steps = FALSE)` now draws one rectangle per
+    interval instead of many small ones (#5481).
+
+    !end-bullet!
+-   !begin-bullet!
+    `draw_key_label()` now better reflects the appearance of labels
+    (#5561).
+
+    !end-bullet!
+-   !begin-bullet!
+    `position_stack()` no longer silently removes missing data, which is
+    now handled by the geom instead of position (#3532).
+
+    !end-bullet!
+-   !begin-bullet!
+    The `minor_breaks` function argument in scales can now also take a
+    function with two arguments: the scale's limits and the scale's
+    major breaks (#3583).
+
+    !end-bullet!
+-   !begin-bullet!
+    Failing to fit or predict in `stat_smooth()` now gives a warning and
+    omits the failed group, instead of throwing an error (@teunbrand,
+    #5352).
+
+    !end-bullet!
+-   !begin-bullet!
+    `labeller()` now handles unspecified entries from lookup tables
+    (@92amartins, #4599).
+
+    !end-bullet!
+-   !begin-bullet!
+    `fortify.default()` now accepts a data-frame-like object granted the
+    object exhibits healthy `dim()`, `colnames()`, and `as.data.frame()`
+    behaviours (@hpages, #5390).
+
+    !end-bullet!
+-   !begin-bullet!
+    `geom_violin()` gains a `bounds` argument analogous to
+    `geom_density()`s (@eliocamp, #5493).
+
+    !end-bullet!
+-   !begin-bullet!
+    To apply dodging more consistently in violin plots,
+    `stat_ydensity()` now has a `drop` argument to keep or discard
+    groups with 1 observation.
+
+    !end-bullet!
+-   !begin-bullet!
+    `geom_boxplot()` gains a new argument, `staplewidth` that can draw
+    staples at the ends of whiskers (@teunbrand, #5126)
+
+    !end-bullet!
+-   !begin-bullet!
+    `geom_boxplot()` gains an `outliers` argument to switch outliers on
+    or off, in a manner that does affects the scale range. For hiding
+    outliers that does not affect the scale range, you can continue to
+    use `outlier.shape = NA` (@teunbrand, #4892).
+
+    !end-bullet!
+-   !begin-bullet!
+    Nicer error messages for xlim/ylim arguments in coord-\* functions
+    (@92amartins, #4601, #5297).
+
+    !end-bullet!
+-   !begin-bullet!
+    You can now omit either `xend` or `yend` from `geom_segment()` as
+    only one of these is now required. If one is missing, it will be
+    filled from the `x` and `y` aesthetics respectively. This makes
+    drawing horizontal or vertical segments a little bit more convenient
+    (@teunbrand, #5140).
+
+    !end-bullet!
+-   !begin-bullet!
+    When `geom_path()` has aesthetics varying within groups, the
+    `arrow()` is applied to groups instead of individual segments
+    (@teunbrand, #4935).
+
+    !end-bullet!
+-   !begin-bullet!
+    `geom_text()` and `geom_label()` gained a `size.unit` parameter that
+    set the text size to millimetres, points, centimetres, inches or
+    picas (@teunbrand, #3799).
+
+    !end-bullet!
+-   !begin-bullet!
+    `geom_label()` now uses the `angle` aesthetic (@teunbrand, #2785)
+
+    !end-bullet!
+-   !begin-bullet!
+    The `label.padding` argument in `geom_label()` now supports inputs
+    created with the `margin()` function (#5030).
+
+    !end-bullet!
+-   !begin-bullet!
+    `ScaleContinuous$get_breaks()` now only calls `scales::zero_range()`
+    on limits in transformed space, rather than in data space (#5304).
+
+    !end-bullet!
+-   !begin-bullet!
+    Scales throw more informative messages (@teunbrand, #4185, #4258)
+
+    !end-bullet!
+-   !begin-bullet!
+    `scale_*_manual()` with a named `values` argument now emits a
+    warning when none of those names match the values found in the data
+    (@teunbrand, #5298).
+
+    !end-bullet!
+-   !begin-bullet!
+    The `name` argument in most scales is now explicitly the first
+    argument (#5535)
+
+    !end-bullet!
+-   !begin-bullet!
+    The `translate_shape_string()` internal function is now exported for
+    use in extensions of point layers (@teunbrand, #5191).
+
+    !end-bullet!
+-   !begin-bullet!
+    To improve `width` calculation in bar plots with empty factor
+    levels, `resolution()` considers `mapped_discrete` values as having
+    resolution 1 (@teunbrand, #5211)
+
+    !end-bullet!
+-   !begin-bullet!
+    In `theme()`, some elements can be specified with `rel()` to inherit
+    from `unit`-class objects in a relative fashion (@teunbrand, #3951).
+
+    !end-bullet!
+-   !begin-bullet!
+    `theme()` now supports splicing a list of arguments (#5542).
 
     !end-bullet!
 -   !begin-bullet!
@@ -218,40 +442,102 @@
 
     !end-bullet!
 -   !begin-bullet!
+    New `plot.tag.location` in `theme()` can control placement of the
+    plot tag in the `"margin"`, `"plot"` or the new `"panel"` option
+    (#4297).
+
+    !end-bullet!
+-   !begin-bullet!
+    `coord_munch()` can now close polygon shapes (@teunbrand, #3271)
+
+    !end-bullet!
+-   !begin-bullet!
+    Aesthetics listed in `geom_*()` and `stat_*()` layers now point to
+    relevant documentation (@teunbrand, #5123).
+
+    !end-bullet!
+-   !begin-bullet!
+    The new argument `axes` in `facet_grid()` and `facet_wrap()`
+    controls the display of axes at interior panel positions.
+    Additionally, the `axis.labels` argument can be used to only draw
+    tick marks or fully labelled axes (@teunbrand, #4064).
+
+    !end-bullet!
+-   !begin-bullet!
+    `coord_polar()` can have free scales in facets (@teunbrand, #2815).
+
+    !end-bullet!
+-   !begin-bullet!
+    The `get_guide_data()` function can be used to extract position and
+    label information from the plot (#5004).
+
+    !end-bullet!
+-   !begin-bullet!
+    Improve performance of layers without positional scales (@zeehio,
+    #4990)
+
+    !end-bullet!
+-   !begin-bullet!
+    More informative error for mismatched
+    `direction`/`theme(legend.direction = ...)` arguments (#4364,
+    #4930).
+
+    !end-bullet!
+
+!end-bullets-7!
+
+## Bug fixes
+
+!begin-bullets-8!
+
+-   !begin-bullet!
+    Fixed regression in `guide_legend()` where the `linewidth` key size
+    wasn't adapted to the width of the lines (#5160).
+
+    !end-bullet!
+-   !begin-bullet!
+    In `guide_bins()`, the title no longer arbitrarily becomes offset
+    from the guide when it has long labels.
+
+    !end-bullet!
+-   !begin-bullet!
+    `guide_colourbar()` and `guide_coloursteps()` merge properly when
+    one of the aesthetics is dropped (#5324).
+
+    !end-bullet!
+-   !begin-bullet!
+    When using `geom_dotplot(binaxis = "x")` with a discrete y-variable,
+    dots are now stacked from the y-position rather than from 0
+    (@teunbrand, #5462)
+
+    !end-bullet!
+-   !begin-bullet!
+    `stat_count()` treats `x` as unique in the same manner `unique()`
+    does (#4609).
+
+    !end-bullet!
+-   !begin-bullet!
+    The plot's title, subtitle and caption now obey horizontal text
+    margins (#5533).
+
+    !end-bullet!
+-   !begin-bullet!
+    Contour functions will not fail when `options("OutDec")` is not `.`
+    (@eliocamp, #5555).
+
+    !end-bullet!
+-   !begin-bullet!
+    Lines where `linewidth = NA` are now dropped in `geom_sf()` (#5204).
+
+    !end-bullet!
+-   !begin-bullet!
     `ggsave()` no longer sometimes creates new directories, which is now
     controlled by the new `create.dir` argument (#5489).
 
     !end-bullet!
 -   !begin-bullet!
-    `guide_coloursteps(even.steps = FALSE)` now draws one rectangle per
-    interval instead of many small ones (#5481).
-
-    !end-bullet!
--   !begin-bullet!
-    (internal) guide building is now part of `ggplot_build()` instead of
-    `ggplot_gtable()` to allow guides to observe unmapped data (#5483).
-
-    !end-bullet!
--   !begin-bullet!
-    `geom_violin()` gains a `bounds` argument analogous to
-    `geom_density()`s (@eliocamp, #5493).
-
-    !end-bullet!
--   !begin-bullet!
     Legend titles no longer take up space if they've been removed by
     setting `legend.title = element_blank()` (@teunbrand, #3587).
-
-    !end-bullet!
--   !begin-bullet!
-    New function `check_device()` for testing the availability of
-    advanced graphics features introduced in R 4.1.0 onwards
-    (@teunbrand, #5332).
-
-    !end-bullet!
--   !begin-bullet!
-    Failing to fit or predict in `stat_smooth()` now gives a warning and
-    omits the failed group, instead of throwing an error (@teunbrand,
-    #5352).
 
     !end-bullet!
 -   !begin-bullet!
@@ -265,56 +551,13 @@
 
     !end-bullet!
 -   !begin-bullet!
-    `labeller()` now handles unspecified entries from lookup tables
-    (@92amartins, #4599).
-
-    !end-bullet!
--   !begin-bullet!
-    `fortify.default()` now accepts a data-frame-like object granted the
-    object exhibits healthy `dim()`, `colnames()`, and `as.data.frame()`
-    behaviors (@hpages, #5390).
-
-    !end-bullet!
--   !begin-bullet!
-    `ScaleContinuous$get_breaks()` now only calls `scales::zero_range()`
-    on limits in transformed space, rather than in data space (#5304).
-
-    !end-bullet!
--   !begin-bullet!
-    Scales throw more informative messages (@teunbrand, #4185, #4258)
-
-    !end-bullet!
--   !begin-bullet!
-    The `scale_name` argument in `continuous_scale()`,
-    `discrete_scale()` and `binned_scale()` is soft-deprecated
-    (@teunbrand, #1312).
-
-    !end-bullet!
--   !begin-bullet!
-    In `theme()`, some elements can be specified with `rel()` to inherit
-    from `unit`-class objects in a relative fashion (@teunbrand, #3951).
-
-    !end-bullet!
--   !begin-bullet!
     `stat_ydensity()` with incomplete groups calculates the default
     `width` parameter more stably (@teunbrand, #5396)
 
     !end-bullet!
 -   !begin-bullet!
-    `geom_boxplot()` gains a new argument, `staplewidth` that can draw
-    staples at the ends of whiskers (@teunbrand, #5126)
-
-    !end-bullet!
--   !begin-bullet!
     The `size` argument in `annotation_logticks()` has been deprecated
     in favour of the `linewidth` argument (#5292).
-
-    !end-bullet!
--   !begin-bullet!
-    `geom_boxplot()` gains an `outliers` argument to switch outliers on
-    or off, in a manner that does affects the scale range. For hiding
-    outliers that does not affect the scale range, you can continue to
-    use `outlier.shape = NA` (@teunbrand, #4892).
 
     !end-bullet!
 -   !begin-bullet!
@@ -327,164 +570,13 @@
 
     !end-bullet!
 -   !begin-bullet!
-    The `legend.text.align` and `legend.title.align` arguments in
-    `theme()` are deprecated. The `hjust` setting of the `legend.text`
-    and `legend.title` elements continues to fulfil the role of text
-    alignment (@teunbrand, #5347).
-
-    !end-bullet!
--   !begin-bullet!
     Integers are once again valid input to theme arguments that expect
     numeric input (@teunbrand, #5369)
 
     !end-bullet!
 -   !begin-bullet!
-    Nicer error messages for xlim/ylim arguments in coord-\* functions
-    (@92amartins, #4601, #5297).
-
-    !end-bullet!
--   !begin-bullet!
-    `coord_sf()` now uses customisable guides provided in the scales or
-    `guides()` function (@teunbrand).
-
-    !end-bullet!
--   !begin-bullet!
     Legends in `scale_*_manual()` can show `NA` values again when the
     `values` is a named vector (@teunbrand, #5214, #5286).
-
-    !end-bullet!
--   !begin-bullet!
-    `scale_*_manual()` with a named `values` argument now emits a
-    warning when none of those names match the values found in the data
-    (@teunbrand, #5298).
-
-    !end-bullet!
--   !begin-bullet!
-    `coord_munch()` can now close polygon shapes (@teunbrand, #3271)
-
-    !end-bullet!
--   !begin-bullet!
-    You can now omit either `xend` or `yend` from `geom_segment()` as
-    only one of these is now required. If one is missing, it will be
-    filled from the `x` and `y` aesthetics respectively. This makes
-    drawing horizontal or vertical segments a little bit more convenient
-    (@teunbrand, #5140).
-
-    !end-bullet!
--   !begin-bullet!
-    New `plot.tag.location` in `theme()` can control placement of the
-    plot tag in the `"margin"`, `"plot"` or the new `"panel"` option
-    (#4297).
-
-    !end-bullet!
--   !begin-bullet!
-    `geom_text()` and `geom_label()` gained a `size.unit` parameter that
-    set the text size to millimetres, points, centimetres, inches or
-    picas (@teunbrand, #3799).
-
-    !end-bullet!
--   !begin-bullet!
-    The guide system, as the last remaining chunk of ggplot2, has been
-    rewritten in ggproto. The axes and legends now inherit from a
-    `<Guide>`{=html} class, which makes them extensible in the same
-    manner as geoms, stats, facets and coords (#3329, @teunbrand). In
-    addition, the following changes were made:
-
-    !begin-bullets-3!
-    -   !begin-bullet!
-        A fallback for old S3 guides is encapsulated in the `GuideOld`
-        ggproto class, which mostly just calls the old S3 generics.
-        !end-bullet!
-    -   !begin-bullet!
-        While the S3 guide generics are still in place, the S3 methods
-        for `guide_train()`, `guide_merge()`, `guide_geom()`,
-        `guide_transform()`, `guide_gengrob()` have been superseded by
-        the respective ggproto methods. In practise, this will mean that
-        `NextMethod()` or sub-classing ggplot2's guides with the S3
-        system will no longer work.
-        !end-bullet!
-    -   !begin-bullet!
-        Styling theme parts of the guide now inherit from the plot's
-        theme (#2728).
-        !end-bullet!
-    -   !begin-bullet!
-        Styling non-theme parts of the guides accept `<element>`{=html}
-        objects, so that the following is possible:
-        `guide_colourbar(frame = element_rect(...))`.
-        !end-bullet!
-    -   !begin-bullet!
-        Primary axis titles are now placed at the primary guide, so that
-        `guides(x = guide_axis(position = "top"))` will display the
-        title at the top by default (#4650).
-        !end-bullet!
-    -   !begin-bullet!
-        Unknown secondary axis guide positions are now inferred as the
-        opposite of the primary axis guide when the latter has a known
-        `position` (#4650).
-        !end-bullet!
-    -   !begin-bullet!
-        `guide_colourbar()`, `guide_coloursteps()` and `guide_bins()`
-        gain a `ticks.length` argument.
-        !end-bullet!
-    -   !begin-bullet!
-        In `guide_bins()`, the title no longer arbitrarily becomes
-        offset from the guide when it has long labels.
-        !end-bullet!
-    -   !begin-bullet!
-        The `order` argument of guides now strictly needs to be a
-        length-1 integer (#4958).
-        !end-bullet!
-    -   !begin-bullet!
-        More informative error for mismatched
-        `direction`/`theme(legend.direction = ...)` arguments (#4364,
-        #4930).
-        !end-bullet!
-    -   !begin-bullet!
-        `guide_coloursteps()` and `guide_bins()` sort breaks (#5152).
-        !end-bullet!
-    -   !begin-bullet!
-        `guide_axis()` gains a `minor.ticks` argument to draw minor
-        ticks (#4387).
-        !end-bullet!
-    -   !begin-bullet!
-        `guide_axis()` gains a `cap` argument that can be used to trim
-        the axis line to extreme breaks (#4907).
-        !end-bullet!
-    -   !begin-bullet!
-        `guide_colourbar()` and `guide_coloursteps()` merge properly
-        when one of aesthetics is dropped (#5324).
-        !end-bullet!
-    -   !begin-bullet!
-        Fixed regression in `guide_legend()` where the `linewidth` key
-        size wasn't adapted to the width of the lines (#5160).
-        !end-bullet!
-
-    !end-bullets-3!
-    !end-bullet!
--   !begin-bullet!
-    `geom_label()` now uses the `angle` aesthetic (@teunbrand, #2785)
-
-    !end-bullet!
--   !begin-bullet!
-    'lines' units in `geom_label()`, often used in the `label.padding`
-    argument, are now are relative to the text size. This causes a
-    visual change, but fixes a misalignment issue between the textbox
-    and text (@teunbrand, #4753)
-
-    !end-bullet!
--   !begin-bullet!
-    The `label.padding` argument in `geom_label()` now supports inputs
-    created with the `margin()` function (#5030).
-
-    !end-bullet!
--   !begin-bullet!
-    As an internal change, the `titleGrob()` has been refactored to be
-    faster.
-
-    !end-bullet!
--   !begin-bullet!
-    The `translate_shape_string()` internal function is now exported for
-    use in extensions of point layers (@teunbrand, #5191).
 
     !end-bullet!
 -   !begin-bullet!
@@ -498,38 +590,9 @@
 
     !end-bullet!
 -   !begin-bullet!
-    To improve `width` calculation in bar plots with empty factor
-    levels, `resolution()` considers `mapped_discrete` values as having
-    resolution 1 (@teunbrand, #5211)
-
-    !end-bullet!
--   !begin-bullet!
-    When `geom_path()` has aesthetics varying within groups, the
-    `arrow()` is applied to groups instead of individual segments
-    (@teunbrand, #4935).
-
-    !end-bullet!
--   !begin-bullet!
     The default width of `geom_bar()` is now based on panel-wise
     resolution of the data, rather than global resolution (@teunbrand,
     #4336).
-
-    !end-bullet!
--   !begin-bullet!
-    To apply dodging more consistently in violin plots,
-    `stat_ydensity()` now has a `drop` argument to keep or discard
-    groups with 1 observation.
-
-    !end-bullet!
--   !begin-bullet!
-    Aesthetics listed in `geom_*()` and `stat_*()` layers now point to
-    relevant documentation (@teunbrand, #5123).
-
-    !end-bullet!
--   !begin-bullet!
-    `coord_flip()` has been marked as superseded. The recommended
-    alternative is to swap the `x` and `y` aesthetic and/or using the
-    `orientation` argument in a layer (@teunbrand, #5130).
 
     !end-bullet!
 -   !begin-bullet!
@@ -548,19 +611,55 @@
 
     !end-bullet!
 -   !begin-bullet!
-    Improve performance of layers without positional scales (@zeehio,
-    #4990)
+    `guide_coloursteps()` and `guide_bins()` sort breaks (#5152).
 
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-8!
+
+## Internal changes
+
+!begin-bullets-9!
+
+-   !begin-bullet!
+    The `ScaleContinuous$get_breaks()` method no longer censors the
+    computed breaks.
+
+    !end-bullet!
+-   !begin-bullet!
+    The ggplot object now contains `$layout` which points to the
+    `Layout` ggproto object and will be used by the
+    `ggplot_build.ggplot` method. This was exposed so that package
+    developers may extend the behaviour of the `Layout` ggproto object
+    without needing to develop an entirely new `ggplot_build` method
+    (@jtlandis, #5077).
+
+    !end-bullet!
+-   !begin-bullet!
+    Guide building is now part of `ggplot_build()` instead of
+    `ggplot_gtable()` to allow guides to observe unmapped data (#5483).
+
+    !end-bullet!
+-   !begin-bullet!
+    The `titleGrob()` function has been refactored to be faster and less
+    complicated.
+
+    !end-bullet!
+-   !begin-bullet!
+    The `scales_*()` functions related to managing the `<ScalesList>`
+    class have been implemented as methods in the `<ScalesList>` class,
+    rather than stray functions (#1310).
+
+    !end-bullet!
+
+!end-bullets-9!
 
 # ggplot2 3.4.4
 
 This hotfix release adapts to a change in r-devel's `base::is.atomic()`
 and the upcoming retirement of maptools.
 
-!begin-bullets-4!
+!begin-bullets-10!
 
 -   !begin-bullet!
     `fortify()` for sp objects (e.g., `SpatialPolygonsDataFrame`) is now
@@ -570,7 +669,7 @@ and the upcoming retirement of maptools.
     longer works as of this version (@yutannihilation, #5244).
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-10!
 
 # ggplot2 3.4.3
 
@@ -584,7 +683,7 @@ upkeep changes and a few bug fixes as well.
 
 ## Minor improvements
 
-!begin-bullets-5!
+!begin-bullets-11!
 
 -   !begin-bullet!
     Various type checks and their messages have been standardised
@@ -608,11 +707,11 @@ upkeep changes and a few bug fixes as well.
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-11!
 
 ## Bug fixes
 
-!begin-bullets-6!
+!begin-bullets-12!
 
 -   !begin-bullet!
     `update_geom_defaults()` and `update_stat_defaults()` now return
@@ -652,7 +751,7 @@ upkeep changes and a few bug fixes as well.
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-12!
 
 # ggplot2 3.4.1
 
@@ -661,7 +760,7 @@ release and minor polishes.
 
 ## Breaking changes
 
-!begin-bullets-7!
+!begin-bullets-13!
 
 -   !begin-bullet!
     The computed variable `y` in `stat_ecdf()` has been superseded by
@@ -669,11 +768,11 @@ release and minor polishes.
     and #5112).
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-13!
 
 ## New features
 
-!begin-bullets-8!
+!begin-bullets-14!
 
 -   !begin-bullet!
     Added `scale_linewidth_manual()` and `scale_linewidth_identity()` to
@@ -686,11 +785,11 @@ release and minor polishes.
 
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-14!
 
 ## Bug fixes
 
-!begin-bullets-9!
+!begin-bullets-15!
 
 -   !begin-bullet!
     Fixed a regression in `geom_hex()` where aesthetics were replicated
@@ -725,11 +824,11 @@ release and minor polishes.
 
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-15!
 
 In binned scales:
 
-!begin-bullets-10!
+!begin-bullets-16!
 
 -   !begin-bullet!
     Automatic breaks should no longer be out-of-bounds, and automatic
@@ -747,7 +846,7 @@ In binned scales:
 
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-16!
 
 # ggplot2 3.4.0
 
@@ -768,7 +867,7 @@ speed.
 
 ## Breaking changes
 
-!begin-bullets-11!
+!begin-bullets-17!
 
 -   !begin-bullet!
     A `linewidth` aesthetic has been introduced and supersedes the
@@ -833,11 +932,11 @@ speed.
 
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-17!
 
 ## New features
 
-!begin-bullets-12!
+!begin-bullets-18!
 
 -   !begin-bullet!
     `geom_col()` and `geom_bar()` gain a new `just` argument. This is
@@ -874,11 +973,11 @@ speed.
 
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-18!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-13!
+!begin-bullets-19!
 
 -   !begin-bullet!
     Fix a bug in `position_jitter()` where infinity values were dropped
@@ -1076,7 +1175,7 @@ speed.
 
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-19!
 
 # ggplot2 3.3.6
 
@@ -1089,7 +1188,7 @@ are no user facing changes and no breaking changes.
 This is a very small release focusing on fixing a couple of untenable
 issues that surfaced with the 3.3.4 release
 
-!begin-bullets-14!
+!begin-bullets-20!
 
 -   !begin-bullet!
     Revert changes made in #4434 (apply transform to intercept in
@@ -1110,7 +1209,7 @@ issues that surfaced with the 3.3.4 release
     #4527)
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-20!
 
 # ggplot2 3.3.4
 
@@ -1119,7 +1218,7 @@ introduces a small selection of feature refinements.
 
 ## Features
 
-!begin-bullets-15!
+!begin-bullets-21!
 
 -   !begin-bullet!
     Alt-text can now be added to a plot using the `alt` label, i.e
@@ -1179,11 +1278,11 @@ introduces a small selection of feature refinements.
 
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-21!
 
 ## Fixes
 
-!begin-bullets-16!
+!begin-bullets-22!
 
 -   !begin-bullet!
     Fix a bug that `after_stat()` and `after_scale()` cannot refer to
@@ -1379,7 +1478,7 @@ introduces a small selection of feature refinements.
 
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-22!
 
 # ggplot2 3.3.3
 
@@ -1387,7 +1486,7 @@ This is a small patch release mainly intended to address changes in R
 and CRAN. It further changes the licensing model of ggplot2 to an MIT
 license.
 
-!begin-bullets-17!
+!begin-bullets-23!
 
 -   !begin-bullet!
     Update the ggplot2 licence to an MIT license (#4231, #4232, #4233,
@@ -1410,14 +1509,14 @@ license.
 
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-23!
 
 # ggplot2 3.3.2
 
 This is a small release focusing on fixing regressions introduced in
 3.3.1.
 
-!begin-bullets-18!
+!begin-bullets-24!
 
 -   !begin-bullet!
     Added an `outside` option to `annotation_logticks()` that places
@@ -1499,7 +1598,7 @@ This is a small release focusing on fixing regressions introduced in
 
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-24!
 
 # ggplot2 3.3.1
 
@@ -1523,7 +1622,7 @@ representations that extension developers may have relied on, along with
 a few breaking visual changes which may cause visual tests in downstream
 packages to fail.
 
-!begin-bullets-19!
+!begin-bullets-25!
 
 -   !begin-bullet!
     The `panel_params` field in the `Layout` now contains a list of list
@@ -1554,11 +1653,11 @@ packages to fail.
 
     !end-bullet!
 
-!end-bullets-19!
+!end-bullets-25!
 
 ## New features
 
-!begin-bullets-20!
+!begin-bullets-26!
 
 -   !begin-bullet!
     The evaluation time of aesthetics can now be controlled to a finer
@@ -1631,11 +1730,11 @@ packages to fail.
 
     !end-bullet!
 
-!end-bullets-20!
+!end-bullets-26!
 
 ## Extensions
 
-!begin-bullets-21!
+!begin-bullets-27!
 
 -   !begin-bullet!
     `Geom` now gains a `setup_params()` method in line with the other
@@ -1650,11 +1749,11 @@ packages to fail.
 
     !end-bullet!
 
-!end-bullets-21!
+!end-bullets-27!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-22!
+!begin-bullets-28!
 
 -   !begin-bullet!
     `coord_trans()` now draws second axes and accepts `xlim`, `ylim`,
@@ -1785,14 +1884,14 @@ packages to fail.
 
     !end-bullet!
 
-!end-bullets-22!
+!end-bullets-28!
 
 # ggplot2 3.2.1
 
 This is a patch release fixing a few regressions introduced in 3.2.0 as
 well as fixing some unit tests that broke due to upstream changes.
 
-!begin-bullets-23!
+!begin-bullets-29!
 
 -   !begin-bullet!
     `position_stack()` no longer changes the order of the input data.
@@ -1807,7 +1906,7 @@ well as fixing some unit tests that broke due to upstream changes.
     Fixes unit tests for sf graticule labels caused by changes to sf
     !end-bullet!
 
-!end-bullets-23!
+!end-bullets-29!
 
 # ggplot2 3.2.0
 
@@ -1824,7 +1923,7 @@ R.
 
 ## Breaking changes
 
-!begin-bullets-24!
+!begin-bullets-30!
 
 -   !begin-bullet!
     Two patches (#2996 and #3050) fixed minor rendering problems. In
@@ -1846,11 +1945,11 @@ R.
 
     !end-bullet!
 
-!end-bullets-24!
+!end-bullets-30!
 
 ## New features
 
-!begin-bullets-25!
+!begin-bullets-31!
 
 -   !begin-bullet!
     This release includes a range of internal changes that speeds up
@@ -1858,7 +1957,7 @@ R.
     break any code, but in general ggplot2 should feel much faster. The
     changes includes, but are not limited to:
 
-    !begin-bullets-26!
+    !begin-bullets-32!
     -   !begin-bullet!
         Caching ascent and descent dimensions of text to avoid
         recalculating it for every title.
@@ -1875,7 +1974,7 @@ R.
 
         !end-bullet!
 
-    !end-bullets-26!
+    !end-bullets-32!
     !end-bullet!
 -   !begin-bullet!
     `geom_polygon()` can now draw polygons with holes using the new
@@ -1908,11 +2007,11 @@ R.
 
     !end-bullet!
 
-!end-bullets-25!
+!end-bullets-31!
 
 ## Extensions
 
-!begin-bullets-27!
+!begin-bullets-33!
 
 -   !begin-bullet!
     Layers now have a new member function `setup_layer()` which is
@@ -1946,11 +2045,11 @@ R.
 
     !end-bullet!
 
-!end-bullets-27!
+!end-bullets-33!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-28!
+!begin-bullets-34!
 
 -   !begin-bullet!
     `cut_width()` now accepts `...` to pass further arguments to
@@ -2125,7 +2224,7 @@ R.
 
     !end-bullet!
 
-!end-bullets-28!
+!end-bullets-34!
 
 # ggplot2 3.1.0
 
@@ -2137,7 +2236,7 @@ However, there are a few items that developers of ggplot2 extensions
 should be aware of. For additional details, see also the discussion
 accompanying issue #2890.
 
-!begin-bullets-29!
+!begin-bullets-35!
 
 -   !begin-bullet!
     In non-user-facing internal code (specifically in the `aes()`
@@ -2173,11 +2272,11 @@ accompanying issue #2890.
 
     !end-bullet!
 
-!end-bullets-29!
+!end-bullets-35!
 
 ## New features
 
-!begin-bullets-30!
+!begin-bullets-36!
 
 -   !begin-bullet!
     `coord_sf()` has much improved customization of axis tick labels.
@@ -2196,11 +2295,11 @@ accompanying issue #2890.
 
     !end-bullet!
 
-!end-bullets-30!
+!end-bullets-36!
 
 ## Minor improvements and fixes
 
-!begin-bullets-31!
+!begin-bullets-37!
 
 -   !begin-bullet!
     `benchplot()` now uses tidy evaluation (@dpseidel, #2699).
@@ -2309,13 +2408,13 @@ accompanying issue #2890.
 
     !end-bullet!
 
-!end-bullets-31!
+!end-bullets-37!
 
 # ggplot2 3.0.0
 
 ## Breaking changes
 
-!begin-bullets-32!
+!begin-bullets-38!
 
 -   !begin-bullet!
     ggplot2 now supports/uses tidy evaluation (as described below). This
@@ -2437,11 +2536,11 @@ accompanying issue #2890.
 
     !end-bullet!
 
-!end-bullets-32!
+!end-bullets-38!
 
 ## Tidy evaluation
 
-!begin-bullets-33!
+!begin-bullets-39!
 
 -   !begin-bullet!
     `aes()` now supports quasiquotation so that you can use `!!`, `!!!`,
@@ -2474,11 +2573,11 @@ accompanying issue #2890.
 
     !end-bullet!
 
-!end-bullets-33!
+!end-bullets-39!
 
 ### sf
 
-!begin-bullets-34!
+!begin-bullets-40!
 
 -   !begin-bullet!
     ggplot2 now has full support for sf with `geom_sf()` and
@@ -2497,11 +2596,11 @@ accompanying issue #2890.
 
     !end-bullet!
 
-!end-bullets-34!
+!end-bullets-40!
 
 ## New features
 
-!begin-bullets-35!
+!begin-bullets-41!
 
 -   !begin-bullet!
     ggplot2 now works on R 3.1 onwards, and uses the vdiffr package for
@@ -2535,11 +2634,11 @@ accompanying issue #2890.
 
     !end-bullet!
 
-!end-bullets-35!
+!end-bullets-41!
 
 ### Layers: geoms, stats, and position adjustments
 
-!begin-bullets-36!
+!begin-bullets-42!
 
 -   !begin-bullet!
     `geom_segment()` and `geom_curve()` have a new `arrow.fill`
@@ -2582,11 +2681,11 @@ accompanying issue #2890.
 
     !end-bullet!
 
-!end-bullets-36!
+!end-bullets-42!
 
 ### Scales and guides
 
-!begin-bullets-37!
+!begin-bullets-43!
 
 -   !begin-bullet!
     Improved support for mapping date/time variables to `alpha`, `size`,
@@ -2652,11 +2751,11 @@ accompanying issue #2890.
 
     !end-bullet!
 
-!end-bullets-37!
+!end-bullets-43!
 
 ### Margins
 
-!begin-bullets-38!
+!begin-bullets-44!
 
 -   !begin-bullet!
     Strips gain margins on all sides by default. This means that to
@@ -2682,11 +2781,11 @@ accompanying issue #2890.
 
     !end-bullet!
 
-!end-bullets-38!
+!end-bullets-44!
 
 ## Extension points
 
-!begin-bullets-39!
+!begin-bullets-45!
 
 -   !begin-bullet!
     New `autolayer()` S3 generic (@mitchelloharawild, #1974). This is
@@ -2741,13 +2840,13 @@ accompanying issue #2890.
 
     !end-bullet!
 
-!end-bullets-39!
+!end-bullets-45!
 
 ## Minor bug fixes and improvements
 
 ### Faceting
 
-!begin-bullets-40!
+!begin-bullets-46!
 
 -   !begin-bullet!
     `facet_grid()` gives a more informative error message if you try to
@@ -2770,11 +2869,11 @@ accompanying issue #2890.
 
     !end-bullet!
 
-!end-bullets-40!
+!end-bullets-46!
 
 ### Scales
 
-!begin-bullets-41!
+!begin-bullets-47!
 
 -   !begin-bullet!
     `discrete_scale()` documentation now inherits shared definitions
@@ -2825,11 +2924,11 @@ accompanying issue #2890.
 
     !end-bullet!
 
-!end-bullets-41!
+!end-bullets-47!
 
 ### Layers
 
-!begin-bullets-42!
+!begin-bullets-48!
 
 -   !begin-bullet!
     `geom_label()` now correctly produces unbordered labels when
@@ -2931,11 +3030,11 @@ accompanying issue #2890.
 
     !end-bullet!
 
-!end-bullets-42!
+!end-bullets-48!
 
 ### Coords
 
-!begin-bullets-43!
+!begin-bullets-49!
 
 -   !begin-bullet!
     Clipping to the plot panel is now configurable, through a `clip`
@@ -2960,11 +3059,11 @@ accompanying issue #2890.
 
     !end-bullet!
 
-!end-bullets-43!
+!end-bullets-49!
 
 ### Themes
 
-!begin-bullets-44!
+!begin-bullets-50!
 
 -   !begin-bullet!
     Complete themes now always override all elements of the default
@@ -3013,11 +3112,11 @@ accompanying issue #2890.
 
     !end-bullet!
 
-!end-bullets-44!
+!end-bullets-50!
 
 ### Guides
 
-!begin-bullets-45!
+!begin-bullets-51!
 
 -   !begin-bullet!
     `guide_colorbar()` is more configurable: tick marks and color bar
@@ -3046,11 +3145,11 @@ accompanying issue #2890.
 
     !end-bullet!
 
-!end-bullets-45!
+!end-bullets-51!
 
 ### Other
 
-!begin-bullets-46!
+!begin-bullets-52!
 
 -   !begin-bullet!
     `fortify()` gains a method for tbls (@karawoo, #2218).
@@ -3100,17 +3199,17 @@ accompanying issue #2890.
 
     !end-bullet!
 
-!end-bullets-46!
+!end-bullets-52!
 
 # ggplot2 2.2.1
 
-!begin-bullets-47!
+!begin-bullets-53!
 
 -   !begin-bullet!
     Fix usage of `structure(NULL)` for R-devel compatibility (#1968).
     !end-bullet!
 
-!end-bullets-47!
+!end-bullets-53!
 
 # ggplot2 2.2.0
 
@@ -3162,7 +3261,7 @@ geoms and stats, as described in `vignette("extending-ggplot2")`.
 
 We have also added the following new features.
 
-!begin-bullets-48!
+!begin-bullets-54!
 
 -   !begin-bullet!
     `facet_grid()` and `facet_wrap()` now allow expressions in their
@@ -3191,7 +3290,7 @@ We have also added the following new features.
 
     !end-bullet!
 
-!end-bullets-48!
+!end-bullets-54!
 
 ### Extensions
 
@@ -3202,7 +3301,7 @@ fixed, but requires re-installation of all extension packages.
 
 ## Scales
 
-!begin-bullets-49!
+!begin-bullets-55!
 
 -   !begin-bullet!
     The position of x and y axes can now be changed using the `position`
@@ -3212,11 +3311,11 @@ fixed, but requires re-installation of all extension packages.
     to `axis.text.*` and `axis.title.*`.
     !end-bullet!
 
-!end-bullets-49!
+!end-bullets-55!
 
 ### Continuous scales
 
-!begin-bullets-50!
+!begin-bullets-56!
 
 -   !begin-bullet!
     `scale_x_continuous()` and `scale_y_continuous()` can now display a
@@ -3240,11 +3339,11 @@ fixed, but requires re-installation of all extension packages.
 
     !end-bullet!
 
-!end-bullets-50!
+!end-bullets-56!
 
 ### Date time
 
-!begin-bullets-51!
+!begin-bullets-57!
 
 -   !begin-bullet!
     `scale_*_datetime()` now supports time zones. It will use the
@@ -3258,7 +3357,7 @@ fixed, but requires re-installation of all extension packages.
 
     !end-bullet!
 
-!end-bullets-51!
+!end-bullets-57!
 
 ### Discrete scales
 
@@ -3269,7 +3368,7 @@ another level), so by default we should.
 
 This principle applies to:
 
-!begin-bullets-52!
+!begin-bullets-58!
 
 -   !begin-bullet!
     character vectors
@@ -3281,7 +3380,7 @@ This principle applies to:
     factors with explicit NA
     !end-bullet!
 
-!end-bullets-52!
+!end-bullets-58!
 
 And to all scales (both position and non-position.)
 
@@ -3303,7 +3402,7 @@ changes:
 
 There were also a number of other smaller changes
 
-!begin-bullets-53!
+!begin-bullets-59!
 
 -   !begin-bullet!
     Correctly use scale expansion factors.
@@ -3321,11 +3420,11 @@ There were also a number of other smaller changes
     Warn when used with only continuous data (#1589)
     !end-bullet!
 
-!end-bullets-53!
+!end-bullets-59!
 
 ## Themes
 
-!begin-bullets-54!
+!begin-bullets-60!
 
 -   !begin-bullet!
     The `theme()` constructor now has named arguments rather than
@@ -3365,12 +3464,12 @@ There were also a number of other smaller changes
 
     !end-bullet!
 
-!end-bullets-54!
+!end-bullets-60!
 
 There were a number of tweaks to the theme elements that control
 legends:
 
-!begin-bullets-55!
+!begin-bullets-61!
 
 -   !begin-bullet!
     `legend.justification` now controls appearance will plotting the
@@ -3397,11 +3496,11 @@ legends:
 
     !end-bullet!
 
-!end-bullets-55!
+!end-bullets-61!
 
 ## Bug fixes and minor improvements
 
-!begin-bullets-56!
+!begin-bullets-62!
 
 -   !begin-bullet!
     ggplot2 now imports tibble. This ensures that all built-in datasets
@@ -3534,13 +3633,13 @@ legends:
 
     !end-bullet!
 
-!end-bullets-56!
+!end-bullets-62!
 
 # ggplot2 2.1.0
 
 ## New features
 
-!begin-bullets-57!
+!begin-bullets-63!
 
 -   !begin-bullet!
     When mapping an aesthetic to a constant (e.g. 
@@ -3568,7 +3667,7 @@ legends:
     which has been considerably improved thanks to the advice of Randy
     Prium (@rpruim). This includes:
 
-    !begin-bullets-58!
+    !begin-bullets-64!
     -   !begin-bullet!
         Better arguments and a better algorithm for determining the
         origin. You can now specify either `boundary` or the `center` of
@@ -3595,14 +3694,14 @@ legends:
 
         !end-bullet!
 
-    !end-bullets-58!
+    !end-bullets-64!
     !end-bullet!
 
-!end-bullets-57!
+!end-bullets-63!
 
 ## Bug fixes
 
-!begin-bullets-59!
+!begin-bullets-65!
 
 -   !begin-bullet!
     All `\donttest{}` examples run.
@@ -3768,13 +3867,13 @@ legends:
 
     !end-bullet!
 
-!end-bullets-59!
+!end-bullets-65!
 
 # ggplot2 2.0.0
 
 ## Major changes
 
-!begin-bullets-60!
+!begin-bullets-66!
 
 -   !begin-bullet!
     ggplot no longer throws an error if your plot has no layers. Instead
@@ -3853,7 +3952,7 @@ legends:
 
     !end-bullet!
 
-!end-bullets-60!
+!end-bullets-66!
 
 ### Extensibility
 
@@ -3861,7 +3960,7 @@ There is now an official mechanism for defining Stats, Geoms, and
 Positions in other packages. See `vignette("extending-ggplot2")` for
 details.
 
-!begin-bullets-61!
+!begin-bullets-67!
 
 -   !begin-bullet!
     All Geoms, Stats and Positions are now exported, so you can inherit
@@ -3886,17 +3985,17 @@ details.
 
     !end-bullet!
 
-!end-bullets-61!
+!end-bullets-67!
 
 ### Text
 
-!begin-bullets-62!
+!begin-bullets-68!
 
 -   !begin-bullet!
     `geom_text()` has been overhauled to make labelling your data a
     little easier. It:
 
-    !begin-bullets-63!
+    !begin-bullets-69!
     -   !begin-bullet!
         `nudge_x` and `nudge_y` arguments let you offset labels from
         their corresponding points (#1120).
@@ -3916,7 +4015,7 @@ details.
 
         !end-bullet!
 
-    !end-bullets-63!
+    !end-bullets-69!
     !end-bullet!
 -   !begin-bullet!
     `geom_label()` works like `geom_text()` but draws a rounded
@@ -3925,11 +4024,11 @@ details.
 
     !end-bullet!
 
-!end-bullets-62!
+!end-bullets-68!
 
 ### Deprecated features
 
-!begin-bullets-64!
+!begin-bullets-70!
 
 -   !begin-bullet!
     The little used `aes_auto()` has been deprecated.
@@ -3971,11 +4070,11 @@ details.
 
     !end-bullet!
 
-!end-bullets-64!
+!end-bullets-70!
 
 A number of geoms have been renamed to be internally consistent:
 
-!begin-bullets-65!
+!begin-bullets-71!
 
 -   !begin-bullet!
     `stat_binhex()` and `stat_bin2d()` have been renamed to
@@ -3997,13 +4096,13 @@ A number of geoms have been renamed to be internally consistent:
 
     !end-bullet!
 
-!end-bullets-65!
+!end-bullets-71!
 
 All defunct functions have been removed.
 
 ### Default appearance
 
-!begin-bullets-66!
+!begin-bullets-72!
 
 -   !begin-bullet!
     The default `theme_grey()` background colour has been changed from
@@ -4014,7 +4113,7 @@ All defunct functions have been removed.
 -   !begin-bullet!
     Labels and titles have been tweaked for readability:
 
-    !begin-bullets-67!
+    !begin-bullets-73!
     -   !begin-bullet!
         Axes labels are darker.
 
@@ -4043,7 +4142,7 @@ All defunct functions have been removed.
 
         !end-bullet!
 
-    !end-bullets-67!
+    !end-bullets-73!
     !end-bullet!
 -   !begin-bullet!
     `alpha` now affects both fill and colour aesthetics (#1371).
@@ -4119,11 +4218,11 @@ All defunct functions have been removed.
     !end-codeblock!
     !end-bullet!
 
-!end-bullets-66!
+!end-bullets-72!
 
 ### New and updated themes
 
-!begin-bullets-68!
+!begin-bullets-74!
 
 -   !begin-bullet!
     New `theme_void()` is completely empty. It's useful for plots with
@@ -4148,7 +4247,7 @@ All defunct functions have been removed.
 
     !end-bullet!
 
-!end-bullets-68!
+!end-bullets-74!
 
 ### Labelling
 
@@ -4156,7 +4255,7 @@ The facet labelling system was updated with many new features and a more
 flexible interface (@lionel-). It now works consistently across grid and
 wrap facets. The most important user visible changes are:
 
-!begin-bullets-69!
+!begin-bullets-75!
 
 -   !begin-bullet!
     `facet_wrap()` gains a `labeller` option (#25).
@@ -4170,12 +4269,12 @@ wrap facets. The most important user visible changes are:
 
     !end-bullet!
 
-!end-bullets-69!
+!end-bullets-75!
 
 The labellers (such as `label_value()` or `label_both()`) also get some
 new features:
 
-!begin-bullets-70!
+!begin-bullets-76!
 
 -   !begin-bullet!
     They now offer the `multi_line` argument to control whether to
@@ -4215,7 +4314,7 @@ new features:
 
     !end-bullet!
 
-!end-bullets-70!
+!end-bullets-76!
 
 On the programming side, the labeller API has been rewritten in order to
 offer more control when faceting over multiple factors (e.g. with
@@ -4223,7 +4322,7 @@ formulae such as `~cyl + am`). This also means that if you have written
 custom labellers, you will need to update them for this version of
 ggplot.
 
-!begin-bullets-71!
+!begin-bullets-77!
 
 -   !begin-bullet!
     Previously, a labeller function would take `variable` and `value`
@@ -4247,11 +4346,11 @@ ggplot.
 
     !end-bullet!
 
-!end-bullets-71!
+!end-bullets-77!
 
 ## Documentation
 
-!begin-bullets-72!
+!begin-bullets-78!
 
 -   !begin-bullet!
     Improved documentation for `aes()`, `layer()` and much much more.
@@ -4263,7 +4362,7 @@ ggplot.
     pages. In some cases this has involved adding additional arguments
     to geoms to make it more clear what you can do:
 
-    !begin-bullets-73!
+    !begin-bullets-79!
     -   !begin-bullet!
         `geom_smooth()` gains explicit `method`, `se` and `formula`
         arguments.
@@ -4281,7 +4380,7 @@ ggplot.
 
         !end-bullet!
 
-    !end-bullets-73!
+    !end-bullets-79!
     !end-bullet!
 -   !begin-bullet!
     Use of `qplot()` in examples has been minimised (#1123, @hrbrmstr).
@@ -4311,11 +4410,11 @@ ggplot.
 
     !end-bullet!
 
-!end-bullets-72!
+!end-bullets-78!
 
 ## Data
 
-!begin-bullets-74!
+!begin-bullets-80!
 
 -   !begin-bullet!
     All datasets have class `tbl_df` so if you also use dplyr, you get a
@@ -4349,11 +4448,11 @@ ggplot.
 
     !end-bullet!
 
-!end-bullets-74!
+!end-bullets-80!
 
 ## Bug fixes and minor improvements
 
-!begin-bullets-75!
+!begin-bullets-81!
 
 -   !begin-bullet!
     All partially matched arguments and `$` have been been replaced with
@@ -4424,7 +4523,7 @@ ggplot.
     `geom_abline()`, `geom_hline()` and `geom_vline()` have been
     rewritten to have simpler behaviour and be more consistent:
 
-    !begin-bullets-76!
+    !begin-bullets-82!
     -   !begin-bullet!
         `stat_abline()`, `stat_hline()` and `stat_vline()` have been
         removed: these were never suitable for use other than with
@@ -4446,7 +4545,7 @@ ggplot.
 
         !end-bullet!
 
-    !end-bullets-76!
+    !end-bullets-82!
     !end-bullet!
 -   !begin-bullet!
     `geom_bin2d()` will now let you specify one dimension's breaks
@@ -4652,4 +4751,4 @@ ggplot.
 
     !end-bullet!
 
-!end-bullets-75!
+!end-bullets-81!
