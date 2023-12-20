@@ -6626,3 +6626,7 @@ ggplot2,1fd5a0f3ec67c2c25bd3d26acb8f8489,The `titleGrob()` function has been ref
 ggplot2,873c16098a37613ac2ef8a3fc3dc7bdb,"The `scales_*()` functions related to managing the `<ScalesList>` class have been implemented as methods in the `<ScalesList>` class, rather than stray functions (#1310).",NA,NA,NA,NA
 tibble,1ad5ba5b9994883319c708a1fe653d67,"`as_tibble()` calls `as.data.frame()` for objects that are not subclasses of `""tbl_df""` (@​TimTaylor, #1556, #1557).",NA,NA,NA,NA
 tibble,0c5e26c34d98d7092d1d8254a17a3368,Check fast path first.,NA,NA,NA,NA
+dbplyr,59c198cb34ac85a21b033df1191741b5,"Snowflake (@​nathanhaigh, #1406)",NA,NA,NA,NA
+dbplyr,59c198cb34ac85a21b033df1191741b5,• Added support for `str_starts()` and `str_ends()` via `REGEXP_INSTR()`,NA,NA,NA,NA
+dbplyr,59c198cb34ac85a21b033df1191741b5,• Refactored `str_detect()` to use `REGEXP_INSTR()` so now supports regular expressions.,NA,NA,NA,NA
+dbplyr,59c198cb34ac85a21b033df1191741b5,"• Refactored `grepl()` to use `REGEXP_INSTR()` so now supports case-insensitive matching through `grepl(..., ignore.case = TRUE)`",NA,NA,NA,NA
