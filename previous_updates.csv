@@ -6624,3 +6624,5 @@ ggplot2,fb14bf8410c4e70755835b2e6d62397a,`guide_colourbar()` and `guide_colourst
 ggplot2,339be94d2031465de1ca584433705593,`guide_coloursteps()` and `guide_bins()` sort breaks (#5152).,NA,NA,NA,NA
 ggplot2,1fd5a0f3ec67c2c25bd3d26acb8f8489,The `titleGrob()` function has been refactored to be faster and less complicated.,NA,NA,NA,NA
 ggplot2,873c16098a37613ac2ef8a3fc3dc7bdb,"The `scales_*()` functions related to managing the `<ScalesList>` class have been implemented as methods in the `<ScalesList>` class, rather than stray functions (#1310).",NA,NA,NA,NA
+tibble,1ad5ba5b9994883319c708a1fe653d67,"`as_tibble()` calls `as.data.frame()` for objects that are not subclasses of `""tbl_df""` (@​TimTaylor, #1556, #1557).",NA,NA,NA,NA
+tibble,0c5e26c34d98d7092d1d8254a17a3368,Check fast path first.,NA,NA,NA,NA
