@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Database errors now show the generated SQL, which hopefully will
+    make it faster to track down problems (#1401).
+
+    !end-bullet!
+-   !begin-bullet!
     Snowflake (@nathanhaigh, #1406)
 
     !begin-bullets-2!

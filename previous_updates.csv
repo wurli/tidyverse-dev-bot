@@ -6630,3 +6630,4 @@ dbplyr,59c198cb34ac85a21b033df1191741b5,"Snowflake (@​nathanhaigh, #1406)",NA,
 dbplyr,59c198cb34ac85a21b033df1191741b5,• Added support for `str_starts()` and `str_ends()` via `REGEXP_INSTR()`,NA,NA,NA,NA
 dbplyr,59c198cb34ac85a21b033df1191741b5,• Refactored `str_detect()` to use `REGEXP_INSTR()` so now supports regular expressions.,NA,NA,NA,NA
 dbplyr,59c198cb34ac85a21b033df1191741b5,"• Refactored `grepl()` to use `REGEXP_INSTR()` so now supports case-insensitive matching through `grepl(..., ignore.case = TRUE)`",NA,NA,NA,NA
+dbplyr,0713190980f1421388bcbf8b82529cea,"Database errors now show the generated SQL, which hopefully will make it faster to track down problems (#1401).",NA,NA,NA,NA
