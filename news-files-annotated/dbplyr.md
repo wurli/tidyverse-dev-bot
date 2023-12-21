@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Allow additional arguments to be passed from `compute()` all the way
+    to `sql_query_save()`-method (@rsund).
+
+    !end-bullet!
+-   !begin-bullet!
     The class of remote sources now includes all S4 class names, not
     just the first (#918).
 
