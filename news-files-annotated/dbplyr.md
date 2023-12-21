@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    The class of remote sources now includes all S4 class names, not
+    just the first (#918).
+
+    !end-bullet!
+-   !begin-bullet!
     `db_explain()` now works for Oracle (@thomashulst, #1353).
 
     !end-bullet!
