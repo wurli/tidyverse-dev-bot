@@ -6634,3 +6634,4 @@ dbplyr,0713190980f1421388bcbf8b82529cea,"Database errors now show the generated 
 dbplyr,f278e795185b0e1113bd9b9c873cede3,"`db_explain()` now works for Oracle (@​thomashulst, #1353).",NA,NA,NA,NA
 dbplyr,fc0496f56d40c6a83640fc1fb1ad1755,"The class of remote sources now includes all S4 class names, not just the first (#918).",NA,NA,NA,NA
 dbplyr,168079c12f4ca706ab4b7a0aa25b3863,Allow additional arguments to be passed from `compute()` all the way to `sql_query_save()`-method (@​rsund).,NA,NA,NA,NA
+dbplyr,50c3d10ed772b5d76b0362ea040c813e,"Oracle: Added support for `str_replace()` and `str_replace_all()` via `REGEXP_REPLACE()` (@​thomashulst, #1402).",NA,NA,NA,NA

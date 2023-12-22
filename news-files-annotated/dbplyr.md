@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Oracle: Added support for `str_replace()` and `str_replace_all()`
+    via `REGEXP_REPLACE()` (@thomashulst, #1402).
+
+    !end-bullet!
+-   !begin-bullet!
     Allow additional arguments to be passed from `compute()` all the way
     to `sql_query_save()`-method (@rsund).
 
