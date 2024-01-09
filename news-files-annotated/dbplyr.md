@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Add translations for clock functions `add_years()`, `add_days()`,
+    `date_build()`, `get_year()`, `get_month()`, `get_day()`, and
+    `base::difftime()` on SQL server, Redshift, Snowflake, and Postgres.
+
+    !end-bullet!
+-   !begin-bullet!
     SQL server: `filter()` does a better job of converting logical
     vectors from bit to boolean (@ejneer, #1288).
 
