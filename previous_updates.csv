@@ -6638,3 +6638,4 @@ dbplyr,50c3d10ed772b5d76b0362ea040c813e,"Oracle: Added support for `str_replace(
 dbplyr,24ac5e23db61635a7e68ae2f056b8951,"SQL server: `filter()` does a better job of converting logical vectors from bit to boolean (@​ejneer, #1288).",NA,NA,NA,NA
 rlang,f1dc4a32fa54391282c38982cc2e479a,`%||%` is now reexported from base on newer R versions. This avoids conflict messages when attaching or importing rlang.,NA,NA,NA,NA
 dbplyr,aa39b1fd2037e409f110ba9275b6f216,"Add translations for clock functions `add_years()`, `add_days()`, `date_build()`, `get_year()`, `get_month()`, `get_day()`, and `base::difftime()` on SQL server, Redshift, Snowflake, and Postgres.",NA,NA,NA,NA
+dbplyr,08a3104cec569110b88ce4768f8a7d67,SQL server: clear error if you attempt to use `n_distinct()` in `mutate()` or `filter()` (#1366).,NA,NA,NA,NA
