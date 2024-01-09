@@ -1,4 +1,10 @@
-# rlang (development version)
+# rlang 1.1.3
+
+* Fix for CRAN checks.
+
+* `%||%` is now reexported from base on newer R versions. This avoids
+  conflict messages when attaching or importing rlang.
+
 
 # rlang 1.1.2
 
