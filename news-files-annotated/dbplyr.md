@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `db_sql_render()` correctly passes on `...` when re-calling with
+    `sql_options` set (#1394).
+
+    !end-bullet!
+-   !begin-bullet!
     `-1 + x` is now translated correctly (#1420).
 
     !end-bullet!

@@ -6640,3 +6640,4 @@ rlang,f1dc4a32fa54391282c38982cc2e479a,`%||%` is now reexported from base on new
 dbplyr,aa39b1fd2037e409f110ba9275b6f216,"Add translations for clock functions `add_years()`, `add_days()`, `date_build()`, `get_year()`, `get_month()`, `get_day()`, and `base::difftime()` on SQL server, Redshift, Snowflake, and Postgres.",NA,NA,NA,NA
 dbplyr,08a3104cec569110b88ce4768f8a7d67,SQL server: clear error if you attempt to use `n_distinct()` in `mutate()` or `filter()` (#1366).,NA,NA,NA,NA
 dbplyr,3fbb4a503abd07519a9cdd3e4fb0c729,`-1 + x` is now translated correctly (#1420).,NA,NA,NA,NA
+dbplyr,bfed16ebfdfe8b1dfdad24556e66eeb4,`db_sql_render()` correctly passes on `...` when re-calling with `sql_options` set (#1394).,NA,NA,NA,NA
