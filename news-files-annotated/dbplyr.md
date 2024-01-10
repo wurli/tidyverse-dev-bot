@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `-1 + x` is now translated correctly (#1420).
+
+    !end-bullet!
+-   !begin-bullet!
     SQL server: clear error if you attempt to use `n_distinct()` in
     `mutate()` or `filter()` (#1366).
 
