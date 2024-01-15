@@ -6644,3 +6644,4 @@ dbplyr,bfed16ebfdfe8b1dfdad24556e66eeb4,`db_sql_render()` correctly passes on `.
 readr,64b8364caab5a625334c81f182482f3c,No major user-facing changes. Patch release with housekeeping changes and internal changes requested by CRAN around format specification in compiled code.,NA,NA,NA,NA
 dbplyr,278b2798a9ec69849d8e8786beb55466,"Namespaced dplyr calls now error if the function doesn't exist, or a translation is not available (#1426).",NA,NA,NA,NA
 reprex,28b5c5bf85fa76c1df8a656ff0518719,"The unexported `prex_*()` functions protect the current session from option changes coming from reprex's own machinery, such as disabling color (#427).",NA,NA,NA,NA
+lubridate,fac1e8e3f8234f2c25afad542498149a,#1133 Don't error on addition on infinite periods.,NA,NA,NA,NA
