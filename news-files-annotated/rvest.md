@@ -1,18 +1,26 @@
 # rvest (development version)
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    `html_table()` discards rows without cells (@epiben, #360).
+    !end-bullet!
+
+!end-bullets-1!
+
 # rvest 1.0.3
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     Re-document to fix HTML issues in `.Rd`.
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # rvest 1.0.2
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     Fixes for CRAN
@@ -24,11 +32,11 @@
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 # rvest 1.0.1
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     `html_table()` correctly handles tables with cells that contain
@@ -42,13 +50,13 @@
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 # rvest 1.0.0
 
 ## New features
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     New `html_text2()` provides a more natural rendering of HTML nodes
@@ -81,7 +89,7 @@
 
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 ## API changes
 
@@ -90,7 +98,7 @@ changes to make rvest more compatible with current tidyverse
 conventions. Older functions have been deprecated, so existing code will
 continue to work (albeit with a few new warnings).
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     rvest now imports xml2 rather than depending on it. This is cleaner
@@ -150,11 +158,11 @@ continue to work (albeit with a few new warnings).
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     The "harvesting the web" vignette has been rewritten to focus more
@@ -196,41 +204,41 @@ continue to work (albeit with a few new warnings).
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 # rvest 0.3.6
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     Remove failing example
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 # rvest 0.3.5
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     Use web archive to fix broken example.
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 # rvest 0.3.4
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     Remove unneeded `read_xml.response()` method (#242).
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 # rvest 0.3.3
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     Fix `R CMD check` failure
@@ -242,11 +250,11 @@ continue to work (albeit with a few new warnings).
 
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 # rvest 0.3.2
 
-!begin-bullets-11!
+!begin-bullets-12!
 
 -   !begin-bullet!
     Fixes to `follow_link()` and `back()` to correctly manage session
@@ -273,11 +281,11 @@ continue to work (albeit with a few new warnings).
 
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-12!
 
 # rvest 0.3.1
 
-!begin-bullets-12!
+!begin-bullets-13!
 
 -   !begin-bullet!
     Fix invalid link for SSA example.
@@ -293,11 +301,11 @@ continue to work (albeit with a few new warnings).
 
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
 
 # rvest 0.3.0
 
-!begin-bullets-13!
+!begin-bullets-14!
 
 -   !begin-bullet!
     rvest has been rewritten to take advantage of the new xml2 package.
@@ -311,7 +319,7 @@ continue to work (albeit with a few new warnings).
     A number of functions have change names. The old versions still
     work, but are deprecated and will be removed in rvest 0.4.0.
 
-    !begin-bullets-14!
+    !begin-bullets-15!
     -   !begin-bullet!
         `html_tag()` -\> `html_name()`
         !end-bullet!
@@ -319,7 +327,7 @@ continue to work (albeit with a few new warnings).
         `html()` -\> `read_html()`
         !end-bullet!
 
-    !end-bullets-14!
+    !end-bullets-15!
     !end-bullet!
 -   !begin-bullet!
     `html_node()` now throws an error if there are no matches, and a
@@ -348,13 +356,13 @@ continue to work (albeit with a few new warnings).
 
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-14!
 
 # rvest 0.2.0
 
 ## New features
 
-!begin-bullets-15!
+!begin-bullets-16!
 
 -   !begin-bullet!
     `html()` and `xml()` pass `...` on to `httr::GET()` so you can more
@@ -373,11 +381,11 @@ continue to work (albeit with a few new warnings).
 
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-16!
 
 ## Bug fixes
 
-!begin-bullets-16!
+!begin-bullets-17!
 
 -   !begin-bullet!
     `follow_link()` now accepts css and xpath selectors. (#38, #41, #42)
@@ -408,4 +416,4 @@ continue to work (albeit with a few new warnings).
 
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-17!
