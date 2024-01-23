@@ -77,8 +77,8 @@
     works, but will throw a warning encouraging you to explicitly name
     the `id_cols` argument.
 
-    To read more about this pattern, see Data, dots, details in the
-    tidyverse design guide (#1350).
+    To read more about this pattern, see
+    https://design.tidyverse.org/dots-after-required.html (#1350).
 
     !end-bullet!
 
