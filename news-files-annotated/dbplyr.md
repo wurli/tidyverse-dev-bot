@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `rows_patch(in_place = FALSE)` now works when more than one column
+    should be patched (@gorcha, #1443).
+
+    !end-bullet!
+-   !begin-bullet!
     Namespaced dplyr calls now error if the function doesn't exist, or a
     translation is not available (#1426).
 
