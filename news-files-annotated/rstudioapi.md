@@ -3,7 +3,13 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `restartSession()` gains the `clean` argument, for RStudio 2024.04
+    and newer.
+
+    !end-bullet!
+-   !begin-bullet!
     Added `setGhostText()` for setting ghost text in the current editor.
+
     !end-bullet!
 
 !end-bullets-1!
