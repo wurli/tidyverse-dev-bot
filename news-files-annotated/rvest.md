@@ -1,5 +1,7 @@
 # rvest (development version)
 
+# rvest 1.0.4
+
 !begin-bullets-1!
 
 -   !begin-bullet!
