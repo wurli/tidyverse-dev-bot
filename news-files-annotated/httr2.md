@@ -23,6 +23,11 @@
     that uses "uri" style (#389).
 
     !end-bullet!
+-   !begin-bullet!
+    `req_perform_stream()` gains a `round = c("byte", "line")` argument
+    to control how the stream is rounded (#437).
+
+    !end-bullet!
 
 !end-bullets-1!
 
