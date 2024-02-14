@@ -3,6 +3,15 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Clearer error if you attempt to embed non-atomic vectors inside of a
+    generated query (#1368).
+
+    !end-bullet!
+-   !begin-bullet!
+    `x$name` never attempts to evaluate `name` (#1368).
+
+    !end-bullet!
+-   !begin-bullet!
     `rows_patch(in_place = FALSE)` now works when more than one column
     should be patched (@gorcha, #1443).
 
