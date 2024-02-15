@@ -6656,3 +6656,4 @@ rstudioapi,21c2f7e3d620fe947398831c3e0a5f19,"`restartSession()` gains the `clean
 dbplyr,8f6926317ef23b0370f94ed08c7e490f,Clearer error if you attempt to embed non-atomic vectors inside of a generated query (#1368).,NA,NA,NA,NA
 dbplyr,c044a5634fb880267718f853ce1c93ea,`x$name` never attempts to evaluate `name` (#1368).,NA,NA,NA,NA
 httr2,bd436726494eae7144dffb9f8609813d,"`req_perform_stream()` gains a `round = c(""byte"", ""line"")` argument to control how the stream is rounded (#437).",NA,NA,NA,NA
+dbplyr,a72ae775248ebdd803ae34bc67ffc7ca,The databricks backend now supports creating non-temporary tables too (#1418).,NA,NA,NA,NA
