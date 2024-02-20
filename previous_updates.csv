@@ -6657,3 +6657,11 @@ dbplyr,8f6926317ef23b0370f94ed08c7e490f,Clearer error if you attempt to embed no
 dbplyr,c044a5634fb880267718f853ce1c93ea,`x$name` never attempts to evaluate `name` (#1368).,NA,NA,NA,NA
 httr2,bd436726494eae7144dffb9f8609813d,"`req_perform_stream()` gains a `round = c(""byte"", ""line"")` argument to control how the stream is rounded (#437).",NA,NA,NA,NA
 dbplyr,a72ae775248ebdd803ae34bc67ffc7ca,The databricks backend now supports creating non-temporary tables too (#1418).,NA,NA,NA,NA
+dbplyr,1311d5e11a0d1ea8488677e234749c7b,"Oracle once again translates `head()` to `FETCH FIRST`. This does require Oracle 12c or newer, but it actually works, compared to the approach using `ROWNUM` from #1292 (#1436).",NA,NA,NA,NA
+dbplyr,d10bef051d831f803754b4ee19ba1d43,Specification of table names with schema/catalogs has been overhauled to make it simpler. This includes the following features and fixes:,NA,NA,NA,NA
+dbplyr,d10bef051d831f803754b4ee19ba1d43,"• The simplest way to refer to a qualified table is now to wrap it in `I()`, e.g. `I(""schema_name.table_name"")`.",NA,NA,NA,NA
+dbplyr,d10bef051d831f803754b4ee19ba1d43,• Use of `sql()` and `ident_q()` inside `in_catalog()` and `in_schema()` is once again supported (#1388).,NA,NA,NA,NA
+dbplyr,d10bef051d831f803754b4ee19ba1d43,• It's ok to use `ident_q()` once again (#1413) and you should no longer see unsuppressable warnings about using `in_schema()` (#1408).,NA,NA,NA,NA
+dbplyr,d10bef051d831f803754b4ee19ba1d43,"• The names of the arguments to `Id()` no longer matter, only their order (#1416). Additionally, thanks to changes to the DBI package, you no longer need to name each argument.",NA,NA,NA,NA
+dbplyr,d10bef051d831f803754b4ee19ba1d43,"• If you accidentally pass a named vector to any of the database identifer functions, those names will be automatically stripped (#1404).",NA,NA,NA,NA
+dbplyr,baddf92a4d305b6710b866c5c9a0dcfe,"When dbplyr creates an index on a table in a schema (e.g. `schema.table`), it now only includes the table name in the index name, not the schema name.",NA,NA,NA,NA
