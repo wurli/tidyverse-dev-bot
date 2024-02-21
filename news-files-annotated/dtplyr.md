@@ -50,6 +50,11 @@
     Grouping now works with non-standard column names (#451)
 
     !end-bullet!
+-   !begin-bullet!
+    `print.dtplyr_step()` gains `n`, `max_extra_cols`, and
+    `max_footer_lines` args (#464)
+
+    !end-bullet!
 
 !end-bullets-2!
 
