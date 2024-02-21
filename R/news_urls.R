@@ -162,7 +162,7 @@ news_urls <- function(..., .package = NULL, .for_humans = FALSE) {
     "https://raw.githubusercontent.com/{org}/{pkg}/{branch}/NEWS.md"
   }
   
-  out        <- map(pkgs, with, unclass(glue(url_pattern)))
+  out        <- map(pkgs, ~ with(., unclass(glue(url_pattern))))
   names(out) <- map_chr(pkgs, "pkg")
   
   if (is.null(.package)) out else out[.package]
