@@ -1,78 +1,210 @@
 news_urls <- function(..., .package = NULL, .for_humans = FALSE) {
   
   if (is.null(.package)) {
-    cli_h2("Getting URLs to {.code NEWS.md} files")
+    cli_h2("Getting URLs for {.code NEWS.md} files")
   }
-  
-  # Commented code can be used to dynamically produce `org`. It's hard-coded
-  # for clarity and consistency.
-  
-  # pkgs <- tidyverse_packages()
-  # 
-  # urls <- pkgs |> 
-  #   set_names() |> 
-  #   map(utils::packageDescription) |> 
-  #   map(~ paste(c(.x$URL, .x$BugReports), collapse = ", ")) |> 
-  #   map(strsplit, ",\\s*") |> 
-  #   map(1) |> 
-  #   map(str_remove_all, "#readme$") |>  
-  #   map(str_remove_all, "/issues$") |> 
-  #   map(unique) |> 
-  #   map(str_subset, "github") |> 
-  #   map(str_subset, "github\\.io", negate = TRUE) |> 
-  #   imap(str_subset) 
-  # 
-  # orgs <- urls %>% 
-  #   imap(function(url, pkg) {
-  #     url |> 
-  #       str_remove(glue("/{pkg}$")) |> 
-  #       str_extract(glue("(?<=/)[^/]+$"))
-  #   })
-  
-  orgs <- list(
-    broom         = "tidymodels", 
-    cli           = "r-lib", 
-    crayon        = "r-lib", 
-    dbplyr        = "tidyverse", 
-    dplyr         = "tidyverse", 
-    dtplyr        = "tidyverse",
-    forcats       = "tidyverse", 
-    ggplot2       = "tidyverse",
-    googledrive   = "tidyverse", 
-    googlesheets4 = "tidyverse", 
-    haven         = "tidyverse", 
-    hms           = "tidyverse", 
-    httr          = "r-lib", 
-    httr2         = "r-lib",
-    # jsonlite      = "jeroen", # Uses NEWS (not .md) and master instead of main
-    lubridate     = "tidyverse",
-    magrittr      = "tidyverse", 
-    modelr        = "tidyverse", 
-    pillar        = "r-lib", 
-    purrr         = "tidyverse", 
-    readr         = "tidyverse", 
-    readxl        = "tidyverse",
-    reprex        = "tidyverse", 
-    rlang         = "r-lib", 
-    rstudioapi    = "rstudio", 
-    rvest         = "tidyverse", 
-    stringr       = "tidyverse", 
-    tibble        = "tidyverse", 
-    tidyr         = "tidyverse", 
-    tidyverse     = "tidyverse",
-    xml2          = "r-lib"
-  )
+   
+  pkgs <- list(
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    # Tidyverse
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    list(pkg = "blob"         , org = "tidyverse" , branch = "main"),
+    list(pkg = "dbplyr"       , org = "tidyverse" , branch = "main"),
+    list(pkg = "dplyr"        , org = "tidyverse" , branch = "main"),
+    list(pkg = "dtplyr"       , org = "tidyverse" , branch = "main"),
+    list(pkg = "dsbox"        , org = "tidyverse" , branch = "main"),
+    list(pkg = "forcats"      , org = "tidyverse" , branch = "main"),
+    list(pkg = "funs"         , org = "tidyverse" , branch = "main"),
+    list(pkg = "ggplot2"      , org = "tidyverse" , branch = "main"),
+    list(pkg = "googledrive"  , org = "tidyverse" , branch = "main"),
+    list(pkg = "googlesheets4", org = "tidyverse" , branch = "main"),
+    list(pkg = "haven"        , org = "tidyverse" , branch = "main"),
+    list(pkg = "hms"          , org = "tidyverse" , branch = "main"),
+    list(pkg = "lubridate"    , org = "tidyverse" , branch = "main"),
+    list(pkg = "magrittr"     , org = "tidyverse" , branch = "main"),
+    list(pkg = "modelr"       , org = "tidyverse" , branch = "main"),
+    list(pkg = "multidplyr"   , org = "tidyverse" , branch = "main"),
+    list(pkg = "nycflights13" , org = "tidyverse" , branch = "main"),
+    list(pkg = "pillar"       , org = "r-lib"     , branch = "main"),
+    list(pkg = "purrr"        , org = "tidyverse" , branch = "main"),
+    list(pkg = "readr"        , org = "tidyverse" , branch = "main"),
+    list(pkg = "readxl"       , org = "tidyverse" , branch = "main"),
+    list(pkg = "reprex"       , org = "tidyverse" , branch = "main"),
+    list(pkg = "rlang"        , org = "r-lib"     , branch = "main"),
+    list(pkg = "rstudioapi"   , org = "rstudio"   , branch = "main"),
+    list(pkg = "rvest"        , org = "tidyverse" , branch = "main"),
+    list(pkg = "stringr"      , org = "tidyverse" , branch = "main"),
+    list(pkg = "tibble"       , org = "tidyverse" , branch = "main"),
+    list(pkg = "tidyr"        , org = "tidyverse" , branch = "main"),
+    list(pkg = "tidyverse"    , org = "tidyverse" , branch = "main"),
+    list(pkg = "vroom"        , org = "tidyverse" , branch = "main"),
+    list(pkg = "xml2"         , org = "r-lib"     , branch = "main"),
+    
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    # R infrastructure
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    # list(pkg = "ansistrings"  , org = "r-lib"     , branch = "master"), # Archived
+    # list(pkg = "archive"      , org = "r-lib"     , branch = "main"), # Probably overly technical
+    # list(pkg = "asciicast"    , org = "r-lib"     , branch = "main"), # Probably overly technical
+    list(pkg = "available"    , org = "r-lib"     , branch = "main"),
+    # list(pkg = "backports"    , org = "r-lib"     , branch = "main"), # Probably overly technical
+    list(pkg = "bench"        , org = "r-lib"     , branch = "main"),
+    # list(pkg = "brio"         , org = "r-lib"     , branch = "main"), # Probably overly technical
+    # list(pkg = "cachem"       , org = "r-lib"     , branch = "main"), # Probably overly technical
+    list(pkg = "callr"        , org = "r-lib"     , branch = "main"),
+    # list(pkg = "carrier"      , org = "r-lib"     , branch = "main"), # Probably overly technical
+    # list(pkg = "cereal"       , org = "r-lib"     , branch = "main"), # Probably overly technical
+    # list(pkg = "cleancall"    , org = "r-lib"     , branch = "main"), # Probably overly technical
+    list(pkg = "cli"          , org = "r-lib"     , branch = "main"),
+    # list(pkg = "cliapp"       , org = "r-lib"     , branch = "main"), # Superseded by cli
+    # list(pkg = "clisymbols"   , org = "r-lib"     , branch = "main"), # Probably overly technical
+    list(pkg = "clock"        , org = "r-lib"     , branch = "main"),
+    # list(pkg = "conf"         , org = "r-lib"     , branch = "master"), # Archived
+    list(pkg = "conflicted"   , org = "r-lib"     , branch = "main"),
+    # list(pkg = "coro"         , org = "r-lib"     , branch = "main"), # Probably overly technical
+    # list(pkg = "covr"         , org = "r-lib"     , branch = "main"), # Probably overly technical
+    # list(pkg = "cpp11"        , org = "r-lib"     , branch = "main"), # Probably overly technical
+    # list(pkg = "crancache"    , org = "r-lib"     , branch = "main"), # Probably overly technical
+    # list(pkg = "crayon"       , org = "r-lib"     , branch = "main"), # Superseded by cli
+    list(pkg = "debugme"      , org = "r-lib"     , branch = "main"),
+    # list(pkg = "decor"        , org = "r-lib"     , branch = "main"), # Probably overly technical
+    list(pkg = "desc"         , org = "r-lib"     , branch = "main"),
+    # list(pkg = "devoid"       , org = "r-lib"     , branch = "main"), # Very rarely updated
+    list(pkg = "devtools"     , org = "r-lib"     , branch = "main"),
+    list(pkg = "diffviewer"   , org = "r-lib"     , branch = "main"),
+    # list(pkg = "downlit"      , org = "r-lib"     , branch = "main"), # Probably overly technical
+    # list(pkg = "ellipsis"     , org = "r-lib"     , branch = "main"), # Superseded by rlang
+    # list(pkg = "evaluate"     , org = "r-lib"     , branch = "main"), # Probably overly technical
+    list(pkg = "fastmap"      , org = "r-lib"     , branch = "main"),
+    # list(pkg = "filelock"     , org = "r-lib"     , branch = "main"), # Probably overly technical
+    list(pkg = "fs"           , org = "r-lib"     , branch = "main"),
+    list(pkg = "gargle"       , org = "r-lib"     , branch = "main"),
+    # list(pkg = "generics"     , org = "r-lib"     , branch = "main"), # Probably overly technical
+    list(pkg = "gh"           , org = "r-lib"     , branch = "main"),
+    list(pkg = "gitcreds"     , org = "r-lib"     , branch = "main"),
+    list(pkg = "gmailr"       , org = "r-lib"     , branch = "main"),
+    # list(pkg = "gtable"       , org = "r-lib"     , branch = "main"), # Probably overly technical
+    # list(pkg = "here"         , org = "r-lib"     , branch = "main"), # Very rarely updated
+    list(pkg = "httr"         , org = "r-lib"     , branch = "main"),
+    list(pkg = "httr2"        , org = "r-lib"     , branch = "main"),
+    # list(pkg = "httrmock"     , org = "r-lib"     , branch = "master"), # Archived
+    # list(pkg = "isoband"      , org = "r-lib"     , branch = "main"), # Probably overly technical
+    # list(pkg = "keyring"      , org = "r-lib"     , branch = "main"), # Probably overly technical
+    # list(pkg = "later"        , org = "r-lib"     , branch = "main"), # Probably overly technical
+    list(pkg = "lifecycle"    , org = "r-lib"     , branch = "main"),
+    list(pkg = "lintr"        , org = "r-lib"     , branch = "main"),
+    # list(pkg = "liteq"        , org = "r-lib"     , branch = "main"), # Probably too technical
+    # list(pkg = "lobstr"       , org = "r-lib"     , branch = "main"), # Superseded by rlang
+    # list(pkg = "meltr"        , org = "r-lib"     , branch = "main"), # Probably overly technical 
+    list(pkg = "memoise"      , org = "r-lib"     , branch = "main"),
+    # list(pkg = "memtools"     , org = "r-lib"     , branch = "main"), # Probably overly technical
+    list(pkg = "mockery"      , org = "r-lib"     , branch = "main"),
+    # list(pkg = "oskeyring"    , org = "r-lib"     , branch = "main"), # Probably overly technical
+    # list(pkg = "osname"       , org = "r-lib"     , branch = "master"), # Archived
+    list(pkg = "pak"          , org = "r-lib"     , branch = "main"),
+    # list(pkg = "pingr"        , org = "r-lib"     , branch = "main"), # Probably overly technical
+    # list(pkg = "pkgapi"       , org = "r-lib"     , branch = "main"), # Unreleased
+    # list(pkg = "pkgbuild"     , org = "r-lib"     , branch = "main"), # Probably overly technical
+    # list(pkg = "pkgcache"     , org = "r-lib"     , branch = "main"), # Probably overly technical
+    # list(pkg = "pkgdepends"   , org = "r-lib"     , branch = "main"), # Probably overly technical
+    list(pkg = "pkgdown"      , org = "r-lib"     , branch = "main"),
+    # list(pkg = "pkgload"      , org = "r-lib"     , branch = "main"), # Probably overly technical
+    list(pkg = "prettycode"   , org = "r-lib"     , branch = "main"),
+    list(pkg = "prettyunits"  , org = "r-lib"     , branch = "main"),
+    # list(pkg = "processx"     , org = "r-lib"     , branch = "main"), # Probably overly technical
+    # list(pkg = "progress"     , org = "r-lib"     , branch = "main"), # Probably overly technical
+    # list(pkg = "ps"           , org = "r-lib"     , branch = "main"), # Probably overly technical
+    list(pkg = "R6"           , org = "r-lib"     , branch = "main"),
+    list(pkg = "ragg"         , org = "r-lib"     , branch = "main"),
+    # list(pkg = "rappdirs"     , org = "r-lib"     , branch = "main"), # Probably overly technical
+    list(pkg = "rcmdcheck"    , org = "r-lib"     , branch = "main"),
+    # list(pkg = "rematch2"     , org = "r-lib"     , branch = "main"), # Very rarely updated
+    list(pkg = "remotes"      , org = "r-lib"     , branch = "main"), 
+    # list(pkg = "revdepcheck"  , org = "r-lib"     , branch = "main"), # Probably overly technical
+    list(pkg = "rex"          , org = "r-lib"     , branch = "main"),
+    list(pkg = "roxygen2"     , org = "r-lib"     , branch = "main"),
+    # list(pkg = "roxygen2md"   , org = "r-lib"     , branch = "main"), # Probably overly technical
+    # list(pkg = "rprojroot"    , org = "r-lib"     , branch = "main"), # Probably overly technical
+    # list(pkg = "rray"         , org = "r-lib"     , branch = "main"), # Seemingly no longer updated
+    list(pkg = "scales"       , org = "r-lib"     , branch = "main"),
+    list(pkg = "sessioninfo"  , org = "r-lib"     , branch = "main"),
+    # list(pkg = "showimage"    , org = "r-lib"     , branch = "main"), # Very rarely updated
+    list(pkg = "slider"       , org = "r-lib"     , branch = "main"),
+    # list(pkg = "sloop"        , org = "r-lib"     , branch = "main"), # Seemingly no longer updated
+    list(pkg = "styler"       , org = "r-lib"     , branch = "main"),
+    # list(pkg = "svglite"      , org = "r-lib"     , branch = "main"), # Probably overly technical
+    # list(pkg = "systemfonts"  , org = "r-lib"     , branch = "main"), # Probably overly technical
+    # list(pkg = "tar"          , org = "r-lib"     , branch = "master"), # Archived
+    list(pkg = "testthat"     , org = "r-lib"     , branch = "main"),
+    # list(pkg = "textshaping"  , org = "r-lib"     , branch = "main"), # Probably overly technical
+    list(pkg = "tidyselect"   , org = "r-lib"     , branch = "main"),
+    # list(pkg = "tracer"       , org = "r-lib"     , branch = "main"), # Archived
+    # list(pkg = "tzdb"         , org = "r-lib"     , branch = "main"), # Probably too technical
+    # list(pkg = "urlchecker"   , org = "r-lib"     , branch = "main"), # Probably too technical
+    list(pkg = "usethis"      , org = "r-lib"     , branch = "main"),
+    list(pkg = "vctrs"        , org = "r-lib"     , branch = "main"),
+    # list(pkg = "vdiffr"       , org = "r-lib"     , branch = "main"), # Probably overly technical
+    list(pkg = "waldo"        , org = "r-lib"     , branch = "main"),
+    # list(pkg = "webfakes"     , org = "r-lib"     , branch = "main"), # Probably overly technical
+    # list(pkg = "whoami"       , org = "r-lib"     , branch = "main"), # Probably overly technical
+    list(pkg = "withr"        , org = "r-lib"     , branch = "main")
+    # list(pkg = "xmlparsedata" , org = "r-lib"     , branch = "main"), # Probably overly technical
+    # list(pkg = "xopen"        , org = "r-lib"     , branch = "main"), # Very rarely updated
+    # list(pkg = "ymlthis"      , org = "r-lib"     , branch = "main"), # Probably overly technical
+    # list(pkg = "zeallot"      , org = "r-lib"     , branch = "main"), # Very rarely updated
+    # list(pkg = "zip"          , org = "r-lib"     , branch = "main") # Probably overly technical
+  ) 
+
   
   url_pattern <- if (.for_humans) {
-    "https://github.com/{org}/{pkg}/blob/main/NEWS.md"
+    "https://github.com/{org}/{pkg}/blob/{branch}/NEWS.md"
   } else {
-    "https://raw.githubusercontent.com/{org}/{pkg}/main/NEWS.md"
+    "https://raw.githubusercontent.com/{org}/{pkg}/{branch}/NEWS.md"
   }
   
-  out <- orgs |> 
-    imap(function(org, pkg) unclass(glue(url_pattern))) |> 
-    c(list(...))
+  out        <- map(pkgs, with, unclass(glue(url_pattern)))
+  names(out) <- map_chr(pkgs, "pkg")
   
   if (is.null(.package)) out else out[.package]
   
 }
+
+# Helper to get all the packages for an organisation
+get_org_pkgs <- function(org, n_repos) {
+  resps <- seq_len(ceiling(n_repos / 100)) |> # Pages to get (100 pkgs/page)
+    map(
+      \(page) httr2::request(glue("https://api.github.com/orgs/{org}/repos")) |>
+        httr2::req_url_query(per_page = 100, page = page) |>
+        httr2::req_perform() |>
+        httr2::resp_body_json()
+    ) |>
+    list_flatten()
+  
+  check_repo_files_exist <- function(repo, files) {
+    urls <- glue("https://raw.githubusercontent.com/{org}/{repo}/HEAD/{files}")
+    files <- map(urls, safely(~ readLines(url(.), warn = FALSE))) |>
+      map("result") |>
+      compact()
+    length(files) == length(urls)
+  }
+  
+  pkgs <- resps |> 
+    keep(~ !.$archived) |>
+    map_chr("name") |>
+    set_names() |>
+    keep(check_repo_files_exist, c("DESCRIPTION", "NEWS.md")) |>
+    names() |>
+    sort()
+  
+  out <- pkgs |>
+    map(\(pkg) list(
+      pkg = pkg, 
+      org = org, 
+      branch = resps |> 
+        keep(\(r) r$name == pkg) |> 
+        map_chr("default_branch")
+    ))
+  
+  out
+}
+
