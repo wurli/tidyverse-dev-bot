@@ -56,7 +56,7 @@ news_urls <- function(..., .package = NULL, .for_humans = FALSE) {
     list(pkg = "cereal"       , org = "r-lib"     , branch = "main"),
     list(pkg = "cleancall"    , org = "r-lib"     , branch = "main"),
     list(pkg = "cli"          , org = "r-lib"     , branch = "main"),
-    list(pkg = "cliapp"       , org = "r-lib"     , branch = "main"),
+    # list(pkg = "cliapp"       , org = "r-lib"     , branch = "main"), # Superseded by cli
     list(pkg = "clisymbols"   , org = "r-lib"     , branch = "main"),
     list(pkg = "clock"        , org = "r-lib"     , branch = "main"),
     # list(pkg = "conf"         , org = "r-lib"     , branch = "master"), # Archived
@@ -65,15 +65,15 @@ news_urls <- function(..., .package = NULL, .for_humans = FALSE) {
     list(pkg = "covr"         , org = "r-lib"     , branch = "main"),
     list(pkg = "cpp11"        , org = "r-lib"     , branch = "main"),
     list(pkg = "crancache"    , org = "r-lib"     , branch = "main"),
-    list(pkg = "crayon"       , org = "r-lib"     , branch = "main"),
+    # list(pkg = "crayon"       , org = "r-lib"     , branch = "main"), # Superseded by cli
     list(pkg = "debugme"      , org = "r-lib"     , branch = "main"),
     list(pkg = "decor"        , org = "r-lib"     , branch = "main"),
     list(pkg = "desc"         , org = "r-lib"     , branch = "main"),
-    list(pkg = "devoid"       , org = "r-lib"     , branch = "main"),
+    # list(pkg = "devoid"       , org = "r-lib"     , branch = "main"), # Very rarely updated
     list(pkg = "devtools"     , org = "r-lib"     , branch = "main"),
     list(pkg = "diffviewer"   , org = "r-lib"     , branch = "main"),
     list(pkg = "downlit"      , org = "r-lib"     , branch = "main"),
-    list(pkg = "ellipsis"     , org = "r-lib"     , branch = "main"),
+    # list(pkg = "ellipsis"     , org = "r-lib"     , branch = "main"), # Superseded by rlang
     list(pkg = "evaluate"     , org = "r-lib"     , branch = "main"),
     list(pkg = "fastmap"      , org = "r-lib"     , branch = "main"),
     list(pkg = "filelock"     , org = "r-lib"     , branch = "main"),
@@ -93,8 +93,8 @@ news_urls <- function(..., .package = NULL, .for_humans = FALSE) {
     list(pkg = "later"        , org = "r-lib"     , branch = "main"),
     list(pkg = "lifecycle"    , org = "r-lib"     , branch = "main"),
     list(pkg = "lintr"        , org = "r-lib"     , branch = "main"),
-    list(pkg = "liteq"        , org = "r-lib"     , branch = "main"),
-    list(pkg = "lobstr"       , org = "r-lib"     , branch = "main"),
+    # list(pkg = "liteq"        , org = "r-lib"     , branch = "main"), # Probably too technical
+    # list(pkg = "lobstr"       , org = "r-lib"     , branch = "main"), # Superseded by rlang
     list(pkg = "meltr"        , org = "r-lib"     , branch = "main"),
     list(pkg = "memoise"      , org = "r-lib"     , branch = "main"),
     list(pkg = "memtools"     , org = "r-lib"     , branch = "main"),
@@ -103,7 +103,7 @@ news_urls <- function(..., .package = NULL, .for_humans = FALSE) {
     # list(pkg = "osname"       , org = "r-lib"     , branch = "master"), # Archived
     list(pkg = "pak"          , org = "r-lib"     , branch = "main"),
     list(pkg = "pingr"        , org = "r-lib"     , branch = "main"),
-    list(pkg = "pkgapi"       , org = "r-lib"     , branch = "main"),
+    # list(pkg = "pkgapi"       , org = "r-lib"     , branch = "main"), # Unreleased
     list(pkg = "pkgbuild"     , org = "r-lib"     , branch = "main"),
     list(pkg = "pkgcache"     , org = "r-lib"     , branch = "main"),
     list(pkg = "pkgdepends"   , org = "r-lib"     , branch = "main"),
@@ -125,12 +125,12 @@ news_urls <- function(..., .package = NULL, .for_humans = FALSE) {
     list(pkg = "roxygen2"     , org = "r-lib"     , branch = "main"),
     list(pkg = "roxygen2md"   , org = "r-lib"     , branch = "main"),
     list(pkg = "rprojroot"    , org = "r-lib"     , branch = "main"),
-    list(pkg = "rray"         , org = "r-lib"     , branch = "main"),
+    # list(pkg = "rray"         , org = "r-lib"     , branch = "main"), # Seemingly no longer updated
     list(pkg = "scales"       , org = "r-lib"     , branch = "main"),
     list(pkg = "sessioninfo"  , org = "r-lib"     , branch = "main"),
     list(pkg = "showimage"    , org = "r-lib"     , branch = "main"),
     list(pkg = "slider"       , org = "r-lib"     , branch = "main"),
-    list(pkg = "sloop"        , org = "r-lib"     , branch = "main"),
+    # list(pkg = "sloop"        , org = "r-lib"     , branch = "main"), # Seemingly no longer updated
     list(pkg = "styler"       , org = "r-lib"     , branch = "main"),
     list(pkg = "svglite"      , org = "r-lib"     , branch = "main"),
     list(pkg = "systemfonts"  , org = "r-lib"     , branch = "main"),
@@ -139,8 +139,8 @@ news_urls <- function(..., .package = NULL, .for_humans = FALSE) {
     list(pkg = "textshaping"  , org = "r-lib"     , branch = "main"),
     list(pkg = "tidyselect"   , org = "r-lib"     , branch = "main"),
     # list(pkg = "tracer"       , org = "r-lib"     , branch = "main"), # Archived
-    list(pkg = "tzdb"         , org = "r-lib"     , branch = "main"),
-    list(pkg = "urlchecker"   , org = "r-lib"     , branch = "main"),
+    # list(pkg = "tzdb"         , org = "r-lib"     , branch = "main"), # Probably too technical
+    # list(pkg = "urlchecker"   , org = "r-lib"     , branch = "main"), # Probably too technical
     list(pkg = "usethis"      , org = "r-lib"     , branch = "main"),
     list(pkg = "vctrs"        , org = "r-lib"     , branch = "main"),
     list(pkg = "vdiffr"       , org = "r-lib"     , branch = "main"),
@@ -149,7 +149,7 @@ news_urls <- function(..., .package = NULL, .for_humans = FALSE) {
     list(pkg = "whoami"       , org = "r-lib"     , branch = "main"),
     list(pkg = "withr"        , org = "r-lib"     , branch = "main"),
     list(pkg = "xmlparsedata" , org = "r-lib"     , branch = "main"),
-    list(pkg = "xopen"        , org = "r-lib"     , branch = "main"),
+    # list(pkg = "xopen"        , org = "r-lib"     , branch = "main"), # Very rarely updated
     list(pkg = "ymlthis"      , org = "r-lib"     , branch = "main"),
     list(pkg = "zeallot"      , org = "r-lib"     , branch = "main"),
     list(pkg = "zip"          , org = "r-lib"     , branch = "main")
