@@ -6667,3 +6667,4 @@ dbplyr,d10bef051d831f803754b4ee19ba1d43,"• If you accidentally pass a named ve
 dbplyr,baddf92a4d305b6710b866c5c9a0dcfe,"When dbplyr creates an index on a table in a schema (e.g. `schema.table`), it now only includes the table name in the index name, not the schema name.",NA,NA,NA,NA
 dbplyr,4c7feccbe9443c99592ebc2306191db9,You can once again use `NULL` on the LHS of an infix operator in order to generate SQL with unusual syntax (#1345).,NA,NA,NA,NA
 dtplyr,607329628d60f80eebe5dfaaa299a170,"`print.dtplyr_step()` gains `n`, `max_extra_cols`, and `max_footer_lines` args (#464)",NA,NA,NA,NA
+dbplyr,8fbba7854ec34f3dd4ae063291b73981,dbplyr now exports some tools to work with the internal `table_path` class which is useful for certain backends that need to work with this data structure (#1300).,NA,NA,NA,NA
