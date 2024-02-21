@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    You can once again use `NULL` on the LHS of an infix operator in
+    order to generate SQL with unusual syntax (#1345).
+
+    !end-bullet!
+-   !begin-bullet!
     Oracle once again translates `head()` to `FETCH FIRST`. This does
     require Oracle 12c or newer, but it actually works, compared to the
     approach using `ROWNUM` from #1292 (#1436).
@@ -40,6 +45,10 @@
         If you accidentally pass a named vector to any of the database
         identifer functions, those names will be automatically stripped
         (#1404).
+
+        !end-bullet!
+    -   !begin-bullet!
+        `tbl_sql(check_from)` is now deprecated.
 
         !end-bullet!
 

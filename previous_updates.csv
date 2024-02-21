@@ -6665,3 +6665,4 @@ dbplyr,d10bef051d831f803754b4ee19ba1d43,• It's ok to use `ident_q()` once agai
 dbplyr,d10bef051d831f803754b4ee19ba1d43,"• The names of the arguments to `Id()` no longer matter, only their order (#1416). Additionally, thanks to changes to the DBI package, you no longer need to name each argument.",NA,NA,NA,NA
 dbplyr,d10bef051d831f803754b4ee19ba1d43,"• If you accidentally pass a named vector to any of the database identifer functions, those names will be automatically stripped (#1404).",NA,NA,NA,NA
 dbplyr,baddf92a4d305b6710b866c5c9a0dcfe,"When dbplyr creates an index on a table in a schema (e.g. `schema.table`), it now only includes the table name in the index name, not the schema name.",NA,NA,NA,NA
+dbplyr,4c7feccbe9443c99592ebc2306191db9,You can once again use `NULL` on the LHS of an infix operator in order to generate SQL with unusual syntax (#1345).,NA,NA,NA,NA
