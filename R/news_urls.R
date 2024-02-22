@@ -102,7 +102,7 @@ news_urls <- function(..., .package = NULL, .for_humans = FALSE) {
               "keras",          "keras",   "rstudio",   "main",
             "leaflet",        "leaflet",   "rstudio",   "main",
             "nomnoml",        "nomnoml",   "rstudio",   "main",
-             "pins-r",         "pins-r",   "rstudio",   "main",
+               "pins",         "pins-r",   "rstudio",   "main",
             "plumber",        "plumber",   "rstudio",   "main",
          "pointblank",     "pointblank",   "rstudio",   "main",
                "pool",           "pool",   "rstudio",   "main",
