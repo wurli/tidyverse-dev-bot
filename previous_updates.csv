@@ -16534,3 +16534,210 @@ webshot2,8f163d5b83a07886d22758d4a33b6aa3,`webshot()` now supports JPEG (`.jpg` 
 webshot2,79e6c07b493080b166125533b6b7ac72,Fixed #52: `rmdshot()` did not work when used to screenshot an R Markdown document with `runtime: shiny` or `runtime: shinyrmd`. (#53),1,2,FALSE,NA
 webshot2,a1e7c1d689786c7ddb0ba328b4399e1a,Fixed #24: Console messages from `webshot()` can now be suppressed by setting `quiet = TRUE` or using the `webshot.quiet` global option. (@​trafficonese #45),1,3,FALSE,NA
 webshot2,90ee8b0eba07d050256c8b49d2e4dfe7,Added a `NEWS.md` file to track changes to the package.,1,4,FALSE,NA
+pins,277996148d1ec94be88e8cb71a89cefd,Changed the function signature of `pin_upload()` to be consistent with `pin_write()` i.e. arguments like `tags` must be passed by name and not position (#809).,1,1,FALSE,NA
+pins,32e0cf24be3350e62e0ddcbd81232fa8,Added example Python code to pin previews for Posit Connect (#806).,1,2,FALSE,NA
+pins,5cc593f70a05794cafcc6d4b6c1dd46f,Fixed a bug in how pins with the same name but different owners on Posit Connect were identified (#808).,1,3,FALSE,NA
+pins,a37a65f077427ed2a1c9844db98d44b8,"Fixed a bug in handling folders with duplicate names for Google Drive (#819, @​UchidaMizuki)",1,4,FALSE,NA
+pins,59624c3b25cd5eab650356f885d47bd7,Changed the function signature of `pin_write()` so arguments like `type` and `title` must be passed by name and not position (#792).,1,5,FALSE,NA
+pins,80e3e3e33531cd94e974fcaa2b2ef108,"Removed content and user caches for Connect altogether. Now, we look up usernames and content on the Connect server every time (#793).",1,6,FALSE,NA
+pins,7b9c5004e24a0bf7f6bca1dfa1020eaf,Added new `urls` item to metadata for a pin (#795).,1,7,FALSE,NA
+pins,ee02745ccdce6fe805ed02b292c061ab,Fixed how dots are checked in `pin_write()` to make user-facing messages more clear (#770).,1,8,FALSE,NA
+pins,6568d4445646f134bb672afc9282f9fd,Improved documentation about Connect caches (#771) and deleting pin versions (#773).,1,9,FALSE,NA
+pins,62cab9b539d2584bcb38419457098923,Added `board_deparse` for `board_url()` (#774).,1,10,FALSE,NA
+pins,563b7e9cb0a916ca1b51e8c03ce62ee6,"Fixed how `board_gdrive()` handles dribble objects (#780, @​gorkang and #782).",1,11,FALSE,NA
+pins,7b74dd2527c80afb4a54edb0050bd995,New environment variable `PINS_CACHE_DIR` controls the location of the default cache path (#748).,1,12,FALSE,NA
+pins,ab15d414e7e77b64ca794c6e46f09db9,Added new board for Google Drive `board_gdrive()` (#749).,1,13,FALSE,NA
+pins,00f9f39c35b2ceb80a59f3994088cd36,Updated test for new arrow release (#764).,1,14,FALSE,NA
+pins,a707f172de73f93106183e43ed32b7f9,"`pin_write()` no longer writes identical pin contents by default, and gains a `force_identical_write` argument for writing even when the pin contents are identical to the last version (#735).",1,15,FALSE,NA
+pins,4a12e15013f106e5f033a8e15ff02d7e,The `print` method for boards no longer calls `pin_list()` internally (#718).,1,16,FALSE,NA
+pins,b91e3c7236b865e02a59b43fc872cb72,"`board_s3()` now uses pagination for listing and versioning (#719, @​mzorko).",1,17,FALSE,NA
+pins,90d251c239e03f828b3d10e3e5381934,"Added `type = ""parquet""` to read and write Parquet files (#729).",1,18,FALSE,NA
+pins,a635691f85994a81be326e1dfb7cfac2,Updated error messages and type checking (#731) along with testing strategy (#724).,1,19,FALSE,NA
+pins,4f64896c3f04d77e8f7ae6c759b0adc7,"Added new check for whether a new version is the same as the previous version, as can happen when writing pin versions very quickly (#727).",1,20,FALSE,NA
+pins,75e3b4acf4ec4ec0b92300d9b09811ff,"Added new `headers` argument for `board_url()`, mostly for authentication, as well as new board for Connect vanity URLs `board_connect_url()` (#732).",1,21,FALSE,NA
+pins,dda5503082d3ed5edf052cf2ea82d7d3,Fixed bug in `cache_prune()` to correctly find caches for `board_url()` (#734).,1,22,FALSE,NA
+pins,3dc33ae2ec2bdd18e93f55a537247ae9,"Change the function `board_rsconnect()` to `board_connect()`, following RStudio's rebranding to Posit (#689).",1,23,FALSE,NA
+pins,9a44e19414fae1ead723c00c1ebedf13,"Changed `type = ""csv""` to use R's default value for `stringsAsFactors` i.e. `FALSE` (#664).",1,24,FALSE,NA
+pins,3f0155cd600fb4488d04e8e2e16cad9b,Functions for viewing legacy API pins in the RStudio Viewer pane are now deprecated (when possible) or removed (#679).,1,25,FALSE,NA
+pins,c937eeac6edd1004baa51c83b5605e95,The functions for accessing Kaggle resource as pins are no longer supported. We recommend you use the Kaggle CLI instead (#698).,1,26,FALSE,NA
+pins,01df49e348fd8a47460c07a86d839271,"Added vignettes describing how to manage custom formats and web-based boards (#631, #685, @​ijlyttle).",1,27,FALSE,NA
+pins,3dbb89e9e4018b32005d487223662e09,Added new board for Google Cloud Storage `board_gcs()` (#695).,1,28,FALSE,NA
+pins,a780fc18171482d9cb49198204251af4,Added new `tags` item to metadata for a pin (#677).,1,29,FALSE,NA
+pins,2ed6290ed54541d255d7e1917d67d801,Improved error message for `pin_versions()` (#657).,1,30,FALSE,NA
+pins,65ba815105f0ce311ca7b045c4b106d0,Switched content and user caches for Connect to use environments instead of files on disk. This means caches will no longer persist between sessions but will be much less likely to end up in a broken state (#667).,1,31,FALSE,NA
+pins,50469ca8e09868ba27045810c94eec13,"Added `write_board_manifest()` to write a manifest file `_pins.yaml` recording all pins and their versions to the board's root directory. This function only works for boards that are not read-only (#661, based on work of @​ijlyttle).",1,32,FALSE,NA
+pins,c294ebed888854c3c303970278383ecb,"Updated `board_url()` to handle versions recorded via a manifest file (#681, based on work of @​ijlyttle).",1,33,FALSE,NA
+pins,016c84938a9a22cb69c9bfd0b445b01f,Updated code preview on Posit Connect (#690).,1,34,FALSE,NA
+pins,e2ad182554544f7e8d05c524f93ca91c,"The `arrow` package is now suggested, rather than imported (#644, @​jonthegeek).",1,35,FALSE,NA
+pins,8aa07eb721cfefda02820348d6cb6234,"Fixed how Connect usernames are handled in messages, preview, etc (#643).",1,36,FALSE,NA
+pins,86fc72e2ea8e14b2b10242034d52aa2c,"Increased datetime precision to the second, for `pin_versions()` and related functions (#642, @​tomsing1).",1,37,FALSE,NA
+pins,b9fbbbb7882aab871323126fe1449465,"Pass the dots from `pin_write()` through to `s3_upload_file()` and `s3_uploade_yaml()` to support S3 tagging, encryption options, etc for pins (#648, #652, @​fh-mthomson).",1,38,FALSE,NA
+pins,e9c1f7a5d9913253b630ad3431333542,"`board_rsconnect()` now correctly finds the created date for pins (#623, @​bjfletcher).",1,39,FALSE,NA
+pins,98e734b062f3e374e2426f29d9c98c10,"`pin_upload()` now better handles path expansion (#585, @​sellorm).",1,40,FALSE,NA
+pins,d542a4914a9d16c7d6a799ddeab0a206,"The `pin_reactive_*()` functions now use the hash (rather than the created date) for polling (#595, @​thomaszwagerman).",1,41,FALSE,NA
+pins,e776601d1529eb68ac071dc79248524a,"`board_azure()` now allows you to set a `path` so that multiple boards can share the same container (#528, @​hongooi73).",1,42,FALSE,NA
+pins,7459e80b642e4fc8af1c5954128fe6a9,`board_deparse()` is more likely to generate runnable code when used with `board_rsconnect()` (#553).,1,43,FALSE,NA
+pins,c8c9470b80ea473aab8ddb5ad862dcb6,`legazy_azure()` works once again (#527).,1,44,FALSE,NA
+pins,be5c218cb364867f5f7482a0bf8070cf,`legacy_github()` works once again (#549).,1,45,FALSE,NA
+pins,196ea0b7a626038f84af0eae8ff6ceb4,`pin_meta()` now includes pin `name` (#544).,1,46,FALSE,NA
+pins,094db56b1316676f15c30c80d9f282b0,"`board_register()` works better when called directly, due to standardisation of cache paths all computation (#529).",1,47,FALSE,NA
+pins,3813a28b30eb8cddae294eb055fc2c19,Drop add-ins since they're not tested or documented (#525),1,48,FALSE,NA
+pins,80893afdc41d02baa9d629ea71b772ae,"`pin_read()` and `pin_write()` replace most uses of `pin_get()` and `pin()`. `pin_write()` has a `type` argument that allows you to choose how to serialise your R objects to disk, allowing you to manage the tradeoffs between speed, generality, and language inter-op, and a `metadata` argument that allows you to store arbitrary metadata (#430).",1,50,FALSE,NA
+pins,5727e4d15f4b4ce1029d7439bd53eb06,"`pin_download()` and `pin_upload()` are lower-level versions of `pin_read()` and `pin_write()` that work with file paths rather than R objects. They replace the use of `pin()` with a path and eliminate the type-instability in `pin_get()`, which can return either an R object or a character vector of paths.",1,51,FALSE,NA
+pins,ddf6c4b1cd1e34bd3381db7904364ad7,"`pin_browse()` replaces `board_browse()`, and takes you to a specific pin, either the original source on the internet, or the cached version on your local file system (#435).",1,52,FALSE,NA
+pins,1ab406b03d705f67ee39daa2ba5d257b,"`pin_delete()` replaces `pin_remove()`, and can delete multiple pins (#433).",1,53,FALSE,NA
+pins,0cac2ba425d8b12a8bbbdf32433043a8,`pin_list()` lists all pins in a board.,1,54,FALSE,NA
+pins,09f3e27d8baa88b0c523167b2c6bb4f9,`pin_meta()` replaces `pin_info()` and retrieves pin metadata (#418).,1,55,FALSE,NA
+pins,95b8490b03c1e42642bd095cf546353d,`pin_search()` replaces `pin_find()`. It is much more limited because the previous version was based on assumptions that are not true for many boards.,1,56,FALSE,NA
+pins,6521c25927123a7308018d238a9d017e,`pin_reactive_read()` and `pin_reactive_download()` replace `pin_reactive()`.,1,57,FALSE,NA
+pins,ed68ea462ef672b6eb1317c35daeda60,`pin_exists()` reports whether or not a pin exists.,1,58,FALSE,NA
+pins,a264b9198a0336ffc8d98bcf0810871c,"`pin_version_delete()` allows you to delete a single version. `pin_versions_prune()` (#459) allows you to easily prune old versions keeping either a specified number of versions, or all versions beneath a certain age.",1,59,FALSE,NA
+pins,8e69aaafee1139289009cd1305420c08,`board_azure()` stores data in Azure's blob storage. It is built on top of AzureStor (#474).,1,60,FALSE,NA
+pins,0e7d4d712148f170329230fcf2f2d0d5,"`board_folder()` is a generalised replacement for the legacy local board. `board_folder()` can store data in any directory, making it possible to share boards using shared network drives or on dropbox or similar. If you using pins casually and don't want to pick a directory, `board_local()` is a variant of `board_folder()` that stores data in a system data directory.",1,61,FALSE,NA
+pins,89ccadff786d1558916afad694bd12fd,`board_kaggle_dataset()` and `board_kaggle_competition()` allow you to download data from Kaggle. The data is automatically cached so that it's only downloaded when it changes.,1,62,FALSE,NA
+pins,ef6ad51bb6eebf97882afadfb2d8ac9f,"`board_ms365()` allow to pin data to MS One Drive and Sharpoint (#498, @​hongooi73).",1,63,FALSE,NA
+pins,4386ce3629080839b879b91d8370e77a,"`board_rsconnect()` shares data on RStudio connect. This board supports both modern and legacy APIs, so that you and your colleagues can use a mixture of pins versions as you transition to pins 1.0.0. Note that the compatibility is one directional: you can `pin_read()` pins created by `pin()`, but you can't `pin_get()` pins created by `pin_write()`.",1,64,FALSE,NA
+pins,a255c37580a9227832c67f9fb1a84492,`board_s3()` stores data in Amazon's S3 service. It is built on top of paws.,1,65,FALSE,NA
+pins,3d392ecadc05a104c0fcaf3c0f64beb5,"`board_url()` lets you create a manual board from a vector of URLs. This is useful because `pin_download()` and `pin_read()` are cached, so they only re-download the data if it has changed since the last time you used it (#409). This board is a replacement for `pin()`'s ability to work directly with URLs",1,66,FALSE,NA
+pins,0e3d7623537cf4f831bccdbb5e4f8e8f,All board objects now have class beginning with `pins_board_` and also inherit from common superclass `pins_board`.,1,67,FALSE,NA
+pins,ca55289de52497975d24b453b5e81b50,Pins no longer works with the connections pane. This automatically registered code tended to be either dangerous (because it's easy to accidentally leak credentials) or useless (because it relied on variables that the connection pane doesn't capture).,1,68,FALSE,NA
+pins,1e5ae3c5fba16048629295260246b1bd,Pinned data frames are longer converted to tibbles.,1,69,FALSE,NA
+pins,267510a154559fdc7c9dabd919e115e0,"The ""packages"" board is no longer registered by default; if you want to use this you'll need to register with `board_register(""packages"")`. It has been radically simplified so that it will no longer download packages, and it `pin_find()` now searches all packages that you have installed, rather than a stale snapshot of data in CRAN packages. The CRAN files dataset has been removed from the package.",1,70,FALSE,NA
+pins,d3f94063ae2b1d82aeea577f806fe989,`board_browse()` now works with local boards.,1,71,FALSE,NA
+pins,4e99b0c4ddd1246f8d447c17e9441f80,`board_rsconnect()` will automatically connect to the current RSC pin board when run inside RSC itself (assuming you have version 1.8.8 or later) (#396).,1,72,FALSE,NA
+pins,be7b2944eab02b826599d8de9d46db25,"`cache_browse()`, `cache_info()`, and `cache_prune()` provide some basic tooling around the local pins cache maintained by pins (#438).",1,73,FALSE,NA
+pins,3ce06ccf4b65e35ba9b333563f2587c1,`pin_fetch()` has been removed,1,74,FALSE,NA
+pins,c46f2b01d465ae5ad86625bae87be13f,`option(pins.invisible)` is now defunct and ignored.,1,75,FALSE,NA
+pins,d32b10e578ae3f997c516245631c287a,You can no longer switch from a versioned pin to an unversioned pin without first deleting the pin (#410).,1,76,FALSE,NA
+pins,ba1632dfe6b14578b20cae7463b8ef7a,Support downloading remote files when service returns incompatible `data.txt` file (#310).,1,77,FALSE,NA
+pins,81b38ed4a17878c499ba016d1c39edf1,Support for pins over 100MB in Windows systems (#313).,1,78,FALSE,NA
+pins,6f7b7b337040d5ceb1b38823a0090269,Avoid Windows crashing in `pin()` under some locales (#127).,1,79,FALSE,NA
+pins,e1ad8c0281eaac345262f23782ca6a77,Silenced 'no encoding supplied' warning (#330).,1,80,FALSE,NA
+pins,0600b56129d5a89f2522e30184fc276e,`pin_find()` no longer searches text with an undocumented regular expression syntax (#270).,1,81,FALSE,NA
+pins,ce85e7463d2ff3532de4a9e0667fc2a6,Default to using HTTPS in S3 boards (#304).,1,82,FALSE,NA
+pins,a0538c0bbd8c42da86d87c85b044c713,Support for AWS V4 signatures when registering S3 boards with `region` parameter (#304),1,83,FALSE,NA
+pins,492e14ff0682f3175afc2c9ead58a5ee,"Support for `path` to register a board under a subpath for Azure, DigitalOcean, Google Cloud and S3 boards (#200).",1,84,FALSE,NA
+pins,674e24b768456b3b149780156893d294,"Avoid creating pins named with unsupported characters for Azure, DigitalOcean, Google Cloud and S3 boards (#193).",1,85,FALSE,NA
+pins,1633ace6bb96c425e7b4155063df8c5d,Properly store relative paths when `path` parameter is specified in GitHub boards (#199).,1,86,FALSE,NA
+pins,7f1fe422daf649525b5e136ab70ea76f,Add support for repos with a 'main' branch as default (#336).,1,87,FALSE,NA
+pins,c4ee44b051f30e043dfa9bff37c37b65,Add support for large file in private repo releases (#292).,1,88,FALSE,NA
+pins,2d49064cbbdb6edf89ed32eeda2eb1e7,"When a board is registered with `versions = FALSE`, GitHub tags are also delete when large files are present (#285).",1,89,FALSE,NA
+pins,74a5fcf7587a921b23d211d94c069783,Invalid 'account' or 'server' parameters show proper errors (#296).,1,90,FALSE,NA
+pins,3005dcd72614058167dce5bd8218d7b0,"Increase total entries retrieved with `pin_find()`, configurable with `pins.search.count` (#296).",1,91,FALSE,NA
+pins,46e049103f965511e5ccddaa771e500f,Fix regression introduced in pins 0.4.2 (#253) preventing users from collaborating on existing pins they have access to (#302).,1,92,FALSE,NA
+pins,ac6f46e1fceceeb2aef60319270a2b6e,Avoid deleting pin when upload fails to avoid deleting versions (#306).,1,93,FALSE,NA
+pins,3593722f80434858fa46fc6421bccff7,Support re-creating pins from pins not previously properly updated (#308).,1,94,FALSE,NA
+pins,41e36a274f30d9a97b357af7e4f71b66,Adjust pin preview to only display 1K rows instead of 10K (#315).,1,95,FALSE,NA
+pins,40bd8c8da129046b6474645a5d1a9c34,Avoid changing columns names on data frame preview (#190).,1,96,FALSE,NA
+pins,0db69da24a9aab2bbaee02b7a1236971,Improve error message when token authentication fails (#327).,1,97,FALSE,NA
+pins,1acce68c17842093ad0ce715f9aee134,"For files bigger than 100MB `pin()` creates symlinks to speed up uploads, can be configured using the `pins.link.size` option (#273).",1,98,FALSE,NA
+pins,129224d5a9be340be3db6c155c4fe6fd,When using `pin(zip = TRUE)` the zip no longer contains local patahs (#277).,1,99,FALSE,NA
+pins,6bf04b93aeb3e0814e33922a571ef950,Disable caching on `data.txt` to support creating multiple pins at once (#275).,1,100,FALSE,NA
+pins,c4837ad080e3866ccaad6fe2b3e76ccb,Prevent connections pane from hanging when multiple pins are updated at once (#280).,1,101,FALSE,NA
+pins,3cfcfe6e83b40acb816f1475d65e33fa,Support for `pin_get(download = FALSE)` to avoid checking for updates.,1,102,FALSE,NA
+pins,10dd66239623030b18617bdf9629ddc9,Support for servers with mismatched `http` vs `https` protocols.,1,103,FALSE,NA
+pins,dd2e7d4faed10f3103df8a3873e31886,Make use of `RSCONNECT_TAR` when running a report inside RStudio Connect (#293).,1,104,FALSE,NA
+pins,0c4d9f5dce65ee2bfb2b337da06c4f1a,Properly export `board_pin_versions` to allow custom boards extending versions (#265).,1,105,FALSE,NA
+pins,5fd6cd8f3ae58cf4620c6f25cc291b4c,Fix regression creating pins when using a brand new cloud board (#268).,1,106,FALSE,NA
+pins,6a31fb48270ac4296b27914d95373ba1,Fix issue removing pins with custom domain names from cloud boards (#234).,1,107,FALSE,NA
+pins,853980df7e31fa3b6cb7cf5b379516a7,Fix warning when using `pin()` against storage locations with custom domain name (#237).,1,108,FALSE,NA
+pins,5e573ee1426a215214b403684166ff31,Fix issue where datatxt was not refreshing deleted entries (#239).,1,109,FALSE,NA
+pins,fcea62779e0f6197b70af3ea8ce0a556,Support for `versions = FALSE` in `board_register()` to avoid using too much space when creating pins (#245).,1,110,FALSE,NA
+pins,ff7ca57b1737c3e52636372065749d16,"Prevent administrators from overriding pins they don't own, unless the pin is specified as `user/name` (#253).",1,111,FALSE,NA
+pins,529e7af51601b367f77a944807bc024a,Support to connect to servers that have a redirect configured when the full server URL is not specified in `board_register()` (#256).,1,112,FALSE,NA
+pins,00e9e1c3cd91487905e58be3e667b5d4,Throw error when multiple accounts are associated to the same server (#261).,1,113,FALSE,NA
+pins,528be6ce617b3f7cedf4a8b95158ed8e,"When running in production environments (which usually set the `R_CONFIG_ACTIVE` environment variable), avoid using shared caches.",1,114,FALSE,NA
+pins,717fd3593b86b8f57fac56af87b9738b,Fix `pin()` failing to update cache when server returns `NULL` etag.,1,115,FALSE,NA
+pins,c474707aab09afc6b774ba5fc47507e6,Support for `custom_metadata` in `pin()` to allow saving custom fields in `data.txt` file.,1,116,FALSE,NA
+pins,e29493a444fd50b34c6c1e14f5cb974b,Improve performannce for `pin()` from URLs containing large files that are already been cached prerviously by `pin()` (#225).,1,117,FALSE,NA
+pins,a600caea89ec5cc8bd06ab861526b272,Avoid showing upload or download progress when creating R Markdown documents and other non-interactive use cases (#227).,1,118,FALSE,NA
+pins,b2fe5084dd1a01a10dabbc50de23d3dd,"When pin(url) fails and local cache exists, produce warning and retrieve cached version (#231).",1,119,FALSE,NA
+pins,b9e14e60326ca5f972b745a9d952127d,Support for `pin(zip = TRUE)` to create a zip file of the given path before creating the pin (#232).,1,120,FALSE,NA
+pins,d79f17983447eb405327b17c9297dd02,Fix when overriding pin with corrupt metadata.,1,121,FALSE,NA
+pins,4c3f490c649aa886bfbf9af5178ef875,Avoid using shared caches when running inside RStudio Connect.,1,122,FALSE,NA
+pins,8696958f7d000df48ece15bcca52df86,Fixed 'invalid uid' warning when creaating pin undner some Linux servers (#263).,1,123,FALSE,NA
+pins,8e9f6a097c6e40eebde39a0a5f973968,Support to find and download competition datasets.,1,124,FALSE,NA
+pins,85ed9f09b5a35c0a61752f87f8ec1f1e,Support for versioning in all boards.,1,125,FALSE,NA
+pins,be05ad9999de94a2c4eaa887f54a7ba7,Support for DigitalOcean board.,1,126,FALSE,NA
+pins,a9d8d88878807f511124cbab4522240c,Finding pins with `pin_find()` sort results by default (#201).,1,127,FALSE,NA
+pins,241aa4b54c36da6d9f19cf465a2679f3,Avoid `incomplete final line found` warning error wheen reading manifests.,1,128,FALSE,NA
+pins,c25cd91ed0f785bfc81de169a8fa6a6d,Support for using `pin()` across multiple concurrent processes (#182).,1,129,FALSE,NA
+pins,7c9f131e49e45a06993bcd79c89a99a6,"Support in `pin_get()` to download arbitrary files from cloud boards like Azure, DigitalOcean, GitHub, Google Cloud, RStudio Connect, and S3.",1,130,FALSE,NA
+pins,85dd3a93ad735c802b54b83a9d1dc478,Fix issue where http HEAD requests could tgimeout and prevent pin from downloading in very slow connections.,1,131,FALSE,NA
+pins,b97e77770b82ca5e8ac57cb5c7a5c997,Support `access_type` parameter for RStudio Connect.,1,132,FALSE,NA
+pins,49335322af19aef06466d3f8b6dce76c,`pin()` now refreshes the connections pane.,1,133,FALSE,NA
+pins,9a92fc6ffef0aad22e7c18587cd8d358,`pin_remove()` now refreshes the connections pane.,1,134,FALSE,NA
+pins,9fd2f72dd5e79bf98510174eed872fd5,Support for `code` parameter in `pin()` to customize R code used in the UI to retrieve the pin (#77).,1,135,FALSE,NA
+pins,1327264f2732bcfb3f273b54f7bd0452,Improve error message for `pin_get()` with duplicate names (#171).,1,136,FALSE,NA
+pins,fb50987d371d0b2fe1eccfc3ebdf9c61,Fix board register error when using URL with ports (#195).,1,137,FALSE,NA
+pins,ae6fa3aac891a1d48b8bae2a4036c648,Enable retrieving public pins without authentication (#83).,1,138,FALSE,NA
+pins,b42cfe2742ba0fdb52023ed4f96e5d4c,Support for `versions = FALSE` in `board_register()` to also delete release files when pin is removed (#91).,1,139,FALSE,NA
+pins,2cc00dc97df9659fe017131de8807b99,Support for `versions = FALSE` in `board_register()` to avoid creating versioned GitHub releases (#197).,1,140,FALSE,NA
+pins,ee85547eb7161e96190361c9f8d2dcac,Support for committing all github files with a single commit (#197).,1,141,FALSE,NA
+pins,4f5373329f96f841a39d54471c54628b,Support for custom GitHub hosts including GitHub Enterprise using the `host` parameter in `board_register_github()` (#163).,1,142,FALSE,NA
+pins,039d020b93f21f88a1480b0c3fba3aa9,"Using `pin()` now searches for `data.txt` files in URLs when the URL contains no file extension, behavior can be turnned off with the `pins.search.datatxt` option.",1,143,FALSE,NA
+pins,d067b8855d3c3a4c9a5d9ff1e9ad8bb6,`pin_info()` adds support for `metadata` parameter to avoid retrieving pin contents.,1,144,FALSE,NA
+pins,727e4fd7706071adeb5a8b31fd8220b9,"Added support for `host` parameter to configure ""s3.amazonaws.com"" to custom locations.",1,145,FALSE,NA
+pins,242284b3cd891a3d45e2e3f09e43c625,Fix regression uploading large datasets as release files.,1,146,FALSE,NA
+pins,1cd69440dc82488aa424c2e2fe7b75b0,`pin_info()` prints long character strings in their own line.,1,147,FALSE,NA
+pins,4cbf7d76702bcd86571eaf958cba0bb2,"Fixed issue in `pin_remove()` for S3, Azure, GCloud, Google and website boards (#138).",1,148,FALSE,NA
+pins,ccbadce1eedc0fb5ec3ca53324afad1c,Fixed issue when pinning complex data frames with nested lists (#142).,1,149,FALSE,NA
+pins,7ee7d565fe171b5894ec8ed9f0a12b2d,Added missing `key` parameter in `board_register_azure()`.,1,150,FALSE,NA
+pins,0dedeec02e3348986b58da2f01ad8936,Fixed connection suggested code when caused by `pin_find()` (#137).,1,151,FALSE,NA
+pins,05ddff090fe7f72913b96e10744f93cc,Fixed connection launcher for Azure connections.,1,152,FALSE,NA
+pins,43e07f2fd8e2e80b0c97146a6314652a,Fix issue uploading large pins causing `is.character(type) is not TRUE` error.,1,153,FALSE,NA
+pins,7dbb677327e51a427628f23c7df1a4ad,Fix issue affecting boards registered with trailing slash (#151).,1,154,FALSE,NA
+pins,34c0927e6916f06362f46da0f4d68d01,Improve error messages when a pin fails to be created (#149).,1,155,FALSE,NA
+pins,07e7e1b4f5432eae4007deaa194b95f1,"Added support for `CONNECT_API_KEY` and `CONNECT_SERVER` in place of `RSCONNECT_API` and `RSCONNECT_SERVER`, which they are still supported for backwards-compatibility.",1,156,FALSE,NA
+pins,6e43d54c6b7a87bc1ca13307c3b599df,Support for Azure board.,1,157,FALSE,NA
+pins,183e9058b35feafa43534011686afc1f,Support for Google Cloud board.,1,158,FALSE,NA
+pins,e0b409f58fb73b7089ff0c305afbd586,Support for S3 board.,1,159,FALSE,NA
+pins,357bfc87f66304b0401c7d6a808ea7d2,"`pin()` extracts URLs that end in `.gz` and `zip`, which can be disabled with `pin(""<url>"", extract = FALSE)`.",1,160,FALSE,NA
+pins,87e64f48f8d4d95d917d911a91a42e9d,"`pin()` no longer prints the pin, you can revert this behavior with `options(pins.invisible = FALSE)` (#122).",1,161,FALSE,NA
+pins,c84ed8f11478fcf06faac7eda564c9e7,Show upload progress for files larger than 10mb.,1,162,FALSE,NA
+pins,87bfd28eeb06380897d3e0174ffaf0f3,Avoid changing `data.table` when using `pin()` and `get_pin()`.,1,163,FALSE,NA
+pins,2fc46a9d1cd6078f9ed98807a94014a8,Support for `pin_info()` to describe a pin and `extended = TRUE` in `pin_find()` to show all extended information about each pin.,1,164,FALSE,NA
+pins,d501339bcb288c58e594ef858e5b2a2f,"Support for `extract` parameter in `pin_get()`, `pin()`, and `pin_reactive()` to override default file extraction behavior.",1,165,FALSE,NA
+pins,e32db3482821133d1c8fd30ee5ed991f,Support to extract gzip files when the `R.utils` package is installed.,1,166,FALSE,NA
+pins,0821a1d5c7de72880351a3b2b9797d86,Show download progress for files larger than 10mb.,1,167,FALSE,NA
+pins,3f1c84320645fff8a9202aa3e15d5ee0,Support for `I()` to force a pin to be created without additional overhead of exporting CSV and other enhancements (#73).,1,168,FALSE,NA
+pins,b823fee7375fcf5e8f59a126973638a2,Support creating automatic `name` when using `pin()` and multiple URL.,1,169,FALSE,NA
+pins,ab7a25c40ad0365533f477b40262fa34,"Avoid ""cannot create dir"" warning in systems with an empty cache folder.",1,170,FALSE,NA
+pins,2959cd0d6c68090e9a41d712b58cf51e,Gracefully handle errors when a pin's preview can't be created.,1,171,FALSE,NA
+pins,f97ad5558d0bc12f01d351cca9ab96f7,Website boards now support the browse menu item in the connection.,1,172,FALSE,NA
+pins,0baa53477cc53c13af94c66ea541fba4,Fix data frames previewing character columns with special characters.,1,173,FALSE,NA
+pins,f8c82a63562159609090b9cbaad35ce6,Fix connection code when a board is registered automatically.,1,174,FALSE,NA
+pins,5d26f5cd7025ae7c3908b3181bf99492,Fix issue where `pin_find()` would not show all available pins.,1,175,FALSE,NA
+pins,b6481947f27fdc1a2acbaf867a6c5c32,Fix issue where RStudio Connections pane would not show all pins.,1,176,FALSE,NA
+pins,68396580f1196bdf03ec291c116119ad,Store all downloaded content under user subfolder insited rsconnect cache.,1,177,FALSE,NA
+pins,54100b9b98276d39cee3f6ffd4be145b,Removed `pin_find()` workaround for beta rsconnect server where searching was causing timeout.,1,178,FALSE,NA
+pins,1e8ff9be3feb86f40a5c7fd59a0302c1,Fix for RStudio Connect servers where `/content/` is not used in content URLs.,1,179,FALSE,NA
+pins,bbd4b5e4a7c00b93c131aebf91f2a9a6,Fix issue expanding pins columns in RStudio for pins with similar names in RStudio Connect boards.,1,180,FALSE,NA
+pins,ba8e2f7fe305adb2c3425feb1ccd3c08,Fix issue removing pins with similar names in RStudio Connect boards.,1,181,FALSE,NA
+pins,3ef393b79a58f16c4164b322dab9344f,Support for Python 3.,1,182,FALSE,NA
+pins,fbf6c7c8637f0f9850feae87adc0abb6,The `name` parameter in `board_register_datatxt()` is now optional.,1,183,FALSE,NA
+pins,cc63989a8e5a9ed9814fbe0514b09fc0,Fix in `pin_find()` to properly search desecription files.,1,184,FALSE,NA
+pins,c71328ed50284783882469e2992b2cdf,Various fixes for GitHub boards using the `path` parameter when registering the board (#121).,1,185,FALSE,NA
+pins,33fc336452a4fdbcc41d5c13cb1611e2,Support for retrieving pins shared by others in RStudio Connect boards.,1,186,FALSE,NA
+pins,2c3183aa6649263a61fb71448de4156f,Support for RStudio Connect servers running under a subpath in the server.,1,187,FALSE,NA
+pins,2f6fa645d771e579580ad14ad92b2c1a,Add support for `RSCONNECT_SERVER` environment variable to ease configuration of automated RStudio Connect reports.,1,188,FALSE,NA
+pins,1db22f1ff06c3c8b24127cf42ec95495,Fix intermittent failure to retrieve pins from RStudio Connect boards while creating them.,1,189,FALSE,NA
+pins,b79f48d75b948cd23bd0505873fc1d52,Fix in RStudio Connect boards to retrieve pins that match other pin names (#45).,1,190,FALSE,NA
+pins,0e4ad0cf6b91ca01a144d62e4a58d4b6,Fix for data frames with nested data frames in rsconnect boards (#36).,1,191,FALSE,NA
+pins,075be915fc2e4ddf9b4944ee8bb40cbf,`board_register_github()` now checks for the repo to exist (#63).,1,192,FALSE,NA
+pins,316a6e663a4d00ae4883269cc5d79190,"Adjusted max upload file to 25mb to avoid ""server error"" in the API, larger files than 25mb uploaded as release files. This can be configured using the `pins.github.release` option, which deefaults to 25.",1,193,FALSE,NA
+pins,471a7bdb98945f8594a60e6c1bbc8482,Allow overriding GitHub pin over a pin that partially failed to be created.,1,194,FALSE,NA
+pins,cb2c4d7ce8ce29ffd784889fb66def9e,"Using a board will attempt to automatically register, such that `pin(iris, board = ""rsconnect"")` would work for the default configuration even when the board is not explicitly registered (#50).",1,195,FALSE,NA
+pins,9907d12e748d35c503890b64f438343e,"Registers ""local"" board by default, you no longer need to explicitly run `board_register_local()` (#56).",1,196,FALSE,NA
+pins,fc2c8f0812b86fee421456a5547ce4fd,"Make use of the `rappdirs` package to define the default cache path, replaces `~/.pins`. Use `board_cache_path()` to retrieve default cache path.",1,197,FALSE,NA
+pins,e0e72cc514e4133e8a8cf2a6c6d28385,Fix for data.txt boards created from GitHub boards using large files.,1,198,FALSE,NA
+pins,fbb3f192c4dc3ce10f029fbbf089b9c2,Support to upload files larger than 50mb in GitHub boards as release files.,1,199,FALSE,NA
+pins,76b4cc87e5605ad430427b7f8601a590,Fix CRAN request to explicitly opt-in to use local home path as cache by running `board_register_local()`.,1,200,FALSE,NA
+pins,43b9ebc7b2d371f5d50a57b35af1287a,Fix error when retrieving pins from Kaggle boards (#31).,1,201,FALSE,NA
+pins,37170aaade18e7b496abb7026df42b25,Support for large files in GitHub board (#30).,1,202,FALSE,NA
+pins,26da131758523b91ee0f83653e54301b,Support for local board.,1,203,FALSE,NA
+pins,309da87cfbecbd4b39868e39c14ba63a,Support for Kaggle board.,1,204,FALSE,NA
+pins,33f80129e548eba04360b59cadc1da90,Support for packages board.,1,205,FALSE,NA
+pins,1a80a8fc6efe2aa76dc9cb10bd4a17f9,Support for RStudio Connect board.,1,206,FALSE,NA
+pins,446838b8aa5a08a6e1369f493360958d,Support for GitHub board.,1,207,FALSE,NA
+pins,2785d5dce17a83a1415910dba8c13ac7,Support for website board.,1,208,FALSE,NA
