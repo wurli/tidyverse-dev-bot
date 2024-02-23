@@ -3,6 +3,15 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `iterate(simplify=TRUE)` rewritten in C for speed improvements.
+
+    !end-bullet!
+-   !begin-bullet!
+    Fixed hang encountered (sometimes) when attempting to call
+    `iterate()` on an exhausted `py_iterator()` object multiple times.
+
+    !end-bullet!
+-   !begin-bullet!
     Update for Pandas 2.2 deprecation of `Index.format()` (#1537,
     #1538).
 
