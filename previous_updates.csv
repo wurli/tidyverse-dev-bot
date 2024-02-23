@@ -16742,3 +16742,4 @@ pins,1a80a8fc6efe2aa76dc9cb10bd4a17f9,Support for RStudio Connect board.,1,206,F
 pins,446838b8aa5a08a6e1369f493360958d,Support for GitHub board.,1,207,FALSE,NA
 pins,2785d5dce17a83a1415910dba8c13ac7,Support for website board.,1,208,FALSE,NA
 renv,721bf9c13a6078068bb3717014905917,`renv` now reports missing system libraries as part of its ABI checks in `renv::diagnostics()`.,NA,NA,NA,NA
+ggplot2,e5663f8e4b8a32245c19d5d711a1485c,The default `vjust` for the `axis.title.y.right` element is now 1 instead of 0.,NA,NA,NA,NA
