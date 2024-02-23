@@ -60,6 +60,15 @@
     factors, offset them to be 0-based (reported in `#1055`).
 
     !end-bullet!
+-   !begin-bullet!
+    `op_convert_to_numpy()` now returns unconverted NumPy arrays.
+
+    !end-bullet!
+-   !begin-bullet!
+    `op_array()` and `op_convert_to_tensor()` no longer error when
+    casting R doubles to integer types.
+
+    !end-bullet!
 
 !end-bullets-1!
 
