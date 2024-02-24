@@ -16746,3 +16746,4 @@ ggplot2,e5663f8e4b8a32245c19d5d711a1485c,The default `vjust` for the `axis.title
 keras,589ceedc43d9564ccb357f022c4f7b6d,`op_convert_to_numpy()` now returns unconverted NumPy arrays.,NA,NA,NA,NA
 keras,455049c25d0b147df9d993721d4831e1,`op_array()` and `op_convert_to_tensor()` no longer error when casting R doubles to integer types.,NA,NA,NA,NA
 reticulate,a455b2094d027f33afd2ab7c18e28165,`iterate(simplify=TRUE)` rewritten in C for speed improvements.,NA,NA,NA,NA
+blastula,e5144c78c85ba6801bbeaac9ee3fa628,Fixed Excel attachments which were broken due to faulty conversion into RFC2822. (#314),NA,NA,NA,NA

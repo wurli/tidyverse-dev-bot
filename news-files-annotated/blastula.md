@@ -1,9 +1,11 @@
 # blastula (development version)
 
+# blastula 0.3.5
+
 !begin-bullets-1!
 
 -   !begin-bullet!
-    Fixed Excel attachments which were broken due to wrong conversion
+    Fixed Excel attachments which were broken due to faulty conversion
     into RFC2822. (#314)
     !end-bullet!
 
