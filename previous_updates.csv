@@ -16747,3 +16747,4 @@ keras,589ceedc43d9564ccb357f022c4f7b6d,`op_convert_to_numpy()` now returns uncon
 keras,455049c25d0b147df9d993721d4831e1,`op_array()` and `op_convert_to_tensor()` no longer error when casting R doubles to integer types.,NA,NA,NA,NA
 reticulate,a455b2094d027f33afd2ab7c18e28165,`iterate(simplify=TRUE)` rewritten in C for speed improvements.,NA,NA,NA,NA
 blastula,e5144c78c85ba6801bbeaac9ee3fa628,Fixed Excel attachments which were broken due to faulty conversion into RFC2822. (#314),NA,NA,NA,NA
+remotes,d48d0eaf1ab22fc1e580099c55dff7bd,"Add `additional_repositories` parameter to `dev_package_deps()` which allows user to choose whether `Additional_repositories` should be extracted from the `DESCRIPTION` file and appended to repos. (#782, @​maksymiuks)",NA,NA,NA,NA

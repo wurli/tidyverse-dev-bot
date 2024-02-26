@@ -5,23 +5,25 @@
 -   !begin-bullet!
     `install_github()` now uses credentials from the git credential
     store, if `GITHUB_PAT` and `GITHUB_TOKEN` are not set.
-
     !end-bullet!
 -   !begin-bullet!
     Remotes field accepts explicit package names:
     `<pkgname>=<type>::<username>/<repo>` (#719, @heavywatal).
-
     !end-bullet!
 -   !begin-bullet!
     Add `remote_precedence` parameter to `dev_package_deps()` which
     allows user to choose whether remote sources should have a priority
     over cran sources. (#732, @maksymiuks)
-
     !end-bullet!
 -   !begin-bullet!
     `dev_package_deps()` now works for packages with `Enhances`
     dependencies (#711, @maksymiuks).
-
+    !end-bullet!
+-   !begin-bullet!
+    Add `additional_repositories` parameter to `dev_package_deps()`
+    which allows user to choose whether `Additional_repositories` should
+    be extracted from the `DESCRIPTION` file and appended to repos.
+    (#782, @maksymiuks)
     !end-bullet!
 
 !end-bullets-1!
