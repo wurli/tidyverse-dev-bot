@@ -16748,3 +16748,4 @@ keras,455049c25d0b147df9d993721d4831e1,`op_array()` and `op_convert_to_tensor()`
 reticulate,a455b2094d027f33afd2ab7c18e28165,`iterate(simplify=TRUE)` rewritten in C for speed improvements.,NA,NA,NA,NA
 blastula,e5144c78c85ba6801bbeaac9ee3fa628,Fixed Excel attachments which were broken due to faulty conversion into RFC2822. (#314),NA,NA,NA,NA
 remotes,d48d0eaf1ab22fc1e580099c55dff7bd,"Add `additional_repositories` parameter to `dev_package_deps()` which allows user to choose whether `Additional_repositories` should be extracted from the `DESCRIPTION` file and appended to repos. (#782, @​maksymiuks)",NA,NA,NA,NA
+rvest,14d483800e0f88ce97f7d8c52e3551ad,"New example vignette displays the same starwars data but rendered dynamically using JS, so you need to use `read_html_live()` to get the data.",NA,NA,NA,NA
