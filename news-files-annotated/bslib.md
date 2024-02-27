@@ -123,6 +123,12 @@
     inferred. (#933)
 
     !end-bullet!
+-   !begin-bullet!
+    `uiOutput()` no longer yields unwanted double padding when it's
+    parent container uses `gap` for spacing multiple elements (e.g.,
+    `layout_columns()`, `page_fillable()`, etc). (#992)
+
+    !end-bullet!
 
 !end-bullets-4!
 
