@@ -16752,3 +16752,6 @@ rvest,14d483800e0f88ce97f7d8c52e3551ad,"New example vignette displays the same s
 bslib,e9f0c8299542c0f80c76731aa1f35f22,"`uiOutput()` no longer yields unwanted double padding when it's parent container uses `gap` for spacing multiple elements (e.g., `layout_columns()`, `page_fillable()`, etc). (#992)",NA,NA,NA,NA
 ggplot2,cef7e61404da891816a4bc409ee70cb2,Fixed bug where discrete scales could not map aesthetics only consisting of `NA`s (#5623),NA,NA,NA,NA
 ggplot2,b599b2cfaee34b84641c9e78b10c9fce,"Facet evaluation is better at dealing with inherited errors (@​teunbrand, #5670).",NA,NA,NA,NA
+ggplot2,1c4fffd1990fadd329e4c92d76c54e66,Fixed spurious warnings from `sec_axis()` with `breaks = NULL` (#5713).,NA,NA,NA,NA
+ggplot2,5184fb3cfde1a509ce61f3256d67adb6,"Patterns and gradients are now also enabled in `geom_sf()` (@​teunbrand, #5716).",NA,NA,NA,NA
+ggplot2,7681f04ccaa2870875a4416a08b5e350,"`stat_bin()` deals with non-finite breaks better (@​teunbrand, #5665).",NA,NA,NA,NA
