@@ -16755,3 +16755,4 @@ ggplot2,b599b2cfaee34b84641c9e78b10c9fce,"Facet evaluation is better at dealing 
 ggplot2,1c4fffd1990fadd329e4c92d76c54e66,Fixed spurious warnings from `sec_axis()` with `breaks = NULL` (#5713).,NA,NA,NA,NA
 ggplot2,5184fb3cfde1a509ce61f3256d67adb6,"Patterns and gradients are now also enabled in `geom_sf()` (@​teunbrand, #5716).",NA,NA,NA,NA
 ggplot2,7681f04ccaa2870875a4416a08b5e350,"`stat_bin()` deals with non-finite breaks better (@​teunbrand, #5665).",NA,NA,NA,NA
+bslib,8ae620d5e192e7ec408d5bdef3406c9d,`page_navbar()` and `navset_bar()` now validate and transform `padding` and `gap` arguments into appropriate CSS values. (#991),NA,NA,NA,NA

@@ -129,6 +129,11 @@
     `layout_columns()`, `page_fillable()`, etc). (#992)
 
     !end-bullet!
+-   !begin-bullet!
+    `page_navbar()` and `navset_bar()` now validate and transform
+    `padding` and `gap` arguments into appropriate CSS values. (#991)
+
+    !end-bullet!
 
 !end-bullets-4!
 
