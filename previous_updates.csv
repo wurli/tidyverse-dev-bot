@@ -16750,3 +16750,5 @@ blastula,e5144c78c85ba6801bbeaac9ee3fa628,Fixed Excel attachments which were bro
 remotes,d48d0eaf1ab22fc1e580099c55dff7bd,"Add `additional_repositories` parameter to `dev_package_deps()` which allows user to choose whether `Additional_repositories` should be extracted from the `DESCRIPTION` file and appended to repos. (#782, @​maksymiuks)",NA,NA,NA,NA
 rvest,14d483800e0f88ce97f7d8c52e3551ad,"New example vignette displays the same starwars data but rendered dynamically using JS, so you need to use `read_html_live()` to get the data.",NA,NA,NA,NA
 bslib,e9f0c8299542c0f80c76731aa1f35f22,"`uiOutput()` no longer yields unwanted double padding when it's parent container uses `gap` for spacing multiple elements (e.g., `layout_columns()`, `page_fillable()`, etc). (#992)",NA,NA,NA,NA
+ggplot2,cef7e61404da891816a4bc409ee70cb2,Fixed bug where discrete scales could not map aesthetics only consisting of `NA`s (#5623),NA,NA,NA,NA
+ggplot2,b599b2cfaee34b84641c9e78b10c9fce,"Facet evaluation is better at dealing with inherited errors (@​teunbrand, #5670).",NA,NA,NA,NA

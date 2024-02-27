@@ -1,4 +1,10 @@
+
 # ggplot2 (development version)
+
+* Fixed bug where discrete scales could not map aesthetics only consisting of
+  `NA`s (#5623)
+* Facet evaluation is better at dealing with inherited errors 
+  (@teunbrand, #5670).
 
 # ggplot2 3.5.0
 
