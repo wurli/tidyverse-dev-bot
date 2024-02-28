@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `renv` now only writes a `.renvignore` file into the cache directory
+    if the cache appears to be part of the current project.
+
+    !end-bullet!
+-   !begin-bullet!
     `renv` now reports missing system libraries as part of its ABI
     checks in `renv::diagnostics()`.
 

@@ -16762,3 +16762,4 @@ pointblank,cbe219916c24dd66cb67332f2214e29f,`interrogate()` gains two new option
 pointblank,cbe219916c24dd66cb67332f2214e29f,"• `progress`: Whether interrogation progress should be printed to the console (`TRUE` for interactive sessions, same as before)",NA,NA,NA,NA
 pointblank,cbe219916c24dd66cb67332f2214e29f,• `show_step_label`: Whether each validation step's label value should be printed alongside the progress.,NA,NA,NA,NA
 pointblank,423f0a1941af0796890d6cb05dc8e02f,Fixes issue with rendering reports in Quarto html documents.,NA,NA,NA,NA
+renv,ea6ee5447e2ef2c9dc2c981dd2d59816,`renv` now only writes a `.renvignore` file into the cache directory if the cache appears to be part of the current project.,NA,NA,NA,NA
