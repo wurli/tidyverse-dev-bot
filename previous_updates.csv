@@ -16756,3 +16756,5 @@ ggplot2,1c4fffd1990fadd329e4c92d76c54e66,Fixed spurious warnings from `sec_axis(
 ggplot2,5184fb3cfde1a509ce61f3256d67adb6,"Patterns and gradients are now also enabled in `geom_sf()` (@​teunbrand, #5716).",NA,NA,NA,NA
 ggplot2,7681f04ccaa2870875a4416a08b5e350,"`stat_bin()` deals with non-finite breaks better (@​teunbrand, #5665).",NA,NA,NA,NA
 bslib,8ae620d5e192e7ec408d5bdef3406c9d,`page_navbar()` and `navset_bar()` now validate and transform `padding` and `gap` arguments into appropriate CSS values. (#991),NA,NA,NA,NA
+gt,8da9465a5d90c2e300d14ef4e5b549e1,"`data_color()` throws a more informative error if a calculation failed (@​olivroy, #1373).",NA,NA,NA,NA
+gt,72ef620413e7ef63a840d68bd8975236,"`gtsave()` saves correctly to .rtf if using `cols_label()` and `summary_rows()` or `grand_summary_rows()` (@​olivroy, #1233)",NA,NA,NA,NA
