@@ -14,8 +14,15 @@
   - `"{.seg_val}"`: The current segment's value/group
   
   These dynamic values may be useful for validations that get expanded into multiple steps.
+  
+* `interrogate()` gains two new options for printing progress in the console output:
+
+  - `progress`: Whether interrogation progress should be printed to the console (`TRUE` for interactive sessions, same as before)
+  - `show_step_label`: Whether each validation step's label value should be printed alongside the progress.
 
 ## Minor improvements and bug fixes
+
+* Fixes issue with rendering reports in Quarto html documents.
 
 * When no columns are returned from a `{tidyselect}` expression in `columns`, the agent's report now displays the originally supplied *expression* instead of simply blank (e.g., in `create_agent(small_table) %>% col_vals_null(matches("z"))`).
 

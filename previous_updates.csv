@@ -16758,3 +16758,7 @@ ggplot2,7681f04ccaa2870875a4416a08b5e350,"`stat_bin()` deals with non-finite bre
 bslib,8ae620d5e192e7ec408d5bdef3406c9d,`page_navbar()` and `navset_bar()` now validate and transform `padding` and `gap` arguments into appropriate CSS values. (#991),NA,NA,NA,NA
 gt,8da9465a5d90c2e300d14ef4e5b549e1,"`data_color()` throws a more informative error if a calculation failed (@​olivroy, #1373).",NA,NA,NA,NA
 gt,72ef620413e7ef63a840d68bd8975236,"`gtsave()` saves correctly to .rtf if using `cols_label()` and `summary_rows()` or `grand_summary_rows()` (@​olivroy, #1233)",NA,NA,NA,NA
+pointblank,cbe219916c24dd66cb67332f2214e29f,`interrogate()` gains two new options for printing progress in the console output:,NA,NA,NA,NA
+pointblank,cbe219916c24dd66cb67332f2214e29f,"• `progress`: Whether interrogation progress should be printed to the console (`TRUE` for interactive sessions, same as before)",NA,NA,NA,NA
+pointblank,cbe219916c24dd66cb67332f2214e29f,• `show_step_label`: Whether each validation step's label value should be printed alongside the progress.,NA,NA,NA,NA
+pointblank,423f0a1941af0796890d6cb05dc8e02f,Fixes issue with rendering reports in Quarto html documents.,NA,NA,NA,NA
