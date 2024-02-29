@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed performance loss when the `.data` pronoun is used in `aes()`
+    (#5730).
+    !end-bullet!
+-   !begin-bullet!
     Fixed bug where discrete scales could not map aesthetics only
     consisting of `NA`s (#5623)
     !end-bullet!
