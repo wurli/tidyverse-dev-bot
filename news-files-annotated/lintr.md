@@ -87,6 +87,11 @@
     powers the lint exclusion logic, also uses this setting), but the
     new up-front validation in v3.1.1 incorrectly used `perl = FALSE`.
     !end-bullet!
+-   !begin-bullet!
+    `.lintr` configs set by option `lintr.linter_file` or environment
+    variable `R_LINTR_LINTER_FILE` can point to subdirectories (#2512,
+    @MichaelChirico).
+    !end-bullet!
 
 !end-bullets-3!
 
