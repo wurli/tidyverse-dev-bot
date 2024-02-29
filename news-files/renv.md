@@ -1,5 +1,8 @@
 # renv (development version)
 
+
+# renv 1.0.5
+
 * `renv` now only writes a `.renvignore` file into the cache directory
   if the cache appears to be part of the current project.
 

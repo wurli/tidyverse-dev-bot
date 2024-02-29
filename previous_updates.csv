@@ -16763,3 +16763,5 @@ pointblank,cbe219916c24dd66cb67332f2214e29f,"• `progress`: Whether interrogati
 pointblank,cbe219916c24dd66cb67332f2214e29f,• `show_step_label`: Whether each validation step's label value should be printed alongside the progress.,NA,NA,NA,NA
 pointblank,423f0a1941af0796890d6cb05dc8e02f,Fixes issue with rendering reports in Quarto html documents.,NA,NA,NA,NA
 renv,ea6ee5447e2ef2c9dc2c981dd2d59816,`renv` now only writes a `.renvignore` file into the cache directory if the cache appears to be part of the current project.,NA,NA,NA,NA
+pointblank,af1846154aeebfcc424f9380b7bbe0a4,Fixes issue with rendering reports in Quarto HTML documents.,NA,NA,NA,NA
+pointblank,f3d19ed3da3651458a5735d1a6272a32,"When no columns are returned from a `{tidyselect}` expression in `columns`, the agent's report now displays the originally supplied *expression* instead of simply blank (e.g., in `create_agent(small_table) |> col_vals_null(matches(""z""))`).",NA,NA,NA,NA

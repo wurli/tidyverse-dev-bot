@@ -7,9 +7,9 @@
 -   !begin-bullet!
     Complete `{tidyselect}` support for the `columns` argument of *all
     validation functions*, as well as in `has_columns()` and
-    `info_columns`. `columns` can now takes familiar column-selection
-    expressions as one would use inside `dplyr::select()`. This also
-    begins a process of deprecation:
+    `info_columns`. The `columns` argument can now take familiar
+    column-selection expressions as one would use inside
+    `dplyr::select()`. This also begins a process of deprecation:
 
     !begin-bullets-2!
     -   !begin-bullet!
@@ -70,14 +70,14 @@
 !begin-bullets-5!
 
 -   !begin-bullet!
-    Fixes issue with rendering reports in Quarto html documents.
+    Fixes issue with rendering reports in Quarto HTML documents.
 
     !end-bullet!
 -   !begin-bullet!
     When no columns are returned from a `{tidyselect}` expression in
     `columns`, the agent's report now displays the originally supplied
     *expression* instead of simply blank (e.g., in
-    `create_agent(small_table) %>% col_vals_null(matches("z"))`).
+    `create_agent(small_table) |> col_vals_null(matches("z"))`).
 
     !end-bullet!
 -   !begin-bullet!
