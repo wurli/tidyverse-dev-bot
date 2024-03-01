@@ -1,5 +1,7 @@
 # pointblank (development version)
 
+# pointblank 0.12.0
+
 ## New features
 
 * Complete `{tidyselect}` support for the `columns` argument of *all validation functions*, as well as in `has_columns()` and `info_columns`. The `columns` argument can now take familiar column-selection expressions as one would use inside `dplyr::select()`. This also begins a process of deprecation:
@@ -24,7 +26,7 @@
 
 * Fixes issue with rendering reports in Quarto HTML documents.
 
-* When no columns are returned from a `{tidyselect}` expression in `columns`, the agent's report now displays the originally supplied *expression* instead of simply blank (e.g., in `create_agent(small_table) |> col_vals_null(matches("z"))`).
+* When no columns are returned from a `{tidyselect}` expression in `columns`, the agent's report now displays the originally supplied *expression* instead of being simply blank (e.g., in `create_agent(small_table) |> col_vals_null(matches("z"))`).
 
 * Fixes issue with the hashing implementation to improve performance and alignment of validation steps in the multiagent.
 

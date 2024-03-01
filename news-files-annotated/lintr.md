@@ -294,7 +294,7 @@
 -   !begin-bullet!
     `unnecessary_nesting_linter()` for discouraging overly-nested code
     where an early return or eliminated sub-expression (inside '{') is
-    preferable (#2317 and part of #884, @MichaelChirico).
+    preferable (#2317, #2334 and part of #884, @MichaelChirico).
     !end-bullet!
 -   !begin-bullet!
     `consecutive_mutate_linter()` for encouraging consecutive calls to
