@@ -16769,3 +16769,4 @@ lintr,8078253f913858054b3931e02c265078,"Drop support for posting GitHub comments
 ggplot2,ef59506a8bf7dd36f057742a1ef5fe03,Fixed performance loss when the `.data` pronoun is used in `aes()` (#5730).,NA,NA,NA,NA
 lintr,c76d1fd9ad1628c78cb10252ce07bce8,"`.lintr` configs set by option `lintr.linter_file` or environment variable `R_LINTR_LINTER_FILE` can point to subdirectories (#2512, @​MichaelChirico).",NA,NA,NA,NA
 vetiver,0c618604f02edb3fb1fa811dfaa1a094,Added new `additional_pkgs` argument for writing plumber files (#271).,NA,NA,NA,NA
+ragg,a37f5c7bfc6ae9d57b12ddcdd21cb4ea,Silence a bug in clang-ASAN that incorrectly reported sanitiser issues,NA,NA,NA,NA
