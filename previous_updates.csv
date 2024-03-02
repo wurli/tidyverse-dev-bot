@@ -16771,3 +16771,4 @@ lintr,c76d1fd9ad1628c78cb10252ce07bce8,"`.lintr` configs set by option `lintr.li
 vetiver,0c618604f02edb3fb1fa811dfaa1a094,Added new `additional_pkgs` argument for writing plumber files (#271).,NA,NA,NA,NA
 ragg,a37f5c7bfc6ae9d57b12ddcdd21cb4ea,Silence a bug in clang-ASAN that incorrectly reported sanitiser issues,NA,NA,NA,NA
 renv,b06bdab2c4f863232b58dea50d08e52c,"`renv` now uses a platform-specific prefix on Linux for library and cache paths by default with R (\>= 4.4.0). This is equivalent to setting `RENV_PATHS_PREFIX_AUTO = TRUE`. If necessary, this behavior can be disabled by setting `RENV_PATHS_PREFIX_AUTO = FALSE` in an appropriate R startup file. (#1211)",NA,NA,NA,NA
+renv,26bb9b9de49553f69037737d2d390669,Fixed an issue where attempts to install binary packages from older PPM snapshots could fail. (#1839),NA,NA,NA,NA

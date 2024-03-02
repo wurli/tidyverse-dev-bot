@@ -3,11 +3,17 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed an issue where attempts to install binary packages from older
+    PPM snapshots could fail. (#1839)
+
+    !end-bullet!
+-   !begin-bullet!
     `renv` now uses a platform-specific prefix on Linux for library and
     cache paths by default with R (\>= 4.4.0). This is equivalent to
     setting `RENV_PATHS_PREFIX_AUTO = TRUE`. If necessary, this behavior
     can be disabled by setting `RENV_PATHS_PREFIX_AUTO = FALSE` in an
     appropriate R startup file. (#1211)
+
     !end-bullet!
 
 !end-bullets-1!
