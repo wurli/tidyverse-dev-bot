@@ -21,6 +21,13 @@
     (#943)
 
     !end-bullet!
+-   !begin-bullet!
+    `page_sidebar()` now places the `title` element in a `.navbar`
+    container that matches the structure of `page_navbar()`. This
+    ensures that the title elements of `page_sidebar()` and
+    `page_navbar()` have consistent appearance. (#998)
+
+    !end-bullet!
 
 !end-bullets-1!
 
@@ -95,6 +102,21 @@
     Full-screen cards are now supported on mobile devices: the *Expand
     card* button is revealed when a user taps on the card (thanks
     @Damonsoul, #961).
+
+    !end-bullet!
+-   !begin-bullet!
+    We adjusted the shadows used for cards and popovers in the Shiny
+    preset. Cards now use a slightly smaller shadow and the same shadow
+    style is also now used by popovers. (#998)
+
+    !end-bullet!
+-   !begin-bullet!
+    We increased the spacing between elements just slightly in the Shiny
+    preset. This change is most noticeable in the `layout_columns()` or
+    `layout_column_wrap()` component. In these and other components, you
+    can use `gap` and `padding` arguments to choose your own values, or
+    you can set the `$bslib-spacer` (Sass) or `--bslib-spacer` (CSS)
+    variable. (#998)
 
     !end-bullet!
 

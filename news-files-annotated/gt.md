@@ -3,6 +3,15 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    PDF output now allows the font size of a table to be set using the
+    table.font.size parameter in the tab_options function (#1472). The
+    font sizes of individual table cells (including those in the body,
+    stubs, column headings, etc.) can be set using tab_style function.
+    Several other options specified in tab_style are now reflected in
+    PDF output.
+
+    !end-bullet!
+-   !begin-bullet!
     `data_color()` throws a more informative error if a calculation
     failed (@olivroy, #1373).
 
