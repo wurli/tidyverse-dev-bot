@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed an issue where `renv` could fail to update the project
+    autoloader after calling `renv::upgrade()`. (#1837)
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed an issue where attempts to install binary packages from older
     PPM snapshots could fail. (#1839)
 
