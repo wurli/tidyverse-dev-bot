@@ -3,13 +3,6 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
-    Added the `project.id` project setting, which is used primarily when
-    forming external library paths for use with R package projects. This
-    should help resolve issues seen when attempting to build vignettes
-    during `R CMD build` with projects using renv. (#1798)
-
-    !end-bullet!
--   !begin-bullet!
     Fixed an issue where attempts to install binary packages from older
     PPM snapshots could fail. (#1839)
 
