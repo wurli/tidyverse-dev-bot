@@ -47,6 +47,10 @@
     bslib 0.6+ / Bootstrap 5.3+ (@tanho63, #2388)
     !end-bullet!
 -   !begin-bullet!
+    Allow detection of quarto `.qmd` articles and let them be processed
+    using the `quarto` vignette builder (@rcannood, #2404).
+    !end-bullet!
+-   !begin-bullet!
     Fix setting `seed` in `build_reference()`. The seed was reset too
     early, before. (@salim-b, #2355)
     !end-bullet!
