@@ -3,54 +3,59 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fix parsing of github profiles and issues into links when present at
+    the beginning of list items (@pearsonca, #2122)
+    !end-bullet!
+-   !begin-bullet!
     Correct parse usage for S3 methods with non-syntactic class names
     (#2384).
-
     !end-bullet!
 -   !begin-bullet!
     Deprecated `build_favicon()` was removed (`build_favicons()`
     remains).
-
     !end-bullet!
 -   !begin-bullet!
     Use cli to provide interactive feedback.
-
     !end-bullet!
 -   !begin-bullet!
     Preserve Markdown code blocks with class rmd from roxygen2 docs
     (@salim-b, #2298).
-
     !end-bullet!
 -   !begin-bullet!
     Avoid unwanted linebreaks from parsing `DESCRIPTION` (@salim-b,
     #2247).
-
     !end-bullet!
 -   !begin-bullet!
     Remove redundant entries in the documentation index when multiple
     explicit `@usage` tags are provided (@klmr, #2302)
-
     !end-bullet!
 -   !begin-bullet!
     The article index now sorts vignettes and non-vignette articles
     alphabetically by their filename (literally, their `basename()`), by
     default (@jennybc, #2253).
-
     !end-bullet!
 -   !begin-bullet!
     Add Catalan translation (@jmaspons, #2333)
-
     !end-bullet!
 -   !begin-bullet!
     Set RNG seed for htmlwidgets IDs. This reduces noise in pkgdown
     reference HTML output when examples generate htmlwidgets (@salim-b,
     #2294).
-
     !end-bullet!
 -   !begin-bullet!
     Fix BS5 navbar template to get `navbar.type: dark` to work with
     bslib 0.6+ / Bootstrap 5.3+ (@tanho63, #2388)
-
+    !end-bullet!
+-   !begin-bullet!
+    Fix setting `seed` in `build_reference()`. The seed was reset too
+    early, before. (@salim-b, #2355)
+    !end-bullet!
+-   !begin-bullet!
+    Translates citation sections (@eliocamp, #2410).
+    !end-bullet!
+-   !begin-bullet!
+    Topic names that conflict with selector functions can now be listed
+    as references in `_pkgdown.yml` (@dmurdoch, #2397).
     !end-bullet!
 
 !end-bullets-1!
