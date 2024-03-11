@@ -3,9 +3,18 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Performance improvements (#337, #338, #339, #341)
+
+    !end-bullet!
+-   !begin-bullet!
     `eval_select()` out-of-bounds errors now use the verb "select"
     rather than "subset" in the error message for consistency with
     `dplyr::select()` (#271).
+
+    !end-bullet!
+-   !begin-bullet!
+    Fix for CRAN checks.
+
     !end-bullet!
 
 !end-bullets-1!
