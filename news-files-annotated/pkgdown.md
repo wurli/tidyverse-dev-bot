@@ -41,6 +41,16 @@
     Add Catalan translation (@jmaspons, #2333)
     !end-bullet!
 -   !begin-bullet!
+    Set RNG seed before building articles by default. Use
+    `build_articles(seed = NULL)` for the old (unreproducible)
+    behaviour. (@salim-b, #2354).
+    !end-bullet!
+-   !begin-bullet!
+    Set RNG seed for htmlwidgets IDs. This reduces noise in final HTML
+    output, both for articles and examples in the reference that contain
+    htmlwidgets (@salim-b, #2294, #2354).
+    !end-bullet!
+-   !begin-bullet!
     Set RNG seed for htmlwidgets IDs. This reduces noise in pkgdown
     reference HTML output when examples generate htmlwidgets (@salim-b,
     #2294).

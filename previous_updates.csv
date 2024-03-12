@@ -16791,3 +16791,5 @@ htmltools,34824f11fe657f0764a7557c915f3518,"`bindFillRole()` now attaches its `H
 bslib,078053eebdb4f578a3b76ad7ed47139a,Fixed a couple `update_popover()` bugs. (#747),NA,NA,NA,NA
 pkgdown,43036efa1277969668993a6dc1c9a887,"Allow detection of quarto `.qmd` articles and let them be processed using the `quarto` vignette builder (@​rcannood, #2404).",NA,NA,NA,NA
 pkgdown,83b837c36d35194f22530725f1f3ae90,`\cr` is now translated to `<br>` not `<br />` (#2400).,NA,NA,NA,NA
+pkgdown,4a2f49cf7a8cbd84e7c1f18ea81c11f2,"Set RNG seed before building articles by default. Use `build_articles(seed = NULL)` for the old (unreproducible) behaviour. (@​salim-b, #2354).",NA,NA,NA,NA
+pkgdown,b6d60b7e7427c4daeb0eb6e8d1f7f0c3,"Set RNG seed for htmlwidgets IDs. This reduces noise in final HTML output, both for articles and examples in the reference that contain htmlwidgets (@​salim-b, #2294, #2354).",NA,NA,NA,NA
