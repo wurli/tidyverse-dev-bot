@@ -1,8 +1,17 @@
 # CHANGES IN DT VERSION 0.33
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    Added `outputArgs` parameter to `renderDataTable`, to allow width
+    and height to be set when using interactive R Markdown documents.
+    !end-bullet!
+
+!end-bullets-1!
+
 # CHANGES IN DT VERSION 0.32
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     Fixed a bug that caused the column used for grouping with the
@@ -50,11 +59,11 @@
 
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # CHANGES IN DT VERSION 0.31
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     Upgraded DataTables version to 1.13.6 (thanks, @stla, #1091).
@@ -76,11 +85,11 @@
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 # CHANGES IN DT VERSION 0.30
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     Fixed a bug that when using `updateSearch()`, the clear button
@@ -110,11 +119,11 @@
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 # CHANGES IN DT VERSION 0.29
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     Support Bootstrap 5 with `datatable(style = "auto")` (thanks,
@@ -134,11 +143,11 @@
 
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 # CHANGES IN DT VERSION 0.28
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     Upgraded DataTables to v1.13.4 (thanks, @stla, #1063).
@@ -150,11 +159,11 @@
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # CHANGES IN DT VERSION 0.27
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     `dataTableOutput()` gains a new `fill` parameter. When `TRUE` (the
@@ -163,14 +172,14 @@
     about its height and has been marked with
     `htmltools::bindFillRole(x, container = TRUE)`. (#2198)
 
-    !begin-bullets-7!
+    !begin-bullets-8!
     -   !begin-bullet!
         The primary motivation for this is to allow DT to grow/shrink
         inside `bslib::card_body_fill()`. When doing so, you'll also
         want to set `fillContainer = TRUE` in `datatable()`.
         !end-bullet!
 
-    !end-bullets-7!
+    !end-bullets-8!
     !end-bullet!
 -   !begin-bullet!
     Bug fixed: when editing a table, it was impossible to switch from an
@@ -189,11 +198,11 @@
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 # CHANGES IN DT VERSION 0.26
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     Upgraded DataTables to v1.12.1.
@@ -210,11 +219,11 @@
 
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 # CHANGES IN DT VERSION 0.25
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     Server-side filtering is now able to be ran as a `future` via the
@@ -227,11 +236,11 @@
 
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 # CHANGES IN DT VERSION 0.24
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     Fixed a bug with missing numeric values rendered as `0` (thanks,
@@ -246,27 +255,27 @@
 
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 # CHANGES IN DT VERSION 0.23
 
-!begin-bullets-11!
+!begin-bullets-12!
 
 -   !begin-bullet!
     Make sure number inputs return numeric values when editing numeric
     table cells (thanks, @stla, #987).
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-12!
 
 # CHANGES IN DT VERSION 0.22
 
-!begin-bullets-12!
+!begin-bullets-13!
 
 -   !begin-bullet!
     Enhancements to `updateFilters()` (#971):
 
-    !begin-bullets-13!
+    !begin-bullets-14!
     -   !begin-bullet!
         Added support for data with integer and character columns
         (@mikmart #972).
@@ -287,7 +296,7 @@
         Disabled status is now also affected by updates (@mikmart #977).
         !end-bullet!
 
-    !end-bullets-13!
+    !end-bullets-14!
     !end-bullet!
 -   !begin-bullet!
     New functions `doColumnSearch()` and `doGlobalSearch()` let you do
@@ -308,13 +317,13 @@
 
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
 
 # CHANGES IN DT VERSION 0.21
 
 ## NEW FEATURES
 
-!begin-bullets-14!
+!begin-bullets-15!
 
 -   !begin-bullet!
     Add the `zero.print` argument to `formatPercentage()`,
@@ -340,11 +349,11 @@
 
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-15!
 
 ## MAJOR CHANGES
 
-!begin-bullets-15!
+!begin-bullets-16!
 
 -   !begin-bullet!
     Now users can provide column names of the data to
@@ -352,11 +361,11 @@
     indexes or "\_all" (thanks, @shrektan #948).
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-16!
 
 ## MINOR CHANGES
 
-!begin-bullets-16!
+!begin-bullets-17!
 
 -   !begin-bullet!
     `styleRow()` and `styleEqual()` now allows a scalar `values`
@@ -366,11 +375,11 @@
     version (thanks, @shrektan #955).
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-17!
 
 ## BUG FIXES
 
-!begin-bullets-17!
+!begin-bullets-18!
 
 -   !begin-bullet!
     Fix the bug that `addRow()` doesn't support a list of `data` after R
@@ -389,26 +398,26 @@
 
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-18!
 
 # CHANGES IN DT VERSION 0.20
 
 ## MAJOR CHANGES
 
-!begin-bullets-18!
+!begin-bullets-19!
 
 -   !begin-bullet!
     Upgraded the DataTables library to v1.11.3 (thanks, @shrektan #942,
     @michaelquinn32 #940).
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-19!
 
 # CHANGES IN DT VERSION 0.19
 
 ## NEW FEATUERS
 
-!begin-bullets-19!
+!begin-bullets-20!
 
 -   !begin-bullet!
     Add `vertical` and `opacity` option to `filter` which applies to the
@@ -433,24 +442,24 @@
 
     !end-bullet!
 
-!end-bullets-19!
+!end-bullets-20!
 
 ## MAJOR CHANGES
 
-!begin-bullets-20!
+!begin-bullets-21!
 
 -   !begin-bullet!
     Upgraded jQuery from v1.12.4 to v3.x imported from the **jquerylib**
     R package.
     !end-bullet!
 
-!end-bullets-20!
+!end-bullets-21!
 
 # CHANGES IN DT VERSION 0.18
 
 ## NEW FEATURES
 
-!begin-bullets-21!
+!begin-bullets-22!
 
 -   !begin-bullet!
     `datatable()`'s `style` argument now defaults to `'auto'`, which
@@ -466,11 +475,11 @@
 
     !end-bullet!
 
-!end-bullets-21!
+!end-bullets-22!
 
 ## BUG FIXES
 
-!begin-bullets-22!
+!begin-bullets-23!
 
 -   !begin-bullet!
     `datatable(data)` and `datatable(data, fillContainer = TRUE)` now
@@ -478,13 +487,13 @@
     `flexdashboard::flex_dashboard()` (thanks, @cpsievert, #904).
     !end-bullet!
 
-!end-bullets-22!
+!end-bullets-23!
 
 # CHANGES IN DT VERSION 0.17
 
 ## NEW FEATURES
 
-!begin-bullets-23!
+!begin-bullets-24!
 
 -   !begin-bullet!
     Support the new datatables' extension SearchBuilder. With this new
@@ -501,11 +510,11 @@
 
     !end-bullet!
 
-!end-bullets-23!
+!end-bullets-24!
 
 ## MINOR CHANGES
 
-!begin-bullets-24!
+!begin-bullets-25!
 
 -   !begin-bullet!
     The `autoHideNavigation` argument now works with the default theme.
@@ -521,11 +530,11 @@
 
     !end-bullet!
 
-!end-bullets-24!
+!end-bullets-25!
 
 ## BUG FIXES
 
-!begin-bullets-25!
+!begin-bullets-26!
 
 -   !begin-bullet!
     Fix the issue that `addRow()` would fail when the proxy DT table
@@ -540,13 +549,13 @@
 
     !end-bullet!
 
-!end-bullets-25!
+!end-bullets-26!
 
 # CHANGES IN DT VERSION 0.16
 
 ## NEW FEATURES
 
-!begin-bullets-26!
+!begin-bullets-27!
 
 -   !begin-bullet!
     Add a new plugin accent-neutralise, which can be used for searching
@@ -561,11 +570,11 @@
 
     !end-bullet!
 
-!end-bullets-26!
+!end-bullets-27!
 
 ## MINOR CHANGES
 
-!begin-bullets-27!
+!begin-bullets-28!
 
 -   !begin-bullet!
     Upgrade the SearchPanes extension to v1.1.1 so that it can display
@@ -585,11 +594,11 @@
 
     !end-bullet!
 
-!end-bullets-27!
+!end-bullets-28!
 
 ## BUG FIXES
 
-!begin-bullets-28!
+!begin-bullets-29!
 
 -   !begin-bullet!
     Fix the issue that the sorting results may not be expected after
@@ -604,13 +613,13 @@
 
     !end-bullet!
 
-!end-bullets-28!
+!end-bullets-29!
 
 # CHANGES IN DT VERSION 0.15
 
 ## BUG FIXES
 
-!begin-bullets-29!
+!begin-bullets-30!
 
 -   !begin-bullet!
     Fix the issue that the formatting functions may throw error for
@@ -624,13 +633,13 @@
 
     !end-bullet!
 
-!end-bullets-29!
+!end-bullets-30!
 
 # CHANGES IN DT VERSION 0.14
 
 ## NEW FEATURES
 
-!begin-bullets-30!
+!begin-bullets-31!
 
 -   !begin-bullet!
     Now the user is able to control the selection range by
@@ -654,11 +663,11 @@
 
     !end-bullet!
 
-!end-bullets-30!
+!end-bullets-31!
 
 ## BUG FIXES
 
-!begin-bullets-31!
+!begin-bullets-32!
 
 -   !begin-bullet!
     Fix the issue that formatting functions don't support vectorized
@@ -673,11 +682,11 @@
 
     !end-bullet!
 
-!end-bullets-31!
+!end-bullets-32!
 
 ## MINOR CHANGES
 
-!begin-bullets-32!
+!begin-bullets-33!
 
 -   !begin-bullet!
     The formatting functions now throw clearer error messages when
@@ -695,13 +704,13 @@
 
     !end-bullet!
 
-!end-bullets-32!
+!end-bullets-33!
 
 # CHANGES IN DT VERSION 0.13
 
 ## BUG FIXES
 
-!begin-bullets-33!
+!begin-bullets-34!
 
 -   !begin-bullet!
     Fix a bug that on Windows, rmarkdown can't render a file that
@@ -730,24 +739,24 @@
 
     !end-bullet!
 
-!end-bullets-33!
+!end-bullets-34!
 
 ## NEW FEATURES
 
-!begin-bullets-34!
+!begin-bullets-35!
 
 -   !begin-bullet!
     All the formatting functions except `formatStyle()` now support the
     `Responsive` plugin (thanks, @andirey @shrektan, #776 #777 #782)
     !end-bullet!
 
-!end-bullets-34!
+!end-bullets-35!
 
 # CHANGES IN DT VERSION 0.12
 
 ## NEW FEATURES
 
-!begin-bullets-35!
+!begin-bullets-36!
 
 -   !begin-bullet!
     Support the Select extension on the client-side processing mode
@@ -765,11 +774,11 @@
 
     !end-bullet!
 
-!end-bullets-35!
+!end-bullets-36!
 
 ## BUG FIXES
 
-!begin-bullets-36!
+!begin-bullets-37!
 
 -   !begin-bullet!
     The server no longer throws warnings when conducting searching
@@ -794,23 +803,23 @@
 
     !end-bullet!
 
-!end-bullets-36!
+!end-bullets-37!
 
 # CHANGES IN DT VERSION 0.11
 
 ## NEW FEATURES
 
-!begin-bullets-37!
+!begin-bullets-38!
 
 -   !begin-bullet!
     Support pagination plug-ins (#734).
     !end-bullet!
 
-!end-bullets-37!
+!end-bullets-38!
 
 ## BUG FIXES
 
-!begin-bullets-38!
+!begin-bullets-39!
 
 -   !begin-bullet!
     Highlighting when searching with regex (i.e., using
@@ -823,11 +832,11 @@
 
     !end-bullet!
 
-!end-bullets-38!
+!end-bullets-39!
 
 ## MINOR CHANGES
 
-!begin-bullets-39!
+!begin-bullets-40!
 
 -   !begin-bullet!
     In the server-side processing mode, filters now use Perl-compatible
@@ -845,13 +854,13 @@
 
     !end-bullet!
 
-!end-bullets-39!
+!end-bullets-40!
 
 # CHANGES IN DT VERSION 0.10
 
 ## BUG FIXES
 
-!begin-bullets-40!
+!begin-bullets-41!
 
 -   !begin-bullet!
     Fix the issue that `styleEqual()` doesn't work expectedly for values
@@ -859,24 +868,24 @@
     #723).
     !end-bullet!
 
-!end-bullets-40!
+!end-bullets-41!
 
 # CHANGES IN DT VERSION 0.9
 
 ## NEW FEATURES
 
-!begin-bullets-41!
+!begin-bullets-42!
 
 -   !begin-bullet!
     `formatStyle()` with `styleEqual()` is now chainable by default
     (thanks, @e-kennedy #632).
     !end-bullet!
 
-!end-bullets-41!
+!end-bullets-42!
 
 ## BUG FIXES
 
-!begin-bullets-42!
+!begin-bullets-43!
 
 -   !begin-bullet!
     Fix the issue that the first column can't be disabled from editing
@@ -895,23 +904,23 @@
 
     !end-bullet!
 
-!end-bullets-42!
+!end-bullets-43!
 
 ## MINOR CHANGES
 
-!begin-bullets-43!
+!begin-bullets-44!
 
 -   !begin-bullet!
     Upgraded DataTables from 1.10.16 to 1.10.19.
     !end-bullet!
 
-!end-bullets-43!
+!end-bullets-44!
 
 # CHANGES IN DT VERSION 0.8
 
 ## BUG FIXES
 
-!begin-bullets-44!
+!begin-bullets-45!
 
 -   !begin-bullet!
     For `datatable()`, `options$buttons` now works as expected when
@@ -927,26 +936,26 @@
 
     !end-bullet!
 
-!end-bullets-44!
+!end-bullets-45!
 
 # CHANGES IN DT VERSION 0.7
 
 ## BUG FIXES
 
-!begin-bullets-45!
+!begin-bullets-46!
 
 -   !begin-bullet!
     Bulk table editing doesn't work for the client-side processing mode
     without Shiny (e.g. a DataTable on a static HTML page).
     !end-bullet!
 
-!end-bullets-45!
+!end-bullets-46!
 
 # CHANGES IN DT VERSION 0.6
 
 ## NEW FEATURES
 
-!begin-bullets-46!
+!begin-bullets-47!
 
 -   !begin-bullet!
     The table editor has been enhanced: now the `editable` argument of
@@ -975,11 +984,11 @@
 
     !end-bullet!
 
-!end-bullets-46!
+!end-bullets-47!
 
 ## BUG FIXES
 
-!begin-bullets-47!
+!begin-bullets-48!
 
 -   !begin-bullet!
     Fixed the issue where `replaceData()` didn't work when used in Shiny
@@ -1001,13 +1010,13 @@
 
     !end-bullet!
 
-!end-bullets-47!
+!end-bullets-48!
 
 # CHANGES IN DT VERSION 0.5
 
 ## NEW FEATURES
 
-!begin-bullets-48!
+!begin-bullets-49!
 
 -   !begin-bullet!
     Added the Shiny async support (thanks, @jcheng5, #549; @alexturcan,
@@ -1043,11 +1052,11 @@
 
     !end-bullet!
 
-!end-bullets-48!
+!end-bullets-49!
 
 ## BUG FIXES
 
-!begin-bullets-49!
+!begin-bullets-50!
 
 -   !begin-bullet!
     `styleInterval()` and `styleEqual()` now generates the correct
@@ -1115,13 +1124,13 @@
 
     !end-bullet!
 
-!end-bullets-49!
+!end-bullets-50!
 
 # CHANGES IN DT VERSION 0.4
 
 ## BUG FIXES
 
-!begin-bullets-50!
+!begin-bullets-51!
 
 -   !begin-bullet!
     A table will never appear again after `renderDT(NULL)` once (thanks,
@@ -1134,13 +1143,13 @@
 
     !end-bullet!
 
-!end-bullets-50!
+!end-bullets-51!
 
 # CHANGES IN DT VERSION 0.3
 
 ## NEW FEATURES
 
-!begin-bullets-51!
+!begin-bullets-52!
 
 -   !begin-bullet!
     It is possible to double-click to edit values in table cells now.
@@ -1177,11 +1186,11 @@
 
     !end-bullet!
 
-!end-bullets-51!
+!end-bullets-52!
 
 ## MAJOR CHANGES
 
-!begin-bullets-52!
+!begin-bullets-53!
 
 -   !begin-bullet!
     Searching in the server-side processing mode has enabled the "smart"
@@ -1207,21 +1216,21 @@
 
     !end-bullet!
 
-!end-bullets-52!
+!end-bullets-53!
 
 ## MINOR CHANGES
 
-!begin-bullets-53!
+!begin-bullets-54!
 
 -   !begin-bullet!
     Upgraded DataTables from 1.10.12 to 1.10.16.
     !end-bullet!
 
-!end-bullets-53!
+!end-bullets-54!
 
 ## BUG FIXES
 
-!begin-bullets-54!
+!begin-bullets-55!
 
 -   !begin-bullet!
     When the DataTables option `language.url` is used, the table cannot
@@ -1254,13 +1263,13 @@
 
     !end-bullet!
 
-!end-bullets-54!
+!end-bullets-55!
 
 # CHANGES IN DT VERSION 0.2
 
 ## NEW FEATURES
 
-!begin-bullets-55!
+!begin-bullets-56!
 
 -   !begin-bullet!
     The `selection` argument of `datatable()` can be used to specify a
@@ -1399,18 +1408,18 @@
 
     !end-bullet!
 
-!end-bullets-55!
+!end-bullets-56!
 
 ## MAJOR CHANGES
 
-!begin-bullets-56!
+!begin-bullets-57!
 
 -   !begin-bullet!
     Upgraded the DataTables library to 1.10.12; there have been many
     changes from 1.10.7 to this version:
     http://datatables.net/blog/2015-08-13
 
-    !begin-bullets-57!
+    !begin-bullets-58!
     -   !begin-bullet!
         The `extensions` argument of `datatable()` should be a character
         vector now; previously it can be a list of initialization
@@ -1427,7 +1436,7 @@
         button in the `Buttons` extension.
         !end-bullet!
 
-    !end-bullets-57!
+    !end-bullets-58!
     !end-bullet!
 -   !begin-bullet!
     In the previous version, row names were used as row indices in the
@@ -1445,11 +1454,11 @@
 
     !end-bullet!
 
-!end-bullets-56!
+!end-bullets-57!
 
 ## BUG FIXES
 
-!begin-bullets-58!
+!begin-bullets-59!
 
 -   !begin-bullet!
     Row selections are not preserved when column filters are enabled and
@@ -1536,14 +1545,14 @@
 
     !end-bullet!
 
-!end-bullets-58!
+!end-bullets-59!
 
 # CHANGES IN DT VERSION 0.1
 
-!begin-bullets-59!
+!begin-bullets-60!
 
 -   !begin-bullet!
     Initial CRAN release.
     !end-bullet!
 
-!end-bullets-59!
+!end-bullets-60!
