@@ -3,6 +3,9 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `\cr` is now translated to `<br>` not `<br />` (#2400).
+    !end-bullet!
+-   !begin-bullet!
     Fix parsing of github profiles and issues into links when present at
     the beginning of list items (@pearsonca, #2122)
     !end-bullet!

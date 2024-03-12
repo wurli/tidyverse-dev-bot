@@ -16790,3 +16790,4 @@ pkgdown,794afd4a46a900c4913391e5738b14c4,"Topic names that conflict with selecto
 htmltools,34824f11fe657f0764a7557c915f3518,"`bindFillRole()` now attaches its `HTMLDependency()` to fill items, thus reducing the possibility of filling layout breaking due to missing CSS. (#421)",NA,NA,NA,NA
 bslib,078053eebdb4f578a3b76ad7ed47139a,Fixed a couple `update_popover()` bugs. (#747),NA,NA,NA,NA
 pkgdown,43036efa1277969668993a6dc1c9a887,"Allow detection of quarto `.qmd` articles and let them be processed using the `quarto` vignette builder (@​rcannood, #2404).",NA,NA,NA,NA
+pkgdown,83b837c36d35194f22530725f1f3ae90,`\cr` is now translated to `<br>` not `<br />` (#2400).,NA,NA,NA,NA
