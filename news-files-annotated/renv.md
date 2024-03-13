@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `renv::update()` gains the `lock` argument, which can be used to
+    instruct `renv` to automatically update the lockfile after the
+    requested packages have been updated. (#1849)
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed an issue where `renv` could fail to update the project
     autoloader after calling `renv::upgrade()`. (#1837)
 

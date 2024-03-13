@@ -16800,3 +16800,4 @@ ragg,bd3c055c406af95e389104bbf35a66e5,Add a switch (defaults to on) to snapping 
 ragg,1df74efd6c257c2d5ff0549ca27e9a47,Fixed a bug causing repeated warnings when using a font at 0 size (#130),NA,NA,NA,NA
 reticulate,b634ac90cc8f1f2e2e16cd135e40f630,Fixed an issue where `py_discover_config()` would discover `python` (v2) on the PATH in preference of `python3` on the PATH. (#1547),NA,NA,NA,NA
 reticulate,792705d90d9ba96cbd229a7b638af19c,"Fixed an issue where reticulate would error when using conda environments created with the (new) `conda env create` command. (#1535, #1543)",NA,NA,NA,NA
+renv,4afcb453fc3198daf5a1a775aeb9798a,"`renv::update()` gains the `lock` argument, which can be used to instruct `renv` to automatically update the lockfile after the requested packages have been updated. (#1849)",NA,NA,NA,NA
