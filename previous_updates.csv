@@ -16796,3 +16796,5 @@ pkgdown,b6d60b7e7427c4daeb0eb6e8d1f7f0c3,"Set RNG seed for htmlwidgets IDs. This
 DT,6afec4098e583e62f99a702e4b294c61,"Added `outputArgs` parameter to `renderDataTable`, to allow width and height to be set when using interactive R Markdown documents.",NA,NA,NA,NA
 rex,f9f4d081cb9e82f5311d4d2eae501f3f,Rex no longer changes the state of the random number generator when attached.,NA,NA,NA,NA
 ragg,c403ee39f2d029bc5e048e8bc8ffa4ef,"Added supported for new graphics enigine features: Groups, paths, luminance masks, and glyphs",NA,NA,NA,NA
+ragg,bd3c055c406af95e389104bbf35a66e5,Add a switch (defaults to on) to snapping rectangles to the pixel grid when they are only drawn with fill (no stroke),NA,NA,NA,NA
+ragg,1df74efd6c257c2d5ff0549ca27e9a47,Fixed a bug causing repeated warnings when using a font at 0 size (#130),NA,NA,NA,NA

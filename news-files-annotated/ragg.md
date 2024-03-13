@@ -7,6 +7,14 @@
     luminance masks, and glyphs
     !end-bullet!
 -   !begin-bullet!
+    Add a switch (defaults to on) to snapping rectangles to the pixel
+    grid when they are only drawn with fill (no stroke)
+    !end-bullet!
+-   !begin-bullet!
+    Fixed a bug causing repeated warnings when using a font at 0 size
+    (#130)
+    !end-bullet!
+-   !begin-bullet!
     Silence a bug in clang-ASAN that incorrectly reported sanitiser
     issues
     !end-bullet!

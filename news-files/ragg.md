@@ -2,6 +2,9 @@
 
 * Added supported for new graphics enigine features: Groups, paths, luminance
   masks, and glyphs
+* Add a switch (defaults to on) to snapping rectangles to the pixel grid when
+  they are only drawn with fill (no stroke)
+* Fixed a bug causing repeated warnings when using a font at 0 size (#130)
 * Silence a bug in clang-ASAN that incorrectly reported sanitiser issues
 
 # ragg 1.2.7
