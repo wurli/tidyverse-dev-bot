@@ -25,6 +25,12 @@
     (v2) on the PATH in preference of `python3` on the PATH. (#1547)
 
     !end-bullet!
+-   !begin-bullet!
+    Fixed an issue where reticulate would error when using conda
+    environments created with the (new) `conda env create` command.
+    (#1535, #1543)
+
+    !end-bullet!
 
 !end-bullets-1!
 
