@@ -20,6 +20,11 @@
     Updates for CRAN R-devel (R 4.4).
 
     !end-bullet!
+-   !begin-bullet!
+    Fixed an issue where `py_discover_config()` would discover `python`
+    (v2) on the PATH in preference of `python3` on the PATH. (#1547)
+
+    !end-bullet!
 
 !end-bullets-1!
 
