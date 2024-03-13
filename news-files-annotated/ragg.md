@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Added supported for new graphics enigine features: Groups, paths,
+    luminance masks, and glyphs
+    !end-bullet!
+-   !begin-bullet!
     Silence a bug in clang-ASAN that incorrectly reported sanitiser
     issues
     !end-bullet!

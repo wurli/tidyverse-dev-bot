@@ -16795,3 +16795,4 @@ pkgdown,4a2f49cf7a8cbd84e7c1f18ea81c11f2,"Set RNG seed before building articles 
 pkgdown,b6d60b7e7427c4daeb0eb6e8d1f7f0c3,"Set RNG seed for htmlwidgets IDs. This reduces noise in final HTML output, both for articles and examples in the reference that contain htmlwidgets (@​salim-b, #2294, #2354).",NA,NA,NA,NA
 DT,6afec4098e583e62f99a702e4b294c61,"Added `outputArgs` parameter to `renderDataTable`, to allow width and height to be set when using interactive R Markdown documents.",NA,NA,NA,NA
 rex,f9f4d081cb9e82f5311d4d2eae501f3f,Rex no longer changes the state of the random number generator when attached.,NA,NA,NA,NA
+ragg,c403ee39f2d029bc5e048e8bc8ffa4ef,"Added supported for new graphics enigine features: Groups, paths, luminance masks, and glyphs",NA,NA,NA,NA
