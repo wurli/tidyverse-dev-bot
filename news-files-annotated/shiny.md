@@ -39,11 +39,11 @@
 
     !end-bullet!
 -   !begin-bullet!
-    Added a `shiny.error.unhandled` option that can be set to a function
-    that will be called when an unhandled error occurs in a Shiny app.
-    Note that this handler doesn't stop the error or prevent the session
-    from closing, but it can be used to log the error or to clean up
-    session-specific resources. (thanks @JohnCoene, #3989)
+    Added `onUnhandledError()` to register a function that will be
+    called when an unhandled error occurs in a Shiny app. Note that this
+    handler doesn't stop the error or prevent the session from closing,
+    but it can be used to log the error or to clean up session-specific
+    resources. (thanks @JohnCoene, #3993)
 
     !end-bullet!
 
