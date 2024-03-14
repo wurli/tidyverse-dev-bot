@@ -1,5 +1,7 @@
 # ragg (development version)
 
+# ragg 1.3.0
+
 * Added supported for new graphics enigine features: Groups, paths, luminance
   masks, and glyphs
 * Add a switch (defaults to on) to snapping rectangles to the pixel grid when
