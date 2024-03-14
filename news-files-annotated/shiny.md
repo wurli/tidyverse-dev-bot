@@ -64,6 +64,12 @@
     to @fennovj, #2672)
 
     !end-bullet!
+-   !begin-bullet!
+    Calling `updateSelectizeInput()` with `choices` and `selected` now
+    clears the current selection before updating the choices and
+    selected value. (#3967)
+
+    !end-bullet!
 
 !end-bullets-3!
 
