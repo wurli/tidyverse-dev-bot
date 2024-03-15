@@ -5,6 +5,12 @@
 -   !begin-bullet!
     Added `outputArgs` parameter to `renderDataTable`, to allow width
     and height to be set when using interactive R Markdown documents.
+
+    !end-bullet!
+-   !begin-bullet!
+    Fixed a bug in `renderDT()`'s evaluation of `...` arguments when
+    `quoted = TRUE` (#1130).
+
     !end-bullet!
 
 !end-bullets-1!
