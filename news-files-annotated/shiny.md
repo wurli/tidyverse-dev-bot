@@ -70,6 +70,13 @@
     selected value. (#3967)
 
     !end-bullet!
+-   !begin-bullet!
+    Loading a Shiny app in a package-like directory will no longer warn
+    if autoloading is disabled by the presence of an
+    `R/_disable_autoload.R` file. (Thanks to @krlmlr and @tanho63,
+    #3513)
+
+    !end-bullet!
 
 !end-bullets-3!
 
