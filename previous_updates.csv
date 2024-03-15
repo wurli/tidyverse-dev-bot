@@ -16805,3 +16805,4 @@ bslib,f034d5d9ca89a2620ca3a099c615e59b,"Both `card()` and `value_box()` now take
 shiny,9c48f0883da2372a7b15afe67b7e443b,"Added `onUnhandledError()` to register a function that will be called when an unhandled error occurs in a Shiny app. Note that this handler doesn't stop the error or prevent the session from closing, but it can be used to log the error or to clean up session-specific resources. (thanks @​JohnCoene, #3993)",NA,NA,NA,NA
 shiny,4496b9aa23180a79914659657c45c671,Calling `updateSelectizeInput()` with `choices` and `selected` now clears the current selection before updating the choices and selected value. (#3967),NA,NA,NA,NA
 DT,48c06a738057d5ac8ee89dfb8e1ed155,Fixed a bug in `renderDT()`'s evaluation of `...` arguments when `quoted = TRUE` (#1130).,NA,NA,NA,NA
+ragg,aee4a9c224b54d7fb1ead9bcae5b8d9e,Make sure the linejoin/linemitre setting is honored when drawing rectangles (#162),NA,NA,NA,NA
