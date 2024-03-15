@@ -16806,3 +16806,25 @@ shiny,9c48f0883da2372a7b15afe67b7e443b,"Added `onUnhandledError()` to register a
 shiny,4496b9aa23180a79914659657c45c671,Calling `updateSelectizeInput()` with `choices` and `selected` now clears the current selection before updating the choices and selected value. (#3967),NA,NA,NA,NA
 DT,48c06a738057d5ac8ee89dfb8e1ed155,Fixed a bug in `renderDT()`'s evaluation of `...` arguments when `quoted = TRUE` (#1130).,NA,NA,NA,NA
 ragg,aee4a9c224b54d7fb1ead9bcae5b8d9e,Make sure the linejoin/linemitre setting is honored when drawing rectangles (#162),NA,NA,NA,NA
+dbplyr,e3060c4599367ff6e1669afed307f416,"New translations for clock functions `add_years()`, `add_days()`, `date_build()`, `get_year()`, `get_month()`, `get_day()`, and `base::difftime()` on SQL server, Redshift, Snowflake, and Postgres.",NA,NA,NA,NA
+dbplyr,5d17eeeb035a4af73919443d129a3481,"`select()` will keep computed columns used to `arrange()` subqueries that are eliminated by a subsequent select (@​ejneer, #1437).",NA,NA,NA,NA
+dbplyr,5b048ecede4a20a731b3d1879f306e6e,"`semi_join()` will no longer inline away an aggregate filter (i.e. `HAVING` clause) that was followed by a `select()` (@​ejneer, #1474)",NA,NA,NA,NA
+dbplyr,63d693cd9ecec72cdb12b7f3ac73bb87,Improved function translations:,NA,NA,NA,NA
+dbplyr,63d693cd9ecec72cdb12b7f3ac73bb87,"• Functions qualified with the base namespace are now also translated, e.g. `base::paste0(x, ""_1"")` is now translated (@​mgirlich, #1022).",NA,NA,NA,NA
+dbplyr,63d693cd9ecec72cdb12b7f3ac73bb87,• `-1 + x` now generates a translation instead erroring (#1420).,NA,NA,NA,NA
+dbplyr,63d693cd9ecec72cdb12b7f3ac73bb87,• `x$name` never attempts to evaluate `name` (#1368).,NA,NA,NA,NA
+dbplyr,63d693cd9ecec72cdb12b7f3ac73bb87,• You can once again use `NULL` on the LHS of an infix operator in order to generate SQL with unusual syntax (#1345).,NA,NA,NA,NA
+dbplyr,63d693cd9ecec72cdb12b7f3ac73bb87,"• Namespaced calls now error if the function doesn't exist, or a translation is not available (#1426).",NA,NA,NA,NA
+dbplyr,63d693cd9ecec72cdb12b7f3ac73bb87,• `lead()` translation coerces `n` to an integer.,NA,NA,NA,NA
+dbplyr,6f793290cb3adbcd3a387663a231ee8c,Databricks: now supports creating non-temporary tables too (#1418).,NA,NA,NA,NA
+dbplyr,1b3d1f7f882a38eea47688b0e07cb6d0,Oracle:,NA,NA,NA,NA
+dbplyr,1b3d1f7f882a38eea47688b0e07cb6d0,"• `db_explain()` now works (@​thomashulst, #1353).",NA,NA,NA,NA
+dbplyr,1b3d1f7f882a38eea47688b0e07cb6d0,• `as.Date()` works when applied to a string (#1389).,NA,NA,NA,NA
+dbplyr,1b3d1f7f882a38eea47688b0e07cb6d0,"• `head()` is once again translated to `FETCH FIRST`. This does require Oracle 12c or newer, but it actually works, compared to the approach using `ROWNUM` from #1292 (#1436).",NA,NA,NA,NA
+dbplyr,1b3d1f7f882a38eea47688b0e07cb6d0,"• Added support for `str_replace()` and `str_replace_all()` via `REGEXP_REPLACE()` (@​thomashulst, #1402).",NA,NA,NA,NA
+dbplyr,2dcdf7b689ec6ed8d9b928bb363225ec,SQL server:,NA,NA,NA,NA
+dbplyr,2dcdf7b689ec6ed8d9b928bb363225ec,• Now products a clear error if you attempt to use `n_distinct()` in `mutate()` or `filter()` (#1366).,NA,NA,NA,NA
+dbplyr,2dcdf7b689ec6ed8d9b928bb363225ec,"• `filter()` does a better job of converting logical vectors from bit to boolean (@​ejneer, #1288).",NA,NA,NA,NA
+dbplyr,165935de4cb3be766b441c83d0c68fda,"MySQL: `as.integer()` gets correct translation (@​krlmlr, #1375).",NA,NA,NA,NA
+dbplyr,03252b2134c4c75c873c2c41d50b01fd,`compute()` passes additional arguments all the way to `sql_query_save()`-methods (@​rsund).,NA,NA,NA,NA
+dbplyr,a0d22a699c9c813462933fa53dac3ec2,"New `simulate_mariadb()` (@​krlmlr, #1375).",NA,NA,NA,NA
