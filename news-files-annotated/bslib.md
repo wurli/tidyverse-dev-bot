@@ -170,6 +170,16 @@
     `padding` and `gap` arguments into appropriate CSS values. (#991)
 
     !end-bullet!
+-   !begin-bullet!
+    Fixed an issue that could happen with a `card()` or `value_box()`
+    that is rendered entirely via `renderUI()` when it is replaced by an
+    updated card but the user had expanded the original card into full
+    screen mode. Now the full screen state is reset for the new card or
+    value box. If you want to update a card without potentially exiting
+    the full-screen mode, update specific parts of the card using
+    `uiOutput()` or `textOutput()`. (#1005)
+
+    !end-bullet!
 
 !end-bullets-4!
 

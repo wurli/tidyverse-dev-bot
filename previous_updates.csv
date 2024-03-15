@@ -16828,3 +16828,4 @@ dbplyr,2dcdf7b689ec6ed8d9b928bb363225ec,"• `filter()` does a better job of con
 dbplyr,165935de4cb3be766b441c83d0c68fda,"MySQL: `as.integer()` gets correct translation (@​krlmlr, #1375).",NA,NA,NA,NA
 dbplyr,03252b2134c4c75c873c2c41d50b01fd,`compute()` passes additional arguments all the way to `sql_query_save()`-methods (@​rsund).,NA,NA,NA,NA
 dbplyr,a0d22a699c9c813462933fa53dac3ec2,"New `simulate_mariadb()` (@​krlmlr, #1375).",NA,NA,NA,NA
+bslib,b2382a2a93d46f6430147988048d2544,"Fixed an issue that could happen with a `card()` or `value_box()` that is rendered entirely via `renderUI()` when it is replaced by an updated card but the user had expanded the original card into full screen mode. Now the full screen state is reset for the new card or value box. If you want to update a card without potentially exiting the full-screen mode, update specific parts of the card using `uiOutput()` or `textOutput()`. (#1005)",NA,NA,NA,NA
