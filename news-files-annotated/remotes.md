@@ -11,19 +11,8 @@
     names: `<pkgname>=<type>::<username>/<repo>` (#719, @heavywatal).
     !end-bullet!
 -   !begin-bullet!
-    `dev_package_deps()` noq has a `remote_precedence` parameter which
-    allows the user to choose whether remote sources should have a
-    priority over CRAN sources (#732, @maksymiuks).
-    !end-bullet!
--   !begin-bullet!
     `dev_package_deps()` now works for packages with `Enhances`
     dependencies (#711, @maksymiuks).
-    !end-bullet!
--   !begin-bullet!
-    `dev_package_deps()` now has an `additional_repositories` parameter
-    which allows the user to choose whether `Additional_repositories`
-    should be extracted from the `DESCRIPTION` file and appended to
-    repos (#782, @maksymiuks).
     !end-bullet!
 -   !begin-bullet!
     `install_dev()` now ignores a trailing slash (#692, @krlmlr).
