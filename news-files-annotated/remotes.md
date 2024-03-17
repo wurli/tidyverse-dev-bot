@@ -7,23 +7,33 @@
     store, if `GITHUB_PAT` and `GITHUB_TOKEN` are not set.
     !end-bullet!
 -   !begin-bullet!
-    Remotes field accepts explicit package names:
-    `<pkgname>=<type>::<username>/<repo>` (#719, @heavywatal).
+    The `Remotes` field in `DESCRIPTION` now accepts explicit package
+    names: `<pkgname>=<type>::<username>/<repo>` (#719, @heavywatal).
     !end-bullet!
 -   !begin-bullet!
-    Add `remote_precedence` parameter to `dev_package_deps()` which
-    allows user to choose whether remote sources should have a priority
-    over cran sources. (#732, @maksymiuks)
+    `dev_package_deps()` noq has a `remote_precedence` parameter which
+    allows the user to choose whether remote sources should have a
+    priority over CRAN sources (#732, @maksymiuks).
     !end-bullet!
 -   !begin-bullet!
     `dev_package_deps()` now works for packages with `Enhances`
     dependencies (#711, @maksymiuks).
     !end-bullet!
 -   !begin-bullet!
-    Add `additional_repositories` parameter to `dev_package_deps()`
-    which allows user to choose whether `Additional_repositories` should
-    be extracted from the `DESCRIPTION` file and appended to repos.
-    (#782, @maksymiuks)
+    `dev_package_deps()` now has an `additional_repositories` parameter
+    which allows the user to choose whether `Additional_repositories`
+    should be extracted from the `DESCRIPTION` file and appended to
+    repos (#782, @maksymiuks).
+    !end-bullet!
+-   !begin-bullet!
+    `install_dev()` now ignores a trailing slash (#692, @krlmlr).
+    !end-bullet!
+-   !begin-bullet!
+    System requirements now support Ubuntu 22.04.
+    !end-bullet!
+-   !begin-bullet!
+    `local_package_deps()` now errors for non-existent directories
+    (#772, @MatthieuStigler).
     !end-bullet!
 
 !end-bullets-1!
