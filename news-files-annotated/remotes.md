@@ -1,4 +1,6 @@
-# remotes development version
+# remotes (development version)
+
+# remotes 2.5.0
 
 !begin-bullets-1!
 

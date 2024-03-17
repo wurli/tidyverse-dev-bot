@@ -1,4 +1,6 @@
-# remotes development version
+# remotes (development version)
+
+# remotes 2.5.0
 
 * `install_github()` now uses credentials from the git
   credential store, if `GITHUB_PAT` and `GITHUB_TOKEN` are not set.
