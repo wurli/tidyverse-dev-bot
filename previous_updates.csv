@@ -16837,3 +16837,5 @@ remotes,0049b12335ca3083cd125a45e7f3efa6,"`dev_package_deps()` noq has a `remote
 remotes,dcbf5f5fa5d72f7846544768ed41d628,"`install_dev()` now ignores a trailing slash (#692, @​krlmlr).",NA,NA,NA,NA
 remotes,215f4223ac15a942857aeded11908111,System requirements now support Ubuntu 22.04.,NA,NA,NA,NA
 remotes,13ef956eb868e2f8ab8fe61d67bfdb63,"`local_package_deps()` now errors for non-existent directories (#772, @​MatthieuStigler).",NA,NA,NA,NA
+pak,2fc46a55048402eb5e2197bc5f2d0385,pak now supports using parameters for all packages with the `*=?<param>` form. E.g. `*=?source` installs all packages from source.,NA,NA,NA,NA
+pak,13ca2f3ce56963d3971c4221057c2756,"pak now supports R 4.4.0 again, and also Rtools44.",NA,NA,NA,NA
