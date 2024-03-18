@@ -129,6 +129,17 @@
     variable. (#998)
 
     !end-bullet!
+-   !begin-bullet!
+    `value_box()`, `layout_columns()` and `layout_column_wrap()` now all
+    have `min_height` and `max_height` arguments. These are useful in
+    filling layouts, like `page_fillable()`,
+    `page_sidebar(fillable = TRUE)` or `page_navbar(fillable = TRUE)`.
+    For example, you can use
+    `layout_columns(min_height = 300, max_height = 500)` to ensure that
+    a set of items (likely arranged in a row of columns) are always
+    between 300 and 500 pixels tall. (#1016)
+
+    !end-bullet!
 
 !end-bullets-3!
 
