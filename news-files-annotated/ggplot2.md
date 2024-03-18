@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `coord_map()` and `coord_polar()` throw informative warnings when
+    used with the guide system (#5707).
+    !end-bullet!
+-   !begin-bullet!
     When passing a function to `stat_contour(breaks)`, that function is
     used to calculate the breaks even if `bins` and `binwidth` are
     missing (@teunbrand, #5686).
@@ -34,6 +38,11 @@
 -   !begin-bullet!
     `stat_bin()` deals with non-finite breaks better (@teunbrand,
     #5665).
+    !end-bullet!
+-   !begin-bullet!
+    Fixed bug in `guide_bins()` and `guide_coloursteps()` where discrete
+    breaks, such as the levels produced by `cut()`, were ordered
+    incorrectly (@teunbrand, #5757).
     !end-bullet!
 -   !begin-bullet!
     Theme elements that do not exist now throw warnings instead of
