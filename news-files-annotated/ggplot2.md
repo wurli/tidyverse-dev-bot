@@ -27,6 +27,11 @@
     #5665).
     !end-bullet!
 -   !begin-bullet!
+    When legends detect the presence of values in a layer, `NA` is now
+    detected if the data contains values outside the given breaks
+    (@teunbrand, #5749).
+    !end-bullet!
+-   !begin-bullet!
     `annotate()` now warns about `stat` or `position` arguments
     (@teunbrand, #5151)
     !end-bullet!
