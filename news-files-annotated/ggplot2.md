@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `geom_step()` now supports `lineend`, `linejoin` and `linemitre`
+    parameters (@teunbrand, #5705).
+    !end-bullet!
+-   !begin-bullet!
     Fixed performance loss when the `.data` pronoun is used in `aes()`
     (#5730).
     !end-bullet!
@@ -25,6 +29,10 @@
 -   !begin-bullet!
     `stat_bin()` deals with non-finite breaks better (@teunbrand,
     #5665).
+    !end-bullet!
+-   !begin-bullet!
+    Fixed bug in `coord_radial()` where full circles were not treated as
+    such (@teunbrand, #5750).
     !end-bullet!
 -   !begin-bullet!
     When legends detect the presence of values in a layer, `NA` is now

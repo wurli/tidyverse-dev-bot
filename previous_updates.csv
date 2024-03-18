@@ -16841,3 +16841,5 @@ pak,2fc46a55048402eb5e2197bc5f2d0385,pak now supports using parameters for all p
 pak,13ca2f3ce56963d3971c4221057c2756,"pak now supports R 4.4.0 again, and also Rtools44.",NA,NA,NA,NA
 ggplot2,bb03b61e87e42e7c2f5dfe9132f21ae3,"`annotate()` now warns about `stat` or `position` arguments (@​teunbrand, #5151)",NA,NA,NA,NA
 ggplot2,0c2f5cb393b47e2a76e00db7de98a95e,"When legends detect the presence of values in a layer, `NA` is now detected if the data contains values outside the given breaks (@​teunbrand, #5749).",NA,NA,NA,NA
+ggplot2,fef34e9154fe447c9ec6c00b139c47ea,"`geom_step()` now supports `lineend`, `linejoin` and `linemitre` parameters (@​teunbrand, #5705).",NA,NA,NA,NA
+ggplot2,80cf5ca36a1d291a08e695f70a11e8a0,"Fixed bug in `coord_radial()` where full circles were not treated as such (@​teunbrand, #5750).",NA,NA,NA,NA
