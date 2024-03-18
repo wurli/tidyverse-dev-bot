@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    When passing a function to `stat_contour(breaks)`, that function is
+    used to calculate the breaks even if `bins` and `binwidth` are
+    missing (@teunbrand, #5686).
+    !end-bullet!
+-   !begin-bullet!
     `geom_step()` now supports `lineend`, `linejoin` and `linemitre`
     parameters (@teunbrand, #5705).
     !end-bullet!
@@ -29,6 +34,10 @@
 -   !begin-bullet!
     `stat_bin()` deals with non-finite breaks better (@teunbrand,
     #5665).
+    !end-bullet!
+-   !begin-bullet!
+    Theme elements that do not exist now throw warnings instead of
+    errors (#5719).
     !end-bullet!
 -   !begin-bullet!
     Fixed bug in `coord_radial()` where full circles were not treated as
