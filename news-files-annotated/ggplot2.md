@@ -26,6 +26,10 @@
     `stat_bin()` deals with non-finite breaks better (@teunbrand,
     #5665).
     !end-bullet!
+-   !begin-bullet!
+    `annotate()` now warns about `stat` or `position` arguments
+    (@teunbrand, #5151)
+    !end-bullet!
 
 !end-bullets-1!
 

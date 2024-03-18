@@ -16839,3 +16839,4 @@ remotes,215f4223ac15a942857aeded11908111,System requirements now support Ubuntu 
 remotes,13ef956eb868e2f8ab8fe61d67bfdb63,"`local_package_deps()` now errors for non-existent directories (#772, @​MatthieuStigler).",NA,NA,NA,NA
 pak,2fc46a55048402eb5e2197bc5f2d0385,pak now supports using parameters for all packages with the `*=?<param>` form. E.g. `*=?source` installs all packages from source.,NA,NA,NA,NA
 pak,13ca2f3ce56963d3971c4221057c2756,"pak now supports R 4.4.0 again, and also Rtools44.",NA,NA,NA,NA
+ggplot2,bb03b61e87e42e7c2f5dfe9132f21ae3,"`annotate()` now warns about `stat` or `position` arguments (@​teunbrand, #5151)",NA,NA,NA,NA
