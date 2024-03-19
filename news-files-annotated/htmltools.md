@@ -8,6 +8,14 @@
     The fill CSS attached to fillable containers and fill items with
     `bindFillRole()` now uses a CSS cascade layer named `htmltools` to
     reduce the precedence order of the fill CSS. (#425)
+
+    !end-bullet!
+-   !begin-bullet!
+    Improved documentation for boolean attributes in
+    `tagAppendAttributes()` to note that they can be set via an `NA`
+    value, e.g. `tagAppendAttributes(div(), contenteditable = NA)`
+    creates `<div contenteditable></div>`. (thanks @russHyde, #427)
+
     !end-bullet!
 
 !end-bullets-1!

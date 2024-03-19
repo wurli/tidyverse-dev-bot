@@ -5,6 +5,19 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `renderDataTable()`/`dataTableOutput()` are officially deprecated in
+    favor of their `{DT}` equivalents, `renderDT()`/`DTOutput()`. In
+    most cases, simply changing `renderDataTable()` to `DT::renderDT()`
+    and `dataTableOutput()` to `DT::DTOutput()` is sufficient for
+    upgrading. Also, to promote migration, when a recent version of
+    `{DT}` is available, `renderDataTable()`/`dataTableOutput()` now
+    automatically use their `{DT}` equivalent (and provide a message
+    that they are doing so). If this happens to degrade an existing app,
+    set `options(shiny.legacy.datatable = TRUE)` to get the old (i.e.,
+    non-`{DT}`) implementation. (#3998)
+
+    !end-bullet!
+-   !begin-bullet!
     Both `conditionalPanel()` and `uiOutput()` are now styled with
     `display: contents` by default in Shiny apps that use Bootstrap 5.
     This means that the elements they contain are positioned as if they
@@ -15,6 +28,7 @@
     these two functions. In that case, you may include CSS rules to set
     `display: block` for the `.shiny-panel-conditional` or
     `.shiny-html-output` classes. (#3957, #3960)
+
     !end-bullet!
 
 !end-bullets-1!
