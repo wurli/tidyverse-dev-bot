@@ -28,6 +28,14 @@
     `page_navbar()` have consistent appearance. (#998)
 
     !end-bullet!
+-   !begin-bullet!
+    The `col_widths` argument of `layout_columns()` now sets the `sm`
+    breakpoint by default, rather than the `md` breakpoint. For example,
+    `col_widths = c(12, 6, 6)` is now equivalent to
+    `breakpoints(sm = c(12, 6, 6))` rather than
+    `breakpoints(md = c(12, 6, 6))`. (#1014)
+
+    !end-bullet!
 
 !end-bullets-1!
 
@@ -189,6 +197,12 @@
     value box. If you want to update a card without potentially exiting
     the full-screen mode, update specific parts of the card using
     `uiOutput()` or `textOutput()`. (#1005)
+
+    !end-bullet!
+-   !begin-bullet!
+    Fixed an issue where the `xs` breakpoint in a `breakpoints()` object
+    used for `row_heights` in `layout_columns()` would override all
+    other breakpoints. (#1014)
 
     !end-bullet!
 
