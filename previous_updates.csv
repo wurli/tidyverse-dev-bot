@@ -16864,3 +16864,4 @@ reticulate,6d0e55dae7d7b3563b1865049e92abaf,Fixed an issue where calling `py_set
 reticulate,e3d831b573322a2742188bfd773e30ac,Fixed an issue where reticulate would error when using a conda environment where the original conda binary that was used to create the environment is no longer available (#1555),NA,NA,NA,NA
 bslib,62e26099cb3ce959a822651d2c24fda7,"Fixed a handful of `update_popover()` bugs. (#747, #1017)",NA,NA,NA,NA
 bslib,7f20852c149e91ed71994b144c11865a,`tooltip()` and `popover()` now work as expected when inserted into a navbar/navset via `nav_insert()`. (#1020),NA,NA,NA,NA
+shiny,a990f77f698d8b0ec8c9ab54278eded6,"The examples behind `runExample()` now use `{bslib}` to generate a better looking result. To instead run the ""legacy"" examples, set `options(shiny.legacy.examples = TRUE)` before calling `runExample()`. (#3963)",NA,NA,NA,NA

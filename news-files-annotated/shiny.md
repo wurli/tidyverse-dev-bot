@@ -30,6 +30,13 @@
     `.shiny-html-output` classes. (#3957, #3960)
 
     !end-bullet!
+-   !begin-bullet!
+    The examples behind `runExample()` now use `{bslib}` to generate a
+    better looking result. To instead run the "legacy" examples, set
+    `options(shiny.legacy.examples = TRUE)` before calling
+    `runExample()`. (#3963)
+
+    !end-bullet!
 
 !end-bullets-1!
 
