@@ -13,8 +13,8 @@
 
     !end-bullet!
 -   !begin-bullet!
-    py_to_r(x) now returns `x` unmodified if `x` is not a Python object,
-    instead of signaling an error.
+    `py_to_r(x)` now returns `x` unmodified if `x` is not a Python
+    object, instead of signaling an error.
 
     !end-bullet!
 -   !begin-bullet!
@@ -25,16 +25,16 @@
 
     !end-bullet!
 -   !begin-bullet!
-    Fixed an issue where calling py_set_item() on a subclassed dict
-    would not invoke a custom **setitem** method.
+    Fixed an issue where calling `py_set_item()` on a subclassed dict
+    would not invoke a custom `__setitem__` method.
 
     !end-bullet!
 -   !begin-bullet!
-    py_del_attr(x, name) now returns x invisibly
+    `py_del_attr(x, name)` now returns x invisibly
 
     !end-bullet!
 -   !begin-bullet!
-    source_python() no longer exports assigns the "r" symbol to the R
+    `source_python()` no longer exports assigns the `r` symbol to the R
     globalenv(). (the "R Interface object" that is used by python code
     get a reference to the R globalenv)
 
@@ -66,6 +66,12 @@
     Fixed an issue where reticulate would error when using conda
     environments created with the (new) `conda env create` command.
     (#1535, #1543)
+
+    !end-bullet!
+-   !begin-bullet!
+    Fixed an issue where reticulate would error when using a conda
+    environment where the original conda binary that was used to create
+    the environment is no longer available (#1555)
 
     !end-bullet!
 
