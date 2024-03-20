@@ -175,7 +175,12 @@
 
     !end-bullet!
 -   !begin-bullet!
-    Fixed a couple `update_popover()` bugs. (#747)
+    Fixed a handful of `update_popover()` bugs. (#747, #1017)
+
+    !end-bullet!
+-   !begin-bullet!
+    `tooltip()` and `popover()` now work as expected when inserted into
+    a navbar/navset via `nav_insert()`. (#1020)
 
     !end-bullet!
 -   !begin-bullet!
