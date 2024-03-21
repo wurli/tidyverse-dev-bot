@@ -16865,3 +16865,4 @@ reticulate,e3d831b573322a2742188bfd773e30ac,Fixed an issue where reticulate woul
 bslib,62e26099cb3ce959a822651d2c24fda7,"Fixed a handful of `update_popover()` bugs. (#747, #1017)",NA,NA,NA,NA
 bslib,7f20852c149e91ed71994b144c11865a,`tooltip()` and `popover()` now work as expected when inserted into a navbar/navset via `nav_insert()`. (#1020),NA,NA,NA,NA
 shiny,a990f77f698d8b0ec8c9ab54278eded6,"The examples behind `runExample()` now use `{bslib}` to generate a better looking result. To instead run the ""legacy"" examples, set `options(shiny.legacy.examples = TRUE)` before calling `runExample()`. (#3963)",NA,NA,NA,NA
+shiny,40f5e9f2db6a90441af2b1c29bfcacef,"`runExamples()` now uses the `{bslib}` package to build the user interface (UI). It also gains a `package` argument so that other packages can leverage this same function to run Shiny app examples. For more, see `?runExamples`. (#3963, #4005)",NA,NA,NA,NA

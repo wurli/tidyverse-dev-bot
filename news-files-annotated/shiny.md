@@ -67,6 +67,13 @@
     resources. (thanks @JohnCoene, #3993)
 
     !end-bullet!
+-   !begin-bullet!
+    `runExamples()` now uses the `{bslib}` package to build the user
+    interface (UI). It also gains a `package` argument so that other
+    packages can leverage this same function to run Shiny app examples.
+    For more, see `?runExamples`. (#3963, #4005)
+
+    !end-bullet!
 
 !end-bullets-2!
 
