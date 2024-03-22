@@ -1,8 +1,17 @@
 # rsconnect (development version)
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    Use internally computed SHA1 sums and PKI signing when SHA1 is
+    disabled in FIPS mode (#768, #1054)
+    !end-bullet!
+
+!end-bullets-1!
+
 # rsconnect 1.2.1
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     Restore the `LC_TIME` locale after computing an RFC-2616 date.
@@ -18,11 +27,11 @@
     Produce an error when Quarto content cannot be inspected. (#1032)
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # rsconnect 1.2.0
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     Addressed a number of republishing and collaboration issues where
@@ -54,11 +63,11 @@
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 # rsconnect 1.1.1
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     Added `space` parameter to deploy directly to a space in Posit
@@ -84,11 +93,11 @@
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 # rsconnect 1.1.0
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     Fixed analysis of directories that were smaller than the
@@ -121,11 +130,11 @@
 
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 # rsconnect 1.0.2
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     Fixed redeployments to shinyapps.io where `appName` is provided, but
@@ -178,11 +187,11 @@
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # rsconnect 1.0.1
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     `deployDoc()` includes `.Rprofile`, `requirements.txt` and
@@ -195,13 +204,13 @@
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 # rsconnect 1.0.0
 
 ## New features
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     `deployApp()` and `deployDoc()` now support deploying static content
@@ -256,11 +265,11 @@
 
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 ## Lifecycle changes
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     Non-libcurl `rsconnect.http` options have been deprecated. This
@@ -293,11 +302,11 @@
 
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     New `rsconnect.http.headers` and `rsconnect.http.cookies` allow you
@@ -530,11 +539,11 @@
 
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 # rsconnect 0.8.29
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     Introduced support for publishing to Posit Cloud. This feature is
@@ -548,11 +557,11 @@
 
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 # rsconnect 0.8.28
 
-!begin-bullets-11!
+!begin-bullets-12!
 
 -   !begin-bullet!
     Shiny applications and Shiny documents no longer include an implicit
@@ -579,11 +588,11 @@
 
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-12!
 
 # rsconnect 0.8.27
 
-!begin-bullets-12!
+!begin-bullets-13!
 
 -   !begin-bullet!
     Quarto content will no longer silently deploy as R Markdown content
@@ -610,11 +619,11 @@
     images when deployed. (#598)
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
 
 # rsconnect 0.8.26
 
-!begin-bullets-13!
+!begin-bullets-14!
 
 -   !begin-bullet!
     Add ability to resend shinyapps.io application invitations (#543)
@@ -656,11 +665,11 @@
     precedence if both are set.
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-14!
 
 # rsconnect 0.8.25
 
-!begin-bullets-14!
+!begin-bullets-15!
 
 -   !begin-bullet!
     Use the `curl` option `-T` when uploading files to avoid out of
@@ -683,11 +692,11 @@
     new location. (#550)
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-15!
 
 # rsconnect 0.8.24
 
-!begin-bullets-15!
+!begin-bullets-16!
 
 -   !begin-bullet!
     Added support for publishing Quarto documents and websites
@@ -704,11 +713,11 @@
     Fixed issue preventing error tracebacks from displaying (#518)
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-16!
 
 # rsconnect 0.8.18
 
-!begin-bullets-16!
+!begin-bullets-17!
 
 -   !begin-bullet!
     Fixed issue causing configuration directory to be left behind after
@@ -742,11 +751,11 @@
     Add `verbose` option to `writeManifest` utility (#468)
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-17!
 
 # rsconnect 0.8.17
 
-!begin-bullets-17!
+!begin-bullets-18!
 
 -   !begin-bullet!
     Fixed issue where setting
@@ -826,11 +835,11 @@
     GitLab is seen as a valid SCM source (#491)
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-18!
 
 # rsconnect 0.8.16
 
-!begin-bullets-18!
+!begin-bullets-19!
 
 -   !begin-bullet!
     Prevent attempts to deploy Connect applications without uploading
@@ -888,11 +897,11 @@
     than a token (#393)
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-19!
 
 # rsconnect 0.8.15
 
-!begin-bullets-19!
+!begin-bullets-20!
 
 -   !begin-bullet!
     Switch from **RCurl** to **curl** as the default HTTP backend (#325)
@@ -902,4 +911,4 @@
     applications (#352)
     !end-bullet!
 
-!end-bullets-19!
+!end-bullets-20!
