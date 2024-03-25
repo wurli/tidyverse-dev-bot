@@ -16868,3 +16868,28 @@ shiny,a990f77f698d8b0ec8c9ab54278eded6,"The examples behind `runExample()` now u
 shiny,40f5e9f2db6a90441af2b1c29bfcacef,"`runExamples()` now uses the `{bslib}` package to build the user interface (UI). It also gains a `package` argument so that other packages can leverage this same function to run Shiny app examples. For more, see `?runExamples`. (#3963, #4005)",NA,NA,NA,NA
 rsconnect,8686cfde476e32892874d208f5541541,"Use internally computed SHA1 sums and PKI signing when SHA1 is disabled in FIPS mode (#768, #1054)",NA,NA,NA,NA
 callr,a51d3950b37900f472af6aa67ba84475,"If the `CALLR_NO_TEMP_DLLS=true` env var is set then callr does not copy the dll the client DLL files from, in the subprocess. By default callr copies the DLL file that drives the callr subprocess into a temporary directory and loads it from there (#273).",NA,NA,NA,NA
+keras,2306c54db1929327d9532fcd6ed3242f,"`quantize_weights()`: quantize model or layer weights in-place. Currently, only `Dense` and `EinsumDense` layers are supported (which is enough to cover the majority of transformers today)",NA,NA,NA,NA
+keras,03bdfb0a7ad1b16ee37f2bd19d134ab9,`layer_mel_spectrogram()`,NA,NA,NA,NA
+keras,73970ad72dd48276ffc98456d0040018,`random_beta()`,NA,NA,NA,NA
+keras,7d838e67e6eb4134a6472d47721cea52,`random_binomial()`,NA,NA,NA,NA
+keras,f3927c88c6372383ed5dcd76c3e50974,`config_set_backend()`: change the backend after Keras has initialized.,NA,NA,NA,NA
+keras,0b1ea202b24ded40eb4ea01deb540de8,`config_dtype_policy()`,NA,NA,NA,NA
+keras,c77a765a05ce67ddcbdb3892fd09aeea,`config_set_dtype_policy()`,NA,NA,NA,NA
+keras,d21c2b54c9422ddee0c287e7e3c26067,New Ops,NA,NA,NA,NA
+keras,d21c2b54c9422ddee0c287e7e3c26067,• `op_custom_gradient()`,NA,NA,NA,NA
+keras,d21c2b54c9422ddee0c287e7e3c26067,• `op_batch_normalization()`,NA,NA,NA,NA
+keras,d21c2b54c9422ddee0c287e7e3c26067,• `op_image_crop()`,NA,NA,NA,NA
+keras,d21c2b54c9422ddee0c287e7e3c26067,• `op_divide_no_nan()`,NA,NA,NA,NA
+keras,d21c2b54c9422ddee0c287e7e3c26067,• `op_normalize()`,NA,NA,NA,NA
+keras,65e4b6cf921d0df539f3a4932b3515cd,New family of linear algebra ops,NA,NA,NA,NA
+keras,65e4b6cf921d0df539f3a4932b3515cd,• `op_cholesky()`,NA,NA,NA,NA
+keras,65e4b6cf921d0df539f3a4932b3515cd,• `op_det()`,NA,NA,NA,NA
+keras,65e4b6cf921d0df539f3a4932b3515cd,• `op_eig()`,NA,NA,NA,NA
+keras,65e4b6cf921d0df539f3a4932b3515cd,• `op_inv()`,NA,NA,NA,NA
+keras,65e4b6cf921d0df539f3a4932b3515cd,• `op_lu_factor()`,NA,NA,NA,NA
+keras,65e4b6cf921d0df539f3a4932b3515cd,• `op_norm()`,NA,NA,NA,NA
+keras,65e4b6cf921d0df539f3a4932b3515cd,• `op_erfinv()`,NA,NA,NA,NA
+keras,65e4b6cf921d0df539f3a4932b3515cd,• `op_solve_triangular()`,NA,NA,NA,NA
+keras,65e4b6cf921d0df539f3a4932b3515cd,• `op_svd()`,NA,NA,NA,NA
+keras,ff1562366205aa9b013382640df665fc,"`audio_dataset_from_directory()`, `image_dataset_from_directory()` and `text_dataset_from_directory()` gain a `verbose` argument (default `TRUE`)",NA,NA,NA,NA
+keras,13ca75d04a74a79a632380d4087f30c0,`image_dataset_from_directory()` gains `pad_to_aspect_ratio` argument (default `FALSE`),NA,NA,NA,NA
