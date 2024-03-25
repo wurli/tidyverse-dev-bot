@@ -1,4 +1,7 @@
-# rstudioapi (development version)
+
+# rstudioapi (under development)
+
+# rstudioapi 0.16.0
 
 * `restartSession()` gains the `clean` argument, for RStudio 2024.04
   and newer.

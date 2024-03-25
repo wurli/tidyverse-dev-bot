@@ -16893,3 +16893,7 @@ keras,65e4b6cf921d0df539f3a4932b3515cd,• `op_solve_triangular()`,NA,NA,NA,NA
 keras,65e4b6cf921d0df539f3a4932b3515cd,• `op_svd()`,NA,NA,NA,NA
 keras,ff1562366205aa9b013382640df665fc,"`audio_dataset_from_directory()`, `image_dataset_from_directory()` and `text_dataset_from_directory()` gain a `verbose` argument (default `TRUE`)",NA,NA,NA,NA
 keras,13ca75d04a74a79a632380d4087f30c0,`image_dataset_from_directory()` gains `pad_to_aspect_ratio` argument (default `FALSE`),NA,NA,NA,NA
+lintr,cfe405244db5ab6c3f332e038177204e,"Fixed a test assuming a specific parser error message that recently changed in r-devel (#2527, @​IndrajeetPatil).",NA,NA,NA,NA
+lintr,8583ab40eddc832ab4bee5e5c99f01a3,@​MichaelChirico has taken over CRAN maintainer duties for the package. Many thanks to @​jimhester for more than 10 years and 15 releases wearing that hat!!,NA,NA,NA,NA
+reticulate,53cda7665529464456f22e56ce515998,`reticulate` now prefers using the agg matplotlib backend when the R session is non-interactive. The backend can also be overridden via the `MPLBACKEND` or `RETICULATE_MPLBACKEND` environment variables when necessary.,NA,NA,NA,NA
+reticulate,e1281c550da77d9c584f470f2318a44d,"Fixed an issue where the would be unable to accept the prompt to create the default ""r-reticulate"" venv (#1557).",NA,NA,NA,NA

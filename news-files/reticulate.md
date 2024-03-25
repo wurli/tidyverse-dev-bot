@@ -1,5 +1,9 @@
 # reticulate (development version)
 
+- `reticulate` now prefers using the agg matplotlib backend when the R session
+  is non-interactive. The backend can also be overridden via the `MPLBACKEND` or
+  `RETICULATE_MPLBACKEND` environment variables when necessary.
+
 - Fixed issue where callable python objects created with `convert = FALSE` would not be
   wrapped in an R function.
 
@@ -38,6 +42,9 @@
 - Fixed an issue where reticulate would error when using a conda environment
   where the original conda binary that was used to create the environment
   is no longer available (#1555)
+  
+- Fixed an issue where the would be unable to accept the prompt to create
+  the default "r-reticulate" venv (#1557).
 
 # reticulate 1.35.0
 
