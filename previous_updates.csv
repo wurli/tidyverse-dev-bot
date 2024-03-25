@@ -16897,3 +16897,6 @@ lintr,cfe405244db5ab6c3f332e038177204e,"Fixed a test assuming a specific parser 
 lintr,8583ab40eddc832ab4bee5e5c99f01a3,@​MichaelChirico has taken over CRAN maintainer duties for the package. Many thanks to @​jimhester for more than 10 years and 15 releases wearing that hat!!,NA,NA,NA,NA
 reticulate,53cda7665529464456f22e56ce515998,`reticulate` now prefers using the agg matplotlib backend when the R session is non-interactive. The backend can also be overridden via the `MPLBACKEND` or `RETICULATE_MPLBACKEND` environment variables when necessary.,NA,NA,NA,NA
 reticulate,e1281c550da77d9c584f470f2318a44d,"Fixed an issue where the would be unable to accept the prompt to create the default ""r-reticulate"" venv (#1557).",NA,NA,NA,NA
+pointblank,84c69df6bede78b906a9a9fbe92cd0c3,Ensured that the column string is a symbol before constructing the expression for the `col_vals_*()` functions.,NA,NA,NA,NA
+pointblank,84e10871ad228cc7b53523a54a03d026,No longer resolve columns with tidyselect when the target table cannot be materialized.,NA,NA,NA,NA
+pointblank,48a511807d2e7da107c145f6bc76664f,Relaxed tests on tidyselect error messages.,NA,NA,NA,NA

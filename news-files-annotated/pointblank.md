@@ -1,10 +1,31 @@
 # pointblank (development version)
 
+# pointblank 0.12.1
+
+!begin-bullets-1!
+
+-   !begin-bullet!
+    Ensured that the column string is a symbol before constructing the
+    expression for the `col_vals_*()` functions.
+
+    !end-bullet!
+-   !begin-bullet!
+    No longer resolve columns with tidyselect when the target table
+    cannot be materialized.
+
+    !end-bullet!
+-   !begin-bullet!
+    Relaxed tests on tidyselect error messages.
+
+    !end-bullet!
+
+!end-bullets-1!
+
 # pointblank 0.12.0
 
 ## New features
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     Complete `{tidyselect}` support for the `columns` argument of *all
@@ -13,7 +34,7 @@
     column-selection expressions as one would use inside
     `dplyr::select()`. This also begins a process of deprecation:
 
-    !begin-bullets-2!
+    !begin-bullets-3!
     -   !begin-bullet!
         `columns = vars(...)` will continue to work, but `c()` now
         supersedes `vars()`.
@@ -23,13 +44,13 @@
         wrapped in `all_of()`.
         !end-bullet!
 
-    !end-bullets-2!
+    !end-bullets-3!
     !end-bullet!
 -   !begin-bullet!
     The `label` argument of validation functions now exposes the
     following string variables via `{glue}` syntax:
 
-    !begin-bullets-3!
+    !begin-bullets-4!
     -   !begin-bullet!
         `"{.step}"`: The validation step name
         !end-bullet!
@@ -43,7 +64,7 @@
         `"{.seg_val}"`: The current segment's value/group
         !end-bullet!
 
-    !end-bullets-3!
+    !end-bullets-4!
     These dynamic values may be useful for validations that get expanded
     into multiple steps.
 
@@ -52,7 +73,7 @@
     `interrogate()` gains two new options for printing progress in the
     console output:
 
-    !begin-bullets-4!
+    !begin-bullets-5!
     -   !begin-bullet!
         `progress`: Whether interrogation progress should be printed to
         the console (`TRUE` for interactive sessions, same as before)
@@ -62,14 +83,14 @@
         should be printed alongside the progress.
         !end-bullet!
 
-    !end-bullets-4!
+    !end-bullets-5!
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     Fixes issue with rendering reports in Quarto HTML documents.
@@ -88,55 +109,55 @@
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # pointblank 0.11.4
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     Fixes issue with gt `0.9.0` compatibility.
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 # pointblank 0.11.3
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     Fixes issue with tables not rendering due to interaction with the gt
     package.
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 # pointblank 0.11.2
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     Internal changes were made to ensure compatibility with an
     in-development version of R.
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 # pointblank 0.11.1
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     Updated all help files to pass HTML validation.
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 # pointblank 0.11.0
 
 ## New features
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     The `row_count_match()` function can now match the count of rows in
@@ -168,23 +189,23 @@
 
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 ## Documentation
 
-!begin-bullets-11!
+!begin-bullets-12!
 
 -   !begin-bullet!
     All functions in the package now have *better* usage examples.
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-12!
 
 # pointblank 0.10.0
 
 ## New features
 
-!begin-bullets-12!
+!begin-bullets-13!
 
 -   !begin-bullet!
     The new function `row_count_match()` (plus
@@ -203,11 +224,11 @@
 
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-13!
+!begin-bullets-14!
 
 -   !begin-bullet!
     The `set_tbl()` function was given the `tbl_name` and `label`
@@ -222,11 +243,11 @@
 
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-14!
 
 ## Documentation
 
-!begin-bullets-14!
+!begin-bullets-15!
 
 -   !begin-bullet!
     All functions in the package now have usage examples.
@@ -239,11 +260,11 @@
 
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-15!
 
 ## Breaking changes
 
-!begin-bullets-15!
+!begin-bullets-16!
 
 -   !begin-bullet!
     The `read_fn` argument in `create_agent()` and `create_informant()`
@@ -265,13 +286,13 @@
 
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-16!
 
 # pointblank 0.9.0
 
 ## New features
 
-!begin-bullets-16!
+!begin-bullets-17!
 
 -   !begin-bullet!
     The new `rows_complete()` validation function (along with the
@@ -322,11 +343,11 @@
 
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-17!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-17!
+!begin-bullets-18!
 
 -   !begin-bullet!
     Input data tables with `label` attribute values in their columns
@@ -352,13 +373,13 @@
 
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-18!
 
 # pointblank 0.8.0
 
 ## New features
 
-!begin-bullets-18!
+!begin-bullets-19!
 
 -   !begin-bullet!
     The new `draft_validation()` function will create a starter
@@ -435,11 +456,11 @@
 
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-19!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-19!
+!begin-bullets-20!
 
 -   !begin-bullet!
     Added the Polish (`"pl"`), Danish (`"da"`), Turkish (`"tr"`),
@@ -481,11 +502,11 @@
 
     !end-bullet!
 
-!end-bullets-19!
+!end-bullets-20!
 
 ## Documentation
 
-!begin-bullets-20!
+!begin-bullets-21!
 
 -   !begin-bullet!
     Many help files were overhauled so that (1) things are clearer, (2)
@@ -496,13 +517,13 @@
     `write_testthat_file()`, `x_write_disk()`, and `yaml_exec()`.
     !end-bullet!
 
-!end-bullets-20!
+!end-bullets-21!
 
 # pointblank 0.7.0
 
 ## New features
 
-!begin-bullets-21!
+!begin-bullets-22!
 
 -   !begin-bullet!
     New functions for set-based interrogations: `col_vals_make_set()` (+
@@ -601,11 +622,11 @@
 
     !end-bullet!
 
-!end-bullets-21!
+!end-bullets-22!
 
 ## Documentation
 
-!begin-bullets-22!
+!begin-bullets-23!
 
 -   !begin-bullet!
     Added information on YAML representations of all validation
@@ -619,11 +640,11 @@
 
     !end-bullet!
 
-!end-bullets-22!
+!end-bullets-23!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-23!
+!begin-bullets-24!
 
 -   !begin-bullet!
     Included method for writing an *informant* object to disk (with
@@ -648,13 +669,13 @@
 
     !end-bullet!
 
-!end-bullets-23!
+!end-bullets-24!
 
 # pointblank 0.6.0
 
 ## Pointblank Information
 
-!begin-bullets-24!
+!begin-bullets-25!
 
 -   !begin-bullet!
     The new *information management* workflow is full of features that
@@ -713,11 +734,11 @@
 
     !end-bullet!
 
-!end-bullets-24!
+!end-bullets-25!
 
 ## Translations and Locales
 
-!begin-bullets-25!
+!begin-bullets-26!
 
 -   !begin-bullet!
     More text in the agent report is translated now.
@@ -748,11 +769,11 @@
 
     !end-bullet!
 
-!end-bullets-25!
+!end-bullets-26!
 
 ## Breaking changes
 
-!begin-bullets-26!
+!begin-bullets-27!
 
 -   !begin-bullet!
     The `yaml_write()` function replaces the `agent_yaml_write()`
@@ -784,11 +805,11 @@
 
     !end-bullet!
 
-!end-bullets-26!
+!end-bullets-27!
 
 ## New features
 
-!begin-bullets-27!
+!begin-bullets-28!
 
 -   !begin-bullet!
     The new `db_tbl()` function makes it ridiculously easy to access a
@@ -807,11 +828,11 @@
 
     !end-bullet!
 
-!end-bullets-27!
+!end-bullets-28!
 
 ## Documentation
 
-!begin-bullets-28!
+!begin-bullets-29!
 
 -   !begin-bullet!
     Added several articles that explain the different validation
@@ -831,11 +852,11 @@
 
     !end-bullet!
 
-!end-bullets-28!
+!end-bullets-29!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-29!
+!begin-bullets-30!
 
 -   !begin-bullet!
     Improved appearance of the agent report: (1) more tooltips, (2) the
@@ -915,11 +936,11 @@
 
     !end-bullet!
 
-!end-bullets-29!
+!end-bullets-30!
 
 # pointblank 0.5.2
 
-!begin-bullets-30!
+!begin-bullets-31!
 
 -   !begin-bullet!
     Fixes a performance issue for validations on larger tables.
@@ -930,11 +951,11 @@
 
     !end-bullet!
 
-!end-bullets-30!
+!end-bullets-31!
 
 # pointblank 0.5.1
 
-!begin-bullets-31!
+!begin-bullets-32!
 
 -   !begin-bullet!
     Improved compatibility with validations performed on SQL Server
@@ -959,13 +980,13 @@
 
     !end-bullet!
 
-!end-bullets-31!
+!end-bullets-32!
 
 # pointblank 0.5.0
 
 ## New features
 
-!begin-bullets-32!
+!begin-bullets-33!
 
 -   !begin-bullet!
     The *agent* can now be given a table-reading function, which is used
@@ -1025,11 +1046,11 @@
 
     !end-bullet!
 
-!end-bullets-32!
+!end-bullets-33!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-33!
+!begin-bullets-34!
 
 -   !begin-bullet!
     An issue with showing the agent report table in the email message
@@ -1061,13 +1082,13 @@
 
     !end-bullet!
 
-!end-bullets-33!
+!end-bullets-34!
 
 # pointblank 0.4.0
 
 ## New R Markdown features
 
-!begin-bullets-34!
+!begin-bullets-35!
 
 -   !begin-bullet!
     New R Markdown validation feature allows for validation testing
@@ -1106,11 +1127,11 @@
 
     !end-bullet!
 
-!end-bullets-34!
+!end-bullets-35!
 
 ## Breaking changes
 
-!begin-bullets-35!
+!begin-bullets-36!
 
 -   !begin-bullet!
     The default behavior of using validation step functions (e.g.,
@@ -1124,11 +1145,11 @@
     threshold parameter, also with a default of `1`.
     !end-bullet!
 
-!end-bullets-35!
+!end-bullets-36!
 
 ## New features
 
-!begin-bullets-36!
+!begin-bullets-37!
 
 -   !begin-bullet!
     Added 24 *expectation* functions (e.g., `expect_col_exists()`,
@@ -1199,11 +1220,11 @@
 
     !end-bullet!
 
-!end-bullets-36!
+!end-bullets-37!
 
 ## Documentation improvements
 
-!begin-bullets-37!
+!begin-bullets-38!
 
 -   !begin-bullet!
     All functions now have revised documentation that is more complete,
@@ -1219,11 +1240,11 @@
 
     !end-bullet!
 
-!end-bullets-37!
+!end-bullets-38!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-38!
+!begin-bullets-39!
 
 -   !begin-bullet!
     Rewrote the internal `stock_stoppage()` and `stock_warning()`
@@ -1274,11 +1295,11 @@
 
     !end-bullet!
 
-!end-bullets-38!
+!end-bullets-39!
 
 # pointblank 0.3.1
 
-!begin-bullets-39!
+!begin-bullets-40!
 
 -   !begin-bullet!
     Fixed implementation of the `col_vals_between()` and
@@ -1329,7 +1350,7 @@
 
     !end-bullet!
 
-!end-bullets-39!
+!end-bullets-40!
 
 # pointblank 0.3.0
 
@@ -1340,7 +1361,7 @@ API has accordingly gone through revisions.
 
 ## Breaking Changes
 
-!begin-bullets-40!
+!begin-bullets-41!
 
 -   !begin-bullet!
     The `focus_on()` function has been removed in favor of directly
@@ -1390,11 +1411,11 @@ API has accordingly gone through revisions.
 
     !end-bullet!
 
-!end-bullets-40!
+!end-bullets-41!
 
 ## New Features
 
-!begin-bullets-41!
+!begin-bullets-42!
 
 -   !begin-bullet!
     It's now possible to use `vars()` and certain tidyselect select
@@ -1409,11 +1430,11 @@ API has accordingly gone through revisions.
 
     !end-bullet!
 
-!end-bullets-41!
+!end-bullets-42!
 
 # pointblank 0.2.1
 
-!begin-bullets-42!
+!begin-bullets-43!
 
 -   !begin-bullet!
     Revisions on account of API changes in **tidyr** `1.0.0`.
@@ -1425,14 +1446,14 @@ API has accordingly gone through revisions.
 
     !end-bullet!
 
-!end-bullets-42!
+!end-bullets-43!
 
 # pointblank 0.1
 
-!begin-bullets-43!
+!begin-bullets-44!
 
 -   !begin-bullet!
     First release.
     !end-bullet!
 
-!end-bullets-43!
+!end-bullets-44!
