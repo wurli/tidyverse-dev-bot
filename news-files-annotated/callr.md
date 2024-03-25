@@ -1,18 +1,29 @@
 # callr (development version)
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    If the `CALLR_NO_TEMP_DLLS=true` env var is set then callr does not
+    copy the dll the client DLL files from, in the subprocess. By
+    default callr copies the DLL file that drives the callr subprocess
+    into a temporary directory and loads it from there (#273).
+    !end-bullet!
+
+!end-bullets-1!
+
 # callr 3.7.5
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     No changes.
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # callr 3.7.4
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     The `r_session$get_running_time()` method now returns the correct
@@ -26,11 +37,11 @@
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 # callr 3.7.3
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     Errors from callr now include the standard output (in `$stdout`) and
@@ -39,11 +50,11 @@
     printed about them in interactive sessions.
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 # callr 3.7.2
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     New function `add_hook()` to hook into the callr process startup and
@@ -51,11 +62,11 @@
     (#203, @klmr).
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 # callr 3.7.1
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     When copying existing startup files, an additional newline is
@@ -75,11 +86,11 @@
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # callr 3.7.0
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     Reporting errors is much faster now (#185).
@@ -96,11 +107,11 @@
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 # callr 3.6.0
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     callr now supports starting an R process with a different
@@ -120,22 +131,22 @@
 
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 # callr 3.5.1
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     `callr::r_session` now handles large messages from the subprocess
     well (#168).
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 # callr 3.5.0
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     callr can now pass the environment of the function to the
@@ -144,11 +155,11 @@
     `r()`, `r_bg()`, `r_session$run()`, etc. (#147).
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 # callr 3.4.4
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     An `r_session` now exits if the load hook errors. This generates an
@@ -157,22 +168,22 @@
     error (#162).
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 # callr 3.4.3
 
-!begin-bullets-11!
+!begin-bullets-12!
 
 -   !begin-bullet!
     `default_repos()` now returns a list if `getOption("repos")` is a
     list, and a vector otherwise, on R 4.x.y as well.
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-12!
 
 # callr 3.4.2
 
-!begin-bullets-12!
+!begin-bullets-13!
 
 -   !begin-bullet!
     Improved error messages. Error messages are now fully printed after
@@ -180,11 +191,11 @@
     well.
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
 
 # callr 3.4.1
 
-!begin-bullets-13!
+!begin-bullets-14!
 
 -   !begin-bullet!
     callr is now more careful when loading the local `.Rprofile` in the
@@ -198,11 +209,11 @@
 
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-14!
 
 # callr 3.4.0
 
-!begin-bullets-14!
+!begin-bullets-15!
 
 -   !begin-bullet!
     All callr functions and background processes properly clean up
@@ -232,7 +243,7 @@
 
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-15!
 
 # callr 3.3.2
 
@@ -240,7 +251,7 @@ No user visible changes in this version.
 
 # callr 3.3.1
 
-!begin-bullets-15!
+!begin-bullets-16!
 
 -   !begin-bullet!
     `r_session` now avoids creating `data` and `env` objects in the
@@ -253,11 +264,11 @@ No user visible changes in this version.
 
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-16!
 
 # callr 3.3.0
 
-!begin-bullets-16!
+!begin-bullets-17!
 
 -   !begin-bullet!
     callr now sets the `.Last.error` variable for every uncaught callr
@@ -282,11 +293,11 @@ No user visible changes in this version.
 
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-17!
 
 # callr 3.2.0
 
-!begin-bullets-17!
+!begin-bullets-18!
 
 -   !begin-bullet!
     `r()`, `rcmd()` and `rscript()` can now redirect the standard error
@@ -306,11 +317,11 @@ No user visible changes in this version.
 
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-18!
 
 # callr 3.1.1
 
-!begin-bullets-18!
+!begin-bullets-19!
 
 -   !begin-bullet!
     `r()`, `r_bg()`, etc. now handle messages from the cliapp package
@@ -324,11 +335,11 @@ No user visible changes in this version.
 
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-19!
 
 # callr 3.1.0
 
-!begin-bullets-19!
+!begin-bullets-20!
 
 -   !begin-bullet!
     New `rscript()` function and `rscript_process` class to execute R
@@ -358,11 +369,11 @@ No user visible changes in this version.
 
     !end-bullet!
 
-!end-bullets-19!
+!end-bullets-20!
 
 # callr 3.0.0
 
-!begin-bullets-20!
+!begin-bullets-21!
 
 -   !begin-bullet!
     New `r_session` class: a background R session you can send commands
@@ -378,11 +389,11 @@ No user visible changes in this version.
 
     !end-bullet!
 
-!end-bullets-20!
+!end-bullets-21!
 
 # callr 2.0.4
 
-!begin-bullets-21!
+!begin-bullets-22!
 
 -   !begin-bullet!
     pkgdown web site at https://callr.r-lib.org (#52, #53).
@@ -403,11 +414,11 @@ No user visible changes in this version.
 
     !end-bullet!
 
-!end-bullets-21!
+!end-bullets-22!
 
 # callr 2.0.3
 
-!begin-bullets-22!
+!begin-bullets-23!
 
 -   !begin-bullet!
     The default behavior on error can be set now with the `callr.error`
@@ -424,11 +435,11 @@ No user visible changes in this version.
 
     !end-bullet!
 
-!end-bullets-22!
+!end-bullets-23!
 
 # callr 2.0.2
 
-!begin-bullets-23!
+!begin-bullets-24!
 
 -   !begin-bullet!
     Fix a bug with R-devel, caused by the change on 2018-02-08:
@@ -444,11 +455,11 @@ No user visible changes in this version.
 
     !end-bullet!
 
-!end-bullets-23!
+!end-bullets-24!
 
 # callr 2.0.1
 
-!begin-bullets-24!
+!begin-bullets-25!
 
 -   !begin-bullet!
     Fix compilation issues on Solaris
@@ -459,11 +470,11 @@ No user visible changes in this version.
 
     !end-bullet!
 
-!end-bullets-24!
+!end-bullets-25!
 
 # callr 2.0.0
 
-!begin-bullets-25!
+!begin-bullets-26!
 
 -   !begin-bullet!
     Run R or `R CMD` in the background, see `r_bg()`, `rcmd_bg()`, and
@@ -519,7 +530,7 @@ No user visible changes in this version.
 
     !end-bullet!
 
-!end-bullets-25!
+!end-bullets-26!
 
 # callr 1.0.0
 
