@@ -5,6 +5,12 @@
 -   !begin-bullet!
     Use internally computed SHA1 sums and PKI signing when SHA1 is
     disabled in FIPS mode (#768, #1054)
+
+    !end-bullet!
+-   !begin-bullet!
+    Allow Quarto content with a rendered script as its primary target.
+    (#1055)
+
     !end-bullet!
 
 !end-bullets-1!

@@ -16900,3 +16900,4 @@ reticulate,e1281c550da77d9c584f470f2318a44d,"Fixed an issue where the would be u
 pointblank,84c69df6bede78b906a9a9fbe92cd0c3,Ensured that the column string is a symbol before constructing the expression for the `col_vals_*()` functions.,NA,NA,NA,NA
 pointblank,84e10871ad228cc7b53523a54a03d026,No longer resolve columns with tidyselect when the target table cannot be materialized.,NA,NA,NA,NA
 pointblank,48a511807d2e7da107c145f6bc76664f,Relaxed tests on tidyselect error messages.,NA,NA,NA,NA
+rsconnect,17ee5bc2f8c7fd60f591b859fc5d9154,Allow Quarto content with a rendered script as its primary target. (#1055),NA,NA,NA,NA
