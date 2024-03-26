@@ -1,5 +1,7 @@
 # htmltools (development version)
 
+# htmltools 0.5.8
+
 ## Improvements
 
 !begin-bullets-1!

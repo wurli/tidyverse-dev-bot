@@ -1,5 +1,7 @@
 # htmltools (development version)
 
+# htmltools 0.5.8
+
 ## Improvements
 
 * The fill CSS attached to fillable containers and fill items with `bindFillRole()` now uses a [CSS cascade layer](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers) named `htmltools` to reduce the precedence order of the fill CSS. (#425)
