@@ -47,13 +47,18 @@
 
     !end-bullet!
 -   !begin-bullet!
-    `py_del_attr(x, name)` now returns x invisibly
+    `py_del_attr(x, name)` now returns `x` invisibly
 
     !end-bullet!
 -   !begin-bullet!
     `source_python()` no longer exports assigns the `r` symbol to the R
     globalenv(). (the "R Interface object" that is used by python code
     get a reference to the R globalenv)
+
+    !end-bullet!
+-   !begin-bullet!
+    Reticulate will no longer warn about ignored
+    `use_python(,required = FALSE)` calls.
 
     !end-bullet!
 -   !begin-bullet!
