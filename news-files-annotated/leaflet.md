@@ -1,5 +1,7 @@
 # leaflet (development version)
 
+# leaflet 2.2.2
+
 !begin-bullets-1!
 
 -   !begin-bullet!
