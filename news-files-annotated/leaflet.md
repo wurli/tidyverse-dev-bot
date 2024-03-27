@@ -141,7 +141,7 @@
     !end-bullet!
 -   !begin-bullet!
     Add missing CSS rule to show `<img>` in right-pane and left-pane
-    (rstudio/rmarkdown/issues#1949, #770)
+    (rstudio/rmarkdown#1949, #770)
 
     !end-bullet!
 -   !begin-bullet!
@@ -384,7 +384,7 @@
 
 -   !begin-bullet!
     Relative protocols are used where possible when adding tiles (#526).
-    In RStudio 1.1.x on linux and windows, a known issue of 'https://'
+    In RStudio 1.1.x on Linux and Windows, a known issue of 'https://'
     routes fail to load, but works within browsers
     (rstudio/rstudio#2661).
 
@@ -562,9 +562,9 @@
 
     !end-bullet!
 -   !begin-bullet!
-    Add addMeasure()/removeMeasure() functions to allow users to measure
-    lines and areas, via the leaflet-measure plugin by @ljagis. (PR
-    #171. Thanks, Kenton Russell!)
+    Add `addMeasure()`/`removeMeasure()` functions to allow users to
+    measure lines and areas, via the leaflet-measure plugin by @ljagis.
+    (PR #171. Thanks, Kenton Russell!)
 
     !end-bullet!
 -   !begin-bullet!
