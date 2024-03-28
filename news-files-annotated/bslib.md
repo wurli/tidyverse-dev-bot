@@ -184,9 +184,10 @@
 
     !end-bullet!
 -   !begin-bullet!
-    `uiOutput()` no longer yields unwanted double padding when it's
-    parent container uses `gap` for spacing multiple elements (e.g.,
-    `layout_columns()`, `page_fillable()`, etc). (#992)
+    `uiOutput()` and `conditionalPanel()` no longer result in unwanted
+    double padding when their parent container uses `gap` for spacing
+    multiple elements (e.g., `layout_columns()`, `page_fillable()`,
+    etc). (#992, #1031)
 
     !end-bullet!
 -   !begin-bullet!
