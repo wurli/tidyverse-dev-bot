@@ -3,6 +3,13 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed an issue where nested `py_capture_output()` calls result in a
+    lost reference to the original `sys.stdout` and `sys.stderr`,
+    resulting in no further visible output from Python, and possibly a
+    segfault. (#1564)
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed an issue where printing a delayed module
     (`import("foo", delay_load = TRUE)`) would output `<pointer: 0x0>`.
 
