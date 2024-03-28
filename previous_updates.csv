@@ -16910,3 +16910,4 @@ tensorflow,611e93b865d16525b9f3006d01abffd4,The package now Suggest 'keras3' ins
 tensorflow,d557141c14dcdfb25706a8da1656eef4,"If `install_tensorflow()` detects a GPU on Linux, it will automatically install the cuda package and configure required symlinks for cudnn.",NA,NA,NA,NA
 leaflet,a6767f3f96d52434874208f0ca5b9909,"Relative protocols are used where possible when adding tiles (#526). In RStudio 1.1.x on Linux and Windows, a known issue of 'https://' routes fail to load, but works within browsers (rstudio/rstudio#2661).",NA,NA,NA,NA
 DT,39b179d273d27072d12dd5cd838be076,"Maintain selected columns/rows/cells upon re-render (thanks, @​epruesse, #1125).",NA,NA,NA,NA
+gh,49be7d62a00b6338804f3f51f5aef77c,"`gh_next()`, `gh_prev()`, `gh_first()` and `gh_last()` now work correctly again (#181).",NA,NA,NA,NA
