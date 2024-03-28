@@ -3,6 +3,13 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Many internal changes and optimizations should result in an overall
+    substantially faster experience. I.e. a sample workload of
+    `py_to_r(np_array(1:3) + np_array(1:3))` is approx 3.4x faster as
+    compared to the current CRAN release.
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed an issue where nested `py_capture_output()` calls result in a
     lost reference to the original `sys.stdout` and `sys.stderr`,
     resulting in no further visible output from Python, and possibly a
@@ -75,8 +82,8 @@
 
     !end-bullet!
 -   !begin-bullet!
-    `source_python()` no longer exports assigns the `r` symbol to the R
-    globalenv(). (the "R Interface object" that is used by python code
+    `source_python()` no longer exports the `r` symbol to the R
+    globalenv(). (the "R Interface Object" that is used by Python code
     get a reference to the R globalenv)
 
     !end-bullet!
@@ -121,7 +128,7 @@
 
     !end-bullet!
 -   !begin-bullet!
-    Fixed an issue where the would be unable to accept the prompt to
+    Fixed an issue where a user would be unable to accept the prompt to
     create the default "r-reticulate" venv (#1557).
 
     !end-bullet!
