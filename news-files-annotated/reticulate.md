@@ -10,6 +10,11 @@
 
     !end-bullet!
 -   !begin-bullet!
+    `install_python()` will now build optimized versions of Python on
+    macOS and Linux (#1567)
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed an issue where printing a delayed module
     (`import("foo", delay_load = TRUE)`) would output `<pointer: 0x0>`.
 
