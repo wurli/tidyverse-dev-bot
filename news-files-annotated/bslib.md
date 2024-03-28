@@ -60,7 +60,7 @@
     value box to the server. For example, when using
     `card(id = "my_card", full_screen = TRUE)` you can determine if the
     card is currently in full screen mode by reading the boolean value
-    of `input$my_card$full_screen`. (#1006)
+    of `input$my_card_full_screen`. (#1006, #1032)
 
     !end-bullet!
 
