@@ -5,6 +5,14 @@
 -   !begin-bullet!
     `gh_next()`, `gh_prev()`, `gh_first()` and `gh_last()` now work
     correctly again (#181).
+
+    !end-bullet!
+-   !begin-bullet!
+    When the user sets `.destfile` to write the response to disk, gh now
+    writes the output to a temporary file, which is then renamed to
+    `.destfile` after performing the request, or deleted on error
+    (#178).
+
     !end-bullet!
 
 !end-bullets-1!
