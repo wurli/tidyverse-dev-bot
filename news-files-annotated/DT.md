@@ -12,6 +12,11 @@
     `quoted = TRUE` (#1130).
 
     !end-bullet!
+-   !begin-bullet!
+    Maintain selected columns/rows/cells upon re-render (thanks,
+    @epruesse, #1125).
+
+    !end-bullet!
 
 !end-bullets-1!
 
