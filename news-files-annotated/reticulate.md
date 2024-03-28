@@ -10,6 +10,11 @@
 
     !end-bullet!
 -   !begin-bullet!
+    New `as.data.frame()` method exported for Python Polars DataFrames
+    (#1568)
+
+    !end-bullet!
+-   !begin-bullet!
     `install_python()` will now build optimized versions of Python on
     macOS and Linux (#1567)
 
@@ -320,7 +325,7 @@
     !end-bullet!
 -   !begin-bullet!
     New function `virtualenv_starter()`, which can be used to find a
-    suitable python binary for creating a virtual environmnent. This is
+    suitable python binary for creating a virtual environment. This is
     now the default method for finding the python binary when calling
     `virtualenv_create(version = <version>)`.
 

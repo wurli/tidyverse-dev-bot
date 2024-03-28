@@ -16916,3 +16916,4 @@ reticulate,46c932e306dd8cb95e848b03172d0c7e,"Fixed an issue where nested `py_cap
 bslib,0ee1a25ee510afb68c498d8200083479,"`uiOutput()` and `conditionalPanel()` no longer result in unwanted double padding when their parent container uses `gap` for spacing multiple elements (e.g., `layout_columns()`, `page_fillable()`, etc). (#992, #1031)",NA,NA,NA,NA
 reticulate,c9f31000d32858dd52ff44a0fda3524b,"R packages can now express multiple preferred Python environments to search for and use if they exist, by supplying a character vector to `import()`: `import(""foo"", delay_load = list(environment = c(""r-foo"", ""r-bar"")))`",NA,NA,NA,NA
 reticulate,150af8de960c428cbe124bde4d50cc3c,`install_python()` will now build optimized versions of Python on macOS and Linux (#1567),NA,NA,NA,NA
+reticulate,1d45f51c1e7000b7283ad8842a0fa8d9,New `as.data.frame()` method exported for Python Polars DataFrames (#1568),NA,NA,NA,NA
