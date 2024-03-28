@@ -20,6 +20,13 @@
 
     !end-bullet!
 -   !begin-bullet!
+    R packages can now express multiple preferred Python environments to
+    search for and use if they exist, by supplying a character vector to
+    `import()`:
+    `import("foo", delay_load = list(environment = c("r-foo", "r-bar")))`
+
+    !end-bullet!
+-   !begin-bullet!
     `reticulate` now prefers using the agg matplotlib backend when the R
     session is non-interactive. The backend can also be overridden via
     the `MPLBACKEND` or `RETICULATE_MPLBACKEND` environment variables
