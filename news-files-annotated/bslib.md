@@ -1,47 +1,15 @@
-# bslib (development version)
+# bslib 0.7.0
 
-## Breaking changes
-
-!begin-bullets-1!
-
--   !begin-bullet!
-    `as_fillable_container()`, `as_fill_item()` and `as_fill_carrier()`
-    now always include the htmltools fill CSS dependency. This means
-    that they are no longer usable with the `$addAttr()`
-    `htmltools::tagQuery` method; authors should instead pass elements
-    to the `as_fillable_container()` and `as_fill_*()` functions and use
-    the `css_selector` argument to apply fill options to specific
-    elements. (#946)
-
-    !end-bullet!
--   !begin-bullet!
-    A `sidebar()` passed to `page_sidebar()`/`page_navbar()` is now
-    always open (and not collapsible) by default on mobile screens. To
-    revert to the old behavior, set `open = "desktop"` in the `sidebar`.
-    (#943)
-
-    !end-bullet!
--   !begin-bullet!
-    `page_sidebar()` now places the `title` element in a `.navbar`
-    container that matches the structure of `page_navbar()`. This
-    ensures that the title elements of `page_sidebar()` and
-    `page_navbar()` have consistent appearance. (#998)
-
-    !end-bullet!
--   !begin-bullet!
-    The `col_widths` argument of `layout_columns()` now sets the `sm`
-    breakpoint by default, rather than the `md` breakpoint. For example,
-    `col_widths = c(12, 6, 6)` is now equivalent to
-    `breakpoints(sm = c(12, 6, 6))` rather than
-    `breakpoints(md = c(12, 6, 6))`. (#1014)
-
-    !end-bullet!
-
-!end-bullets-1!
+This large release includes many improvements and bug fixes for newer UI
+components like `layout_columns()`, `card()`, and `sidebar()`. In
+addition, the new `input_task_button()` offers a drop-in replacement for
+`shiny::actionButton()` (to prevent multiple submissions of the same
+operation) as well as pairing nicely with the new `shiny::ExtendedTask`
+for implementing truly non-blocking operations in Shiny.
 
 ## New features
 
-!begin-bullets-2!
+!begin-bullets-1!
 
 -   !begin-bullet!
     Added `input_task_button()`, a replacement for
@@ -64,78 +32,131 @@
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-1!
 
-## Improvements
+## Changes & improvements
 
-!begin-bullets-3!
+!begin-bullets-2!
 
 -   !begin-bullet!
-    `layout_columns()` was rewritten in Typescript as a custom element
-    to improve the portability of the component. (#931)
+    For `sidebar()`:
 
+    !begin-bullets-3!
+    -   !begin-bullet!
+        The page-level `sidebar` for `page_sidebar()`/`page_navbar()` is
+        now always open (and not collapsible) by default on mobile
+        screens. To revert to the old behavior, set `open = "desktop"`
+        in the `sidebar`. (#943)
+
+        !end-bullet!
+    -   !begin-bullet!
+        `open` now accepts a list with `mobile` and `desktop` values to
+        control the sidebar's initial state on each screen size,
+        choosing from `"open"`, `"closed"`, or `"always"` (for an
+        always-open sidebar that cannot be collapsed). (#943)
+
+        !end-bullet!
+    -   !begin-bullet!
+        The collapse toggle now has a high `z-index` value to ensure it
+        always appears above elements in the main content area. The
+        sidebar overlay also now receives the same high `z-index` on
+        mobile layouts. (#958)
+
+        !end-bullet!
+
+    !end-bullets-3!
     !end-bullet!
 -   !begin-bullet!
-    When `layout_columns()` is given a `row_heights` value that is not a
-    `breakpoints()` object, that value is used for the row heights at
-    all breakpoints. Previously, it was used for the row heights from
-    `"sm"` up. (#931)
+    Improved `card(full_screen = TRUE, ...)` accessibility:
 
+    !begin-bullets-4!
+    -   !begin-bullet!
+        Full-screen cards are now supported on mobile devices: the
+        *Expand card* button is revealed when a user taps on the card
+        (thanks @Damonsoul, #961).
+
+        !end-bullet!
+    -   !begin-bullet!
+        The *Expand card* button is now accessible via keyboard
+        navigation and appropriate ARIA attributes connect the card with
+        the expand and close buttons.
+
+        !end-bullet!
+    -   !begin-bullet!
+        For JavaScript-oriented users, the expansion/collapse is now
+        accompanied by a custom `bslib.card` event with the full screen
+        state reported in the `event.detail.fullScreen` property. (#959)
+
+        !end-bullet!
+
+    !end-bullets-4!
     !end-bullet!
 -   !begin-bullet!
-    When `layout_columns()` is given a `col_widths` value with
-    `breakpoints()` at `lg` or wider, it now uses a better default
-    column width for the smaller breakpoints not listed in the
-    `col_widths` value. That said, you can always include `sm` or `md`
-    in your `breakpoints()` definition to have complete control over
-    column widths at those sizes. (#931)
+    Improvements to the default theme (i.e., Shiny preset):
 
+    !begin-bullets-5!
+    -   !begin-bullet!
+        In the default theme, cards now use a slightly smaller shadow
+        and the same shadow style is also now used by popovers. (#998)
+
+        !end-bullet!
+    -   !begin-bullet!
+        Increased spacing between elements. This change is most
+        noticeable in the `layout_columns()` or `layout_column_wrap()`
+        component. In these and other components, you can use `gap` and
+        `padding` arguments to choose your own values, or you can set
+        the `$bslib-spacer` (Sass) or `--bslib-spacer` (CSS) variable.
+        (#998)
+
+        !end-bullet!
+
+    !end-bullets-5!
     !end-bullet!
 -   !begin-bullet!
-    `sidebar()` now supports separate choices for the `open` argument on
-    mobile or desktop screens. You can pass a list with `mobile` and
-    `desktop` values to `open` to control the sidebar's initial state on
-    each screen size, choosing from `"open"`, `"closed"`, or `"always"`
-    (for an always-open sidebar that cannot be collapsed). (#943)
+    For `layout_columns()`:
 
-    !end-bullet!
--   !begin-bullet!
-    The sidebar's collapse toggle now has a high `z-index` value to
-    ensure it always appears above elements in the main content area of
-    `layout_sidebar()`. The sidebar overlay also now receives the same
-    high `z-index` on mobile layouts. (#958)
+    !begin-bullets-6!
+    -   !begin-bullet!
+        `col_widths` now sets the `sm` breakpoint by default, rather
+        than the `md` breakpoint. For example,
+        `col_widths = c(12, 6, 6)` is now equivalent to
+        `breakpoints(sm = c(12, 6, 6))` rather than
+        `breakpoints(md = c(12, 6, 6))`. (#1014)
 
-    !end-bullet!
--   !begin-bullet!
-    We've improved the accessibility of full screen cards created with
-    `card(full_screen = TRUE, ...)`. The *Expand card* button is now
-    accessible via keyboard navigation and appropriate ARIA attributes
-    connect the card with the expand and close buttons. For
-    JavaScript-oriented users, the expansion/collapse is now accompanied
-    by a custom `bslib.card` event with the full screen state reported
-    in the `event.detail.fullScreen` property. (#959)
+        !end-bullet!
+    -   !begin-bullet!
+        When `col_widths` has a `breakpoints()` at `lg` or wider, it now
+        uses a better default column width for the smaller breakpoints
+        not listed in the `col_widths` value. That said, you can always
+        include `sm` or `md` in your `breakpoints()` definition to have
+        complete control over column widths at those sizes. (#931)
 
-    !end-bullet!
--   !begin-bullet!
-    Full-screen cards are now supported on mobile devices: the *Expand
-    card* button is revealed when a user taps on the card (thanks
-    @Damonsoul, #961).
+        !end-bullet!
+    -   !begin-bullet!
+        When `row_heights` is a non-`breakpoints()` object, that value
+        is used for the row heights at all breakpoints. Previously, it
+        was used for the row heights from `"sm"` up. (#931)
 
-    !end-bullet!
--   !begin-bullet!
-    We adjusted the shadows used for cards and popovers in the Shiny
-    preset. Cards now use a slightly smaller shadow and the same shadow
-    style is also now used by popovers. (#998)
+        !end-bullet!
+    -   !begin-bullet!
+        When an integer value for any breakpoint is provided to
+        `col_widths`, a 12-unit grid is always used. For example,
+        `breakpoints(md = 3, lg = NA)` will pick a best-fitting layout
+        for large screen sizes using the 12-column grid. Previously, the
+        best fit algorithm might adjust the number of columns as a
+        shortcut to an easy solution. That shortcut is only taken when
+        an auto-fit layout is requested for every breakpoint,
+        e.g. `col_widths = breakpoints(md = NA, lg = NA)` or
+        `col_widths = NA`. (#928)
 
-    !end-bullet!
--   !begin-bullet!
-    We increased the spacing between elements just slightly in the Shiny
-    preset. This change is most noticeable in the `layout_columns()` or
-    `layout_column_wrap()` component. In these and other components, you
-    can use `gap` and `padding` arguments to choose your own values, or
-    you can set the `$bslib-spacer` (Sass) or `--bslib-spacer` (CSS)
-    variable. (#998)
+        !end-bullet!
+    -   !begin-bullet!
+        Underlying logic moved from R to Typescript to improve the
+        portability of the component. (#931)
 
+        !end-bullet!
+
+    !end-bullets-6!
     !end-bullet!
 -   !begin-bullet!
     `value_box()`, `layout_columns()` and `layout_column_wrap()` now all
@@ -148,30 +169,42 @@
     between 300 and 500 pixels tall. (#1016)
 
     !end-bullet!
+-   !begin-bullet!
+    `page_sidebar()` now places the `title` element in a `.navbar`
+    container that matches the structure of `page_navbar()`. This
+    ensures that the title elements of `page_sidebar()` and
+    `page_navbar()` have consistent appearance. (#998)
 
-!end-bullets-3!
+    !end-bullet!
+-   !begin-bullet!
+    `as_fillable_container()`, `as_fill_item()` and `as_fill_carrier()`
+    now always include the htmltools fill CSS dependency. This means
+    that they are no longer usable with the `$addAttr()`
+    `htmltools::tagQuery` method; authors should instead pass elements
+    to the `as_fillable_container()` and `as_fill_*()` functions and use
+    the `css_selector` argument to apply fill options to specific
+    elements. (#946)
+
+    !end-bullet!
+
+!end-bullets-2!
 
 ## Bug fixes
 
-!begin-bullets-4!
+!begin-bullets-7!
 
--   !begin-bullet!
-    `layout_columns()` now always uses a 12-unit grid when the user
-    provides an integer value to `col_widths` for any breakpoint. For
-    example, `breakpoints(md = 3, lg = NA)` will pick a best-fitting
-    layout for large screen sizes using the 12-column grid. Previously,
-    the best fit algorithm might adjust the number of columns as a
-    shortcut to an easy solution. That shortcut is only taken when an
-    auto-fit layout is requested for every breakpoint,
-    e.g. `col_widths = breakpoints(md = NA, lg = NA)` or
-    `col_widths = NA`. (#928)
-
-    !end-bullet!
 -   !begin-bullet!
     Fixed an issue where the page might be given a window title of `NA`
     if the primary `title` argument of a page function, such as
     `page_sidebar()`, is `NULL` or a suitable window title could not be
     inferred. (#933)
+
+    !end-bullet!
+-   !begin-bullet!
+    `card()`s (and `value_box()`s) now correctly exit full screen mode
+    when they are removed from the UI. If you want to update a card
+    without potentially exiting the full-screen mode, update specific
+    parts of the card using `uiOutput()` or `textOutput()`. (#1005)
 
     !end-bullet!
 -   !begin-bullet!
@@ -196,23 +229,13 @@
 
     !end-bullet!
 -   !begin-bullet!
-    Fixed an issue that could happen with a `card()` or `value_box()`
-    that is rendered entirely via `renderUI()` when it is replaced by an
-    updated card but the user had expanded the original card into full
-    screen mode. Now the full screen state is reset for the new card or
-    value box. If you want to update a card without potentially exiting
-    the full-screen mode, update specific parts of the card using
-    `uiOutput()` or `textOutput()`. (#1005)
-
-    !end-bullet!
--   !begin-bullet!
     Fixed an issue where the `xs` breakpoint in a `breakpoints()` object
     used for `row_heights` in `layout_columns()` would override all
     other breakpoints. (#1014)
 
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-7!
 
 # bslib 0.6.2
 
@@ -224,7 +247,7 @@ files.
 
 ## Bug fixes
 
-!begin-bullets-5!
+!begin-bullets-8!
 
 -   !begin-bullet!
     Fixed the CSS for the `bslib-page-dashboard` class in the Shiny
@@ -239,13 +262,13 @@ files.
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-8!
 
 # bslib 0.6.0
 
 ## Breaking changes
 
-!begin-bullets-6!
+!begin-bullets-9!
 
 -   !begin-bullet!
     `bs_theme()` now defaults to `preset="shiny"`. This provides an
@@ -293,11 +316,11 @@ files.
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-9!
 
 ## New features
 
-!begin-bullets-7!
+!begin-bullets-10!
 
 -   !begin-bullet!
     The default version of Bootstrap is now v5.3.1, upgraded from
@@ -340,7 +363,7 @@ files.
     `value_box()` has been updated with a number of new features and
     improvements:
 
-    !begin-bullets-8!
+    !begin-bullets-11!
     -   !begin-bullet!
         `value_box()` now supports many new themes and styles, or fully
         customizable themes using the new `value_box_theme()` function.
@@ -392,7 +415,7 @@ files.
 
         !end-bullet!
 
-    !end-bullets-8!
+    !end-bullets-11!
     !end-bullet!
 -   !begin-bullet!
     Added new `navset_underline()` & `navset_card_underline()` functions
@@ -401,11 +424,11 @@ files.
 
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-10!
 
 ## Improvements
 
-!begin-bullets-9!
+!begin-bullets-12!
 
 -   !begin-bullet!
     The `bs_themer()` app now supports previewing the dark mode variant
@@ -456,11 +479,11 @@ files.
 
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-12!
 
 ## Bug fixes
 
-!begin-bullets-10!
+!begin-bullets-13!
 
 -   !begin-bullet!
     `toggle_switch()` now works correctly when called from within a
@@ -486,13 +509,13 @@ files.
 
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-13!
 
 # bslib 0.5.1
 
 ## New features
 
-!begin-bullets-11!
+!begin-bullets-14!
 
 -   !begin-bullet!
     Added `tooltip()`, `update_tooltip()`, and `toggle_tooltip()` for
@@ -519,11 +542,11 @@ files.
     remains as an alias of `toggle_sidebar()`). (#709)
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-14!
 
 ## Improvements
 
-!begin-bullets-12!
+!begin-bullets-15!
 
 -   !begin-bullet!
     Closed quarto-dev/quarto-cli#6081: `{bslib}`'s components (e.g.,
@@ -536,11 +559,11 @@ files.
     padding around the sidebar's content. (#725)
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-15!
 
 ## Bug fixes
 
-!begin-bullets-13!
+!begin-bullets-16!
 
 -   !begin-bullet!
     Closed #636: Outputs in sidebars now work as expected when an
@@ -565,7 +588,7 @@ files.
     by avoiding layout issues caused by grid container overflow. (#729)
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-16!
 
 # bslib 0.5.0
 
@@ -581,7 +604,7 @@ recommended way to create Shiny dashboards.
 
 ## Breaking changes / improvements
 
-!begin-bullets-14!
+!begin-bullets-17!
 
 -   !begin-bullet!
     `card_body()` now provides the same behavior as `card_body_fill()`
@@ -609,7 +632,7 @@ recommended way to create Shiny dashboards.
     this breaks existing behavior, consider using
     `shiny::fillPage(theme = bslib::bs_theme(), ...)` instead of
     `page_fill()`.
-    !begin-bullets-15!
+    !begin-bullets-18!
     -   !begin-bullet!
         `page_fill()` now produces a `<body>` tag with `display:flex`
         (instead of `display:block`).
@@ -624,12 +647,12 @@ recommended way to create Shiny dashboards.
         `padding = 0` and `gap = 0` to restore the old behavior.
         !end-bullet!
 
-    !end-bullets-15!
+    !end-bullets-18!
     !end-bullet!
 -   !begin-bullet!
     `page_navbar()` (and also `shiny::navbarPage()` with
     `theme = bs_theme()`) had a couple breaking changes:
-    !begin-bullets-16!
+    !begin-bullets-19!
     -   !begin-bullet!
         The container of each page is now `display:flex` (instead of
         `display:block`). If this breaks existing behavior, set
@@ -642,7 +665,7 @@ recommended way to create Shiny dashboards.
         `shiny::fluidRow()`). (#479)
         !end-bullet!
 
-    !end-bullets-16!
+    !end-bullets-19!
     !end-bullet!
 -   !begin-bullet!
     `layout_column_wrap()`'s `fill` argument now controls whether or not
@@ -662,11 +685,11 @@ recommended way to create Shiny dashboards.
     (#475)
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-17!
 
 ## New features
 
-!begin-bullets-17!
+!begin-bullets-20!
 
 -   !begin-bullet!
     Added `page_sidebar()`, for easy dashboard creation. (#588)
@@ -718,11 +741,11 @@ recommended way to create Shiny dashboards.
     to fill. (#498)
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-20!
 
 ## Bug fixes
 
-!begin-bullets-18!
+!begin-bullets-21!
 
 -   !begin-bullet!
     Closed #558: nested cards with `fullscreen = TRUE` now correctly and
@@ -735,11 +758,11 @@ recommended way to create Shiny dashboards.
     `value_box("Dynamic value", uiOutput("value"))`). (#605)
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-21!
 
 ## Deprecations
 
-!begin-bullets-19!
+!begin-bullets-22!
 
 -   !begin-bullet!
     `card_body_fill()` has been deprecated in favor of `card_body()`.
@@ -756,7 +779,7 @@ recommended way to create Shiny dashboards.
 -   !begin-bullet!
     The `navs_*()` family of functions have been deprecated in favor of
     `navset_*()` (#476):
-    !begin-bullets-20!
+    !begin-bullets-23!
     -   !begin-bullet!
         `navs_tab()` is now `navset_tab()`
         !end-bullet!
@@ -774,34 +797,34 @@ recommended way to create Shiny dashboards.
         `navset_card_tab()` and `navset_card_pill()`, respectively.
         !end-bullet!
 
-    !end-bullets-20!
+    !end-bullets-23!
     !end-bullet!
 
-!end-bullets-19!
+!end-bullets-22!
 
 # bslib 0.4.2
 
 ## Potentially breaking changes
 
-!begin-bullets-21!
+!begin-bullets-24!
 
 -   !begin-bullet!
     Upgraded Bootstrap 5 (i.e., `bs_theme(version = 5)`) from 5.1.3 to
     5.2.2. (#438, #455)
     !end-bullet!
 
-!end-bullets-21!
+!end-bullets-24!
 
 ## New features
 
-!begin-bullets-22!
+!begin-bullets-25!
 
 -   !begin-bullet!
     Adds a new `card()` API as well as `value_box()` and
     `layout_column_wrap()`. To learn more about this new functionality,
     refer to these new pkgdown articles:
 
-    !begin-bullets-23!
+    !begin-bullets-26!
     -   !begin-bullet!
         https://rstudio.github.io/bslib/articles/cards.html
         !end-bullet!
@@ -812,29 +835,29 @@ recommended way to create Shiny dashboards.
         https://rstudio.github.io/bslib/articles/column-layout.html
         !end-bullet!
 
-    !end-bullets-23!
+    !end-bullets-26!
     !end-bullet!
 
-!end-bullets-22!
+!end-bullets-25!
 
 # bslib 0.4.1
 
 ## Bug Fixes
 
-!begin-bullets-24!
+!begin-bullets-27!
 
 -   !begin-bullet!
     Closed #458. This release `{bslib}` now requires `{memoise}` 2.0.1
     or above.
     !end-bullet!
 
-!end-bullets-24!
+!end-bullets-27!
 
 # bslib 0.4.0
 
 ## Breaking changes
 
-!begin-bullets-25!
+!begin-bullets-28!
 
 -   !begin-bullet!
     `bs_theme()` now defaults to `version = 5` (i.e., Bootstrap 5). If
@@ -853,11 +876,11 @@ recommended way to create Shiny dashboards.
     appropriately). (#392)
     !end-bullet!
 
-!end-bullets-25!
+!end-bullets-28!
 
 ## New features
 
-!begin-bullets-26!
+!begin-bullets-29!
 
 -   !begin-bullet!
     Upgraded Bootstrap 5 (i.e., `bs_theme(version = 5)`) from 5.1.0 to
@@ -869,11 +892,11 @@ recommended way to create Shiny dashboards.
     the same dynamically themable widget. (#405)
     !end-bullet!
 
-!end-bullets-26!
+!end-bullets-29!
 
 ## Bug fixes
 
-!begin-bullets-27!
+!begin-bullets-30!
 
 -   !begin-bullet!
     Closed #393: Bootstrap 5's `$form-check-label-*` variables now work
@@ -908,56 +931,17 @@ recommended way to create Shiny dashboards.
     (#391)
     !end-bullet!
 
-!end-bullets-27!
+!end-bullets-30!
 
 # bslib 0.3.1
-
-## New features
-
-!begin-bullets-28!
-
--   !begin-bullet!
-    Upgraded Bootstrap 5 (i.e., `bs_theme(version = 5)`) from 5.0.2 to
-    5.1.0 (#365)
-    !end-bullet!
-
-!end-bullets-28!
-
-## Bug fixes
-
-!begin-bullets-29!
-
--   !begin-bullet!
-    Closed rstudio/shiny#3519: `nav_menu()` (i.e.,
-    `shiny::navbarMenu()`) wasn't producing an `.active` class on it's
-    `.dropdown` container properly. (#372)
-    !end-bullet!
-
-!end-bullets-29!
-
-# bslib 0.3.0
-
-## Breaking changes
-
-!begin-bullets-30!
-
--   !begin-bullet!
-    Closed rstudio/rmarkdown#2154: `{magrittr}`'s pipe operator (`%>%`)
-    is no longer re-exported by `{bslib}`. Either `library(magrittr)` to
-    make `%>%` available and/or use use R 4.1's pipe operator (`|>`).
-    !end-bullet!
-
-!end-bullets-30!
 
 ## New features
 
 !begin-bullets-31!
 
 -   !begin-bullet!
-    Closed #82: Added support for Bootstrap 5 (via
-    `bs_theme(version = 5)`). Bootstrap 4 remains the default in this
-    release, but the next release, the default will likely change to
-    Bootstrap 5.
+    Upgraded Bootstrap 5 (i.e., `bs_theme(version = 5)`) from 5.0.2 to
+    5.1.0 (#365)
     !end-bullet!
 
 !end-bullets-31!
@@ -967,12 +951,51 @@ recommended way to create Shiny dashboards.
 !begin-bullets-32!
 
 -   !begin-bullet!
+    Closed rstudio/shiny#3519: `nav_menu()` (i.e.,
+    `shiny::navbarMenu()`) wasn't producing an `.active` class on it's
+    `.dropdown` container properly. (#372)
+    !end-bullet!
+
+!end-bullets-32!
+
+# bslib 0.3.0
+
+## Breaking changes
+
+!begin-bullets-33!
+
+-   !begin-bullet!
+    Closed rstudio/rmarkdown#2154: `{magrittr}`'s pipe operator (`%>%`)
+    is no longer re-exported by `{bslib}`. Either `library(magrittr)` to
+    make `%>%` available and/or use use R 4.1's pipe operator (`|>`).
+    !end-bullet!
+
+!end-bullets-33!
+
+## New features
+
+!begin-bullets-34!
+
+-   !begin-bullet!
+    Closed #82: Added support for Bootstrap 5 (via
+    `bs_theme(version = 5)`). Bootstrap 4 remains the default in this
+    release, but the next release, the default will likely change to
+    Bootstrap 5.
+    !end-bullet!
+
+!end-bullets-34!
+
+## Bug fixes
+
+!begin-bullets-35!
+
+-   !begin-bullet!
     Closed #6: rmarkdown's .tabset-fade class now works with Bootstrap
     4+ since legacy use of .nav .fade is now officially supported in
     Bootstrap 4+. (#325)
     !end-bullet!
 
-!end-bullets-32!
+!end-bullets-35!
 
 # bslib 0.2.5.1
 
@@ -982,7 +1005,7 @@ Small patch release to fix failing test on Solaris.
 
 ## New features and improvements
 
-!begin-bullets-33!
+!begin-bullets-36!
 
 -   !begin-bullet!
     Closed #251: New `bs_theme()` options (`navbar-bg`,
@@ -1043,11 +1066,11 @@ Small patch release to fix failing test on Solaris.
     `bs_add_functions()`. (#311)
     !end-bullet!
 
-!end-bullets-33!
+!end-bullets-36!
 
 ## Bug fixes
 
-!begin-bullets-34!
+!begin-bullets-37!
 
 -   !begin-bullet!
     Closed #236, #230, #242, #187, #215, #250: Addressed various
@@ -1062,14 +1085,14 @@ Small patch release to fix failing test on Solaris.
     spacing/alignment (#286).
     !end-bullet!
 
-!end-bullets-34!
+!end-bullets-37!
 
 # bslib 0.2.4
 
-!begin-bullets-35!
+!begin-bullets-38!
 
 -   !begin-bullet!
     Initial release of the package, see https://rstudio.github.io/bslib/
     !end-bullet!
 
-!end-bullets-35!
+!end-bullets-38!
