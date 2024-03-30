@@ -62,12 +62,12 @@
     new/more general `unnecessary_nesting_linter()`.
     !end-bullet!
 -   !begin-bullet!
-    Drop support for posting GitHub comments from inside Travis,
-    Wercker, and Jenkins CI tools (spurred by #2148, @MichaelChirico).
-    We rely on GitHub Actions for linting in CI, and don't see any
-    active users relying on these alternatives. We welcome and encourage
-    community contributions to get support for different CI system going
-    again.
+    Drop support for posting GitHub comments from inside GitHub comment
+    bot, Travis, Wercker, and Jenkins CI tools (spurred by #2148,
+    @MichaelChirico). We rely on GitHub Actions for linting in CI, and
+    don't see any active users relying on these alternatives. We welcome
+    and encourage community contributions to get support for different
+    CI system going again.
     !end-bullet!
 
 !end-bullets-1!
