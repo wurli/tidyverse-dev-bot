@@ -234,6 +234,11 @@
     `any_is_na_linter()` is extended to catch the unusual usage
     `NA %in% x` (#2113, @MichaelChirico).
     !end-bullet!
+-   !begin-bullet!
+    `make_linter_from_xpath()` errors up front when `lint_message` is
+    missing (instead of delaying this error until the linter is used,
+    #2541, @MichaelChirico).
+    !end-bullet!
 
 !end-bullets-5!
 
