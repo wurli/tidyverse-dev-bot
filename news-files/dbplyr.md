@@ -1,5 +1,7 @@
 # dbplyr (development version)
 
+# dbplyr 2.5.0
+
 ## Improved tools for qualified table names
 
 * Specification of table names with schema/catalogs has been overhauled to
