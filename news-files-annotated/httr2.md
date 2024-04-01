@@ -3,14 +3,8 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
-    `url_parse()` is considerably faster thanks to performance
-    optimisations by and discussion with @DyfanJones (#429).
-
-    !end-bullet!
--   !begin-bullet!
-    `req_timeout()` now resets the value of `connecttimeout` set by
-    curl. This ensures that you can use `req_timeout()` to increase the
-    connection timeout past 10s (#395).
+    `req_perform_stream()` gains a `round = c("byte", "line")` argument
+    to control how the stream is rounded (#437).
 
     !end-bullet!
 -   !begin-bullet!
@@ -24,8 +18,14 @@
 
     !end-bullet!
 -   !begin-bullet!
-    `req_perform_stream()` gains a `round = c("byte", "line")` argument
-    to control how the stream is rounded (#437).
+    `req_timeout()` now resets the value of `connecttimeout` set by
+    curl. This ensures that you can use `req_timeout()` to increase the
+    connection timeout past 10s (#395).
+
+    !end-bullet!
+-   !begin-bullet!
+    `url_parse()` is considerably faster thanks to performance
+    optimisations by and discussion with @DyfanJones (#429).
 
     !end-bullet!
 
