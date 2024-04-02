@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `update_geom_defaults()` and `update_stat_defaults()` have a reset
+    mechanism when using `new = NULL` and invisible return the previous
+    defaults (#4993).
+    !end-bullet!
+-   !begin-bullet!
     `coord_map()` and `coord_polar()` throw informative warnings when
     used with the guide system (#5707).
     !end-bullet!
@@ -40,6 +45,18 @@
     #5665).
     !end-bullet!
 -   !begin-bullet!
+    While axes in `coord_radial()` don't neatly fit the
+    top/right/bottom/left organisation, specifying `position = "top"` or
+    `position = "right"` in the scale will flip the placement of the
+    radial axis (#5735)
+    !end-bullet!
+-   !begin-bullet!
+    The default behaviour of `resolution()` has been reverted to
+    pre-3.5.0 behaviour. Whether mapped discrete vectors should be
+    treated as having resolution of 1 is controlled by the new
+    `discrete` argument.
+    !end-bullet!
+-   !begin-bullet!
     Fixed bug in `guide_bins()` and `guide_coloursteps()` where discrete
     breaks, such as the levels produced by `cut()`, were ordered
     incorrectly (@teunbrand, #5757).
@@ -60,6 +77,10 @@
 -   !begin-bullet!
     `annotate()` now warns about `stat` or `position` arguments
     (@teunbrand, #5151)
+    !end-bullet!
+-   !begin-bullet!
+    `guide_coloursteps(even.steps = FALSE)` now works with discrete data
+    that has been formatted by `cut()` (@teunbrand, #3877).
     !end-bullet!
 
 !end-bullets-1!

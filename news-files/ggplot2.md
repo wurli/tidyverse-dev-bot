@@ -1,6 +1,8 @@
 
 # ggplot2 (development version)
 
+* `update_geom_defaults()` and `update_stat_defaults()` have a reset mechanism
+  when using `new = NULL` and invisible return the previous defaults (#4993).
 * `coord_map()` and `coord_polar()` throw informative warnings when used
   with the guide system (#5707).
 * When passing a function to `stat_contour(breaks)`, that function is used to
@@ -17,6 +19,12 @@
 * Patterns and gradients are now also enabled in `geom_sf()` 
   (@teunbrand, #5716).
 * `stat_bin()` deals with non-finite breaks better (@teunbrand, #5665).
+* While axes in `coord_radial()` don't neatly fit the top/right/bottom/left
+  organisation, specifying `position = "top"` or `position = "right"` 
+  in the scale will flip the placement of the radial axis (#5735)
+* The default behaviour of `resolution()` has been reverted to pre-3.5.0 
+  behaviour. Whether mapped discrete vectors should be treated as having 
+  resolution of 1 is controlled by the new `discrete` argument.
 * Fixed bug in `guide_bins()` and `guide_coloursteps()` where discrete breaks,
   such as the levels produced by `cut()`, were ordered incorrectly 
   (@teunbrand, #5757).
@@ -26,6 +34,8 @@
 * When legends detect the presence of values in a layer, `NA` is now detected
   if the data contains values outside the given breaks (@teunbrand, #5749).
 * `annotate()` now warns about `stat` or `position` arguments (@teunbrand, #5151)
+* `guide_coloursteps(even.steps = FALSE)` now works with discrete data that has 
+  been formatted by `cut()` (@teunbrand, #3877).
 
 # ggplot2 3.5.0
 
