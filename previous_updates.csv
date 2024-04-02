@@ -16945,3 +16945,4 @@ ggplot2,d8103ab948b9f553d343e6096d22131d,`update_geom_defaults()` and `update_st
 ggplot2,67b272cc43c4872df5835737e72bf4c0,"While axes in `coord_radial()` don't neatly fit the top/right/bottom/left organisation, specifying `position = ""top""` or `position = ""right""` in the scale will flip the placement of the radial axis (#5735)",NA,NA,NA,NA
 ggplot2,08fc38ece4f75367e3f46d99bf7961e1,The default behaviour of `resolution()` has been reverted to pre-3.5.0 behaviour. Whether mapped discrete vectors should be treated as having resolution of 1 is controlled by the new `discrete` argument.,NA,NA,NA,NA
 ggplot2,8ac63519961463cecc3bc10a37d52e45,"`guide_coloursteps(even.steps = FALSE)` now works with discrete data that has been formatted by `cut()` (@​teunbrand, #3877).",NA,NA,NA,NA
+ggplot2,065e2d85371b0d8700a430a3fcfeecf7,"When facets coerce the faceting variables to factors, the 'ordered' class is dropped (@​teunbrand, #5666).",NA,NA,NA,NA
