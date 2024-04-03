@@ -4,7 +4,7 @@
 
 -   !begin-bullet!
     Use internally computed SHA1 sums and PKI signing when SHA1 is
-    disabled in FIPS mode (#768, #1054)
+    disabled in FIPS mode. (#768, #1054)
 
     !end-bullet!
 -   !begin-bullet!
