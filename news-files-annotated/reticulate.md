@@ -10,6 +10,11 @@
 
     !end-bullet!
 -   !begin-bullet!
+    Output of `reticulate::py_last_error()` now includes a hint, showing
+    how to access the full R call stack.
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed an issue where nested `py_capture_output()` calls result in a
     lost reference to the original `sys.stdout` and `sys.stderr`,
     resulting in no further visible output from Python, and possibly a
@@ -130,6 +135,10 @@
 -   !begin-bullet!
     Fixed an issue where a user would be unable to accept the prompt to
     create the default "r-reticulate" venv (#1557).
+
+    !end-bullet!
+-   !begin-bullet!
+    `is_py_object()` is now exported.
 
     !end-bullet!
 
