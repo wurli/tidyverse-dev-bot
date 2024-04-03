@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Default Python version installed by `install_python()` is now 3.10
+    (was 3.9).
+
+    !end-bullet!
+-   !begin-bullet!
     Many internal changes and optimizations should result in an overall
     substantially faster experience. I.e. a sample workload of
     `py_to_r(np_array(1:3) + np_array(1:3))` is approx 3.4x faster as
