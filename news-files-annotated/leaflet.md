@@ -534,7 +534,7 @@
 
     !end-bullet!
 -   !begin-bullet!
-    `colorFactor` no longer interpolates qualitative RColorBrewer
+    `colorFactor()` no longer interpolates qualitative RColorBrewer
     palettes, unless the number of factor levels being mapped exceeds
     the number of colors in the specified RColorBrewer palette. (Issue
     #300)
