@@ -3,8 +3,14 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Added missing C level `r_dyn_raw_push_back()` and
+    `r_dyn_chr_push_back()` utilities (#1699).
+
+    !end-bullet!
+-   !begin-bullet!
     `last_trace()` hyperlinks now use the modern `x-r-run` format
     (#1678).
+
     !end-bullet!
 
 !end-bullets-1!
