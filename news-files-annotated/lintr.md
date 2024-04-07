@@ -92,6 +92,10 @@
     variable `R_LINTR_LINTER_FILE` can point to subdirectories (#2512,
     @MichaelChirico).
     !end-bullet!
+-   !begin-bullet!
+    `indentation_linter()` returns `ranges[1L]==1L` when the offending
+    line has 0 spaces (#2550, @MichaelChirico).
+    !end-bullet!
 
 !end-bullets-3!
 

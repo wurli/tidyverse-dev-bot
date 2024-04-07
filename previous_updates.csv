@@ -16951,3 +16951,4 @@ reticulate,2d0ea4eeb36d9da0ee1b73755636b042,`is_py_object()` is now exported.,NA
 reticulate,e5102dc3fb4d0ef6f33399f018db591d,Default Python version installed by `install_python()` is now 3.10 (was 3.9).,NA,NA,NA,NA
 promises,43f3a1091b7a79edbeeb959f7655a7bf,`is.promising` is now an S3 method. (#104),NA,NA,NA,NA
 rlang,669fdf58dd15f5d5477202da4e515528,Added missing C level `r_dyn_raw_push_back()` and `r_dyn_chr_push_back()` utilities (#1699).,NA,NA,NA,NA
+lintr,835291e2b3866d30e581b05ccb5ee517,"`indentation_linter()` returns `ranges[1L]==1L` when the offending line has 0 spaces (#2550, @​MichaelChirico).",NA,NA,NA,NA
