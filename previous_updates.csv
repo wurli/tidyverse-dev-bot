@@ -16978,3 +16978,20 @@ reticulate,d80ebace7f4e281ed1014eab80280449,`iterate(simplify=TRUE)` rewritten i
 reticulate,9e43a3ad37045788facf2d45d64a113d,Updates for CRAN R-devel (R 4.4) (#1554).,NA,NA,NA,NA
 reticulate,39e952b2dbf254367f0d2896c4070ef7,`is_py_object()` is now exported (#1573).,NA,NA,NA,NA
 pkgdown,c53fd39e8985ed07972cd469549e409b,"pkgdown is now compatible with (and requires) bslib \>= 0.5.1 (@​gadenbuie, #2395).",NA,NA,NA,NA
+pkgdown,32c621903d036b30b02bb8f4e5df756a,"pkgdown is now compatible with (and requires) bslib \>= 0.5.1 (@​gadenbuie, #2395), including a fix to BS5 navbar template to get `navbar.type: dark` to work with Bootstrap 5.3+ (@​tanho63, #2388)",NA,NA,NA,NA
+pkgdown,ca9a73d190badd6c45dc4edbb01b1e0e,Now uses cli to provide interactive feedback.,NA,NA,NA,NA
+pkgdown,38638ff4936f5fb36b084948c06a3222,Translations,NA,NA,NA,NA
+pkgdown,38638ff4936f5fb36b084948c06a3222,"• New Catalan translation (@​jmaspons, #2333).",NA,NA,NA,NA
+pkgdown,38638ff4936f5fb36b084948c06a3222,"• Citation sections are correctly translated (@​eliocamp, #2410).",NA,NA,NA,NA
+pkgdown,903ada730905af42d380a390de822286,"`build_article_index()` now sorts vignettes and non-vignette articles alphabetically by their filename (literally, their `basename()`), by default (@​jennybc, #2253).",NA,NA,NA,NA
+pkgdown,db831ad54fb39f7944b90aa21470b48b,"`build_articles()` now sets RNG seed by default. Use `build_articles(seed = NULL)` for the old (unreproducible) behaviour. (@​salim-b, #2354).",NA,NA,NA,NA
+pkgdown,a97b7acd4e6e336d0bbe0f9ff6bf6205,"`build_articles()` will process `.qmd` articles with the quarto vignette builder (@​rcannood, #2404).",NA,NA,NA,NA
+pkgdown,34cf6c0d7dc58a0236d9566420e80562,"`build_articles()` and `build_reference()` now set RNG seed for htmlwidgets IDs. This reduces noise in final HTML output, both for articles and examples that contain htmlwidgets (@​salim-b, #2294, #2354).",NA,NA,NA,NA
+pkgdown,4f3c429c76539fa6687a4bf23d40dde5,"`build_news()` correctly parses of github profiles and issues into links when present at the beginning of list items (@​pearsonca, #2122)",NA,NA,NA,NA
+pkgdown,288a29886f03f9ede56a837d55037ccf,"`build_reference()` sets `seed` correctly; it was previously reset too early (@​salim-b, #2355)",NA,NA,NA,NA
+pkgdown,e6208e4c6928f98687aefb4c32cadb2a,Rd -\> html translation,NA,NA,NA,NA
+pkgdown,e6208e4c6928f98687aefb4c32cadb2a,• `\cr` is now translated to `<br>` not `<br />` (#2400).,NA,NA,NA,NA
+pkgdown,e6208e4c6928f98687aefb4c32cadb2a,• Correct usage for S3 methods with non-syntactic class names (#2384).,NA,NA,NA,NA
+pkgdown,e6208e4c6928f98687aefb4c32cadb2a,"• Preserve Markdown code blocks with class rmd from roxygen2 docs (@​salim-b, #2298).",NA,NA,NA,NA
+pkgdown,6d38bee8fa58d0f8b61052a5d36f2452,"`build_reference_index()` no longer generates redundant entries when multiple explicit `@​usage` tags are provided (@​klmr, #2302)",NA,NA,NA,NA
+pkgdown,327436e9c8356e5e6fc285e436ba65ef,"`build_reference_index()` correctly handles topic names that conflict with selector functions (@​dmurdoch, #2397).",NA,NA,NA,NA
