@@ -3,37 +3,54 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
-    Default Python version installed by `install_python()` is now 3.10
-    (was 3.9).
+    Internal refactoring and optimization now give a faster experience,
+    especially for workflows that frequently access Python objects
+    from R. For example, simple attribute access like `sys$path` is
+    \~2.5x times faster, and a sample workload of
+    `py_to_r(np_array(1:3) + np_array(1:3))` benchmarks \~3.5x faster
+    when compared to the previous CRAN release.
 
     !end-bullet!
 -   !begin-bullet!
-    Many internal changes and optimizations should result in an overall
-    substantially faster experience. I.e. a sample workload of
-    `py_to_r(np_array(1:3) + np_array(1:3))` is approx 3.4x faster as
-    compared to the current CRAN release.
+    Fixed issue where callable python objects created with
+    `convert = FALSE` would not be wrapped in an R function (#1522).
 
     !end-bullet!
 -   !begin-bullet!
-    Output of `reticulate::py_last_error()` now includes a hint, showing
-    how to access the full R call stack.
-
-    !end-bullet!
--   !begin-bullet!
-    Fixed an issue where nested `py_capture_output()` calls result in a
-    lost reference to the original `sys.stdout` and `sys.stderr`,
-    resulting in no further visible output from Python, and possibly a
-    segfault. (#1564)
-
-    !end-bullet!
--   !begin-bullet!
-    New `as.data.frame()` method exported for Python Polars DataFrames
-    (#1568)
+    Fixed issue where `py_to_r()` S3 methods would not be called on
+    arguments supplied to R functions being called from Python (#1522).
 
     !end-bullet!
 -   !begin-bullet!
     `install_python()` will now build optimized versions of Python on
     macOS and Linux (#1567)
+
+    !end-bullet!
+-   !begin-bullet!
+    Default Python version installed by `install_python()` is now 3.10
+    (was 3.9) (#1574).
+
+    !end-bullet!
+-   !begin-bullet!
+    Output of `reticulate::py_last_error()` now includes a hint, showing
+    how to access the full R call stack (#1572).
+
+    !end-bullet!
+-   !begin-bullet!
+    Fixed an issue where nested `py_capture_output()` calls result in a
+    lost reference to the original `sys.stdout` and `sys.stderr`,
+    resulting in no further visible output from Python, and eventually,
+    a segfault. (#1564)
+
+    !end-bullet!
+-   !begin-bullet!
+    `py_to_r(x)` now returns `x` unmodified if `x` is not a Python
+    object, instead of signaling an error.
+
+    !end-bullet!
+-   !begin-bullet!
+    New `as.data.frame()` method exported for Python Polars DataFrames
+    (#1568)
 
     !end-bullet!
 -   !begin-bullet!
@@ -51,35 +68,26 @@
     search for and use if they exist, by supplying a character vector to
     `import()`:
     `import("foo", delay_load = list(environment = c("r-foo", "r-bar")))`
+    (#1559)
+
+    !end-bullet!
+-   !begin-bullet!
+    Reticulate will no longer warn about ignored
+    `use_python(,required = FALSE)` calls (#1562).
 
     !end-bullet!
 -   !begin-bullet!
     `reticulate` now prefers using the agg matplotlib backend when the R
     session is non-interactive. The backend can also be overridden via
     the `MPLBACKEND` or `RETICULATE_MPLBACKEND` environment variables
-    when necessary.
-
-    !end-bullet!
--   !begin-bullet!
-    Fixed issue where callable python objects created with
-    `convert = FALSE` would not be wrapped in an R function.
-
-    !end-bullet!
--   !begin-bullet!
-    Fixed issue where `py_to_r()` S3 methods would not be called on
-    arguments supplied to R functions being called from Python.
-
-    !end-bullet!
--   !begin-bullet!
-    `py_to_r(x)` now returns `x` unmodified if `x` is not a Python
-    object, instead of signaling an error.
+    when necessary (#1556).
 
     !end-bullet!
 -   !begin-bullet!
     `attr(x, "tzone")` attributes are (better) preserved when converting
     POSIXt to Python. POSIXt types with a non-empty `tzone` attr convert
-    to a datetime.datetime, otherwise they convert to NumPy
-    datetime64\[ns\] arrays.
+    to a `datetime.datetime`, otherwise they convert to NumPy
+    `datetime64[ns]` arrays.
 
     !end-bullet!
 -   !begin-bullet!
@@ -92,23 +100,20 @@
 
     !end-bullet!
 -   !begin-bullet!
-    `source_python()` no longer exports the `r` symbol to the R
-    globalenv(). (the "R Interface Object" that is used by Python code
-    get a reference to the R globalenv)
-
-    !end-bullet!
--   !begin-bullet!
-    Reticulate will no longer warn about ignored
-    `use_python(,required = FALSE)` calls.
-
-    !end-bullet!
--   !begin-bullet!
-    `iterate(simplify=TRUE)` rewritten in C for speed improvements.
+    `source_python()` no longer exports the `r` symbol to the R global
+    environment. (the "R Interface Object" that is used by Python code
+    get a reference to the R `globalenv()`)
 
     !end-bullet!
 -   !begin-bullet!
     Fixed hang encountered (sometimes) when attempting to call
-    `iterate()` on an exhausted `py_iterator()` object multiple times.
+    `iterate()` on an exhausted `py_iterator()` object multiple times
+    (#1539).
+
+    !end-bullet!
+-   !begin-bullet!
+    `iterate(simplify=TRUE)` rewritten in C for speed improvements
+    (#1539).
 
     !end-bullet!
 -   !begin-bullet!
@@ -117,7 +122,7 @@
 
     !end-bullet!
 -   !begin-bullet!
-    Updates for CRAN R-devel (R 4.4).
+    Updates for CRAN R-devel (R 4.4) (#1554).
 
     !end-bullet!
 -   !begin-bullet!
@@ -143,7 +148,7 @@
 
     !end-bullet!
 -   !begin-bullet!
-    `is_py_object()` is now exported.
+    `is_py_object()` is now exported (#1573).
 
     !end-bullet!
 

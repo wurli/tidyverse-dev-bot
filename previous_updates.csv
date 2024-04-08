@@ -16965,3 +16965,15 @@ styler,c0d1a231a8072d89b7d0479de00c3c9a,Ensure unit tests check for appropriate 
 styler,f974563269c78f85cfa347c32585837a,Remove outdated test about repeated parsing (#1163).,NA,NA,NA,NA
 styler,dc15b22bf949eec038fe868a479e40fb,Update roxygen test comments (#1162).,NA,NA,NA,NA
 styler,281d0e866c9c198a1b9c4a10c04dacc1,Delete unused snapshot (#1159).,NA,NA,NA,NA
+reticulate,ab3b74f705c481ec8f46b4a7978e3e9c,"Internal refactoring and optimization now give a faster experience, especially for workflows that frequently access Python objects from R. For example, simple attribute access like `sys$path` is \~2.5x times faster, and a sample workload of `py_to_r(np_array(1:3) + np_array(1:3))` benchmarks \~3.5x faster when compared to the previous CRAN release.",NA,NA,NA,NA
+reticulate,7f7b6006967dbb36ee978e2bbeedfbfc,Fixed issue where callable python objects created with `convert = FALSE` would not be wrapped in an R function (#1522).,NA,NA,NA,NA
+reticulate,86205d2c89fc042a11a3bf9eb4c9e5d5,Fixed issue where `py_to_r()` S3 methods would not be called on arguments supplied to R functions being called from Python (#1522).,NA,NA,NA,NA
+reticulate,ba44f06dc06e60a97fdb6c64b4e8185d,Default Python version installed by `install_python()` is now 3.10 (was 3.9) (#1574).,NA,NA,NA,NA
+reticulate,37ec2ff262fe5da39834ac4d5e7d433f,"Output of `reticulate::py_last_error()` now includes a hint, showing how to access the full R call stack (#1572).",NA,NA,NA,NA
+reticulate,3d492f09b4d56c94310bc1e3ab5e177d,"R packages can now express multiple preferred Python environments to search for and use if they exist, by supplying a character vector to `import()`: `import(""foo"", delay_load = list(environment = c(""r-foo"", ""r-bar"")))` (#1559)",NA,NA,NA,NA
+reticulate,9d19036a6bf8dc3894e271af9319e5ee,"Reticulate will no longer warn about ignored `use_python(,required = FALSE)` calls (#1562).",NA,NA,NA,NA
+reticulate,36936ee71f510d1ac4b11efc1371ced7,`reticulate` now prefers using the agg matplotlib backend when the R session is non-interactive. The backend can also be overridden via the `MPLBACKEND` or `RETICULATE_MPLBACKEND` environment variables when necessary (#1556).,NA,NA,NA,NA
+reticulate,86603070a390028f19ba4082559bd9ec,Fixed hang encountered (sometimes) when attempting to call `iterate()` on an exhausted `py_iterator()` object multiple times (#1539).,NA,NA,NA,NA
+reticulate,d80ebace7f4e281ed1014eab80280449,`iterate(simplify=TRUE)` rewritten in C for speed improvements (#1539).,NA,NA,NA,NA
+reticulate,9e43a3ad37045788facf2d45d64a113d,Updates for CRAN R-devel (R 4.4) (#1554).,NA,NA,NA,NA
+reticulate,39e952b2dbf254367f0d2896c4070ef7,`is_py_object()` is now exported (#1573).,NA,NA,NA,NA
