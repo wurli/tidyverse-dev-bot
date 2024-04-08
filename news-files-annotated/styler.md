@@ -1,6 +1,79 @@
 ```{=html}
 <!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
 ```
+# styler 1.10.3
+
+This release was requested by the CRAN team since parser error messages
+changed, which were hard-coded in some unit tests (#1180).
+
+**Minor changes**
+
+!begin-bullets-1!
+
+-   !begin-bullet!
+    Add a package sticker (#1172, #1173).
+    !end-bullet!
+-   !begin-bullet!
+    Improve error message for scope (#1176).
+    !end-bullet!
+-   !begin-bullet!
+    Update lintr config and address newly found lints (#1158).
+    !end-bullet!
+-   !begin-bullet!
+    Fix new lints about implicit return (#1166).
+    !end-bullet!
+-   !begin-bullet!
+    Clean new lints (#1149).
+    !end-bullet!
+-   !begin-bullet!
+    Clean up unnecessary YAML front matter in README (#1165).
+    !end-bullet!
+
+!end-bullets-1!
+
+**CI**
+
+!begin-bullets-2!
+
+-   !begin-bullet!
+    Update pre-commit and GitHub Actions (#1177, #1175, #1171, #1171,
+    #1164, #1152, #1148).
+    !end-bullet!
+-   !begin-bullet!
+    Delete URL check workflow (#1160).
+    !end-bullet!
+
+!end-bullets-2!
+
+**Testing**
+
+!begin-bullets-3!
+
+-   !begin-bullet!
+    Suppress warning in io tests (#1169).
+    !end-bullet!
+-   !begin-bullet!
+    Ensure unit tests check for appropriate error messages in the R
+    parser for R \> 4.3 (#1180).
+    !end-bullet!
+-   !begin-bullet!
+    Remove outdated test about repeated parsing (#1163).
+    !end-bullet!
+-   !begin-bullet!
+    Update roxygen test comments (#1162).
+    !end-bullet!
+-   !begin-bullet!
+    Delete unused snapshot (#1159).
+    !end-bullet!
+
+!end-bullets-3!
+
+We thank everyone who helped making this release possible.
+
+\@AshesITR, \@averissimo, \@IndrajeetPatil, \@lorenzwalthert,
+\@mcanouil, \@moodymudskipper, \@olivroy, \@sbanville-delfi,
+\@sorhawell, \@ssh352, \@swo, and \@vertesy.
+
 # styler 1.10.2
 
 This release was requested by the CRAN team to fix CRAN warning on
@@ -8,7 +81,7 @@ invalid numeric version inputs (#1143).
 
 **Minor changes**
 
-!begin-bullets-1!
+!begin-bullets-4!
 
 -   !begin-bullet!
     Use cli messaging for cache (#1127).
@@ -30,7 +103,7 @@ invalid numeric version inputs (#1143).
     Don't require dplyr anywhere (#1131).
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-4!
 
 We thank everyone who helped making this release possible.
 
@@ -42,7 +115,7 @@ We thank everyone who helped making this release possible.
 This release was requested by CRAN due to accidentally populating a user
 cache while building vignettes for R \>= 4.3.0.
 
-!begin-bullets-2!
+!begin-bullets-5!
 
 -   !begin-bullet!
     Code quality improvements (#1122).
@@ -52,7 +125,7 @@ cache while building vignettes for R \>= 4.3.0.
     (#1123).
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-5!
 
 Thanks to everyone who contributed to this release: \@olivroy and
 \@krlmlr.
@@ -68,7 +141,7 @@ This release was created upon a request by the CRAN team to actively
 manage not just cached files but also the potentially empty cache
 directories they live in (#1118). Here are the changes in detail:
 
-!begin-bullets-3!
+!begin-bullets-6!
 
 -   !begin-bullet!
     Require at least R 3.6 (#1101).
@@ -98,7 +171,7 @@ directories they live in (#1118). Here are the changes in detail:
     Bump `actions/checkout` to version 3 in GitHub Actions (#1098).
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-6!
 
 Thanks for everyone contributing to this release:
 
@@ -109,7 +182,7 @@ Thanks for everyone contributing to this release:
 
 **Bug fixes**
 
-!begin-bullets-4!
+!begin-bullets-7!
 
 -   !begin-bullet!
     Fix interaction between cache and stylerignore that could produce
@@ -133,17 +206,17 @@ Thanks for everyone contributing to this release:
     style roxygen examples even if nothing comes after (#1089).
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-7!
 
 **Other**
 
-!begin-bullets-5!
+!begin-bullets-8!
 
 -   !begin-bullet!
     Document `"qmd"` as a valid `filetype` (#1091).
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-8!
 
 Thanks for everyone who contributed to this release:
 
@@ -153,7 +226,7 @@ Thanks for everyone who contributed to this release:
 
 **Features**
 
-!begin-bullets-6!
+!begin-bullets-9!
 
 -   !begin-bullet!
     The tidyverse recently introduced double-indention for function
@@ -161,7 +234,7 @@ Thanks for everyone who contributed to this release:
     i.e. 4 spaces if you `indent_by` two spaces.
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-9!
 
 !begin-codeblock!
 
@@ -187,7 +260,7 @@ modes (#1083).
 
 **Bug fixes**
 
-!begin-bullets-7!
+!begin-bullets-10!
 
 -   !begin-bullet!
     Previously styled code that is now stylerignored should always be
@@ -205,22 +278,22 @@ modes (#1083).
     are now also styled (#1067).
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-10!
 
 **Other user-facing changes**
 
-!begin-bullets-8!
+!begin-bullets-11!
 
 -   !begin-bullet!
     Less noisy communication if R option `styler.cache_root` is not set
     (#1063).
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-11!
 
 **Infrastructure**
 
-!begin-bullets-9!
+!begin-bullets-12!
 
 -   !begin-bullet!
     use {lintr} config (#1057, #1059) and pre-commit hook (#1064).
@@ -240,11 +313,11 @@ modes (#1083).
     check for link rot regularly (#1077, #1086).
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-12!
 
 **Internals**
 
-!begin-bullets-10!
+!begin-bullets-13!
 
 -   !begin-bullet!
     replace retired `purrr::when()` with `if` statements (#1066).
@@ -263,7 +336,7 @@ modes (#1083).
     format YAML files (#1061).
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-13!
 
 A big shout out to anyone who contributed to this release:
 
@@ -273,18 +346,18 @@ A big shout out to anyone who contributed to this release:
 
 **Features**
 
-!begin-bullets-11!
+!begin-bullets-14!
 
 -   !begin-bullet!
     Expose internals used with other style guides (@Robinlovelace +
     collaborators, #1043, #1052).
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-14!
 
 **Other**
 
-!begin-bullets-12!
+!begin-bullets-15!
 
 -   !begin-bullet!
     Bump minimal version requirement on {withr} as `...` in
@@ -311,7 +384,7 @@ A big shout out to anyone who contributed to this release:
     Typos (@MichaelChirico, #1038)
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-15!
 
 This release was requested by CRAN to resolve an R CMD Check note
 (#1044). A big hand to everyone who made this release possible:
@@ -328,7 +401,7 @@ contributed significantly to this and and previous releases.
 
 **Features**
 
-!begin-bullets-13!
+!begin-bullets-16!
 
 -   !begin-bullet!
     `style_dir()` and `style_pkg()` now default to styling all supported
@@ -356,11 +429,11 @@ contributed significantly to this and and previous releases.
 
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-16!
 
 **Bug Fixes**
 
-!begin-bullets-14!
+!begin-bullets-17!
 
 -   !begin-bullet!
     alignment is detected in `tibble::tribble()` (and similar) calls
@@ -417,11 +490,11 @@ contributed significantly to this and and previous releases.
 
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-17!
 
 **Documentation**
 
-!begin-bullets-15!
+!begin-bullets-18!
 
 -   !begin-bullet!
     old (and outdated) vignettes have been removed (#955). To access
@@ -435,11 +508,11 @@ contributed significantly to this and and previous releases.
     output of {prettycode} not messing with {pkgdown} (#956, #957).
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-18!
 
 **Performance and code quality improvements**
 
-!begin-bullets-16!
+!begin-bullets-19!
 
 -   !begin-bullet!
     use integer literals and avoid coercions where needed (#994).
@@ -485,14 +558,14 @@ contributed significantly to this and and previous releases.
     improved code quality by fixing {lintr} warnings (#960, #1028).
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-19!
 
 **Dependency related changes**
 
 In total, 8 recursive dependencies are removed: {ellipsis}, {pillar},
 {rematch2}, {tibble}, {utf8}, {fansi}, {lifecycle}, {pkgconfig}.
 
-!begin-bullets-17!
+!begin-bullets-20!
 
 -   !begin-bullet!
     don't import entire tibble package (#1007).
@@ -501,11 +574,11 @@ In total, 8 recursive dependencies are removed: {ellipsis}, {pillar},
     drop {rematch2} dependency (#1011).
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-20!
 
 **Infrastructure**
 
-!begin-bullets-18!
+!begin-bullets-21!
 
 -   !begin-bullet!
     upgrade testing infra to testthat 3e (#949).
@@ -539,7 +612,7 @@ In total, 8 recursive dependencies are removed: {ellipsis}, {pillar},
     remove pre-commit push hook for news entry (#1023).
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-21!
 
 A big hand to everyone who made this release possible:
 
@@ -550,18 +623,18 @@ A big hand to everyone who made this release possible:
 
 # styler 1.7.0
 
-!begin-bullets-19!
+!begin-bullets-22!
 
 -   !begin-bullet!
     if `else` follows directly after `if`, line breaks are removed
     (#935).
     !end-bullet!
 
-!end-bullets-19!
+!end-bullets-22!
 
 **API changes**
 
-!begin-bullets-20!
+!begin-bullets-23!
 
 -   !begin-bullet!
     new R option `styler.cache_root` (defaulting to `"styler"`) that
@@ -592,11 +665,11 @@ A big hand to everyone who made this release possible:
 
     !end-bullet!
 
-!end-bullets-20!
+!end-bullets-23!
 
 **Features**
 
-!begin-bullets-21!
+!begin-bullets-24!
 
 -   !begin-bullet!
     {styler} can be ran via GitHub Actions using
@@ -610,11 +683,11 @@ A big hand to everyone who made this release possible:
     other than spaces (#916).
     !end-bullet!
 
-!end-bullets-21!
+!end-bullets-24!
 
 **Documentation**
 
-!begin-bullets-22!
+!begin-bullets-25!
 
 -   !begin-bullet!
     Add vignette on distributing style guide (#846, #861).
@@ -623,11 +696,11 @@ A big hand to everyone who made this release possible:
     Fix argument name `filetype` in Example for `style_dir()` (#855).
     !end-bullet!
 
-!end-bullets-22!
+!end-bullets-25!
 
 **Bug fixes**
 
-!begin-bullets-23!
+!begin-bullets-26!
 
 -   !begin-bullet!
     Piped function without brackets `substitute(x %>% y)` don't get `()`
@@ -688,11 +761,11 @@ A big hand to everyone who made this release possible:
     set to a non-default value (#912).
     !end-bullet!
 
-!end-bullets-23!
+!end-bullets-26!
 
 **Infrastructure**
 
-!begin-bullets-24!
+!begin-bullets-27!
 
 -   !begin-bullet!
     Remove dependency on {xfun} (#866).
@@ -735,7 +808,7 @@ A big hand to everyone who made this release possible:
     the wrong usage of `_` (#929).
     !end-bullet!
 
-!end-bullets-24!
+!end-bullets-27!
 
 Thanks to all contributors that made this release possible:
 
@@ -747,17 +820,17 @@ Thanks to all contributors that made this release possible:
 
 # styler 1.6.2
 
-!begin-bullets-25!
+!begin-bullets-28!
 
 -   !begin-bullet!
     clean up cache files older than one week (#842).
     !end-bullet!
 
-!end-bullets-25!
+!end-bullets-28!
 
 # styler 1.6.1
 
-!begin-bullets-26!
+!begin-bullets-29!
 
 -   !begin-bullet!
     Files with `.Rmarkdown` extension are now recognized as an R
@@ -798,7 +871,7 @@ Thanks to all contributors that made this release possible:
 
     !end-bullet!
 
-!end-bullets-26!
+!end-bullets-29!
 
 We'd like to thank all people who helped making this release possible:
 
@@ -809,7 +882,7 @@ We'd like to thank all people who helped making this release possible:
 
 ## Alignment detection
 
-!begin-bullets-27!
+!begin-bullets-30!
 
 -   !begin-bullet!
     Code with left alignment after `=` in function calls is now
@@ -864,11 +937,11 @@ We'd like to thank all people who helped making this release possible:
 
     !end-bullet!
 
-!end-bullets-27!
+!end-bullets-30!
 
 ## Other new features
 
-!begin-bullets-28!
+!begin-bullets-31!
 
 -   !begin-bullet!
     The base R pipe as introduced in R 4.1.0 is now styled the same way
@@ -884,11 +957,11 @@ We'd like to thank all people who helped making this release possible:
     `#` (#771).
     !end-bullet!
 
-!end-bullets-28!
+!end-bullets-31!
 
 ## Minor changes and fixes
 
-!begin-bullets-29!
+!begin-bullets-32!
 
 -   !begin-bullet!
     No curly braces are added to else statements if they are within a
@@ -946,7 +1019,7 @@ We'd like to thank all people who helped making this release possible:
     Update Github Actions workflow (#810).
     !end-bullet!
 
-!end-bullets-29!
+!end-bullets-32!
 
 We'd like to thank everyone who has furthered the development of the
 latest release of styler through their contributions in issues and pull
@@ -959,7 +1032,7 @@ requests:
 
 # styler 1.4.1
 
-!begin-bullets-30!
+!begin-bullets-33!
 
 -   !begin-bullet!
     fix interaction between cache and `base_indention`. This also fixes
@@ -978,7 +1051,7 @@ requests:
     (#765).
     !end-bullet!
 
-!end-bullets-30!
+!end-bullets-33!
 
 Thanks to everyone who contributed to this release:
 
@@ -990,7 +1063,7 @@ Thanks to everyone who contributed to this release:
 
 **new**
 
-!begin-bullets-31!
+!begin-bullets-34!
 
 -   !begin-bullet!
     `style_file()` and friends gain argument `dry` to control if changes
@@ -1035,11 +1108,11 @@ Thanks to everyone who contributed to this release:
 
     !end-bullet!
 
-!end-bullets-31!
+!end-bullets-34!
 
 **deprecated**
 
-!begin-bullets-32!
+!begin-bullets-35!
 
 -   !begin-bullet!
     The environment variable `save_after_styling` is deprecated in favor
@@ -1050,11 +1123,11 @@ Thanks to everyone who contributed to this release:
     becomes less relevant (#631, #726).
     !end-bullet!
 
-!end-bullets-32!
+!end-bullets-35!
 
 ## Major changes
 
-!begin-bullets-33!
+!begin-bullets-36!
 
 -   !begin-bullet!
     styler is now distributed under the MIT license (#751).
@@ -1093,11 +1166,11 @@ Thanks to everyone who contributed to this release:
 
     !end-bullet!
 
-!end-bullets-33!
+!end-bullets-36!
 
 ## Minor changes and fixes
 
-!begin-bullets-34!
+!begin-bullets-37!
 
 -   !begin-bullet!
     `style_dir()` and `style_pkg()` now apply directory exclusion
@@ -1169,11 +1242,11 @@ Thanks to everyone who contributed to this release:
 
     !end-bullet!
 
-!end-bullets-34!
+!end-bullets-37!
 
 ## Infrastructure changes
 
-!begin-bullets-35!
+!begin-bullets-38!
 
 -   !begin-bullet!
     switched from travis and AppVeyor to GitHub Actions (#653, #660).
@@ -1189,7 +1262,7 @@ Thanks to everyone who contributed to this release:
 
     !end-bullet!
 
-!end-bullets-35!
+!end-bullets-38!
 
 Thanks to all the people who made this release possible:
 
@@ -1207,7 +1280,7 @@ Release upon request by the CRAN team.
 
 ## Minor changes and fixes
 
-!begin-bullets-36!
+!begin-bullets-39!
 
 -   !begin-bullet!
     Add search and reference sections to pkgdown webpage (#623, #625).
@@ -1224,7 +1297,7 @@ Release upon request by the CRAN team.
     not pass on all machines (#603).
     !end-bullet!
 
-!end-bullets-36!
+!end-bullets-39!
 
 # styler 1.3.1
 
@@ -1260,7 +1333,7 @@ We thank the people who have contributed to this release:
 
 ## Breaking changes
 
-!begin-bullets-37!
+!begin-bullets-40!
 
 -   !begin-bullet!
     `style_pkg()` and `style_dir()` gain a new argument `exclude_dirs`
@@ -1276,11 +1349,11 @@ We thank the people who have contributed to this release:
 
     !end-bullet!
 
-!end-bullets-37!
+!end-bullets-40!
 
 ## New features
 
-!begin-bullets-38!
+!begin-bullets-41!
 
 -   !begin-bullet!
     ignore certain lines using `# styler: off` and `#styler: on` or
@@ -1307,11 +1380,11 @@ We thank the people who have contributed to this release:
 
     !end-bullet!
 
-!end-bullets-38!
+!end-bullets-41!
 
 ## Minor changes and fixes
 
-!begin-bullets-39!
+!begin-bullets-42!
 
 -   !begin-bullet!
     lines are now broken after `+` in `ggplot2` calls for
@@ -1334,7 +1407,7 @@ We thank the people who have contributed to this release:
 
     !end-bullet!
 
-!end-bullets-39!
+!end-bullets-42!
 
 Thanks to all contributors involved, in particular \@colearendt,
 \@davidski, \@IndrajeetPatil, \@pat-s, and \@programming-wizard.
@@ -1343,7 +1416,7 @@ Thanks to all contributors involved, in particular \@colearendt,
 
 ## Breaking changes
 
-!begin-bullets-40!
+!begin-bullets-43!
 
 -   !begin-bullet!
     `style_file()` now correctly styles multiple files from different
@@ -1360,11 +1433,11 @@ Thanks to all contributors involved, in particular \@colearendt,
 
     !end-bullet!
 
-!end-bullets-40!
+!end-bullets-43!
 
 ## New features
 
-!begin-bullets-41!
+!begin-bullets-44!
 
 -   !begin-bullet!
     Aligned function calls are detected and remain unchanged if they
@@ -1383,11 +1456,11 @@ Thanks to all contributors involved, in particular \@colearendt,
 
     !end-bullet!
 
-!end-bullets-41!
+!end-bullets-44!
 
 ## Minor improvements and fixes
 
-!begin-bullets-42!
+!begin-bullets-45!
 
 -   !begin-bullet!
     Roxygen code examples: leverage `roxygen2` for correct escaping of
@@ -1436,18 +1509,18 @@ Thanks to all contributors involved, in particular \@colearendt,
 
     !end-bullet!
 
-!end-bullets-42!
+!end-bullets-45!
 
 ## Adaption
 
-!begin-bullets-43!
+!begin-bullets-46!
 
 -   !begin-bullet!
     styler is now available through the pre-commit hook `style-files` in
     https://github.com/lorenzwalthert/precommit.
     !end-bullet!
 
-!end-bullets-43!
+!end-bullets-46!
 
 Thanks to all contributors involved, in particular
 
@@ -1463,7 +1536,7 @@ team (#490).
 
 ## Major changes
 
-!begin-bullets-44!
+!begin-bullets-47!
 
 -   !begin-bullet!
     Users can now control style configurations for styler Addins (#463,
@@ -1482,11 +1555,11 @@ team (#490).
 
     !end-bullet!
 
-!end-bullets-44!
+!end-bullets-47!
 
 ## Minor changes
 
-!begin-bullets-45!
+!begin-bullets-48!
 
 -   !begin-bullet!
     `style_pkg()` now also styles the "demo" directory by default
@@ -1528,14 +1601,14 @@ team (#490).
 
     !end-bullet!
 
-!end-bullets-45!
+!end-bullets-48!
 
 ## Adaption of styler
 
 Since it's never been mentioned in the release notes, we also mention
 here where else you can use styler functionality:
 
-!begin-bullets-46!
+!begin-bullets-49!
 
 -   !begin-bullet!
     `usethis::use_tidy_style()` styles your project according to the
@@ -1568,7 +1641,7 @@ here where else you can use styler functionality:
 
     !end-bullet!
 
-!end-bullets-46!
+!end-bullets-49!
 
 Thanks to all contributors involved, in particular \@ArthurPERE,
 \@hadley, \@igordot, \@IndrajeetPatil, \@jackwasey, \@jcrodriguez1989,
@@ -1584,7 +1657,7 @@ It also adapts to changes in the R parser committed into R devel (#419).
 
 ## Major Changes
 
-!begin-bullets-47!
+!begin-bullets-50!
 
 -   !begin-bullet!
     styler can now style roxygen code examples in the source code of
@@ -1607,11 +1680,11 @@ It also adapts to changes in the R parser committed into R devel (#419).
 
     !end-bullet!
 
-!end-bullets-47!
+!end-bullets-50!
 
 ## Minor Changes
 
-!begin-bullets-48!
+!begin-bullets-51!
 
 -   !begin-bullet!
     cursor position is remembered for styling via Addin (#416).
@@ -1644,7 +1717,7 @@ It also adapts to changes in the R parser committed into R devel (#419).
 
     !end-bullet!
 
-!end-bullets-48!
+!end-bullets-51!
 
 Thanks to all contributors for patches, issues and the like:
 @jonmcalder, @krlmlr, @IndrajeetPatil, @kalibera, @Hasnep,
@@ -1656,7 +1729,7 @@ This is a maintenance release without any breaking API changes.
 
 ## Major Changes
 
-!begin-bullets-49!
+!begin-bullets-52!
 
 -   !begin-bullet!
     Fixed indention for named multi-line function calls (#372).
@@ -1668,11 +1741,11 @@ This is a maintenance release without any breaking API changes.
 
     !end-bullet!
 
-!end-bullets-49!
+!end-bullets-52!
 
 ## Minor Changes
 
-!begin-bullets-50!
+!begin-bullets-53!
 
 -   !begin-bullet!
     Fixing an edge case in which, if very long strings were present in
@@ -1702,7 +1775,7 @@ This is a maintenance release without any breaking API changes.
 
     !end-bullet!
 
-!end-bullets-50!
+!end-bullets-53!
 
 Thanks to all contributors for patches, issues and the like:
 @katrinleinweber, @krlmlr, @dchiu911, @ramnathv, @aedobbyn, @Bio7,
@@ -1715,7 +1788,7 @@ This is a maintenance release without any breaking API changes.
 
 ## Major & dependency related changes
 
-!begin-bullets-51!
+!begin-bullets-54!
 
 -   !begin-bullet!
     Removed implicit `dplyr` dependency via `purrr:::map_dfr()` (thanks
@@ -1740,11 +1813,11 @@ This is a maintenance release without any breaking API changes.
 
     !end-bullet!
 
-!end-bullets-51!
+!end-bullets-54!
 
 ## Minor changes
 
-!begin-bullets-52!
+!begin-bullets-55!
 
 -   !begin-bullet!
     We're now recognizing and respecting more DSLs used in R comments:
@@ -1773,7 +1846,7 @@ This is a maintenance release without any breaking API changes.
 
     !end-bullet!
 
-!end-bullets-52!
+!end-bullets-55!
 
 Thanks to all contributors for patches, issues and the like: @devSJR,
 @klrmlr, @yutannihilation, @samhinshaw, @martin-mfg, @jjramsey,

@@ -16952,3 +16952,16 @@ reticulate,e5102dc3fb4d0ef6f33399f018db591d,Default Python version installed by 
 promises,43f3a1091b7a79edbeeb959f7655a7bf,`is.promising` is now an S3 method. (#104),NA,NA,NA,NA
 rlang,669fdf58dd15f5d5477202da4e515528,Added missing C level `r_dyn_raw_push_back()` and `r_dyn_chr_push_back()` utilities (#1699).,NA,NA,NA,NA
 lintr,835291e2b3866d30e581b05ccb5ee517,"`indentation_linter()` returns `ranges[1L]==1L` when the offending line has 0 spaces (#2550, @​MichaelChirico).",NA,NA,NA,NA
+styler,f720c0d9844142b7bda39d4e9483c8bc,"Add a package sticker (#1172, #1173).",NA,NA,NA,NA
+styler,013e5616d72b27c854205eb4e8a5a9e4,Improve error message for scope (#1176).,NA,NA,NA,NA
+styler,734548fcf7949d7790364948827d54cc,Update lintr config and address newly found lints (#1158).,NA,NA,NA,NA
+styler,4cb6c0fd1e0b77722b14bdb11f9dd59b,Fix new lints about implicit return (#1166).,NA,NA,NA,NA
+styler,136591ac73328864cda810793dc3a66c,Clean new lints (#1149).,NA,NA,NA,NA
+styler,e05a4bfa26e5eec31f70abc144d27b80,Clean up unnecessary YAML front matter in README (#1165).,NA,NA,NA,NA
+styler,ca47e14fe1448e992bb022f259b9b460,"Update pre-commit and GitHub Actions (#1177, #1175, #1171, #1171, #1164, #1152, #1148).",NA,NA,NA,NA
+styler,ab57bdeb1a9b9d7a33234dff6a30ca76,Delete URL check workflow (#1160).,NA,NA,NA,NA
+styler,e9492cfb2c84890464164b4488673981,Suppress warning in io tests (#1169).,NA,NA,NA,NA
+styler,c0d1a231a8072d89b7d0479de00c3c9a,Ensure unit tests check for appropriate error messages in the R parser for R \> 4.3 (#1180).,NA,NA,NA,NA
+styler,f974563269c78f85cfa347c32585837a,Remove outdated test about repeated parsing (#1163).,NA,NA,NA,NA
+styler,dc15b22bf949eec038fe868a479e40fb,Update roxygen test comments (#1162).,NA,NA,NA,NA
+styler,281d0e866c9c198a1b9c4a10c04dacc1,Delete unused snapshot (#1159).,NA,NA,NA,NA
