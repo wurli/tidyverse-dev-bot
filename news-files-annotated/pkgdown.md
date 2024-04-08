@@ -74,6 +74,10 @@
     Topic names that conflict with selector functions can now be listed
     as references in `_pkgdown.yml` (@dmurdoch, #2397).
     !end-bullet!
+-   !begin-bullet!
+    pkgdown is now compatible with (and requires) bslib \>= 0.5.1
+    (@gadenbuie, #2395).
+    !end-bullet!
 
 !end-bullets-1!
 

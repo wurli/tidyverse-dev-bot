@@ -16977,3 +16977,4 @@ reticulate,86603070a390028f19ba4082559bd9ec,Fixed hang encountered (sometimes) w
 reticulate,d80ebace7f4e281ed1014eab80280449,`iterate(simplify=TRUE)` rewritten in C for speed improvements (#1539).,NA,NA,NA,NA
 reticulate,9e43a3ad37045788facf2d45d64a113d,Updates for CRAN R-devel (R 4.4) (#1554).,NA,NA,NA,NA
 reticulate,39e952b2dbf254367f0d2896c4070ef7,`is_py_object()` is now exported (#1573).,NA,NA,NA,NA
+pkgdown,c53fd39e8985ed07972cd469549e409b,"pkgdown is now compatible with (and requires) bslib \>= 0.5.1 (@​gadenbuie, #2395).",NA,NA,NA,NA
