@@ -44,6 +44,10 @@
 
     !end-bullet!
 -   !begin-bullet!
+    Fixed issues reported by rchk, as requested by CRAN (#1581).
+
+    !end-bullet!
+-   !begin-bullet!
     `py_to_r(x)` now returns `x` unmodified if `x` is not a Python
     object, instead of signaling an error.
 
