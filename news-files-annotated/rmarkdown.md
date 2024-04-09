@@ -1,8 +1,22 @@
 # rmarkdown 2.27
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    Provide a global option `rmarkdown.files.suffix` to configure the
+    suffix of the directory for auxiliary files (thanks,
+    @certara-tzweers, #2550). By default, this suffix is `_files`, which
+    can cause HTML output files to be deleted automatically on Microsoft
+    OneDrive or Google Drive. If that is the case for you, you may set a
+    different suffix in your `.Rprofile`, e.g.,
+    `options(rmarkdown.files.suffix = "_rmdfiles")`.
+    !end-bullet!
+
+!end-bullets-1!
+
 # rmarkdown 2.26
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     **rmarkdown** now requires **knitr** \>= 1.43.
@@ -31,11 +45,11 @@
 
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # rmarkdown 2.25
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     Fixed a bug that filenames beginning with `-` cause incorrect
@@ -64,11 +78,11 @@
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 # rmarkdown 2.24
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     Fixed `file_scope` being lost when extending output formats that
@@ -91,11 +105,11 @@
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 # rmarkdown 2.23
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     `find_external_resources()` works with formats defining there own
@@ -109,11 +123,11 @@
 
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 # rmarkdown 2.22
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     Using `css` with `.scss` and `.sass` file, or with a bslib theme,
@@ -151,11 +165,11 @@
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # rmarkdown 2.21
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     Now HTML output formats use the Font Awesome HTML dependency from
@@ -169,11 +183,11 @@
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 # rmarkdown 2.20
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     The defunct `tufte_handout()` has been removed from **rmarkdown**.
@@ -197,21 +211,21 @@
 
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 # rmarkdown 2.19
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     No longer use `xfun::isFALSE()` internally.
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 # rmarkdown 2.18
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     `rmarkdown::render()` argument `output_file` is now used for all
@@ -229,11 +243,11 @@
 
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 # rmarkdown 2.17
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     `rmarkdown::render_site()` will now also look for `index.rmd` in
@@ -247,11 +261,11 @@
 
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 # rmarkdown 2.16
 
-!begin-bullets-11!
+!begin-bullets-12!
 
 -   !begin-bullet!
     Pandoc 2.19 has deprecated the argument `--self-contained`. If you
@@ -268,11 +282,11 @@
 
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-12!
 
 # rmarkdown 2.15
 
-!begin-bullets-12!
+!begin-bullets-13!
 
 -   !begin-bullet!
     Fix navbar issue with website when using Boostrap 5 with **bslib**
@@ -295,11 +309,11 @@
 
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
 
 # rmarkdown 2.14
 
-!begin-bullets-13!
+!begin-bullets-14!
 
 -   !begin-bullet!
     Improved highlighting theme `arrow` regarding accessibility.
@@ -339,11 +353,11 @@
 
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-14!
 
 # rmarkdown 2.13
 
-!begin-bullets-14!
+!begin-bullets-15!
 
 -   !begin-bullet!
     Fix an issue with older R version and vignette building (#2324).
@@ -360,11 +374,11 @@
 
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-15!
 
 # rmarkdown 2.12
 
-!begin-bullets-15!
+!begin-bullets-16!
 
 -   !begin-bullet!
     `html_document()` and `html_document_base()` gains the `math_method`
@@ -452,7 +466,7 @@
     Improved the highlighting mechanism in formats that supports
     `highlight` argument:
 
-    !begin-bullets-16!
+    !begin-bullets-17!
     -   !begin-bullet!
         It is now possible to pass a custom theme file `.theme` in
         `highlight` argument for customizing the syntax highlighting
@@ -471,7 +485,7 @@
         **distill**). This features require the **downlit** package.
         !end-bullet!
 
-    !end-bullets-16!
+    !end-bullets-17!
     !end-bullet!
 -   !begin-bullet!
     Templates for `html_document()` and `ioslides_presentation()` gained
@@ -563,7 +577,7 @@
     Lua Filters: Added two more functions in `shared.lua` for other
     package to use:
 
-    !begin-bullets-17!
+    !begin-bullets-18!
     -   !begin-bullet!
         Added `type()` function backward compatible following Pandoc
         2.17 changes.
@@ -572,7 +586,7 @@
         Added `print_debug()` for easier logging during debug.
         !end-bullet!
 
-    !end-bullets-17!
+    !end-bullets-18!
     !end-bullet!
 -   !begin-bullet!
     Add opt-in `tabset` option to the `html_vignette`. In contrast to
@@ -583,11 +597,11 @@
 
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-16!
 
 # rmarkdown 2.11
 
-!begin-bullets-18!
+!begin-bullets-19!
 
 -   !begin-bullet!
     Relative paths in parent directories in the `css` argument of
@@ -622,17 +636,17 @@
 
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-19!
 
 # rmarkdown 2.10
 
-!begin-bullets-19!
+!begin-bullets-20!
 
 -   !begin-bullet!
     `md_document()` will now handle correctly `preserve_yaml` value for
     all variants and all pandoc versions (#2190).
 
-    !begin-bullets-20!
+    !begin-bullets-21!
     -   !begin-bullet!
         with `preserve_yaml = TRUE`, markdown output will keep the YAML
         metadata block from the Rmd file.
@@ -642,7 +656,7 @@
         metadata block.
         !end-bullet!
 
-    !end-bullets-20!
+    !end-bullets-21!
     This fixes a breaking change in Pandoc 2.13 regarding `gfm`,
     `commonmark` and `commonmark_x` which now supports
     `yaml_metadata_block` by default (#2118).
@@ -664,11 +678,11 @@
 
     !end-bullet!
 
-!end-bullets-19!
+!end-bullets-20!
 
 # rmarkdown 2.9
 
-!begin-bullets-21!
+!begin-bullets-22!
 
 -   !begin-bullet!
     Fix a regression in version 2.8 when a url is used in `css` argument
@@ -729,11 +743,11 @@
 
     !end-bullet!
 
-!end-bullets-21!
+!end-bullets-22!
 
 # rmarkdown 2.8
 
-!begin-bullets-22!
+!begin-bullets-23!
 
 -   !begin-bullet!
     Fix a issue with Pandoc 2.5 and `latex-div.lua` - documents can now
@@ -869,11 +883,11 @@
 
     !end-bullet!
 
-!end-bullets-22!
+!end-bullets-23!
 
 # rmarkdown 2.7
 
-!begin-bullets-23!
+!begin-bullets-24!
 
 -   !begin-bullet!
     `html_document` (and `html_document_base`)'s `theme` parameter now
@@ -949,11 +963,11 @@
 
     !end-bullet!
 
-!end-bullets-23!
+!end-bullets-24!
 
 # rmarkdown 2.6
 
-!begin-bullets-24!
+!begin-bullets-25!
 
 -   !begin-bullet!
     Encoding is correctly handled now in `html_vignette` when checking
@@ -1048,11 +1062,11 @@
 
     !end-bullet!
 
-!end-bullets-24!
+!end-bullets-25!
 
 # rmarkdown 2.5
 
-!begin-bullets-25!
+!begin-bullets-26!
 
 -   !begin-bullet!
     Tables without header rows (wich can be possible in Pandoc's simple
@@ -1117,17 +1131,17 @@
 
     !end-bullet!
 
-!end-bullets-25!
+!end-bullets-26!
 
 # rmarkdown 2.4
 
-!begin-bullets-26!
+!begin-bullets-27!
 
 -   !begin-bullet!
     Lua filters handling has been improved internally with some
     user-facing changes (#1899):
 
-    !begin-bullets-27!
+    !begin-bullets-28!
     -   !begin-bullet!
         New exported function `pandoc_lua_filter_args()` to return the
         Pandoc command-line argument to add a Lua filter.
@@ -1155,7 +1169,7 @@
         `inst/rmarkdown/lua` folder (thanks, @atusy, #1903).
         !end-bullet!
 
-    !end-bullets-27!
+    !end-bullets-28!
     !end-bullet!
 -   !begin-bullet!
     Fixed the path separators for the `css` parameter in YAML
@@ -1240,11 +1254,11 @@
 
     !end-bullet!
 
-!end-bullets-26!
+!end-bullets-27!
 
 # rmarkdown 2.3
 
-!begin-bullets-28!
+!begin-bullets-29!
 
 -   !begin-bullet!
     Addressed an accessibility issue in highlighted code blocks of HTML
@@ -1293,11 +1307,11 @@
 
     !end-bullet!
 
-!end-bullets-28!
+!end-bullets-29!
 
 # rmarkdown 2.2
 
-!begin-bullets-29!
+!begin-bullets-30!
 
 -   !begin-bullet!
     Exported the internal function `find_pandoc()`, and also added two
@@ -1393,11 +1407,11 @@
 
     !end-bullet!
 
-!end-bullets-29!
+!end-bullets-30!
 
 # rmarkdown 2.1
 
-!begin-bullets-30!
+!begin-bullets-31!
 
 -   !begin-bullet!
     Added the returned output from `shiny::runApp()` within
@@ -1448,11 +1462,11 @@
 
     !end-bullet!
 
-!end-bullets-30!
+!end-bullets-31!
 
 # rmarkdown 2.0
 
-!begin-bullets-31!
+!begin-bullets-32!
 
 -   !begin-bullet!
     For the output format `pdf_document()`, we no longer adjust the
@@ -1540,11 +1554,11 @@
 
     !end-bullet!
 
-!end-bullets-31!
+!end-bullets-32!
 
 # rmarkdown 1.18
 
-!begin-bullets-32!
+!begin-bullets-33!
 
 -   !begin-bullet!
     For `pdf_document()`, now we patch Pandoc's built-in LaTeX template
@@ -1589,11 +1603,11 @@
 
     !end-bullet!
 
-!end-bullets-32!
+!end-bullets-33!
 
 # rmarkdown 1.17
 
-!begin-bullets-33!
+!begin-bullets-34!
 
 -   !begin-bullet!
     `html_vignette()` passes `self_contained` argument value to base
@@ -1627,11 +1641,11 @@
 
     !end-bullet!
 
-!end-bullets-33!
+!end-bullets-34!
 
 # rmarkdown 1.16
 
-!begin-bullets-34!
+!begin-bullets-35!
 
 -   !begin-bullet!
     The `pandoc-citeproc` binary can now be found correctly on Windows.
@@ -1695,11 +1709,11 @@
 
     !end-bullet!
 
-!end-bullets-34!
+!end-bullets-35!
 
 # rmarkdown 1.15
 
-!begin-bullets-35!
+!begin-bullets-36!
 
 -   !begin-bullet!
     Exclude `README.R?md` from files processed by `render_site()`,
@@ -1720,11 +1734,11 @@
 
     !end-bullet!
 
-!end-bullets-35!
+!end-bullets-36!
 
 # rmarkdown 1.14
 
-!begin-bullets-36!
+!begin-bullets-37!
 
 -   !begin-bullet!
     Fixed a regression in `ioslides_presentation` that background colors
@@ -1771,11 +1785,11 @@
 
     !end-bullet!
 
-!end-bullets-36!
+!end-bullets-37!
 
 # rmarkdown 1.13
 
-!begin-bullets-37!
+!begin-bullets-38!
 
 -   !begin-bullet!
     For `pdf_document()`, do not override margins to 1 inch when a
@@ -1830,11 +1844,11 @@
 
     !end-bullet!
 
-!end-bullets-37!
+!end-bullets-38!
 
 # rmarkdown 1.12
 
-!begin-bullets-38!
+!begin-bullets-39!
 
 -   !begin-bullet!
     Fixed file extensions of output files when using non-markdown Pandoc
@@ -1877,11 +1891,11 @@
 
     !end-bullet!
 
-!end-bullets-38!
+!end-bullets-39!
 
 # rmarkdown 1.11
 
-!begin-bullets-39!
+!begin-bullets-40!
 
 -   !begin-bullet!
     Fixed #1483, which prevented the triangle to be displayed in Firefox
@@ -1993,11 +2007,11 @@
 
     !end-bullet!
 
-!end-bullets-39!
+!end-bullets-40!
 
 # rmarkdown 1.10
 
-!begin-bullets-40!
+!begin-bullets-41!
 
 -   !begin-bullet!
     Added a new argument `slide_level` to `powerpoint_presentation()`
@@ -2058,24 +2072,24 @@
 
     !end-bullet!
 
-!end-bullets-40!
+!end-bullets-41!
 
 # rmarkdown 1.9
 
 ## NEW FEATURES
 
-!begin-bullets-41!
+!begin-bullets-42!
 
 -   !begin-bullet!
     Added a new (experimental) output format `powerpoint_presentation`.
     If you want to test it, you will need Pandoc \>= 2.1 (#1231).
     !end-bullet!
 
-!end-bullets-41!
+!end-bullets-42!
 
 ## MAJOR CHANGES
 
-!begin-bullets-42!
+!begin-bullets-43!
 
 -   !begin-bullet!
     If the **tinytex** package is installed, PDF output is built through
@@ -2085,11 +2099,11 @@
     **tinytex** package (#1222).
     !end-bullet!
 
-!end-bullets-42!
+!end-bullets-43!
 
 ## BUG FIXES
 
-!begin-bullets-43!
+!begin-bullets-44!
 
 -   !begin-bullet!
     Temporary files created in `render()` may be cleaned up prematurely,
@@ -2120,13 +2134,13 @@
 
     !end-bullet!
 
-!end-bullets-43!
+!end-bullets-44!
 
 # rmarkdown 1.8
 
 ## BUG FIXES
 
-!begin-bullets-44!
+!begin-bullets-45!
 
 -   !begin-bullet!
     `render_site()` does not work with `_site.yml` that does not have
@@ -2149,11 +2163,11 @@
 
     !end-bullet!
 
-!end-bullets-44!
+!end-bullets-45!
 
 # rmarkdown 1.7
 
-!begin-bullets-45!
+!begin-bullets-46!
 
 -   !begin-bullet!
     Fixed an issue with `df_print: paged` where row names where not
@@ -2278,11 +2292,11 @@
 
     !end-bullet!
 
-!end-bullets-45!
+!end-bullets-46!
 
 # rmarkdown 1.6
 
-!begin-bullets-46!
+!begin-bullets-47!
 
 -   !begin-bullet!
     Fixed an issue where headers with non-ASCII text would not be linked
@@ -2320,11 +2334,11 @@
 
     !end-bullet!
 
-!end-bullets-46!
+!end-bullets-47!
 
 # rmarkdown 1.5
 
-!begin-bullets-47!
+!begin-bullets-48!
 
 -   !begin-bullet!
     Fixed an issue where code within Shiny pre-rendered documents was
@@ -2340,11 +2354,11 @@
 
     !end-bullet!
 
-!end-bullets-47!
+!end-bullets-48!
 
 # rmarkdown 1.4
 
-!begin-bullets-48!
+!begin-bullets-49!
 
 -   !begin-bullet!
     `data.table` expressions involving `:=` are no longer automatically
@@ -2394,11 +2408,11 @@
 
     !end-bullet!
 
-!end-bullets-48!
+!end-bullets-49!
 
 # rmarkdown 1.3
 
-!begin-bullets-49!
+!begin-bullets-50!
 
 -   !begin-bullet!
     Fix v1.2 regression in ordering of CSS for ioslides_presentation.
@@ -2418,11 +2432,11 @@
 
     !end-bullet!
 
-!end-bullets-49!
+!end-bullets-50!
 
 # rmarkdown 1.2
 
-!begin-bullets-50!
+!begin-bullets-51!
 
 -   !begin-bullet!
     Add support for df_print to handle additional dplyr classes:
@@ -2499,11 +2513,11 @@
 
     !end-bullet!
 
-!end-bullets-50!
+!end-bullets-51!
 
 # rmarkdown 1.1
 
-!begin-bullets-51!
+!begin-bullets-52!
 
 -   !begin-bullet!
     Fixed an issue where attempts to render an R Notebook could fail if
@@ -2586,11 +2600,11 @@
 
     !end-bullet!
 
-!end-bullets-51!
+!end-bullets-52!
 
 # rmarkdown 1.0
 
-!begin-bullets-52!
+!begin-bullets-53!
 
 -   !begin-bullet!
     `toc_float` no longer automatically sets `toc = TRUE`
@@ -2662,11 +2676,11 @@
 
     !end-bullet!
 
-!end-bullets-52!
+!end-bullets-53!
 
 # rmarkdown 0.9.6
 
-!begin-bullets-53!
+!begin-bullets-54!
 
 -   !begin-bullet!
     Ability to set `opts_hooks` in `knitr_options()` (#672)
@@ -2780,11 +2794,11 @@
 
     !end-bullet!
 
-!end-bullets-53!
+!end-bullets-54!
 
 # rmarkdown 0.9.5
 
-!begin-bullets-54!
+!begin-bullets-55!
 
 -   !begin-bullet!
     Added odt_document format for OpenDocument Text output
@@ -2904,21 +2918,21 @@
 
     !end-bullet!
 
-!end-bullets-54!
+!end-bullets-55!
 
 # rmarkdown 0.9.2
 
-!begin-bullets-55!
+!begin-bullets-56!
 
 -   !begin-bullet!
     Added a fix to #580 for Windows users.
     !end-bullet!
 
-!end-bullets-55!
+!end-bullets-56!
 
 # rmarkdown 0.9.1
 
-!begin-bullets-56!
+!begin-bullets-57!
 
 -   !begin-bullet!
     Fix for a bug causing certain files to be deleted as intermediate
@@ -2932,11 +2946,11 @@
 
     !end-bullet!
 
-!end-bullets-56!
+!end-bullets-57!
 
 # rmarkdown 0.9
 
-!begin-bullets-57!
+!begin-bullets-58!
 
 -   !begin-bullet!
     Fix for JS exception in slidy_presentation when served from the
@@ -2994,11 +3008,11 @@
 
     !end-bullet!
 
-!end-bullets-57!
+!end-bullets-58!
 
 # rmarkdown 0.8.1
 
-!begin-bullets-58!
+!begin-bullets-59!
 
 -   !begin-bullet!
     Support for table of contents in word_document (requires pandoc \>=
@@ -3029,11 +3043,11 @@
 
     !end-bullet!
 
-!end-bullets-58!
+!end-bullets-59!
 
 # rmarkdown 0.8
 
-!begin-bullets-59!
+!begin-bullets-60!
 
 -   !begin-bullet!
     Add support for keep_md to word_document
@@ -3068,11 +3082,11 @@
 
     !end-bullet!
 
-!end-bullets-59!
+!end-bullets-60!
 
 # rmarkdown 0.7
 
-!begin-bullets-60!
+!begin-bullets-61!
 
 -   !begin-bullet!
     Add latex_engine option to beamer_presentation format
@@ -3111,11 +3125,11 @@
 
     !end-bullet!
 
-!end-bullets-60!
+!end-bullets-61!
 
 # rmarkdown 0.6
 
-!begin-bullets-61!
+!begin-bullets-62!
 
 -   !begin-bullet!
     Support for parameterized reports. Parameter names and default
@@ -3157,11 +3171,11 @@
 
     !end-bullet!
 
-!end-bullets-61!
+!end-bullets-62!
 
 # rmarkdown 0.5.1
 
-!begin-bullets-62!
+!begin-bullets-63!
 
 -   !begin-bullet!
     Add 'dev' option to output formats to specify output device for
@@ -3178,11 +3192,11 @@
 
     !end-bullet!
 
-!end-bullets-62!
+!end-bullets-63!
 
 # rmarkdown 0.4.2
 
-!begin-bullets-63!
+!begin-bullets-64!
 
 -   !begin-bullet!
     Sync to the latest LaTeX and Beamer templates from pandoc-templates
@@ -3217,7 +3231,7 @@
 
     !end-bullet!
 
-!end-bullets-63!
+!end-bullets-64!
 
 # rmarkdown 0.3.11
 
