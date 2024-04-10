@@ -1,5 +1,15 @@
 # bslib (development version)
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    Adjusted the border color of checkbox and radio buttons to match the
+    border color of the input group in `bs_theme(preset="shiny")` .
+    (#1038)
+    !end-bullet!
+
+!end-bullets-1!
+
 # bslib 0.7.0
 
 This large release includes many improvements and bug fixes for newer UI
@@ -11,7 +21,7 @@ for implementing truly non-blocking operations in Shiny.
 
 ## New features
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     Added `input_task_button()`, a replacement for
@@ -34,16 +44,16 @@ for implementing truly non-blocking operations in Shiny.
 
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 ## Changes & improvements
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     For `sidebar()`:
 
-    !begin-bullets-3!
+    !begin-bullets-4!
     -   !begin-bullet!
         The page-level `sidebar` for `page_sidebar()`/`page_navbar()` is
         now always open (and not collapsible) by default on mobile
@@ -66,12 +76,12 @@ for implementing truly non-blocking operations in Shiny.
 
         !end-bullet!
 
-    !end-bullets-3!
+    !end-bullets-4!
     !end-bullet!
 -   !begin-bullet!
     Improved `card(full_screen = TRUE, ...)` accessibility:
 
-    !begin-bullets-4!
+    !begin-bullets-5!
     -   !begin-bullet!
         Full-screen cards are now supported on mobile devices: the
         *Expand card* button is revealed when a user taps on the card
@@ -91,12 +101,12 @@ for implementing truly non-blocking operations in Shiny.
 
         !end-bullet!
 
-    !end-bullets-4!
+    !end-bullets-5!
     !end-bullet!
 -   !begin-bullet!
     Improvements to the default theme (i.e., Shiny preset):
 
-    !begin-bullets-5!
+    !begin-bullets-6!
     -   !begin-bullet!
         In the default theme, cards now use a slightly smaller shadow
         and the same shadow style is also now used by popovers. (#998)
@@ -112,12 +122,12 @@ for implementing truly non-blocking operations in Shiny.
 
         !end-bullet!
 
-    !end-bullets-5!
+    !end-bullets-6!
     !end-bullet!
 -   !begin-bullet!
     For `layout_columns()`:
 
-    !begin-bullets-6!
+    !begin-bullets-7!
     -   !begin-bullet!
         `col_widths` now sets the `sm` breakpoint by default, rather
         than the `md` breakpoint. For example,
@@ -158,7 +168,7 @@ for implementing truly non-blocking operations in Shiny.
 
         !end-bullet!
 
-    !end-bullets-6!
+    !end-bullets-7!
     !end-bullet!
 -   !begin-bullet!
     `value_box()`, `layout_columns()` and `layout_column_wrap()` now all
@@ -189,11 +199,11 @@ for implementing truly non-blocking operations in Shiny.
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 ## Bug fixes
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     Fixed an issue where the page might be given a window title of `NA`
@@ -237,7 +247,7 @@ for implementing truly non-blocking operations in Shiny.
 
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 # bslib 0.6.2
 
@@ -249,7 +259,7 @@ files.
 
 ## Bug fixes
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     Fixed the CSS for the `bslib-page-dashboard` class in the Shiny
@@ -264,13 +274,13 @@ files.
 
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 # bslib 0.6.0
 
 ## Breaking changes
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     `bs_theme()` now defaults to `preset="shiny"`. This provides an
@@ -318,11 +328,11 @@ files.
 
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 ## New features
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     The default version of Bootstrap is now v5.3.1, upgraded from
@@ -365,7 +375,7 @@ files.
     `value_box()` has been updated with a number of new features and
     improvements:
 
-    !begin-bullets-11!
+    !begin-bullets-12!
     -   !begin-bullet!
         `value_box()` now supports many new themes and styles, or fully
         customizable themes using the new `value_box_theme()` function.
@@ -417,7 +427,7 @@ files.
 
         !end-bullet!
 
-    !end-bullets-11!
+    !end-bullets-12!
     !end-bullet!
 -   !begin-bullet!
     Added new `navset_underline()` & `navset_card_underline()` functions
@@ -426,11 +436,11 @@ files.
 
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 ## Improvements
 
-!begin-bullets-12!
+!begin-bullets-13!
 
 -   !begin-bullet!
     The `bs_themer()` app now supports previewing the dark mode variant
@@ -481,11 +491,11 @@ files.
 
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
 
 ## Bug fixes
 
-!begin-bullets-13!
+!begin-bullets-14!
 
 -   !begin-bullet!
     `toggle_switch()` now works correctly when called from within a
@@ -511,13 +521,13 @@ files.
 
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-14!
 
 # bslib 0.5.1
 
 ## New features
 
-!begin-bullets-14!
+!begin-bullets-15!
 
 -   !begin-bullet!
     Added `tooltip()`, `update_tooltip()`, and `toggle_tooltip()` for
@@ -544,11 +554,11 @@ files.
     remains as an alias of `toggle_sidebar()`). (#709)
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-15!
 
 ## Improvements
 
-!begin-bullets-15!
+!begin-bullets-16!
 
 -   !begin-bullet!
     Closed quarto-dev/quarto-cli#6081: `{bslib}`'s components (e.g.,
@@ -561,11 +571,11 @@ files.
     padding around the sidebar's content. (#725)
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-16!
 
 ## Bug fixes
 
-!begin-bullets-16!
+!begin-bullets-17!
 
 -   !begin-bullet!
     Closed #636: Outputs in sidebars now work as expected when an
@@ -590,7 +600,7 @@ files.
     by avoiding layout issues caused by grid container overflow. (#729)
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-17!
 
 # bslib 0.5.0
 
@@ -606,7 +616,7 @@ recommended way to create Shiny dashboards.
 
 ## Breaking changes / improvements
 
-!begin-bullets-17!
+!begin-bullets-18!
 
 -   !begin-bullet!
     `card_body()` now provides the same behavior as `card_body_fill()`
@@ -634,7 +644,7 @@ recommended way to create Shiny dashboards.
     this breaks existing behavior, consider using
     `shiny::fillPage(theme = bslib::bs_theme(), ...)` instead of
     `page_fill()`.
-    !begin-bullets-18!
+    !begin-bullets-19!
     -   !begin-bullet!
         `page_fill()` now produces a `<body>` tag with `display:flex`
         (instead of `display:block`).
@@ -649,12 +659,12 @@ recommended way to create Shiny dashboards.
         `padding = 0` and `gap = 0` to restore the old behavior.
         !end-bullet!
 
-    !end-bullets-18!
+    !end-bullets-19!
     !end-bullet!
 -   !begin-bullet!
     `page_navbar()` (and also `shiny::navbarPage()` with
     `theme = bs_theme()`) had a couple breaking changes:
-    !begin-bullets-19!
+    !begin-bullets-20!
     -   !begin-bullet!
         The container of each page is now `display:flex` (instead of
         `display:block`). If this breaks existing behavior, set
@@ -667,7 +677,7 @@ recommended way to create Shiny dashboards.
         `shiny::fluidRow()`). (#479)
         !end-bullet!
 
-    !end-bullets-19!
+    !end-bullets-20!
     !end-bullet!
 -   !begin-bullet!
     `layout_column_wrap()`'s `fill` argument now controls whether or not
@@ -687,11 +697,11 @@ recommended way to create Shiny dashboards.
     (#475)
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-18!
 
 ## New features
 
-!begin-bullets-20!
+!begin-bullets-21!
 
 -   !begin-bullet!
     Added `page_sidebar()`, for easy dashboard creation. (#588)
@@ -743,11 +753,11 @@ recommended way to create Shiny dashboards.
     to fill. (#498)
     !end-bullet!
 
-!end-bullets-20!
+!end-bullets-21!
 
 ## Bug fixes
 
-!begin-bullets-21!
+!begin-bullets-22!
 
 -   !begin-bullet!
     Closed #558: nested cards with `fullscreen = TRUE` now correctly and
@@ -760,11 +770,11 @@ recommended way to create Shiny dashboards.
     `value_box("Dynamic value", uiOutput("value"))`). (#605)
     !end-bullet!
 
-!end-bullets-21!
+!end-bullets-22!
 
 ## Deprecations
 
-!begin-bullets-22!
+!begin-bullets-23!
 
 -   !begin-bullet!
     `card_body_fill()` has been deprecated in favor of `card_body()`.
@@ -781,7 +791,7 @@ recommended way to create Shiny dashboards.
 -   !begin-bullet!
     The `navs_*()` family of functions have been deprecated in favor of
     `navset_*()` (#476):
-    !begin-bullets-23!
+    !begin-bullets-24!
     -   !begin-bullet!
         `navs_tab()` is now `navset_tab()`
         !end-bullet!
@@ -799,34 +809,34 @@ recommended way to create Shiny dashboards.
         `navset_card_tab()` and `navset_card_pill()`, respectively.
         !end-bullet!
 
-    !end-bullets-23!
+    !end-bullets-24!
     !end-bullet!
 
-!end-bullets-22!
+!end-bullets-23!
 
 # bslib 0.4.2
 
 ## Potentially breaking changes
 
-!begin-bullets-24!
+!begin-bullets-25!
 
 -   !begin-bullet!
     Upgraded Bootstrap 5 (i.e., `bs_theme(version = 5)`) from 5.1.3 to
     5.2.2. (#438, #455)
     !end-bullet!
 
-!end-bullets-24!
+!end-bullets-25!
 
 ## New features
 
-!begin-bullets-25!
+!begin-bullets-26!
 
 -   !begin-bullet!
     Adds a new `card()` API as well as `value_box()` and
     `layout_column_wrap()`. To learn more about this new functionality,
     refer to these new pkgdown articles:
 
-    !begin-bullets-26!
+    !begin-bullets-27!
     -   !begin-bullet!
         https://rstudio.github.io/bslib/articles/cards.html
         !end-bullet!
@@ -837,29 +847,29 @@ recommended way to create Shiny dashboards.
         https://rstudio.github.io/bslib/articles/column-layout.html
         !end-bullet!
 
-    !end-bullets-26!
+    !end-bullets-27!
     !end-bullet!
 
-!end-bullets-25!
+!end-bullets-26!
 
 # bslib 0.4.1
 
 ## Bug Fixes
 
-!begin-bullets-27!
+!begin-bullets-28!
 
 -   !begin-bullet!
     Closed #458. This release `{bslib}` now requires `{memoise}` 2.0.1
     or above.
     !end-bullet!
 
-!end-bullets-27!
+!end-bullets-28!
 
 # bslib 0.4.0
 
 ## Breaking changes
 
-!begin-bullets-28!
+!begin-bullets-29!
 
 -   !begin-bullet!
     `bs_theme()` now defaults to `version = 5` (i.e., Bootstrap 5). If
@@ -878,11 +888,11 @@ recommended way to create Shiny dashboards.
     appropriately). (#392)
     !end-bullet!
 
-!end-bullets-28!
+!end-bullets-29!
 
 ## New features
 
-!begin-bullets-29!
+!begin-bullets-30!
 
 -   !begin-bullet!
     Upgraded Bootstrap 5 (i.e., `bs_theme(version = 5)`) from 5.1.0 to
@@ -894,11 +904,11 @@ recommended way to create Shiny dashboards.
     the same dynamically themable widget. (#405)
     !end-bullet!
 
-!end-bullets-29!
+!end-bullets-30!
 
 ## Bug fixes
 
-!begin-bullets-30!
+!begin-bullets-31!
 
 -   !begin-bullet!
     Closed #393: Bootstrap 5's `$form-check-label-*` variables now work
@@ -933,24 +943,24 @@ recommended way to create Shiny dashboards.
     (#391)
     !end-bullet!
 
-!end-bullets-30!
+!end-bullets-31!
 
 # bslib 0.3.1
 
 ## New features
 
-!begin-bullets-31!
+!begin-bullets-32!
 
 -   !begin-bullet!
     Upgraded Bootstrap 5 (i.e., `bs_theme(version = 5)`) from 5.0.2 to
     5.1.0 (#365)
     !end-bullet!
 
-!end-bullets-31!
+!end-bullets-32!
 
 ## Bug fixes
 
-!begin-bullets-32!
+!begin-bullets-33!
 
 -   !begin-bullet!
     Closed rstudio/shiny#3519: `nav_menu()` (i.e.,
@@ -958,13 +968,13 @@ recommended way to create Shiny dashboards.
     `.dropdown` container properly. (#372)
     !end-bullet!
 
-!end-bullets-32!
+!end-bullets-33!
 
 # bslib 0.3.0
 
 ## Breaking changes
 
-!begin-bullets-33!
+!begin-bullets-34!
 
 -   !begin-bullet!
     Closed rstudio/rmarkdown#2154: `{magrittr}`'s pipe operator (`%>%`)
@@ -972,11 +982,11 @@ recommended way to create Shiny dashboards.
     make `%>%` available and/or use use R 4.1's pipe operator (`|>`).
     !end-bullet!
 
-!end-bullets-33!
+!end-bullets-34!
 
 ## New features
 
-!begin-bullets-34!
+!begin-bullets-35!
 
 -   !begin-bullet!
     Closed #82: Added support for Bootstrap 5 (via
@@ -985,11 +995,11 @@ recommended way to create Shiny dashboards.
     Bootstrap 5.
     !end-bullet!
 
-!end-bullets-34!
+!end-bullets-35!
 
 ## Bug fixes
 
-!begin-bullets-35!
+!begin-bullets-36!
 
 -   !begin-bullet!
     Closed #6: rmarkdown's .tabset-fade class now works with Bootstrap
@@ -997,7 +1007,7 @@ recommended way to create Shiny dashboards.
     Bootstrap 4+. (#325)
     !end-bullet!
 
-!end-bullets-35!
+!end-bullets-36!
 
 # bslib 0.2.5.1
 
@@ -1007,7 +1017,7 @@ Small patch release to fix failing test on Solaris.
 
 ## New features and improvements
 
-!begin-bullets-36!
+!begin-bullets-37!
 
 -   !begin-bullet!
     Closed #251: New `bs_theme()` options (`navbar-bg`,
@@ -1068,11 +1078,11 @@ Small patch release to fix failing test on Solaris.
     `bs_add_functions()`. (#311)
     !end-bullet!
 
-!end-bullets-36!
+!end-bullets-37!
 
 ## Bug fixes
 
-!begin-bullets-37!
+!begin-bullets-38!
 
 -   !begin-bullet!
     Closed #236, #230, #242, #187, #215, #250: Addressed various
@@ -1087,14 +1097,14 @@ Small patch release to fix failing test on Solaris.
     spacing/alignment (#286).
     !end-bullet!
 
-!end-bullets-37!
+!end-bullets-38!
 
 # bslib 0.2.4
 
-!begin-bullets-38!
+!begin-bullets-39!
 
 -   !begin-bullet!
     Initial release of the package, see https://rstudio.github.io/bslib/
     !end-bullet!
 
-!end-bullets-38!
+!end-bullets-39!
