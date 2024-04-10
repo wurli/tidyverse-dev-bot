@@ -16999,3 +16999,5 @@ rmarkdown,6a8b10b643e930fcec16aeac07ffba7a,"Provide a global option `rmarkdown.f
 reticulate,fd33cb552e207fb6b8bef0ec4d26119f,"Fixed issues reported by rchk, as requested by CRAN (#1581).",NA,NA,NA,NA
 bslib,e665c6fe24adf340cf3dcf60938dfcea,"Adjusted the border color of checkbox and radio buttons to match the border color of the input group in `bs_theme(preset=""shiny"")` . (#1038)",NA,NA,NA,NA
 shiny,bb5463175308366f1b3a6d9cef99daa1,Fixed a recent issue with `uiOutput()` and `conditionalPanel()` not properly lower opacity when recalculation (in a Bootstrap 5 context). (#4027),NA,NA,NA,NA
+shinytest2,793de8ac9b541e434757c319191727ed,"`{shinytest2}` now uses `{rlang}` and longer depends on `{ellipsis}` (@​olivroy, #382).",NA,NA,NA,NA
+shinytest2,29651ad32f38386efede4ce8d276a017,shinytest2 no longer checks if the computer running the tests is connected to the internet when determining if shinytest2 can connect to the server hosting the Shiny app being tested. (@​Riraro #364),NA,NA,NA,NA
