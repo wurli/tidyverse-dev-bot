@@ -17001,3 +17001,4 @@ bslib,e665c6fe24adf340cf3dcf60938dfcea,"Adjusted the border color of checkbox an
 shiny,bb5463175308366f1b3a6d9cef99daa1,Fixed a recent issue with `uiOutput()` and `conditionalPanel()` not properly lower opacity when recalculation (in a Bootstrap 5 context). (#4027),NA,NA,NA,NA
 shinytest2,793de8ac9b541e434757c319191727ed,"`{shinytest2}` now uses `{rlang}` and longer depends on `{ellipsis}` (@​olivroy, #382).",NA,NA,NA,NA
 shinytest2,29651ad32f38386efede4ce8d276a017,shinytest2 no longer checks if the computer running the tests is connected to the internet when determining if shinytest2 can connect to the server hosting the Shiny app being tested. (@​Riraro #364),NA,NA,NA,NA
+renv,bb7e82e8bbecda890b2767eee019bc3b,Fixed an issue where downloads could fail with curl \>= 8.7.1. (#1869),NA,NA,NA,NA

@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed an issue where downloads could fail with curl \>= 8.7.1.
+    (#1869)
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed an issue where `renv::snapshot()` did not properly normalize
     package records generated from packages installed using the `pak`
     package, e.g. via `pak::pkg_install("cran::<package>")`.
