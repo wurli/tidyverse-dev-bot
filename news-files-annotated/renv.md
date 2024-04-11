@@ -1,5 +1,7 @@
 # renv (development version)
 
+# renv 1.0.6
+
 !begin-bullets-1!
 
 -   !begin-bullet!
