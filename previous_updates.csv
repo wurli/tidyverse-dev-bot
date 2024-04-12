@@ -17003,3 +17003,4 @@ shinytest2,793de8ac9b541e434757c319191727ed,"`{shinytest2}` now uses `{rlang}` a
 shinytest2,29651ad32f38386efede4ce8d276a017,shinytest2 no longer checks if the computer running the tests is connected to the internet when determining if shinytest2 can connect to the server hosting the Shiny app being tested. (@​Riraro #364),NA,NA,NA,NA
 renv,bb7e82e8bbecda890b2767eee019bc3b,Fixed an issue where downloads could fail with curl \>= 8.7.1. (#1869),NA,NA,NA,NA
 renv,cf5cac2237b5f6f17c451f0dabf5b689,Fixed an issue where `renv`'s activate script failed to report version conflict errors when starting up. (#1874),NA,NA,NA,NA
+pkgdown,08b4d0eb451c57c80d99965fdb60759e,"`build_home()` no longer renders Github issue and pull request templates (@​hsloot, #2362)",NA,NA,NA,NA
