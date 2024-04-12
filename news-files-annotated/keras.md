@@ -6,12 +6,25 @@ New functions:
 
 -   !begin-bullet!
     `quantize_weights()`: quantize model or layer weights in-place.
-    Currently, only `Dense` and `EinsumDense` layers are supported
-    (which is enough to cover the majority of transformers today)
+    Currently, only `Dense`, `EinsumDense`, and `Embedding` layers are
+    supported (which is enough to cover the majority of transformers
+    today)
 
     !end-bullet!
 -   !begin-bullet!
     `layer_mel_spectrogram()`
+
+    !end-bullet!
+-   !begin-bullet!
+    `layer_flax_module_wrapper()`
+
+    !end-bullet!
+-   !begin-bullet!
+    `layer_jax_model_wrapper()`
+
+    !end-bullet!
+-   !begin-bullet!
+    `loss_dice()`
 
     !end-bullet!
 -   !begin-bullet!
@@ -53,6 +66,12 @@ New functions:
         !end-bullet!
     -   !begin-bullet!
         `op_normalize()`
+        !end-bullet!
+    -   !begin-bullet!
+        `op_correlate()`
+        !end-bullet!
+    -   !begin-bullet!
+        \`
         !end-bullet!
 
     !end-bullets-2!
@@ -114,6 +133,33 @@ New functions:
 -   !begin-bullet!
     `op_array()` and `op_convert_to_tensor()` no longer error when
     casting R doubles to integer types.
+
+    !end-bullet!
+-   !begin-bullet!
+    `export_savedmodel()` now works with a Jax backend.
+
+    !end-bullet!
+-   !begin-bullet!
+    `Metric()$add_variable()` method gains arg: `aggregration`.
+
+    !end-bullet!
+-   !begin-bullet!
+    `Layer()$add_weight()` method gains args: `autocast`, `regularizer`,
+    `aggregation`.
+
+    !end-bullet!
+-   !begin-bullet!
+    `op_bincount()`, `op_multi_hot()`, `op_one_hot()`, and
+    `layer_category_encoding()` now support sparse tensors.
+
+    !end-bullet!
+-   !begin-bullet!
+    `op_custom_gradient()` now supports the PyTorch backend
+
+    !end-bullet!
+-   !begin-bullet!
+    `layer_lstm()` and `layer_gru()` gain arg `use_cudnn`, default
+    `'auto'`.
 
     !end-bullet!
 -   !begin-bullet!
