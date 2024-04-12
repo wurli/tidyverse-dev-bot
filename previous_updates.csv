@@ -17004,3 +17004,4 @@ shinytest2,29651ad32f38386efede4ce8d276a017,shinytest2 no longer checks if the c
 renv,bb7e82e8bbecda890b2767eee019bc3b,Fixed an issue where downloads could fail with curl \>= 8.7.1. (#1869),NA,NA,NA,NA
 renv,cf5cac2237b5f6f17c451f0dabf5b689,Fixed an issue where `renv`'s activate script failed to report version conflict errors when starting up. (#1874),NA,NA,NA,NA
 pkgdown,08b4d0eb451c57c80d99965fdb60759e,"`build_home()` no longer renders Github issue and pull request templates (@​hsloot, #2362)",NA,NA,NA,NA
+pkgdown,13e6233d6a3a442556a655d0f982c8e5,Preview links now work once again (#2435).,NA,NA,NA,NA

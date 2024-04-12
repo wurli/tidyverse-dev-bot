@@ -3,6 +3,9 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Preview links now work once again (#2435).
+    !end-bullet!
+-   !begin-bullet!
     `build_home()` no longer renders Github issue and pull request
     templates (@hsloot, #2362)
     !end-bullet!
