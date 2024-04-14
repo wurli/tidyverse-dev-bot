@@ -17014,3 +17014,4 @@ keras,a7b258a10f34f62141df912221844e73,"`Layer()$add_weight()` method gains args
 keras,95a72c2ac7b648539131bd89909a90b3,"`op_bincount()`, `op_multi_hot()`, `op_one_hot()`, and `layer_category_encoding()` now support sparse tensors.",NA,NA,NA,NA
 keras,fa9a6652e8d7e8a1876316fa82ddadd4,`op_custom_gradient()` now supports the PyTorch backend,NA,NA,NA,NA
 keras,a62afda4a3d9c13a5a7701528db3976a,"`layer_lstm()` and `layer_gru()` gain arg `use_cudnn`, default `'auto'`.",NA,NA,NA,NA
+tibble,020f884129bf2ce662ce832ed71f6c26,"`new_tibble()` and `as_tibble()` support attributes named `""n""` and `""x""` (#1573, #1574).",NA,NA,NA,NA
