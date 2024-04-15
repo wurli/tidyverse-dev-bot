@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `build_article()` gains a new `new_process` argument which allows to
+    build a vignette in the current process for debugging purposes.
+    We've also improved the error messages and tracebacks if an article
+    fails to build, hopefully also making debugging easier (#2438).
+    !end-bullet!
+-   !begin-bullet!
     Preview links now work once again (#2435).
     !end-bullet!
 -   !begin-bullet!

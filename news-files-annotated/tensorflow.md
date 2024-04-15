@@ -11,7 +11,7 @@
 -   !begin-bullet!
     If `install_tensorflow()` detects a GPU on Linux, it will
     automatically install the cuda package and configure required
-    symlinks for cudnn.
+    symlinks for cudnn and ptxax.
     !end-bullet!
 
 !end-bullets-1!
