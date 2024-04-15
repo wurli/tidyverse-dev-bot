@@ -20,6 +20,11 @@
     interactively. `build_reference_index()` and friends will call
     `init_site()` internally instead of erroring (@olivroy, #2329).
     !end-bullet!
+-   !begin-bullet!
+    Fixed an issue introduced in 2.0.8 where pkgdown was not using the
+    Bootstrap version specified in a template package (@gadenbuie,
+    #2443).
+    !end-bullet!
 
 !end-bullets-1!
 

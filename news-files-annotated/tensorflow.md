@@ -1,4 +1,4 @@
-# tensorflow (development version)
+# tensorflow 2.16.0
 
 !begin-bullets-1!
 
