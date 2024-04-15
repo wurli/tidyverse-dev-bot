@@ -163,6 +163,11 @@ New functions:
 
     !end-bullet!
 -   !begin-bullet!
+    Fixed an issue where `application_preprocess_inputs()` would error
+    if supplied an R array as input.
+
+    !end-bullet!
+-   !begin-bullet!
     Doc improvements.
 
     !end-bullet!
