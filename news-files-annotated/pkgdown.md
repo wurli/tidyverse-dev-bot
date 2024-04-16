@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `build_news()` now warns if it doesn't find any version headings,
+    suggesting that that `NEWS.md` is structured incorrectly (#2213).
+    !end-bullet!
+-   !begin-bullet!
     `build_article()` gains a new `new_process` argument which allows to
     build a vignette in the current process for debugging purposes.
     We've also improved the error messages and tracebacks if an article
