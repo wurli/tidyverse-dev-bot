@@ -25,6 +25,10 @@
     Bootstrap version specified in a template package (@gadenbuie,
     #2443).
     !end-bullet!
+-   !begin-bullet!
+    `check_pkgdown()` no longer errors if your intro vignette is an
+    article is not listed in `_pkgdown.yml` (@olivroy #2150).
+    !end-bullet!
 
 !end-bullets-1!
 

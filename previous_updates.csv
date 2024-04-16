@@ -17019,3 +17019,4 @@ pkgdown,2d38fd99ed3fca9441b0ab8cd08f0e7a,"It is now easier to preview parts of t
 pkgdown,7f8386843f3ff06f4816e9d1ece25b36,"`build_article()` gains a new `new_process` argument which allows to build a vignette in the current process for debugging purposes. We've also improved the error messages and tracebacks if an article fails to build, hopefully also making debugging easier (#2438).",NA,NA,NA,NA
 pkgdown,7608fd7e3d7302e16f653a51b09d012c,"Fixed an issue introduced in 2.0.8 where pkgdown was not using the Bootstrap version specified in a template package (@​gadenbuie, #2443).",NA,NA,NA,NA
 keras,fc1eb3c9b687b97549135931779f5781,Fixed an issue where `application_preprocess_inputs()` would error if supplied an R array as input.,NA,NA,NA,NA
+pkgdown,a57d2fbd27295c630c0893f805c10123,`check_pkgdown()` no longer errors if your intro vignette is an article is not listed in `_pkgdown.yml` (@​olivroy #2150).,NA,NA,NA,NA
