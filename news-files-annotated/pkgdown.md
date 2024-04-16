@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `build_article_index()` and `build_reference_index()` use an
+    improved BS5 template that correctly wraps each section description
+    in a `<div>`, rather than a `<p>`. This eliminates an empty pargraph
+    tag that preceded each section description (#2352).
+    !end-bullet!
+-   !begin-bullet!
     `build_news()` now warns if it doesn't find any version headings,
     suggesting that that `NEWS.md` is structured incorrectly (#2213).
     !end-bullet!
