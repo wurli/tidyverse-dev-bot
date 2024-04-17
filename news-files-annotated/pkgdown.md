@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    The skip link now becomes visible when focussed (#2138). Thanks to
+    @glin for the styles!
+    !end-bullet!
+-   !begin-bullet!
     `build_reference_index()` gives more informative errors if your
     `contents` field is malformed (#2323).
     !end-bullet!
