@@ -21,6 +21,11 @@
     `summary_rows()` or `grand_summary_rows()` (@olivroy, #1233)
 
     !end-bullet!
+-   !begin-bullet!
+    interactive tables are now rendering the first level of column
+    groups, added by `tab_spanner()` (@obsaditelnost, #1618)
+
+    !end-bullet!
 
 !end-bullets-1!
 
