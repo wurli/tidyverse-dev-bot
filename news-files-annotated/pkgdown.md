@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `build_reference_index()` gives more informative errors if your
+    `contents` field is malformed (#2323).
+    !end-bullet!
+-   !begin-bullet!
     The left and right footers no longer contain an extra empty
     paragraph tag and the footer gains additional padding-top to keep
     the whitespace constant (#2381).

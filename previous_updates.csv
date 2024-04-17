@@ -17023,3 +17023,4 @@ pkgdown,a57d2fbd27295c630c0893f805c10123,`check_pkgdown()` no longer errors if y
 pkgdown,fa0c497e0ebf523cb00695976f143b61,"`build_news()` now warns if it doesn't find any version headings, suggesting that that `NEWS.md` is structured incorrectly (#2213).",NA,NA,NA,NA
 pkgdown,c632cefcdf24cc83725eca419c851b23,"`build_article_index()` and `build_reference_index()` use an improved BS5 template that correctly wraps each section description in a `<div>`, rather than a `<p>`. This eliminates an empty pargraph tag that preceded each section description (#2352).",NA,NA,NA,NA
 pkgdown,34f1bdf3b7387bfc762d22f00b43d948,The left and right footers no longer contain an extra empty paragraph tag and the footer gains additional padding-top to keep the whitespace constant (#2381).,NA,NA,NA,NA
+pkgdown,6e5e5c58c985de89b511d5d7b721ffe6,`build_reference_index()` gives more informative errors if your `contents` field is malformed (#2323).,NA,NA,NA,NA
