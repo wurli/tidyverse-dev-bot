@@ -17027,3 +17027,4 @@ pkgdown,6e5e5c58c985de89b511d5d7b721ffe6,`build_reference_index()` gives more in
 pkgdown,a1aeb204a9bf9cdba7dbba0e9cd73caa,The skip link now becomes visible when focussed (#2138). Thanks to @​glin for the styles!,NA,NA,NA,NA
 gt,3f686195a95388c84522963470d4aff7,"interactive tables are now rendering the first level of column groups, added by `tab_spanner()` (@​obsaditelnost, #1618)",NA,NA,NA,NA
 shinytest2,792b7d41e71544b9e666a71a194b15fb,"`{shinytest2}` now warns rather than erroring when a potentially non-existent global variable is found in the server function, such as when column names are passed to `dplyr::select()` (thanks @​matt-sd-watson @​MichalLauer, #385).",NA,NA,NA,NA
+pkgdown,7f2dd49f6b53c759cdf07f174c34d2ed,`data_template()` gives a more informative error if you've misspecified the navbar (#2312).,NA,NA,NA,NA

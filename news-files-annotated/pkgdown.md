@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `data_template()` gives a more informative error if you've
+    misspecified the navbar (#2312).
+    !end-bullet!
+-   !begin-bullet!
     The skip link now becomes visible when focussed (#2138). Thanks to
     @glin for the styles!
     !end-bullet!
