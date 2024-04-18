@@ -17031,3 +17031,11 @@ pkgdown,7f2dd49f6b53c759cdf07f174c34d2ed,`data_template()` gives a more informat
 pkgdown,8b83b63b0dc5f4bafb242106f7f42478,"Clipboard buttons report their action again (""Copied!"") (#2462)",NA,NA,NA,NA
 pkgdown,76eb9aa9155222c2858885a99951208d,"`build_readme()` now correctly tweaks links to markdown files that use an anchor, e.g. `foo.md#heading-name` (#2313).",NA,NA,NA,NA
 pkgdown,01e2c17c5e2f256f26f07ecee278a357,`build_home()` no longer errors when you have an empty `.md` file (#2309).,NA,NA,NA,NA
+pkgdown,d73ff206f5fc098529a0c2c140a9db5f,Fixes for regressions in 2.0.8:,NA,NA,NA,NA
+pkgdown,d73ff206f5fc098529a0c2c140a9db5f,• Output links generated when building the site work once again (#2435).,NA,NA,NA,NA
+pkgdown,d73ff206f5fc098529a0c2c140a9db5f,"• pkgdown once again uses Bootstrap version specified in a template package (@​gadenbuie, #2443).",NA,NA,NA,NA
+pkgdown,3a22ae24bb50901d51e218873907108d,Front-end improvements:,NA,NA,NA,NA
+pkgdown,3a22ae24bb50901d51e218873907108d,• The skip link now becomes visible when focussed (#2138). Thanks to @​glin for the styles!,NA,NA,NA,NA
+pkgdown,3a22ae24bb50901d51e218873907108d,• The left and right footers no longer contain an extra empty paragraph tag and the footer gains additional padding-top to keep the whitespace constant (#2381).,NA,NA,NA,NA
+pkgdown,3a22ae24bb50901d51e218873907108d,"• Clipboard buttons report their action again (""Copied!"") (#2462)",NA,NA,NA,NA
+pkgdown,4e4b33fa6d028bb0b9e8897a0f5e131d,"`build_home()` no longer errors when you have an empty `.md` file (#2309). It alos no longer renders Github issue and pull request templates (@​hsloot, #2362)",NA,NA,NA,NA
