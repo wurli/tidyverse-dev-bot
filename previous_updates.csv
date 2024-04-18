@@ -17028,3 +17028,6 @@ pkgdown,a1aeb204a9bf9cdba7dbba0e9cd73caa,The skip link now becomes visible when 
 gt,3f686195a95388c84522963470d4aff7,"interactive tables are now rendering the first level of column groups, added by `tab_spanner()` (@​obsaditelnost, #1618)",NA,NA,NA,NA
 shinytest2,792b7d41e71544b9e666a71a194b15fb,"`{shinytest2}` now warns rather than erroring when a potentially non-existent global variable is found in the server function, such as when column names are passed to `dplyr::select()` (thanks @​matt-sd-watson @​MichalLauer, #385).",NA,NA,NA,NA
 pkgdown,7f2dd49f6b53c759cdf07f174c34d2ed,`data_template()` gives a more informative error if you've misspecified the navbar (#2312).,NA,NA,NA,NA
+pkgdown,8b83b63b0dc5f4bafb242106f7f42478,"Clipboard buttons report their action again (""Copied!"") (#2462)",NA,NA,NA,NA
+pkgdown,76eb9aa9155222c2858885a99951208d,"`build_readme()` now correctly tweaks links to markdown files that use an anchor, e.g. `foo.md#heading-name` (#2313).",NA,NA,NA,NA
+pkgdown,01e2c17c5e2f256f26f07ecee278a357,`build_home()` no longer errors when you have an empty `.md` file (#2309).,NA,NA,NA,NA

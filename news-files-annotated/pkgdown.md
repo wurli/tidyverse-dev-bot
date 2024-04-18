@@ -3,6 +3,17 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Clipboard buttons report their action again ("Copied!") (#2462)
+    !end-bullet!
+-   !begin-bullet!
+    `build_readme()` now correctly tweaks links to markdown files that
+    use an anchor, e.g. `foo.md#heading-name` (#2313).
+    !end-bullet!
+-   !begin-bullet!
+    `build_home()` no longer errors when you have an empty `.md` file
+    (#2309).
+    !end-bullet!
+-   !begin-bullet!
     `data_template()` gives a more informative error if you've
     misspecified the navbar (#2312).
     !end-bullet!
