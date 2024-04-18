@@ -5,6 +5,14 @@
 -   !begin-bullet!
     `{shinytest2}` now uses `{rlang}` and longer depends on `{ellipsis}`
     (@olivroy, #382).
+
+    !end-bullet!
+-   !begin-bullet!
+    `{shinytest2}` now warns rather than erroring when a potentially
+    non-existent global variable is found in the server function, such
+    as when column names are passed to `dplyr::select()` (thanks
+    @matt-sd-watson @MichalLauer, #385).
+
     !end-bullet!
 
 !end-bullets-1!
