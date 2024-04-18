@@ -1,5 +1,7 @@
 # pkgdown (development version)
 
+# pkgdown 2.0.9
+
 !begin-bullets-1!
 
 -   !begin-bullet!
