@@ -7,11 +7,6 @@
     class is dropped (@teunbrand, #5666).
     !end-bullet!
 -   !begin-bullet!
-    `update_geom_defaults()` and `update_stat_defaults()` have a reset
-    mechanism when using `new = NULL` and invisible return the previous
-    defaults (#4993).
-    !end-bullet!
--   !begin-bullet!
     `coord_map()` and `coord_polar()` throw informative warnings when
     used with the guide system (#5707).
     !end-bullet!
