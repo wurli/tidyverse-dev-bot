@@ -17039,3 +17039,5 @@ pkgdown,3a22ae24bb50901d51e218873907108d,• The skip link now becomes visible w
 pkgdown,3a22ae24bb50901d51e218873907108d,• The left and right footers no longer contain an extra empty paragraph tag and the footer gains additional padding-top to keep the whitespace constant (#2381).,NA,NA,NA,NA
 pkgdown,3a22ae24bb50901d51e218873907108d,"• Clipboard buttons report their action again (""Copied!"") (#2462)",NA,NA,NA,NA
 pkgdown,4e4b33fa6d028bb0b9e8897a0f5e131d,"`build_home()` no longer errors when you have an empty `.md` file (#2309). It alos no longer renders Github issue and pull request templates (@​hsloot, #2362)",NA,NA,NA,NA
+reticulate,697b2dd19a6f6dd1c26da901efaf958d,"Fix issue where `py_to_r()` method for Pandas DataFrames would error if `py_to_r()` S3 methods were defined for Pandas subtypes, (as done by {anndata}) (#1591).",NA,NA,NA,NA
+reticulate,80e9ac5b474c4313837af29df3244c0e,"""Python Dependencies"" vignette edits (@​salim-b, #1586)",NA,NA,NA,NA
