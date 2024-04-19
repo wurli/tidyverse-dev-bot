@@ -17,6 +17,11 @@
     `conda_create()`, `conda_install()` (#1585).
 
     !end-bullet!
+-   !begin-bullet!
+    Fixed issue where `conda_install()` ignores user-specified channels
+    during Python installation (#1594).
+
+    !end-bullet!
 
 !end-bullets-1!
 
