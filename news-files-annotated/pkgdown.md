@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `build_reference()` matches usage for S3 and S4 methods to the style
+    used by R 4.0.0 and later (#2187).
+    !end-bullet!
+-   !begin-bullet!
     `<source>` tags now have their `srcref` attributes tweaked in the
     same way that the `src` attributes of `<img>` tags are (#2402).
     !end-bullet!

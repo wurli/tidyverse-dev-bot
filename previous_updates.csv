@@ -17046,3 +17046,4 @@ pkgdown,7de529cbd3afa6910e9c02c5afe7e54a,"You can now choose where the search bo
 pkgdown,cad655a34f12e729b9d100ee093fae26,"The mobile version of pkgdown sites no longer has a scrollburglar (a small amount of horizontal scroll) (#2179, @​netique).",NA,NA,NA,NA
 reticulate,91639810d64385cb4df2c382468f2e1d,"Added an option for extra command-line arguments in `conda_create()`, `conda_install()` (#1585).",NA,NA,NA,NA
 pkgdown,29a14f9debb928265492b93548b8d6cb,`<source>` tags now have their `srcref` attributes tweaked in the same way that the `src` attributes of `<img>` tags are (#2402).,NA,NA,NA,NA
+pkgdown,7d0b887ac4a25c172b0f44aed03f2d3f,`build_reference()` matches usage for S3 and S4 methods to the style used by R 4.0.0 and later (#2187).,NA,NA,NA,NA
