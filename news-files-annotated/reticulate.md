@@ -12,6 +12,11 @@
     "Python Dependencies" vignette edits (@salim-b, #1586)
 
     !end-bullet!
+-   !begin-bullet!
+    Added an option for extra command-line arguments in
+    `conda_create()`, `conda_install()` (#1585).
+
+    !end-bullet!
 
 !end-bullets-1!
 
