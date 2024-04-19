@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `<source>` tags now have their `srcref` attributes tweaked in the
+    same way that the `src` attributes of `<img>` tags are (#2402).
+    !end-bullet!
+-   !begin-bullet!
     New translation for "Search site", the label applied to the search
     box for screenreaders. This was previously incorrectly labelled as
     "Toggle navigation" (#2320).
