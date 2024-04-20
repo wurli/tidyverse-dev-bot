@@ -17048,3 +17048,4 @@ reticulate,91639810d64385cb4df2c382468f2e1d,"Added an option for extra command-l
 pkgdown,29a14f9debb928265492b93548b8d6cb,`<source>` tags now have their `srcref` attributes tweaked in the same way that the `src` attributes of `<img>` tags are (#2402).,NA,NA,NA,NA
 pkgdown,7d0b887ac4a25c172b0f44aed03f2d3f,`build_reference()` matches usage for S3 and S4 methods to the style used by R 4.0.0 and later (#2187).,NA,NA,NA,NA
 reticulate,ee658deac4f48249bbe402e283b1edf1,Fixed issue where `conda_install()` ignores user-specified channels during Python installation (#1594).,NA,NA,NA,NA
+pkgdown,4a8ff73b34b6785452867cd38aa6f54e,`build_article()` no longer generates the wrong source link when you build your site outside of the root directory (#2172).,NA,NA,NA,NA

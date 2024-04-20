@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `build_article()` no longer generates the wrong source link when you
+    build your site outside of the root directory (#2172).
+    !end-bullet!
+-   !begin-bullet!
     `build_reference()` matches usage for S3 and S4 methods to the style
     used by R 4.0.0 and later (#2187).
     !end-bullet!
