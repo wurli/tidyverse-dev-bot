@@ -30,6 +30,10 @@
     The mobile version of pkgdown sites no longer has a scrollburglar (a
     small amount of horizontal scroll) (#2179, @netique).
     !end-bullet!
+-   !begin-bullet!
+    The `template.bslib` item now also accepts a `bootswatch` key
+    (@gadenbuie, #2483).
+    !end-bullet!
 
 !end-bullets-1!
 

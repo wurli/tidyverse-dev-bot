@@ -17050,3 +17050,4 @@ pkgdown,7d0b887ac4a25c172b0f44aed03f2d3f,`build_reference()` matches usage for S
 reticulate,ee658deac4f48249bbe402e283b1edf1,Fixed issue where `conda_install()` ignores user-specified channels during Python installation (#1594).,NA,NA,NA,NA
 pkgdown,4a8ff73b34b6785452867cd38aa6f54e,`build_article()` no longer generates the wrong source link when you build your site outside of the root directory (#2172).,NA,NA,NA,NA
 renv,0ff990943654a32d0a9e836845367d13,"Fixed an issue where installation of packages from local sources, as via `install(""<package>"", repos = NULL, type = ""source"")`, could fail. (#1880)",NA,NA,NA,NA
+pkgdown,789a7d48c3d3d6203d325b2130a883f8,"The `template.bslib` item now also accepts a `bootswatch` key (@​gadenbuie, #2483).",NA,NA,NA,NA
