@@ -3,9 +3,15 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed an issue where `renv` could silently prompt the user for input
+    when running the autoloader inside an RStudio R session. (#1879)
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed an issue where installation of packages from local sources, as
     via `install("<package>", repos = NULL, type = "source")`, could
     fail. (#1880)
+
     !end-bullet!
 
 !end-bullets-1!

@@ -17052,3 +17052,4 @@ pkgdown,4a8ff73b34b6785452867cd38aa6f54e,`build_article()` no longer generates t
 renv,0ff990943654a32d0a9e836845367d13,"Fixed an issue where installation of packages from local sources, as via `install(""<package>"", repos = NULL, type = ""source"")`, could fail. (#1880)",NA,NA,NA,NA
 pkgdown,789a7d48c3d3d6203d325b2130a883f8,"The `template.bslib` item now also accepts a `bootswatch` key (@​gadenbuie, #2483).",NA,NA,NA,NA
 bslib,4e7d0d109c6399618e2d51303b1fb05f,"`toggle_sidebar()` once again correctly closes a sidebar. (@​fredericva, #1043)",NA,NA,NA,NA
+renv,3656f27ad957cf20fe390cdf1a1abd1e,Fixed an issue where `renv` could silently prompt the user for input when running the autoloader inside an RStudio R session. (#1879),NA,NA,NA,NA
