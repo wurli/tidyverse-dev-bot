@@ -6,6 +6,12 @@
     Adjusted the border color of checkbox and radio buttons to match the
     border color of the input group in `bs_theme(preset="shiny")` .
     (#1038)
+
+    !end-bullet!
+-   !begin-bullet!
+    `toggle_sidebar()` once again correctly closes a sidebar.
+    (@fredericva, #1043)
+
     !end-bullet!
 
 !end-bullets-1!
