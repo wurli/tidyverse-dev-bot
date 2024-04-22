@@ -13,13 +13,13 @@
 
     !end-bullet!
 -   !begin-bullet!
-    Added an option for extra command-line arguments in
-    `conda_create()`, `conda_install()` (#1585).
+    Added an option for extra command-line arguments in `conda_create()`
+    and `conda_install()` (#1585).
 
     !end-bullet!
 -   !begin-bullet!
-    Fixed issue where `conda_install()` ignores user-specified channels
-    during Python installation (#1594).
+    Fixed issue where `conda_install()` would ignore user-specified
+    channels during Python installation (#1594).
 
     !end-bullet!
 
@@ -30,7 +30,7 @@
 !begin-bullets-2!
 
 -   !begin-bullet!
-    Internal refactoring and optimization now give a faster experience,
+    Internal refactoring and optimizations now give a faster experience,
     especially for workflows that frequently access Python objects
     from R. For example, simple attribute access like `sys$path` is
     \~2.5x times faster, and a sample workload of
