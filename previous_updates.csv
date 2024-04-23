@@ -17056,3 +17056,5 @@ renv,3656f27ad957cf20fe390cdf1a1abd1e,Fixed an issue where `renv` could silently
 reticulate,f2c381ab386a6b687bb0eb0d416290ab,`virtualenv_starter()` no longer warns when encountering broken symlinks (#1598).,NA,NA,NA,NA
 pkgdown,159762a7de9f7e9d884cb5e8c5354900,"pkgdown no longer overrides the default selection colours. This improves accessibility for users who have set their own colours in their browser settings (#2139, @​glin).",NA,NA,NA,NA
 pkgdown,e895d6fe6c7db8fcadc5e609460009e9,`build_article()` now escapes html characters in the title (#2286).,NA,NA,NA,NA
+pkgdown,2293c96fb69ba7333d9ed8cfcf94279d,The `repo.source.url` field no longer requires a trailing slash (#2017).,NA,NA,NA,NA
+pkgdown,4ea54e46debe74de5a58393815c1e88e,"Anywhere you can use `_pkgdown.yml`, you can now use `_pkgdown.yaml` (#2244).",NA,NA,NA,NA
