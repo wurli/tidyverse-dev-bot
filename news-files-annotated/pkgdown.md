@@ -3,6 +3,14 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    pkgdown no longer overrides the default selection colours. This
+    improves accessibility for users who have set their own colours in
+    their browser settings (#2139, @glin).
+    !end-bullet!
+-   !begin-bullet!
+    `build_article()` now escapes html characters in the title (#2286).
+    !end-bullet!
+-   !begin-bullet!
     `build_article()` no longer generates the wrong source link when you
     build your site outside of the root directory (#2172).
     !end-bullet!
