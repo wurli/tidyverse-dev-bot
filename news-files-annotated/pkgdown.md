@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Very wide words are now automatically broken across lines and
+    hyphenated (when possible) when they'd otherwise create a horizontal
+    scrollbar on mobile (#1888).
+    !end-bullet!
+-   !begin-bullet!
     The `repo.source.url` field no longer requires a trailing slash
     (#2017).
     !end-bullet!

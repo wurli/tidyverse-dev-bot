@@ -17058,3 +17058,4 @@ pkgdown,159762a7de9f7e9d884cb5e8c5354900,"pkgdown no longer overrides the defaul
 pkgdown,e895d6fe6c7db8fcadc5e609460009e9,`build_article()` now escapes html characters in the title (#2286).,NA,NA,NA,NA
 pkgdown,2293c96fb69ba7333d9ed8cfcf94279d,The `repo.source.url` field no longer requires a trailing slash (#2017).,NA,NA,NA,NA
 pkgdown,4ea54e46debe74de5a58393815c1e88e,"Anywhere you can use `_pkgdown.yml`, you can now use `_pkgdown.yaml` (#2244).",NA,NA,NA,NA
+pkgdown,48069c434b02b07be948a51dcbe5530e,Very wide words are now automatically broken across lines and hyphenated (when possible) when they'd otherwise create a horizontal scrollbar on mobile (#1888).,NA,NA,NA,NA
