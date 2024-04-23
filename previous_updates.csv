@@ -17060,3 +17060,22 @@ pkgdown,2293c96fb69ba7333d9ed8cfcf94279d,The `repo.source.url` field no longer r
 pkgdown,4ea54e46debe74de5a58393815c1e88e,"Anywhere you can use `_pkgdown.yml`, you can now use `_pkgdown.yaml` (#2244).",NA,NA,NA,NA
 pkgdown,48069c434b02b07be948a51dcbe5530e,Very wide words are now automatically broken across lines and hyphenated (when possible) when they'd otherwise create a horizontal scrollbar on mobile (#1888).,NA,NA,NA,NA
 bslib,b97d9dc908b01fe9e9fe6c734a8963dc,"bslib now avoids re-defining its components when used in a context where they are already available, e.g. in a Quarto dashboard. (#1045)",NA,NA,NA,NA
+keras,bda82b57d78eae55f0608336006804f1,new function: `op_ctc_decode()`,NA,NA,NA,NA
+keras,7a330092e42786a55b3a6cc4e7b7d5b6,new function: `op_eigh()`,NA,NA,NA,NA
+keras,1d8fc426a80d4c0461a5fba18fe33d85,new function: `op_select()`,NA,NA,NA,NA
+keras,5f3d457456b21566f397cbd8449a6952,new function: `op_vectorize()`,NA,NA,NA,NA
+keras,221a6f0776bbf14c1ce0ea6dea71b35f,new function: `op_image_rgb_to_grayscale()`,NA,NA,NA,NA
+keras,e5c28eea0c4d336393c6274d4d368cf0,new function: `loss_tversky()`,NA,NA,NA,NA
+keras,bd8c18efe36b59571b8561fc8f5ad016,"new args: `layer_resizing(pad_to_aspect_ratio, fill_mode, fill_value)`",NA,NA,NA,NA
+keras,c61c56b6cc50e7ac142efcc334041719,new arg: `layer_embedding(weights)` for providing an initial weights matrix,NA,NA,NA,NA
+keras,597deb41355b5684616ea49e366637bd,"new args: `op_nan_to_num(nan, posinf, neginf)`",NA,NA,NA,NA
+keras,04cee19e2bd566b05db3fbf6441afcf9,"new args: `op_image_resize(crop_to_aspect_ratio, pad_to_aspect_ratio, fill_mode, fill_value)`",NA,NA,NA,NA
+keras,c42d48495566c291a79a4b1d8bdec83c,new args: `op_argmax(keepdims)` and `op_argmin(keepdims)`,NA,NA,NA,NA
+keras,a077c73b3ed8d1f2828c86b70ac0c3c7,new arg: `clear_session(free_memory)` for clearing without invoking the garbage collector.,NA,NA,NA,NA
+keras,bab471ae6bb945ea3b5e06c199de2b51,"`metric_kl_divergence()` and `loss_kl_divergence()` clip inputs (`y_true` and `y_pred`) to the `[0, 1]` range.",NA,NA,NA,NA
+keras,0b12e3c2d155229955e948d6b1f0d030,"new `Layer()` attributes: `metrics`, `dtype_policy`",NA,NA,NA,NA
+keras,4a4faa0099f15f2b967dfa458b18f535,Added initial support for float8 training,NA,NA,NA,NA
+keras,b76a9103b2830d4102187bd861814b19,`layer_conv_*d()` layers now support LoRa,NA,NA,NA,NA
+keras,5e2b465976f8d32c39e53e018f0663cf,`op_digitize()` now supports sparse tensors.,NA,NA,NA,NA
+keras,efcddeaf1fc2706721a1ef8b3cdfb16e,Models and layers now return owned metrics recursively.,NA,NA,NA,NA
+keras,f8ed3f1633142cd2d1e16302ed8ea591,"Add pickling support for Keras models. (e.g., via `reticulate::py_save_object()`) Note that pickling is not recommended, prefer using Keras saving APIs.",NA,NA,NA,NA
