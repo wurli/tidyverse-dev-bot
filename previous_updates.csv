@@ -17079,3 +17079,4 @@ keras,b76a9103b2830d4102187bd861814b19,`layer_conv_*d()` layers now support LoRa
 keras,5e2b465976f8d32c39e53e018f0663cf,`op_digitize()` now supports sparse tensors.,NA,NA,NA,NA
 keras,efcddeaf1fc2706721a1ef8b3cdfb16e,Models and layers now return owned metrics recursively.,NA,NA,NA,NA
 keras,f8ed3f1633142cd2d1e16302ed8ea591,"Add pickling support for Keras models. (e.g., via `reticulate::py_save_object()`) Note that pickling is not recommended, prefer using Keras saving APIs.",NA,NA,NA,NA
+pkgdown,6e68d42b453c94598e00254e056ca34c,"`init_site()` once again describes one copy per line, and now uses a better prefix when copying assets from pkgdown itself (#2445).",NA,NA,NA,NA

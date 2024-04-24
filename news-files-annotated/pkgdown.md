@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `init_site()` once again describes one copy per line, and now uses a
+    better prefix when copying assets from pkgdown itself (#2445).
+    !end-bullet!
+-   !begin-bullet!
     Very wide words are now automatically broken across lines and
     hyphenated (when possible) when they'd otherwise create a horizontal
     scrollbar on mobile (#1888).
