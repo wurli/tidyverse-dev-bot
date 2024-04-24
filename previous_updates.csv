@@ -17080,3 +17080,6 @@ keras,5e2b465976f8d32c39e53e018f0663cf,`op_digitize()` now supports sparse tenso
 keras,efcddeaf1fc2706721a1ef8b3cdfb16e,Models and layers now return owned metrics recursively.,NA,NA,NA,NA
 keras,f8ed3f1633142cd2d1e16302ed8ea591,"Add pickling support for Keras models. (e.g., via `reticulate::py_save_object()`) Note that pickling is not recommended, prefer using Keras saving APIs.",NA,NA,NA,NA
 pkgdown,6e68d42b453c94598e00254e056ca34c,"`init_site()` once again describes one copy per line, and now uses a better prefix when copying assets from pkgdown itself (#2445).",NA,NA,NA,NA
+rsconnect,d9759a76c16bcc39da7720f173d0107a,"`deployApp(logLevel = ""quiet"")` suppresses Posit Connect deployment task output. (#1051)",NA,NA,NA,NA
+rsconnect,65dc274d269bafdb39baead659cfc5e9,"`deployApp(logLevel = ""quiet"")` and `writeManifest(quiet=TRUE)` suppress output when using renv to analyze dependencies. (#1051)",NA,NA,NA,NA
+rsconnect,6f9ff156433ff171d1d0f7a8f958c976,`deployApp()` and `writeManifest()` receive the default value for the `image` argument from the `RSCONNECT_IMAGE` environment variable. (#1063),NA,NA,NA,NA
