@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `as.pkgdown()` will no longer prompt you to install a missing
+    template package from CRAN, since these are almost always found in
+    GitHub (#2076).
+    !end-bullet!
+-   !begin-bullet!
     `init_site()` once again describes one copy per line, and now uses a
     better prefix when copying assets from pkgdown itself (#2445).
     !end-bullet!
