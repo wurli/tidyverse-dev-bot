@@ -17084,3 +17084,11 @@ rsconnect,d9759a76c16bcc39da7720f173d0107a,"`deployApp(logLevel = ""quiet"")` su
 rsconnect,65dc274d269bafdb39baead659cfc5e9,"`deployApp(logLevel = ""quiet"")` and `writeManifest(quiet=TRUE)` suppress output when using renv to analyze dependencies. (#1051)",NA,NA,NA,NA
 rsconnect,6f9ff156433ff171d1d0f7a8f958c976,`deployApp()` and `writeManifest()` receive the default value for the `image` argument from the `RSCONNECT_IMAGE` environment variable. (#1063),NA,NA,NA,NA
 pkgdown,ae94bf1c96d4917a44950588f23d1452,"`as.pkgdown()` will no longer prompt you to install a missing template package from CRAN, since these are almost always found in GitHub (#2076).",NA,NA,NA,NA
+debugme,182e1c5465363bc07a1435fd74a392fd,"debugme now does not instrumented code multiple times, this could happen if environments were referenced from multiple places (#15).",NA,NA,NA,NA
+debugme,f2e47e2fc5c3d9b8a27c479ae7c613c6,"debugme now correctly instruments functions with attributes, the attributes are kept now. Some packages, e.g. `assertthat` create such functions.",NA,NA,NA,NA
+debugme,e63b49a06d78c4b95b1c2d6923bfc02e,"debugme now supports debug levels. Relatedly, `debugme()` has a `level` argument now (#49, @​krlmlr).",NA,NA,NA,NA
+debugme,a10d882250a539355437b48515f3cc95,debugme now correctly instruments functions with `NULL` body and functions with no arguments.,NA,NA,NA,NA
+debugme,afd801e346365be13549a2e94be39356,"Nested calls are printed better now, with indentation (#44, @​krlmlr).",NA,NA,NA,NA
+debugme,2b1cb67590b84eb24578ba3b820244ee,"`debugme()` now re-reads the `DEBUGME` environment variable (#45, @​krlmlr).",NA,NA,NA,NA
+debugme,3d048969382406181a3b7e2d6c750697,"New `DEBUGME_SHOW_TIMESTAMP` environment variable to hide timestamp output for reproducibility (#49, @​krlmlr).",NA,NA,NA,NA
+debugme,224d3244f9bd208d6a8e3fc9eccdec0e,debugme now does not change the random seed (#50).,NA,NA,NA,NA

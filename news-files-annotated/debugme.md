@@ -3,13 +3,43 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
-    Make sure code is not instrumented multiple times, which can happen
-    if environments are referenced from multiple places
+    debugme now does not instrumented code multiple times, this could
+    happen if environments were referenced from multiple places (#15).
 
     !end-bullet!
 -   !begin-bullet!
-    Fix instrumenting functions with attributes, the attributes are kept
-    now. Some packages, e.g. `assertthat` create such functions.
+    debugme now correctly instruments functions with attributes, the
+    attributes are kept now. Some packages, e.g. `assertthat` create
+    such functions.
+
+    !end-bullet!
+-   !begin-bullet!
+    debugme now supports debug levels. Relatedly, `debugme()` has a
+    `level` argument now (#49, @krlmlr).
+
+    !end-bullet!
+-   !begin-bullet!
+    debugme now correctly instruments functions with `NULL` body and
+    functions with no arguments.
+
+    !end-bullet!
+-   !begin-bullet!
+    Nested calls are printed better now, with indentation (#44,
+    @krlmlr).
+
+    !end-bullet!
+-   !begin-bullet!
+    `debugme()` now re-reads the `DEBUGME` environment variable (#45,
+    @krlmlr).
+
+    !end-bullet!
+-   !begin-bullet!
+    New `DEBUGME_SHOW_TIMESTAMP` environment variable to hide timestamp
+    output for reproducibility (#49, @krlmlr).
+
+    !end-bullet!
+-   !begin-bullet!
+    debugme now does not change the random seed (#50).
 
     !end-bullet!
 
