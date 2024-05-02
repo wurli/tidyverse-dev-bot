@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed an issue with `renv`'s `pak` integration where `renv` could
+    install the wrong version of a GitHub package during restore if
+    `options(renv.config.pak.enabled = TRUE)` was set. (#1883)
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed an issue where `renv` could silently prompt the user for input
     when running the autoloader inside an RStudio R session. (#1879)
 

@@ -3,6 +3,40 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `build_redirects()` now automatically adds redirects for topic
+    aliases. This matches the behaviour of `?` and will help keep links
+    stable in the long term (#1876).
+    !end-bullet!
+-   !begin-bullet!
+    `build_redirects()` now reports which redirects it is generating.
+    !end-bullet!
+-   !begin-bullet!
+    The addin now runs `build_site()` instead of
+    `build_site_external()`, which generally should be more reliable
+    (#2252).
+    !end-bullet!
+-   !begin-bullet!
+    Anchors are displayed when they're the target of a link.
+    !end-bullet!
+-   !begin-bullet!
+    `build_reference()` adds anchors to arguments making it possible to
+    link directly to an argument, if desired. A subtle visual treatment
+    makes it easy to see which argument is targeted (#2228).
+    !end-bullet!
+-   !begin-bullet!
+    `build_redirects()` is now exported to make it easier to document
+    (#2500).
+    !end-bullet!
+-   !begin-bullet!
+    `build_reference()` now automatically renders any tables created by
+    gt (#2326).
+    !end-bullet!
+-   !begin-bullet!
+    `build_articles()` now drops a section called "internal". This
+    allows you to have articles that either aren't indexed at all or are
+    included manually elsewhere in the navbar (#2205).
+    !end-bullet!
+-   !begin-bullet!
     `as.pkgdown()` will no longer prompt you to install a missing
     template package from CRAN, since these are almost always found in
     GitHub (#2076).

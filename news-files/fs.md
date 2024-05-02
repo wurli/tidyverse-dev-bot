@@ -1,5 +1,11 @@
 # fs (development version)
 
+* `path_ext()` returns extension when multiple dots are present in file name (@IndrajeetPatil, #452).
+
+# fs 1.6.4
+
+* No changes.
+
 # fs 1.6.3
 
 * No user visible changes.

@@ -1,5 +1,9 @@
 # shinytest2 (development version)
 
+# shinytest2 0.3.2
+
+## Bug / Improvements
+
 !begin-bullets-1!
 
 -   !begin-bullet!

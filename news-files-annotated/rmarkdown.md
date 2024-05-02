@@ -10,6 +10,14 @@
     OneDrive or Google Drive. If that is the case for you, you may set a
     different suffix in your `.Rprofile`, e.g.,
     `options(rmarkdown.files.suffix = "_rmdfiles")`.
+
+    !end-bullet!
+-   !begin-bullet!
+    Fix a regression in 2.26 regarding image paths post-processing in
+    `html_document_base()`. Now absolute paths to image in the output
+    directory (`output_dir`) are correctly made relative to the output
+    directory again.
+
     !end-bullet!
 
 !end-bullets-1!

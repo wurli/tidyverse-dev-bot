@@ -6,6 +6,12 @@
     Make sure the linejoin/linemitre setting is honored when drawing
     rectangles (#162)
     !end-bullet!
+-   !begin-bullet!
+    Fix a bug with resetting clipping during group and pattern rendering
+    !end-bullet!
+-   !begin-bullet!
+    Fix scaling of raster glyphs in drawGlyph
+    !end-bullet!
 
 !end-bullets-1!
 

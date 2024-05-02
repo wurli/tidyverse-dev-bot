@@ -17092,3 +17092,28 @@ debugme,afd801e346365be13549a2e94be39356,"Nested calls are printed better now, w
 debugme,2b1cb67590b84eb24578ba3b820244ee,"`debugme()` now re-reads the `DEBUGME` environment variable (#45, @​krlmlr).",NA,NA,NA,NA
 debugme,3d048969382406181a3b7e2d6c750697,"New `DEBUGME_SHOW_TIMESTAMP` environment variable to hide timestamp output for reproducibility (#49, @​krlmlr).",NA,NA,NA,NA
 debugme,224d3244f9bd208d6a8e3fc9eccdec0e,debugme now does not change the random seed (#50).,NA,NA,NA,NA
+dbplyr,af459cf44b1f99eca942c586a460964d,"`across(everything())` doesn't select grouping columns created via `.by` in `summarise()` (@​mgirlich, #1493).",NA,NA,NA,NA
+ggplot2,7b1f8f2ca8b8b1fbec3e132050110489,(Internal) Applying defaults in `geom_sf()` has moved from the internal `sf_grob()` to `GeomSf$use_defaults()` (@​teunbrand).,NA,NA,NA,NA
+ggplot2,af5b1b8473e26bbf32f262ff99fc5780,"`facet_wrap()` has new options for the `dir` argument to more precisely control panel directions (@​teunbrand, #5212)",NA,NA,NA,NA
+ggplot2,d31767c9299f7f034be36b3224a2cf54,"Prevented `facet_wrap(..., drop = FALSE)` from throwing spurious errors when a character facetting variable contained `NA`s (@​teunbrand, #5485).",NA,NA,NA,NA
+ggplot2,b39ba7a605b5d3c87b375e09d41f33c2,"`geom_curve()` now appropriately removes missing data instead of throwing errors (@​teunbrand, #5831).",NA,NA,NA,NA
+ggplot2,5ee1d9ba2ae25729afe62542fbf0e0f3,"Fixed regression in axes where `breaks = NULL` caused the axes to disappear instead of just rendering the axis line (@​teunbrand, #5816).",NA,NA,NA,NA
+ggplot2,00da29c513c433b386989e72637cf709,"`geom_point()` can be dodged vertically by using `position_dodge(..., orientation = ""y"")` (@​teunbrand, #5809).",NA,NA,NA,NA
+ggplot2,a658141f90d25491d2f59e8a248cc7e8,"Fixed bug where `na.value` was incorrectly mapped to non-`NA` values (@​teunbrand, #5756).",NA,NA,NA,NA
+ggplot2,2e0ad3a21c37259619da2113314dc418,"Fixed bug in `guide_custom()` that would throw error with `theme_void()` (@​teunbrand, #5856).",NA,NA,NA,NA
+ggplot2,8ea80fb6ae7ca77845d18c0879d23d97,"New helper function `ggpar()` to translate ggplot2's interpretation of graphical parameters to {grid}'s interpretation (@​teunbrand, #5866).",NA,NA,NA,NA
+fs,6e1f2be933ee7c725a8bee8b93dcd479,"`path_ext()` returns extension when multiple dots are present in file name (@​IndrajeetPatil, #452).",NA,NA,NA,NA
+fs,32dfa21af32ae6474e443d19163d05c2,No changes.,NA,NA,NA,NA
+pkgdown,499cfabfb2ccfeb7dc85e3b022376224,`build_redirects()` now automatically adds redirects for topic aliases. This matches the behaviour of `?` and will help keep links stable in the long term (#1876).,NA,NA,NA,NA
+pkgdown,2b9200147da5b83df2769a8662f3326a,`build_redirects()` now reports which redirects it is generating.,NA,NA,NA,NA
+pkgdown,a6a0757aba6689a5fe417a9ef8d3df63,"The addin now runs `build_site()` instead of `build_site_external()`, which generally should be more reliable (#2252).",NA,NA,NA,NA
+pkgdown,47a768e8d704e20e3e8305a76127be23,Anchors are displayed when they're the target of a link.,NA,NA,NA,NA
+pkgdown,8e6187ffcf08ce90c7332a697dbcd47a,"`build_reference()` adds anchors to arguments making it possible to link directly to an argument, if desired. A subtle visual treatment makes it easy to see which argument is targeted (#2228).",NA,NA,NA,NA
+pkgdown,38cd26988d01c50c1be43cab7a698c48,`build_redirects()` is now exported to make it easier to document (#2500).,NA,NA,NA,NA
+pkgdown,919666cc13201a42601462101f9383f6,`build_reference()` now automatically renders any tables created by gt (#2326).,NA,NA,NA,NA
+pkgdown,5ad94cc445716960b1b0168e2d79d3bd,"`build_articles()` now drops a section called ""internal"". This allows you to have articles that either aren't indexed at all or are included manually elsewhere in the navbar (#2205).",NA,NA,NA,NA
+ragg,831dd80478d8b97386a08e804d2998e3,Fix a bug with resetting clipping during group and pattern rendering,NA,NA,NA,NA
+ragg,414c7cb308d866fa48b9c794907de9e6,Fix scaling of raster glyphs in drawGlyph,NA,NA,NA,NA
+gt,3bec9294870f2e3b6804e4080d8d2076,"`cols_hide()` no longer errors if no column was supplied. Error messages are also clearer when supplying a column that doesn't exist (@​olivroy, #1631).",NA,NA,NA,NA
+renv,5c452f2a373217a2b054aeb444b84880,Fixed an issue with `renv`'s `pak` integration where `renv` could install the wrong version of a GitHub package during restore if `options(renv.config.pak.enabled = TRUE)` was set. (#1883),NA,NA,NA,NA
+rmarkdown,02556490c172d3ebc18abb61c37a3864,Fix a regression in 2.26 regarding image paths post-processing in `html_document_base()`. Now absolute paths to image in the output directory (`output_dir`) are correctly made relative to the output directory again.,NA,NA,NA,NA

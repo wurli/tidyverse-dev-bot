@@ -1,4 +1,6 @@
-# 1.1.0.9000
+# debugme (development version)
+
+# debugme 1.2.0
 
 !begin-bullets-1!
 
@@ -45,7 +47,7 @@
 
 !end-bullets-1!
 
-# 1.1.0
+# debugme 1.1.0
 
 !begin-bullets-2!
 
@@ -73,7 +75,7 @@
 
 !end-bullets-2!
 
-# 1.0.2
+# debugme 1.0.2
 
 !begin-bullets-3!
 
@@ -84,7 +86,7 @@
 
 !end-bullets-3!
 
-# 1.0.1
+# debugme 1.0.1
 
 !begin-bullets-4!
 
@@ -94,6 +96,6 @@
 
 !end-bullets-4!
 
-# 1.0.0
+# debugme 1.0.0
 
 First public release.

@@ -26,8 +26,17 @@
     groups, added by `tab_spanner()` (@obsaditelnost, #1618)
 
     !end-bullet!
+-   !begin-bullet!
+    `cols_hide()` no longer errors if no column was supplied. Error
+    messages are also clearer when supplying a column that doesn't exist
+    (@olivroy, #1631).
+
+    !end-bullet!
 
 !end-bullets-1!
+
+`tab_footnote()` and `tab_style()` now give better error messages when
+`locations` is not correctly specified (@olivroy, #475, #1638 , #1640).
 
 # gt 0.10.1
 
