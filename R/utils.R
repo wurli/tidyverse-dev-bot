@@ -90,11 +90,11 @@ first_chars <- function(x, n = 60, dots = "...", always_dots = FALSE) {
   
 }
 
-dput_styled <- function(x, ...) {
-  con <- textConnection("out", "w")
-  dput(x, con, ...)
-  close(con)
-  out <- out |> styler::style_text()
-  cat_line(out)
-  invisible(out)
-}
+# dput_styled <- function(x, ...) {
+#   con <- textConnection("out", "w")
+#   dput(x, con, ...)
+#   close(con)
+#   out <- out |> styler::style_text()
+#   cat_line(out)
+#   invisible(out)
+# }
