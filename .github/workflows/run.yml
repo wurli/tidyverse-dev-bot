@@ -9,7 +9,7 @@ jobs:
 
   twitter-dev-bot-post:
   
-    runs-on: macOS-latest
+    runs-on: ubuntu-latest
       
     steps:
     
