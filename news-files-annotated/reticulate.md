@@ -8,6 +8,11 @@
 
     !end-bullet!
 -   !begin-bullet!
+    Print method for Python callables now includes the callable's
+    signature (#1605)
+
+    !end-bullet!
+-   !begin-bullet!
     `virtualenv_starter()` no longer warns when encountering broken
     symlinks (#1598).
 
