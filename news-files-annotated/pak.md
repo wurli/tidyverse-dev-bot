@@ -1,8 +1,21 @@
 # pak (development version)
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    The metadata cache now does not use source URLs for packages in
+    `Archive` on Posit Package Manager repositories. This URLs may serve
+    a different package, even a source package when the main URL for the
+    same package serves a binary package. The alternative URLs are not
+    needed on PPM, anyway, because PPM is in a consistent state w.r.t.
+    metadata and package files (#623).
+    !end-bullet!
+
+!end-bullets-1!
+
 # pak 0.7.2
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     pak now supports using parameters for all packages with the
@@ -15,11 +28,11 @@
 
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # pak 0.7.1
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     pak can now handle the case when `Config/Needs/*` dependencies are
@@ -31,11 +44,11 @@
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 # pak 0.7.0
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     pak now correctly handles the latest GitHub release with the
@@ -63,11 +76,11 @@
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 # pak 0.6.0
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     pak now requires R \>= 3.5.0.
@@ -76,10 +89,10 @@
 -   !begin-bullet!
     Many improvements in system requirements support:
 
-    !begin-bullets-5!
+    !begin-bullets-6!
     -   !begin-bullet!
         New functions:
-        !begin-bullets-6!
+        !begin-bullets-7!
         -   !begin-bullet!
             `pkg_sysreqs()`: calculate system requirements of packages.
             !end-bullet!
@@ -97,7 +110,7 @@
             `sysreqs_platforms()`: list supported platforms.
             !end-bullet!
 
-        !end-bullets-6!
+        !end-bullets-7!
         !end-bullet!
     -   !begin-bullet!
         The installation proposal, printed before installation, now
@@ -117,7 +130,7 @@
         with the `sysreqs_update` configuration option.)
         !end-bullet!
 
-    !end-bullets-5!
+    !end-bullets-6!
     !end-bullet!
 -   !begin-bullet!
     New `gitlab::` package source to install packages from GitLab
@@ -165,21 +178,21 @@
 
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 # pak 0.5.1
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     No user visible changes.
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 # pak 0.5.0
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     The `meta_*()` functions now consider the `platforms`, `cran_mirror`
@@ -246,11 +259,11 @@
 
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 # pak 0.4.0
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     pak has much improved and more informative error messages now. This
@@ -349,11 +362,11 @@
 
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 # pak 0.3.1
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     The `?ignore` parameter works correctly now.
@@ -404,11 +417,11 @@
 
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 # pak 0.3.0
 
-!begin-bullets-11!
+!begin-bullets-12!
 
 -   !begin-bullet!
     pak functions that used to return tibbles return data frames now.
@@ -478,7 +491,7 @@
 
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-12!
 
 # pak 0.2.1
 
