@@ -3,8 +3,14 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Interrupting Python no longer leads to segfaults (#1601, fixed in
+    #1602).
+
+    !end-bullet!
+-   !begin-bullet!
     `virtualenv_starter()` no longer warns when encountering broken
     symlinks (#1598).
+
     !end-bullet!
 
 !end-bullets-1!
