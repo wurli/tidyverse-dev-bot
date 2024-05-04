@@ -243,6 +243,12 @@
     missing (instead of delaying this error until the linter is used,
     #2541, @MichaelChirico).
     !end-bullet!
+-   !begin-bullet!
+    `paste_linter()` is extended to recommend using `paste()` instead of
+    `paste0()` for simply aggregating a character vector with
+    `collapse=`, i.e., when `sep=` is irrelevant (#1108,
+    @MichaelChirico).
+    !end-bullet!
 
 !end-bullets-5!
 
