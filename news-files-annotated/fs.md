@@ -3,8 +3,15 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
-    `path_ext()` returns extension when multiple dots are present in
-    file name (@IndrajeetPatil, #452).
+    `path_ext()` and `path_ext_remove()` return correct extension and
+    path, respectively, when multiple dots are present in file name
+    (@IndrajeetPatil, #452, #453).
+
+    !end-bullet!
+-   !begin-bullet!
+    `path_rel()` provides an informative error message when multiple
+    starting directory paths are specified (@IndrajeetPatil, #454).
+
     !end-bullet!
 
 !end-bullets-1!

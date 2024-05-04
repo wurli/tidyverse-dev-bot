@@ -17125,3 +17125,5 @@ pkgdown,9e7020ca68362f553edf2c66079850f7,"The title for the ""Reference"" page i
 reticulate,4b8f338825a83ba9aac668d0fa327aa8,Print method for Python callables now includes the callable's signature (#1605),NA,NA,NA,NA
 pkgdown,17239d8a6aa5d4748d3c1cbc783ccd4d,"If you put a dropdown menu (e.g. articles) on the right hand side of the navbar, it will now be right aligned. This makes longer titles more likely to stay on the page (#2421).",NA,NA,NA,NA
 pkgdown,6fbb5260da5fa5d3c3059a24a34ba4f9,`build_home()` now includes the contents of `inst/AUTHORS` on the authors page (#2506).,NA,NA,NA,NA
+fs,3ae8dc09265871f58daa822c003f9a58,"`path_ext()` and `path_ext_remove()` return correct extension and path, respectively, when multiple dots are present in file name (@​IndrajeetPatil, #452, #453).",NA,NA,NA,NA
+fs,3076d9cbb2308d8b2216beffce302a1a,"`path_rel()` provides an informative error message when multiple starting directory paths are specified (@​IndrajeetPatil, #454).",NA,NA,NA,NA
