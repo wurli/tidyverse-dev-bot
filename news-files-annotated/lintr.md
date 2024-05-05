@@ -96,6 +96,11 @@
     `indentation_linter()` returns `ranges[1L]==1L` when the offending
     line has 0 spaces (#2550, @MichaelChirico).
     !end-bullet!
+-   !begin-bullet!
+    `literal_coercion_linter()` doesn't surface a warning about NAs
+    during coercion for code like `as.integer("a")` (#2566,
+    @MichaelChirico).
+    !end-bullet!
 
 !end-bullets-3!
 
