@@ -17129,3 +17129,4 @@ fs,3ae8dc09265871f58daa822c003f9a58,"`path_ext()` and `path_ext_remove()` return
 fs,3076d9cbb2308d8b2216beffce302a1a,"`path_rel()` provides an informative error message when multiple starting directory paths are specified (@​IndrajeetPatil, #454).",NA,NA,NA,NA
 lintr,f20da372ebf095da090be490a21a1048,"`paste_linter()` is extended to recommend using `paste()` instead of `paste0()` for simply aggregating a character vector with `collapse=`, i.e., when `sep=` is irrelevant (#1108, @​MichaelChirico).",NA,NA,NA,NA
 lintr,f0da074ee659e2079e28ddbbbb96d825,"`literal_coercion_linter()` doesn't surface a warning about NAs during coercion for code like `as.integer(""a"")` (#2566, @​MichaelChirico).",NA,NA,NA,NA
+keras,c4035b24e1e008dfe4be00196a7b4bbc,Chains of `layer_*` calls with `|>` now instantiate layers in the same order as `%>%` pipe chains: left-hand-side first (#1440).,NA,NA,NA,NA
