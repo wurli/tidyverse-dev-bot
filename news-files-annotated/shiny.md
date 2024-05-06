@@ -18,6 +18,11 @@
 !begin-bullets-2!
 
 -   !begin-bullet!
+    `downloadButton()` and `downloadLink()` are now disabled up until
+    they are fully initialized. This prevents the user from clicking the
+    button/link before the download is ready. (#4041)
+    !end-bullet!
+-   !begin-bullet!
     Output bindings that are removed, invalidated, then inserted again
     (while invalidated) now correctly include the `.recalculating` CSS
     class. (#4039)
