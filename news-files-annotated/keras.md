@@ -5,6 +5,12 @@
 -   !begin-bullet!
     Chains of `layer_*` calls with `|>` now instantiate layers in the
     same order as `%>%` pipe chains: left-hand-side first (#1440).
+
+    !end-bullet!
+-   !begin-bullet!
+    `iterate()`, `iter_next()` and `as_iterator()` are now reexported
+    from reticulate.
+
     !end-bullet!
 
 !end-bullets-1!
