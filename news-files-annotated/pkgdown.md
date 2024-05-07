@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `build_reference()` now supports `\Sexpr[results=verbatim]`
+    (@bastistician, #2510).
+    !end-bullet!
+-   !begin-bullet!
     `build_home()` no longer checks if the README is missing any images.
     This check is now performed in `build_site()`, after
     `build_articles()` so you can refer to images created by vignettes
