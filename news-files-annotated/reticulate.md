@@ -9,7 +9,7 @@
     !end-bullet!
 -   !begin-bullet!
     Print method for Python callables now includes the callable's
-    signature (#1605)
+    signature (#1605, #1607)
 
     !end-bullet!
 -   !begin-bullet!
