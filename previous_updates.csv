@@ -17136,3 +17136,4 @@ keras,369ae62b733a5f5b901064b844cfbf8f,"`iterate()`, `iter_next()` and `as_itera
 pkgdown,23a38158dbc30ce4933137cc63dd6d92,"`build_reference()` now supports `\Sexpr[results=verbatim]` (@​bastistician, #2510).",NA,NA,NA,NA
 reticulate,3573aa8c4dc6a8283074c58ea2718453,"Print method for Python callables now includes the callable's signature (#1605, #1607)",NA,NA,NA,NA
 lintr,1ce96b223963bbdc2bfd71f9bbcf5031,"`cyclocomp_linter()` is no longer part of the default linters (#2555, @​IndrajeetPatil) because the tidyverse style guide doesn't contain any guidelines on meeting certain complexity requirements. Note that users with `cyclocomp_linter()` in their configs may now need to install {cyclocomp} intentionally, in particular in CI/CD pipelines.",NA,NA,NA,NA
+roxygen2,90e4ddaddcc8235c228a78b791b9a22a,`@​includeRmd` now additionally sets `options(cli.hyperlink = FALSE)` to make code run in included `.Rmd`s even more consistent across sessions (#1620).,NA,NA,NA,NA

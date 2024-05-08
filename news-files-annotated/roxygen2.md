@@ -1,8 +1,18 @@
 # roxygen2 (development version)
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    `@includeRmd` now additionally sets `options(cli.hyperlink = FALSE)`
+    to make code run in included `.Rmd`s even more consistent across
+    sessions (#1620).
+    !end-bullet!
+
+!end-bullets-1!
+
 # roxygen2 7.3.1
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     S3 method export warning no longer fails if class contains `{` or
@@ -29,13 +39,13 @@
 
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # roxygen2 7.3.0
 
 ## New features
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     `@docType package` now works more like documenting `"_PACKAGE"`,
@@ -67,11 +77,11 @@
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     If you document a function from another package it is automatically
@@ -138,11 +148,11 @@
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 # roxygen2 7.2.3
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     roxygen2 now supports HTML blocks in markdown. They are only
@@ -155,11 +165,11 @@
 
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 # roxygen2 7.2.2
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     `@includeRmd` calls `local_reproducible_output()` to make code run
@@ -171,13 +181,13 @@
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # roxygen2 7.2.1
 
 ## Tags
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     All built-in tags are now documented so that you can do (e.g.)
@@ -215,11 +225,11 @@
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 ## (R)markdown
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     New `knitr_chunk_options` option (in the `Roxygen` entry of
@@ -254,11 +264,11 @@
 
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 ## Other
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     If you have a daily build of RStudio, the lists of changed Rd files
@@ -277,13 +287,13 @@
 
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 # roxygen2 7.2.0
 
 ## New features
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     The NAMESPACE roclet now preserves all existing non-import
@@ -316,11 +326,11 @@
 
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     roxygen2 can once again read UTF-8 paths on windows (#1277).
@@ -363,7 +373,7 @@
 -   !begin-bullet!
     Markdown:
 
-    !begin-bullets-11!
+    !begin-bullets-12!
     -   !begin-bullet!
         Code blocks are always wrapped in `<div class="sourceCode">`
         even if the language is unknown (#1234).
@@ -389,7 +399,7 @@
 
         !end-bullet!
 
-    !end-bullets-11!
+    !end-bullets-12!
     !end-bullet!
 -   !begin-bullet!
     roxygen2 no longer generates invalid HTML (#1290).
@@ -404,11 +414,11 @@
 
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 # roxygen2 7.1.2
 
-!begin-bullets-12!
+!begin-bullets-13!
 
 -   !begin-bullet!
     The new `@examplesIf` tag can be used to create conditional
@@ -436,11 +446,11 @@
 
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
 
 # roxygen2 7.1.1
 
-!begin-bullets-13!
+!begin-bullets-14!
 
 -   !begin-bullet!
     When processing cross package markdown links (e.g. `[pkg::fun()]`),
@@ -461,13 +471,13 @@
 
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-14!
 
 # roxygen2 7.1.0
 
 ## New features
 
-!begin-bullets-14!
+!begin-bullets-15!
 
 -   !begin-bullet!
     roxygen2 now supports inline markdown code and also code chunks,
@@ -495,11 +505,11 @@
 
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-15!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-15!
+!begin-bullets-16!
 
 -   !begin-bullet!
     Auto-generated package documentation can now handle author ORCID
@@ -555,22 +565,22 @@
 
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-16!
 
 # roxygen2 7.0.2
 
-!begin-bullets-16!
+!begin-bullets-17!
 
 -   !begin-bullet!
     `\example{}` escaping has been improved (again!) so that special
     escapes within strings are correctly escaped (#990).
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-17!
 
 # roxygen2 7.0.1
 
-!begin-bullets-17!
+!begin-bullets-18!
 
 -   !begin-bullet!
     `@includeRmd` has now an optional second argument, the top level
@@ -611,7 +621,7 @@
 
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-18!
 
 # roxygen2 7.0.0
 
@@ -619,7 +629,7 @@
 
 ### New tags
 
-!begin-bullets-18!
+!begin-bullets-19!
 
 -   !begin-bullet!
     `@includeRmd {path.Rmd}` converts an `.Rmd`/`.md` file to `.Rd` and
@@ -681,7 +691,7 @@
 
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-19!
 
 ### R6
 
@@ -690,7 +700,7 @@ details.
 
 ### Markdown improvements
 
-!begin-bullets-19!
+!begin-bullets-20!
 
 -   !begin-bullet!
     Rd comments (`%`) are now automatically escaped. You will need to
@@ -737,11 +747,11 @@ details.
 
     !end-bullet!
 
-!end-bullets-19!
+!end-bullets-20!
 
 ### Default usage
 
-!begin-bullets-20!
+!begin-bullets-21!
 
 -   !begin-bullet!
     The default formatting for function usage that spans multiple lines
@@ -777,13 +787,13 @@ details.
     !end-codeblock!
     !end-bullet!
 
-!end-bullets-20!
+!end-bullets-21!
 
 ### Code loading
 
 roxygen2 now provides three strategies for loading your code (#822):
 
-!begin-bullets-21!
+!begin-bullets-22!
 
 -   !begin-bullet!
     `load_pkgload()`, the default, uses pkgload. Compared to the
@@ -805,7 +815,7 @@ roxygen2 now provides three strategies for loading your code (#822):
 
     !end-bullet!
 
-!end-bullets-21!
+!end-bullets-22!
 
 You can override the default either by calling (e.g.)
 `roxygenise(load_code = "source"))` or by setting the `load` option in
@@ -813,7 +823,7 @@ your DESCRIPTION: `Roxygen: list(load = "source")`.
 
 ### Options
 
-!begin-bullets-22!
+!begin-bullets-23!
 
 -   !begin-bullet!
     As well as storing roxygen options in the `Roxygen` field of the
@@ -837,11 +847,11 @@ your DESCRIPTION: `Roxygen: list(load = "source")`.
 
     !end-bullet!
 
-!end-bullets-22!
+!end-bullets-23!
 
 ## Breaking changes
 
-!begin-bullets-23!
+!begin-bullets-24!
 
 -   !begin-bullet!
     Rd comments (`%`) are automatically escaped in markdown formatted
@@ -867,7 +877,7 @@ your DESCRIPTION: `Roxygen: list(load = "source")`.
 
     !end-bullet!
 
-!end-bullets-23!
+!end-bullets-24!
 
 ### Extending roxygen2
 
@@ -882,7 +892,7 @@ deprecation cycle.
 
 If you have previously made a new roclet, the major changes are:
 
-!begin-bullets-24!
+!begin-bullets-25!
 
 -   !begin-bullet!
     The previously internal data structures used to represent blocks and
@@ -924,14 +934,14 @@ If you have previously made a new roclet, the major changes are:
 
     !end-bullet!
 
-!end-bullets-24!
+!end-bullets-25!
 
 A big thanks goes to @mikldk for starting on the vignette and motivating
 me to make the extension process much more pleasant (#882).
 
 ## Bug fixes and minor improvements
 
-!begin-bullets-25!
+!begin-bullets-26!
 
 -   !begin-bullet!
     Empty roxygen2 lines at the start of a block are now silently
@@ -1053,11 +1063,11 @@ me to make the extension process much more pleasant (#882).
 
     !end-bullet!
 
-!end-bullets-25!
+!end-bullets-26!
 
 # roxygen2 6.1.1
 
-!begin-bullets-26!
+!begin-bullets-27!
 
 -   !begin-bullet!
     Now specifically imports recent version of desc package (\>= 1.2.0)
@@ -1077,13 +1087,13 @@ me to make the extension process much more pleasant (#882).
 
     !end-bullet!
 
-!end-bullets-26!
+!end-bullets-27!
 
 # roxygen2 6.1.0
 
 ## New features
 
-!begin-bullets-27!
+!begin-bullets-28!
 
 -   !begin-bullet!
     The `NAMESPACE` roclet now works in two passes - it first generates
@@ -1145,11 +1155,11 @@ me to make the extension process much more pleasant (#882).
 
     !end-bullet!
 
-!end-bullets-27!
+!end-bullets-28!
 
 ## Extension API
 
-!begin-bullets-28!
+!begin-bullets-29!
 
 -   !begin-bullet!
     Roxygen blocks now have an official structure as encoded in
@@ -1174,11 +1184,11 @@ me to make the extension process much more pleasant (#882).
 
     !end-bullet!
 
-!end-bullets-28!
+!end-bullets-29!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-29!
+!begin-bullets-30!
 
 -   !begin-bullet!
     All tags (including `@alias`) are now de-duplicated and consistently
@@ -1247,7 +1257,7 @@ me to make the extension process much more pleasant (#882).
 -   !begin-bullet!
     Improvements to markdown translation:
 
-    !begin-bullets-30!
+    !begin-bullets-31!
     -   !begin-bullet!
         Code in link text is now properly rendered as code (#620,
         @egnha).
@@ -1278,7 +1288,7 @@ me to make the extension process much more pleasant (#882).
 
         !end-bullet!
 
-    !end-bullets-30!
+    !end-bullets-31!
     !end-bullet!
 -   !begin-bullet!
     `person()` now supports all MARC Relator role codes (#662,
@@ -1292,11 +1302,11 @@ me to make the extension process much more pleasant (#882).
 
     !end-bullet!
 
-!end-bullets-29!
+!end-bullets-30!
 
 # roxygen2 6.0.1
 
-!begin-bullets-31!
+!begin-bullets-32!
 
 -   !begin-bullet!
     Allowing empty lines in .Rbuildignore. Previously, empty lines
@@ -1310,13 +1320,13 @@ me to make the extension process much more pleasant (#882).
 
     !end-bullet!
 
-!end-bullets-31!
+!end-bullets-32!
 
 # roxygen2 6.0.0
 
 ## Markdown
 
-!begin-bullets-32!
+!begin-bullets-33!
 
 -   !begin-bullet!
     Most fields can now be written using Markdown markup instead of the
@@ -1327,11 +1337,11 @@ me to make the extension process much more pleasant (#882).
     #507), by @gaborcsardi
     !end-bullet!
 
-!end-bullets-32!
+!end-bullets-33!
 
 ## Improved inheritance
 
-!begin-bullets-33!
+!begin-bullets-34!
 
 -   !begin-bullet!
     New `@inheritDotParams` allows you to automatically generate
@@ -1340,7 +1350,7 @@ me to make the extension process much more pleasant (#882).
     arguments, it comes with a flexible specification for argument
     selection:
 
-    !begin-bullets-34!
+    !begin-bullets-35!
     -   !begin-bullet!
         `@inheritDotParams foo` takes all parameters from `foo()`
         !end-bullet!
@@ -1353,7 +1363,7 @@ me to make the extension process much more pleasant (#882).
         `x` and `y`.
         !end-bullet!
 
-    !end-bullets-34!
+    !end-bullets-35!
     The documentation generated is similar to the style used in `?plot`
     and will eventually be incorporated in to RStudio's autocomplete.
 
@@ -1380,13 +1390,13 @@ me to make the extension process much more pleasant (#882).
 
     !end-bullet!
 
-!end-bullets-33!
+!end-bullets-34!
 
 ## Minor improvements and bug fixes
 
 ### Tags
 
-!begin-bullets-35!
+!begin-bullets-36!
 
 -   !begin-bullet!
     `@aliases` are no longer sorted alphabetically, but instead match
@@ -1422,11 +1432,11 @@ me to make the extension process much more pleasant (#882).
 
     !end-bullet!
 
-!end-bullets-35!
+!end-bullets-36!
 
 ### S3
 
-!begin-bullets-36!
+!begin-bullets-37!
 
 -   !begin-bullet!
     Non-primitive, internal S3 generics (e.g. 'rbind', 'cbind') are now
@@ -1445,11 +1455,11 @@ me to make the extension process much more pleasant (#882).
 
     !end-bullet!
 
-!end-bullets-36!
+!end-bullets-37!
 
 ### S4
 
-!begin-bullets-37!
+!begin-bullets-38!
 
 -   !begin-bullet!
     You can now document `setClassUnion()`s (#514).
@@ -1466,11 +1476,11 @@ me to make the extension process much more pleasant (#882).
 
     !end-bullet!
 
-!end-bullets-37!
+!end-bullets-38!
 
 ### Other
 
-!begin-bullets-38!
+!begin-bullets-39!
 
 -   !begin-bullet!
     `"_PACKAGE"` documentation now generates a default `@seealso`
@@ -1515,11 +1525,11 @@ me to make the extension process much more pleasant (#882).
 
     !end-bullet!
 
-!end-bullets-38!
+!end-bullets-39!
 
 ## Extending roxygen2
 
-!begin-bullets-39!
+!begin-bullets-40!
 
 -   !begin-bullet!
     Deprecated `register.preref.parser()` and
@@ -1539,11 +1549,11 @@ me to make the extension process much more pleasant (#882).
 
     !end-bullet!
 
-!end-bullets-39!
+!end-bullets-40!
 
 # roxygen2 5.0.1
 
-!begin-bullets-40!
+!begin-bullets-41!
 
 -   !begin-bullet!
     Use `ls()`, not `names()` to list elements of environment: fixes R
@@ -1559,13 +1569,13 @@ me to make the extension process much more pleasant (#882).
 
     !end-bullet!
 
-!end-bullets-40!
+!end-bullets-41!
 
 # roxygen2 5.0.0
 
 ## New features
 
-!begin-bullets-41!
+!begin-bullets-42!
 
 -   !begin-bullet!
     Roxygen now records its version in a single place: the `RoxygenNote`
@@ -1621,11 +1631,11 @@ me to make the extension process much more pleasant (#882).
 
     !end-bullet!
 
-!end-bullets-41!
+!end-bullets-42!
 
 ## Minor features and bug fixes
 
-!begin-bullets-42!
+!begin-bullets-43!
 
 -   !begin-bullet!
     The contents of documented functions are now also parsed for roxygen
@@ -1648,7 +1658,7 @@ me to make the extension process much more pleasant (#882).
     The roxygen parsers has been completely rewritten in C++ (#295).
     This gives a nice performance boost and gives:
 
-    !begin-bullets-43!
+    !begin-bullets-44!
     -   !begin-bullet!
         Better error messages: you now get the exact the line number of
         the tag, not just the start of the block.
@@ -1666,7 +1676,7 @@ me to make the extension process much more pleasant (#882).
 
         !end-bullet!
 
-    !end-bullets-43!
+    !end-bullets-44!
     !end-bullet!
 -   !begin-bullet!
     `@examples` no longer complains about non-matching braces inside
@@ -1727,11 +1737,11 @@ me to make the extension process much more pleasant (#882).
 
     !end-bullet!
 
-!end-bullets-42!
+!end-bullets-43!
 
 ## Internal changes
 
-!begin-bullets-44!
+!begin-bullets-45!
 
 -   !begin-bullet!
     `register.preref.parser()` and `register.preref.parsers()` have been
@@ -1745,11 +1755,11 @@ me to make the extension process much more pleasant (#882).
 
     !end-bullet!
 
-!end-bullets-44!
+!end-bullets-45!
 
 # roxygen2 4.1.1
 
-!begin-bullets-45!
+!begin-bullets-46!
 
 -   !begin-bullet!
     Formatting of the `Authors@R` field in the DESCRIPTION file is now
@@ -1777,11 +1787,11 @@ me to make the extension process much more pleasant (#882).
 
     !end-bullet!
 
-!end-bullets-45!
+!end-bullets-46!
 
 # roxygen2 4.1.0
 
-!begin-bullets-46!
+!begin-bullets-47!
 
 -   !begin-bullet!
     The source of the documentation is added to autogenerated `.Rd`
@@ -1824,11 +1834,11 @@ me to make the extension process much more pleasant (#882).
 
     !end-bullet!
 
-!end-bullets-46!
+!end-bullets-47!
 
 # roxygen2 4.0.2
 
-!begin-bullets-47!
+!begin-bullets-48!
 
 -   !begin-bullet!
     If you don't use `@exports` or other namespace directives, your
@@ -1858,11 +1868,11 @@ me to make the extension process much more pleasant (#882).
 
     !end-bullet!
 
-!end-bullets-47!
+!end-bullets-48!
 
 # roxygen2 4.0.1
 
-!begin-bullets-48!
+!begin-bullets-49!
 
 -   !begin-bullet!
     Explicit `updateRoxygen()` is no longer needed - `roxygenize()` does
@@ -1879,7 +1889,7 @@ me to make the extension process much more pleasant (#882).
 
     !end-bullet!
 
-!end-bullets-48!
+!end-bullets-49!
 
 # roxygen2 4.0.0
 
@@ -1892,7 +1902,7 @@ created by roxygen2.
 
 ## New features
 
-!begin-bullets-49!
+!begin-bullets-50!
 
 -   !begin-bullet!
     Six vignettes provide a comprehensive overview of using roxygen2 in
@@ -1943,11 +1953,11 @@ created by roxygen2.
 
     !end-bullet!
 
-!end-bullets-49!
+!end-bullets-50!
 
 ## Improved error handling
 
-!begin-bullets-50!
+!begin-bullets-51!
 
 -   !begin-bullet!
     roxygen2 will never overwrite a file that was not generated by
@@ -1990,11 +2000,11 @@ created by roxygen2.
 
     !end-bullet!
 
-!end-bullets-50!
+!end-bullets-51!
 
 ## Bug fixes and minor improvements
 
-!begin-bullets-51!
+!begin-bullets-52!
 
 -   !begin-bullet!
     Better parsing of non-syntactic function names in other packages
@@ -2052,7 +2062,7 @@ created by roxygen2.
 
     !end-bullet!
 
-!end-bullets-51!
+!end-bullets-52!
 
 # roxygen2 3.1.0
 
@@ -2090,7 +2100,7 @@ prepended to the docstring.
 
 ## Minor fixes and improvements
 
-!begin-bullets-52!
+!begin-bullets-53!
 
 -   !begin-bullet!
     Fixes for Rcpp 0.11.0 compatibility.
@@ -2119,7 +2129,7 @@ prepended to the docstring.
 
     !end-bullet!
 
-!end-bullets-52!
+!end-bullets-53!
 
 # roxygen2 3.0.0
 
@@ -2127,7 +2137,7 @@ roxygen2 now fully supports S4 and RC (reference classes) - you should
 no longer need to manually add `@alias` or `@usage` tags for S4 classes,
 methods and generics, or for RC classes.
 
-!begin-bullets-53!
+!begin-bullets-54!
 
 -   !begin-bullet!
     The default usage definitions are much better, generating the
@@ -2156,7 +2166,7 @@ methods and generics, or for RC classes.
 
     !end-bullet!
 
-!end-bullets-53!
+!end-bullets-54!
 
 S3 support has also been improved: roxygen2 now figures out whether a
 function is a S3 method or generic. (In the rare cases it does so
@@ -2169,7 +2179,7 @@ Roxygen now has support for package specific options through the
 code that results in a list. Currently only `wrap` and `roclet` values
 are supported:
 
-!begin-bullets-54!
+!begin-bullets-55!
 
 -   !begin-bullet!
     Turn off Rd re-wrapping with adding `Roxygen: list(wrap = FALSE)`
@@ -2181,11 +2191,11 @@ are supported:
 
     !end-bullet!
 
-!end-bullets-54!
+!end-bullets-55!
 
 Roxygen 3.0 also includes a number of minor fixes and improvements:
 
-!begin-bullets-55!
+!begin-bullets-56!
 
 -   !begin-bullet!
     Infix functions are now escaped correctly in the `NAMESPACE`.
@@ -2242,11 +2252,11 @@ Roxygen 3.0 also includes a number of minor fixes and improvements:
 
     !end-bullet!
 
-!end-bullets-55!
+!end-bullets-56!
 
 # roxygen2 2.2.2
 
-!begin-bullets-56!
+!begin-bullets-57!
 
 -   !begin-bullet!
     Correctly use keyword `datasets` not `dataset` (Fixes #60)
@@ -2257,11 +2267,11 @@ Roxygen 3.0 also includes a number of minor fixes and improvements:
 
     !end-bullet!
 
-!end-bullets-56!
+!end-bullets-57!
 
 # roxygen2 2.2.1
 
-!begin-bullets-57!
+!begin-bullets-58!
 
 -   !begin-bullet!
     Use unicode escapes in test files so tests pass on all platforms.
@@ -2273,13 +2283,13 @@ Roxygen 3.0 also includes a number of minor fixes and improvements:
 
     !end-bullet!
 
-!end-bullets-57!
+!end-bullets-58!
 
 # roxygen2 2.2
 
 ## New features
 
-!begin-bullets-58!
+!begin-bullets-59!
 
 -   !begin-bullet!
     Package docType will automatically add package alias, if needed.
@@ -2298,11 +2308,11 @@ Roxygen 3.0 also includes a number of minor fixes and improvements:
 
     !end-bullet!
 
-!end-bullets-58!
+!end-bullets-59!
 
 ## Bug fixes
 
-!begin-bullets-59!
+!begin-bullets-60!
 
 -   !begin-bullet!
     `write.description()` now tries much harder to respect users'
@@ -2399,13 +2409,13 @@ Roxygen 3.0 also includes a number of minor fixes and improvements:
 
     !end-bullet!
 
-!end-bullets-59!
+!end-bullets-60!
 
 # roxygen2 2.1
 
 ## New features
 
-!begin-bullets-60!
+!begin-bullets-61!
 
 -   !begin-bullet!
     package dependencies loaded automatically
@@ -2416,11 +2426,11 @@ Roxygen 3.0 also includes a number of minor fixes and improvements:
 
     !end-bullet!
 
-!end-bullets-60!
+!end-bullets-61!
 
 ## Bug fixes
 
-!begin-bullets-61!
+!begin-bullets-62!
 
 -   !begin-bullet!
     `NAMESPACE` file no longer needs to exist
@@ -2452,13 +2462,13 @@ Roxygen 3.0 also includes a number of minor fixes and improvements:
 
     !end-bullet!
 
-!end-bullets-61!
+!end-bullets-62!
 
 # roxygen2 2.0
 
 ## Major changes
 
-!begin-bullets-62!
+!begin-bullets-63!
 
 -   !begin-bullet!
     now works with run-time details to give more accurate output. This
@@ -2513,11 +2523,11 @@ Roxygen 3.0 also includes a number of minor fixes and improvements:
 
     !end-bullet!
 
-!end-bullets-62!
+!end-bullets-63!
 
 ## Minor changes
 
-!begin-bullets-63!
+!begin-bullets-64!
 
 -   !begin-bullet!
     `@name` is always output as an alias, even if `@aliases` are used.
@@ -2529,11 +2539,11 @@ Roxygen 3.0 also includes a number of minor fixes and improvements:
 
     !end-bullet!
 
-!end-bullets-63!
+!end-bullets-64!
 
 ## New tags
 
-!begin-bullets-64!
+!begin-bullets-65!
 
 -   !begin-bullet!
     `@rdname filename` sets the output filename (without extension). Use
@@ -2578,4 +2588,4 @@ Roxygen 3.0 also includes a number of minor fixes and improvements:
 
     !end-bullet!
 
-!end-bullets-64!
+!end-bullets-65!
