@@ -69,6 +69,14 @@
     and encourage community contributions to get support for different
     CI system going again.
     !end-bullet!
+-   !begin-bullet!
+    `cyclocomp_linter()` is no longer part of the default linters
+    (#2555, @IndrajeetPatil) because the tidyverse style guide doesn't
+    contain any guidelines on meeting certain complexity requirements.
+    Note that users with `cyclocomp_linter()` in their configs may now
+    need to install {cyclocomp} intentionally, in particular in CI/CD
+    pipelines.
+    !end-bullet!
 
 !end-bullets-1!
 
