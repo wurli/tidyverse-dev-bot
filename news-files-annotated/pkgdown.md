@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    New `vignette("accessibility")` describes what manual tasks you need
+    to perform to make your site as accessible as possible (#2344).
+    !end-bullet!
+-   !begin-bullet!
     `build_reference()` now automatically translates `--`, `---`,
     ``` `` ```, and `''` to their unicode equivalents (#2530).
     !end-bullet!
