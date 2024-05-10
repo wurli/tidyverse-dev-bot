@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `build_reference()` now automatically translates `--`, `---`,
+    ``` `` ```, and `''` to their unicode equivalents (#2530).
+    !end-bullet!
+-   !begin-bullet!
     Tweaked navbar display on mobile so that long titles in drop downs
     (e.g. article titles) are now wrapped, and the search input spans
     the full width (#2512).
