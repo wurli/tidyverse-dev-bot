@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Tweaked navbar display on mobile so that long titles in drop downs
+    (e.g. article titles) are now wrapped, and the search input spans
+    the full width (#2512).
+    !end-bullet!
+-   !begin-bullet!
     `build_reference()` now supports `\Sexpr[results=verbatim]`
     (@bastistician, #2510).
     !end-bullet!
