@@ -3,6 +3,17 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `check_pkgdown()` and `pkgdown_sitrep()` have been unified so that
+    they both report on the same problems. They now only differ in the
+    style of their output: `pkgdown_sitrep()` reports whether each
+    category is ok or not ok, while `check_pkgdown()` errors on the
+    first issue (#2463).
+    !end-bullet!
+-   !begin-bullet!
+    `build_site()` automatically runs `pkgdown_sitrep()` at the start of
+    the process (#2380).
+    !end-bullet!
+-   !begin-bullet!
     New `vignette("accessibility")` describes what manual tasks you need
     to perform to make your site as accessible as possible (#2344).
     !end-bullet!
