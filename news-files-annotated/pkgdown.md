@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `build_articles()` now reports if you are missing alt-text for any
+    images (#2357).
+    !end-bullet!
+-   !begin-bullet!
     `check_pkgdown()` and `pkgdown_sitrep()` have been unified so that
     they both report on the same problems. They now only differ in the
     style of their output: `pkgdown_sitrep()` reports whether each
