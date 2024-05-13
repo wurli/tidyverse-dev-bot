@@ -17,6 +17,11 @@
     symlinks (#1598).
 
     !end-bullet!
+-   !begin-bullet!
+    Fixed issue where a configured `mamba` binary was overriden with
+    `conda` (#1608).
+
+    !end-bullet!
 
 !end-bullets-1!
 
