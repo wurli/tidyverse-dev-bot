@@ -3,6 +3,14 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `build_home_index()` now renders math if you use it in your home
+    page (#2263).
+    !end-bullet!
+-   !begin-bullet!
+    `build_home()` now correctly escapes special HTML characters in the
+    bibtex citation (#2022).
+    !end-bullet!
+-   !begin-bullet!
     BS5 templates no longer include empty link to logo when none exists
     (#2536).
     !end-bullet!

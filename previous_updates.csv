@@ -17149,3 +17149,6 @@ reticulate,547185f68386223c4a581f0a7b9d2677,Fixed issue where a configured `mamb
 ragg,c42b29a70155251244c8727201adab4e,Fix a bug in how groups are defined and recalled,NA,NA,NA,NA
 pkgdown,44e147b8e385bcb913cab739c4c1919e,BS5 templates no longer include empty link to logo when none exists (#2536).,NA,NA,NA,NA
 vctrs,5cb0a81da85289ad5769f2d3c8251053,"`vec_detect_complete(NULL)` now returns `logical()`, consistent with `vec_detect_missing(NULL)` (#1916).",NA,NA,NA,NA
+fastmap,1a97cbffd5ce8ac5d6822fdf5a816f0a,Previously calling `$mset()` with empty input would result in an error; now it is a no-op. (#38),NA,NA,NA,NA
+pkgdown,b6777bb9858bf235d007413fc215cf30,`build_home_index()` now renders math if you use it in your home page (#2263).,NA,NA,NA,NA
+pkgdown,535a3814b49c4dd1206b3de04af57157,`build_home()` now correctly escapes special HTML characters in the bibtex citation (#2022).,NA,NA,NA,NA

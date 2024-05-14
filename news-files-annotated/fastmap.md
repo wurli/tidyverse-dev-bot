@@ -1,10 +1,16 @@
-# fastmap 1.1.1.9000
+# fastmap 1.1.1.9001
 
 !begin-bullets-1!
 
 -   !begin-bullet!
     Changed `fastmap`'s `$has()` method to use C++ `contains()` method
     (which is new in hopscotch-map 2.3.0). (#30)
+
+    !end-bullet!
+-   !begin-bullet!
+    Previously calling `$mset()` with empty input would result in an
+    error; now it is a no-op. (#38)
+
     !end-bullet!
 
 !end-bullets-1!
