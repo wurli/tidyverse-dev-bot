@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    BS5 templates no longer include empty link to logo when none exists
+    (#2536).
+    !end-bullet!
+-   !begin-bullet!
     `build_articles()` now reports if you are missing alt-text for any
     images (#2357).
     !end-bullet!

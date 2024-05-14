@@ -17147,3 +17147,4 @@ pkgdown,66aeffd7dab59e4db0066f1ca8266eaa,`build_site()` automatically runs `pkgd
 pkgdown,f0e2aea39a774935d1cc3ac006619abe,`build_articles()` now reports if you are missing alt-text for any images (#2357).,NA,NA,NA,NA
 reticulate,547185f68386223c4a581f0a7b9d2677,Fixed issue where a configured `mamba` binary was overriden with `conda` (#1608).,NA,NA,NA,NA
 ragg,c42b29a70155251244c8727201adab4e,Fix a bug in how groups are defined and recalled,NA,NA,NA,NA
+pkgdown,44e147b8e385bcb913cab739c4c1919e,BS5 templates no longer include empty link to logo when none exists (#2536).,NA,NA,NA,NA
