@@ -17146,3 +17146,4 @@ pkgdown,5b4a7d1005b38c708c67ef454bd5f2e3,"`check_pkgdown()` and `pkgdown_sitrep(
 pkgdown,66aeffd7dab59e4db0066f1ca8266eaa,`build_site()` automatically runs `pkgdown_sitrep()` at the start of the process (#2380).,NA,NA,NA,NA
 pkgdown,f0e2aea39a774935d1cc3ac006619abe,`build_articles()` now reports if you are missing alt-text for any images (#2357).,NA,NA,NA,NA
 reticulate,547185f68386223c4a581f0a7b9d2677,Fixed issue where a configured `mamba` binary was overriden with `conda` (#1608).,NA,NA,NA,NA
+ragg,c42b29a70155251244c8727201adab4e,Fix a bug in how groups are defined and recalled,NA,NA,NA,NA
