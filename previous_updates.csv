@@ -17148,3 +17148,4 @@ pkgdown,f0e2aea39a774935d1cc3ac006619abe,`build_articles()` now reports if you a
 reticulate,547185f68386223c4a581f0a7b9d2677,Fixed issue where a configured `mamba` binary was overriden with `conda` (#1608).,NA,NA,NA,NA
 ragg,c42b29a70155251244c8727201adab4e,Fix a bug in how groups are defined and recalled,NA,NA,NA,NA
 pkgdown,44e147b8e385bcb913cab739c4c1919e,BS5 templates no longer include empty link to logo when none exists (#2536).,NA,NA,NA,NA
+vctrs,5cb0a81da85289ad5769f2d3c8251053,"`vec_detect_complete(NULL)` now returns `logical()`, consistent with `vec_detect_missing(NULL)` (#1916).",NA,NA,NA,NA
