@@ -17156,3 +17156,4 @@ pkgdown,20c3161f46f73ea2bae31e04e3f0743a,Improve HTML5 compliance (#2369):,NA,NA
 pkgdown,20c3161f46f73ea2bae31e04e3f0743a,• No longer support IE9 or earlier,NA,NA,NA,NA
 pkgdown,20c3161f46f73ea2bae31e04e3f0743a,• Strip trailing whitespace,NA,NA,NA,NA
 pkgdown,20c3161f46f73ea2bae31e04e3f0743a,• Label `<nav>`s and improve navbar html.,NA,NA,NA,NA
+dplyr,2a5805fcbaf265fdb492138a42143050,R \>=3.6.0 is now explicitly required (#7026).,NA,NA,NA,NA
