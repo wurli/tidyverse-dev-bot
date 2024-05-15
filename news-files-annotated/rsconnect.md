@@ -18,6 +18,11 @@
     variable. (#1063)
 
     !end-bullet!
+-   !begin-bullet!
+    `deployTF()` can deploy a TensorFlow model to Posit Connect.
+    Requires Posit Connect 2024.05.0 or higher.
+
+    !end-bullet!
 
 !end-bullets-1!
 
