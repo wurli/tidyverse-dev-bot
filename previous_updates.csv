@@ -17157,3 +17157,4 @@ pkgdown,20c3161f46f73ea2bae31e04e3f0743a,• No longer support IE9 or earlier,NA
 pkgdown,20c3161f46f73ea2bae31e04e3f0743a,• Strip trailing whitespace,NA,NA,NA,NA
 pkgdown,20c3161f46f73ea2bae31e04e3f0743a,• Label `<nav>`s and improve navbar html.,NA,NA,NA,NA
 dplyr,2a5805fcbaf265fdb492138a42143050,R \>=3.6.0 is now explicitly required (#7026).,NA,NA,NA,NA
+gt,eeb2825b52b7954ee7db90ea7decc660,"`data_color()` throws a more informative error message if `rows` didn't resolve to anything (@​olivroy, #1659).",NA,NA,NA,NA

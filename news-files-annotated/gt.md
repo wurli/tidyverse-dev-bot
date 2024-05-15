@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `data_color()` throws a more informative error message if `rows`
+    didn't resolve to anything (@olivroy, #1659).
+
+    !end-bullet!
+-   !begin-bullet!
     PDF output now allows the font size of a table to be set using the
     table.font.size parameter in the tab_options function (#1472). The
     font sizes of individual table cells (including those in the body,
