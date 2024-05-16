@@ -1,4 +1,4 @@
-# fastmap 1.1.1.9001
+# fastmap 1.2.0
 
 !begin-bullets-1!
 
