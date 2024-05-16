@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Bootstrap 3 has been deprecated. It was superseded in December 2021,
+    and now we're starting to more directly encourage folks to move away
+    from it.
+    !end-bullet!
+-   !begin-bullet!
     Improve HTML5 compliance (#2369):
     !begin-bullets-2!
     -   !begin-bullet!
