@@ -17160,3 +17160,4 @@ dplyr,2a5805fcbaf265fdb492138a42143050,R \>=3.6.0 is now explicitly required (#7
 gt,eeb2825b52b7954ee7db90ea7decc660,"`data_color()` throws a more informative error message if `rows` didn't resolve to anything (@​olivroy, #1659).",NA,NA,NA,NA
 rsconnect,b7a21bbb6f385aae3c9c4edadf9bcb1e,`deployTF()` can deploy a TensorFlow model to Posit Connect. Requires Posit Connect 2024.05.0 or higher.,NA,NA,NA,NA
 pkgdown,3a6254fa609bb63f013bb670b06f6a9f,"Bootstrap 3 has been deprecated. It was superseded in December 2021, and now we're starting to more directly encourage folks to move away from it.",NA,NA,NA,NA
+reticulate,1f11aaf5a40ddb4d0dacf420e4e73f79,"Reticulate now installs successfully on Windows ARM64 (#1609, contributed by @​andrjohns).",NA,NA,NA,NA

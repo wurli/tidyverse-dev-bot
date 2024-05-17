@@ -13,6 +13,11 @@
 
     !end-bullet!
 -   !begin-bullet!
+    Reticulate now installs successfully on Windows ARM64 (#1609,
+    contributed by @andrjohns).
+
+    !end-bullet!
+-   !begin-bullet!
     `virtualenv_starter()` no longer warns when encountering broken
     symlinks (#1598).
 
