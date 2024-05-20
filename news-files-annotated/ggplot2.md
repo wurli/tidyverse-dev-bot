@@ -192,6 +192,11 @@
     (@teunbrand, #5818).
 
     !end-bullet!
+-   !begin-bullet!
+    In `stat_bin()`, the default `boundary` is now chosen to better
+    adhere to the `nbin` argument (@teunbrand, #5882, #5036)
+
+    !end-bullet!
 
 !end-bullets-1!
 
