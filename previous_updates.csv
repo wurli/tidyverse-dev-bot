@@ -17185,3 +17185,4 @@ ggplot2,28090f4ffee72972e4c704bf023f3d14,"Fixed bug where binned guides would ke
 ggplot2,414539316c5933f711d8472e86264f42,The size of the `draw_key_polygon()` glyph now reflects the `linewidth` aesthetic (#4852).,NA,NA,NA,NA
 ggplot2,c763fab1ba28e0409cf420cd92b456b0,"Fix a bug in `position_jitterdodge()` where different jitters would be applied to different position aesthetics of the same axis (@​teunbrand, #5818).",NA,NA,NA,NA
 ggplot2,71655d8a2356d3245e50011e5a355534,"In `stat_bin()`, the default `boundary` is now chosen to better adhere to the `nbin` argument (@​teunbrand, #5882, #5036)",NA,NA,NA,NA
+pkgdown,ad0b78d9de956aafba321dc08f60186b,`build_home_index()` now reports when rendering the home page (#2544).,NA,NA,NA,NA
