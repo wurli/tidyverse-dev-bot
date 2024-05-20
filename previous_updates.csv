@@ -17172,3 +17172,8 @@ ggplot2,0355aedabe2ed02b7d89a001bf8ca94e,`geom_raster()` now falls back to rende
 ggplot2,af98caa93a854c645366d5b88243e3db,"`theme()` gets new `spacing` and `margins` arguments that all other spacings and (non-text) margins inherit from (@​teunbrand, #5622).",NA,NA,NA,NA
 ggplot2,b77441c237ca557419cb80283e301d89,"`geom_ribbon()` can have varying `fill` or `alpha` in linear coordinate systems (@​teunbrand, #4690)",NA,NA,NA,NA
 ggplot2,b21989840c72a48be3c9cf14f3e9c4cb,"`geom_tile()` computes default widths and heights per panel instead of per layer (@​teunbrand, #5740).",NA,NA,NA,NA
+ggplot2,a6799eb0499add2aeaa1c0b8c89e2748,"Discrete scales now support `minor_breaks`. This may only make sense in discrete position scales, where it affects the placement of minor ticks and minor gridlines (#5434).",NA,NA,NA,NA
+ggplot2,6d2e45ba75c679271b22c9c3553f650f,"Discrete position scales now expose the `palette` argument, which can be used to customise spacings between levels (@​teunbrand, #5770).",NA,NA,NA,NA
+ggplot2,1e455bf65f8c65ad3332be401129e955,The `fill` of the `panel.border` theme setting is ignored and forced to be transparent (#5782).,NA,NA,NA,NA
+ggplot2,4f55f48ab598caecb92b29a805a71efa,`stat_align()` skips computation when there is only 1 group and therefore alignment is not necessary (#5788).,NA,NA,NA,NA
+ggplot2,b2e76b6043804230c255df640f15e818,`position_stack()` skips computation when all `x` values are unique and therefore stacking is not necessary (#5788).,NA,NA,NA,NA

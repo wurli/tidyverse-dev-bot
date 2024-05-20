@@ -1,5 +1,10 @@
 # ggplot2 (development version)
 
+* Discrete scales now support `minor_breaks`. This may only make sense in
+  discrete position scales, where it affects the placement of minor ticks
+  and minor gridlines (#5434).
+* Discrete position scales now expose the `palette` argument, which can be used 
+  to customise spacings between levels (@teunbrand, #5770).
 * The default `se` parameter in layers with `geom = "smooth"` will be `TRUE` 
   when the data has `ymin` and `ymax` parameters and `FALSE` if these are 
   absent. Note that this does not affect the default of `geom_smooth()` or
@@ -45,6 +50,12 @@
   systems (@teunbrand, #4690).
 * `geom_tile()` computes default widths and heights per panel instead of
   per layer (@teunbrand, #5740).
+* The `fill` of the `panel.border` theme setting is ignored and forced to be
+  transparent (#5782).
+* `stat_align()` skips computation when there is only 1 group and therefore
+  alignment is not necessary (#5788).
+* `position_stack()` skips computation when all `x` values are unique and 
+  therefore stacking is not necessary (#5788).
 
 # ggplot2 3.5.1
 

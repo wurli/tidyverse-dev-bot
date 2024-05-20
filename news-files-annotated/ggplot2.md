@@ -3,6 +3,16 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Discrete scales now support `minor_breaks`. This may only make sense
+    in discrete position scales, where it affects the placement of minor
+    ticks and minor gridlines (#5434).
+    !end-bullet!
+-   !begin-bullet!
+    Discrete position scales now expose the `palette` argument, which
+    can be used to customise spacings between levels (@teunbrand,
+    #5770).
+    !end-bullet!
+-   !begin-bullet!
     The default `se` parameter in layers with `geom = "smooth"` will be
     `TRUE` when the data has `ymin` and `ymax` parameters and `FALSE` if
     these are absent. Note that this does not affect the default of
@@ -94,6 +104,18 @@
 -   !begin-bullet!
     `geom_tile()` computes default widths and heights per panel instead
     of per layer (@teunbrand, #5740).
+    !end-bullet!
+-   !begin-bullet!
+    The `fill` of the `panel.border` theme setting is ignored and forced
+    to be transparent (#5782).
+    !end-bullet!
+-   !begin-bullet!
+    `stat_align()` skips computation when there is only 1 group and
+    therefore alignment is not necessary (#5788).
+    !end-bullet!
+-   !begin-bullet!
+    `position_stack()` skips computation when all `x` values are unique
+    and therefore stacking is not necessary (#5788).
     !end-bullet!
 
 !end-bullets-1!
