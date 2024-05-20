@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `init_site()` will no longer automatically build favicons on CI
+    systems (e.g. GHA). This is an expensive operation that uses an
+    external service so it should only be run locally (#2553).
+    !end-bullet!
+-   !begin-bullet!
     `build_home_index()` now reports when rendering the home page
     (#2544).
     !end-bullet!
