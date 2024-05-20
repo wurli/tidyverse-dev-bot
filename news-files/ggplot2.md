@@ -1,5 +1,8 @@
 # ggplot2 (development version)
 
+* Position scales combined with `coord_sf()` can now use functions in the 
+ `breaks` argument. In addition, `n.breaks` works as intended and 
+ `breaks = NULL` removes grid lines and axes (@teunbrand, #4622).
 * (Internal) Applying defaults in `geom_sf()` has moved from the internal 
   `sf_grob()` to `GeomSf$use_defaults()` (@teunbrand).
 * `facet_wrap()` has new options for the `dir` argument to more precisely
@@ -22,6 +25,9 @@
   (@teunbrand, #5856).
 * New helper function `ggpar()` to translate ggplot2's interpretation of 
   graphical parameters to {grid}'s interpretation (@teunbrand, #5866).
+* `scale_{x/y}_discrete()` can now accept a `sec.axis`. It is recommended to
+  only use `dup_axis()` to set custom breaks or labels, as discrete variables 
+  cannot be transformed (@teunbrand, #3171).
 
 # ggplot2 3.5.1
 
