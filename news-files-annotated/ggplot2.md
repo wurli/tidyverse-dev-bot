@@ -3,6 +3,16 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed bug where binned guides would keep out-of-bounds breaks
+    (@teunbrand, #5870).
+
+    !end-bullet!
+-   !begin-bullet!
+    The size of the `draw_key_polygon()` glyph now reflects the
+    `linewidth` aesthetic (#4852).
+
+    !end-bullet!
+-   !begin-bullet!
     New function `complete_theme()` to replicate how themes are handled
     during plot building (#5801).
 
@@ -174,6 +184,12 @@
 -   !begin-bullet!
     `width` is implemented as aesthetic instead of parameter in
     `geom_col()` and `geom_bar()` (#3142).
+
+    !end-bullet!
+-   !begin-bullet!
+    Fix a bug in `position_jitterdodge()` where different jitters would
+    be applied to different position aesthetics of the same axis
+    (@teunbrand, #5818).
 
     !end-bullet!
 

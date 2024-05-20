@@ -1,5 +1,9 @@
 # ggplot2 (development version)
 
+* Fixed bug where binned guides would keep out-of-bounds breaks 
+  (@teunbrand, #5870).
+* The size of the `draw_key_polygon()` glyph now reflects the `linewidth` 
+  aesthetic (#4852).
 * New function `complete_theme()` to replicate how themes are handled during
   plot building (#5801).
 * Special getter and setter functions have been renamed for consistency, allowing
@@ -77,6 +81,8 @@
   returns input unaltered (@teunbrand, #5800).
 * `width` is implemented as aesthetic instead of parameter in `geom_col()` and
   `geom_bar()` (#3142).
+* Fix a bug in `position_jitterdodge()` where different jitters would be applied
+  to different position aesthetics of the same axis (@teunbrand, #5818).
 
 # ggplot2 3.5.1
 
