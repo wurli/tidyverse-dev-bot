@@ -17164,3 +17164,5 @@ reticulate,1f11aaf5a40ddb4d0dacf420e4e73f79,"Reticulate now installs successfull
 tibble,d0b14083fae661d5b44e388f4932cbe6,Snapshot updates (#1580).,NA,NA,NA,NA
 ggplot2,1782913d526eb81d263cb011fb370b56,"Position scales combined with `coord_sf()` can now use functions in the `breaks` argument. In addition, `n.breaks` works as intended and `breaks = NULL` removes grid lines and axes (@​teunbrand, #4622).",NA,NA,NA,NA
 ggplot2,b10e0c51cbc350660100e002485af5a7,"`scale_{x/y}_discrete()` can now accept a `sec.axis`. It is recommended to only use `dup_axis()` to set custom breaks or labels, as discrete variables cannot be transformed (@​teunbrand, #3171).",NA,NA,NA,NA
+ggplot2,6cf6542b482344cd38e057115b2cc8f5,"`stat_ecdf()` now has an optional `weight` aesthetic (@​teunbrand, #5058).",NA,NA,NA,NA
+ggplot2,055860c6c663f3cc667f23f33034a547,"`stat_density()` has the new computed variable: `wdensity`, which is calculated as the density times the sum of weights (@​teunbrand, #4176).",NA,NA,NA,NA
