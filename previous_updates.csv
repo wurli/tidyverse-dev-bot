@@ -17166,3 +17166,8 @@ ggplot2,1782913d526eb81d263cb011fb370b56,"Position scales combined with `coord_s
 ggplot2,b10e0c51cbc350660100e002485af5a7,"`scale_{x/y}_discrete()` can now accept a `sec.axis`. It is recommended to only use `dup_axis()` to set custom breaks or labels, as discrete variables cannot be transformed (@​teunbrand, #3171).",NA,NA,NA,NA
 ggplot2,6cf6542b482344cd38e057115b2cc8f5,"`stat_ecdf()` now has an optional `weight` aesthetic (@​teunbrand, #5058).",NA,NA,NA,NA
 ggplot2,055860c6c663f3cc667f23f33034a547,"`stat_density()` has the new computed variable: `wdensity`, which is calculated as the density times the sum of weights (@​teunbrand, #4176).",NA,NA,NA,NA
+ggplot2,48a9613db823d4b836e07e6316663312,"The default `se` parameter in layers with `geom = ""smooth""` will be `TRUE` when the data has `ymin` and `ymax` parameters and `FALSE` if these are absent. Note that this does not affect the default of `geom_smooth()` or `stat_smooth()` (@​teunbrand, #5572).",NA,NA,NA,NA
+ggplot2,574f0d5796d2a48a823ef71bd0936304,The bounded density option in `stat_density()` uses a wider range to prevent discontinuities (#5641).,NA,NA,NA,NA
+ggplot2,0355aedabe2ed02b7d89a001bf8ca94e,`geom_raster()` now falls back to rendering as `geom_rect()` when coordinates are not Cartesian (#5503).,NA,NA,NA,NA
+ggplot2,af98caa93a854c645366d5b88243e3db,"`theme()` gets new `spacing` and `margins` arguments that all other spacings and (non-text) margins inherit from (@​teunbrand, #5622).",NA,NA,NA,NA
+ggplot2,b77441c237ca557419cb80283e301d89,"`geom_ribbon()` can have varying `fill` or `alpha` in linear coordinate systems (@​teunbrand, #4690)",NA,NA,NA,NA

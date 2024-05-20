@@ -1,5 +1,13 @@
 # ggplot2 (development version)
 
+* The default `se` parameter in layers with `geom = "smooth"` will be `TRUE` 
+  when the data has `ymin` and `ymax` parameters and `FALSE` if these are 
+  absent. Note that this does not affect the default of `geom_smooth()` or
+  `stat_smooth()` (@teunbrand, #5572).
+* The bounded density option in `stat_density()` uses a wider range to
+  prevent discontinuities (#5641).
+* `geom_raster()` now falls back to rendering as `geom_rect()` when coordinates
+  are not Cartesian (#5503).
 * `stat_ecdf()` now has an optional `weight` aesthetic (@teunbrand, #5058).
 * Position scales combined with `coord_sf()` can now use functions in the 
  `breaks` argument. In addition, `n.breaks` works as intended and 
@@ -31,6 +39,10 @@
   cannot be transformed (@teunbrand, #3171).
 * `stat_density()` has the new computed variable: `wdensity`, which is
   calculated as the density times the sum of weights (@teunbrand, #4176).
+* `theme()` gets new `spacing` and `margins` arguments that all other spacings
+  and (non-text) margins inherit from (@teunbrand, #5622).
+* `geom_ribbon()` can have varying `fill` or `alpha` in linear coordinate
+  systems (@teunbrand, #4690)
 
 # ggplot2 3.5.1
 
