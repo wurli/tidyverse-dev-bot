@@ -3,119 +3,178 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    New function `complete_theme()` to replicate how themes are handled
+    during plot building (#5801).
+
+    !end-bullet!
+-   !begin-bullet!
+    Special getter and setter functions have been renamed for
+    consistency, allowing for better tab-completion with `get_*`- and
+    `set_*`-prefixes. The old names remain available for backward
+    compatibility (@teunbrand, #5568).
+
+      New name               Old name
+      ---------------------- -------------------
+      `get_theme()`          `theme_get()`
+      `set_theme()`          `theme_set()`
+      `replace_theme()`      `theme_replace()`
+      `update_theme()`       `theme_update()`
+      `get_last_plot()`      `last_plot()`
+      `get_layer_data()`     `layer_data()`
+      `get_layer_grob()`     `layer_grob()`
+      `get_panel_scales()`   `layer_scales()`
+
+    !end-bullet!
+-   !begin-bullet!
     Discrete scales now support `minor_breaks`. This may only make sense
     in discrete position scales, where it affects the placement of minor
     ticks and minor gridlines (#5434).
+
     !end-bullet!
 -   !begin-bullet!
     Discrete position scales now expose the `palette` argument, which
     can be used to customise spacings between levels (@teunbrand,
     #5770).
+
     !end-bullet!
 -   !begin-bullet!
     The default `se` parameter in layers with `geom = "smooth"` will be
     `TRUE` when the data has `ymin` and `ymax` parameters and `FALSE` if
     these are absent. Note that this does not affect the default of
     `geom_smooth()` or `stat_smooth()` (@teunbrand, #5572).
+
     !end-bullet!
 -   !begin-bullet!
     The bounded density option in `stat_density()` uses a wider range to
     prevent discontinuities (#5641).
+
     !end-bullet!
 -   !begin-bullet!
     `geom_raster()` now falls back to rendering as `geom_rect()` when
     coordinates are not Cartesian (#5503).
+
     !end-bullet!
 -   !begin-bullet!
     `stat_ecdf()` now has an optional `weight` aesthetic (@teunbrand,
     #5058).
+
     !end-bullet!
 -   !begin-bullet!
     Position scales combined with `coord_sf()` can now use functions in
     the `breaks` argument. In addition, `n.breaks` works as intended and
     `breaks = NULL` removes grid lines and axes (@teunbrand, #4622).
+
     !end-bullet!
 -   !begin-bullet!
     (Internal) Applying defaults in `geom_sf()` has moved from the
     internal `sf_grob()` to `GeomSf$use_defaults()` (@teunbrand).
+
     !end-bullet!
 -   !begin-bullet!
     `facet_wrap()` has new options for the `dir` argument to more
     precisely control panel directions (@teunbrand, #5212)
+
     !end-bullet!
 -   !begin-bullet!
     Prevented `facet_wrap(..., drop = FALSE)` from throwing spurious
     errors when a character facetting variable contained `NA`s
     (@teunbrand, #5485).
+
     !end-bullet!
 -   !begin-bullet!
     When facets coerce the faceting variables to factors, the 'ordered'
     class is dropped (@teunbrand, #5666).
+
     !end-bullet!
 -   !begin-bullet!
     `geom_curve()` now appropriately removes missing data instead of
     throwing errors (@teunbrand, #5831).
+
     !end-bullet!
 -   !begin-bullet!
     `update_geom_defaults()` and `update_stat_defaults()` have a reset
     mechanism when using `new = NULL` and invisible return the previous
     defaults (#4993).
+
     !end-bullet!
 -   !begin-bullet!
     Fixed regression in axes where `breaks = NULL` caused the axes to
     disappear instead of just rendering the axis line (@teunbrand,
     #5816).
+
     !end-bullet!
 -   !begin-bullet!
     `geom_point()` can be dodged vertically by using
     `position_dodge(..., orientation = "y")` (@teunbrand, #5809).
+
     !end-bullet!
 -   !begin-bullet!
     Fixed bug where `na.value` was incorrectly mapped to non-`NA` values
     (@teunbrand, #5756).
+
     !end-bullet!
 -   !begin-bullet!
     Fixed bug in `guide_custom()` that would throw error with
     `theme_void()` (@teunbrand, #5856).
+
     !end-bullet!
 -   !begin-bullet!
     New helper function `ggpar()` to translate ggplot2's interpretation
     of graphical parameters to {grid}'s interpretation (@teunbrand,
     #5866).
+
     !end-bullet!
 -   !begin-bullet!
     `scale_{x/y}_discrete()` can now accept a `sec.axis`. It is
     recommended to only use `dup_axis()` to set custom breaks or labels,
     as discrete variables cannot be transformed (@teunbrand, #3171).
+
     !end-bullet!
 -   !begin-bullet!
     `stat_density()` has the new computed variable: `wdensity`, which is
     calculated as the density times the sum of weights (@teunbrand,
     #4176).
+
     !end-bullet!
 -   !begin-bullet!
     `theme()` gets new `spacing` and `margins` arguments that all other
     spacings and (non-text) margins inherit from (@teunbrand, #5622).
+
     !end-bullet!
 -   !begin-bullet!
     `geom_ribbon()` can have varying `fill` or `alpha` in linear
     coordinate systems (@teunbrand, #4690).
+
     !end-bullet!
 -   !begin-bullet!
     `geom_tile()` computes default widths and heights per panel instead
     of per layer (@teunbrand, #5740).
+
     !end-bullet!
 -   !begin-bullet!
     The `fill` of the `panel.border` theme setting is ignored and forced
     to be transparent (#5782).
+
     !end-bullet!
 -   !begin-bullet!
     `stat_align()` skips computation when there is only 1 group and
     therefore alignment is not necessary (#5788).
+
     !end-bullet!
 -   !begin-bullet!
     `position_stack()` skips computation when all `x` values are unique
     and therefore stacking is not necessary (#5788).
+
+    !end-bullet!
+-   !begin-bullet!
+    A new `ggplot_build()` S3 method for `<ggplot_built>`{=html} classes
+    was added, which returns input unaltered (@teunbrand, #5800).
+
+    !end-bullet!
+-   !begin-bullet!
+    `width` is implemented as aesthetic instead of parameter in
+    `geom_col()` and `geom_bar()` (#3142).
+
     !end-bullet!
 
 !end-bullets-1!

@@ -1,5 +1,22 @@
 # ggplot2 (development version)
 
+* New function `complete_theme()` to replicate how themes are handled during
+  plot building (#5801).
+* Special getter and setter functions have been renamed for consistency, allowing
+  for better tab-completion with `get_*`- and `set_*`-prefixes. The old names 
+  remain available for backward compatibility (@teunbrand, #5568).
+  
+  | New name             | Old name          |
+  | -------------------- | ----------------- |
+  | `get_theme()`        | `theme_get()`     |
+  | `set_theme()`        | `theme_set()`     |
+  | `replace_theme()`    | `theme_replace()` |
+  | `update_theme()`     | `theme_update()`  |
+  | `get_last_plot()`    | `last_plot()`     |
+  | `get_layer_data()`   | `layer_data()`    |
+  | `get_layer_grob()`   | `layer_grob()`    |
+  | `get_panel_scales()` | `layer_scales()`  |
+
 * Discrete scales now support `minor_breaks`. This may only make sense in
   discrete position scales, where it affects the placement of minor ticks
   and minor gridlines (#5434).
@@ -56,6 +73,10 @@
   alignment is not necessary (#5788).
 * `position_stack()` skips computation when all `x` values are unique and 
   therefore stacking is not necessary (#5788).
+* A new `ggplot_build()` S3 method for <ggplot_built> classes was added, which
+  returns input unaltered (@teunbrand, #5800).
+* `width` is implemented as aesthetic instead of parameter in `geom_col()` and
+  `geom_bar()` (#3142).
 
 # ggplot2 3.5.1
 
