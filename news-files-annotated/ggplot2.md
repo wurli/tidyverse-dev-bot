@@ -89,7 +89,11 @@
     !end-bullet!
 -   !begin-bullet!
     `geom_ribbon()` can have varying `fill` or `alpha` in linear
-    coordinate systems (@teunbrand, #4690)
+    coordinate systems (@teunbrand, #4690).
+    !end-bullet!
+-   !begin-bullet!
+    `geom_tile()` computes default widths and heights per panel instead
+    of per layer (@teunbrand, #5740).
     !end-bullet!
 
 !end-bullets-1!

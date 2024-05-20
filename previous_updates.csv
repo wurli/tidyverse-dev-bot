@@ -17171,3 +17171,4 @@ ggplot2,574f0d5796d2a48a823ef71bd0936304,The bounded density option in `stat_den
 ggplot2,0355aedabe2ed02b7d89a001bf8ca94e,`geom_raster()` now falls back to rendering as `geom_rect()` when coordinates are not Cartesian (#5503).,NA,NA,NA,NA
 ggplot2,af98caa93a854c645366d5b88243e3db,"`theme()` gets new `spacing` and `margins` arguments that all other spacings and (non-text) margins inherit from (@​teunbrand, #5622).",NA,NA,NA,NA
 ggplot2,b77441c237ca557419cb80283e301d89,"`geom_ribbon()` can have varying `fill` or `alpha` in linear coordinate systems (@​teunbrand, #4690)",NA,NA,NA,NA
+ggplot2,b21989840c72a48be3c9cf14f3e9c4cb,"`geom_tile()` computes default widths and heights per panel instead of per layer (@​teunbrand, #5740).",NA,NA,NA,NA
