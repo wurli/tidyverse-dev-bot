@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `template_reference()` and `template_article()` now only add
+    backticks to function names if needed (#2561).
+    !end-bullet!
+-   !begin-bullet!
     Custom navbars that specify `icon` but not `aria-label` will now
     generate a message reminding you to provide one for to improve
     accessibility (#2533).

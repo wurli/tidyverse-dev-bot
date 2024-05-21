@@ -1,4 +1,4 @@
-# reticulate (development version)
+# reticulate 1.37.0
 
 !begin-bullets-1!
 

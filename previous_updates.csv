@@ -17190,3 +17190,4 @@ pkgdown,03a78a7dd2695bc2db47fd379529eeb6,`init_site()` will no longer automatica
 ggplot2,7d44bdcdcc293fdeca8945fac16ba0fc,"The `arrow.fill` parameter is now applied to more line-based functions: `geom_path()`, `geom_line()`, `geom_step()` `geom_function()`, line geometries in `geom_sf()` and `element_line()`.",NA,NA,NA,NA
 reticulate,5f8cf3e22134ca0fe431a18ade4c3709,"Fixed issue where configuring reticulate `conda_*` functions to use the executable `mamba` instead of `conda` was ignored. (#1608, contributed by @​AlexandreGuinaudeau)",NA,NA,NA,NA
 pkgdown,b1c5043bf4dfeff04251d1ea160726a7,Custom navbars that specify `icon` but not `aria-label` will now generate a message reminding you to provide one for to improve accessibility (#2533).,NA,NA,NA,NA
+pkgdown,e2804c4ef80d887c5ac12d1f71d3e2fe,`template_reference()` and `template_article()` now only add backticks to function names if needed (#2561).,NA,NA,NA,NA
