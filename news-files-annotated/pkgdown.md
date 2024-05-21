@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Custom navbars that specify `icon` but not `aria-label` will now
+    generate a message reminding you to provide one for to improve
+    accessibility (#2533).
+    !end-bullet!
+-   !begin-bullet!
     `init_site()` will no longer automatically build favicons on CI
     systems (e.g. GHA). This is an expensive operation that uses an
     external service so it should only be run locally (#2553).
