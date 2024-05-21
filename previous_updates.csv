@@ -17195,3 +17195,5 @@ keras,80b625d11c9ed901cfd9049ffe6c043e,"new functions: `op_slogdet()`, `op_psnr(
 keras,1070d2eb404400634eaf23844f4a1e63,"`clone_model()` gains new args: `call_function`, `recursive` Updated example usage.",NA,NA,NA,NA
 keras,c849eaada283c17e85335faebf9f58b8,"`op_ctc_decode()` strategy argument has new default: `""greedy""`. Updated docs.",NA,NA,NA,NA
 keras,d9c68e6218e0d2ef70811e189411843a,"`loss_ctc()` default name fixed, changed to `""ctc""`",NA,NA,NA,NA
+lintr,9003e70a0129ec950136337107b573ec,"`scalar_in_linter` is now configurable to allow other `%in%` like operators to be linted. The data.table operator `%chin%` is no longer linted by default; use `in_operators = ""%chin%""` to continue linting it. (@​F-Noelle)",NA,NA,NA,NA
+pkgdown,18c4d6560699f895ad0f3fa4b772b066,YAML validation has been substantially improved so you should get much clearer errors if you have made a mistake (#1927). Please file an issue if you find a case where the error message is not helpful.,NA,NA,NA,NA

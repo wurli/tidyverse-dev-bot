@@ -77,6 +77,12 @@
     need to install {cyclocomp} intentionally, in particular in CI/CD
     pipelines.
     !end-bullet!
+-   !begin-bullet!
+    `scalar_in_linter` is now configurable to allow other `%in%` like
+    operators to be linted. The data.table operator `%chin%` is no
+    longer linted by default; use `in_operators = "%chin%"` to continue
+    linting it. (@F-Noelle)
+    !end-bullet!
 
 !end-bullets-1!
 

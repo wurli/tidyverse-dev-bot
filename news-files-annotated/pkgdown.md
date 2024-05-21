@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    YAML validation has been substantially improved so you should get
+    much clearer errors if you have made a mistake (#1927). Please file
+    an issue if you find a case where the error message is not helpful.
+    !end-bullet!
+-   !begin-bullet!
     `template_reference()` and `template_article()` now only add
     backticks to function names if needed (#2561).
     !end-bullet!
