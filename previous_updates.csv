@@ -17191,3 +17191,7 @@ ggplot2,7d44bdcdcc293fdeca8945fac16ba0fc,"The `arrow.fill` parameter is now appl
 reticulate,5f8cf3e22134ca0fe431a18ade4c3709,"Fixed issue where configuring reticulate `conda_*` functions to use the executable `mamba` instead of `conda` was ignored. (#1608, contributed by @​AlexandreGuinaudeau)",NA,NA,NA,NA
 pkgdown,b1c5043bf4dfeff04251d1ea160726a7,Custom navbars that specify `icon` but not `aria-label` will now generate a message reminding you to provide one for to improve accessibility (#2533).,NA,NA,NA,NA
 pkgdown,e2804c4ef80d887c5ac12d1f71d3e2fe,`template_reference()` and `template_article()` now only add backticks to function names if needed (#2561).,NA,NA,NA,NA
+keras,80b625d11c9ed901cfd9049ffe6c043e,"new functions: `op_slogdet()`, `op_psnr()`",NA,NA,NA,NA
+keras,1070d2eb404400634eaf23844f4a1e63,"`clone_model()` gains new args: `call_function`, `recursive` Updated example usage.",NA,NA,NA,NA
+keras,c849eaada283c17e85335faebf9f58b8,"`op_ctc_decode()` strategy argument has new default: `""greedy""`. Updated docs.",NA,NA,NA,NA
+keras,d9c68e6218e0d2ef70811e189411843a,"`loss_ctc()` default name fixed, changed to `""ctc""`",NA,NA,NA,NA
