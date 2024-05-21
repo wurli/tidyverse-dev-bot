@@ -17187,3 +17187,5 @@ ggplot2,c763fab1ba28e0409cf420cd92b456b0,"Fix a bug in `position_jitterdodge()` 
 ggplot2,71655d8a2356d3245e50011e5a355534,"In `stat_bin()`, the default `boundary` is now chosen to better adhere to the `nbin` argument (@​teunbrand, #5882, #5036)",NA,NA,NA,NA
 pkgdown,ad0b78d9de956aafba321dc08f60186b,`build_home_index()` now reports when rendering the home page (#2544).,NA,NA,NA,NA
 pkgdown,03a78a7dd2695bc2db47fd379529eeb6,`init_site()` will no longer automatically build favicons on CI systems (e.g. GHA). This is an expensive operation that uses an external service so it should only be run locally (#2553).,NA,NA,NA,NA
+ggplot2,7d44bdcdcc293fdeca8945fac16ba0fc,"The `arrow.fill` parameter is now applied to more line-based functions: `geom_path()`, `geom_line()`, `geom_step()` `geom_function()`, line geometries in `geom_sf()` and `element_line()`.",NA,NA,NA,NA
+reticulate,5f8cf3e22134ca0fe431a18ade4c3709,"Fixed issue where configuring reticulate `conda_*` functions to use the executable `mamba` instead of `conda` was ignored. (#1608, contributed by @​AlexandreGuinaudeau)",NA,NA,NA,NA
