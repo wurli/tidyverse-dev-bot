@@ -17197,3 +17197,5 @@ keras,c849eaada283c17e85335faebf9f58b8,"`op_ctc_decode()` strategy argument has 
 keras,d9c68e6218e0d2ef70811e189411843a,"`loss_ctc()` default name fixed, changed to `""ctc""`",NA,NA,NA,NA
 lintr,9003e70a0129ec950136337107b573ec,"`scalar_in_linter` is now configurable to allow other `%in%` like operators to be linted. The data.table operator `%chin%` is no longer linted by default; use `in_operators = ""%chin%""` to continue linting it. (@​F-Noelle)",NA,NA,NA,NA
 pkgdown,18c4d6560699f895ad0f3fa4b772b066,YAML validation has been substantially improved so you should get much clearer errors if you have made a mistake (#1927). Please file an issue if you find a case where the error message is not helpful.,NA,NA,NA,NA
+ggplot2,7a212aa3911a4d06649122ca109e1e66,`after_stat()` and `after_scale()` throw warnings when the computed aesthetics are not of the correct length (#5901).,NA,NA,NA,NA
+renv,379a1a466c6c65f6f4f1464e13732e47,"`renv::install()` now respects the `prompt` parameter when `pak` is enabled, as via `options(renv.config.pak.enabled = TRUE)`. (#1907)",NA,NA,NA,NA

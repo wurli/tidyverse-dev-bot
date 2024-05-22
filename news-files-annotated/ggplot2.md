@@ -204,6 +204,11 @@
     adhere to the `nbin` argument (@teunbrand, #5882, #5036)
 
     !end-bullet!
+-   !begin-bullet!
+    `after_stat()` and `after_scale()` throw warnings when the computed
+    aesthetics are not of the correct length (#5901).
+
+    !end-bullet!
 
 !end-bullets-1!
 
