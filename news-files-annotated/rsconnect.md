@@ -23,6 +23,11 @@
     Requires Posit Connect 2024.05.0 or higher.
 
     !end-bullet!
+-   !begin-bullet!
+    Skip tests when suggested packages are not available. Skip Quarto
+    tests when run by CRAN. (#1074)
+
+    !end-bullet!
 
 !end-bullets-1!
 

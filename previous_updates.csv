@@ -17200,3 +17200,4 @@ pkgdown,18c4d6560699f895ad0f3fa4b772b066,YAML validation has been substantially 
 ggplot2,7a212aa3911a4d06649122ca109e1e66,`after_stat()` and `after_scale()` throw warnings when the computed aesthetics are not of the correct length (#5901).,NA,NA,NA,NA
 renv,379a1a466c6c65f6f4f1464e13732e47,"`renv::install()` now respects the `prompt` parameter when `pak` is enabled, as via `options(renv.config.pak.enabled = TRUE)`. (#1907)",NA,NA,NA,NA
 pkgdown,169bbda8a1b21b3407130f06c6ffd466,"`vignette(""search"")` has been removed since BS3 is deprecated and all the BS5 docs are also included in `build_search()` (#2564).",NA,NA,NA,NA
+rsconnect,b31684d315ab191068d3a4144c2a65ee,Skip tests when suggested packages are not available. Skip Quarto tests when run by CRAN. (#1074),NA,NA,NA,NA
