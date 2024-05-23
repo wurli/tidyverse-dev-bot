@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `vignette("search")` has been removed since BS3 is deprecated and
+    all the BS5 docs are also included in `build_search()` (#2564).
+    !end-bullet!
+-   !begin-bullet!
     YAML validation has been substantially improved so you should get
     much clearer errors if you have made a mistake (#1927). Please file
     an issue if you find a case where the error message is not helpful.
