@@ -136,7 +136,7 @@
 
     !end-bullet!
 -   !begin-bullet!
-    New helper function `ggpar()` to translate ggplot2's interpretation
+    New helper function `gg_par()` to translate ggplot2's interpretation
     of graphical parameters to {grid}'s interpretation (@teunbrand,
     #5866).
 
