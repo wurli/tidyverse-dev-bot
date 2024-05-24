@@ -19,6 +19,13 @@
     (#1045)
 
     !end-bullet!
+-   !begin-bullet!
+    Improved the appearance of cards with sidebars and headers in the
+    Shiny preset, especially when custom card color themes are used,
+    e.g. with `text-bg-primary` or other Bootstrap utility classes.
+    (#1056)
+
+    !end-bullet!
 
 !end-bullets-1!
 
