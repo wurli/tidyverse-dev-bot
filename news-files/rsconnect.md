@@ -1,5 +1,7 @@
 # rsconnect (development version)
 
+# rsconnect 1.3.0
+
 * `deployApp(logLevel = "quiet")` suppresses Posit Connect deployment task
   output. (#1051)
 
