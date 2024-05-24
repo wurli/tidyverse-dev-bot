@@ -17203,3 +17203,4 @@ pkgdown,169bbda8a1b21b3407130f06c6ffd466,"`vignette(""search"")` has been remove
 rsconnect,b31684d315ab191068d3a4144c2a65ee,Skip tests when suggested packages are not available. Skip Quarto tests when run by CRAN. (#1074),NA,NA,NA,NA
 pkgdown,90aef85133301a7071b23b925ff50f3f,New light switch makes it easy for users to switch between light and dark themes for the website (based on work in bslib by @​gadenbuie). For now this behaviour is opt-in with `template.light-switch: true` but in the future we may turn it on automatically. See the customization vignette for details (#1696).,NA,NA,NA,NA
 pkgdown,aa7693c7620de74bee9d46dc12589424,The search dropdown has been tweaked to look more like the other navbar menu items (#2338).,NA,NA,NA,NA
+pkgdown,afa7e05fecab3640a215f718cd79228d,`build_articles()` now recognises a new `external-articles` top-level field that allows you to define articles that live in other packages (#2028).,NA,NA,NA,NA

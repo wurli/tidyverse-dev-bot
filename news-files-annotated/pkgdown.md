@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `build_articles()` now recognises a new `external-articles`
+    top-level field that allows you to define articles that live in
+    other packages (#2028).
+    !end-bullet!
+-   !begin-bullet!
     New light switch makes it easy for users to switch between light and
     dark themes for the website (based on work in bslib by @gadenbuie).
     For now this behaviour is opt-in with `template.light-switch: true`
