@@ -268,6 +268,11 @@
     `collapse=`, i.e., when `sep=` is irrelevant (#1108,
     @MichaelChirico).
     !end-bullet!
+-   !begin-bullet!
+    `expect_no_lint()` was added as new function to cover the typical
+    use case of expecting no lint message, akin to the recent {testthat}
+    functions like `expect_no_warning()` (#2580, @F-Noelle).
+    !end-bullet!
 
 !end-bullets-5!
 
