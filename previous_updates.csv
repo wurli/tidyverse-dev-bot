@@ -17207,3 +17207,4 @@ pkgdown,afa7e05fecab3640a215f718cd79228d,`build_articles()` now recognises a new
 pkgdown,96e9ab5aff3026e9cd8d22858f5f1850,`build_reference_index()` now displays lifecycle badges next to the function name (#2123). You can now also use `has_lifecycle()` to select functions by their lifecycle status.,NA,NA,NA,NA
 bslib,4cd7c43850816e25e17c35e399803296,"Improved the appearance of cards with sidebars and headers in the Shiny preset, especially when custom card color themes are used, e.g. with `text-bg-primary` or other Bootstrap utility classes. (#1056)",NA,NA,NA,NA
 lintr,e49c7362df8e0ba9af16c50e98456978,"`expect_no_lint()` was added as new function to cover the typical use case of expecting no lint message, akin to the recent {testthat} functions like `expect_no_warning()` (#2580, @​F-Noelle).",NA,NA,NA,NA
+rsconnect,a54f4afdbd7785715fe7a5eb2cfc47ec,"Skip tests when packages ""foreign"" and ""MASS"" are not available. (#1081)",NA,NA,NA,NA
