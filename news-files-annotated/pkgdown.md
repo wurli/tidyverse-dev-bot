@@ -3,9 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
-    `build_reference_index()` now displays lifecycle badges next to the
-    function name (#2123). You can now also use `has_lifecycle()` to
-    select functions by their lifecycle status.
+    `build_reference_index()` now displays function lifecycle badges
+    next to the function name (#2123). The badges are extracted only
+    from the function description. You can now also use
+    `has_lifecycle()` to select functions by their lifecycle status.
     !end-bullet!
 -   !begin-bullet!
     `build_articles()` now recognises a new `external-articles`
