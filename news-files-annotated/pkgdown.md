@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    All external assets (JS, CSS, fonts) are now directly included in
+    the site instead of fetched from external CDN (@salim-b, #2249)
+    !end-bullet!
+-   !begin-bullet!
     `build_reference_index()` now displays function lifecycle badges
     next to the function name (#2123). The badges are extracted only
     from the function description. You can now also use
