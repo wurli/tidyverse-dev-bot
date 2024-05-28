@@ -17208,3 +17208,4 @@ pkgdown,96e9ab5aff3026e9cd8d22858f5f1850,`build_reference_index()` now displays 
 bslib,4cd7c43850816e25e17c35e399803296,"Improved the appearance of cards with sidebars and headers in the Shiny preset, especially when custom card color themes are used, e.g. with `text-bg-primary` or other Bootstrap utility classes. (#1056)",NA,NA,NA,NA
 lintr,e49c7362df8e0ba9af16c50e98456978,"`expect_no_lint()` was added as new function to cover the typical use case of expecting no lint message, akin to the recent {testthat} functions like `expect_no_warning()` (#2580, @​F-Noelle).",NA,NA,NA,NA
 rsconnect,a54f4afdbd7785715fe7a5eb2cfc47ec,"Skip tests when packages ""foreign"" and ""MASS"" are not available. (#1081)",NA,NA,NA,NA
+reticulate,99ec0990a58683398bf0cb40356a0bb2,"Fixed an issue where attempting to convert a non-simple NumPy array to R would signal an error. (#1613, fixed in #1614).",NA,NA,NA,NA
