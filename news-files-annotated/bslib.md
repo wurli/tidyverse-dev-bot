@@ -54,8 +54,8 @@
     The main content area of `page_sidebar()` and `page_navbar()` with a
     `sidebar` now have a minimum height and width to avoid squashed
     content in fillable layouts. The minimum height and width are
-    controllable via Sass and CSS variables (see the pull request for
-    details). (#1057)
+    controllable via Sass and CSS variables (see the pull requests for
+    details). (#1057, #1059)
 
     !end-bullet!
 
