@@ -19,6 +19,13 @@
     possible/easier to show progress indication when the output is
     calculating for the first time. (#4039)
     !end-bullet!
+-   !begin-bullet!
+    A new `shiny.client_devmode` option controls client-side devmode
+    features, in particular the client-side error console introduced in
+    shiny 1.8.1, independently of the R-side features of
+    `shiny::devmode()`. This usage is primarily intended for automatic
+    use in Shinylive. (#4073)
+    !end-bullet!
 
 !end-bullets-1!
 
