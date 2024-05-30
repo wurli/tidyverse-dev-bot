@@ -3,6 +3,19 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    pkgdown now uses httr2 instead of httr (#2600).
+    !end-bullet!
+-   !begin-bullet!
+    New `template.math-rendering` allows you to control how math is
+    rendered across your site. The default uses `mathml` which is
+    low-dependency, but has the lowest fidelity. You can also use
+    `mathjax`, the previous default, and `katex`, a faster alternative.
+    (#1966).
+    !end-bullet!
+-   !begin-bullet!
+    Mathjax now uses version 3.2.2.
+    !end-bullet!
+-   !begin-bullet!
     `build_sitemap()` no longer includes redirected pages (#2582).
     !end-bullet!
 -   !begin-bullet!
