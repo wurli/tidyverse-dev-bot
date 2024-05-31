@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `pkgdown_sitrep()`/`check_pkgdown()` now check that you have
+    up-to-date favicons if you have a package logo.
+    !end-bullet!
+-   !begin-bullet!
     pkgdown now uses httr2 instead of httr (#2600).
     !end-bullet!
 -   !begin-bullet!
