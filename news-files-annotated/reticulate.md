@@ -5,6 +5,13 @@
 -   !begin-bullet!
     Fixed an issue where attempting to convert a non-simple NumPy array
     to R would signal an error. (#1613, fixed in #1614).
+
+    !end-bullet!
+-   !begin-bullet!
+    Python Exceptions converted to R conditions are now R lists instead
+    of R environments, for compatability with {rlang} and {purrr}.
+    (tidyverse/purrr#1104, r-lib/rlang#1664, #1617)
+
     !end-bullet!
 
 !end-bullets-1!
