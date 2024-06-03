@@ -90,10 +90,10 @@
 
     !end-bullet!
 -   !begin-bullet!
-    `runExamples()` now uses the `{bslib}` package to generate a better
+    `runExample()` now uses the `{bslib}` package to generate a better
     looking result. It also gains a `package` argument so that other
     packages can leverage this same function to run Shiny app examples.
-    For more, see `?runExamples`. (#3963, #4005)
+    For more, see `?runExample`. (#3963, #4005)
 
     !end-bullet!
 -   !begin-bullet!

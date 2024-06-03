@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Methods that use `<` or `>` no longer generate invalid R code in the
+    usage section (#2303).
+    !end-bullet!
+-   !begin-bullet!
     @olivroy is now a pkgdown author in recognition of his
     contributions.
     !end-bullet!

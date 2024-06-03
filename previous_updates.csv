@@ -17221,3 +17221,4 @@ shiny,88f7c676678cfc70ad0c486b9a4ba699,"A new `shiny.client_devmode` option cont
 pkgdown,ab8fe8846ffa4b2076ac2745d9bc2ad1,`pkgdown_sitrep()`/`check_pkgdown()` now check that you have up-to-date favicons if you have a package logo.,NA,NA,NA,NA
 reticulate,eea5da8c1a63efbd766e1d145e3b96fc,"Python Exceptions converted to R conditions are now R lists instead of R environments, for compatability with {rlang} and {purrr}. (tidyverse/purrr#1104, r-lib/rlang#1664, #1617)",NA,NA,NA,NA
 pkgdown,b6f4963c5b5e648fb6f186214331e8bc,@​olivroy is now a pkgdown author in recognition of his contributions.,NA,NA,NA,NA
+pkgdown,f1a883434c1df5ad9bcfee4308a1d44a,Methods that use `<` or `>` no longer generate invalid R code in the usage section (#2303).,NA,NA,NA,NA
