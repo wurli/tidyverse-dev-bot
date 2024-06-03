@@ -3,8 +3,8 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
-    Methods that use `<` or `>` no longer generate invalid R code in the
-    usage section (#2303).
+    `build_reference()` now generates the usage that users actually type
+    for infix and replacement methods (#2303).
     !end-bullet!
 -   !begin-bullet!
     @olivroy is now a pkgdown author in recognition of his
