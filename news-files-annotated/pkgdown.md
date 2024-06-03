@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    New `vignette("non-english")` that discusses non-English sites
+    including how to submit new translations (#2605).
+    !end-bullet!
+-   !begin-bullet!
     `build_reference()` now generates the usage that users actually type
     for infix and replacement methods (#2303).
     !end-bullet!
