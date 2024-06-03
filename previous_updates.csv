@@ -17220,3 +17220,4 @@ pkgdown,6da42f77ba1a7bc9c2c5870c33c80b3a,Mathjax now uses version 3.2.2.,NA,NA,N
 shiny,88f7c676678cfc70ad0c486b9a4ba699,"A new `shiny.client_devmode` option controls client-side devmode features, in particular the client-side error console introduced in shiny 1.8.1, independently of the R-side features of `shiny::devmode()`. This usage is primarily intended for automatic use in Shinylive. (#4073)",NA,NA,NA,NA
 pkgdown,ab8fe8846ffa4b2076ac2745d9bc2ad1,`pkgdown_sitrep()`/`check_pkgdown()` now check that you have up-to-date favicons if you have a package logo.,NA,NA,NA,NA
 reticulate,eea5da8c1a63efbd766e1d145e3b96fc,"Python Exceptions converted to R conditions are now R lists instead of R environments, for compatability with {rlang} and {purrr}. (tidyverse/purrr#1104, r-lib/rlang#1664, #1617)",NA,NA,NA,NA
+pkgdown,b6f4963c5b5e648fb6f186214331e8bc,@​olivroy is now a pkgdown author in recognition of his contributions.,NA,NA,NA,NA

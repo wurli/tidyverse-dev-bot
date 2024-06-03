@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    @olivroy is now a pkgdown author in recognition of his
+    contributions.
+    !end-bullet!
+-   !begin-bullet!
     `pkgdown_sitrep()`/`check_pkgdown()` now check that you have
     up-to-date favicons if you have a package logo.
     !end-bullet!
