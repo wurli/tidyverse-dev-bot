@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `position_jitterdodge()` now dodges by `group` (@teunbrand, #3656)
+
+    !end-bullet!
+-   !begin-bullet!
     The `arrow.fill` parameter is now applied to more line-based
     functions: `geom_path()`, `geom_line()`, `geom_step()`
     `geom_function()`, line geometries in `geom_sf()` and
@@ -89,7 +93,8 @@
     !end-bullet!
 -   !begin-bullet!
     `facet_wrap()` has new options for the `dir` argument to more
-    precisely control panel directions (@teunbrand, #5212)
+    precisely control panel directions. Internally `dir = "h"` or
+    `dir = "v"` is deprecated (@teunbrand, #5212).
 
     !end-bullet!
 -   !begin-bullet!

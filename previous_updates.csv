@@ -17225,3 +17225,5 @@ pkgdown,f1a883434c1df5ad9bcfee4308a1d44a,Methods that use `<` or `>` no longer g
 pkgdown,0f887df11cb719becf2a380768c2f547,`build_reference()` now generates the usage that users actually type for infix and replacement methods (#2303).,NA,NA,NA,NA
 pkgdown,03117f45d9b1b759ec47bcbb4db44c1a,"New `vignette(""non-english"")` that discusses non-English sites including how to submit new translations (#2605).",NA,NA,NA,NA
 pkgdown,eba980362d750c2c076bbb0dba3f4129,"When built on GitHub, source urls now use the name of the current upstream branch (rather than `HEAD`), which is more likely to generate correct links (#2597).",NA,NA,NA,NA
+ggplot2,c0baa3a8b350017ad4587fac73c8feb9,"`position_jitterdodge()` now dodges by `group` (@​teunbrand, #3656)",NA,NA,NA,NA
+ggplot2,1659a23d472de223c0666a2d42f78c1e,"`facet_wrap()` has new options for the `dir` argument to more precisely control panel directions. Internally `dir = ""h""` or `dir = ""v""` is deprecated (@​teunbrand, #5212).",NA,NA,NA,NA

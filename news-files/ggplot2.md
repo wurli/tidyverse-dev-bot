@@ -1,5 +1,6 @@
 # ggplot2 (development version)
 
+* `position_jitterdodge()` now dodges by `group` (@teunbrand, #3656)
 * The `arrow.fill` parameter is now applied to more line-based functions: 
   `geom_path()`, `geom_line()`, `geom_step()` `geom_function()`, line 
    geometries in `geom_sf()` and `element_line()`.
@@ -44,7 +45,8 @@
 * (Internal) Applying defaults in `geom_sf()` has moved from the internal 
   `sf_grob()` to `GeomSf$use_defaults()` (@teunbrand).
 * `facet_wrap()` has new options for the `dir` argument to more precisely
-  control panel directions (@teunbrand, #5212)
+  control panel directions. Internally `dir = "h"` or `dir = "v"` is deprecated 
+  (@teunbrand, #5212).
 * Prevented `facet_wrap(..., drop = FALSE)` from throwing spurious errors when
   a character facetting variable contained `NA`s (@teunbrand, #5485).
 * When facets coerce the faceting variables to factors, the 'ordered' class
