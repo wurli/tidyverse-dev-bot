@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `build_article()` no long has a `data` argument. This is technically
+    a breaking change, but I can't figure out why anyone would have ever
+    used it.
+    !end-bullet!
+-   !begin-bullet!
     `build_reference()` does a better job of parsing `\value{}` blocks
     (#2371).
     !end-bullet!
