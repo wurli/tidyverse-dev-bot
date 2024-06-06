@@ -17232,3 +17232,7 @@ pkgdown,348d8dd4bdace69f204a5fd16de0fd33,`build_reference()` does a better job o
 pkgdown,a67acd8248036232f9208e79ef332e86,"`build_article()` no long has a `data` argument. This is technically a breaking change, but I can't figure out why anyone would have ever used it.",NA,NA,NA,NA
 pkgdown,45d20f7139a42ef59f529d203ceceeef,`build_reference()` no longer displays `\dontshow{}` or `\testonly{}` blocks in examples. It will run the code in `\dontshow{}`; it won't run the code in `\testonly{}`(#2188).,NA,NA,NA,NA
 ggplot2,01cdc0c1e9cc6be30223130fda90011c,"`geom_rug()` prints a warning when `na.rm = FALSE`, as per documentation (@​pn317, #5905)",NA,NA,NA,NA
+pkgdown,f1da12450b98dfcca8e54996c1848887,"`build_news()` only syntax highlights the page once, not twice, which prevents every block of R code getting a blank line at the start (#2630).",NA,NA,NA,NA
+pkgdown,f1da12450b98dfcca8e54996c1848887,"```
+1 + 1
+```",NA,NA,NA,NA
