@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `build_reference()` no longer displays `\dontshow{}` or
+    `\testonly{}` blocks in examples. It will run the code in
+    `\dontshow{}`; it won't run the code in `\testonly{}`(#2188).
+    !end-bullet!
+-   !begin-bullet!
     `build_article()` no long has a `data` argument. This is technically
     a breaking change, but I can't figure out why anyone would have ever
     used it.
