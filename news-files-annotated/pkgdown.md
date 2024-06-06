@@ -3,6 +3,18 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `document` in `build_site()` and `build_reference()` has been
+    removed after being deprecated in pkgdown 1.4.0. `devel` should be
+    used instead.
+
+    !end-bullet!
+-   !begin-bullet!
+    `autolink_html()` was deprecated in pkgdown 1.6.0 and now warns
+    every time you use it. `downlit::downlit_html_path()` should be used
+    instead.
+
+    !end-bullet!
+-   !begin-bullet!
     `build_news()` only syntax highlights the page once, not twice,
     which prevents every block of R code getting a blank line at the
     start (#2630).

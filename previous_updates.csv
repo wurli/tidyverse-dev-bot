@@ -17236,3 +17236,5 @@ pkgdown,f1da12450b98dfcca8e54996c1848887,"`build_news()` only syntax highlights 
 pkgdown,f1da12450b98dfcca8e54996c1848887,"```
 1 + 1
 ```",NA,NA,NA,NA
+pkgdown,12a76155c1db9d10e3aaedb04578348f,`document` in `build_site()` and `build_reference()` has been removed after being deprecated in pkgdown 1.4.0. `devel` should be used instead.,NA,NA,NA,NA
+pkgdown,27d9f5023f216ce3df8396433838ea5f,`autolink_html()` was deprecated in pkgdown 1.6.0 and now warns every time you use it. `downlit::downlit_html_path()` should be used instead.,NA,NA,NA,NA
