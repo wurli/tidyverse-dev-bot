@@ -1065,7 +1065,7 @@
 
     !end-bullet!
 -   !begin-bullet!
-    Replaced all `match.arg()` calls with **rlang**'s `match_arg()` for
+    Replaced all `match.arg()` calls with `rlang::arg_match()` for
     better error output (#672). (#1099, thanks @mojister!)
 
     !end-bullet!
