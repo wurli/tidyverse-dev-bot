@@ -91,6 +91,13 @@
 !begin-bullets-3!
 
 -   !begin-bullet!
+    `expect_identical_linter()` also skips `expect_equal()` comparison
+    to *negative* non-integers like `-1.034` (#2411, @Bisaloo). This is
+    a parity fix since *positive* reals have always been skipped because
+    "high-precision" comparisons are typically done to get tests within
+    `tolerance`, so `expect_identical()` is not a great substitution.
+    !end-bullet!
+-   !begin-bullet!
     `object_name_linter()` no longer errors when user-supplied
     `regexes=` have capture groups (#2188, @MichaelChirico).
     !end-bullet!
