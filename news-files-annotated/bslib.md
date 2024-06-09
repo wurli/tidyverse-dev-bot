@@ -24,6 +24,14 @@
     Adjusted the border color of checkbox and radio buttons to match the
     border color of the input group in `bs_theme(preset="shiny")`.
     (#1038)
+
+    !end-bullet!
+-   !begin-bullet!
+    Example apps provided with bslib have now moved from `examples` to
+    `examples-shiny` to take advantage of the new `package` argument in
+    `shiny::runExample()` with shiny \>= 1.8.1. For example, try
+    `shiny::runExample("build-a-box", package = "bslib")`. (#1049)
+
     !end-bullet!
 
 !end-bullets-2!
