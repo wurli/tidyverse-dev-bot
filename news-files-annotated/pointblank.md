@@ -1,12 +1,19 @@
 # pointblank (development version)
 
+## Minor improvements and bug fixes
+
 !begin-bullets-1!
 
+-   !begin-bullet!
+    `col_vals_expr()` now shows used columns in the agent report
+
+    !end-bullet!
 -   !begin-bullet!
     Fixed a regression in `col_vals_*()` functions, where `vars("col")`
     was evaluating to the string `"col"`. Behavior of `vars("col")` is
     now aligned back with `vars(col)` - both evaluate to the column name
     `col`.
+
     !end-bullet!
 
 !end-bullets-1!
