@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `build_article()` now translates the "Abstract" title if it's used.
+
+    !end-bullet!
+-   !begin-bullet!
     `build_*()` (apart from `build_site()`) functions no longer default
     to previewing in interactive sessions since they now all emit
     specific links to newly generated files.
