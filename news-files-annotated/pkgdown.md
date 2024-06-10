@@ -3,7 +3,7 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
-    `preivew_page()` has been deprecated (#2650).
+    `preview_page()` has been deprecated (#2650).
 
     !end-bullet!
 -   !begin-bullet!
