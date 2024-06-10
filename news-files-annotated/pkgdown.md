@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `preivew_page()` has been deprecated (#2650).
+
+    !end-bullet!
+-   !begin-bullet!
     `build_article()` now translates the "Abstract" title if it's used.
 
     !end-bullet!
