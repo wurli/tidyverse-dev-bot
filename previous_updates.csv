@@ -17244,3 +17244,4 @@ lintr,f9d9c350b6f9c3c20a045fec62074a7d,"`expect_identical_linter()` also skips `
 pointblank,32e6154a0a1bff4f9f6ab1a60c05914e,`col_vals_expr()` now shows used columns in the agent report,NA,NA,NA,NA
 bslib,137d66de93f8f0a6949eb08dce50e0a7,"Example apps provided with bslib have now moved from `examples` to `examples-shiny` to take advantage of the new `package` argument in `shiny::runExample()` with shiny \>= 1.8.1. For example, try `shiny::runExample(""build-a-box"", package = ""bslib"")`. (#1049)",NA,NA,NA,NA
 pkgdown,2bb8c5e8edaebe1d712e241b8486e743,"`build_article()` now translates the ""Abstract"" title if it's used.",NA,NA,NA,NA
+bslib,a1c86f88e1f2433e60543150103239aa,"When `card_body(fillable = FALSE)`, bslib now preserves flow-layout margin bottom settings. (#1073)",NA,NA,NA,NA

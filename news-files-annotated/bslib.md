@@ -66,6 +66,11 @@
     details). (#1057, #1059)
 
     !end-bullet!
+-   !begin-bullet!
+    When `card_body(fillable = FALSE)`, bslib now preserves flow-layout
+    margin bottom settings. (#1073)
+
+    !end-bullet!
 
 !end-bullets-3!
 
