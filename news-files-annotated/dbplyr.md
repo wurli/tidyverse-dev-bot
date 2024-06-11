@@ -5,6 +5,13 @@
 -   !begin-bullet!
     `across(everything())` doesn't select grouping columns created via
     `.by` in `summarise()` (@mgirlich, #1493).
+
+    !end-bullet!
+-   !begin-bullet!
+    Spark SQL backend now supports persisting tables with
+    `compute(x, name = I("x.y.z"), temporary = FALSE)` (@zacdav-db,
+    #1502).
+
     !end-bullet!
 
 !end-bullets-1!
