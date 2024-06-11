@@ -1,5 +1,7 @@
 # diffviewer (development version)
 
+* diffviewer gets a sizing policy that works better in Rmds.
+
 # diffviewer 0.1.1
 
 * The diffviewer widget previously ignored some very minor pixel differences, 
