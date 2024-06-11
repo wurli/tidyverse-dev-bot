@@ -17247,3 +17247,4 @@ pkgdown,2bb8c5e8edaebe1d712e241b8486e743,"`build_article()` now translates the "
 bslib,a1c86f88e1f2433e60543150103239aa,"When `card_body(fillable = FALSE)`, bslib now preserves flow-layout margin bottom settings. (#1073)",NA,NA,NA,NA
 pkgdown,c5d2956cb7c31f5487b113f685681619,`preivew_page()` has been deprecated (#2650).,NA,NA,NA,NA
 dbplyr,efcd4661011898091fe74a6745d7d103,"Spark SQL backend now supports persisting tables with `compute(x, name = I(""x.y.z""), temporary = FALSE)` (@​zacdav-db, #1502).",NA,NA,NA,NA
+lintr,90d80d0521eb26d8f239707331beca53,"All user-facing messages are now prepared using the `{cli}` package (#2418, @​IndrajeetPatil). All messages have been reviewed and updated to be more informative and consistent.",NA,NA,NA,NA
