@@ -3,7 +3,8 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
-    diffviewer gets a sizing policy that works better in Rmds.
+    diffviewer gets a sizing policy that works better in Rmds, and some
+    css tweaks to ensure it's readable in dark mode.
     !end-bullet!
 
 !end-bullets-1!

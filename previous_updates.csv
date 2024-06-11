@@ -17249,3 +17249,4 @@ pkgdown,c5d2956cb7c31f5487b113f685681619,`preivew_page()` has been deprecated (#
 dbplyr,efcd4661011898091fe74a6745d7d103,"Spark SQL backend now supports persisting tables with `compute(x, name = I(""x.y.z""), temporary = FALSE)` (@​zacdav-db, #1502).",NA,NA,NA,NA
 lintr,90d80d0521eb26d8f239707331beca53,"All user-facing messages are now prepared using the `{cli}` package (#2418, @​IndrajeetPatil). All messages have been reviewed and updated to be more informative and consistent.",NA,NA,NA,NA
 diffviewer,a4ab2544d6b31f1c7a16d0123342370c,diffviewer gets a sizing policy that works better in Rmds.,NA,NA,NA,NA
+diffviewer,46e67ea85649ec092ef3626cee5f45fd,"diffviewer gets a sizing policy that works better in Rmds, and some css tweaks to ensure it's readable in dark mode.",NA,NA,NA,NA

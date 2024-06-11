@@ -1,6 +1,6 @@
 # diffviewer (development version)
 
-* diffviewer gets a sizing policy that works better in Rmds.
+* diffviewer gets a sizing policy that works better in Rmds, and some css tweaks to ensure it's readable in dark mode.
 
 # diffviewer 0.1.1
 
