@@ -17250,3 +17250,4 @@ dbplyr,efcd4661011898091fe74a6745d7d103,"Spark SQL backend now supports persisti
 lintr,90d80d0521eb26d8f239707331beca53,"All user-facing messages are now prepared using the `{cli}` package (#2418, @​IndrajeetPatil). All messages have been reviewed and updated to be more informative and consistent.",NA,NA,NA,NA
 diffviewer,a4ab2544d6b31f1c7a16d0123342370c,diffviewer gets a sizing policy that works better in Rmds.,NA,NA,NA,NA
 diffviewer,46e67ea85649ec092ef3626cee5f45fd,"diffviewer gets a sizing policy that works better in Rmds, and some css tweaks to ensure it's readable in dark mode.",NA,NA,NA,NA
+pkgdown,bbcb86c943672e3462fe2dbe2e9c8c4f,@​olivroy and @​salim-b are now pkgdown authors in recognition of their contributions.,NA,NA,NA,NA

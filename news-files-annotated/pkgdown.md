@@ -74,8 +74,8 @@
 
     !end-bullet!
 -   !begin-bullet!
-    @olivroy is now a pkgdown author in recognition of his
-    contributions.
+    @olivroy and @salim-b are now pkgdown authors in recognition of
+    their contributions.
 
     !end-bullet!
 -   !begin-bullet!
