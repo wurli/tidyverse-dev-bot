@@ -400,6 +400,12 @@
     (#2418, @IndrajeetPatil). All messages have been reviewed and
     updated to be more informative and consistent.
     !end-bullet!
+-   !begin-bullet!
+    {lintr} now depends on R version 4.0.0. It already does so
+    implicitly due to recursive upstream dependencies requiring this
+    version; we've simply made that dependency explicit and up-front
+    (#2569, @MichaelChirico).
+    !end-bullet!
 
 !end-bullets-10!
 

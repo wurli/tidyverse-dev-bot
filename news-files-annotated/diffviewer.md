@@ -1,5 +1,7 @@
 # diffviewer (development version)
 
+# diffviewer 0.1.2
+
 !begin-bullets-1!
 
 -   !begin-bullet!
