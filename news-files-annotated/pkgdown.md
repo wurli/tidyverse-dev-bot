@@ -3,6 +3,15 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `build_articles()` and `build_article()` now support
+    articles/vignettes written with quarto. Combining the disparate
+    quarto and pkgdown templating systems is a delicate art, so while
+    I've done my best to make it work, there may be some rough edges. So
+    please file an issue you encounter quarto features that don't work
+    quite right. Learn more in `vignette("quarto")`(#2210).
+
+    !end-bullet!
+-   !begin-bullet!
     `preview_page()` has been deprecated (#2650).
 
     !end-bullet!
