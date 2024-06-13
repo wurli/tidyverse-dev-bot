@@ -1,5 +1,8 @@
 # keras3 (development version)
 
+- Fixed issue where GPUs would not be found when running on Windows under WSL Linux.
+  (reported in #1456, fixed in #1459)
+
 # keras3 1.0.0
 
 - Chains of `layer_*` calls with `|>` now instantiate layers in the
@@ -124,7 +127,7 @@ New functions:
 
 # keras3 0.1.0
 
-- The package has been rebuilt for Keras 3.0. Refer to <blogpost> for an overview
+- The package has been rebuilt for Keras 3.0. Refer to https://blogs.rstudio.com/ai/posts/2024-05-21-keras3/ for an overview
   and https://keras.posit.co for the current up-to-date documentation.
 
 # keras 2.13.0

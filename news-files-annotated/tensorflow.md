@@ -1,8 +1,17 @@
 # tensorflow (development version)
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    Fixed an issue where GPUs would not be found when running on Windows
+    WSL Linux (reported in rstudio/keras3#1456, fixed in #599)
+    !end-bullet!
+
+!end-bullets-1!
+
 # tensorflow 2.16.0
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     The package now Suggest 'keras3' instead of 'keras'
@@ -16,11 +25,11 @@
     symlinks for cudnn and ptxax.
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # tensorflow 2.15.0
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     `install_tensorflow()` installs TensorFlow v2.15 by default
@@ -29,15 +38,15 @@
     Added compatibility with the latest release of reticulate (\> 1.34).
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 # tensorflow 2.14.0
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     `install_tensorflow()` changes:
-    !begin-bullets-4!
+    !begin-bullets-5!
     -   !begin-bullet!
         Installs TensorFlow v2.14 by default.
         !end-bullet!
@@ -58,7 +67,7 @@
         on Arm Macs.
         !end-bullet!
 
-    !end-bullets-4!
+    !end-bullets-5!
     !end-bullet!
 -   !begin-bullet!
     Fixed an issue where `as.array()` and other methods might fail if
@@ -80,15 +89,15 @@
     future release.
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 # tensorflow 2.13.0
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     `install_tensorflow()` changes:
-    !begin-bullets-6!
+    !begin-bullets-7!
     -   !begin-bullet!
         Installs TensorFlow v2.13 by default now.
         !end-bullet!
@@ -121,18 +130,18 @@
         `tensorflow-metal`.
         !end-bullet!
 
-    !end-bullets-6!
+    !end-bullets-7!
     !end-bullet!
 -   !begin-bullet!
     New `pillar:type_sum()` method for Tensors, giving a more
     informative printout of Tensors in R tracebacks and tibbles.
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # tensorflow 2.11.0
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     `install_tensorflow()` now installs TF v2.11 by default.
@@ -157,16 +166,16 @@
 
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 # tensorflow 2.9.0
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     Generic method updates:
 
-    !begin-bullets-9!
+    !begin-bullets-10!
     -   !begin-bullet!
         New methods: all(), any(), sum(), prod(), min(), max(), mean(),
         range(), cbind(), rbind(), t(), aperm(), sort(), as.vector(),
@@ -188,7 +197,7 @@
         line; `str()` on a list of tensors now does something sensible.
         !end-bullet!
 
-    !end-bullets-9!
+    !end-bullets-10!
     !end-bullet!
 -   !begin-bullet!
     `install_tensorflow()` now install TensorFlow 2.9 by default.
@@ -215,7 +224,7 @@
 -   !begin-bullet!
     `as_tensor()`:
 
-    !begin-bullets-10!
+    !begin-bullets-11!
     -   !begin-bullet!
         atomic R integer vectors now convert to 'int32', not 'int64'
         !end-bullet!
@@ -231,18 +240,18 @@
         `shape` provided as a tensor would raise an error.
         !end-bullet!
 
-    !end-bullets-10!
+    !end-bullets-11!
     !end-bullet!
 -   !begin-bullet!
     `tf.SparseTensor` objects now inherit from `"tensorflow.tensor"`.
 
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 # tensorflow 2.8.0
 
-!begin-bullets-11!
+!begin-bullets-12!
 
 -   !begin-bullet!
     Updated default Tensorflow version installed by
@@ -260,7 +269,7 @@
     `install_tensorflow()` now provides experimental support for Arm
     Macs, with the following restrictions:
 
-    !begin-bullets-12!
+    !begin-bullets-13!
     -   !begin-bullet!
         "conda" is the only supported installation method.
         !end-bullet!
@@ -269,7 +278,7 @@
         supported.
         !end-bullet!
 
-    !end-bullets-12!
+    !end-bullets-13!
     !end-bullet!
 -   !begin-bullet!
     `install_tensorflow()` default conda_python_version changes from 3.7
@@ -287,11 +296,11 @@
 
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-12!
 
 # tensorflow 2.7.0
 
-!begin-bullets-13!
+!begin-bullets-14!
 
 -   !begin-bullet!
     Default Tensorflow version installed by `install_tensorflow()`
@@ -301,7 +310,7 @@
 -   !begin-bullet!
     Breaking changes:
 
-    !begin-bullets-14!
+    !begin-bullets-15!
     -   !begin-bullet!
         `shape()` now returns a `tf.TensorShape()` object (Previously an
         R-list of `NULL`s or integers).
@@ -322,7 +331,7 @@
         an R list with `NULL` for undefined dimension)
         !end-bullet!
 
-    !end-bullets-14!
+    !end-bullets-15!
     !end-bullet!
 -   !begin-bullet!
     New S3 generics for `tf.TensorShape()`'s: `c`, `length`, `[<-`,
@@ -355,11 +364,11 @@
 
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-14!
 
 # tensorflow 2.6.0
 
-!begin-bullets-15!
+!begin-bullets-16!
 
 -   !begin-bullet!
     Updated default Tensorflow version to 2.6.
@@ -384,7 +393,7 @@
 -   !begin-bullet!
     Refactored `install_tensorflow()`.
 
-    !begin-bullets-16!
+    !begin-bullets-17!
     -   !begin-bullet!
         Potentially breaking change: numeric versions supplied without a
         patchlevel now automatically pull the latest patch release.
@@ -392,12 +401,12 @@
         `"2.4.2"`. Previously it would install "2.4.0")
         !end-bullet!
 
-    !end-bullets-16!
+    !end-bullets-17!
     !end-bullet!
 -   !begin-bullet!
     Removed "Config/reticulate" declaration from DESCRIPTION.
 
-    !begin-bullets-17!
+    !begin-bullets-18!
     -   !begin-bullet!
         Setting `RETICULATE_AUTOCONFIGURE=FALSE` environment variable
         when using non-default tensorflow installations (e.g.,
@@ -408,7 +417,7 @@
         installation.
         !end-bullet!
 
-    !end-bullets-17!
+    !end-bullets-18!
     !end-bullet!
 -   !begin-bullet!
     Refactored automated tests to closer match the default installation
@@ -432,11 +441,11 @@
 
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-16!
 
 # tensorflow 2.5.0
 
-!begin-bullets-18!
+!begin-bullets-19!
 
 -   !begin-bullet!
     Updated default Tensorflow version to 2.5.
@@ -457,11 +466,11 @@
     installation.
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-19!
 
 # tensorflow 2.4.0
 
-!begin-bullets-19!
+!begin-bullets-20!
 
 -   !begin-bullet!
     Fixed error with `use_session_with_seed` (#428)
@@ -475,11 +484,11 @@
     default Python to 3.7 (#454)
     !end-bullet!
 
-!end-bullets-19!
+!end-bullets-20!
 
 # TensorFlow 2.2.0 (CRAN)
 
-!begin-bullets-20!
+!begin-bullets-21!
 
 -   !begin-bullet!
     Bugfix with `all_dims` (#398)
@@ -490,11 +499,11 @@
 
     !end-bullet!
 
-!end-bullets-20!
+!end-bullets-21!
 
 # TensorFlow 2.0.0 (CRAN)
 
-!begin-bullets-21!
+!begin-bullets-22!
 
 -   !begin-bullet!
     Upgraded default installed version to 2.0.0.
@@ -514,11 +523,11 @@
 
     !end-bullet!
 
-!end-bullets-21!
+!end-bullets-22!
 
 # TensorFlow 1.14.1 (CRAN)
 
-!begin-bullets-22!
+!begin-bullets-23!
 
 -   !begin-bullet!
     Upgraded default installed version to 1.14.0
@@ -533,11 +542,11 @@
 
     !end-bullet!
 
-!end-bullets-22!
+!end-bullets-23!
 
 # TensorFlow 1.13.1 (CRAN)
 
-!begin-bullets-23!
+!begin-bullets-24!
 
 -   !begin-bullet!
     added option to silence TF CPP info output
@@ -548,4 +557,4 @@
 
     !end-bullet!
 
-!end-bullets-23!
+!end-bullets-24!
