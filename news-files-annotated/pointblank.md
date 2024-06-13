@@ -15,6 +15,13 @@
     `col`.
 
     !end-bullet!
+-   !begin-bullet!
+    Warnings/errors arising from comparing `columns` to a `value` of
+    different class (for example, comparing a datetime column to a date
+    value `Sys.Date()` instead of another datetime value `Sys.time()`)
+    are now signalled appropriately at `interrogate()`.
+
+    !end-bullet!
 
 !end-bullets-1!
 
