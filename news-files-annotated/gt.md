@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `opt_interactive()` now shows row names if `rownames_to_stub = TRUE`
+    (@olivroy, #1702).
+
+    !end-bullet!
+-   !begin-bullet!
     `data_color()` throws a more informative error message if `rows`
     didn't resolve to anything (@olivroy, #1659).
 
