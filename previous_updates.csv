@@ -17261,3 +17261,4 @@ gt,8bed7c76daf4adeccbd1b0f91b073f52,"`opt_interactive()` now shows row names if 
 rmarkdown,e117a57410b608aaf6dcb73cb5ad63bf,"`beamer_presentation` support handling latex dependencies via the new `extra_dependencies` argument and declarations within chunks (e.g., `knitr::asis_output("""", meta = list(rmarkdown::latex_dependency(""longtable"")))`) (thanks, @​cderv, @​atusy, #2478).",NA,NA,NA,NA
 reticulate,8a19165e358cfd57d44c3af81214745e,Internal updates for NumPy 2.0 (#1621),NA,NA,NA,NA
 reticulate,997712c215a3c0eb6e08dd4662d41f9b,Added support for converting NumPy StringDType arrays to R character arrays. (#1623),NA,NA,NA,NA
+renv,586726518c0c022b1e97599d50639e98,"`renv` now normalizes lockfile entries for Bioconductor packages installed via `pak::pkg_install()`, to help prevent spurious diffs being produced via `renv::status()`. (#1920)",NA,NA,NA,NA
