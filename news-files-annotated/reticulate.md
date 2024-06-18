@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Added support for converting NumPy StringDType arrays to R character
+    arrays. (#1623)
+
+    !end-bullet!
+-   !begin-bullet!
     Internal updates for NumPy 2.0 (#1621)
 
     !end-bullet!
