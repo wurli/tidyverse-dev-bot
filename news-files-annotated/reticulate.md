@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Internal updates for NumPy 2.0 (#1621)
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed an issue where attempting to convert a non-simple NumPy array
     to R would signal an error. (#1613, fixed in #1614).
 
