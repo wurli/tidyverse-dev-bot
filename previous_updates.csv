@@ -17264,3 +17264,4 @@ reticulate,997712c215a3c0eb6e08dd4662d41f9b,Added support for converting NumPy S
 renv,586726518c0c022b1e97599d50639e98,"`renv` now normalizes lockfile entries for Bioconductor packages installed via `pak::pkg_install()`, to help prevent spurious diffs being produced via `renv::status()`. (#1920)",NA,NA,NA,NA
 reticulate,957ad6b17f68cf49e103aac8cb1940ed,Internal updates for compliance with R's upcoming formalized C API. (#1625),NA,NA,NA,NA
 tensorflow,5a5f8ac869e16d7eb6c2c759f451c691,Fixes for NumPy 2.0 (#601),NA,NA,NA,NA
+gt,698be6b8b0cd2b11962f2eeded9989e0,"`opt_interactive()` gains `height` to help specify your widget's height (@​olivroy, #1544).",NA,NA,NA,NA
