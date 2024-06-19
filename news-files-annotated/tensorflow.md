@@ -6,6 +6,9 @@
     Fixed an issue where GPUs would not be found when running on Windows
     WSL Linux (reported in rstudio/keras3#1456, fixed in #599)
     !end-bullet!
+-   !begin-bullet!
+    Fixes for NumPy 2.0 (#601)
+    !end-bullet!
 
 !end-bullets-1!
 
