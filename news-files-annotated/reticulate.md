@@ -3,8 +3,9 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
-    Added support for converting NumPy StringDType arrays to R character
-    arrays. (#1623)
+    Python Exceptions converted to R conditions are now R lists instead
+    of R environments, for compatability with {rlang} and {purrr}.
+    (tidyverse/purrr#1104, r-lib/rlang#1664, #1617)
 
     !end-bullet!
 -   !begin-bullet!
@@ -12,14 +13,19 @@
 
     !end-bullet!
 -   !begin-bullet!
-    Fixed an issue where attempting to convert a non-simple NumPy array
-    to R would signal an error. (#1613, fixed in #1614).
+    Added support for converting NumPy StringDType arrays to R character
+    arrays. (#1623)
 
     !end-bullet!
 -   !begin-bullet!
-    Python Exceptions converted to R conditions are now R lists instead
-    of R environments, for compatability with {rlang} and {purrr}.
-    (tidyverse/purrr#1104, r-lib/rlang#1664, #1617)
+    Internal updates for compliance with R's upcoming formalized C API.
+    (#1625)
+
+    !end-bullet!
+-   !begin-bullet!
+    Fixed an issue where attempting to convert a NumPy array with a
+    non-simple dtype to R would signal an error. (#1613, fixed in
+    #1614).
 
     !end-bullet!
 
