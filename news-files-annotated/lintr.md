@@ -83,6 +83,10 @@
     longer linted by default; use `in_operators = "%chin%"` to continue
     linting it. (@F-Noelle)
     !end-bullet!
+-   !begin-bullet!
+    `lint()` and friends now normalize paths to forward slashes on
+    Windows (@olivroy, #2613).
+    !end-bullet!
 
 !end-bullets-1!
 
