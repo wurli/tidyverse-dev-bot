@@ -17269,3 +17269,4 @@ lintr,cc7295136f7910e529cd21b4647cf29e,"`lint()` and friends now normalize paths
 cli,0357927d6e80331a7271838cdd041783,cli now builds on ARM Windows.,NA,NA,NA,NA
 cli,5485e9fc68eebf021a3b59adad43ae27,"""Solarized Dark"" is now the default syntax highlighting theme in terminals.",NA,NA,NA,NA
 cli,5d99c08ffb74d03480cb96f5b4f042f0,The `{.obj_type_friendly}` inline style now only shows the first class name (#669 @​olivroy).,NA,NA,NA,NA
+cli,49a2840040f1632ac9cf87e63ef18eda,Syntax highlighting now does not fail in RStudio if the rstudioapi package is not installed (#697).,NA,NA,NA,NA

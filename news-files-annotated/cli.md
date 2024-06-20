@@ -16,6 +16,11 @@
     class name (#669 @olivroy).
 
     !end-bullet!
+-   !begin-bullet!
+    Syntax highlighting now does not fail in RStudio if the rstudioapi
+    package is not installed (#697).
+
+    !end-bullet!
 
 !end-bullets-1!
 
