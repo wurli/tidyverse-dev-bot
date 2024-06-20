@@ -1,8 +1,27 @@
 # cli (development version)
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    cli now builds on ARM Windows.
+
+    !end-bullet!
+-   !begin-bullet!
+    "Solarized Dark" is now the default syntax highlighting theme in
+    terminals.
+
+    !end-bullet!
+-   !begin-bullet!
+    The `{.obj_type_friendly}` inline style now only shows the first
+    class name (#669 @olivroy).
+
+    !end-bullet!
+
+!end-bullets-1!
+
 # cli 3.6.2
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     `ansi_collapse(x, trunc = 1, style = "head")` now indeed shows one
@@ -21,22 +40,22 @@
 
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # cli 3.6.1
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     ANSI hyperlinks are now turned off on the RStudio render plane
     (#581).
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 # cli 3.6.0
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     The progressr progress handler now reports progress correctly
@@ -62,11 +81,11 @@
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 # cli 3.5.0
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     New `keypress()` function to read a single key press from a
@@ -99,11 +118,11 @@
 
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 # cli 3.4.1
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     cli has better error messages now.
@@ -115,11 +134,11 @@
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # cli 3.4.0
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     New experimental styles to create ANSI hyperlinks in RStudio and
@@ -253,11 +272,11 @@
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 # cli 3.3.0
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     `style_hyperlink()` no longer breaks if the env variable
@@ -281,24 +300,24 @@
 
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 # cli 3.2.0
 
 ## Breaking change
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     The `cli_theme_dark` option is now known as `cli.theme_dark`, to be
     consistent with all other cli option names (#380).
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 ## Other changes
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     The preferred names of the S3 classes `ansi_string`, `ansi_style`,
@@ -343,39 +362,39 @@
 
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 # cli 3.1.1
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     `style_hyperlink()` gains a `params=` argument (#384).
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 # cli 3.1.0
 
 ## Breaking changes
 
-!begin-bullets-11!
+!begin-bullets-12!
 
 -   !begin-bullet!
     The C progress bar API now uses `double` instead of `int` as the
     data type of the progress units (#335).
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-12!
 
 ## New features
 
-!begin-bullets-12!
+!begin-bullets-13!
 
 -   !begin-bullet!
     Several improvements and changes in the `ansi_*()` functions:
 
-    !begin-bullets-13!
+    !begin-bullets-14!
     -   !begin-bullet!
         most `ansi_*()` functions are now implemented in C and they are
         much faster (#316).
@@ -403,7 +422,7 @@
         arguments to look for SGR tags, CSI tags, or both.
         !end-bullet!
 
-    !end-bullets-13!
+    !end-bullets-14!
     !end-bullet!
 -   !begin-bullet!
     New functions that handle UTF-8 encoded strings correctly:
@@ -443,11 +462,11 @@
 
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
 
 ## Smaller improvements
 
-!begin-bullets-14!
+!begin-bullets-15!
 
 -   !begin-bullet!
     Progress bars with `clear = FALSE` now print the last, completed,
@@ -491,11 +510,11 @@
 
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-15!
 
 # cli 3.0.1
 
-!begin-bullets-15!
+!begin-bullets-16!
 
 -   !begin-bullet!
     `ansi_strtrim()` now correctly keeps `NA` values (#309).
@@ -506,11 +525,11 @@
 
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-16!
 
 # cli 3.0.0
 
-!begin-bullets-16!
+!begin-bullets-17!
 
 -   !begin-bullet!
     New functions for progress bars, please see the new articles at
@@ -528,11 +547,11 @@
 
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-17!
 
 # cli 2.5.0
 
-!begin-bullets-17!
+!begin-bullets-18!
 
 -   !begin-bullet!
     New `style_no_*()` functions to locally undo styling. New
@@ -571,11 +590,11 @@
 
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-18!
 
 # cli 2.4.0
 
-!begin-bullets-18!
+!begin-bullets-19!
 
 -   !begin-bullet!
     New `cli_memo()` function to create a list of items or tasks.
@@ -602,11 +621,11 @@
 
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-19!
 
 # cli 2.3.1
 
-!begin-bullets-19!
+!begin-bullets-20!
 
 -   !begin-bullet!
     ANSI color support detection works correctly now in older RStudio,
@@ -619,11 +638,11 @@
 
     !end-bullet!
 
-!end-bullets-19!
+!end-bullets-20!
 
 # cli 2.3.0
 
-!begin-bullets-20!
+!begin-bullets-21!
 
 -   !begin-bullet!
     `boxx()` now correctly calculates the width of the box for non-ASCII
@@ -656,11 +675,11 @@
 
     !end-bullet!
 
-!end-bullets-20!
+!end-bullets-21!
 
 # cli 2.2.0
 
-!begin-bullets-21!
+!begin-bullets-22!
 
 -   !begin-bullet!
     New `style_hyperlink()` function to add hyperlinks, on terminals
@@ -685,11 +704,11 @@
 
     !end-bullet!
 
-!end-bullets-21!
+!end-bullets-22!
 
 # cli 2.1.0
 
-!begin-bullets-22!
+!begin-bullets-23!
 
 -   !begin-bullet!
     New `cli_vec()` function to allow easier formatting of collapsed
@@ -764,11 +783,11 @@
 
     !end-bullet!
 
-!end-bullets-22!
+!end-bullets-23!
 
 # cli 2.0.2
 
-!begin-bullets-23!
+!begin-bullets-24!
 
 -   !begin-bullet!
     The status bar now does not simplify multiple spaces by a single
@@ -792,11 +811,11 @@
 
     !end-bullet!
 
-!end-bullets-23!
+!end-bullets-24!
 
 # cli 2.0.1
 
-!begin-bullets-24!
+!begin-bullets-25!
 
 -   !begin-bullet!
     Symbols (`symbol$*`) are now correctly printed in RStudio on Windows
@@ -818,7 +837,7 @@
 
     !end-bullet!
 
-!end-bullets-24!
+!end-bullets-25!
 
 # cli 2.0.0
 
@@ -832,18 +851,18 @@ site: https://cli.r-lib.org
 
 ## Bug fixes:
 
-!begin-bullets-25!
+!begin-bullets-26!
 
 -   !begin-bullet!
     Fix a bug in `is_dynamic_tty()`, setting `R_CLI_DYNAMIC="FALSE"` now
     properly turns dynamic tty off (#70).
     !end-bullet!
 
-!end-bullets-25!
+!end-bullets-26!
 
 # cli 1.1.0
 
-!begin-bullets-26!
+!begin-bullets-27!
 
 -   !begin-bullet!
     cli has now functions to add ANSI styles to text. These use the
@@ -879,11 +898,11 @@ site: https://cli.r-lib.org
 
     !end-bullet!
 
-!end-bullets-26!
+!end-bullets-27!
 
 # 1.0.1
 
-!begin-bullets-27!
+!begin-bullets-28!
 
 -   !begin-bullet!
     New `cli_sitrep()` function, situation report about UTF-8 and ANSI
@@ -896,7 +915,7 @@ site: https://cli.r-lib.org
 
     !end-bullet!
 
-!end-bullets-27!
+!end-bullets-28!
 
 # cli 1.0.0
 
