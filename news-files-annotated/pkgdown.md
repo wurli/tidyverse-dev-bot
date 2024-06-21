@@ -5,7 +5,7 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
-    @olivroy and @salim-b are now pkgdown authors in recognition of
+    Added @olivroy and @salim-b as pkgdown authors in recognition of
     their contributions.
     !end-bullet!
 -   !begin-bullet!
@@ -24,7 +24,7 @@
     customization vignette for details (#1696).
     !end-bullet!
 -   !begin-bullet!
-    New `vignette("non-english")` that discusses non-English sites
+    New `vignette("translations")` that discusses non-English sites
     including how to submit new translations (#2605).
     !end-bullet!
 -   !begin-bullet!
@@ -50,7 +50,7 @@
 
 !end-bullets-1!
 
-## Lifecycle chagnes
+## Lifecycle changes
 
 !begin-bullets-2!
 
