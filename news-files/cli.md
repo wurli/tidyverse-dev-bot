@@ -1,5 +1,7 @@
 # cli (development version)
 
+# cli 3.6.3
+
 * cli now builds on ARM Windows.
 
 * "Solarized Dark" is now the default syntax highlighting theme in
