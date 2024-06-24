@@ -17271,3 +17271,4 @@ cli,5485e9fc68eebf021a3b59adad43ae27,"""Solarized Dark"" is now the default synt
 cli,5d99c08ffb74d03480cb96f5b4f042f0,The `{.obj_type_friendly}` inline style now only shows the first class name (#669 @​olivroy).,NA,NA,NA,NA
 cli,49a2840040f1632ac9cf87e63ef18eda,Syntax highlighting now does not fail in RStudio if the rstudioapi package is not installed (#697).,NA,NA,NA,NA
 gt,840fe433cb9e027f45311158f8dadf69,"`opt_interactive()` has better support for displaying group columns if present (`row_groups_as_column` has no effect on the output) (@​olivroy, #1705).",NA,NA,NA,NA
+ggplot2,50393debbb3efcf78de5f9f35f420414,(internal) rearranged the code of `Facet$draw_paensl()` method (@​teunbrand).,NA,NA,NA,NA

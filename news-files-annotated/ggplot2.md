@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    (internal) rearranged the code of `Facet$draw_paensl()` method
+    (@teunbrand).
+
+    !end-bullet!
+-   !begin-bullet!
     `geom_rug()` prints a warning when `na.rm = FALSE`, as per
     documentation (@pn317, #5905)
 
