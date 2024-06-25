@@ -17272,3 +17272,4 @@ cli,5d99c08ffb74d03480cb96f5b4f042f0,The `{.obj_type_friendly}` inline style now
 cli,49a2840040f1632ac9cf87e63ef18eda,Syntax highlighting now does not fail in RStudio if the rstudioapi package is not installed (#697).,NA,NA,NA,NA
 gt,840fe433cb9e027f45311158f8dadf69,"`opt_interactive()` has better support for displaying group columns if present (`row_groups_as_column` has no effect on the output) (@​olivroy, #1705).",NA,NA,NA,NA
 ggplot2,50393debbb3efcf78de5f9f35f420414,(internal) rearranged the code of `Facet$draw_paensl()` method (@​teunbrand).,NA,NA,NA,NA
+pillar,72de6f7f1c796c6ff92da89c56c3847f,"Math operations on `num()` objects now pass additional arguments to the mathematical function (@​gvelasq, #659, #660).",NA,NA,NA,NA
