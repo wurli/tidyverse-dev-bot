@@ -17273,3 +17273,4 @@ cli,49a2840040f1632ac9cf87e63ef18eda,Syntax highlighting now does not fail in RS
 gt,840fe433cb9e027f45311158f8dadf69,"`opt_interactive()` has better support for displaying group columns if present (`row_groups_as_column` has no effect on the output) (@​olivroy, #1705).",NA,NA,NA,NA
 ggplot2,50393debbb3efcf78de5f9f35f420414,(internal) rearranged the code of `Facet$draw_paensl()` method (@​teunbrand).,NA,NA,NA,NA
 pillar,72de6f7f1c796c6ff92da89c56c3847f,"Math operations on `num()` objects now pass additional arguments to the mathematical function (@​gvelasq, #659, #660).",NA,NA,NA,NA
+ggplot2,d9cef3b7aa88841b096335305dabe42a,(internal) The plot's layout now has a coord parameter that is used to prevent setting up identical panel parameters (#5427),NA,NA,NA,NA
