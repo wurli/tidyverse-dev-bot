@@ -17306,3 +17306,4 @@ keras,71b74729e20b86a6f191f671cc4b13e3,• All `op_image_*` functions now use de
 keras,71b74729e20b86a6f191f671cc4b13e3,"• `op_isclose()` gains arguments `rtol`, `atol`, `equal_nan`.",NA,NA,NA,NA
 keras,71b74729e20b86a6f191f671cc4b13e3,• `save_model()` gains argument `zipped`.,NA,NA,NA,NA
 keras,71b74729e20b86a6f191f671cc4b13e3,• Bugs fixes and performance improvements.,NA,NA,NA,NA
+gt,cf18cb7ca5837f5f560e4144bf9c44b0,"gt now depends on R 3.6 (@​olivroy, #1731).",NA,NA,NA,NA

@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    gt now depends on R 3.6 (@olivroy, #1731).
+
+    !end-bullet!
+-   !begin-bullet!
     `opt_interactive()` gains `height` to help specify your widget's
     height (@olivroy, #1544).
 
