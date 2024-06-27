@@ -19,6 +19,11 @@
     of new cli-based helpers that are not exported.
 
     !end-bullet!
+-   !begin-bullet!
+    `usethis::use_version()` now tolerates empty / blank lines preceding
+    the first section title in the package NEWS file. (#1976)
+
+    !end-bullet!
 
 !end-bullets-1!
 
