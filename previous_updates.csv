@@ -17316,3 +17316,4 @@ tibble,a0bc2e283865031c1ac06432e2f9900f,"Replace non-API `SET_S4_OBJECT()` with 
 tibble,6922d6925fe5a96afb6091bb49ff9584,Fix.,NA,NA,NA,NA
 tibble,34b08a88667ad8c1f8dd1f2fb4e02204,Remove dead workflow.,NA,NA,NA,NA
 tibble,d196ccca86294f8a1b56c39d943138e4,Recent updates.,NA,NA,NA,NA
+keras,146ddd0f22aa641af3ed260e774aa4fb,Added compatibility with Keras v3.4.1 (no R user facing changes).,NA,NA,NA,NA

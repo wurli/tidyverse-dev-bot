@@ -12,6 +12,10 @@
     and `!=` methods.
 
     !end-bullet!
+-   !begin-bullet!
+    Added compatibility with Keras v3.4.1 (no R user facing changes).
+
+    !end-bullet!
 
 !end-bullets-1!
 
