@@ -17317,3 +17317,11 @@ tibble,6922d6925fe5a96afb6091bb49ff9584,Fix.,NA,NA,NA,NA
 tibble,34b08a88667ad8c1f8dd1f2fb4e02204,Remove dead workflow.,NA,NA,NA,NA
 tibble,d196ccca86294f8a1b56c39d943138e4,Recent updates.,NA,NA,NA,NA
 keras,146ddd0f22aa641af3ed260e774aa4fb,Added compatibility with Keras v3.4.1 (no R user facing changes).,NA,NA,NA,NA
+pillar,36d95e59b595ee97497f1f07a59f4f8e,Auto-update from GitHub Actions. Run: https://github.com/r-lib/pillar/actions/runs/9691618335,NA,NA,NA,NA
+pillar,046f5ed4ecafa88238a9a18378c78dfc,Avoid checking bashisms on Windows.,NA,NA,NA,NA
+pillar,e52d245c1544d6c461613ba32db5f93a,Better commit message.,NA,NA,NA,NA
+pillar,fdf1da3bf4dc6736eff8d85bc89d1598,"Bump versions, better default, consume custom matrix.",NA,NA,NA,NA
+pillar,fd3687e9d8c976d15c423e7492c1f240,Recent updates.,NA,NA,NA,NA
+tibble,3fea56edb416a0c98b6daa839c1b441f,Avoid checking bashisms on Windows.,NA,NA,NA,NA
+tibble,51b1ef77dad35f82421c068e669ee2db,Better commit message.,NA,NA,NA,NA
+tibble,a98380263e95895134ebf8fef7d05578,"Bump versions, better default, consume custom matrix.",NA,NA,NA,NA
