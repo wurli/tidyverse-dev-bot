@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `stat_bin()` now accepts functions for argument `breaks` (@aijordan,
+    #4561)
+
+    !end-bullet!
+-   !begin-bullet!
     (internal) The plot's layout now has a coord parameter that is used
     to prevent setting up identical panel parameters (#5427)
 
