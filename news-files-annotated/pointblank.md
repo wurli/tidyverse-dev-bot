@@ -22,6 +22,11 @@
     are now signalled appropriately at `interrogate()`.
 
     !end-bullet!
+-   !begin-bullet!
+    Improved readability of error and warning messages rendered as
+    tooltip to the agent report.
+
+    !end-bullet!
 
 !end-bullets-1!
 
