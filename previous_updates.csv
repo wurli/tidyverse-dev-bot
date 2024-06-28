@@ -17326,3 +17326,4 @@ tibble,3fea56edb416a0c98b6daa839c1b441f,Avoid checking bashisms on Windows.,NA,N
 tibble,51b1ef77dad35f82421c068e669ee2db,Better commit message.,NA,NA,NA,NA
 tibble,a98380263e95895134ebf8fef7d05578,"Bump versions, better default, consume custom matrix.",NA,NA,NA,NA
 reticulate,8bfcb10f028d1e0a4261bf1847a8d594,Fixed error when importing a module named `config` (#1628),NA,NA,NA,NA
+usethis,bd6c6c9b11dceff43da8cd84b3409ac1,"`use_test()` and `use_r()` now work when you are in `tests/testthat/_snaps/{foo}.md` (@​olivroy, #1988).",NA,NA,NA,NA
