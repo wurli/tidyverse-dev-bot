@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `use_git()` no longer asks if you want to restart RStudio when using
+    Positron.
+
+    !end-bullet!
+-   !begin-bullet!
     `use_test()` and `use_r()` now work when you are in
     `tests/testthat/_snaps/{foo}.md` (@olivroy, #1988).
 
