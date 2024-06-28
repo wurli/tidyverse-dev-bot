@@ -1,8 +1,16 @@
 # reticulate (development version)
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    Fixed error when importing a module named `config` (#1628)
+    !end-bullet!
+
+!end-bullets-1!
+
 # reticulate 1.38.0
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     Python Exceptions converted to R conditions are now R lists instead
@@ -31,11 +39,11 @@
 
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # reticulate 1.37.0
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     Interrupting Python no longer leads to segfaults. (#1601, fixed in
@@ -64,11 +72,11 @@
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 # reticulate 1.36.1
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     Fix issue where `py_to_r()` method for Pandas DataFrames would error
@@ -91,11 +99,11 @@
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 # reticulate 1.36.0
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     Internal refactoring and optimizations now give a faster experience,
@@ -251,11 +259,11 @@
 
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 # reticulate 1.35.0
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     Subclassed Python list and dict objects are no longer automatically
@@ -288,11 +296,11 @@
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 ## Knitr Python Engine Changes:
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     The knitr python engine now formats captured python exceptions to
@@ -324,13 +332,13 @@
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 # reticulate 1.34.0
 
 # reticulate 1.33.0
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     Fixed issue where `asyncio`, (and modules that use `asyncio`), would
@@ -346,11 +354,11 @@
 
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 # reticulate 1.32.0
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     reticulate now supports casting R data.frames to Pandas data.frames
@@ -421,13 +429,13 @@
 
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 # reticulate 1.31
 
 ## Python Installation Management
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     reticulate will no longer prompt users to install miniconda.
@@ -493,11 +501,11 @@
 
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 ## Language
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     New `[` and `[<-` methods that invoke Python `__getitem__`,
@@ -526,11 +534,11 @@
 
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 ## Knitr
 
-!begin-bullets-11!
+!begin-bullets-12!
 
 -   !begin-bullet!
     The knitr engine gains a `jupyter_compat` option, enabling
@@ -562,11 +570,11 @@
 
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-12!
 
 ## Miscellanous
 
-!begin-bullets-12!
+!begin-bullets-13!
 
 -   !begin-bullet!
     Reticulate now periodically flushes python `stdout` and `stderr`
@@ -611,24 +619,24 @@
 
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
 
 # reticulate 1.30
 
-!begin-bullets-13!
+!begin-bullets-14!
 
 -   !begin-bullet!
     Fix compilation error on R 3.5. Bump minimum R version dependency to
     3.5.
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-14!
 
 # reticulate 1.29
 
 ### Exceptions and Errors:
 
-!begin-bullets-14!
+!begin-bullets-15!
 
 -   !begin-bullet!
     R error information (call, message, other attributes) is now
@@ -675,17 +683,17 @@
 
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-15!
 
 ### Language:
 
-!begin-bullets-15!
+!begin-bullets-16!
 
 -   !begin-bullet!
     Converted Python callables gain support for dynamic dots from the
     rlang package. New features:
 
-    !begin-bullets-16!
+    !begin-bullets-17!
     -   !begin-bullet!
         splicing (unpacking) arguments: `fn(!!!kwargs)`
         !end-bullet!
@@ -697,7 +705,7 @@
         identical to `fn(a)`
         !end-bullet!
 
-    !end-bullets-16!
+    !end-bullets-17!
     !end-bullet!
 -   !begin-bullet!
     New Ops group generics for Python objects: `+`, `-`, `*`, `/`, `^`,
@@ -719,7 +727,7 @@
     Fixed two issues with R comparison operator methods (`==`, `!=`,
     `<`, `<=`, `>=`, `>`):
 
-    !begin-bullets-17!
+    !begin-bullets-18!
     -   !begin-bullet!
         The operators no longer error on Python objects that define
         "rich comparison" Python methods that don't return a single
@@ -734,7 +742,7 @@
         the previous behavior. (#1187, #1363)
         !end-bullet!
 
-    !end-bullets-17!
+    !end-bullets-18!
     !end-bullet!
 -   !begin-bullet!
     R functions wrapping Python callables now have formals matching
@@ -756,11 +764,11 @@
 
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-16!
 
 ### knitr:
 
-!begin-bullets-18!
+!begin-bullets-19!
 
 -   !begin-bullet!
     The knitr engine now suppresses warnings from Python code if
@@ -786,11 +794,11 @@
 
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-19!
 
 ### Misc:
 
-!begin-bullets-19!
+!begin-bullets-20!
 
 -   !begin-bullet!
     `py_to_r()` now succeeds when converting subtypes of the built-in
@@ -836,11 +844,11 @@
 
     !end-bullet!
 
-!end-bullets-19!
+!end-bullets-20!
 
 # reticulate 1.28
 
-!begin-bullets-20!
+!begin-bullets-21!
 
 -   !begin-bullet!
     Fixed issue where `source_python()` (and likely many other
@@ -860,11 +868,11 @@
 
     !end-bullet!
 
-!end-bullets-20!
+!end-bullets-21!
 
 # reticulate 1.27
 
-!begin-bullets-21!
+!begin-bullets-22!
 
 -   !begin-bullet!
     `py_run_file()` now ensures the `__file__` dunder is visible to the
@@ -883,11 +891,11 @@
 
     !end-bullet!
 
-!end-bullets-21!
+!end-bullets-22!
 
 # reticulate 1.26
 
-!begin-bullets-22!
+!begin-bullets-23!
 
 -   !begin-bullet!
     Fixed issue where reticulate failed to bind to python2. (#1241,
@@ -1005,11 +1013,11 @@
 
     !end-bullet!
 
-!end-bullets-22!
+!end-bullets-23!
 
 # reticulate 1.25
 
-!begin-bullets-23!
+!begin-bullets-24!
 
 -   !begin-bullet!
     Fixed an issue where reticulate would fail if R was running embedded
@@ -1071,7 +1079,7 @@
 -   !begin-bullet!
     `print()` and related changes (#1148, #1157):
 
-    !begin-bullets-24!
+    !begin-bullets-25!
     -   !begin-bullet!
         The default `print()` method for Python objects now invokes
         `py_repr()` instead of `str()`.
@@ -1089,12 +1097,12 @@
         composability with `%>%`.
         !end-bullet!
 
-    !end-bullets-24!
+    !end-bullets-25!
     !end-bullet!
 -   !begin-bullet!
     Exception handling changes (#1142, @t-kalinowski):
 
-    !begin-bullets-25!
+    !begin-bullets-26!
     -   !begin-bullet!
         R error messages from Python exceptions are now truncated
         differently to satisfy `getOption("warning.length")`. A hint to
@@ -1108,10 +1116,10 @@
 
         !end-bullet!
 
-    !end-bullets-25!
+    !end-bullets-26!
     \-`py_last_error()`:
 
-    !begin-bullets-26!
+    !begin-bullets-27!
     -   !begin-bullet!
         Return object is now an S3 object 'py_error', includes a default
         print method.
@@ -1132,7 +1140,7 @@
 
         !end-bullet!
 
-    !end-bullets-26!
+    !end-bullets-27!
     !end-bullet!
 -   !begin-bullet!
     Fixed `py_to_r()` for scipy matrices when scipy \>= 1.8.0, since
@@ -1148,11 +1156,11 @@
 
     !end-bullet!
 
-!end-bullets-23!
+!end-bullets-24!
 
 # reticulate 1.24
 
-!begin-bullets-27!
+!begin-bullets-28!
 
 -   !begin-bullet!
     Fixed an issue where `reticulate` would fail to bind to the system
@@ -1160,11 +1168,11 @@
     Xcode was not.
     !end-bullet!
 
-!end-bullets-27!
+!end-bullets-28!
 
 # reticulate 1.23
 
-!begin-bullets-28!
+!begin-bullets-29!
 
 -   !begin-bullet!
     `use_condaenv()` gains the ability to accept an absolute path to a
@@ -1269,22 +1277,22 @@
 
     !end-bullet!
 
-!end-bullets-28!
+!end-bullets-29!
 
 # reticulate 1.22
 
-!begin-bullets-29!
+!begin-bullets-30!
 
 -   !begin-bullet!
     Fixed a regression that caused
     `reticulate::conda_install(pip = TRUE)` to fail. (#1052)
     !end-bullet!
 
-!end-bullets-29!
+!end-bullets-30!
 
 # reticulate 1.21
 
-!begin-bullets-30!
+!begin-bullets-31!
 
 -   !begin-bullet!
     `use_condaenv("base")` can now be used to activate the base Anaconda
@@ -1341,21 +1349,21 @@
 
     !end-bullet!
 
-!end-bullets-30!
+!end-bullets-31!
 
 # reticulate 1.20
 
-!begin-bullets-31!
+!begin-bullets-32!
 
 -   !begin-bullet!
     Fixed an issue causing tests to fail on CRAN's M1mac machine.
     !end-bullet!
 
-!end-bullets-31!
+!end-bullets-32!
 
 # reticulate 1.19
 
-!begin-bullets-32!
+!begin-bullets-33!
 
 -   !begin-bullet!
     Fixed an issue where `reticulate`'s interrupt handlers could cause
@@ -1470,22 +1478,22 @@
 
     !end-bullet!
 
-!end-bullets-32!
+!end-bullets-33!
 
 # reticulate 1.18
 
-!begin-bullets-33!
+!begin-bullets-34!
 
 -   !begin-bullet!
     Fixed an issue where `python_config()` could throw an error when
     attempting to query information about a Python 2.6 installation.
     !end-bullet!
 
-!end-bullets-33!
+!end-bullets-34!
 
 # reticulate 1.17
 
-!begin-bullets-34!
+!begin-bullets-35!
 
 -   !begin-bullet!
     `reticulate` now checks for and disallows installation of Python
@@ -1635,11 +1643,11 @@
 
     !end-bullet!
 
-!end-bullets-34!
+!end-bullets-35!
 
 # reticulate 1.16
 
-!begin-bullets-35!
+!begin-bullets-36!
 
 -   !begin-bullet!
     TinyThread now calls `Rf_error()` rather than `std::terminate()`
@@ -1662,11 +1670,11 @@
 
     !end-bullet!
 
-!end-bullets-35!
+!end-bullets-36!
 
 # reticulate 1.15
 
-!begin-bullets-36!
+!begin-bullets-37!
 
 -   !begin-bullet!
     `reticulate` now ensures SciPy `csr_matrix` objects are sorted
@@ -1749,11 +1757,11 @@
 
     !end-bullet!
 
-!end-bullets-36!
+!end-bullets-37!
 
 # reticulate 1.14
 
-!begin-bullets-37!
+!begin-bullets-38!
 
 -   !begin-bullet!
     Fixed an issue where `rmarkdown::render()` could fail when including
@@ -1853,11 +1861,11 @@
 
     !end-bullet!
 
-!end-bullets-37!
+!end-bullets-38!
 
 # reticulate 1.13
 
-!begin-bullets-38!
+!begin-bullets-39!
 
 -   !begin-bullet!
     Fixed an issue where subsetting with `[.python.builtin.object` could
@@ -1925,11 +1933,11 @@
 
     !end-bullet!
 
-!end-bullets-38!
+!end-bullets-39!
 
 # reticulate 1.12
 
-!begin-bullets-39!
+!begin-bullets-40!
 
 -   !begin-bullet!
     Fixed an issue where Python objects within Python lists would not be
@@ -1957,21 +1965,21 @@
 
     !end-bullet!
 
-!end-bullets-39!
+!end-bullets-40!
 
 # reticulate 1.11.1
 
-!begin-bullets-40!
+!begin-bullets-41!
 
 -   !begin-bullet!
     Fixed a failing virtual environment test on CRAN.
     !end-bullet!
 
-!end-bullets-40!
+!end-bullets-41!
 
 # reticulate 1.11
 
-!begin-bullets-41!
+!begin-bullets-42!
 
 -   !begin-bullet!
     Fixed an issue where attempts to activate virtual environments
@@ -2080,11 +2088,11 @@
 
     !end-bullet!
 
-!end-bullets-41!
+!end-bullets-42!
 
 # reticulate 1.10
 
-!begin-bullets-42!
+!begin-bullets-43!
 
 -   !begin-bullet!
     Output is now properly displayed when using the `reticulate` REPL
@@ -2123,11 +2131,11 @@
 
     !end-bullet!
 
-!end-bullets-42!
+!end-bullets-43!
 
 # reticulate 1.9
 
-!begin-bullets-43!
+!begin-bullets-44!
 
 -   !begin-bullet!
     Detect python 3 in environments where there is no python 2
@@ -2158,11 +2166,11 @@
 
     !end-bullet!
 
-!end-bullets-43!
+!end-bullets-44!
 
 # reticulate 1.8
 
-!begin-bullets-44!
+!begin-bullets-45!
 
 -   !begin-bullet!
     `source_python()` now flushes stdout and stderr after running the
@@ -2197,11 +2205,11 @@
 
     !end-bullet!
 
-!end-bullets-44!
+!end-bullets-45!
 
 # reticulate 1.7
 
-!begin-bullets-45!
+!begin-bullets-46!
 
 -   !begin-bullet!
     Improved filtering of non-numeric characters in Python / NumPy
@@ -2241,11 +2249,11 @@
 
     !end-bullet!
 
-!end-bullets-45!
+!end-bullets-46!
 
 # reticulate 1.6
 
-!begin-bullets-46!
+!begin-bullets-47!
 
 -   !begin-bullet!
     `repl_python()` function implementing a lightweight Python REPL in
@@ -2302,11 +2310,11 @@
 
     !end-bullet!
 
-!end-bullets-46!
+!end-bullets-47!
 
 # reticulate 1.5
 
-!begin-bullets-47!
+!begin-bullets-48!
 
 -   !begin-bullet!
     Remove implicit documentation extraction for Python classes
@@ -2322,11 +2330,11 @@
 
     !end-bullet!
 
-!end-bullets-47!
+!end-bullets-48!
 
 # reticulate 1.4
 
-!begin-bullets-48!
+!begin-bullets-49!
 
 -   !begin-bullet!
     Support for `RETICULATE_DUMP_STACK_TRACE` environment variable which
@@ -2352,22 +2360,22 @@
 
     !end-bullet!
 
-!end-bullets-48!
+!end-bullets-49!
 
 # reticulate 1.3.1
 
-!begin-bullets-49!
+!begin-bullets-50!
 
 -   !begin-bullet!
     Bugfix: ensure single-line Python chunks that produce no output
     still have source code emitted.
     !end-bullet!
 
-!end-bullets-49!
+!end-bullets-50!
 
 # reticulate 1.3
 
-!begin-bullets-50!
+!begin-bullets-51!
 
 -   !begin-bullet!
     Use existing instance of Python when reticulate is loaded within an
@@ -2463,11 +2471,11 @@
 
     !end-bullet!
 
-!end-bullets-50!
+!end-bullets-51!
 
 # reticulate 1.2
 
-!begin-bullets-51!
+!begin-bullets-52!
 
 -   !begin-bullet!
     Add `np_array` function for creating NumPy arrays and converting the
@@ -2511,11 +2519,11 @@
 
     !end-bullet!
 
-!end-bullets-51!
+!end-bullets-52!
 
 # reticulate 1.1
 
-!begin-bullets-52!
+!begin-bullets-53!
 
 -   !begin-bullet!
     Allow `dict()` function to accept keys with mixed alpha/numeric
@@ -2536,11 +2544,11 @@
 
     !end-bullet!
 
-!end-bullets-52!
+!end-bullets-53!
 
 # reticulate 1.0
 
-!begin-bullets-53!
+!begin-bullets-54!
 
 -   !begin-bullet!
     Search WORKON_HOME (used by virtualenv_wrapper) for Python
@@ -2593,11 +2601,11 @@
 
     !end-bullet!
 
-!end-bullets-53!
+!end-bullets-54!
 
 # reticulate 0.9
 
-!begin-bullets-54!
+!begin-bullets-55!
 
 -   !begin-bullet!
     Detect older versions of Anaconda during registry scanning.
@@ -2642,11 +2650,11 @@
 
     !end-bullet!
 
-!end-bullets-54!
+!end-bullets-55!
 
 # reticulate 0.8
 
-!begin-bullets-55!
+!begin-bullets-56!
 
 -   !begin-bullet!
     Add `import_from_path()` function for importing Python modules from
@@ -2792,14 +2800,14 @@
 
     !end-bullet!
 
-!end-bullets-55!
+!end-bullets-56!
 
 # reticulate 0.7
 
-!begin-bullets-56!
+!begin-bullets-57!
 
 -   !begin-bullet!
     Initial CRAN release
     !end-bullet!
 
-!end-bullets-56!
+!end-bullets-57!

@@ -17325,3 +17325,4 @@ pillar,fd3687e9d8c976d15c423e7492c1f240,Recent updates.,NA,NA,NA,NA
 tibble,3fea56edb416a0c98b6daa839c1b441f,Avoid checking bashisms on Windows.,NA,NA,NA,NA
 tibble,51b1ef77dad35f82421c068e669ee2db,Better commit message.,NA,NA,NA,NA
 tibble,a98380263e95895134ebf8fef7d05578,"Bump versions, better default, consume custom matrix.",NA,NA,NA,NA
+reticulate,8bfcb10f028d1e0a4261bf1847a8d594,Fixed error when importing a module named `config` (#1628),NA,NA,NA,NA
