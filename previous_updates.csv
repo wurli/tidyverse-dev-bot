@@ -17330,3 +17330,4 @@ usethis,bd6c6c9b11dceff43da8cd84b3409ac1,"`use_test()` and `use_r()` now work wh
 ggplot2,d331c903ce96753681d9dc6c90fd0cb4,"`stat_bin()` now accepts functions for argument `breaks` (@​aijordan, #4561)",NA,NA,NA,NA
 pointblank,5d1779a2e73ec6ab70464663781f129d,Improved readability of error and warning messages rendered as tooltip to the agent report.,NA,NA,NA,NA
 usethis,c4d859eea92c6ca7e8f61eb625fbba41,`use_git()` no longer asks if you want to restart RStudio when using Positron.,NA,NA,NA,NA
+pillar,ac26283023c62e0377c3dc11cce8ab4c,Only implement `type_sum.accel()` in pkgdown mode (#661).,NA,NA,NA,NA
