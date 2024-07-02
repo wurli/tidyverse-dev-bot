@@ -1,8 +1,18 @@
 # rlang (development version)
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    `env_unlock()` is now defunct because recent versions of R no long
+    make it possible to unlock an environment. Make sure to use an
+    up-to-date version of pkgload (\>= 1.4.0) following this change.
+    !end-bullet!
+
+!end-bullets-1!
+
 # rlang 1.1.4
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     Added missing C level `r_dyn_raw_push_back()` and
@@ -15,11 +25,11 @@
 
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # rlang 1.1.3
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     Fix for CRAN checks.
@@ -31,11 +41,11 @@
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 # rlang 1.1.2
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     Fixed an off-by-one typo in the traceback source column location
@@ -62,11 +72,11 @@
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 # rlang 1.1.1
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     `englue()` now allows omitting `{{`. This is to make it easier to
@@ -89,13 +99,13 @@
 
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 # rlang 1.1.0
 
 ## Life cycle changes
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     `dots_splice()` is deprecated. This function was previously in the
@@ -114,11 +124,11 @@
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 ## Main new features
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     `last_error()` and `options(rlang_backtrace_on_error = "full")` now
@@ -192,11 +202,11 @@
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 ## Miscellaneous fixes and features
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     New `check_data_frame()` and `check_logical()` functions in
@@ -319,11 +329,11 @@
 
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 # rlang 1.0.6
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     `as_closure(seq.int)` now works (#1468).
@@ -359,11 +369,11 @@
 
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 # rlang 1.0.5
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     Fixed backtrace display with calls containing long lists of
@@ -377,11 +387,11 @@
 
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 # rlang 1.0.4
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     `is_installed()` no longer throws an error with irregular package
@@ -394,11 +404,11 @@
 
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 # rlang 1.0.3
 
-!begin-bullets-11!
+!begin-bullets-12!
 
 -   !begin-bullet!
     Child errors may now have empty messages to enable this pattern:
@@ -560,11 +570,11 @@
 
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-12!
 
 # rlang 1.0.2
 
-!begin-bullets-12!
+!begin-bullets-13!
 
 -   !begin-bullet!
     Backtraces of parent errors are now reused on rethrow. This avoids
@@ -605,11 +615,11 @@
 
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
 
 # rlang 1.0.1
 
-!begin-bullets-13!
+!begin-bullets-14!
 
 -   !begin-bullet!
     New `rlang_call_format_srcrefs` global option (#1349). Similar to
@@ -657,7 +667,7 @@
 
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-14!
 
 # rlang 1.0.0
 
@@ -666,7 +676,7 @@
 This release focuses on the rlang errors framework and features
 extensive changes to the display of error messages.
 
-!begin-bullets-14!
+!begin-bullets-15!
 
 -   !begin-bullet!
     `abort()` now displays errors as fully bulleted lists. Error headers
@@ -705,7 +715,7 @@ extensive changes to the display of error messages.
     it for chaining errors. It mostly works like `tryCatch()` with a few
     important differences.
 
-    !begin-bullets-15!
+    !begin-bullets-16!
     -   !begin-bullet!
         Compared to `tryCatch()`, `try_fetch()` preserves the call
         stack. This allows full backtrace capture and allows `recover()`
@@ -719,7 +729,7 @@ extensive changes to the display of error messages.
 
         !end-bullet!
 
-    !end-bullets-15!
+    !end-bullets-16!
     !end-bullet!
 -   !begin-bullet!
     The tidy eval documentation has been fully rewritten to reflect
@@ -728,11 +738,11 @@ extensive changes to the display of error messages.
 
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-15!
 
 ## Breaking changes
 
-!begin-bullets-16!
+!begin-bullets-17!
 
 -   !begin-bullet!
     The `.data` object exported by rlang now fails when subsetted
@@ -814,13 +824,13 @@ extensive changes to the display of error messages.
 
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-17!
 
 ## Fixes and features
 
 ### tidyeval
 
-!begin-bullets-17!
+!begin-bullets-18!
 
 -   !begin-bullet!
     New `englue()` operator to allow string-embracing outside of dynamic
@@ -887,11 +897,11 @@ extensive changes to the display of error messages.
 
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-18!
 
 ### rlang errors
 
-!begin-bullets-18!
+!begin-bullets-19!
 
 -   !begin-bullet!
     `try_fetch()` is a flexible alternative to both `tryCatch()` and
@@ -923,7 +933,7 @@ extensive changes to the display of error messages.
     of R. This introduces several cosmetic and informative changes in
     errors thrown by `abort()`:
 
-    !begin-bullets-19!
+    !begin-bullets-20!
     -   !begin-bullet!
         The `call` field of error messages is now displayed, as is the
         default in `base::stop()`. The call is only displayed if it is a
@@ -945,7 +955,7 @@ extensive changes to the display of error messages.
 
         !end-bullet!
 
-    !end-bullets-19!
+    !end-bullets-20!
     See
     https://rlang.r-lib.org/reference/topic-condition-customisation.html
     to customise this new display.
@@ -961,7 +971,7 @@ extensive changes to the display of error messages.
     The `print()` method of rlang errors (commonly invoked with
     `last_error()`) has been improved:
 
-    !begin-bullets-20!
+    !begin-bullets-21!
     -   !begin-bullet!
         Display calls if present.
         !end-bullet!
@@ -969,7 +979,7 @@ extensive changes to the display of error messages.
         Chained errors are displayed more clearly.
         !end-bullet!
 
-    !end-bullets-20!
+    !end-bullets-21!
     !end-bullet!
 -   !begin-bullet!
     `inform()` and `warn()` messages can now be silenced with the global
@@ -997,7 +1007,7 @@ extensive changes to the display of error messages.
     `format_error_bullets()` (used as a fallback instead of cli) now
     treats:
 
-    !begin-bullets-21!
+    !begin-bullets-22!
     -   !begin-bullet!
         Unnamed elements as unindented line breaks (#1130)
         !end-bullet!
@@ -1014,7 +1024,7 @@ extensive changes to the display of error messages.
         Elements named `"!"` as warning bullets
         !end-bullet!
 
-    !end-bullets-21!
+    !end-bullets-22!
     For convenience, a fully unnamed vector is interpreted as a vector
     of `"*"` bullets.
 
@@ -1095,11 +1105,11 @@ extensive changes to the display of error messages.
 
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-19!
 
 ### Backtraces
 
-!begin-bullets-22!
+!begin-bullets-23!
 
 -   !begin-bullet!
     `entrace()` and `global_entrace()` now log warnings and messages
@@ -1195,11 +1205,11 @@ extensive changes to the display of error messages.
 
     !end-bullet!
 
-!end-bullets-22!
+!end-bullets-23!
 
 ### Argument intake
 
-!begin-bullets-23!
+!begin-bullets-24!
 
 -   !begin-bullet!
     `arg_match()` gains a `multiple` argument for cases where zero or
@@ -1270,11 +1280,11 @@ extensive changes to the display of error messages.
 
     !end-bullet!
 
-!end-bullets-23!
+!end-bullets-24!
 
 ### R APIs
 
-!begin-bullets-24!
+!begin-bullets-25!
 
 -   !begin-bullet!
     `on_load()` and `run_on_load()` lets you run `.onLoad()` expressions
@@ -1286,7 +1296,7 @@ extensive changes to the display of error messages.
     The new predicate `is_call_simple()` indicates whether a call has a
     name and/or a namespace. It provides two invariants:
 
-    !begin-bullets-25!
+    !begin-bullets-26!
     -   !begin-bullet!
         If `is_call_simple(x)` is `TRUE`, `call_name()` always returns a
         string.
@@ -1298,7 +1308,7 @@ extensive changes to the display of error messages.
 
         !end-bullet!
 
-    !end-bullets-25!
+    !end-bullets-26!
     !end-bullet!
 -   !begin-bullet!
     `call_name()` and `call_ns()` now return `NULL` with calls of the
@@ -1498,21 +1508,21 @@ extensive changes to the display of error messages.
 
     !end-bullet!
 
-!end-bullets-24!
+!end-bullets-25!
 
 # rlang 0.4.12
 
-!begin-bullets-26!
+!begin-bullets-27!
 
 -   !begin-bullet!
     Fix for CRAN checks.
     !end-bullet!
 
-!end-bullets-26!
+!end-bullets-27!
 
 # rlang 0.4.11
 
-!begin-bullets-27!
+!begin-bullets-28!
 
 -   !begin-bullet!
     Fix for CRAN checks.
@@ -1523,11 +1533,11 @@ extensive changes to the display of error messages.
 
     !end-bullet!
 
-!end-bullets-27!
+!end-bullets-28!
 
 # rlang 0.4.10
 
-!begin-bullets-28!
+!begin-bullets-29!
 
 -   !begin-bullet!
     New `hash()` function to generate 128-bit hashes for arbitrary R
@@ -1559,23 +1569,23 @@ extensive changes to the display of error messages.
 
     !end-bullet!
 
-!end-bullets-28!
+!end-bullets-29!
 
 # rlang 0.4.9
 
 ## Breaking changes
 
-!begin-bullets-29!
+!begin-bullets-30!
 
 -   !begin-bullet!
     Dropped support for the R 3.2 series.
     !end-bullet!
 
-!end-bullets-29!
+!end-bullets-30!
 
 ## New features
 
-!begin-bullets-30!
+!begin-bullets-31!
 
 -   !begin-bullet!
     `inject()` evaluates its argument with `!!`, `!!!`, and `{{`
@@ -1627,11 +1637,11 @@ extensive changes to the display of error messages.
 
     !end-bullet!
 
-!end-bullets-30!
+!end-bullets-31!
 
 ## Bugfixes and improvements
 
-!begin-bullets-31!
+!begin-bullets-32!
 
 -   !begin-bullet!
     The `.data` pronoun no longer skips functions (#1061). This solves a
@@ -1669,11 +1679,11 @@ extensive changes to the display of error messages.
 
     !end-bullet!
 
-!end-bullets-31!
+!end-bullets-32!
 
 # rlang 0.4.8
 
-!begin-bullets-32!
+!begin-bullets-33!
 
 -   !begin-bullet!
     Backtraces now include native stacks (e.g. from C code) when the
@@ -1707,11 +1717,11 @@ extensive changes to the display of error messages.
 
     !end-bullet!
 
-!end-bullets-32!
+!end-bullets-33!
 
 # rlang 0.4.7
 
-!begin-bullets-33!
+!begin-bullets-34!
 
 -   !begin-bullet!
     `cnd_muffle()` now returns `FALSE` instead of failing if the
@@ -1812,11 +1822,11 @@ extensive changes to the display of error messages.
 
     !end-bullet!
 
-!end-bullets-33!
+!end-bullets-34!
 
 # rlang 0.4.6
 
-!begin-bullets-34!
+!begin-bullets-35!
 
 -   !begin-bullet!
     `!!!` now uses a combination of `length()`, `names()`, and `[[` to
@@ -1825,11 +1835,11 @@ extensive changes to the display of error messages.
     tidyverse/dplyr#4931).
     !end-bullet!
 
-!end-bullets-34!
+!end-bullets-35!
 
 # rlang 0.4.5
 
-!begin-bullets-35!
+!begin-bullets-36!
 
 -   !begin-bullet!
     `set_names()`, `is_formula()`, and `names2()` are now implemented in
@@ -1867,21 +1877,21 @@ extensive changes to the display of error messages.
 
     !end-bullet!
 
-!end-bullets-35!
+!end-bullets-36!
 
 # rlang 0.4.4
 
-!begin-bullets-36!
+!begin-bullets-37!
 
 -   !begin-bullet!
     Maintenance release for CRAN.
     !end-bullet!
 
-!end-bullets-36!
+!end-bullets-37!
 
 # rlang 0.4.3
 
-!begin-bullets-37!
+!begin-bullets-38!
 
 -   !begin-bullet!
     You can now use glue syntax to unquote on the LHS of `:=`. This
@@ -1984,11 +1994,11 @@ extensive changes to the display of error messages.
 
     !end-bullet!
 
-!end-bullets-37!
+!end-bullets-38!
 
 # rlang 0.4.2
 
-!begin-bullets-38!
+!begin-bullets-39!
 
 -   !begin-bullet!
     New `cnd_header()`, `cnd_body()` and `cnd_footer()` generics. These
@@ -2041,11 +2051,11 @@ extensive changes to the display of error messages.
 
     !end-bullet!
 
-!end-bullets-38!
+!end-bullets-39!
 
 # rlang 0.4.1
 
-!begin-bullets-39!
+!begin-bullets-40!
 
 -   !begin-bullet!
     New experimental framework for creating bulleted error messages. See
@@ -2148,7 +2158,7 @@ extensive changes to the display of error messages.
 
     !end-bullet!
 
-!end-bullets-39!
+!end-bullets-40!
 
 # rlang 0.4.0
 
@@ -2219,7 +2229,7 @@ really a data frame.
 
 ## New functions and features
 
-!begin-bullets-40!
+!begin-bullets-41!
 
 -   !begin-bullet!
     New `pairlist2()` function with splicing support. It preserves
@@ -2272,11 +2282,11 @@ really a data frame.
 
     !end-bullet!
 
-!end-bullets-40!
+!end-bullets-41!
 
 ## Performance
 
-!begin-bullets-41!
+!begin-bullets-42!
 
 -   !begin-bullet!
     The performance of `exec()` has been improved. It is now on the same
@@ -2295,11 +2305,11 @@ really a data frame.
     !end-codeblock!
     !end-bullet!
 
-!end-bullets-41!
+!end-bullets-42!
 
 ## Bugfixes and small improvements
 
-!begin-bullets-42!
+!begin-bullets-43!
 
 -   !begin-bullet!
     `with_handlers()` now installs calling handlers first on the stack,
@@ -2348,7 +2358,7 @@ really a data frame.
 
     !end-bullet!
 
-!end-bullets-42!
+!end-bullets-43!
 
 ## Lifecycle
 
@@ -2356,7 +2366,7 @@ We commit to support 5 versions of R. As R 3.6 is about to be released,
 rlang now requires R 3.2 or greater. We're also continuing our efforts
 to streamline and narrow the rlang API.
 
-!begin-bullets-43!
+!begin-bullets-44!
 
 -   !begin-bullet!
     `modify()` and `prepend()` (two experimental functions marked as in
@@ -2407,11 +2417,11 @@ to streamline and narrow the rlang API.
 
     !end-bullet!
 
-!end-bullets-43!
+!end-bullets-44!
 
 # rlang 0.3.2
 
-!begin-bullets-44!
+!begin-bullets-45!
 
 -   !begin-bullet!
     Fixed protection issue reported by rchk.
@@ -2437,7 +2447,7 @@ to streamline and narrow the rlang API.
 
     !end-bullet!
 
-!end-bullets-44!
+!end-bullets-45!
 
 # rlang 0.3.1
 
@@ -2449,7 +2459,7 @@ been fixed.
 
 ## Backtrace fixes
 
-!begin-bullets-45!
+!begin-bullets-46!
 
 -   !begin-bullet!
     New `entrace()` condition handler. Add this to your RProfile to
@@ -2512,7 +2522,7 @@ been fixed.
 
     !end-bullet!
 
-!end-bullets-45!
+!end-bullets-46!
 
 ## `as_label()` and `as_name()`
 
@@ -2531,7 +2541,7 @@ short human-readable description, and `as_name()` to extract names from
 
 Create labels with `as_label()` to:
 
-!begin-bullets-46!
+!begin-bullets-47!
 
 -   !begin-bullet!
     Display an object in a concise way, for example to labellise axes in
@@ -2544,7 +2554,7 @@ Create labels with `as_label()` to:
 
     !end-bullet!
 
-!end-bullets-46!
+!end-bullets-47!
 
 We expect `as_label()` to gain additional parameters in the future, for
 example to control the maximum width of a label. The way an object is
@@ -2570,7 +2580,7 @@ time to change your code.
 
 ## Minor fixes and features
 
-!begin-bullets-47!
+!begin-bullets-48!
 
 -   !begin-bullet!
     New `is_interactive()` function. It serves the same purpose as
@@ -2661,7 +2671,7 @@ time to change your code.
 
     !end-bullet!
 
-!end-bullets-47!
+!end-bullets-48!
 
 # rlang 0.3.0
 
@@ -2671,7 +2681,7 @@ The rlang API is still maturing. In this section, you'll find hard
 breaking changes. See the life cycle section below for an exhaustive
 list of API changes.
 
-!begin-bullets-48!
+!begin-bullets-49!
 
 -   !begin-bullet!
     `quo_text()` now deparses non-syntactic symbols with backticks:
@@ -2722,14 +2732,14 @@ list of API changes.
 
     !end-bullet!
 
-!end-bullets-48!
+!end-bullets-49!
 
 ## Summary
 
 The changes for this version are organised around three main themes:
 error reporting, tidy eval, and tidy dots.
 
-!begin-bullets-49!
+!begin-bullets-50!
 
 -   !begin-bullet!
     `abort()` now records backtraces automatically in the error object.
@@ -2777,11 +2787,11 @@ error reporting, tidy eval, and tidy dots.
 
     !end-bullet!
 
-!end-bullets-49!
+!end-bullets-50!
 
 ## Conditions and errors
 
-!begin-bullets-50!
+!begin-bullets-51!
 
 -   !begin-bullet!
     New `trace_back()` captures a backtrace. Compared to the base R
@@ -2868,11 +2878,11 @@ error reporting, tidy eval, and tidy dots.
 
     !end-bullet!
 
-!end-bullets-50!
+!end-bullets-51!
 
 ## Tidy dots
 
-!begin-bullets-51!
+!begin-bullets-52!
 
 -   !begin-bullet!
     The input types of `!!!` have been standardised. `!!!` is generally
@@ -2881,7 +2891,7 @@ error reporting, tidy eval, and tidy dots.
     makes `!!!` behave the same in functions taking dots with `list2()`
     and in quoting functions. `!!!` accepts these types:
 
-    !begin-bullets-52!
+    !begin-bullets-53!
     -   !begin-bullet!
         Lists, pairlists, and atomic vectors. If they have a class, they
         are converted with `base::as.list()` to allow S3 dispatch.
@@ -2899,16 +2909,16 @@ error reporting, tidy eval, and tidy dots.
 
         !end-bullet!
 
-    !end-bullets-52!
+    !end-bullets-53!
     `!!!` disallows:
 
-    !begin-bullets-53!
+    !begin-bullets-54!
     -   !begin-bullet!
         Any other objects like functions or environments, but also
         language objects like formula, symbols, or quosures.
         !end-bullet!
 
-    !end-bullets-53!
+    !end-bullets-54!
     Quoting functions used to automatically wrap language objects in
     lists to make them spliceable. This behaviour is now soft-deprecated
     and it is no longer valid to write `!!!enquo(x)`. Please unquote
@@ -2948,11 +2958,11 @@ error reporting, tidy eval, and tidy dots.
 
     !end-bullet!
 
-!end-bullets-51!
+!end-bullets-52!
 
 ## Tidy eval
 
-!begin-bullets-54!
+!begin-bullets-55!
 
 -   !begin-bullet!
     You can now unquote quosured symbols as LHS of `:=`. The symbol is
@@ -3010,11 +3020,11 @@ error reporting, tidy eval, and tidy dots.
 
     !end-bullet!
 
-!end-bullets-54!
+!end-bullets-55!
 
 ## Environments
 
-!begin-bullets-55!
+!begin-bullets-56!
 
 -   !begin-bullet!
     `env()` now treats a single unnamed argument as the parent of the
@@ -3147,11 +3157,11 @@ error reporting, tidy eval, and tidy dots.
 
     !end-bullet!
 
-!end-bullets-55!
+!end-bullets-56!
 
 ## Calls
 
-!begin-bullets-56!
+!begin-bullets-57!
 
 -   !begin-bullet!
     `is_call()` now accepts multiple namespaces. For instance
@@ -3194,11 +3204,11 @@ error reporting, tidy eval, and tidy dots.
 
     !end-bullet!
 
-!end-bullets-56!
+!end-bullets-57!
 
 ## Other improvements and fixes
 
-!begin-bullets-57!
+!begin-bullets-58!
 
 -   !begin-bullet!
     New function `zap()` returns a sentinel that instructs functions
@@ -3280,7 +3290,7 @@ error reporting, tidy eval, and tidy dots.
 
     !end-bullet!
 
-!end-bullets-57!
+!end-bullets-58!
 
 ## Lifecycle
 
@@ -3290,7 +3300,7 @@ rlang 0.3.0 introduces a new warning mechanism for soft-deprecated
 functions and arguments. A warning is issued, but only under one of
 these circumstances:
 
-!begin-bullets-58!
+!begin-bullets-59!
 
 -   !begin-bullet!
     rlang has been attached with a `library()` call.
@@ -3299,7 +3309,7 @@ these circumstances:
     The deprecated function has been called from the global environment.
     !end-bullet!
 
-!end-bullets-58!
+!end-bullets-59!
 
 In addition, deprecation warnings appear only once per session in order
 to not be disruptive.
@@ -3310,7 +3320,7 @@ failure.
 
 #### tidyeval
 
-!begin-bullets-59!
+!begin-bullets-60!
 
 -   !begin-bullet!
     `.data[[foo]]` is now an unquote operator. This guarantees that
@@ -3359,11 +3369,11 @@ failure.
 
     !end-bullet!
 
-!end-bullets-59!
+!end-bullets-60!
 
 #### Miscellaneous
 
-!begin-bullets-60!
+!begin-bullets-61!
 
 -   !begin-bullet!
     Using `get_env()` without supplying an environment is now
@@ -3402,14 +3412,14 @@ failure.
 
     !end-bullet!
 
-!end-bullets-60!
+!end-bullets-61!
 
 ### Deprecated functions and arguments
 
 Deprecated functions and arguments issue a warning inconditionally, but
 only once per session.
 
-!begin-bullets-61!
+!begin-bullets-62!
 
 -   !begin-bullet!
     Calling `UQ()` and `UQS()` with the rlang namespace qualifier is
@@ -3447,13 +3457,13 @@ only once per session.
 
     !end-bullet!
 
-!end-bullets-61!
+!end-bullets-62!
 
 ### Defunct functions and arguments
 
 Defunct functions and arguments throw an error when used.
 
-!begin-bullets-62!
+!begin-bullets-63!
 
 -   !begin-bullet!
     `as_dictionary()` is now defunct.
@@ -3485,14 +3495,14 @@ Defunct functions and arguments throw an error when used.
 
     !end-bullet!
 
-!end-bullets-62!
+!end-bullets-63!
 
 ### Functions and arguments in the questioning stage
 
 We are no longer convinced these functions are the right approach but we
 do not have a precise alternative yet.
 
-!begin-bullets-63!
+!begin-bullets-64!
 
 -   !begin-bullet!
     The functions from the restart API are now in the questioning
@@ -3515,7 +3525,7 @@ do not have a precise alternative yet.
 
     !end-bullet!
 
-!end-bullets-63!
+!end-bullets-64!
 
 # rlang 0.2.2
 
@@ -3526,7 +3536,7 @@ protection issues.
 
 This is a maintenance release that fixes several tidy evaluation issues.
 
-!begin-bullets-64!
+!begin-bullets-65!
 
 -   !begin-bullet!
     Functions with tidy dots support now allow splicing atomic vectors.
@@ -3543,7 +3553,7 @@ This is a maintenance release that fixes several tidy evaluation issues.
 
     !end-bullet!
 
-!end-bullets-64!
+!end-bullets-65!
 
 # rlang 0.2.0
 
@@ -3554,7 +3564,7 @@ quasiquotation, and evaluation of quosures are now vastly faster. On the
 UI side, many of the inconveniences that affected the first release of
 rlang have been solved:
 
-!begin-bullets-65!
+!begin-bullets-66!
 
 -   !begin-bullet!
     The `!!` operator now has the precedence of unary `+` and `-` which
@@ -3573,7 +3583,7 @@ rlang have been solved:
 
     !end-bullet!
 
-!end-bullets-65!
+!end-bullets-66!
 
 See the first section below for a complete list of changes to the tidy
 evaluation framework.
@@ -3591,7 +3601,7 @@ deal with occasional backward incompatible updates.
 
 ## Tidy evaluation
 
-!begin-bullets-66!
+!begin-bullets-67!
 
 -   !begin-bullet!
     The backend for `quos()`, `exprs()`, `list2()`, `dots_list()`, etc
@@ -3754,11 +3764,11 @@ deal with occasional backward incompatible updates.
 
     !end-bullet!
 
-!end-bullets-66!
+!end-bullets-67!
 
 ## Conditions
 
-!begin-bullets-67!
+!begin-bullets-68!
 
 -   !begin-bullet!
     The new functions `cnd_warn()` and `cnd_inform()` transform
@@ -3797,11 +3807,11 @@ deal with occasional backward incompatible updates.
 
     !end-bullet!
 
-!end-bullets-67!
+!end-bullets-68!
 
 ## Environments
 
-!begin-bullets-68!
+!begin-bullets-69!
 
 -   !begin-bullet!
     `env_get_list()` retrieves muliple bindings from an environment into
@@ -3818,11 +3828,11 @@ deal with occasional backward incompatible updates.
 
     !end-bullet!
 
-!end-bullets-68!
+!end-bullets-69!
 
 ## Various features
 
-!begin-bullets-69!
+!begin-bullets-70!
 
 -   !begin-bullet!
     New functions `inherits_any()`, `inherits_all()`, and
@@ -3875,11 +3885,11 @@ deal with occasional backward incompatible updates.
 
     !end-bullet!
 
-!end-bullets-69!
+!end-bullets-70!
 
 ## Bugfixes
 
-!begin-bullets-70!
+!begin-bullets-71!
 
 -   !begin-bullet!
     When nested quosures are evaluated with `eval_tidy()`, the `.env`
@@ -3899,7 +3909,7 @@ deal with occasional backward incompatible updates.
 
     !end-bullet!
 
-!end-bullets-70!
+!end-bullets-71!
 
 ## API changes
 
@@ -3909,12 +3919,12 @@ introduce breaking changes for stable functions unless the payoff for
 the change is worth the trouble. See `?rlang::lifecycle` for the
 lifecycle status of exported functions.
 
-!begin-bullets-71!
+!begin-bullets-72!
 
 -   !begin-bullet!
     The particle "lang" has been renamed to "call":
 
-    !begin-bullets-72!
+    !begin-bullets-73!
     -   !begin-bullet!
         `lang()` has been renamed to `call2()`.
         !end-bullet!
@@ -3932,7 +3942,7 @@ lifecycle status of exported functions.
         prefix.
         !end-bullet!
 
-    !end-bullets-72!
+    !end-bullets-73!
     In rlang 0.1 calls were called "language" objects in order to follow
     the R type nomenclature as returned by `base::typeof()`. We wanted
     to avoid adding to the confusion between S modes and R types. With
@@ -3961,11 +3971,11 @@ lifecycle status of exported functions.
 
     !end-bullet!
 
-!end-bullets-71!
+!end-bullets-72!
 
 ### Breaking changes
 
-!begin-bullets-73!
+!begin-bullets-74!
 
 -   !begin-bullet!
     `!!` now binds tightly in order to match intuitive parsing of tidy
@@ -4028,11 +4038,11 @@ lifecycle status of exported functions.
 
     !end-bullet!
 
-!end-bullets-73!
+!end-bullets-74!
 
 ### Upcoming breaking changes
 
-!begin-bullets-74!
+!begin-bullets-75!
 
 -   !begin-bullet!
     Calling the functional forms of unquote operators with the rlang
@@ -4122,11 +4132,11 @@ lifecycle status of exported functions.
 
     !end-bullet!
 
-!end-bullets-74!
+!end-bullets-75!
 
 # rlang 0.1.6
 
-!begin-bullets-75!
+!begin-bullets-76!
 
 -   !begin-bullet!
     This is a maintenance release in anticipation of a forthcoming
@@ -4140,11 +4150,11 @@ lifecycle status of exported functions.
 
     !end-bullet!
 
-!end-bullets-75!
+!end-bullets-76!
 
 # rlang 0.1.4
 
-!begin-bullets-76!
+!begin-bullets-77!
 
 -   !begin-bullet!
     `eval_tidy()` no longer maps over lists but returns them literally.
@@ -4152,7 +4162,7 @@ lifecycle status of exported functions.
     documented.
     !end-bullet!
 
-!end-bullets-76!
+!end-bullets-77!
 
 # rlang 0.1.2
 
@@ -4162,7 +4172,7 @@ This hotfix release makes rlang compatible with the R 3.1 branch.
 
 This release includes two important fixes for tidy evaluation:
 
-!begin-bullets-77!
+!begin-bullets-78!
 
 -   !begin-bullet!
     Bare formulas are now evaluated in the correct environment in
@@ -4176,11 +4186,11 @@ This release includes two important fixes for tidy evaluation:
 
     !end-bullet!
 
-!end-bullets-77!
+!end-bullets-78!
 
 ## New functions:
 
-!begin-bullets-78!
+!begin-bullets-79!
 
 -   !begin-bullet!
     The `new_environment()` constructor creates a child of the empty
@@ -4198,11 +4208,11 @@ This release includes two important fixes for tidy evaluation:
 
     !end-bullet!
 
-!end-bullets-78!
+!end-bullets-79!
 
 ## UI improvements:
 
-!begin-bullets-79!
+!begin-bullets-80!
 
 -   !begin-bullet!
     `env_child()`'s first argument is now `.parent` instead of `parent`.
@@ -4223,11 +4233,11 @@ This release includes two important fixes for tidy evaluation:
 
     !end-bullet!
 
-!end-bullets-79!
+!end-bullets-80!
 
 ## Bugfixes:
 
-!begin-bullets-80!
+!begin-bullets-81!
 
 -   !begin-bullet!
     `env()` and `env_child()` can now get arguments whose names start
@@ -4242,7 +4252,7 @@ This release includes two important fixes for tidy evaluation:
 
     !end-bullet!
 
-!end-bullets-80!
+!end-bullets-81!
 
 # rlang 0.1.0
 

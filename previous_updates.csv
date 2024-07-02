@@ -17338,3 +17338,4 @@ pillar,52c2eade3be8baef0b9388f29c15c74d,"Drop `scale_name` ggplot2 arg and drop 
 pillar,8457cb45c7847088c0e4af1b8ed16d3e,"Fix on Windows, tweak lock workflow.",NA,NA,NA,NA
 tibble,f5422758e8698cec2918ae8cb51b38eb,"Drop fansi and import cli (@​olivroy, #1589).",NA,NA,NA,NA
 tibble,c3a1b64e373268809d2e40ec65e9e852,"Fix on Windows, tweak lock workflow.",NA,NA,NA,NA
+rlang,2d348d11393ce5a40f29e94e512ea826,`env_unlock()` is now defunct because recent versions of R no long make it possible to unlock an environment. Make sure to use an up-to-date version of pkgload (\>= 1.4.0) following this change.,NA,NA,NA,NA
