@@ -17333,3 +17333,8 @@ usethis,c4d859eea92c6ca7e8f61eb625fbba41,`use_git()` no longer asks if you want 
 pillar,ac26283023c62e0377c3dc11cce8ab4c,Only implement `type_sum.accel()` in pkgdown mode (#661).,NA,NA,NA,NA
 pillar,0dbe33ce6ee59edee6f599c64baa3f17,Auto-update from GitHub Actions. Run: https://github.com/r-lib/pillar/actions/runs/9728438554,NA,NA,NA,NA
 tibble,d84b2aa7ab73a74ab005287b1cae7f85,Auto-update from GitHub Actions. Run: https://github.com/tidyverse/tibble/actions/runs/9728440241,NA,NA,NA,NA
+pillar,2c5830b382db555ceca7e4b87bf90306,Add Aviator configuration.,NA,NA,NA,NA
+pillar,52c2eade3be8baef0b9388f29c15c74d,"Drop `scale_name` ggplot2 arg and drop fansi dep (@​olivroy, #663).",NA,NA,NA,NA
+pillar,8457cb45c7847088c0e4af1b8ed16d3e,"Fix on Windows, tweak lock workflow.",NA,NA,NA,NA
+tibble,f5422758e8698cec2918ae8cb51b38eb,"Drop fansi and import cli (@​olivroy, #1589).",NA,NA,NA,NA
+tibble,c3a1b64e373268809d2e40ec65e9e852,"Fix on Windows, tweak lock workflow.",NA,NA,NA,NA
