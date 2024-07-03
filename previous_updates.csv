@@ -17344,3 +17344,4 @@ rlang,5c286e74b227c702b86d14763ff336e9,`env_unlock()` is now defunct because rec
 profvis,0d448786d83414777922efe605465021,`profvis()` now uses elapsed time where possible (#72).,NA,NA,NA,NA
 pkgdown,8a28dc5a981e34cd7428f547aa621206,"Updated translations from @​jplecavalier, @​dieghernan, @​krlmlr, @​LDalby, @​rich-iannone, @​jmaspons, and @​mine-cetinkaya-rundel (#2659).",NA,NA,NA,NA
 profvis,ded009ca09de209bdccf5ea0ec5f72a5,"profvis no longer requires purrr or stringr, and no longer suggests ggplot2, devtools, knitr, or rmarkdown.",NA,NA,NA,NA
+rsconnect,3f0e95abd981bbb5443f9915eff02ed5,Use the public Connect server API endpoint `/v1/tasks/{id}` to poll task progress. (#1088),NA,NA,NA,NA
