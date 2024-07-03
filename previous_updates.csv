@@ -17345,3 +17345,4 @@ profvis,0d448786d83414777922efe605465021,`profvis()` now uses elapsed time where
 pkgdown,8a28dc5a981e34cd7428f547aa621206,"Updated translations from @​jplecavalier, @​dieghernan, @​krlmlr, @​LDalby, @​rich-iannone, @​jmaspons, and @​mine-cetinkaya-rundel (#2659).",NA,NA,NA,NA
 profvis,ded009ca09de209bdccf5ea0ec5f72a5,"profvis no longer requires purrr or stringr, and no longer suggests ggplot2, devtools, knitr, or rmarkdown.",NA,NA,NA,NA
 rsconnect,3f0e95abd981bbb5443f9915eff02ed5,Use the public Connect server API endpoint `/v1/tasks/{id}` to poll task progress. (#1088),NA,NA,NA,NA
+keras,fd9036acbbd7f5a1203d1706b8c4f7c6,Fixed warning from `tfruns::training_run()` being unable to log optimizer learning rate.,NA,NA,NA,NA

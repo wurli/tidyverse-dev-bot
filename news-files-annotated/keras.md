@@ -13,6 +13,11 @@
 
     !end-bullet!
 -   !begin-bullet!
+    Fixed warning from `tfruns::training_run()` being unable to log
+    optimizer learning rate.
+
+    !end-bullet!
+-   !begin-bullet!
     Added compatibility with Keras v3.4.1 (no R user facing changes).
 
     !end-bullet!
