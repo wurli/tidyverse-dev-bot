@@ -1,8 +1,16 @@
 # profvis (development version)
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    `profvis()` now uses elapsed time where possible (#72).
+    !end-bullet!
+
+!end-bullets-1!
+
 # profvis 0.3.8
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     `print()` gains an `aggregate` argument. Use
@@ -18,11 +26,11 @@
 
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # profvis 0.3.7
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     Resolved #102:" Added `simplify` argument. When `TRUE` (the
@@ -37,11 +45,11 @@
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 # profvis 0.3.6
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     Added a profvis Shiny module, for starting/stopping the profiler
@@ -57,22 +65,22 @@
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 # profvis 0.3.5
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     Fixed problem with development build of R where source refs are
     turned on by default (reported by Tomas Kalibera).
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 # profvis 0.3.4
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     Fixed #77: The contents of `<expr>` are now always listed first.
@@ -105,11 +113,11 @@
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # profvis 0.3.3
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     Fixed #68: Profvis threw an error when a package was installed using
@@ -127,4 +135,4 @@
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
