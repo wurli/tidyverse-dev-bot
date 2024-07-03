@@ -17346,3 +17346,4 @@ pkgdown,8a28dc5a981e34cd7428f547aa621206,"Updated translations from @​jplecava
 profvis,ded009ca09de209bdccf5ea0ec5f72a5,"profvis no longer requires purrr or stringr, and no longer suggests ggplot2, devtools, knitr, or rmarkdown.",NA,NA,NA,NA
 rsconnect,3f0e95abd981bbb5443f9915eff02ed5,Use the public Connect server API endpoint `/v1/tasks/{id}` to poll task progress. (#1088),NA,NA,NA,NA
 keras,fd9036acbbd7f5a1203d1706b8c4f7c6,Fixed warning from `tfruns::training_run()` being unable to log optimizer learning rate.,NA,NA,NA,NA
+pkgdown,0e411ec908d227419fd606941821a0f2,`build_news()` now works if your package has been archived at some point (#2687).,NA,NA,NA,NA

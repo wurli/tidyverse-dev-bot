@@ -282,6 +282,11 @@
 
     !end-bullet!
 -   !begin-bullet!
+    `build_news()` now works if your package has been archived at some
+    point (#2687).
+
+    !end-bullet!
+-   !begin-bullet!
     `build_news()` only syntax highlights the page once, not twice,
     which prevents every block of R code getting a blank line at the
     start (#2630).
