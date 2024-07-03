@@ -144,6 +144,11 @@
     BS5 templates no longer include empty link to logo when none exists
     (#2536).
     !end-bullet!
+-   !begin-bullet!
+    Updated translations from @jplecavalier, @dieghernan, @krlmlr,
+    @LDalby, @rich-iannone, @jmaspons, and @mine-cetinkaya-rundel
+    (#2659).
+    !end-bullet!
 
 !end-bullets-3!
 

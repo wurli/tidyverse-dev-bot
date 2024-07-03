@@ -17342,3 +17342,5 @@ rlang,2d348d11393ce5a40f29e94e512ea826,`env_unlock()` is now defunct because rec
 rlang,f1ddb855da29b9b729340140f42c4940,`env_browse()` and `env_is_browsed()` are now defunct as they require an API that is no longer available to packages (#1727).,NA,NA,NA,NA
 rlang,5c286e74b227c702b86d14763ff336e9,`env_unlock()` is now defunct because recent versions of R no long make it possible to unlock an environment (#1705). Make sure to use an up-to-date version of pkgload (\>= 1.4.0) following this change.,NA,NA,NA,NA
 profvis,0d448786d83414777922efe605465021,`profvis()` now uses elapsed time where possible (#72).,NA,NA,NA,NA
+pkgdown,8a28dc5a981e34cd7428f547aa621206,"Updated translations from @​jplecavalier, @​dieghernan, @​krlmlr, @​LDalby, @​rich-iannone, @​jmaspons, and @​mine-cetinkaya-rundel (#2659).",NA,NA,NA,NA
+profvis,ded009ca09de209bdccf5ea0ec5f72a5,"profvis no longer requires purrr or stringr, and no longer suggests ggplot2, devtools, knitr, or rmarkdown.",NA,NA,NA,NA

@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    profvis no longer requires purrr or stringr, and no longer suggests
+    ggplot2, devtools, knitr, or rmarkdown.
+    !end-bullet!
+-   !begin-bullet!
     `profvis()` now uses elapsed time where possible (#72).
     !end-bullet!
 
