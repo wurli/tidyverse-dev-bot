@@ -7,6 +7,11 @@
 
     !end-bullet!
 -   !begin-bullet!
+    `info_time_style()` and `info_date_style()` gain a `locale` argument
+    to preview datetime formatting in a given locale.
+
+    !end-bullet!
+-   !begin-bullet!
     `opt_interactive()` gains `height` to help specify your widget's
     height (@olivroy, #1544).
 
