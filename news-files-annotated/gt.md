@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `summary_rows()` now throws a more informative error message that
+    you should use `grand_summary_rows()` if no row groups are detected
+    (@olivroy, #1292). This change was introduced in gt 0.9.0
+
+    !end-bullet!
+-   !begin-bullet!
     gt now depends on R 3.6 (@olivroy, #1731).
 
     !end-bullet!

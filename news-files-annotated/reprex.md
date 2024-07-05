@@ -1,8 +1,22 @@
 # reprex (development version)
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    `reprex(style = FALSE)` will never nag about installing styler
+    (#461).
+
+    !end-bullet!
+-   !begin-bullet!
+    Various URLs have been updated (#458, @olivroy).
+
+    !end-bullet!
+
+!end-bullets-1!
+
 # reprex 2.1.0
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     `reprex()` no longer includes the full traceback by default, as this
@@ -17,11 +31,11 @@
 
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # reprex 2.0.2
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     The ad placed by `reprex(advertise = TRUE)` has been tweaked for
@@ -50,7 +64,7 @@
 -   !begin-bullet!
     Internal matters:
 
-    !begin-bullets-3!
+    !begin-bullets-4!
     -   !begin-bullet!
         Help files below `man/` have been re-generated, so that they
         give rise to valid HTML5. (This is the impetus for this release,
@@ -62,10 +76,10 @@
         packages.
         !end-bullet!
 
-    !end-bullets-3!
+    !end-bullets-4!
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 # reprex 2.0.1
 
@@ -87,7 +101,7 @@ We've made reprex more pleasant to use in settings where we cannot
 access the user's clipboard from R. Specifically, this applies to use on
 RStudio Server and RStudio Cloud.
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     When `reprex()` is called without `expr` or `input`, in a context
@@ -104,7 +118,7 @@ RStudio Server and RStudio Cloud.
     opened so the user can manually copy its contents.
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 ## Filepaths
 
@@ -113,7 +127,7 @@ the `outfile` argument is deprecated and the `input` argument has new
 significance. Here's how to use `input` and `wd` to control reprex
 filepaths:
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     To reprex in the current working directory,\
@@ -130,7 +144,7 @@ filepaths:
     are named and `wd` is never even consulted.
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 Various changes mean that more users will see reprex filepaths.
 Therefore, we've revised them to be more self-explanatory and
@@ -148,7 +162,7 @@ the user intentionally reprexes in an existing project with a
 `.Rprofile`, `callr::r()` and therefore `reprex()` honor it. In this
 version of reprex:
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     We explicitly make sure that the working directory of the
@@ -162,7 +176,7 @@ version of reprex:
     We indicate the usage of a local `.Rprofile` in the rendered reprex.
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 These changes are of special interest to users of the renv package,
 which uses `.Rprofile` to implement a project-specific R package
@@ -178,7 +192,7 @@ HTML preview should work better with more ways of using
 
 ## Dependency changes
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     rstudioapi moves from Suggests to Imports. Related to improving the
@@ -196,13 +210,13 @@ HTML preview should work better with more ways of using
 
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 # reprex 1.0.0
 
 ## Venues
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     `reprex_VENUE(...)` is a new way to call
@@ -244,17 +258,17 @@ HTML preview should work better with more ways of using
 
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 ## Implementation and internals
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     `reprex()` has been internally refactored to make better use of the
     official machinery for extending rmarkdown:
 
-    !begin-bullets-10!
+    !begin-bullets-11!
     -   !begin-bullet!
         `reprex_document()` is a new R Markdown output format.
         !end-bullet!
@@ -277,7 +291,7 @@ HTML preview should work better with more ways of using
         `reprex_render()`.
         !end-bullet!
 
-    !end-bullets-10!
+    !end-bullets-11!
     !end-bullet!
 -   !begin-bullet!
     `prex()`, `prex_VENUE()`, and `prex_render()` are new **unexported**
@@ -301,11 +315,11 @@ HTML preview should work better with more ways of using
 
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 ## Other changes and improvements
 
-!begin-bullets-11!
+!begin-bullets-12!
 
 -   !begin-bullet!
     The `tidyverse_quiet` argument and `reprex.tidyverse_quiet` option
@@ -335,7 +349,7 @@ HTML preview should work better with more ways of using
 
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-12!
 
 ## Dependency changes
 
@@ -343,7 +357,7 @@ R 3.1 and R 3.2 are no longer explicitly supported or tested. Our
 general practice is to support the current release (4.0, at time of
 writing), devel, and the 4 previous versions of R (3.6, 3.5, 3.4, 3.3).
 
-!begin-bullets-12!
+!begin-bullets-13!
 
 -   !begin-bullet!
     sessioninfo is new in Suggests, replacing devtools.
@@ -369,11 +383,11 @@ writing), devel, and the 4 previous versions of R (3.6, 3.5, 3.4, 3.3).
 
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
 
 # reprex 0.3.0
 
-!begin-bullets-13!
+!begin-bullets-14!
 
 -   !begin-bullet!
     The `crayon.enabled` option is explicitly set to `FALSE` when
@@ -402,11 +416,11 @@ writing), devel, and the 4 previous versions of R (3.6, 3.5, 3.4, 3.3).
 
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-14!
 
 # reprex 0.2.1
 
-!begin-bullets-14!
+!begin-bullets-15!
 
 -   !begin-bullet!
     The reprex ad is formatted as superscript for `venue = "gh"` and
@@ -435,7 +449,7 @@ writing), devel, and the 4 previous versions of R (3.6, 3.5, 3.4, 3.3).
 
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-15!
 
 # reprex 0.2.0
 
@@ -465,7 +479,7 @@ is used. Allows user to define their own default behaviour (#116).
 
 ## New arguments to `reprex()`:
 
-!begin-bullets-15!
+!begin-bullets-16!
 
 -   !begin-bullet!
     `advertise`: toggles inclusion of a footer that describes when and
@@ -495,11 +509,11 @@ is used. Allows user to define their own default behaviour (#116).
     testing.
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-16!
 
 ## Venues
 
-!begin-bullets-16!
+!begin-bullets-17!
 
 -   !begin-bullet!
     Line wrapping is preserved from source via a Pandoc option (#145
@@ -526,11 +540,11 @@ is used. Allows user to define their own default behaviour (#116).
 
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-17!
 
 ## Other changes
 
-!begin-bullets-17!
+!begin-bullets-18!
 
 -   !begin-bullet!
     The `keep.source` option is set to `TRUE` when rendering the reprex,
@@ -571,7 +585,7 @@ is used. Allows user to define their own default behaviour (#116).
 
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-18!
 
 # reprex 0.1.2
 
@@ -580,17 +594,17 @@ commenting out lines of code relating to the clipboard.
 
 # reprex 0.1.1
 
-!begin-bullets-18!
+!begin-bullets-19!
 
 -   !begin-bullet!
     Pandoc added to SystemRequirements.
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-19!
 
 # reprex 0.1.0
 
-!begin-bullets-19!
+!begin-bullets-20!
 
 -   !begin-bullet!
     `outfile = NA` causes outfiles to be left in working directory.
@@ -636,7 +650,7 @@ commenting out lines of code relating to the clipboard.
     taking named list as input, in order to supplement or override
     default knitr chunk and package options, respectively. (#33)
 
-    !begin-bullets-20!
+    !begin-bullets-21!
     -   !begin-bullet!
         This made the explicit `upload.fun` argument unnecessary, so
         it's gone. The `upload.fun` option defaults to
@@ -646,7 +660,7 @@ commenting out lines of code relating to the clipboard.
         e.g. `![](https://i.imgur.com/QPU5Cg9.png)`. (#15 @paternogbc)
         !end-bullet!
 
-    !end-bullets-20!
+    !end-bullets-21!
     !end-bullet!
 -   !begin-bullet!
     Order of `reprex()` arguments has changed.
@@ -671,14 +685,14 @@ commenting out lines of code relating to the clipboard.
 
     !end-bullet!
 
-!end-bullets-19!
+!end-bullets-20!
 
 # reprex 0.0.0.9000
 
-!begin-bullets-21!
+!begin-bullets-22!
 
 -   !begin-bullet!
     I tweeted about this and some people actually used it!
     !end-bullet!
 
-!end-bullets-21!
+!end-bullets-22!
