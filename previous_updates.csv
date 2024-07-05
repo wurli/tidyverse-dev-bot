@@ -17348,3 +17348,4 @@ rsconnect,3f0e95abd981bbb5443f9915eff02ed5,Use the public Connect server API end
 keras,fd9036acbbd7f5a1203d1706b8c4f7c6,Fixed warning from `tfruns::training_run()` being unable to log optimizer learning rate.,NA,NA,NA,NA
 pkgdown,0e411ec908d227419fd606941821a0f2,`build_news()` now works if your package has been archived at some point (#2687).,NA,NA,NA,NA
 gt,c58853d893928b73ae87244f3443c3ee,`info_time_style()` and `info_date_style()` gain a `locale` argument to preview datetime formatting in a given locale.,NA,NA,NA,NA
+renv,f4bbab95ea405a41ada6d38831f4ede7,"`renv` no longer interacts with the user during autoloading, which coincides with R startup. If the IDE offers a session init hook (RStudio does), loading is deferred until startup is complete and interaction is possible. Otherwise, any suggested renv actions, such as `renv::restore()`, are emitted as a message for the user to act on. (#1879, #1915).",NA,NA,NA,NA

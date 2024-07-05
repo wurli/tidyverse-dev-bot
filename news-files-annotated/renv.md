@@ -20,8 +20,12 @@
 
     !end-bullet!
 -   !begin-bullet!
-    Fixed an issue where `renv` could silently prompt the user for input
-    when running the autoloader inside an RStudio R session. (#1879)
+    `renv` no longer interacts with the user during autoloading, which
+    coincides with R startup. If the IDE offers a session init hook
+    (RStudio does), loading is deferred until startup is complete and
+    interaction is possible. Otherwise, any suggested renv actions, such
+    as `renv::restore()`, are emitted as a message for the user to act
+    on. (#1879, #1915).
 
     !end-bullet!
 -   !begin-bullet!
