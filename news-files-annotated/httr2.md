@@ -1,8 +1,16 @@
 # httr2 (development version)
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    Corrupt `rds` files no longer cause the request to fail.
+    !end-bullet!
+
+!end-bullets-1!
+
 # httr2 1.0.1
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     `req_perform_stream()` gains a `round = c("byte", "line")` argument
@@ -31,13 +39,13 @@
 
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # httr2 1.0.0
 
 ## Function lifecycle
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     `local_mock()` and `with_mock()` have been deprecated in favour of
@@ -71,11 +79,11 @@
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 ## Multiple requests
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     New `req_perform_sequential()` performs a known set of requests
@@ -116,11 +124,11 @@
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 ## OAuth features
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     A new `vignette("oauth")` gives many more details about how OAuth
@@ -163,11 +171,11 @@
 
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 ## Other new features
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     @mgirlich is now a httr2 contributor in recognition of his many
@@ -226,11 +234,11 @@
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     The httr2 examples now only run on R 4.2 and later so that we can
@@ -316,11 +324,11 @@
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 # httr2 0.2.3
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     New `example_url()` to launch a local server, making tests and
@@ -355,11 +363,11 @@
 
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 # httr2 0.2.2
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     `curl_translate()` can now handle curl copied from Chrome developer
@@ -397,11 +405,11 @@
 
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 # httr2 0.2.1
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     "Wrapping APIs" is now an article, not a vignette.
@@ -413,13 +421,13 @@
 
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 # httr2 0.2.0
 
 ## New features
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     `req_body_form()`, `req_body_multipart()`, and `req_url_query()` now
@@ -443,11 +451,11 @@
 
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-11!
+!begin-bullets-12!
 
 -   !begin-bullet!
     `httr_path` class renamed to `httr2_path` to correctly match package
@@ -492,11 +500,11 @@
 
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-12!
 
 # httr2 0.1.1
 
-!begin-bullets-12!
+!begin-bullets-13!
 
 -   !begin-bullet!
     Fix R CMD check failures on CRAN
@@ -507,4 +515,4 @@
 
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
