@@ -1,5 +1,7 @@
 # pkgdown (development version)
 
+# pkgdown 2.1.0
+
 ## Major changes
 
 * Added @olivroy and @salim-b as pkgdown authors in recognition of their contributions.
