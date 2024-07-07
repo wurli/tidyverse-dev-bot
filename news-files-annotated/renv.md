@@ -34,6 +34,11 @@
     fail. (#1880)
 
     !end-bullet!
+-   !begin-bullet!
+    A new function, `renv::lockfile_validate()`, can be used to validate
+    your `renv.lock` against a default or custom schema. (#1889)
+
+    !end-bullet!
 
 !end-bullets-1!
 

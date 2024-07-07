@@ -17353,3 +17353,4 @@ httr2,907679dab825b9056b96820d338a4b1d,Corrupt `rds` files no longer cause the r
 reprex,293a3a964b164ef8eb942480d19cb583,`reprex(style = FALSE)` will never nag about installing styler (#461).,NA,NA,NA,NA
 reprex,fa0b8084f50d31986df7f8902f9a1b66,"Various URLs have been updated (#458, @​olivroy).",NA,NA,NA,NA
 gt,8cbde38b426b2a4897744b67811f4270,"`summary_rows()` now throws a more informative error message that you should use `grand_summary_rows()` if no row groups are detected (@​olivroy, #1292). This change was introduced in gt 0.9.0",NA,NA,NA,NA
+renv,46244068f946b519089cb1dc1dde6fc2,"A new function, `renv::lockfile_validate()`, can be used to validate your `renv.lock` against a default or custom schema. (#1889)",NA,NA,NA,NA
