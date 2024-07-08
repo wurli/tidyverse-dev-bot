@@ -3,6 +3,18 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    All position scales now use the same definition of `x` and `y`
+    aesthetics. This lets uncommon aesthetics like `xintercept` expand
+    scales as usual. (#3342, #4966, @teunbrand)
+
+    !end-bullet!
+-   !begin-bullet!
+    Bare numeric values provided to Date or Datetime scales get
+    inversely transformed (cast to Date/POSIXct) with a warning
+    (@teunbrand).
+
+    !end-bullet!
+-   !begin-bullet!
     `stat_bin()` now accepts functions for argument `breaks` (@aijordan,
     #4561)
 
