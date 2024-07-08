@@ -252,6 +252,11 @@
     aesthetics are not of the correct length (#5901).
 
     !end-bullet!
+-   !begin-bullet!
+    `geom_hline()` and `geom_vline()` now have `position` argument
+    (@yutannihilation, #4285).
+
+    !end-bullet!
 
 !end-bullets-1!
 
