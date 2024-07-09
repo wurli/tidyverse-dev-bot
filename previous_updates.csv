@@ -17365,3 +17365,4 @@ renv,399da83bbcfe97e683a8da75b4861514,"`renv` now infers a dependency on the `sv
 renv,dbfe187dff65451803caa97934e2ff0f,"`renv` now supports setting of GitHub authentication credentials via any of `GITHUB_TOKEN`, `GITHUB_PAT`, and `GH_TOKEN`. (#1937)",NA,NA,NA,NA
 renv,d0d9625f1d0ede4a4b76ae1d4f8e15d5,`renv::install()` now properly delegates the `type` and `rebuild` arguments to `pak` when `options(renv.config.pak.enabled = TRUE)` is set. (#1924),NA,NA,NA,NA
 renv,5ad6605096033a7bfa24cbb9b1863afc,"Fixed an issue where `renv::dependencies()` could emit a warning when attempting to parse chunks using chunk options like `#| eval: c(1, 2)`. (#1906)",NA,NA,NA,NA
+roxygen2,ff30a3b181ab2bf37bcac1a74b9743dd,"Custom `@​family` titles now support Markdown syntax (#1608, @​salim-b). \# roxygen2 7.3.2",NA,NA,NA,NA

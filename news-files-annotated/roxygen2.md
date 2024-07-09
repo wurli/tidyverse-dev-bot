@@ -1,13 +1,17 @@
 # roxygen2 (development version)
 
-# roxygen2 7.3.2
-
 !begin-bullets-1!
 
+-   !begin-bullet!
+    Custom `@family` titles now support Markdown syntax (#1608,
+    @salim-b). \# roxygen2 7.3.2
+
+    !end-bullet!
 -   !begin-bullet!
     `@includeRmd` now additionally sets `options(cli.hyperlink = FALSE)`
     to make code run in included `.Rmd`s even more consistent across
     sessions (#1620).
+
     !end-bullet!
 
 !end-bullets-1!
@@ -344,7 +348,7 @@
 
     !end-bullet!
 -   !begin-bullet!
-    `@exportS3method pkg::generic` now works when `pkg::generic` isn't
+    `@exportS3Method pkg::generic` now works when `pkg::generic` isn't
     imported by your package (#1085).
 
     !end-bullet!
