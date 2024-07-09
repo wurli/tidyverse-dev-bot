@@ -17361,3 +17361,5 @@ ggplot2,8fbd98dc9f3141653242a9fa6eb6ff5a,Bare numeric values provided to Date or
 ggplot2,c2f7498aa6d60acc31652d9970aa9b1f,"`geom_hline()` and `geom_vline()` now have `position` argument (@​yutannihilation, #4285).",NA,NA,NA,NA
 renv,09b4317eb7a6390d378454c0aceba262,"Fixed an issue where `renv` could fail during installation of packages stored within repository sub-directories, if that repository also contained a top-level DESCRIPTION file. (#1941)",NA,NA,NA,NA
 renv,01472c76b83bc6e32201f887d6689db6,`renv` now also passes any custom headers available to `utils::available.packages()` during bootstrap. (#1942),NA,NA,NA,NA
+renv,399da83bbcfe97e683a8da75b4861514,"`renv` now infers a dependency on the `svglite` package if it detects calls of the form `ggsave(filename = ""path.svg"")`. (#1930)",NA,NA,NA,NA
+renv,dbfe187dff65451803caa97934e2ff0f,"`renv` now supports setting of GitHub authentication credentials via any of `GITHUB_TOKEN`, `GITHUB_PAT`, and `GH_TOKEN`. (#1937)",NA,NA,NA,NA

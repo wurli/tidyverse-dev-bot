@@ -3,6 +3,16 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `renv` now infers a dependency on the `svglite` package if it
+    detects calls of the form `ggsave(filename = "path.svg")`. (#1930)
+
+    !end-bullet!
+-   !begin-bullet!
+    `renv` now supports setting of GitHub authentication credentials via
+    any of `GITHUB_TOKEN`, `GITHUB_PAT`, and `GH_TOKEN`. (#1937)
+
+    !end-bullet!
+-   !begin-bullet!
     `renv` now also passes any custom headers available to
     `utils::available.packages()` during bootstrap. (#1942)
 
