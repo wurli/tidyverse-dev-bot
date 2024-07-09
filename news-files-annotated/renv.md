@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed an issue where `renv::dependencies()` could emit a warning
+    when attempting to parse chunks using chunk options like
+    `#| eval: c(1, 2)`. (#1906)
+
+    !end-bullet!
+-   !begin-bullet!
     `renv::install()` now properly delegates the `type` and `rebuild`
     arguments to `pak` when `options(renv.config.pak.enabled = TRUE)` is
     set. (#1924)
