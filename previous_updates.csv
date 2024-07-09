@@ -17359,3 +17359,4 @@ pillar,616758c35df50e59c9db983dd239a1ed,Auto-update from GitHub Actions. Run: ht
 ggplot2,b3f4c4b317ea3c7daffa66c4007155e5,"All position scales now use the same definition of `x` and `y` aesthetics. This lets uncommon aesthetics like `xintercept` expand scales as usual. (#3342, #4966, @​teunbrand)",NA,NA,NA,NA
 ggplot2,8fbd98dc9f3141653242a9fa6eb6ff5a,Bare numeric values provided to Date or Datetime scales get inversely transformed (cast to Date/POSIXct) with a warning (@​teunbrand).,NA,NA,NA,NA
 ggplot2,c2f7498aa6d60acc31652d9970aa9b1f,"`geom_hline()` and `geom_vline()` now have `position` argument (@​yutannihilation, #4285).",NA,NA,NA,NA
+renv,09b4317eb7a6390d378454c0aceba262,"Fixed an issue where `renv` could fail during installation of packages stored within repository sub-directories, if that repository also contained a top-level DESCRIPTION file. (#1941)",NA,NA,NA,NA
