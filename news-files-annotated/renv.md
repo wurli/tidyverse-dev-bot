@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `renv` now also passes any custom headers available to
+    `utils::available.packages()` during bootstrap. (#1942)
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed an issue where `renv` could fail during installation of
     packages stored within repository sub-directories, if that
     repository also contained a top-level DESCRIPTION file. (#1941)
