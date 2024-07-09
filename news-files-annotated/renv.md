@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `renv::install()` now properly delegates the `type` and `rebuild`
+    arguments to `pak` when `options(renv.config.pak.enabled = TRUE)` is
+    set. (#1924)
+
+    !end-bullet!
+-   !begin-bullet!
     `renv` now infers a dependency on the `svglite` package if it
     detects calls of the form `ggsave(filename = "path.svg")`. (#1930)
 
