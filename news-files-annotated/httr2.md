@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `req_body_file()` now only opens a connection when the request
+    actually needs data. In particular, this makes it work better with
+    `req_perform_parallel()` (#487).
+    !end-bullet!
+-   !begin-bullet!
     `req_perform_parallel()` now works when downloading 0 byte files
     (#478)
     !end-bullet!

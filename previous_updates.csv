@@ -17424,3 +17424,6 @@ roxygen2,d885df17b4f33986cf9589a0eb22eea3,"Custom `@​family` titles now suppor
 ggplot2,6cfe29b50d36968b1dcea4ccf817f623,"ggplot2 no longer imports {glue} (@​teunbrand, #5986).",NA,NA,NA,NA
 ggplot2,f5b7baee49d9e91ee7130b64f6a4100e,"`geom_rect()` can now derive the required corners positions from `x`/`width` or `y`/`height` parameterisation (@​teunbrand, #5861).",NA,NA,NA,NA
 httr2,136c37ee3170805c9140b5455884798f,`req_perform_parallel()` now works when downloading 0 byte files (#478),NA,NA,NA,NA
+httr2,2d6ad677db522498e2ea7066dd12048c,"`req_body_file()` now only opens a connection when the request actually needs data. In particular, this makes it work better with `req_perform_parallel()` (#487).",NA,NA,NA,NA
+roxygen2,f717a5c3a366075761ff661a2f7d7f05,"`@​examplesIf` always uses `withAutoprint()` (@​MichaelChirico, #1581). The raw Rd will be cleaner, but such examples will now only run under R\>=3.4.0 (2017).",NA,NA,NA,NA
+renv,44db80c833c5d2941772ae2161a0a28c,"`renv::restore()` gains the `transactional` argument, which can be used to control whether `renv` will allow successfully-installed packages remain in the project library even if a package fails to install during a later step. (#1109)",NA,NA,NA,NA
