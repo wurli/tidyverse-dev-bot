@@ -1,87 +1,353 @@
 # gt (development version)
 
+# gt 0.11.0
+
+## New features
+
 !begin-bullets-1!
 
 -   !begin-bullet!
-    `summary_rows()` now throws a more informative error message that
-    you should use `grand_summary_rows()` if no row groups are detected
-    (@olivroy, #1292). This change was introduced in gt 0.9.0
+    **gt** tables can now be rendered in the grid graphics system with
+    the new `as_gtable()` function (#180, #420, #509, #961, #1652,
+    #1701). Thank you @teunbrand for this valuable contribution! (#1563,
+    #1648, #1655, #1727)
 
     !end-bullet!
 -   !begin-bullet!
-    gt now depends on R 3.6 (@olivroy, #1731).
+    With the new `fmt_chem()` function, it's possible to format chemical
+    formulas and chemical equations in the table body. (#1636)
+
+    !end-bullet!
+-   !begin-bullet!
+    We added `fmt_email()` we can transform email addresses in table
+    cells into usable 'mailto:' links. This operates similarly to
+    `fmt_url()` but removes some unneeded anchor tag attributes (#1616).
+    (#1649)
+
+    !end-bullet!
+-   !begin-bullet!
+    The new `fmt_tf()` function lets you format logical values in a
+    **gt** table. You could express these as a 'yes' or 'no', a 'true'
+    or 'false', or, perhaps use pairings of complementary symbols that
+    make sense in a table (#1650). (#1654)
+
+    !end-bullet!
+-   !begin-bullet!
+    The new `fmt_country()` was added to help with making country names
+    consistent and localizable. The input text can either consist of 2-
+    or 3-letter ISO 3166-1 country codes. (#1645, #1696)
+
+    !end-bullet!
+-   !begin-bullet!
+    Math formulas (written in LaTeX) can now be rendered to HTML through
+    `md()` and `fmt_markdown()`. The LaTeX formulas can be set between
+    `$` or `$$` delimiters for inline and block rendering styles. While
+    this requires the **katex** package to work (it's an optional
+    dependency), the rendering of formulas is dependency-free in the
+    output (#375, #616, #1163). (#1578)
+
+    !end-bullet!
+-   !begin-bullet!
+    We added the `unit_conversion()` helper function to help you perform
+    unit conversions. This function returns a conversion factor for
+    transforming a value from one form of measurement units to a target
+    form. This works wonderfully in the `scale_by` argument that is
+    present in many number-based `fmt_*()` functions. (#1704, #1709,
+    #1710, #1729)
+
+    !end-bullet!
+-   !begin-bullet!
+    The `plot()` method was added for `gt_tbl` so that one can quickly
+    create a reprex visual example (e.g., `exibble |> gt() |> plot()`).
+    (#1742)
 
     !end-bullet!
 -   !begin-bullet!
     `info_time_style()` and `info_date_style()` gain a `locale` argument
-    to preview datetime formatting in a given locale.
-
-    !end-bullet!
--   !begin-bullet!
-    `opt_interactive()` gains `height` to help specify your widget's
-    height (@olivroy, #1544).
-
-    !end-bullet!
--   !begin-bullet!
-    `opt_interactive()` now shows row names if `rownames_to_stub = TRUE`
-    (@olivroy, #1702).
+    to preview time and date formatting in a specific locale. (#1747)
 
     !end-bullet!
 -   !begin-bullet!
     `data_color()` throws a more informative error message if `rows`
-    didn't resolve to anything (@olivroy, #1659).
+    didn't resolve to anything (#1659). (@olivroy, #1660).
 
     !end-bullet!
 -   !begin-bullet!
-    PDF output now allows the font size of a table to be set using the
-    table.font.size parameter in the tab_options function (#1472). The
-    font sizes of individual table cells (including those in the body,
-    stubs, column headings, etc.) can be set using tab_style function.
-    Several other options specified in tab_style are now reflected in
-    PDF output.
-
-    !end-bullet!
--   !begin-bullet!
-    `data_color()` throws a more informative error if a calculation
-    failed (@olivroy, #1373).
-
-    !end-bullet!
--   !begin-bullet!
-    `gtsave()` saves correctly to .rtf if using `cols_label()` and
-    `summary_rows()` or `grand_summary_rows()` (@olivroy, #1233)
-
-    !end-bullet!
--   !begin-bullet!
-    interactive tables are now rendering the first level of column
-    groups, added by `tab_spanner()` (@obsaditelnost, #1618)
-
-    !end-bullet!
--   !begin-bullet!
-    `cols_hide()` no longer errors if no column was supplied. Error
-    messages are also clearer when supplying a column that doesn't exist
-    (@olivroy, #1631).
-
-    !end-bullet!
--   !begin-bullet!
-    `cols_units()`, `tab_footnote()` and `tab_style()` now give better
-    error messages when `locations` is not correctly specified
-    (@olivroy, #475, #1638 , #1640, #1733).
-
-    !end-bullet!
--   !begin-bullet!
-    `opt_interactive()` has better support for displaying group columns
-    if present (`row_groups_as_column` has no effect on the output)
-    (@olivroy, #1705).
+    Several datasets were added to the package: `reactions`,
+    `photolysis`, `peeps`, `nuclides`, `gibraltar`, and `films`. (#1619,
+    #1641, #1664, #1668, #1686, #1695)
 
     !end-bullet!
 
 !end-bullets-1!
 
+## Improvements to the LaTeX output format
+
+!begin-bullets-2!
+
+-   !begin-bullet!
+    A host of improvements were made to LaTeX output such that styling
+    made through `tab_options()` and `tab_style()` is now honored. The
+    styling implemented now includes: (1) font size, underlining,
+    italicizing, bolding, indenting text, coloring text, filling cell
+    backgrounds, and modifying text case (i.e., uppercase, lowercase,
+    sentence case) (#1472). (#1594, #1603, #1746, thanks so much
+    @kbrevoort)
+
+    !end-bullet!
+-   !begin-bullet!
+    Text in spanner labels is now nicely wrapped in LaTeX output, where
+    before there would be no wrapping at all (#1656). (#1716, #1746)
+
+    !end-bullet!
+-   !begin-bullet!
+    The `gt()` setting of `row_group_as_column == TRUE` is now
+    implemented in LaTeX output. (#1716)
+
+    !end-bullet!
+-   !begin-bullet!
+    LaTeX output now understands and can convert from lengths expressed
+    in pixels (an internal conversion to pt units is performed) (#1582).
+    (#1595)
+
+    !end-bullet!
+-   !begin-bullet!
+    A fix was made to correct an error related to converting px units to
+    pt units for LaTeX output. (#1591, thank you @AaronGullickson)
+
+    !end-bullet!
+
+!end-bullets-2!
+
+## Improvements to interactive HTML tables via `opt_interactive()`
+
+!begin-bullets-3!
+
+-   !begin-bullet!
+    The performance of interactive table rendering through
+    `opt_interactive()` has been improved (#1289). (#1735)
+
+    !end-bullet!
+-   !begin-bullet!
+    `opt_interactive()` now shows row names if `rownames_to_stub = TRUE`
+    (#1702). (@olivroy, #1706)
+
+    !end-bullet!
+-   !begin-bullet!
+    There's now better support for displaying group columns, if present,
+    in interactive tables (#1705). (@olivroy, #1725, #1758, #1760)
+
+    !end-bullet!
+-   !begin-bullet!
+    Interactive tables can now display the stub header label created
+    with `tab_stubhead()`. (@olivroy, #1758).
+
+    !end-bullet!
+-   !begin-bullet!
+    There is no longer an error when having a hidden column under a
+    spanner label in an interactive HTML table (i.e.,
+    `opt_interactive()`) context. (#1629)
+
+    !end-bullet!
+-   !begin-bullet!
+    Interactive tables now render the first level of column groups added
+    by `tab_spanner()` (#1618). Thanks @obsaditelnost for your work on
+    this! (#1623)
+
+    !end-bullet!
+-   !begin-bullet!
+    The `opt_interactive()` function now has the `height` argument to
+    help specify the height of an interactive table (#1544). (@olivroy,
+    #1723).
+
+    !end-bullet!
+-   !begin-bullet!
+    When using `opt_interactive(use_pagination = FALSE)` the pagination
+    controls are now entirely removed instead of merely being
+    non-functional (#1542). (#1642)
+
+    !end-bullet!
+-   !begin-bullet!
+    When supplying a locale value to an interactive table, we now ensure
+    that the supplied locale is normalized (so `"fr_CH"` will be
+    internally corrected to `"fr-CH"`) (#1637). (#1643)
+
+    !end-bullet!
+
+!end-bullets-3!
+
+## Minor improvements and bug fixes
+
+!begin-bullets-4!
+
+-   !begin-bullet!
+    The `fill_color` argument in `fmt_icon()` now allows the use of
+    named vector/list to apply different colors to different icons
+    (#1560). (#1647)
+
+    !end-bullet!
+-   !begin-bullet!
+    `fmt_flag()` gains a `locale` argument so that SVG title text
+    displays country names in any locale language. (#1645)
+
+    !end-bullet!
+-   !begin-bullet!
+    To better represent missing values in nanoplots, the `"marker"`
+    option has been added in `cols_nanoplot()` (#1567). (#1587)
+
+    !end-bullet!
+-   !begin-bullet!
+    Many of the `info_*()` functions were upgraded with better
+    functionality and a refreshed look. (#1720, #1748, #1754)
+
+    !end-bullet!
+-   !begin-bullet!
+    The `metro` dataset has been updated with six new Line 11 stations
+    that opened on 2024-06-13. (#1708)
+
+    !end-bullet!
+-   !begin-bullet!
+    For HTML tables produced in Quarto, we now use the `data-qmd-base64`
+    attribute along with base64 text when passing Markdown text to
+    Quarto (which handles the Markdown conversion) (#1487, #1488).
+    (#1688, #1690, #1734)
+
+    !end-bullet!
+-   !begin-bullet!
+    Scientific and engineering notation will no longer unexpectedly wrap
+    lines in HTML for smaller column widths. (#1621)
+
+    !end-bullet!
+-   !begin-bullet!
+    Footnote marks in HTML table outputs no longer unexpectedly increase
+    the text line height (#1556). (#1644)
+
+    !end-bullet!
+-   !begin-bullet!
+    We now ensure tables print correctly when called from inline code in
+    `.qmd` or `.Rmd` documents (#1055). (#1689)
+
+    !end-bullet!
+-   !begin-bullet!
+    `data_color()` throws a more informative error if an internal
+    calculation failed (e.g., presence of infinite values) (#1373).
+    (@olivroy, #1585)
+
+    !end-bullet!
+-   !begin-bullet!
+    `data_color()` provides an informative error message if `rows`
+    doesn't resolve to anything. (@olivroy, #1659)
+
+    !end-bullet!
+-   !begin-bullet!
+    `summary_rows()` now throws a more informative error message that
+    you should use `grand_summary_rows()` if no row groups are detected
+    (#1292). (@olivroy, #1752)
+
+    !end-bullet!
+-   !begin-bullet!
+    Boxplot-based nanoplots now correctly determine which data points
+    are outliers. (#1756)
+
+    !end-bullet!
+-   !begin-bullet!
+    The issue where having a row group set as a column in the stub,
+    corrupting the setting of column widths in HTML output tables, has
+    been fixed (#1253, #1510). (#1744)
+
+    !end-bullet!
+-   !begin-bullet!
+    The rendering of footnotes and source notes received fixes to ensure
+    that all requested notes are inserted and also that the typesetting
+    options in `tab_options()` is implemented (#1505, #1615). (#1620,
+    #1751)
+
+    !end-bullet!
+-   !begin-bullet!
+    Using a `fmt_*()` function while the stub is composed of Markdown or
+    HTML no longer results in an error (#1600). (#1627)
+
+    !end-bullet!
+-   !begin-bullet!
+    The combination of using `cols_label()` + `summary_rows()` /
+    `grand_summary_rows()` no longer causes an error for RTF output
+    through `gtsave()` (#1233). (#1596)
+
+    !end-bullet!
+-   !begin-bullet!
+    We now ensure that `id` values are stripped of HTML tags when using
+    `tab_row_group()`. Previously this condition would create corrupted
+    row group labels (#1143). (#1750)
+
+    !end-bullet!
+-   !begin-bullet!
+    `cols_hide()` no longer errors if a column wasn't supplied. Error
+    messages are also clearer when supplying a column that doesn't exist
+    (#1631). (#1632)
+
+    !end-bullet!
+-   !begin-bullet!
+    `cols_units()`, `tab_footnote()` and `tab_style()` now give better
+    error messages when `locations` is not correctly specified (#475).
+    (@olivroy, #1638, #1640, #1733)
+
+    !end-bullet!
+-   !begin-bullet!
+    Error messages are now improved for `rm_spanners()`,
+    `rm_footnotes()`, and `rm_source_notes()` (#1638). (#1661)
+
+    !end-bullet!
+-   !begin-bullet!
+    Error messages for the `vec_*()` functions are now standardized with
+    `check_vector_valid()`. (#1662)
+
+    !end-bullet!
+-   !begin-bullet!
+    Running **testthat** tests no longer fails on Windows due to
+    `gtsave()` path incompatibilities (#1626). (#1627)
+
+    !end-bullet!
+-   !begin-bullet!
+    Tests run on Windows are less noisy now (no more render related
+    warnings). (#1634)
+
+    !end-bullet!
+-   !begin-bullet!
+    Much code refactoring, linting, and test improvements were performed
+    by @olivroy, resulting in many performance gains. (#1666, #1683,
+    #1694, #1699, #1715, #1718, #1728, #1730, #1731, #1732, #1733,
+    #1753)
+
+    !end-bullet!
+-   !begin-bullet!
+    **gt** now depends on R 3.6. (#1599, #1731).
+
+    !end-bullet!
+
+!end-bullets-4!
+
+## Documentation enhancements
+
+!begin-bullets-5!
+
+-   !begin-bullet!
+    Many small documentation fixes were performed. (#1555, #1598, #1633,
+    #1658, #1663, #1676, #1685, #1700, #1703, #1717, #1719, #1721)
+
+    !end-bullet!
+-   !begin-bullet!
+    More examples were added to further demonstrate how various
+    functions can be used. (#1646, #1667, #1677, #1698, #1724, #1737)
+
+    !end-bullet!
+
+!end-bullets-5!
+
 # gt 0.10.1
 
 ## Improvements to nanoplots
 
-!begin-bullets-2!
+!begin-bullets-6!
 
 -   !begin-bullet!
     Box plots can now be generated via `cols_nanoplot()` by using
@@ -109,11 +375,11 @@
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-6!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-3!
+!begin-bullets-7!
 
 -   !begin-bullet!
     The performance of rendering bigger tables as HTML has been improved
@@ -129,17 +395,17 @@
     !end-bullet!
 -   !begin-bullet!
     Code and test refactoring was performed to generally improve
-    performance and code readability. (#1480, thanks @olivroy)
+    performance and code readability. (#1480)
 
     !end-bullet!
 -   !begin-bullet!
     The `gtsave()` function now returns the file path invisibly instead
-    of `TRUE`. (#1478, thank you @olivroy)
+    of `TRUE`. (#1478)
 
     !end-bullet!
 -   !begin-bullet!
     Most functions now produce better error messages if not provided
-    with a `gt_tbl` object. (#1504, c/o @olivroy)
+    with a `gt_tbl` object. (#1504, #1624)
 
     !end-bullet!
 -   !begin-bullet!
@@ -181,13 +447,13 @@
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-7!
 
 # gt 0.10.0
 
 ## Nanoplots
 
-!begin-bullets-4!
+!begin-bullets-8!
 
 -   !begin-bullet!
     We can now add in little plots called *nanoplots* to a **gt** table
@@ -229,11 +495,11 @@
 
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-8!
 
 ## Other great new features
 
-!begin-bullets-5!
+!begin-bullets-9!
 
 -   !begin-bullet!
     Brand new rows can be added to a **gt** table with the new
@@ -319,11 +585,11 @@
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-9!
 
 ## Improvements to the Word output format
 
-!begin-bullets-6!
+!begin-bullets-10!
 
 -   !begin-bullet!
     Processing to Word output now escapes HTML in more places (#1378).
@@ -355,11 +621,11 @@
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-10!
 
 ## Documentation enhancements
 
-!begin-bullets-7!
+!begin-bullets-11!
 
 -   !begin-bullet!
     The **gt** website has been updated with a slightly different look;
@@ -382,11 +648,11 @@
 
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-11!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-8!
+!begin-bullets-12!
 
 -   !begin-bullet!
     The `tab_spanner_delim()` function was given a `limit` argument so
@@ -553,13 +819,13 @@
 
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-12!
 
 # gt 0.9.0
 
 ## New features
 
-!begin-bullets-9!
+!begin-bullets-13!
 
 -   !begin-bullet!
     The `summary_rows()` and `grand_summary_rows()` functions have been
@@ -773,11 +1039,11 @@
 
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-13!
 
 ## Documentation enhancements
 
-!begin-bullets-10!
+!begin-bullets-14!
 
 -   !begin-bullet!
     Addition of a new vignette (*gt Clinical Tables*) that uses the
@@ -805,11 +1071,11 @@
 
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-14!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-11!
+!begin-bullets-15!
 
 -   !begin-bullet!
     The `fmt_scientific()` and `fmt_engineering()` (and their
@@ -920,13 +1186,13 @@
 
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-15!
 
 # gt 0.8.0
 
 ## New features
 
-!begin-bullets-12!
+!begin-bullets-16!
 
 -   !begin-bullet!
     The new function `sub_values()` is here for subbing in arbitrary
@@ -1087,11 +1353,11 @@
 
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-16!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-13!
+!begin-bullets-17!
 
 -   !begin-bullet!
     The `docx` output format is now better detected in R Markdown and
@@ -1116,13 +1382,13 @@
 
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-17!
 
 # gt 0.7.0
 
 ## New features
 
-!begin-bullets-14!
+!begin-bullets-18!
 
 -   !begin-bullet!
     We can now export **gt** tables as Word documents. This is thanks to
@@ -1186,11 +1452,11 @@
 
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-18!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-15!
+!begin-bullets-19!
 
 -   !begin-bullet!
     We can now supply data from adjacent columns to user-supplied
@@ -1245,13 +1511,13 @@
 
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-19!
 
 # gt 0.6.0
 
 ## New features
 
-!begin-bullets-16!
+!begin-bullets-20!
 
 -   !begin-bullet!
     RTF output support more suitable for Pharma users: (1) table styling
@@ -1286,13 +1552,13 @@
 
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-20!
 
 # gt 0.5.0
 
 ## New features
 
-!begin-bullets-17!
+!begin-bullets-21!
 
 -   !begin-bullet!
     The `tab_spanner()` and `tab_spanner_delim()` functions now support
@@ -1312,11 +1578,11 @@
 
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-21!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-18!
+!begin-bullets-22!
 
 -   !begin-bullet!
     Enhanced the `cols_merge_uncert()` function such that different
@@ -1349,13 +1615,13 @@
 
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-22!
 
 # gt 0.4.0
 
 ## New features
 
-!begin-bullets-19!
+!begin-bullets-23!
 
 -   !begin-bullet!
     We now have the ability to display row group labels as a column in
@@ -1399,11 +1665,11 @@
 
     !end-bullet!
 
-!end-bullets-19!
+!end-bullets-23!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-20!
+!begin-bullets-24!
 
 -   !begin-bullet!
     There is now more flexibility, improved documentation, and more
@@ -1446,13 +1712,13 @@
 
     !end-bullet!
 
-!end-bullets-20!
+!end-bullets-24!
 
 # gt 0.3.1
 
 ## New features
 
-!begin-bullets-21!
+!begin-bullets-25!
 
 -   !begin-bullet!
     We now have the `force_sign` argument in several numeric formatting
@@ -1479,11 +1745,11 @@
 
     !end-bullet!
 
-!end-bullets-21!
+!end-bullets-25!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-22!
+!begin-bullets-26!
 
 -   !begin-bullet!
     Fixed LaTeX rendering for tables that have a stub; now data row
@@ -1552,14 +1818,14 @@
 
     !end-bullet!
 
-!end-bullets-22!
+!end-bullets-26!
 
 # gt 0.3.0
 
 This release focuses on improvements to two main areas:
 
 1.  Better RTF output support:
-    !begin-bullets-23!
+    !begin-bullets-27!
     -   !begin-bullet!
         RTF table generation is now fit for use following an extensive
         rewrite of internal RTF rendering functions.
@@ -1572,9 +1838,9 @@ This release focuses on improvements to two main areas:
         and text editors that are RTF-compatible.
         !end-bullet!
 
-    !end-bullets-23!
+    !end-bullets-27!
 2.  Implementation of **tidyselect** semantics:
-    !begin-bullets-24!
+    !begin-bullets-28!
     -   !begin-bullet!
         References to columns (by way of the `columns` argument in many
         **gt** functions) now better adhere to **tidyselect** semantics.
@@ -1592,11 +1858,11 @@ This release focuses on improvements to two main areas:
         `columns = -c(a, b)`) function as expected.
         !end-bullet!
 
-    !end-bullets-24!
+    !end-bullets-28!
 
 ## Breaking changes and deprecations
 
-!begin-bullets-25!
+!begin-bullets-29!
 
 -   !begin-bullet!
     Column labels subordinate to column spanner labels had their
@@ -1636,11 +1902,11 @@ This release focuses on improvements to two main areas:
 
     !end-bullet!
 
-!end-bullets-25!
+!end-bullets-29!
 
 ## New features
 
-!begin-bullets-26!
+!begin-bullets-30!
 
 -   !begin-bullet!
     RTF table output via `gtsave(..., "<file>.rtf")` and `as_rtf()`
@@ -1691,11 +1957,11 @@ This release focuses on improvements to two main areas:
 
     !end-bullet!
 
-!end-bullets-26!
+!end-bullets-30!
 
 ## Minor improvements
 
-!begin-bullets-27!
+!begin-bullets-31!
 
 -   !begin-bullet!
     The `accounting` option is now available in the `fmt_percent()` and
@@ -1732,11 +1998,11 @@ This release focuses on improvements to two main areas:
 
     !end-bullet!
 
-!end-bullets-27!
+!end-bullets-31!
 
 ## Bug fixes
 
-!begin-bullets-28!
+!begin-bullets-32!
 
 -   !begin-bullet!
     When getting the HTML text for **gt** table with
@@ -1767,13 +2033,13 @@ This release focuses on improvements to two main areas:
 
     !end-bullet!
 
-!end-bullets-28!
+!end-bullets-32!
 
 # gt 0.2.2
 
 ## New features
 
-!begin-bullets-29!
+!begin-bullets-33!
 
 -   !begin-bullet!
     The new `opt_table_font()` function makes it possible to define a
@@ -1834,11 +2100,11 @@ This release focuses on improvements to two main areas:
 
     !end-bullet!
 
-!end-bullets-29!
+!end-bullets-33!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-30!
+!begin-bullets-34!
 
 -   !begin-bullet!
     The `data_color()` function has been rewritten to improve
@@ -1853,11 +2119,11 @@ This release focuses on improvements to two main areas:
 
     !end-bullet!
 
-!end-bullets-30!
+!end-bullets-34!
 
 # gt 0.2.1
 
-!begin-bullets-31!
+!begin-bullets-35!
 
 -   !begin-bullet!
     `summary_rows()` and `grand_summary_rows()` no longer incorrectly
@@ -1874,16 +2140,16 @@ This release focuses on improvements to two main areas:
 
     !end-bullet!
 
-!end-bullets-31!
+!end-bullets-35!
 
 # gt 0.2.0.5
 
-!begin-bullets-32!
+!begin-bullets-36!
 
 -   !begin-bullet!
     New package with 80 exported functions for building display tables
     !end-bullet!
 
-!end-bullets-32!
+!end-bullets-36!
 
 # gt 0.1.0 (unreleased)
