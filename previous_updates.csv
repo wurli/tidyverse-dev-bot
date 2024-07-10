@@ -17418,3 +17418,4 @@ gt,c5a3e0e3cccb34e89f9f18bb5c2e066e,"More examples were added to further demonst
 gt,84240134e420c6989d46decf35af20d2,Code and test refactoring was performed to generally improve performance and code readability. (#1480),NA,NA,NA,NA
 gt,edc5386e64655ca351c4f20f87ac8f9d,The `gtsave()` function now returns the file path invisibly instead of `TRUE`. (#1478),NA,NA,NA,NA
 gt,051383a516d79b6b52cc7baed5a9b644,"Most functions now produce better error messages if not provided with a `gt_tbl` object. (#1504, #1624)",NA,NA,NA,NA
+renv,7671cf2f77e861580e0bd9a435c305ec,`renv` now infers a dependency on the `xml2` package for projects using the `testthat::JunitReporter` for tests. (#1936),NA,NA,NA,NA
