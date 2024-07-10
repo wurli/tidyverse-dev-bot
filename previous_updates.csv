@@ -17419,3 +17419,5 @@ gt,84240134e420c6989d46decf35af20d2,Code and test refactoring was performed to g
 gt,edc5386e64655ca351c4f20f87ac8f9d,The `gtsave()` function now returns the file path invisibly instead of `TRUE`. (#1478),NA,NA,NA,NA
 gt,051383a516d79b6b52cc7baed5a9b644,"Most functions now produce better error messages if not provided with a `gt_tbl` object. (#1504, #1624)",NA,NA,NA,NA
 renv,7671cf2f77e861580e0bd9a435c305ec,`renv` now infers a dependency on the `xml2` package for projects using the `testthat::JunitReporter` for tests. (#1936),NA,NA,NA,NA
+roxygen2,ff49aed737c51646d8c5b331fe3aac2b,"The check for unexported S3 methods was improved, so it does not hang any more if a largish data object is in the package (#1593, @​jranke).",NA,NA,NA,NA
+roxygen2,d885df17b4f33986cf9589a0eb22eea3,"Custom `@​family` titles now support Markdown syntax (#1608, @​salim-b).",NA,NA,NA,NA
