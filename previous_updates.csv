@@ -17421,3 +17421,6 @@ gt,051383a516d79b6b52cc7baed5a9b644,"Most functions now produce better error mes
 renv,7671cf2f77e861580e0bd9a435c305ec,`renv` now infers a dependency on the `xml2` package for projects using the `testthat::JunitReporter` for tests. (#1936),NA,NA,NA,NA
 roxygen2,ff49aed737c51646d8c5b331fe3aac2b,"The check for unexported S3 methods was improved, so it does not hang any more if a largish data object is in the package (#1593, @​jranke).",NA,NA,NA,NA
 roxygen2,d885df17b4f33986cf9589a0eb22eea3,"Custom `@​family` titles now support Markdown syntax (#1608, @​salim-b).",NA,NA,NA,NA
+ggplot2,6cfe29b50d36968b1dcea4ccf817f623,"ggplot2 no longer imports {glue} (@​teunbrand, #5986).",NA,NA,NA,NA
+ggplot2,f5b7baee49d9e91ee7130b64f6a4100e,"`geom_rect()` can now derive the required corners positions from `x`/`width` or `y`/`height` parameterisation (@​teunbrand, #5861).",NA,NA,NA,NA
+httr2,136c37ee3170805c9140b5455884798f,`req_perform_parallel()` now works when downloading 0 byte files (#478),NA,NA,NA,NA

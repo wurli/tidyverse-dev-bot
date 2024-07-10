@@ -3,6 +3,15 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    ggplot2 no longer imports {glue} (@teunbrand, #5986).
+
+    !end-bullet!
+-   !begin-bullet!
+    `geom_rect()` can now derive the required corners positions from
+    `x`/`width` or `y`/`height` parameterisation (@teunbrand, #5861).
+
+    !end-bullet!
+-   !begin-bullet!
     All position scales now use the same definition of `x` and `y`
     aesthetics. This lets uncommon aesthetics like `xintercept` expand
     scales as usual. (#3342, #4966, @teunbrand)

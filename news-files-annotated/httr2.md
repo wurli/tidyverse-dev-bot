@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `req_perform_parallel()` now works when downloading 0 byte files
+    (#478)
+    !end-bullet!
+-   !begin-bullet!
     Corrupt `rds` files no longer cause the request to fail.
     !end-bullet!
 
