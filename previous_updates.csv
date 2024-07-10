@@ -17427,3 +17427,5 @@ httr2,136c37ee3170805c9140b5455884798f,`req_perform_parallel()` now works when d
 httr2,2d6ad677db522498e2ea7066dd12048c,"`req_body_file()` now only opens a connection when the request actually needs data. In particular, this makes it work better with `req_perform_parallel()` (#487).",NA,NA,NA,NA
 roxygen2,f717a5c3a366075761ff661a2f7d7f05,"`@​examplesIf` always uses `withAutoprint()` (@​MichaelChirico, #1581). The raw Rd will be cleaner, but such examples will now only run under R\>=3.4.0 (2017).",NA,NA,NA,NA
 renv,44db80c833c5d2941772ae2161a0a28c,"`renv::restore()` gains the `transactional` argument, which can be used to control whether `renv` will allow successfully-installed packages remain in the project library even if a package fails to install during a later step. (#1109)",NA,NA,NA,NA
+thematic,a0c9ed3244ba74d685b0c132e1d97b2f,Add basic positron IDE support. (#152),NA,NA,NA,NA
+thematic,38cb3c030ac23e55b199f5791d531413,Update for now deprecated `systemfonts::match_font()`. (#153),NA,NA,NA,NA
