@@ -3,6 +3,17 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Themes gain an additional `header_family` argument to easily set the
+    font for headers and titles (#5886).
+
+    !end-bullet!
+-   !begin-bullet!
+    The `plot.subtitle`, `plot.caption` and `plot.tag` theme elements
+    now inherit from the root `text` element instead of the `title`
+    element (#5886).
+
+    !end-bullet!
+-   !begin-bullet!
     ggplot2 no longer imports {glue} (@teunbrand, #5986).
 
     !end-bullet!
