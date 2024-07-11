@@ -17441,3 +17441,9 @@ httr2,3b01ecec402cafa0ddbf9dd033d8954e,`req_url_query()` now allows you to opt o
 httr2,cccadc1df2f696b66f58ba47e69309f4,`req_cache()` no longer fails if the `rds` files are somehow corrupted,NA,NA,NA,NA
 ggplot2,cb0c2352a02f1431f7f06195c1496d24,Themes gain an additional `header_family` argument to easily set the font for headers and titles (#5886).,NA,NA,NA,NA
 ggplot2,b19729e8d4bb4118c54104f2906fa7c9,"The `plot.subtitle`, `plot.caption` and `plot.tag` theme elements now inherit from the root `text` element instead of the `title` element (#5886).",NA,NA,NA,NA
+ggplot2,4b04438e3abcb78f480f2c3c3e16cf5f,"`position_dodge()` and `position_jitterdodge()` now have a `reverse` argument (@​teunbrand, #3610)",NA,NA,NA,NA
+ggplot2,ab1e60cd6dd271e7340c14ad7dadb39c,"`coord_radial(r.axis.inside)` can now take a numeric value to control placement of internally placed radius axes (@​teunbrand, #5805).",NA,NA,NA,NA
+ggplot2,b7120b4dfa28a2fb655caec534f885c0,"(internal) default labels are derived in `ggplot_build()` rather than in `ggplot_add.Layer()` (@​teunbrand, #5894)",NA,NA,NA,NA
+ggplot2,c4bf41d3d213605d9f60b8c23bd1f2a5,"An attempt is made to use a variable's label attribute as default label (@​teunbrand, #4631)",NA,NA,NA,NA
+ggplot2,204893b1067ed509ed98ae270dbc99d6,"`guide_colourbar()` now correctly hands off `position` and `available_aes` parameters downstream (@​teunbrand, #5930)",NA,NA,NA,NA
+ggplot2,a635293d9ecf2ad469295b71a651736f,"New function `get_strip_labels()` to retrieve facet labels (@​teunbrand, #4979)",NA,NA,NA,NA

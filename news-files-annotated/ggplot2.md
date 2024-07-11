@@ -3,6 +3,27 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `position_dodge()` and `position_jitterdodge()` now have a `reverse`
+    argument (@teunbrand, #3610)
+
+    !end-bullet!
+-   !begin-bullet!
+    `coord_radial(r.axis.inside)` can now take a numeric value to
+    control placement of internally placed radius axes (@teunbrand,
+    #5805).
+
+    !end-bullet!
+-   !begin-bullet!
+    (internal) default labels are derived in `ggplot_build()` rather
+    than in `ggplot_add.Layer()` (@teunbrand, #5894)
+
+    !end-bullet!
+-   !begin-bullet!
+    An attempt is made to use a variable's label attribute as default
+    label (@teunbrand, #4631)
+
+    !end-bullet!
+-   !begin-bullet!
     Themes gain an additional `header_family` argument to easily set the
     font for headers and titles (#5886).
 
@@ -273,8 +294,18 @@
 
     !end-bullet!
 -   !begin-bullet!
+    `guide_colourbar()` now correctly hands off `position` and
+    `available_aes` parameters downstream (@teunbrand, #5930)
+
+    !end-bullet!
+-   !begin-bullet!
     `geom_hline()` and `geom_vline()` now have `position` argument
     (@yutannihilation, #4285).
+
+    !end-bullet!
+-   !begin-bullet!
+    New function `get_strip_labels()` to retrieve facet labels
+    (@teunbrand, #4979)
 
     !end-bullet!
 

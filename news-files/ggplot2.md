@@ -1,5 +1,13 @@
 # ggplot2 (development version)
 
+* `position_dodge()` and `position_jitterdodge()` now have a `reverse` argument 
+  (@teunbrand, #3610)
+* `coord_radial(r.axis.inside)` can now take a numeric value to control 
+  placement of internally placed radius axes (@teunbrand, #5805).
+* (internal) default labels are derived in `ggplot_build()` rather than
+  in `ggplot_add.Layer()` (@teunbrand, #5894)
+* An attempt is made to use a variable's label attribute as default label 
+  (@teunbrand, #4631)
 * Themes gain an additional `header_family` argument to easily set the font
   for headers and titles (#5886).
 * The `plot.subtitle`, `plot.caption` and `plot.tag` theme elements now inherit 
@@ -111,8 +119,11 @@
   the `nbin` argument (@teunbrand, #5882, #5036)
 * `after_stat()` and `after_scale()` throw warnings when the computed aesthetics
   are not of the correct length (#5901).
+* `guide_colourbar()` now correctly hands off `position` and `available_aes`
+  parameters downstream (@teunbrand, #5930)
 * `geom_hline()` and `geom_vline()` now have `position` argument
   (@yutannihilation, #4285).
+* New function `get_strip_labels()` to retrieve facet labels (@teunbrand, #4979)
 
 # ggplot2 3.5.1
 
