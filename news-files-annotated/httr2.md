@@ -20,7 +20,8 @@
     (#478)
     !end-bullet!
 -   !begin-bullet!
-    Corrupt `rds` files no longer cause the request to fail.
+    `req_cache()` no longer fails if the `rds` files are somehow
+    corrupted
     !end-bullet!
 
 !end-bullets-1!
