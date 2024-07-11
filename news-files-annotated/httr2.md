@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `req_url_query()` now allows you to opt out of escaping for
+    multi-value parameters (#404).
+    !end-bullet!
+-   !begin-bullet!
     `req_perform_parallel()` now works correctly with `req_cache()`
     (#447).
     !end-bullet!
