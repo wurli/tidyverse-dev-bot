@@ -17447,3 +17447,5 @@ ggplot2,b7120b4dfa28a2fb655caec534f885c0,"(internal) default labels are derived 
 ggplot2,c4bf41d3d213605d9f60b8c23bd1f2a5,"An attempt is made to use a variable's label attribute as default label (@​teunbrand, #4631)",NA,NA,NA,NA
 ggplot2,204893b1067ed509ed98ae270dbc99d6,"`guide_colourbar()` now correctly hands off `position` and `available_aes` parameters downstream (@​teunbrand, #5930)",NA,NA,NA,NA
 ggplot2,a635293d9ecf2ad469295b71a651736f,"New function `get_strip_labels()` to retrieve facet labels (@​teunbrand, #4979)",NA,NA,NA,NA
+ggplot2,eeceb4946671a4ea6ecbf56bd42437dd,"`geom_step()` now supports the `orientation` argument (@​teunbrand, #5936).",NA,NA,NA,NA
+ggplot2,34b536f8cc7061a4dae75051f334984a,"Fixed bug in `position_dodge2()`'s identification of range overlaps (@​teunbrand, #5938, #4327).",NA,NA,NA,NA

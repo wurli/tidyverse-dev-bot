@@ -1,5 +1,6 @@
 # ggplot2 (development version)
 
+* `geom_step()` now supports the `orientation` argument (@teunbrand, #5936).
 * `position_dodge()` and `position_jitterdodge()` now have a `reverse` argument 
   (@teunbrand, #3610)
 * `coord_radial(r.axis.inside)` can now take a numeric value to control 
@@ -124,6 +125,8 @@
 * `geom_hline()` and `geom_vline()` now have `position` argument
   (@yutannihilation, #4285).
 * New function `get_strip_labels()` to retrieve facet labels (@teunbrand, #4979)
+* Fixed bug in `position_dodge2()`'s identification of range overlaps 
+  (@teunbrand, #5938, #4327).
 
 # ggplot2 3.5.1
 

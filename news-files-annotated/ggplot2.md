@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `geom_step()` now supports the `orientation` argument (@teunbrand,
+    #5936).
+
+    !end-bullet!
+-   !begin-bullet!
     `position_dodge()` and `position_jitterdodge()` now have a `reverse`
     argument (@teunbrand, #3610)
 
@@ -306,6 +311,11 @@
 -   !begin-bullet!
     New function `get_strip_labels()` to retrieve facet labels
     (@teunbrand, #4979)
+
+    !end-bullet!
+-   !begin-bullet!
+    Fixed bug in `position_dodge2()`'s identification of range overlaps
+    (@teunbrand, #5938, #4327).
 
     !end-bullet!
 
