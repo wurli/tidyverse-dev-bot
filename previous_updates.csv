@@ -17429,3 +17429,8 @@ roxygen2,f717a5c3a366075761ff661a2f7d7f05,"`@​examplesIf` always uses `withAut
 renv,44db80c833c5d2941772ae2161a0a28c,"`renv::restore()` gains the `transactional` argument, which can be used to control whether `renv` will allow successfully-installed packages remain in the project library even if a package fails to install during a later step. (#1109)",NA,NA,NA,NA
 thematic,a0c9ed3244ba74d685b0c132e1d97b2f,Add basic positron IDE support. (#152),NA,NA,NA,NA
 thematic,38cb3c030ac23e55b199f5791d531413,Update for now deprecated `systemfonts::match_font()`. (#153),NA,NA,NA,NA
+pillar,05258f1332308afbe3f381c855349352,Remove empty snapshot tests (#664).,NA,NA,NA,NA
+tibble,6f0ac3382a2de2a56fc064b97cc69967,Auto-update from GitHub Actions. Run: https://github.com/tidyverse/tibble/actions/runs/9884064046,NA,NA,NA,NA
+tibble,5c190b3cbcfdb3a04cdeaac6f4674a5a,Auto-update from GitHub Actions. Run: https://github.com/tidyverse/tibble/actions/runs/9871752503,NA,NA,NA,NA
+tibble,3f3629c21fc9b5cae2d08dc205320ea5,Use roxygen2 PR to fix documentation.,NA,NA,NA,NA
+tibble,4eec44193dcf158f4cd2a1b056319ac2,Snapshot updates for rcc-smoke (null) (#1597).,NA,NA,NA,NA
