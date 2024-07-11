@@ -17434,3 +17434,4 @@ tibble,6f0ac3382a2de2a56fc064b97cc69967,Auto-update from GitHub Actions. Run: ht
 tibble,5c190b3cbcfdb3a04cdeaac6f4674a5a,Auto-update from GitHub Actions. Run: https://github.com/tidyverse/tibble/actions/runs/9871752503,NA,NA,NA,NA
 tibble,3f3629c21fc9b5cae2d08dc205320ea5,Use roxygen2 PR to fix documentation.,NA,NA,NA,NA
 tibble,4eec44193dcf158f4cd2a1b056319ac2,Snapshot updates for rcc-smoke (null) (#1597).,NA,NA,NA,NA
+renv,de3c3b465a3320b6969ad91fbc30b1c3,"`renv::init(bioc = ""<version>"")` now prompts the user in interactive sessions when requesting a version of Bioconductor which is not compatible with the current version of R. (#1943)",NA,NA,NA,NA
