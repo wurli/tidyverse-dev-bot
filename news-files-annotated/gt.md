@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Improved error messages for the `text_transform()` function if
+    `locations` couldn't be resolved. (@olivroy, #1774)
+
+    !end-bullet!
+-   !begin-bullet!
     `tab_row_group()` gives a more precise error message when `rows`
     can't be resolved correctly (#1535). (@olivroy, #1770)
 

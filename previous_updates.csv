@@ -17451,3 +17451,4 @@ ggplot2,eeceb4946671a4ea6ecbf56bd42437dd,"`geom_step()` now supports the `orient
 ggplot2,34b536f8cc7061a4dae75051f334984a,"Fixed bug in `position_dodge2()`'s identification of range overlaps (@​teunbrand, #5938, #4327).",NA,NA,NA,NA
 gt,7dc5d956616ab4bc8c709d0d2c3cb19d,"`tab_row_group()` gives a more precise error message when `rows` can't be resolved correctly (#1535). (@​olivroy, #1770)",NA,NA,NA,NA
 gt,b681743ba5ade04d268baa09ba12a0f7,"Fixed an issue where `md("""")` would fail in Quarto. (@​olivroy, #1769)",NA,NA,NA,NA
+gt,2a616f6d9037f4deb24bac369de93531,"Improved error messages for the `text_transform()` function if `locations` couldn't be resolved. (@​olivroy, #1774)",NA,NA,NA,NA
