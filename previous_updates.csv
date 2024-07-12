@@ -17449,3 +17449,5 @@ ggplot2,204893b1067ed509ed98ae270dbc99d6,"`guide_colourbar()` now correctly hand
 ggplot2,a635293d9ecf2ad469295b71a651736f,"New function `get_strip_labels()` to retrieve facet labels (@​teunbrand, #4979)",NA,NA,NA,NA
 ggplot2,eeceb4946671a4ea6ecbf56bd42437dd,"`geom_step()` now supports the `orientation` argument (@​teunbrand, #5936).",NA,NA,NA,NA
 ggplot2,34b536f8cc7061a4dae75051f334984a,"Fixed bug in `position_dodge2()`'s identification of range overlaps (@​teunbrand, #5938, #4327).",NA,NA,NA,NA
+gt,7dc5d956616ab4bc8c709d0d2c3cb19d,"`tab_row_group()` gives a more precise error message when `rows` can't be resolved correctly (#1535). (@​olivroy, #1770)",NA,NA,NA,NA
+gt,b681743ba5ade04d268baa09ba12a0f7,"Fixed an issue where `md("""")` would fail in Quarto. (@​olivroy, #1769)",NA,NA,NA,NA
