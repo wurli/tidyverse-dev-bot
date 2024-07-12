@@ -3,6 +3,16 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Missing values from discrete palettes are no longer translated
+    (@teunbrand, #5929).
+
+    !end-bullet!
+-   !begin-bullet!
+    Fixed bug in `facet_grid(margins = TRUE)` when using expresssions
+    (@teunbrand, #1864).
+
+    !end-bullet!
+-   !begin-bullet!
     `geom_step()` now supports the `orientation` argument (@teunbrand,
     #5936).
 
@@ -316,6 +326,11 @@
 -   !begin-bullet!
     Fixed bug in `position_dodge2()`'s identification of range overlaps
     (@teunbrand, #5938, #4327).
+
+    !end-bullet!
+-   !begin-bullet!
+    Fixed bug where empty discrete scales weren't recognised as such
+    (@teunbrand, #5945).
 
     !end-bullet!
 

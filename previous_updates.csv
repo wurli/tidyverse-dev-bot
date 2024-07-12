@@ -17452,3 +17452,6 @@ ggplot2,34b536f8cc7061a4dae75051f334984a,"Fixed bug in `position_dodge2()`'s ide
 gt,7dc5d956616ab4bc8c709d0d2c3cb19d,"`tab_row_group()` gives a more precise error message when `rows` can't be resolved correctly (#1535). (@​olivroy, #1770)",NA,NA,NA,NA
 gt,b681743ba5ade04d268baa09ba12a0f7,"Fixed an issue where `md("""")` would fail in Quarto. (@​olivroy, #1769)",NA,NA,NA,NA
 gt,2a616f6d9037f4deb24bac369de93531,"Improved error messages for the `text_transform()` function if `locations` couldn't be resolved. (@​olivroy, #1774)",NA,NA,NA,NA
+ggplot2,b83a6a2f395e4ceab8562277572cd187,"Missing values from discrete palettes are no longer translated (@​teunbrand, #5929).",NA,NA,NA,NA
+ggplot2,489e3aa5400b16b69e447417197d49f1,"Fixed bug in `facet_grid(margins = TRUE)` when using expresssions (@​teunbrand, #1864).",NA,NA,NA,NA
+ggplot2,35a9740aad0b3d57eb914cb1803c5727,"Fixed bug where empty discrete scales weren't recognised as such (@​teunbrand, #5945).",NA,NA,NA,NA
