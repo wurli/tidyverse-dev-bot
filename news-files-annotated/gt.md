@@ -17,6 +17,11 @@
     #1769)
 
     !end-bullet!
+-   !begin-bullet!
+    Fixed a bug in using `pct()` column widths with `as_gtable()`
+    (@teunbrand, #1771)
+
+    !end-bullet!
 
 !end-bullets-1!
 
