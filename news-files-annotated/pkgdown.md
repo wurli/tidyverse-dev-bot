@@ -1,10 +1,18 @@
 # pkgdown (development version)
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    pkgdown now depends on R \>= 4.0.0 (#2714)
+    !end-bullet!
+
+!end-bullets-1!
+
 # pkgdown 2.1.0
 
 ## Major changes
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     Added @olivroy and @salim-b as pkgdown authors in recognition of
@@ -51,11 +59,11 @@
     an issue if you find a case where the error message is not helpful.
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 ## Lifecycle changes
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     `autolink_html()` was deprecated in pkgdown 1.6.0 and now warns
@@ -76,11 +84,11 @@
     from it.
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 ## Front end changes
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     When built on GitHub, source urls now use the name of the current
@@ -93,7 +101,7 @@
     !end-bullet!
 -   !begin-bullet!
     Improve HTML5 compliance (#2369):
-    !begin-bullets-4!
+    !begin-bullets-5!
     -   !begin-bullet!
         No longer support IE9 or earlier
         !end-bullet!
@@ -104,7 +112,7 @@
         Label `<nav>`s and improve navbar html.
         !end-bullet!
 
-    !end-bullets-4!
+    !end-bullets-5!
     !end-bullet!
 -   !begin-bullet!
     Tweaked navbar display on mobile so that long titles in drop downs
@@ -152,11 +160,11 @@
     (#2659).
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 ## `_pkgdown.yaml`
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     Anywhere you can use `_pkgdown.yml`, you can now use `_pkgdown.yaml`
@@ -183,11 +191,11 @@
     `<form>` with `role="search"` to avoid getting two search boxes.
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     pkgdown now uses httr2 instead of httr (#2600).
@@ -408,16 +416,16 @@
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 # pkgdown 2.0.9
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     Fixes for regressions in 2.0.8:
 
-    !begin-bullets-8!
+    !begin-bullets-9!
     -   !begin-bullet!
         Output links generated when building the site work once again
         (#2435).
@@ -429,12 +437,12 @@
 
         !end-bullet!
 
-    !end-bullets-8!
+    !end-bullets-9!
     !end-bullet!
 -   !begin-bullet!
     Front-end improvements:
 
-    !begin-bullets-9!
+    !begin-bullets-10!
     -   !begin-bullet!
         The skip link now becomes visible when focussed (#2138). Thanks
         to @glin for the styles!
@@ -451,7 +459,7 @@
 
         !end-bullet!
 
-    !end-bullets-9!
+    !end-bullets-10!
     !end-bullet!
 -   !begin-bullet!
     It is now easier to preview parts of the website locally
@@ -505,11 +513,11 @@
 
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 # pkgdown 2.0.8
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     pkgdown is now compatible with (and requires) bslib \>= 0.5.1
@@ -529,7 +537,7 @@
 -   !begin-bullet!
     Translations
 
-    !begin-bullets-11!
+    !begin-bullets-12!
     -   !begin-bullet!
         New Catalan translation (@jmaspons, #2333).
         !end-bullet!
@@ -537,7 +545,7 @@
         Citation sections are correctly translated (@eliocamp, #2410).
         !end-bullet!
 
-    !end-bullets-11!
+    !end-bullets-12!
     !end-bullet!
 -   !begin-bullet!
     `build_article_index()` now sorts vignettes and non-vignette
@@ -582,7 +590,7 @@
 -   !begin-bullet!
     Rd -\> html translation
 
-    !begin-bullets-12!
+    !begin-bullets-13!
     -   !begin-bullet!
         `\cr` is now translated to `<br>` not `<br />` (#2400).
         !end-bullet!
@@ -595,7 +603,7 @@
         (@salim-b, #2298).
         !end-bullet!
 
-    !end-bullets-12!
+    !end-bullets-13!
     !end-bullet!
 -   !begin-bullet!
     `build_reference_index()` no longer generates redundant entries when
@@ -608,11 +616,11 @@
 
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 # pkgdown 2.0.7
 
-!begin-bullets-13!
+!begin-bullets-14!
 
 -   !begin-bullet!
     Fix topic match selection when there is an unmatched selection
@@ -638,11 +646,11 @@
     Use jsdeliver CDN for bootstrap-toc (@GregorDeCillia, #2207).
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-14!
 
 # pkgdown 2.0.6
 
-!begin-bullets-14!
+!begin-bullets-15!
 
 -   !begin-bullet!
     If you're using an RStudio daily, output file names are now
@@ -661,11 +669,11 @@
 
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-15!
 
 # pkgdown 2.0.5
 
-!begin-bullets-15!
+!begin-bullets-16!
 
 -   !begin-bullet!
     Correctly generate downlit link targets for topics that have a file
@@ -698,11 +706,11 @@
 
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-16!
 
 # pkgdown 2.0.4
 
-!begin-bullets-16!
+!begin-bullets-17!
 
 -   !begin-bullet!
     New `check_pkgdown()` provides a lightweight way to check that your
@@ -729,7 +737,7 @@
 -   !begin-bullet!
     `build_reference()`:
 
-    !begin-bullets-17!
+    !begin-bullets-18!
     -   !begin-bullet!
         You can once again exclude topics from the reference index with
         `-` (#2040).
@@ -756,12 +764,12 @@
 
         !end-bullet!
 
-    !end-bullets-17!
+    !end-bullets-18!
     !end-bullet!
 -   !begin-bullet!
     Front end changes:
 
-    !begin-bullets-18!
+    !begin-bullets-19!
     -   !begin-bullet!
         Automatically added links in code blocks are now styled less
         aggressively, so they occupy less visual weight on the page
@@ -788,7 +796,7 @@
 
         !end-bullet!
 
-    !end-bullets-18!
+    !end-bullets-19!
     !end-bullet!
 -   !begin-bullet!
     New syntax highlighting themes a11y-light, a11y-dark,
@@ -796,21 +804,21 @@
 
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-17!
 
 # pkgdown 2.0.3
 
-!begin-bullets-19!
+!begin-bullets-20!
 
 -   !begin-bullet!
     Fixes for R CMD check
     !end-bullet!
 
-!end-bullets-19!
+!end-bullets-20!
 
 # pkgdown 2.0.2
 
-!begin-bullets-20!
+!begin-bullets-21!
 
 -   !begin-bullet!
     New Korean (`ko`) translation thanks to @mrchypark and @peremen
@@ -858,7 +866,7 @@
 -   !begin-bullet!
     Front end changes:
 
-    !begin-bullets-21!
+    !begin-bullets-22!
     -   !begin-bullet!
         The navbar gets a little more space after the version number,
         and aligns the baseline with rest of the navbar (#1989).
@@ -890,7 +898,7 @@
 
         !end-bullet!
 
-    !end-bullets-21!
+    !end-bullets-22!
     !end-bullet!
 -   !begin-bullet!
     pkgdown no longer includes bundled author metadata for Hadley
@@ -900,11 +908,11 @@
 
     !end-bullet!
 
-!end-bullets-20!
+!end-bullets-21!
 
 # pkgdown 2.0.1
 
-!begin-bullets-22!
+!begin-bullets-23!
 
 -   !begin-bullet!
     Fix CRAN failures.
@@ -924,7 +932,7 @@
 
     !end-bullet!
 
-!end-bullets-22!
+!end-bullets-23!
 
 # pkgdown 2.0.0
 
@@ -937,7 +945,7 @@ improvements to customisation, and implementation of local search.
 
 ## Bootstrap 5
 
-!begin-bullets-23!
+!begin-bullets-24!
 
 -   !begin-bullet!
     pkgdown can style your site with Bootstrap 5 (with help from
@@ -956,7 +964,7 @@ improvements to customisation, and implementation of local search.
     We reviewed site accessibility and made a number of small
     improvements: (#782, #1553):
 
-    !begin-bullets-24!
+    !begin-bullets-25!
     -   !begin-bullet!
         Default font is larger and links are always underlined.
         !end-bullet!
@@ -980,7 +988,7 @@ improvements to customisation, and implementation of local search.
         (#1827).
         !end-bullet!
 
-    !end-bullets-24!
+    !end-bullets-25!
     !end-bullet!
 -   !begin-bullet!
     In-line footnotes mean you can read asides next to the text they
@@ -994,7 +1002,7 @@ improvements to customisation, and implementation of local search.
 -   !begin-bullet!
     Other minor styling improvements:
 
-    !begin-bullets-25!
+    !begin-bullets-26!
     -   !begin-bullet!
         The active item in TOC is indicated with background colour,
         rather than a border.
@@ -1030,14 +1038,14 @@ improvements to customisation, and implementation of local search.
         already a link to the home page immediately to its left (#1383).
         !end-bullet!
 
-    !end-bullets-25!
+    !end-bullets-26!
     !end-bullet!
 
-!end-bullets-23!
+!end-bullets-24!
 
 ## Local search
 
-!begin-bullets-26!
+!begin-bullets-27!
 
 -   !begin-bullet!
     pkgdown now supports local searching (i.e. searching without an
@@ -1053,11 +1061,11 @@ improvements to customisation, and implementation of local search.
 
     !end-bullet!
 
-!end-bullets-26!
+!end-bullets-27!
 
 ## Customisation
 
-!begin-bullets-27!
+!begin-bullets-28!
 
 -   !begin-bullet!
     New `vignette("customise")` documents all the ways you can customise
@@ -1093,7 +1101,7 @@ improvements to customisation, and implementation of local search.
     !end-codeblock!
     pkgdown includes translations for:
 
-    !begin-bullets-28!
+    !begin-bullets-29!
     -   !begin-bullet!
         `es`, Spanish, thanks to @edgararuiz-zz, @dieghernan,
         @rivaquiroga.
@@ -1115,7 +1123,7 @@ improvements to customisation, and implementation of local search.
         `zh_CN`, simplified Chinese, thanks to @yitao.
         !end-bullet!
 
-    !end-bullets-28!
+    !end-bullets-29!
     If you're interested in adding translations for your language please
     file an issue and we'll help you get started.
 
@@ -1145,7 +1153,7 @@ improvements to customisation, and implementation of local search.
 -   !begin-bullet!
     Authors configuration is more flexible (#1516). You can now:
 
-    !begin-bullets-29!
+    !begin-bullets-30!
     -   !begin-bullet!
         Choose the roles used for filtering authors for the sidebar and
         footer.
@@ -1160,13 +1168,13 @@ improvements to customisation, and implementation of local search.
         Add text before and after the authors list of the authors page.
         !end-bullet!
 
-    !end-bullets-29!
+    !end-bullets-30!
     !end-bullet!
 -   !begin-bullet!
     Sidebar specification is more flexible (#1443, #1488, #1502). You
     can now:
 
-    !begin-bullets-30!
+    !begin-bullets-31!
     -   !begin-bullet!
         Change the order of sidebar elements.
         !end-bullet!
@@ -1183,12 +1191,12 @@ improvements to customisation, and implementation of local search.
         Provide your own HTML for the navbar.
         !end-bullet!
 
-    !end-bullets-30!
+    !end-bullets-31!
     !end-bullet!
 -   !begin-bullet!
     Footer specification is more flexible (#1502). You can now:
 
-    !begin-bullets-31!
+    !begin-bullets-32!
     -   !begin-bullet!
         Change the placement of elements on the left and right.
         !end-bullet!
@@ -1197,7 +1205,7 @@ improvements to customisation, and implementation of local search.
         text)
         !end-bullet!
 
-    !end-bullets-31!
+    !end-bullets-32!
     !end-bullet!
 -   !begin-bullet!
     You can now exclude all default components from the navbar (#1517).
@@ -1210,11 +1218,11 @@ improvements to customisation, and implementation of local search.
 
     !end-bullet!
 
-!end-bullets-27!
+!end-bullets-28!
 
 ## New features
 
-!begin-bullets-32!
+!begin-bullets-33!
 
 -   !begin-bullet!
     pkgdown now supports redirects (#1259, @lorenzwalthert). The
@@ -1245,11 +1253,11 @@ improvements to customisation, and implementation of local search.
 
     !end-bullet!
 
-!end-bullets-32!
+!end-bullets-33!
 
 ## Code
 
-!begin-bullets-33!
+!begin-bullets-34!
 
 -   !begin-bullet!
     Styling for errors, warnings, and messages has been tweaked.
@@ -1326,7 +1334,7 @@ improvements to customisation, and implementation of local search.
 -   !begin-bullet!
     Auto-linking improvements:
 
-    !begin-bullets-34!
+    !begin-bullets-35!
     -   !begin-bullet!
         Links to inherited R6 methods now work correctly for both
         internal (#1173, @vandenman) and external (#1476) parent
@@ -1344,14 +1352,14 @@ improvements to customisation, and implementation of local search.
 
         !end-bullet!
 
-    !end-bullets-34!
+    !end-bullets-35!
     !end-bullet!
 
-!end-bullets-33!
+!end-bullets-34!
 
 ## Articles
 
-!begin-bullets-35!
+!begin-bullets-36!
 
 -   !begin-bullet!
     Article subtitle, author and date (specified in the YAML
@@ -1399,11 +1407,11 @@ improvements to customisation, and implementation of local search.
 
     !end-bullet!
 
-!end-bullets-35!
+!end-bullets-36!
 
 ## HTML, CSS and JS
 
-!begin-bullets-36!
+!begin-bullets-37!
 
 -   !begin-bullet!
     New `template` option `trailing_slash_redirect` that allows adding a
@@ -1427,11 +1435,11 @@ improvements to customisation, and implementation of local search.
 
     !end-bullet!
 
-!end-bullets-36!
+!end-bullets-37!
 
 ## Deployment
 
-!begin-bullets-37!
+!begin-bullets-38!
 
 -   !begin-bullet!
     `build_site_github_pages()` has been extracted out of
@@ -1461,11 +1469,11 @@ improvements to customisation, and implementation of local search.
 
     !end-bullet!
 
-!end-bullets-37!
+!end-bullets-38!
 
 ## Other minor improvements and bug fixes
 
-!begin-bullets-38!
+!begin-bullets-39!
 
 -   !begin-bullet!
     `\special{}` tags with complex contents are rendered correctly
@@ -1581,24 +1589,24 @@ improvements to customisation, and implementation of local search.
 
     !end-bullet!
 
-!end-bullets-38!
+!end-bullets-39!
 
 # pkgdown 1.6.1
 
-!begin-bullets-39!
+!begin-bullets-40!
 
 -   !begin-bullet!
     The article index (used for autolinking vignettes across packages)
     once again works (#1401).
     !end-bullet!
 
-!end-bullets-39!
+!end-bullets-40!
 
 # pkgdown 1.6.0
 
 ## Major changes
 
-!begin-bullets-40!
+!begin-bullets-41!
 
 -   !begin-bullet!
     pkgdown now uses the new downlit package for all syntax highlighting
@@ -1615,13 +1623,13 @@ improvements to customisation, and implementation of local search.
 
     !end-bullet!
 
-!end-bullets-40!
+!end-bullets-41!
 
 ## Minor improvements and bug fixes
 
 ### Rd translation
 
-!begin-bullets-41!
+!begin-bullets-42!
 
 -   !begin-bullet!
     `\special{}` support inside `\usage{}` added to allow non-standard R
@@ -1644,11 +1652,11 @@ improvements to customisation, and implementation of local search.
 
     !end-bullet!
 
-!end-bullets-41!
+!end-bullets-42!
 
 ### Articles and vignettes
 
-!begin-bullets-42!
+!begin-bullets-43!
 
 -   !begin-bullet!
     `build_articles()` no longer sets the `theme` argument of the
@@ -1668,11 +1676,11 @@ improvements to customisation, and implementation of local search.
 
     !end-bullet!
 
-!end-bullets-42!
+!end-bullets-43!
 
 ### Auto-linking and syntax highlighting
 
-!begin-bullets-43!
+!begin-bullets-44!
 
 -   !begin-bullet!
     The branch used for source linking can be configured by setting
@@ -1703,11 +1711,11 @@ improvements to customisation, and implementation of local search.
 
     !end-bullet!
 
-!end-bullets-43!
+!end-bullets-44!
 
 ### Other
 
-!begin-bullets-44!
+!begin-bullets-45!
 
 -   !begin-bullet!
     You can now control the background colour of plots with the
@@ -1733,11 +1741,11 @@ improvements to customisation, and implementation of local search.
 
     !end-bullet!
 
-!end-bullets-44!
+!end-bullets-45!
 
 # pkgdown 1.5.1
 
-!begin-bullets-45!
+!begin-bullets-46!
 
 -   !begin-bullet!
     Syntax highlighting works on Windows once more (#1282).
@@ -1764,19 +1772,19 @@ improvements to customisation, and implementation of local search.
 
     !end-bullet!
 
-!end-bullets-45!
+!end-bullets-46!
 
 # pkgdown 1.5.0
 
 ## New features
 
-!begin-bullets-46!
+!begin-bullets-47!
 
 -   !begin-bullet!
     The articles index page and navbar have been overhauled. There are
     two major new features in this release:
 
-    !begin-bullets-47!
+    !begin-bullets-48!
     -   !begin-bullet!
         The articles index page now displays article `description`s,
         taken from YAML metadata belonging to each article. This lets
@@ -1794,7 +1802,7 @@ improvements to customisation, and implementation of local search.
 
         !end-bullet!
 
-    !end-bullets-47!
+    !end-bullets-48!
     !end-bullet!
 -   !begin-bullet!
     The reference index now has two levels of heading hierarchy: `title`
@@ -1855,11 +1863,11 @@ improvements to customisation, and implementation of local search.
 
     !end-bullet!
 
-!end-bullets-46!
+!end-bullets-47!
 
 ## Auto-linking improvements
 
-!begin-bullets-48!
+!begin-bullets-49!
 
 -   !begin-bullet!
     Examples and Rmd now use exactly the same syntax highlighting
@@ -1887,13 +1895,13 @@ improvements to customisation, and implementation of local search.
 
     !end-bullet!
 
-!end-bullets-48!
+!end-bullets-49!
 
 ## Minor improvements and bug fixes
 
 ### Articles
 
-!begin-bullets-49!
+!begin-bullets-50!
 
 -   !begin-bullet!
     `build_home()` no longer uses (unrendered) `README.Rmd` or
@@ -1914,11 +1922,11 @@ improvements to customisation, and implementation of local search.
 
     !end-bullet!
 
-!end-bullets-49!
+!end-bullets-50!
 
 ### Deployment
 
-!begin-bullets-50!
+!begin-bullets-51!
 
 -   !begin-bullet!
     `deploy_to_branch()` now correctly captures the commit SHA on GitHub
@@ -1943,13 +1951,13 @@ improvements to customisation, and implementation of local search.
 
     !end-bullet!
 
-!end-bullets-50!
+!end-bullets-51!
 
 ### News
 
 See additional details in `?build_news`:
 
-!begin-bullets-51!
+!begin-bullets-52!
 
 -   !begin-bullet!
     You can optionally suppress the CRAN release dates added to the news
@@ -1962,11 +1970,11 @@ See additional details in `?build_news`:
 
     !end-bullet!
 
-!end-bullets-51!
+!end-bullets-52!
 
 ### Reference
 
-!begin-bullets-52!
+!begin-bullets-53!
 
 -   !begin-bullet!
     A topic named `index` will not longer clobber the reference index
@@ -1994,11 +2002,11 @@ See additional details in `?build_news`:
 
     !end-bullet!
 
-!end-bullets-52!
+!end-bullets-53!
 
 ### Home, authors, and citation
 
-!begin-bullets-53!
+!begin-bullets-54!
 
 -   !begin-bullet!
     pkgdown now escapes html and linkifies links in comments in author
@@ -2023,11 +2031,11 @@ See additional details in `?build_news`:
 
     !end-bullet!
 
-!end-bullets-53!
+!end-bullets-54!
 
 ### Navbar
 
-!begin-bullets-54!
+!begin-bullets-55!
 
 -   !begin-bullet!
     pkgdown now formats the package version displayed in the navbar the
@@ -2043,11 +2051,11 @@ See additional details in `?build_news`:
 
     !end-bullet!
 
-!end-bullets-54!
+!end-bullets-55!
 
 ### Other
 
-!begin-bullets-55!
+!begin-bullets-56!
 
 -   !begin-bullet!
     Updated JS libraries: jquery 3.3.1 -\> 3.4.1; bootswatch 3.3.7 -\>
@@ -2066,23 +2074,23 @@ See additional details in `?build_news`:
 
     !end-bullet!
 
-!end-bullets-55!
+!end-bullets-56!
 
 # pkgdown 1.4.1
 
-!begin-bullets-56!
+!begin-bullets-57!
 
 -   !begin-bullet!
     Don't install test package in user library (fixes CRAN failure).
     !end-bullet!
 
-!end-bullets-56!
+!end-bullets-57!
 
 # pkgdown 1.4.0
 
 ## New features
 
-!begin-bullets-57!
+!begin-bullets-58!
 
 -   !begin-bullet!
     build citation as specified by the `textVersion` argument of
@@ -2125,13 +2133,13 @@ See additional details in `?build_news`:
 
     !end-bullet!
 
-!end-bullets-57!
+!end-bullets-58!
 
 ## Bug fixes and minor improvements
 
 ### Rd translation
 
-!begin-bullets-58!
+!begin-bullets-59!
 
 -   !begin-bullet!
     `\examples{}` rendering has been completely overhauled so it now
@@ -2166,11 +2174,11 @@ See additional details in `?build_news`:
 
     !end-bullet!
 
-!end-bullets-58!
+!end-bullets-59!
 
 ### Front end
 
-!begin-bullets-59!
+!begin-bullets-60!
 
 -   !begin-bullet!
     Links to online documentation for functions in code chunks are no
@@ -2200,11 +2208,11 @@ See additional details in `?build_news`:
 
     !end-bullet!
 
-!end-bullets-59!
+!end-bullets-60!
 
 ### Linking
 
-!begin-bullets-60!
+!begin-bullets-61!
 
 -   !begin-bullet!
     Infix operators (e.g., `%in%` and `%*%`) are now linked to their
@@ -2221,11 +2229,11 @@ See additional details in `?build_news`:
 
     !end-bullet!
 
-!end-bullets-60!
+!end-bullets-61!
 
 ### Other
 
-!begin-bullets-61!
+!begin-bullets-62!
 
 -   !begin-bullet!
     News page recognises more version specifications (including the\
@@ -2285,11 +2293,11 @@ See additional details in `?build_news`:
 
     !end-bullet!
 
-!end-bullets-61!
+!end-bullets-62!
 
 # pkgdown 1.3.0
 
-!begin-bullets-62!
+!begin-bullets-63!
 
 -   !begin-bullet!
     Restore accidentally deleted `build_logo()` function so that logos
@@ -2326,13 +2334,13 @@ See additional details in `?build_news`:
 
     !end-bullet!
 
-!end-bullets-62!
+!end-bullets-63!
 
 # pkgdown 1.2.0
 
 ## New features
 
-!begin-bullets-63!
+!begin-bullets-64!
 
 -   !begin-bullet!
     `deploy_site_github()` can be used from continuous integration
@@ -2357,11 +2365,11 @@ See additional details in `?build_news`:
 
     !end-bullet!
 
-!end-bullets-63!
+!end-bullets-64!
 
 ## Improvements to Rd translation
 
-!begin-bullets-64!
+!begin-bullets-65!
 
 -   !begin-bullet!
     `rd2html()` is now exported to facilitate creation of translation
@@ -2389,11 +2397,11 @@ See additional details in `?build_news`:
 
     !end-bullet!
 
-!end-bullets-64!
+!end-bullets-65!
 
 ## Front end
 
-!begin-bullets-65!
+!begin-bullets-66!
 
 -   !begin-bullet!
     The default footer now displays the version of pkgdown used to build
@@ -2416,13 +2424,13 @@ See additional details in `?build_news`:
 
     !end-bullet!
 
-!end-bullets-65!
+!end-bullets-66!
 
 ## Bug fixes and minor improvements
 
 ### Home page
 
-!begin-bullets-66!
+!begin-bullets-67!
 
 -   !begin-bullet!
     Can now build sites for older packages that don't have a `Authors@R`
@@ -2450,22 +2458,22 @@ See additional details in `?build_news`:
 
     !end-bullet!
 
-!end-bullets-66!
+!end-bullets-67!
 
 ### News
 
-!begin-bullets-67!
+!begin-bullets-68!
 
 -   !begin-bullet!
     Uses stricter regular expression when linking to GitHub authors
     (#902).
     !end-bullet!
 
-!end-bullets-67!
+!end-bullets-68!
 
 ### Reference
 
-!begin-bullets-68!
+!begin-bullets-69!
 
 -   !begin-bullet!
     Unexported functions and test helpers are no longer loaded (#789).
@@ -2478,11 +2486,11 @@ See additional details in `?build_news`:
 
     !end-bullet!
 
-!end-bullets-68!
+!end-bullets-69!
 
 ### Articles
 
-!begin-bullets-69!
+!begin-bullets-70!
 
 -   !begin-bullet!
     The display depth of vignette tables of contents can be configured
@@ -2497,11 +2505,11 @@ See additional details in `?build_news`:
     !end-codeblock!
     !end-bullet!
 
-!end-bullets-69!
+!end-bullets-70!
 
 ### Overall site
 
-!begin-bullets-70!
+!begin-bullets-71!
 
 -   !begin-bullet!
     `init_site()` now creates a CNAME file if one doesn't already exist
@@ -2520,13 +2528,13 @@ See additional details in `?build_news`:
 
     !end-bullet!
 
-!end-bullets-70!
+!end-bullets-71!
 
 # pkgdown 1.1.0
 
 ## New features
 
-!begin-bullets-71!
+!begin-bullets-72!
 
 -   !begin-bullet!
     `build_reference()` and `build_site()` get new `document` argument.
@@ -2549,11 +2557,11 @@ See additional details in `?build_news`:
 
     !end-bullet!
 
-!end-bullets-71!
+!end-bullets-72!
 
 ## Front end
 
-!begin-bullets-72!
+!begin-bullets-73!
 
 -   !begin-bullet!
     Added a keyboard shortcut for searching. Press `shift` + `/` (`?`)
@@ -2578,11 +2586,11 @@ See additional details in `?build_news`:
 
     !end-bullet!
 
-!end-bullets-72!
+!end-bullets-73!
 
 ## Improvements to Rd translation
 
-!begin-bullets-73!
+!begin-bullets-74!
 
 -   !begin-bullet!
     `vignette()` calls that don't link to existing vignettes silently
@@ -2606,11 +2614,11 @@ See additional details in `?build_news`:
 
     !end-bullet!
 
-!end-bullets-73!
+!end-bullets-74!
 
 ## Minor bug fixes and improvements
 
-!begin-bullets-74!
+!begin-bullets-75!
 
 -   !begin-bullet!
     Add `inst/pkgdown.yml` as a possible site configuration file so that
@@ -2666,11 +2674,11 @@ See additional details in `?build_news`:
 
     !end-bullet!
 
-!end-bullets-74!
+!end-bullets-75!
 
 # pkgdown 1.0.0
 
-!begin-bullets-75!
+!begin-bullets-76!
 
 -   !begin-bullet!
     Major refactoring of path handling. `build_` functions no longer
@@ -2685,4 +2693,4 @@ See additional details in `?build_news`:
 
     !end-bullet!
 
-!end-bullets-75!
+!end-bullets-76!

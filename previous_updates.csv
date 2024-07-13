@@ -17459,3 +17459,4 @@ httr2,3c68238c68c20fde58a447677c0cc6cf,`req_cache()` now defaults the `debug` ar
 httr2,d1a02e8e9ad794b848e45c2531f2cd43,`req_oauth_password()` now only asks for your password once (#498).,NA,NA,NA,NA
 gt,b0aa0335cc982ba0e06968515c7bf142,"Fixed a bug in using `pct()` column widths with `as_gtable()` (@​teunbrand, #1771)",NA,NA,NA,NA
 tibble,271e43aeb1c303dd69131319289579e9,Request to not edit `NEWS.md`.,NA,NA,NA,NA
+pkgdown,d11f5205a85ad7e7b6436c3138564b31,pkgdown now depends on R \>= 4.0.0 (#2714),NA,NA,NA,NA
