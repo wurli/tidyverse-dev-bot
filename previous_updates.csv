@@ -17458,3 +17458,4 @@ ggplot2,35a9740aad0b3d57eb914cb1803c5727,"Fixed bug where empty discrete scales 
 httr2,3c68238c68c20fde58a447677c0cc6cf,`req_cache()` now defaults the `debug` argument to the `httr2_cache_debug` option to make it easier to debug caching buried in other people's code (#486).,NA,NA,NA,NA
 httr2,d1a02e8e9ad794b848e45c2531f2cd43,`req_oauth_password()` now only asks for your password once (#498).,NA,NA,NA,NA
 gt,b0aa0335cc982ba0e06968515c7bf142,"Fixed a bug in using `pct()` column widths with `as_gtable()` (@​teunbrand, #1771)",NA,NA,NA,NA
+tibble,271e43aeb1c303dd69131319289579e9,Request to not edit `NEWS.md`.,NA,NA,NA,NA
