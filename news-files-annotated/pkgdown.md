@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    New `clean_cache()` function removes the contents of the cache
+    directory (#2718).
+    !end-bullet!
+-   !begin-bullet!
     pkgdown now depends on R \>= 4.0.0 (#2714)
     !end-bullet!
 
