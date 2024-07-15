@@ -17462,3 +17462,4 @@ tibble,271e43aeb1c303dd69131319289579e9,Request to not edit `NEWS.md`.,NA,NA,NA,
 pkgdown,d11f5205a85ad7e7b6436c3138564b31,pkgdown now depends on R \>= 4.0.0 (#2714),NA,NA,NA,NA
 httr2,6a8d1c2bda71c456825c35fdeb52bab4,"`req_perform_stream()` no longer applies the `callback` to unsuccessful responses, instead creating a regular response. It also now sets `last_request()` and `last_response()` (#479).",NA,NA,NA,NA
 pkgdown,0bc02601678d6ceeb7eb99bea5e99cee,New `clean_cache()` function removes the contents of the cache directory (#2718).,NA,NA,NA,NA
+bslib,400554ab55b051832ceeb83a2301b4e8,bslib now re-exports `htmltools::css()` to make it easier to specify style declarations. (#1086),NA,NA,NA,NA

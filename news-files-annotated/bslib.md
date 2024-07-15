@@ -33,6 +33,11 @@
     `shiny::runExample("build-a-box", package = "bslib")`. (#1049)
 
     !end-bullet!
+-   !begin-bullet!
+    bslib now re-exports `htmltools::css()` to make it easier to specify
+    style declarations. (#1086)
+
+    !end-bullet!
 
 !end-bullets-2!
 
