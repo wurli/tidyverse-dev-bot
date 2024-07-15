@@ -22,6 +22,16 @@
     (@teunbrand, #1771)
 
     !end-bullet!
+-   !begin-bullet!
+    `opt_interactive()` now works when columns are merged with
+    `cols_merge()` (@olivroy, #1785).
+
+    !end-bullet!
+-   !begin-bullet!
+    `opt_interactive()` now works when columns are substituted with
+    `sub_*()` (@olivroy, #1759).
+
+    !end-bullet!
 
 !end-bullets-1!
 
