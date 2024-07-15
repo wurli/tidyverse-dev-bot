@@ -75,8 +75,8 @@
     !end-bullets-3!
     !end-bullet!
 -   !begin-bullet!
-    The `open` argument of `layout_sidebar()` now includes the option to
-    place a sidebar that's always open on mobile screens *above the main
+    The `open` argument of `sidebar()` now includes the option to place
+    a sidebar that's always open on mobile screens *above the main
     content* with `open = list(mobile = "always-above")`. (#1088)
 
     !end-bullet!
