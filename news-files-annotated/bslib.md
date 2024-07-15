@@ -80,6 +80,21 @@
     content* with `open = list(mobile = "always-above")`. (#1088)
 
     !end-bullet!
+-   !begin-bullet!
+    We've adjusted the sidebar design when collapsible on mobile screens
+    to reduce the space used by the sidebar toggle button and to ensure
+    that main and sidebar content do not scroll underneath the toggle
+    button when the sidebar is collapsed. (#1084)
+
+    !end-bullet!
+-   !begin-bullet!
+    The main content area of `page_sidebar()` and `page_navbar()` with a
+    `sidebar` now have a minimum height and width to avoid squashed
+    content in fillable layouts. The minimum height and width are
+    controllable via Sass and CSS variables (see the pull requests for
+    details). (#1057, #1059, #1084)
+
+    !end-bullet!
 
 !end-bullets-2!
 
@@ -103,14 +118,6 @@
     Shiny preset, especially when custom card color themes are used,
     e.g. with `text-bg-primary` or other Bootstrap utility classes.
     (#1056)
-
-    !end-bullet!
--   !begin-bullet!
-    The main content area of `page_sidebar()` and `page_navbar()` with a
-    `sidebar` now have a minimum height and width to avoid squashed
-    content in fillable layouts. The minimum height and width are
-    controllable via Sass and CSS variables (see the pull requests for
-    details). (#1057, #1059)
 
     !end-bullet!
 -   !begin-bullet!
