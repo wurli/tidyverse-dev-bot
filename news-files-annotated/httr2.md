@@ -3,12 +3,13 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
-    `req_perform_stream()` no longer applies the `callback` to
-    unsuccessful responses, instead creating a regular response. It also
-    now sets `last_request()` and `last_response()` (#479).
+    `req_body_file()` now only opens a connection when the request
+    actually needs data. In particular, this makes it work better with
+    `req_perform_parallel()` (#487).
     !end-bullet!
 -   !begin-bullet!
-    `req_cache()` now defaults the `debug` argument to the
+    `req_cache()` no longer fails if the `rds` files are somehow
+    corrupted and now defaults the `debug` argument to the
     `httr2_cache_debug` option to make it easier to debug caching buried
     in other people's code (#486).
     !end-bullet!
@@ -16,25 +17,17 @@
     `req_oauth_password()` now only asks for your password once (#498).
     !end-bullet!
 -   !begin-bullet!
+    `req_perform_parallel()` now works correctly with `req_cache()`
+    (#447) and now works when downloading 0 byte files (#478)
+    !end-bullet!
+-   !begin-bullet!
+    `req_perform_stream()` no longer applies the `callback` to
+    unsuccessful responses, instead creating a regular response. It also
+    now sets `last_request()` and `last_response()` (#479).
+    !end-bullet!
+-   !begin-bullet!
     `req_url_query()` now allows you to opt out of escaping for
     multi-value parameters (#404).
-    !end-bullet!
--   !begin-bullet!
-    `req_perform_parallel()` now works correctly with `req_cache()`
-    (#447).
-    !end-bullet!
--   !begin-bullet!
-    `req_body_file()` now only opens a connection when the request
-    actually needs data. In particular, this makes it work better with
-    `req_perform_parallel()` (#487).
-    !end-bullet!
--   !begin-bullet!
-    `req_perform_parallel()` now works when downloading 0 byte files
-    (#478)
-    !end-bullet!
--   !begin-bullet!
-    `req_cache()` no longer fails if the `rds` files are somehow
-    corrupted
     !end-bullet!
 
 !end-bullets-1!
