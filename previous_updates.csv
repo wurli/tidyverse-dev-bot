@@ -17470,3 +17470,5 @@ bslib,19632c4161fe3686a4fbbb17843e8ef5,"• `file` is designed to accept a path 
 bslib,19632c4161fe3686a4fbbb17843e8ef5,• `container` is now `NULL` by default to avoid wrapping the card image in an additional card body container and `fill` is now `FALSE` by default to avoid stretching the image. These changes makes it easier to construct cards with image caps.,NA,NA,NA,NA
 gt,5da2410babdcbfbf199e5013ce1f036a,"`opt_interactive()` now works when columns are merged with `cols_merge()` (@​olivroy, #1785).",NA,NA,NA,NA
 gt,b3edab5437df63ddcdc4ca4b2a25031f,"`opt_interactive()` now works when columns are substituted with `sub_*()` (@​olivroy, #1759).",NA,NA,NA,NA
+bslib,d9f6c43c17ba8501756e027fa603f6d1,"The `open` argument of `layout_sidebar()` now includes the option to place a sidebar that's always open on mobile screens *above the main content* with `open = list(mobile = ""always-above"")`. (#1088)",NA,NA,NA,NA
+bslib,02fa7f12fa4c07d44f4f0c61207c67de,Fixed a bug in `layout_sidebar()` that caused a spurious and confusing error message. (#1081),NA,NA,NA,NA
