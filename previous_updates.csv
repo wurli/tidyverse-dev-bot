@@ -17478,3 +17478,4 @@ gt,d095be536bff4564a2edd84229c550de,"PDF output now defaults to a full-width flo
 httr2,d6fe308949602d99adb70389a53e200a,"New function `req_perform_promise()` allows creating a `promises::promise` for a request that runs in the background (#501, @​gergness).",NA,NA,NA,NA
 gt,798c145841aac2657b631202abde08b1,"`data_color()` provides an error message if `rows` doesn't resolve to anything (#1659). (@​olivroy, #1660).",NA,NA,NA,NA
 gt,8c92870ecdb04b5d142f53f2fe4a19d9,"`data_color()` no longer errors when a tidyselect selection is empty (like `fmt_*()` functions) (@​olivroy, #1665).",NA,NA,NA,NA
+stringr,b6f874874bdb8f35748ca571bfdb23d6,"In `str_replace_all()`, a `replacement` function now receives all values in a single vector. This radically improves performance at the cost of breaking some existing uses (#462).",NA,NA,NA,NA
