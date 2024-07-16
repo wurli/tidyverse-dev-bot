@@ -41,6 +41,11 @@
     `sub_*()` (@olivroy, #1759).
 
     !end-bullet!
+-   !begin-bullet!
+    `data_color()` no longer errors when a tidyselect selection is empty
+    (like `fmt_*()` functions) (@olivroy, #1665).
+
+    !end-bullet!
 
 !end-bullets-1!
 
