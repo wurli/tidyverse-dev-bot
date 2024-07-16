@@ -112,11 +112,6 @@
 
     !end-bullet!
 -   !begin-bullet!
-    `data_color()` throws a more informative error message if `rows`
-    didn't resolve to anything (#1659). (@olivroy, #1660).
-
-    !end-bullet!
--   !begin-bullet!
     Several datasets were added to the package: `reactions`,
     `photolysis`, `peeps`, `nuclides`, `gibraltar`, and `films`. (#1619,
     #1641, #1664, #1668, #1686, #1695)
@@ -281,6 +276,11 @@
 -   !begin-bullet!
     `data_color()` provides an informative error message if `rows`
     doesn't resolve to anything. (@olivroy, #1659)
+
+    !end-bullet!
+-   !begin-bullet!
+    `data_color()` provides an error message if `rows` doesn't resolve
+    to anything (#1659). (@olivroy, #1660).
 
     !end-bullet!
 -   !begin-bullet!
