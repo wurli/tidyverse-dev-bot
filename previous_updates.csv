@@ -17511,3 +17511,6 @@ keras,8f4d4c73e49281ae9587a6e494fb3223,‣ All `op_image_*` functions now use de
 keras,8f4d4c73e49281ae9587a6e494fb3223,"‣ `op_isclose()` gains arguments `rtol`, `atol`, `equal_nan`.",NA,NA,NA,NA
 keras,8f4d4c73e49281ae9587a6e494fb3223,‣ `save_model()` gains argument `zipped`.,NA,NA,NA,NA
 keras,8f4d4c73e49281ae9587a6e494fb3223,‣ Bugs fixes and performance improvements.,NA,NA,NA,NA
+gt,d87ee2cb37c7863404634371c0347885,"Interactive tables will show no border if `opt_table_lines(extent = ""none"")` is specified (#1307).",NA,NA,NA,NA
+gt,6332b68895aa70a3c50b53e46358ce58,Interactive tables now respect more styling options.,NA,NA,NA,NA
+gt,6332b68895aa70a3c50b53e46358ce58,"• `column_labels.background.color`, `row_group.background.color`, `row_group.font.weight`, `table_body.hlines.style`, `table.font.weight`, `table.font.size`, `stub.font.weight` (#1693).",NA,NA,NA,NA
