@@ -17479,3 +17479,35 @@ httr2,d6fe308949602d99adb70389a53e200a,"New function `req_perform_promise()` all
 gt,798c145841aac2657b631202abde08b1,"`data_color()` provides an error message if `rows` doesn't resolve to anything (#1659). (@​olivroy, #1660).",NA,NA,NA,NA
 gt,8c92870ecdb04b5d142f53f2fe4a19d9,"`data_color()` no longer errors when a tidyselect selection is empty (like `fmt_*()` functions) (@​olivroy, #1665).",NA,NA,NA,NA
 stringr,b6f874874bdb8f35748ca571bfdb23d6,"In `str_replace_all()`, a `replacement` function now receives all values in a single vector. This radically improves performance at the cost of breaking some existing uses (#462).",NA,NA,NA,NA
+keras,8f4d4c73e49281ae9587a6e494fb3223,Added compatibility with Keras v3.4.0. User facing changes:,NA,NA,NA,NA
+keras,8f4d4c73e49281ae9587a6e494fb3223,• New functions:,NA,NA,NA,NA
+keras,8f4d4c73e49281ae9587a6e494fb3223,‣ `op_argpartition()`,NA,NA,NA,NA
+keras,8f4d4c73e49281ae9587a6e494fb3223,‣ `op_map()`,NA,NA,NA,NA
+keras,8f4d4c73e49281ae9587a6e494fb3223,‣ `op_scan()`,NA,NA,NA,NA
+keras,8f4d4c73e49281ae9587a6e494fb3223,‣ `op_switch()`,NA,NA,NA,NA
+keras,8f4d4c73e49281ae9587a6e494fb3223,‣ `op_dtype()`,NA,NA,NA,NA
+keras,8f4d4c73e49281ae9587a6e494fb3223,‣ `op_lstsq()`,NA,NA,NA,NA
+keras,8f4d4c73e49281ae9587a6e494fb3223,‣ `op_image_hsv_to_rgb()`,NA,NA,NA,NA
+keras,8f4d4c73e49281ae9587a6e494fb3223,‣ `op_image_rgb_to_hsv()`,NA,NA,NA,NA
+keras,8f4d4c73e49281ae9587a6e494fb3223,• Changes:,NA,NA,NA,NA
+keras,8f4d4c73e49281ae9587a6e494fb3223,"‣ Added support for arbitrary, deeply nested input/output structures in Functional models (e.g. lists of lists of lists of inputs or outputs...)",NA,NA,NA,NA
+keras,8f4d4c73e49281ae9587a6e494fb3223,‣ Add support for `optional` Functional inputs.,NA,NA,NA,NA
+keras,8f4d4c73e49281ae9587a6e494fb3223,⁃ `keras_input()` gains an `optional` argument.,NA,NA,NA,NA
+keras,8f4d4c73e49281ae9587a6e494fb3223,⁃ `keras_model_sequential()` gains a `input_optional` argument.,NA,NA,NA,NA
+keras,8f4d4c73e49281ae9587a6e494fb3223,‣ Add support for `float8` inference for `Dense` and `EinsumDense` layers.,NA,NA,NA,NA
+keras,8f4d4c73e49281ae9587a6e494fb3223,‣ Enable `layer_feature_space()` to be used in a `{tfdatasets}` pipeline even when the backend isn't TensorFlow.,NA,NA,NA,NA
+keras,8f4d4c73e49281ae9587a6e494fb3223,‣ `layer_string_lookup()` can now take `tf$SparseTensor()` as input.,NA,NA,NA,NA
+keras,8f4d4c73e49281ae9587a6e494fb3223,"‣ `layer_string_lookup()` returns `""int64""` dtype by default in more modes now.",NA,NA,NA,NA
+keras,8f4d4c73e49281ae9587a6e494fb3223,‣ `Layer()` instances gain attributes `path` and `quantization_mode`.,NA,NA,NA,NA
+keras,8f4d4c73e49281ae9587a6e494fb3223,‣ `Metric()$variables` is now recursive.,NA,NA,NA,NA
+keras,8f4d4c73e49281ae9587a6e494fb3223,‣ Add `training` argument to `Model$compute_loss()`.,NA,NA,NA,NA
+keras,8f4d4c73e49281ae9587a6e494fb3223,‣ `split_dataset()` now supports nested structures in dataset.,NA,NA,NA,NA
+keras,8f4d4c73e49281ae9587a6e494fb3223,"‣ All applications gain a `name` argument, accept a custom name.",NA,NA,NA,NA
+keras,8f4d4c73e49281ae9587a6e494fb3223,‣ `layer_multi_head_attention()` gains a `seed` argument.,NA,NA,NA,NA
+keras,8f4d4c73e49281ae9587a6e494fb3223,‣ All losses gain a `dtype` argument.,NA,NA,NA,NA
+keras,8f4d4c73e49281ae9587a6e494fb3223,‣ `loss_dice()` gains an `axis` argument.,NA,NA,NA,NA
+keras,8f4d4c73e49281ae9587a6e494fb3223,"‣ `op_ctc_decode()`, new default for `mask_index = 0`",NA,NA,NA,NA
+keras,8f4d4c73e49281ae9587a6e494fb3223,‣ All `op_image_*` functions now use default `data_format` value to `config_image_data_format()`,NA,NA,NA,NA
+keras,8f4d4c73e49281ae9587a6e494fb3223,"‣ `op_isclose()` gains arguments `rtol`, `atol`, `equal_nan`.",NA,NA,NA,NA
+keras,8f4d4c73e49281ae9587a6e494fb3223,‣ `save_model()` gains argument `zipped`.,NA,NA,NA,NA
+keras,8f4d4c73e49281ae9587a6e494fb3223,‣ Bugs fixes and performance improvements.,NA,NA,NA,NA

@@ -21,126 +21,128 @@
     Added compatibility with Keras v3.4.1 (no R user facing changes).
 
     !end-bullet!
+-   !begin-bullet!
+    Added compatibility with Keras v3.4.0. User facing changes:
+
+    !begin-bullets-2!
+    -   !begin-bullet!
+        New functions:
+        !begin-bullets-3!
+        -   !begin-bullet!
+            `op_argpartition()`
+            !end-bullet!
+        -   !begin-bullet!
+            `op_map()`
+            !end-bullet!
+        -   !begin-bullet!
+            `op_scan()`
+            !end-bullet!
+        -   !begin-bullet!
+            `op_switch()`
+            !end-bullet!
+        -   !begin-bullet!
+            `op_dtype()`
+            !end-bullet!
+        -   !begin-bullet!
+            `op_lstsq()`
+            !end-bullet!
+        -   !begin-bullet!
+            `op_image_hsv_to_rgb()`
+            !end-bullet!
+        -   !begin-bullet!
+            `op_image_rgb_to_hsv()`
+            !end-bullet!
+
+        !end-bullets-3!
+        !end-bullet!
+    -   !begin-bullet!
+        Changes:
+        !begin-bullets-4!
+        -   !begin-bullet!
+            Added support for arbitrary, deeply nested input/output
+            structures in Functional models (e.g. lists of lists of
+            lists of inputs or outputs...)
+            !end-bullet!
+        -   !begin-bullet!
+            Add support for `optional` Functional inputs.
+            !begin-bullets-5!
+            -   !begin-bullet!
+                `keras_input()` gains an `optional` argument.
+                !end-bullet!
+            -   !begin-bullet!
+                `keras_model_sequential()` gains a `input_optional`
+                argument.
+                !end-bullet!
+
+            !end-bullets-5!
+            !end-bullet!
+        -   !begin-bullet!
+            Add support for `float8` inference for `Dense` and
+            `EinsumDense` layers.
+            !end-bullet!
+        -   !begin-bullet!
+            Enable `layer_feature_space()` to be used in a
+            `{tfdatasets}` pipeline even when the backend isn't
+            TensorFlow.
+            !end-bullet!
+        -   !begin-bullet!
+            `layer_string_lookup()` can now take `tf$SparseTensor()` as
+            input.
+            !end-bullet!
+        -   !begin-bullet!
+            `layer_string_lookup()` returns `"int64"` dtype by default
+            in more modes now.
+            !end-bullet!
+        -   !begin-bullet!
+            `Layer()` instances gain attributes `path` and
+            `quantization_mode`.
+            !end-bullet!
+        -   !begin-bullet!
+            `Metric()$variables` is now recursive.
+            !end-bullet!
+        -   !begin-bullet!
+            Add `training` argument to `Model$compute_loss()`.
+            !end-bullet!
+        -   !begin-bullet!
+            `split_dataset()` now supports nested structures in dataset.
+            !end-bullet!
+        -   !begin-bullet!
+            All applications gain a `name` argument, accept a custom
+            name.
+            !end-bullet!
+        -   !begin-bullet!
+            `layer_multi_head_attention()` gains a `seed` argument.
+            !end-bullet!
+        -   !begin-bullet!
+            All losses gain a `dtype` argument.
+            !end-bullet!
+        -   !begin-bullet!
+            `loss_dice()` gains an `axis` argument.
+            !end-bullet!
+        -   !begin-bullet!
+            `op_ctc_decode()`, new default for `mask_index = 0`
+            !end-bullet!
+        -   !begin-bullet!
+            All `op_image_*` functions now use default `data_format`
+            value to `config_image_data_format()`
+            !end-bullet!
+        -   !begin-bullet!
+            `op_isclose()` gains arguments `rtol`, `atol`, `equal_nan`.
+            !end-bullet!
+        -   !begin-bullet!
+            `save_model()` gains argument `zipped`.
+            !end-bullet!
+        -   !begin-bullet!
+            Bugs fixes and performance improvements.
+            !end-bullet!
+
+        !end-bullets-4!
+        !end-bullet!
+
+    !end-bullets-2!
+    !end-bullet!
 
 !end-bullets-1!
-
-User facing changes with upstream Keras v3.4.0:
-
-!begin-bullets-2!
-
--   !begin-bullet!
-    New function:
-    !begin-bullets-3!
-    -   !begin-bullet!
-        `op_argpartition()`
-        !end-bullet!
-    -   !begin-bullet!
-        `op_map()`
-        !end-bullet!
-    -   !begin-bullet!
-        `op_scan()`
-        !end-bullet!
-    -   !begin-bullet!
-        `op_switch()`
-        !end-bullet!
-    -   !begin-bullet!
-        `op_dtype()`
-        !end-bullet!
-    -   !begin-bullet!
-        `op_lstsq()`
-        !end-bullet!
-    -   !begin-bullet!
-        `op_image_hsv_to_rgb()`
-        !end-bullet!
-    -   !begin-bullet!
-        `op_image_rgb_to_hsv()`
-        !end-bullet!
-
-    !end-bullets-3!
-    !end-bullet!
--   !begin-bullet!
-    Changes:
-    !begin-bullets-4!
-    -   !begin-bullet!
-        Added support for arbitrary, deeply nested input/output
-        structures in Functional models (e.g. lists of lists of lists of
-        inputs or outputs...)
-        !end-bullet!
-    -   !begin-bullet!
-        Add support for `optional` Functional inputs.
-        !begin-bullets-5!
-        -   !begin-bullet!
-            `keras_input()` gains an `optional` argument.
-            !end-bullet!
-        -   !begin-bullet!
-            `keras_model_sequential()` gains a `input_optional`
-            argument.
-            !end-bullet!
-
-        !end-bullets-5!
-        !end-bullet!
-    -   !begin-bullet!
-        Add support for `float8` inference for `Dense` and `EinsumDense`
-        layers.
-        !end-bullet!
-    -   !begin-bullet!
-        Enable `layer_feature_space()` to be used in a `{tfdatasets}`
-        pipeline even when the backend isn't TensorFlow.
-        !end-bullet!
-    -   !begin-bullet!
-        `layer_string_lookup()` can now take `tf$SparseTensor()` as
-        input.
-        !end-bullet!
-    -   !begin-bullet!
-        `layer_string_lookup()` returns `"int64"` dtype by default in
-        more modes now.
-        !end-bullet!
-    -   !begin-bullet!
-        `Layer()` instances gain attributes `path` and
-        `quantization_mode`.
-        !end-bullet!
-    -   !begin-bullet!
-        `Metric()$variables` is now recursive.
-        !end-bullet!
-    -   !begin-bullet!
-        Add `training` argument to `Model$compute_loss()`.
-        !end-bullet!
-    -   !begin-bullet!
-        `split_dataset()` now supports nested structures in dataset.
-        !end-bullet!
-    -   !begin-bullet!
-        All applications gain a `name` argument, accept a custom name.
-        !end-bullet!
-    -   !begin-bullet!
-        `layer_multi_head_attention()` gains a `seed` argument.
-        !end-bullet!
-    -   !begin-bullet!
-        All losses gain a `dtype` argument.
-        !end-bullet!
-    -   !begin-bullet!
-        `loss_dice()` gains an `axis` argument.
-        !end-bullet!
-    -   !begin-bullet!
-        `op_ctc_decode()`, new default for `mask_index = 0`
-        !end-bullet!
-    -   !begin-bullet!
-        All `op_image_*` functions now use default `data_format` value
-        to `config_image_data_format()`
-        !end-bullet!
-    -   !begin-bullet!
-        `op_isclose()` gains arguments `rtol`, `atol`, `equal_nan`.
-        !end-bullet!
-    -   !begin-bullet!
-        `save_model()` gains argument `zipped`.
-        !end-bullet!
-    -   !begin-bullet!
-        Bugs fixes and performance improvements.
-        !end-bullet!
-
-    !end-bullets-4!
-    !end-bullet!
-
-!end-bullets-2!
 
 # keras3 1.0.0
 
@@ -457,7 +459,7 @@ New functions:
 -   !begin-bullet!
     The package has been rebuilt for Keras 3.0. Refer to
     https://blogs.rstudio.com/ai/posts/2024-05-21-keras3/ for an
-    overview and https://keras.posit.co for the current up-to-date
+    overview and https://keras3.posit.co for the current up-to-date
     documentation.
     !end-bullet!
 
