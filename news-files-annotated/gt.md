@@ -90,6 +90,19 @@
     (like `fmt_*()` functions) (@olivroy, #1665).
 
     !end-bullet!
+-   !begin-bullet!
+    Fixed a bugs that caused an error in Latex when
+    `row_group_as_column = TRUE`, the row groups were specified using
+    the `tab_row_group`, and the user specified a width for the row name
+    columns (@kbrevoort, #1804).
+
+    !end-bullet!
+-   !begin-bullet!
+    Improve the centering of the stubhead label in Latex when
+    `row_group_as_column = TRUE` and the width of the row name column is
+    specified (@kbrevoort, #1804).
+
+    !end-bullet!
 
 !end-bullets-4!
 
