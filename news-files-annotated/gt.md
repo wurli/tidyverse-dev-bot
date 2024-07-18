@@ -75,6 +75,17 @@
 
     !end-bullet!
 -   !begin-bullet!
+    Fixed a bug where `gt(row_group_as_column = TRUE)` would create the
+    wrong layout with `as_gtable()` when all groups are unique
+    (@olivroy, #1803).
+
+    !end-bullet!
+-   !begin-bullet!
+    grid output has been improved. Namely, showing currency symbols now
+    works (@olivroy, #1788).
+
+    !end-bullet!
+-   !begin-bullet!
     `data_color()` no longer errors when a tidyselect selection is empty
     (like `fmt_*()` functions) (@olivroy, #1665).
 

@@ -17514,3 +17514,7 @@ keras,8f4d4c73e49281ae9587a6e494fb3223,‣ Bugs fixes and performance improvemen
 gt,d87ee2cb37c7863404634371c0347885,"Interactive tables will show no border if `opt_table_lines(extent = ""none"")` is specified (#1307).",NA,NA,NA,NA
 gt,6332b68895aa70a3c50b53e46358ce58,Interactive tables now respect more styling options.,NA,NA,NA,NA
 gt,6332b68895aa70a3c50b53e46358ce58,"• `column_labels.background.color`, `row_group.background.color`, `row_group.font.weight`, `table_body.hlines.style`, `table.font.weight`, `table.font.size`, `stub.font.weight` (#1693).",NA,NA,NA,NA
+clock,1b09ec812111eeb10e28d1a91f81f90e,Removed usage of non-API `STRING_PTR()` in favor of `STRING_PTR_RO()`.,NA,NA,NA,NA
+clock,f31ff122ad2a01ce7323b26f5770cf2b,Fixed a gcc warning reported by CRAN related to templated C++ constructors (#371).,NA,NA,NA,NA
+gt,6265337c504caabeb33bd1db9cb37031,"Fixed a bug where `gt(row_group_as_column = TRUE)` would create the wrong layout with `as_gtable()` when all groups are unique (@​olivroy, #1803).",NA,NA,NA,NA
+gt,ac3ec245b509384102c43d5cfafbc0d6,"grid output has been improved. Namely, showing currency symbols now works (@​olivroy, #1788).",NA,NA,NA,NA
