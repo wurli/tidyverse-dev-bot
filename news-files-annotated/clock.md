@@ -1,5 +1,7 @@
 # clock (development version)
 
+# clock 0.7.1
+
 !begin-bullets-1!
 
 -   !begin-bullet!
