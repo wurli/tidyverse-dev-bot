@@ -5,6 +5,12 @@
 -   !begin-bullet!
     Added new `additional_pkgs` argument for writing plumber files
     (#271).
+
+    !end-bullet!
+-   !begin-bullet!
+    Updated to use recipes' new ability to provide input data prototype
+    (#287).
+
     !end-bullet!
 
 !end-bullets-1!
