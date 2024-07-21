@@ -17521,3 +17521,4 @@ gt,ac3ec245b509384102c43d5cfafbc0d6,"grid output has been improved. Namely, show
 gt,a154fb39e15531fb236701d227d14729,"Fixed a bugs that caused an error in Latex when `row_group_as_column = TRUE`, the row groups were specified using the `tab_row_group`, and the user specified a width for the row name columns (@​kbrevoort, #1804).",NA,NA,NA,NA
 gt,7211d7edce8c5ccfaf68bd6c5e1f4e5b,"Improve the centering of the stubhead label in Latex when `row_group_as_column = TRUE` and the width of the row name column is specified (@​kbrevoort, #1804).",NA,NA,NA,NA
 vetiver,fe3625af6254ab6ae2b677dd2cf9bc3c,Updated to use recipes' new ability to provide input data prototype (#287).,NA,NA,NA,NA
+pillar,07fc8f47c9cb531230da0d533d9f5d01,"Update \_pkgdown.yml to bring back search bar (@​olivroy, #667).",NA,NA,NA,NA
