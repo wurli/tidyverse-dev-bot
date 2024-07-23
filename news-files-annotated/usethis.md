@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `use_github()` now knows that you can reuse the name of an earlier
+    repo that has since been renamed (@ateucher, #1893).
+
+    !end-bullet!
+-   !begin-bullet!
     `use_git()` no longer asks if you want to restart RStudio when using
     Positron.
 
@@ -306,10 +311,9 @@
 -   !begin-bullet!
     `use_rstudio()` gains a `reformat` argument which omits `.Rproj`
     settings that enforce file formatting conventions, e.g. around
-    whitespace.\
-    `create_from_github()` uses this option when it introduces an
-    `.Rproj` to a project that lacks one, making it easier to follow the
-    project's existing conventions (#1679).
+    whitespace. `create_from_github()` uses this option when it
+    introduces an `.Rproj` to a project that lacks one, making it easier
+    to follow the project's existing conventions (#1679).
 
     !end-bullet!
 -   !begin-bullet!
@@ -798,8 +802,8 @@ they are using two different even-lower-level packages to do this:
 Even now, gert and gh should discover the same credentials, at least for
 github.com. In the future, these two packages may merge into one.
 
-Git/GitHub credential management is covered in a new article:\
-Managing Git(Hub) Credentials
+Git/GitHub credential management is covered in a new article: Managing
+Git(Hub) Credentials
 
 The main user-facing changes in usethis are:
 
@@ -854,7 +858,7 @@ functions have some deprecated arguments.
         `use_github_labels()` (`repo_spec`, `host`, `auth_token`)
         !end-bullet!
     -   !begin-bullet!
-        `use_tidy_labels()` (`repo_spec`, `host`, `auth_token`)\
+        `use_tidy_labels()` (`repo_spec`, `host`, `auth_token`)
         !end-bullet!
     -   !begin-bullet!
         `use_github_release()` (`host`, `auth_token`)
