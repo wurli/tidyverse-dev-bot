@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    The README templates now recommend pak instead of devtools for
+    package installation (@olivroy, #1723).
+
+    !end-bullet!
+-   !begin-bullet!
     `use_github()` now knows that you can reuse the name of an earlier
     repo that has since been renamed (@ateucher, #1893).
 

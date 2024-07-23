@@ -17524,3 +17524,4 @@ vetiver,fe3625af6254ab6ae2b677dd2cf9bc3c,Updated to use recipes' new ability to 
 pillar,07fc8f47c9cb531230da0d533d9f5d01,"Update \_pkgdown.yml to bring back search bar (@​olivroy, #667).",NA,NA,NA,NA
 shiny,b0077ae88612d6d001d758dc6b41af29,Added function `reactlogAddMark()` to programmatically add \_mark_ed locations in the reactlog log without the requirement of keyboard bindings during an idle reactive moment. (#4103),NA,NA,NA,NA
 usethis,b2e6e4b1ff0412a50f5673513f043520,"`use_github()` now knows that you can reuse the name of an earlier repo that has since been renamed (@​ateucher, #1893).",NA,NA,NA,NA
+usethis,694429a4b2cc5176af964a89d4b20df0,"The README templates now recommend pak instead of devtools for package installation (@​olivroy, #1723).",NA,NA,NA,NA
