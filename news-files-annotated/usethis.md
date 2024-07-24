@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `use_standalone()` inserts an improved header that includes the code
+    needed to update the standalone file (@krlmlr, #1903).
+
+    !end-bullet!
+-   !begin-bullet!
     `use_release_issue()` and `use_upkeep()` behave better when the user
     has a fork. The user is asked just once to choose between `origin`
     and `upstream` as the target repo (#2023).
