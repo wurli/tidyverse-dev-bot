@@ -5,6 +5,21 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    The client-side TypeScript code for Shiny has been refactored so
+    that the `Shiny` object is now an instance of class `ShinyClass`.
+    (#4063)
+
+    !end-bullet!
+-   !begin-bullet!
+    In TypeScript, the `Shiny` object has a new property
+    `initializedPromise`, which is a Promise-like object that can be
+    `await`ed or chained with `.then()`. This Promise-like object
+    corresponds to the `shiny:sessioninitialized` JavaScript event, but
+    is easier to use because it can be used both before and after the
+    events have occurred. (#4063)
+
+    !end-bullet!
+-   !begin-bullet!
     Added new functions, `useBusyIndicators()` and
     `busyIndicatorOptions()`, for enabling and customizing busy
     indication. Busy indicators provide a visual cue to users when the
