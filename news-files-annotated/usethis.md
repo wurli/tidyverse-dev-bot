@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `pr_merge_main()` now offers the choice to not open the files with
+    merge conflicts (@olivroy, #1720).
+
+    !end-bullet!
+-   !begin-bullet!
     `edit_rstudio_snippets()` now accepts yaml snippets (@olivroy,
     #1941).
 
