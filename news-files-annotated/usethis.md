@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `edit_rstudio_snippets()` now accepts yaml snippets (@olivroy,
+    #1941).
+
+    !end-bullet!
+-   !begin-bullet!
     `use_standalone()` inserts an improved header that includes the code
     needed to update the standalone file (@krlmlr, #1903).
 
