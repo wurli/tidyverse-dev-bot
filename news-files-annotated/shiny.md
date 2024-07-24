@@ -1,5 +1,20 @@
 # shiny (development version)
 
+## New busy indication feature
+
+Shiny now includes busy indication by default, which more specifically
+means: 1. Calculating/recalculating outputs now have a spinner overlay.
+2. When no outputs are calculating, but Shiny is busy calculating
+something (e.g., a download, side-effect, etc), a page-level pulsing
+banner is shown.
+
+If either 1 or 2 leads to undesirable behavior in your app, you can
+disable them entirely with
+`useBusyIndicators(spinners = FALSE, pulse = FALSE)`. In addition,
+various properties of the spinners and pulse can be customized with
+`busyIndicatorOptions()`. For more details, see `?busyIndicatorOptions`.
+(#4040, #4104)
+
 ## New features and improvements
 
 !begin-bullets-1!
@@ -17,16 +32,6 @@
     corresponds to the `shiny:sessioninitialized` JavaScript event, but
     is easier to use because it can be used both before and after the
     events have occurred. (#4063)
-
-    !end-bullet!
--   !begin-bullet!
-    Added new functions, `useBusyIndicators()` and
-    `busyIndicatorOptions()`, for enabling and customizing busy
-    indication. Busy indicators provide a visual cue to users when the
-    server is busy calculating outputs or otherwise serving requests to
-    the client. When enabled, a spinner is shown on each
-    calculating/recalculating output, and a pulsing banner is shown at
-    the top of the page when the app is otherwise busy. (#4040)
 
     !end-bullet!
 -   !begin-bullet!
