@@ -17530,3 +17530,4 @@ shiny,bb00b9f253572d26a55b1adda068b3d5,The client-side TypeScript code for Shiny
 shiny,c50baf9c29fbc95c209e1a2a219df820,"In TypeScript, the `Shiny` object has a new property `initializedPromise`, which is a Promise-like object that can be `await`ed or chained with `.then()`. This Promise-like object corresponds to the `shiny:sessioninitialized` JavaScript event, but is easier to use because it can be used both before and after the events have occurred. (#4063)",NA,NA,NA,NA
 usethis,dc24554caf8c79a22360607be2fd1a5c,"`use_standalone()` inserts an improved header that includes the code needed to update the standalone file (@​krlmlr, #1903).",NA,NA,NA,NA
 usethis,b7fc5d5f5f71ba68564f17a93d513daa,"`edit_rstudio_snippets()` now accepts yaml snippets (@​olivroy, #1941).",NA,NA,NA,NA
+waldo,f2f0f88a821a0a92a6cdbe053ecd6174,"waldo no longer imports fansi (@​olivroy, #192).",NA,NA,NA,NA
