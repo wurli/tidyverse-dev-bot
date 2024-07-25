@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `use_cpp11()` makes it easier to update `NAMESPACE` (@pachadotdev,
+    #1921).
+
+    !end-bullet!
+-   !begin-bullet!
     `pr_merge_main()` now offers the choice to not open the files with
     merge conflicts (@olivroy, #1720).
 

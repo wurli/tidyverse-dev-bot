@@ -17566,3 +17566,4 @@ usethis,86eb294541d023ce57c308c727c99bd9,"`use_github(auth_token =, credentials 
 usethis,6eed560b94ebf27c3fecd2865269da86,"`use_github_labels(repo_spec =, host =, auth_token =)`",NA,NA,NA,NA
 usethis,802a5ef34307ff340bb608cbf4770cb2,"`use_github_links(auth_token =, host =)`",NA,NA,NA,NA
 usethis,fafa6a546d6e21d7af36042f54c5c27f,"`use_github_release(host =, auth_token =)`",NA,NA,NA,NA
+usethis,796d1f6c5f4df264105c80190a5b55b5,"`use_cpp11()` makes it easier to update `NAMESPACE` (@​pachadotdev, #1921).",NA,NA,NA,NA
