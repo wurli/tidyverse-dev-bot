@@ -17543,3 +17543,26 @@ bslib,c52a419c857e7af2c390d7f3363cc5a5,"• `file` is designed to accept a path 
 bslib,989cf24effd5f91590ee42063818e745,"On mobile, the main and sidebar content areas of a `layout_sidebar()` no longer overlap with the sidebar toggle button. (#1084)",NA,NA,NA,NA
 usethis,cf7df8f5dc477e2674a01bba51c4021e,"`browse_github_token()`, `browse_github_pat()`, and `github_token()` have been removed after being deprecated in usethis 2.0.0. `create_github_token()`, `gh::gh_token()`, and `gh_token_help()` should be used instead.",NA,NA,NA,NA
 usethis,20ec9f3d7569b766d528e574574c4e3d,`pr_pull_upstream()` and `pr_sync()` have been removed after being deprecated in usethis 2.0.0. `pr_merge_main()` and `pr_push()` should be used instead.,NA,NA,NA,NA
+usethis,6e50b33867680e5a0554e5392ce93d35,Switch from git2r to gert (+ credentials).,NA,NA,NA,NA
+usethis,be11fe91d2aede0bc4beccf3bdcff903,"Use of git config and the gh package to infer, e.g., the target repo spec.",NA,NA,NA,NA
+usethis,3bccf257f1795574a594eb068d20157c,Pivot towards GitHub Actions and away from Travis and AppVeyor.,NA,NA,NA,NA
+usethis,12c8ec4e673889db306e26560bb02482,`git_credentials()`,NA,NA,NA,NA
+usethis,96f1f4ccc2b0cd4da9b21c567ba96471,`use_git_credentials()`,NA,NA,NA,NA
+usethis,68fec6f60ac2b8a9b41788a7fb55d9bd,`browse_github_token()` (do `create_github_token()`),NA,NA,NA,NA
+usethis,4bf00ff5e1d19f59983e2333b0055ec5,`browse_github_pat()` (do `create_github_token()`),NA,NA,NA,NA
+usethis,3b48562a835cfa8913cbfe7b10a69ac6,`github_token()` (do `gh_token_help()` or `gh::gh_token()`),NA,NA,NA,NA
+usethis,3a2a061986cee2ad89f88c2d0cddea35,`pr_pull_upstream()` (do `pr_merge_main()`),NA,NA,NA,NA
+usethis,828c8b3b084f9cbb21fa8e422a499071,`pr_sync()` (do `pr_merge_main(); pr_push()`),NA,NA,NA,NA
+usethis,a25e8a042e1a0760bad47ced7273c862,`use_appveyor()`,NA,NA,NA,NA
+usethis,65bd0903a9984d949acce102049a87c7,`use_appveyor_badge()`,NA,NA,NA,NA
+usethis,214ea441e3b991440baec7982c416ea3,`use_travis()`,NA,NA,NA,NA
+usethis,3048692c6447e783cd254729bbeec081,`use_travis_badge()`,NA,NA,NA,NA
+usethis,725e64900750815ea6cc3574d7dda0f4,`browse_travis()`,NA,NA,NA,NA
+usethis,276478cce7918272803f833105222e85,`use_pkgdown_travis()`,NA,NA,NA,NA
+usethis,e791c808b6bf8616437283e3d3219968,`use_tidy_ci()` *deprecated in v2.1.0* (do `use_tidy_github_actions()`),NA,NA,NA,NA
+usethis,e4a1eb7d7f60c17f6a96cca37a4e8184,`use_tidy_labels()` *deprecated in v2.1.0* (do `use_tidy_github_labels()`),NA,NA,NA,NA
+usethis,920bac3830f7ae608e246cf141a86d76,"`create_from_github(auth_token =, credentials =)`",NA,NA,NA,NA
+usethis,86eb294541d023ce57c308c727c99bd9,"`use_github(auth_token =, credentials =)`",NA,NA,NA,NA
+usethis,6eed560b94ebf27c3fecd2865269da86,"`use_github_labels(repo_spec =, host =, auth_token =)`",NA,NA,NA,NA
+usethis,802a5ef34307ff340bb608cbf4770cb2,"`use_github_links(auth_token =, host =)`",NA,NA,NA,NA
+usethis,fafa6a546d6e21d7af36042f54c5c27f,"`use_github_release(host =, auth_token =)`",NA,NA,NA,NA
