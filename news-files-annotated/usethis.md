@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `use_test_helper()` is a new function to create a test helper file
+    (@olivroy, #1822).
+
+    !end-bullet!
+-   !begin-bullet!
     `use_cpp11()` makes it easier to update `NAMESPACE` (@pachadotdev,
     #1921).
 
