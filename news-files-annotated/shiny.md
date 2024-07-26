@@ -80,6 +80,11 @@ various properties of the spinners and pulse can be customized with
     context). (#4027)
 
     !end-bullet!
+-   !begin-bullet!
+    Image outputs that were scaled by CSS had certain regions that were
+    unresponsive to hover/click/brush handlers. (#3234)
+
+    !end-bullet!
 
 !end-bullets-2!
 

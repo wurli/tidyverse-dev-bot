@@ -17570,3 +17570,4 @@ usethis,796d1f6c5f4df264105c80190a5b55b5,"`use_cpp11()` makes it easier to updat
 usethis,50adbad5931a8fd8830b606f8a56c711,"`use_test_helper()` is a new function to create a test helper file (@​olivroy, #1822).",NA,NA,NA,NA
 pak,2412f4d90a191f7f5e31a65e66361600,`pkg_deps()` now accepts a vector of package names.,NA,NA,NA,NA
 leaflet,aee5b25e5888a90ce95854e5232642e4,"Color palette improvements. All color palette functions now support all `{viridisLite}` palettes (""magma"", ""inferno"", ""plasma"", ""viridis"", ""cividis"", ""rocket"", ""mako"", and ""turbo"").",NA,NA,NA,NA
+shiny,a62cfd2d95efa5663aa6a99ddac54e3e,Image outputs that were scaled by CSS had certain regions that were unresponsive to hover/click/brush handlers. (#3234),NA,NA,NA,NA
