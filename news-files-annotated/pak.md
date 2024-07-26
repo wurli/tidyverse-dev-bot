@@ -3,12 +3,17 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `pkg_deps()` now accepts a vector of package names.
+
+    !end-bullet!
+-   !begin-bullet!
     The metadata cache now does not use source URLs for packages in
     `Archive` on Posit Package Manager repositories. This URLs may serve
     a different package, even a source package when the main URL for the
     same package serves a binary package. The alternative URLs are not
     needed on PPM, anyway, because PPM is in a consistent state w.r.t.
     metadata and package files (#623).
+
     !end-bullet!
 
 !end-bullets-1!

@@ -17568,3 +17568,4 @@ usethis,802a5ef34307ff340bb608cbf4770cb2,"`use_github_links(auth_token =, host =
 usethis,fafa6a546d6e21d7af36042f54c5c27f,"`use_github_release(host =, auth_token =)`",NA,NA,NA,NA
 usethis,796d1f6c5f4df264105c80190a5b55b5,"`use_cpp11()` makes it easier to update `NAMESPACE` (@​pachadotdev, #1921).",NA,NA,NA,NA
 usethis,50adbad5931a8fd8830b606f8a56c711,"`use_test_helper()` is a new function to create a test helper file (@​olivroy, #1822).",NA,NA,NA,NA
+pak,2412f4d90a191f7f5e31a65e66361600,`pkg_deps()` now accepts a vector of package names.,NA,NA,NA,NA
