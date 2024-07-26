@@ -1,8 +1,18 @@
 # leaflet (development version)
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    Color palette improvements. All color palette functions now support
+    all `{viridisLite}` palettes ("magma", "inferno", "plasma",
+    "viridis", "cividis", "rocket", "mako", and "turbo").
+    !end-bullet!
+
+!end-bullets-1!
+
 # leaflet 2.2.2
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     Fixed #893: Correctly call `terra::crs()` when checking the CRS of a
@@ -24,11 +34,11 @@
 
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # leaflet 2.2.1
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     When `addProviderTiles()` is used with `{leaflet.providers}` version
@@ -39,13 +49,13 @@
     #884).
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 # leaflet 2.2.0
 
 ### Features
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     Added support for SpatRaster and SpatVector objects from the terra
@@ -60,11 +70,11 @@
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 ## Bug fixes and improvements
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     Use correct license in OpenStreetMap attribution. (#811)
@@ -89,25 +99,25 @@
 
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 # leaflet 2.1.2
 
 ## Bug fixes and improvements
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     Removed S3 warnings found on R devel (#848)
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # leaflet 2.1.1
 
 ## Bug fixes and improvements
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     The default marker icon for `addMarkers` no longer worked, due to
@@ -123,13 +133,13 @@
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 # leaflet 2.1.0
 
 ## Bug fixes and improvements
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     Enable JS function literals (wrapped in `htmlwidgets::JS()`) to be
@@ -151,23 +161,23 @@
 
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 # leaflet 2.0.4.1
 
 ## Features
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     Updated proj4.js to 2.6.2
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 ## Bug fixes and improvements
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     Minor tweaks to example data and tests, required to stay on CRAN
@@ -179,13 +189,13 @@
 
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 # leaflet 2.0.3
 
 ## Breaking changes
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     `data("providers")` and `data("providers.details")` no longer exist.
@@ -193,11 +203,11 @@
     (#636)
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 ## Bug fixes and improvements
 
-!begin-bullets-11!
+!begin-bullets-12!
 
 -   !begin-bullet!
     Integrated data from `leaflet.providers` package. See
@@ -224,13 +234,13 @@
     GeoJSON objects missing `properties` can now be displayed (#622)
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-12!
 
 # leaflet 2.0.2
 
 ## Bug fixes and improvements
 
-!begin-bullets-12!
+!begin-bullets-13!
 
 -   !begin-bullet!
     Require viridis \>= 0.5.1 to avoid namespace issues with viridisLite
@@ -248,13 +258,13 @@
     Require scales \>= 1.0.0 to avoid exact color matching issues (#578)
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
 
 # leaflet 2.0.1
 
 ## Features
 
-!begin-bullets-13!
+!begin-bullets-14!
 
 -   !begin-bullet!
     Added method `addMapPane` to add custom pane layers to have fine
@@ -265,11 +275,11 @@
     Exposed htmlwidgets sizingPolicy in leaflet() (#548)
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-14!
 
 ## Bug fixes and improvements
 
-!begin-bullets-14!
+!begin-bullets-15!
 
 -   !begin-bullet!
     Default marker icon locations will now use unpkg.com instead of the
@@ -287,13 +297,13 @@
     Start from world view if using flyTo or flyToBounds. (#552)
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-15!
 
 # leaflet 2.0.0
 
 ## Breaking changes
 
-!begin-bullets-15!
+!begin-bullets-16!
 
 -   !begin-bullet!
     Update to latest leaflet.js v1.3.1 (#453, 314616f) Please see
@@ -305,7 +315,7 @@
     All plugins updated to versions compatible with leaflet \> 1.0
     (#458)
 
-    !begin-bullets-16!
+    !begin-bullets-17!
     -   !begin-bullet!
         jQuery, https://github.com/jquery/jquery
         !end-bullet!
@@ -356,12 +366,12 @@
         topojson, https://github.com/topojson/topojson
         !end-bullet!
 
-    !end-bullets-16!
+    !end-bullets-17!
     !end-bullet!
 -   !begin-bullet!
     Leaflet.label (https://github.com/Leaflet/Leaflet.labelExtension)
 
-    !begin-bullets-17!
+    !begin-bullets-18!
     -   !begin-bullet!
         `L.Label` has been adopted within Leaflet.js to `L.Tooltip`
         !end-bullet!
@@ -373,14 +383,14 @@
         `*.bindTooltip()`
         !end-bullet!
 
-    !end-bullets-17!
+    !end-bullets-18!
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-16!
 
 ## Bug fixes and features
 
-!begin-bullets-18!
+!begin-bullets-19!
 
 -   !begin-bullet!
     Relative protocols are used where possible when adding tiles (#526).
@@ -476,11 +486,11 @@
 
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-19!
 
 # leaflet 1.1.0
 
-!begin-bullets-19!
+!begin-bullets-20!
 
 -   !begin-bullet!
     Add support for sf. sf, sfc, and sfg classes are supported with
@@ -549,11 +559,11 @@
 
     !end-bullet!
 
-!end-bullets-19!
+!end-bullets-20!
 
 # leaflet 1.0.2
 
-!begin-bullets-20!
+!begin-bullets-21!
 
 -   !begin-bullet!
     When used with `leafletProxy`, `fitBounds` did not return its input
@@ -613,24 +623,24 @@
 
     !end-bullet!
 
-!end-bullets-20!
+!end-bullets-21!
 
 # leaflet 1.0.1
 
-!begin-bullets-21!
+!begin-bullets-22!
 
 -   !begin-bullet!
     Fix #242: Compatibility with htmlwidgets 0.6 (thanks byzheng).
     !end-bullet!
 
-!end-bullets-21!
+!end-bullets-22!
 
 # leaflet 1.0.0
 
-!begin-bullets-22!
+!begin-bullets-23!
 
 -   !begin-bullet!
     Initial release
     !end-bullet!
 
-!end-bullets-22!
+!end-bullets-23!
