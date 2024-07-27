@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `use_zip()` and `use_course()` are equipped to handle a ZIP where
+    the parent folder is implicit (@burnsal, #1961).
+
+    !end-bullet!
+-   !begin-bullet!
     `use_test_helper()` is a new function to create a test helper file
     (@olivroy, #1822).
 
