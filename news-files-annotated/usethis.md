@@ -152,9 +152,9 @@ Function arguments that are removed:
 
     !end-bullet!
 -   !begin-bullet!
-    `use_release_issue()` and `use_upkeep()` behave better when the user
-    has a fork. The user is asked just once to choose between `origin`
-    and `upstream` as the target repo (#2023).
+    `use_release_issue()` and `use_upkeep_issue()` behave better when
+    the user has a fork. The user is asked just once to choose between
+    `origin` and `upstream` as the target repo (#2023).
 
     !end-bullet!
 -   !begin-bullet!
