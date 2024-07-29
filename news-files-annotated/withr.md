@@ -16,7 +16,7 @@
         !end-bullet!
     -   !begin-bullet!
         Calling `sys.on.exit()` elsewhere than top-level didn't work.
-        This is needed for manual invokation with `deferred_run()`.
+        This is needed for manual invocation with `deferred_run()`.
         !end-bullet!
 
     !end-bullets-2!
@@ -40,7 +40,7 @@
     `globalenv()` (the default), you now need to set
     `options(withr.hook_source = TRUE)` to get proper withr support
     (running `defer()` or `local_` functions at top-level of a script).
-    THis support is disabled by default in local environments to avoid a
+    This support is disabled by default in local environments to avoid a
     performance penalty in normal usage of withr features.
     !end-bullet!
 
@@ -59,14 +59,11 @@
     `deferred_run()` can now be run at any point in a knitr file (#235).
 
     !end-bullet!
+-   !begin-bullet!
+    `local_tempfile()` now writes `lines` in UTF-8 (#210) and always
+    uses `\n` for newlines (#216).
 
-!end-bullets-4!
-
-,\* `local_tempfile()` now writes `lines` in UTF-8 (#210) and always
-uses `\n` for newlines (#216).
-
-!begin-bullets-5!
-
+    !end-bullet!
 -   !begin-bullet!
     `local_pdf()` and friends now correctly restore to the previously
     active device (#138).
@@ -90,9 +87,19 @@ uses `\n` for newlines (#216).
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-4!
 
 # withr 2.5.2
+
+!begin-bullets-5!
+
+-   !begin-bullet!
+    Fixes for CRAN checks.
+    !end-bullet!
+
+!end-bullets-5!
+
+# withr 2.5.1
 
 !begin-bullets-6!
 
@@ -102,19 +109,9 @@ uses `\n` for newlines (#216).
 
 !end-bullets-6!
 
-# withr 2.5.1
-
-!begin-bullets-7!
-
--   !begin-bullet!
-    Fixes for CRAN checks.
-    !end-bullet!
-
-!end-bullets-7!
-
 # withr 2.5.0
 
-!begin-bullets-8!
+!begin-bullets-7!
 
 -   !begin-bullet!
     `defer()` and all `local_*()` functions now work when run inside of
@@ -157,7 +154,7 @@ uses `\n` for newlines (#216).
     These `with_` and `local_` functions are now robust to early exits
     (see next bullet):
 
-    !begin-bullets-9!
+    !begin-bullets-8!
     -   !begin-bullet!
         `_locale()`
         !end-bullet!
@@ -180,7 +177,7 @@ uses `\n` for newlines (#216).
         `_seed()`
         !end-bullet!
 
-    !end-bullets-9!
+    !end-bullets-8!
     !end-bullet!
 -   !begin-bullet!
     `with_namespace()` and `local_namespace()` now pass `warn.conflicts`
@@ -213,11 +210,11 @@ uses `\n` for newlines (#216).
 
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-7!
 
 # withr 2.4.3
 
-!begin-bullets-10!
+!begin-bullets-9!
 
 -   !begin-bullet!
     Lionel Henry is the new maintainer.
@@ -245,11 +242,11 @@ uses `\n` for newlines (#216).
 
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-9!
 
 # withr 2.4.2
 
-!begin-bullets-11!
+!begin-bullets-10!
 
 -   !begin-bullet!
     `local_options()` now lets you set an option to `NULL` as intended
@@ -279,21 +276,21 @@ uses `\n` for newlines (#216).
 
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-10!
 
 # withr 2.4.1
 
-!begin-bullets-12!
+!begin-bullets-11!
 
 -   !begin-bullet!
     Tests which require `capabilities("cairo")` are now skipped.
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-11!
 
 # withr 2.4.0
 
-!begin-bullets-13!
+!begin-bullets-12!
 
 -   !begin-bullet!
     withr is now licensed as MIT (#154).
@@ -310,13 +307,13 @@ uses `\n` for newlines (#216).
 
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-12!
 
 # withr 2.3.0
 
 ## Deprecations
 
-!begin-bullets-14!
+!begin-bullets-13!
 
 -   !begin-bullet!
     `local_tempfile()` argument `new` is deprecated, in favor of
@@ -325,11 +322,11 @@ uses `\n` for newlines (#216).
     `xyx <- local_tempfile()` in your code (#141).
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-13!
 
 ## New features
 
-!begin-bullets-15!
+!begin-bullets-14!
 
 -   !begin-bullet!
     New `local_seed()` function and `local_preserve_seed()` functions to
@@ -349,11 +346,11 @@ uses `\n` for newlines (#216).
 
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-14!
 
 ## Minor improvements and fixes
 
-!begin-bullets-16!
+!begin-bullets-15!
 
 -   !begin-bullet!
     `defer()` now throws an error if an error occurs in the deferred
@@ -366,11 +363,11 @@ uses `\n` for newlines (#216).
 
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-15!
 
 # withr 2.2.0
 
-!begin-bullets-17!
+!begin-bullets-16!
 
 -   !begin-bullet!
     `defer()` can set deferred events on `.GlobalEnv` to facilitate the
@@ -429,11 +426,11 @@ uses `\n` for newlines (#216).
 
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-16!
 
 # withr 2.1.2
 
-!begin-bullets-18!
+!begin-bullets-17!
 
 -   !begin-bullet!
     `set_makevars()` is now exported (#68, @gaborcsardi).
@@ -445,11 +442,11 @@ uses `\n` for newlines (#216).
 
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-17!
 
 # withr 2.1.1
 
-!begin-bullets-19!
+!begin-bullets-18!
 
 -   !begin-bullet!
     Fixes test failures with testthat 2.0.0
@@ -460,11 +457,11 @@ uses `\n` for newlines (#216).
 
     !end-bullet!
 
-!end-bullets-19!
+!end-bullets-18!
 
 # withr 2.1.0
 
-!begin-bullets-20!
+!begin-bullets-19!
 
 -   !begin-bullet!
     `with_connection()` function to automatically close R file
@@ -497,11 +494,11 @@ uses `\n` for newlines (#216).
 
     !end-bullet!
 
-!end-bullets-20!
+!end-bullets-19!
 
 # withr 2.0.0
 
-!begin-bullets-21!
+!begin-bullets-20!
 
 -   !begin-bullet!
     Each `with_` function now has a `local_` variant, which reset at the
@@ -514,22 +511,22 @@ uses `\n` for newlines (#216).
 
     !end-bullet!
 
-!end-bullets-21!
+!end-bullets-20!
 
 # withr 1.0.2
 
-!begin-bullets-22!
+!begin-bullets-21!
 
 -   !begin-bullet!
     `with_makevars()` gains an `assignment` argument to allow specifying
     additional assignment types.
     !end-bullet!
 
-!end-bullets-22!
+!end-bullets-21!
 
 # withr 1.0.1
 
-!begin-bullets-23!
+!begin-bullets-22!
 
 -   !begin-bullet!
     Relaxed R version requirement to 3.0.2 (#35, #39).
@@ -538,14 +535,14 @@ uses `\n` for newlines (#216).
     New `with_output_sink()` and `with_message_sink()` (#24).
     !end-bullet!
 
-!end-bullets-23!
+!end-bullets-22!
 
 # withr 1.0.0
 
-!begin-bullets-24!
+!begin-bullets-23!
 
 -   !begin-bullet!
     First Public Release
     !end-bullet!
 
-!end-bullets-24!
+!end-bullets-23!
