@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Functions that use httr now explicitly check that it is installed
+    (@catalamarti, #2573).
+
+    !end-bullet!
+-   !begin-bullet!
     `test_coverage()` now works if the package has not been installed.
 
     !end-bullet!

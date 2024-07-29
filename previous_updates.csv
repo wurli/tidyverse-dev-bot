@@ -17573,3 +17573,4 @@ leaflet,aee5b25e5888a90ce95854e5232642e4,"Color palette improvements. All color 
 shiny,a62cfd2d95efa5663aa6a99ddac54e3e,Image outputs that were scaled by CSS had certain regions that were unresponsive to hover/click/brush handlers. (#3234),NA,NA,NA,NA
 usethis,6a8eafce1a277bde88d4b917abf12a69,"`use_zip()` and `use_course()` are equipped to handle a ZIP where the parent folder is implicit (@​burnsal, #1961).",NA,NA,NA,NA
 usethis,a3b520845a1bf48cd303ceff3568432a,`usethis::use_version()` now tolerates empty lines preceding the first section title in the package NEWS file. (#1976),NA,NA,NA,NA
+devtools,d059fb905848a9934c1b98cd0b31ed83,"Functions that use httr now explicitly check that it is installed (@​catalamarti, #2573).",NA,NA,NA,NA
