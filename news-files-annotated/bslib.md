@@ -1,5 +1,7 @@
 # bslib (development version)
 
+# bslib 0.8.0
+
 ## Breaking changes
 
 !begin-bullets-1!

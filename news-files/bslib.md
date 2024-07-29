@@ -1,5 +1,7 @@
 # bslib (development version)
 
+# bslib 0.8.0
+
 ## Breaking changes
 
 * To help reduce the potential for squashed content, the main content area of `page_sidebar()` and `page_navbar()` with a `sidebar` now have a (customizable) minimum height and width on a "medium-sized" window. To revert to previous behavior, set `theme = bs_theme("bslib-page-main-min-height" = "unset", "bslib-page-main-min-width" = "unset")`. (#1057, #1059, #1084)
