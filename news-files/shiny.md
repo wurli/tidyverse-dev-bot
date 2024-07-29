@@ -1,5 +1,7 @@
 # shiny (development version)
 
+# shiny 1.9.0
+
 ## New busy indication feature
 
 Add the new `useBusyIndicators()` function to any UI definition to:
