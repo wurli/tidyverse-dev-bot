@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `jwt_encode_hmac()` now calls correct underlying function
+    `jose::jwt_encode_hmac()` and has correct default size parameter
+    value' (@denskh, #508).
+    !end-bullet!
+-   !begin-bullet!
     `req_perform_parallel()` now respects error handling in
     `req_error()`
     !end-bullet!
