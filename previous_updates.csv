@@ -17576,3 +17576,4 @@ usethis,a3b520845a1bf48cd303ceff3568432a,`usethis::use_version()` now tolerates 
 devtools,d059fb905848a9934c1b98cd0b31ed83,"Functions that use httr now explicitly check that it is installed (@​catalamarti, #2573).",NA,NA,NA,NA
 withr,017553a7a5295c703d6d4cc071be95a0,`local_tempfile()` now writes `lines` in UTF-8 (#210) and always uses `\n` for newlines (#216).,NA,NA,NA,NA
 httr2,0d9629c3a8e10382f0f308798463c10a,"`jwt_encode_hmac()` now calls correct underlying function `jose::jwt_encode_hmac()` and has correct default size parameter value' (@​denskh, #508).",NA,NA,NA,NA
+shiny,2e2d1e7eac41d77e9dd3d2e05d34549d,Fixed a bug introduced in v1.9.0 where the boundaries of hover/click/brush regions on plots were being incorrectly scaled when browser zoom was used. (#4111),NA,NA,NA,NA
