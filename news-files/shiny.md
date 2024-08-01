@@ -1,5 +1,7 @@
 # shiny (development version)
 
+# shiny 1.9.1
+
 ## Bug fixes
 
 * Fixed a bug introduced in v1.9.0 where the boundaries of hover/click/brush regions on plots were being incorrectly scaled when browser zoom was used. (#4111)
