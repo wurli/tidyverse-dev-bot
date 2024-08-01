@@ -14,6 +14,11 @@
 
     !end-bullet!
 -   !begin-bullet!
+    Unqualified markdown links to topics in external packages are now
+    automatically resolved (#1612).
+
+    !end-bullet!
+-   !begin-bullet!
     `@examplesIf` always uses `withAutoprint()` (@MichaelChirico,
     #1581). The raw Rd will be cleaner, but such examples will now only
     run under R\>=3.4.0 (2017).
@@ -784,7 +789,7 @@ details.
 
     !begin-codeblock!
     ``` r
-    parse_package(path = ".", env = env_package(path), 
+    parse_package(path = ".", env = env_package(path),
       registry = default_tags(), global_options = list())
     ```
 
