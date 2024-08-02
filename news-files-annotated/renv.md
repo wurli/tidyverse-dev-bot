@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed an issue where `renv::load()` could fail to load an alternate
+    project when `options(renv.config.autoloader.enabled = FALSE)` was
+    set. (#1959)
+
+    !end-bullet!
+-   !begin-bullet!
     `renv` now emits clickable hyperlinks for runnable code snippets and
     help, for front-ends which support the `ide:run` and `ide:help` ANSI
     escapes.
