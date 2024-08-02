@@ -17578,3 +17578,6 @@ withr,017553a7a5295c703d6d4cc071be95a0,`local_tempfile()` now writes `lines` in 
 httr2,0d9629c3a8e10382f0f308798463c10a,"`jwt_encode_hmac()` now calls correct underlying function `jose::jwt_encode_hmac()` and has correct default size parameter value' (@​denskh, #508).",NA,NA,NA,NA
 shiny,2e2d1e7eac41d77e9dd3d2e05d34549d,Fixed a bug introduced in v1.9.0 where the boundaries of hover/click/brush regions on plots were being incorrectly scaled when browser zoom was used. (#4111),NA,NA,NA,NA
 roxygen2,21dc9c79f1428bc7f3e55af331ecb1b4,Unqualified markdown links to topics in external packages are now automatically resolved (#1612).,NA,NA,NA,NA
+pillar,0977eb0f1476937e059e2d9daa5eff76,Auto-update from GitHub Actions. Run: https://github.com/r-lib/pillar/actions/runs/10200114378,NA,NA,NA,NA
+pillar,7692655f7cf134efa0a37a1f4ea9051a,Use dev roxygen2 and decor.,NA,NA,NA,NA
+tibble,27be6937bae93d0178e86f9aff5593ef,Use dev roxygen2 and decor.,NA,NA,NA,NA
