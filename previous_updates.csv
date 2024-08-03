@@ -17582,3 +17582,6 @@ pillar,0977eb0f1476937e059e2d9daa5eff76,Auto-update from GitHub Actions. Run: ht
 pillar,7692655f7cf134efa0a37a1f4ea9051a,Use dev roxygen2 and decor.,NA,NA,NA,NA
 tibble,27be6937bae93d0178e86f9aff5593ef,Use dev roxygen2 and decor.,NA,NA,NA,NA
 renv,f0deaec13bc000a34b2325af0d2df7d7,Fixed an issue where `renv::load()` could fail to load an alternate project when `options(renv.config.autoloader.enabled = FALSE)` was set. (#1959),NA,NA,NA,NA
+pillar,856929c9befc97248df7aa946b1df211,Auto-update from GitHub Actions. Run: https://github.com/r-lib/pillar/actions/runs/10224241696,NA,NA,NA,NA
+pillar,f8744b8999a75984564d12314db8d385,"Refactor dep-suggests-matrix, avoid killing base and recommended packages.",NA,NA,NA,NA
+tibble,92bab953b5cdb7c3a84887541093fc5b,Auto-update from GitHub Actions. Run: https://github.com/tidyverse/tibble/actions/runs/10224243858,NA,NA,NA,NA
