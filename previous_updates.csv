@@ -17587,3 +17587,4 @@ pillar,f8744b8999a75984564d12314db8d385,"Refactor dep-suggests-matrix, avoid kil
 tibble,92bab953b5cdb7c3a84887541093fc5b,Auto-update from GitHub Actions. Run: https://github.com/tidyverse/tibble/actions/runs/10224243858,NA,NA,NA,NA
 slider,bb27407226002e660d943f435ca044b4,Updated snapshot tests to use the latest version of cli.,NA,NA,NA,NA
 dplyr,4c07516adde1b09a00b4b4f38f01a3d1,Fixed an issue where duckplyr's ALTREP data frames were being materialized early due to internal usage of `ncol()` (#7049).,NA,NA,NA,NA
+lintr,7731630454ebfb519efb26f578e72db2,"`lint()` and friends emit a message if no lints are found (#2643, @​IndrajeetPatil).",NA,NA,NA,NA

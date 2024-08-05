@@ -284,6 +284,10 @@
     use case of expecting no lint message, akin to the recent {testthat}
     functions like `expect_no_warning()` (#2580, @F-Noelle).
     !end-bullet!
+-   !begin-bullet!
+    `lint()` and friends emit a message if no lints are found (#2643,
+    @IndrajeetPatil).
+    !end-bullet!
 
 !end-bullets-5!
 
