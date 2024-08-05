@@ -17585,3 +17585,4 @@ renv,f0deaec13bc000a34b2325af0d2df7d7,Fixed an issue where `renv::load()` could 
 pillar,856929c9befc97248df7aa946b1df211,Auto-update from GitHub Actions. Run: https://github.com/r-lib/pillar/actions/runs/10224241696,NA,NA,NA,NA
 pillar,f8744b8999a75984564d12314db8d385,"Refactor dep-suggests-matrix, avoid killing base and recommended packages.",NA,NA,NA,NA
 tibble,92bab953b5cdb7c3a84887541093fc5b,Auto-update from GitHub Actions. Run: https://github.com/tidyverse/tibble/actions/runs/10224243858,NA,NA,NA,NA
+slider,bb27407226002e660d943f435ca044b4,Updated snapshot tests to use the latest version of cli.,NA,NA,NA,NA

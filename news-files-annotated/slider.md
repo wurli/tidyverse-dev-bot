@@ -1,8 +1,16 @@
 # slider (development version)
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    Updated snapshot tests to use the latest version of cli.
+    !end-bullet!
+
+!end-bullets-1!
+
 # slider 0.3.1
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     Fixed tests that failed under valgrind due to `NA` vs `NaN`
@@ -19,11 +27,11 @@
 
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # slider 0.3.0
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     Improved reported error calls and error messages throughout the
@@ -79,22 +87,22 @@
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 # slider 0.2.2
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     Updated internal usage of `vec_order()` to prepare for a breaking
     change in vctrs (#153).
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 # slider 0.2.1
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     Fixed a C alignment issue detected by CRAN's USBAN machine related
@@ -111,16 +119,16 @@
 
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 # slider 0.2.0
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     New family of very fast specialized sliding functions:
 
-    !begin-bullets-6!
+    !begin-bullets-7!
     -   !begin-bullet!
         `slide_sum()`, `slide_index_sum()`: for rolling sums
 
@@ -150,7 +158,7 @@
 
         !end-bullet!
 
-    !end-bullets-6!
+    !end-bullets-7!
     !end-bullet!
 -   !begin-bullet!
     The `slide_index_*()` family now allows `.before` and `.after` to be
@@ -190,11 +198,11 @@
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # slider 0.1.5
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     `slide_period()` and friends have slightly better handling of size
@@ -217,11 +225,11 @@
 
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 # slider 0.1.4
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     As a followup to a change in slider 0.1.3, edge cases with size zero
@@ -233,11 +241,11 @@
 
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 # slider 0.1.3
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     Updated to stay compatible with vctrs 0.3.0.
@@ -274,34 +282,34 @@
 
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 # slider 0.1.2
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     Updated to stay compatible with the latest version of vctrs.
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 # slider 0.1.1
 
-!begin-bullets-11!
+!begin-bullets-12!
 
 -   !begin-bullet!
     Fixed a "multiple definition" C issue when compiling with gcc10.
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-12!
 
 # slider 0.1.0
 
-!begin-bullets-12!
+!begin-bullets-13!
 
 -   !begin-bullet!
     Added a `NEWS.md` file to track changes to the package.
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
