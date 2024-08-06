@@ -17589,3 +17589,5 @@ slider,bb27407226002e660d943f435ca044b4,Updated snapshot tests to use the latest
 dplyr,4c07516adde1b09a00b4b4f38f01a3d1,Fixed an issue where duckplyr's ALTREP data frames were being materialized early due to internal usage of `ncol()` (#7049).,NA,NA,NA,NA
 lintr,7731630454ebfb519efb26f578e72db2,"`lint()` and friends emit a message if no lints are found (#2643, @​IndrajeetPatil).",NA,NA,NA,NA
 renv,9dc7327cf869b234e270a83cff52013d,`renv` now preserves `Remote` fields present on packages installed from public package repositories (e.g. https://r-universe.dev/). (#1961),NA,NA,NA,NA
+pillar,bfb168f217d05ad48118c9ea3c329d5f,Inline action.,NA,NA,NA,NA
+tibble,116ce9dbc541ac710992c7624c563692,Inline action.,NA,NA,NA,NA
