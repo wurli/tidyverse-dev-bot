@@ -17591,3 +17591,8 @@ lintr,7731630454ebfb519efb26f578e72db2,"`lint()` and friends emit a message if n
 renv,9dc7327cf869b234e270a83cff52013d,`renv` now preserves `Remote` fields present on packages installed from public package repositories (e.g. https://r-universe.dev/). (#1961),NA,NA,NA,NA
 pillar,bfb168f217d05ad48118c9ea3c329d5f,Inline action.,NA,NA,NA,NA
 tibble,116ce9dbc541ac710992c7624c563692,Inline action.,NA,NA,NA,NA
+gt,eb592a4d2128a9127c3989d3cac1260a,"Performance improvement for footnote rendering (@​olivroy, #1818).",NA,NA,NA,NA
+leaflet,4f727f8b8038fba853444fe8a9103a84,"Color palette improvements. All color palette functions now support all `{viridisLite}` palettes (""magma"", ""inferno"", ""plasma"", ""viridis"", ""cividis"", ""rocket"", ""mako"", and ""turbo"") (@​jack-davison, #924).",NA,NA,NA,NA
+leaflet,ca29bf4fa291816509f30a28931c0cde,"Updated vignettes to replace `{sp}`/`{raster}` usage with `{sf}`/`{terra}` and their corresponding examples. (@​jack-davison, #928)",NA,NA,NA,NA
+leaflet,7c62771e1f38d68e882737bfcc360460,"Updated vignettes to replace `{sp}`/`{raster}` usage with `{sf}`/\`{terra} and their corresponding examples. (@​jack-davison, #928)",NA,NA,NA,NA
+leaflet,a622dda55d28cf2e206b8dbe77f0dc79,"`addProviderTiles()` will now error if the chosen `provider` does not match any currently loaded provider (by default, those in `providers`). This behaviour can be toggled off by setting the new `check` argument to `FALSE` (@​jack-davison, #929)",NA,NA,NA,NA

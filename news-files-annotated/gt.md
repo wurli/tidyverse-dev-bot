@@ -103,6 +103,10 @@
     specified (@kbrevoort, #1804).
 
     !end-bullet!
+-   !begin-bullet!
+    Performance improvement for footnote rendering (@olivroy, #1818).
+
+    !end-bullet!
 
 !end-bullets-4!
 
