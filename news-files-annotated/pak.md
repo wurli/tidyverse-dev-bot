@@ -15,6 +15,36 @@
     metadata and package files (#623).
 
     !end-bullet!
+-   !begin-bullet!
+    pak now supports `gitlab::` package sources better, by adding
+    explicit syntax to specify subdirectories
+    (https://github.com/r-lib/pkgdepends/issues/353, @dgkf).
+
+    !end-bullet!
+-   !begin-bullet!
+    `gitlab::` and `git::` package sources now support git submodules if
+    the `git-submodules` configuration option is set to `TRUE`. See
+    `?"pak-config"` (https://github.com/r-lib/pkgdepends/issues/354).
+
+    !end-bullet!
+-   !begin-bullet!
+    The new `?ignore-unavailable` parameter makes it easy to ignore soft
+    dependencies that are unavailable (#606).
+
+    !end-bullet!
+-   !begin-bullet!
+    pak now automatically ignores soft dependencies that have an
+    incompatible OS type (`OS_type` entry in `DESCRIPTION`) when
+    installing packages.
+
+    !end-bullet!
+-   !begin-bullet!
+    `repo_add()` and the `ppm_*()` functions, e.g. `ppm_snapshots()`,
+    now work again after the PPM API changes
+    (https://github.com/r-lib/pkgcache/issues/110,
+    https://github.com/r-lib/pkgcache/issues/115).
+
+    !end-bullet!
 
 !end-bullets-1!
 
