@@ -4,6 +4,11 @@
 
 -   !begin-bullet!
     Fixed error when importing a module named `config` (#1628)
+
+    !end-bullet!
+-   !begin-bullet!
+    `conda_run2()` is now exported (#1637, contributed by @dramanica)
+
     !end-bullet!
 
 !end-bullets-1!
