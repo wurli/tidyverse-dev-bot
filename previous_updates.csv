@@ -17602,3 +17602,4 @@ pak,e205321e5f150aed732c02fd22c37b4b,The new `?ignore-unavailable` parameter mak
 pak,719feda67d0c646083c94469c02cb271,pak now automatically ignores soft dependencies that have an incompatible OS type (`OS_type` entry in `DESCRIPTION`) when installing packages.,NA,NA,NA,NA
 pak,60ce00c876acb7613e7a2ee1e4ab903c,"`repo_add()` and the `ppm_*()` functions, e.g. `ppm_snapshots()`, now work again after the PPM API changes (https://github.com/r-lib/pkgcache/issues/110, https://github.com/r-lib/pkgcache/issues/115).",NA,NA,NA,NA
 reticulate,33452ab3ac1acf80744510b1a3100afa,"`conda_run2()` is now exported (#1637, contributed by @​dramanica)",NA,NA,NA,NA
+lintr,1b1b11d1d0253403b8665d5fe98197b6,"File locations in lints and error messages contain clickable hyperlinks to improve code navigation (#2645, #2588, @​olivroy).",NA,NA,NA,NA

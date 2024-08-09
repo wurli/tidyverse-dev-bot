@@ -409,6 +409,10 @@
     updated to be more informative and consistent.
     !end-bullet!
 -   !begin-bullet!
+    File locations in lints and error messages contain clickable
+    hyperlinks to improve code navigation (#2645, #2588, @olivroy).
+    !end-bullet!
+-   !begin-bullet!
     {lintr} now depends on R version 4.0.0. It already does so
     implicitly due to recursive upstream dependencies requiring this
     version; we've simply made that dependency explicit and up-front
