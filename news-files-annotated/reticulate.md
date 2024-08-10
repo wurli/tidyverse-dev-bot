@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Python background threads can now run in parallel with the R session
+    (#1641).
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed error when importing a module named `config` (#1628)
 
     !end-bullet!
