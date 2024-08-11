@@ -200,13 +200,12 @@
     `oauth_flow_auth_code()` gains a `redirect_uri` argument rather than
     deriving this URL automatically from the `host_name` and `port`
     (#248). It uses this argument to automatically choose which strategy
-    to use to get the\
-    auth code, either launching a temporary web server or, new, allowing
-    you to manually enter the details with the help of a custom JS/HTML
-    page hosted elsewhere, or by copying and pasting the URL you're
-    redirected to (@fh-mthomson, #326). The temporary web server now
-    also respects the path component of `redirect_uri`, if the API needs
-    a specific path (#149).
+    to use to get the auth code, either launching a temporary web server
+    or, new, allowing you to manually enter the details with the help of
+    a custom JS/HTML page hosted elsewhere, or by copying and pasting
+    the URL you're redirected to (@fh-mthomson, #326). The temporary web
+    server now also respects the path component of `redirect_uri`, if
+    the API needs a specific path (#149).
 
     !end-bullet!
 -   !begin-bullet!
