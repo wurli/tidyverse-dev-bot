@@ -15,6 +15,10 @@
     `conda_run2()` is now exported (#1637, contributed by @dramanica)
 
     !end-bullet!
+-   !begin-bullet!
+    Fixes for CRAN check failures (#1645)
+
+    !end-bullet!
 
 !end-bullets-1!
 

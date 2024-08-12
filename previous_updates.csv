@@ -17608,3 +17608,4 @@ reticulate,504b727d92fa34f7ef72f2fc865c6bba,Python background threads can now ru
 pillar,7b9573fac7e459593e87c23fbacff353,Fix edge case of no suggested packages.,NA,NA,NA,NA
 pillar,ffd9b38a131dda772d2ec204200b9e49,Use v2 instead of master.,NA,NA,NA,NA
 tibble,d63a5490966c2b137d9aa56cba8c0efe,Use v2 instead of master.,NA,NA,NA,NA
+reticulate,c13d061afec1c0c4b3c6f746b29a2f19,Fixes for CRAN check failures (#1645),NA,NA,NA,NA
