@@ -104,6 +104,12 @@
 
     !end-bullet!
 -   !begin-bullet!
+    Fixed an issue with
+    `text_case_match(.replace = "all", .locations = cells_column_spanners())`
+    (@olivroy, #1823).
+
+    !end-bullet!
+-   !begin-bullet!
     Performance improvement for footnote rendering (@olivroy, #1818).
 
     !end-bullet!
