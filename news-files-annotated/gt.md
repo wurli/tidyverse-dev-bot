@@ -113,6 +113,11 @@
     Performance improvement for footnote rendering (@olivroy, #1818).
 
     !end-bullet!
+-   !begin-bullet!
+    Fixed an issue where `tab_spanner_delim()` would fail to resolve a
+    duplicate id (@olivroy, #1821).
+
+    !end-bullet!
 
 !end-bullets-4!
 
