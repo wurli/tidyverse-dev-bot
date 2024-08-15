@@ -3,6 +3,13 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `renv` gains the function `renv::retrieve()`, which can be used to
+    download packages without installing them. This is primarily useful
+    in CI / CD scenarios, where you might want to download packages in a
+    single stage before attempting to install / restore them. (#1965)
+
+    !end-bullet!
+-   !begin-bullet!
     `renv` now preserves `Remote` fields present on packages installed
     from public package repositories (e.g. https://r-universe.dev/).
     (#1961)

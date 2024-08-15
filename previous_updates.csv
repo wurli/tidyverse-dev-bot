@@ -17612,3 +17612,4 @@ reticulate,c13d061afec1c0c4b3c6f746b29a2f19,Fixes for CRAN check failures (#1645
 gt,500ea1d5e29ecaad711be74c645824b9,"Fixed an issue with `text_case_match(.replace = ""all"", .locations = cells_column_spanners())` (@​olivroy, #1823).",NA,NA,NA,NA
 gt,139c8dbc7e3d26f77df15c505747a70c,"Fixed an issue where `tab_spanner_delim()` would fail to resolve a duplicate id (@​olivroy, #1821).",NA,NA,NA,NA
 gt,823c33bf4599526cb842a9caaadcdc90,More support for `cells_stubhead()` styling in interactive tables.,NA,NA,NA,NA
+renv,99fa71315fd6978ec99110ea5fb35cf4,"`renv` gains the function `renv::retrieve()`, which can be used to download packages without installing them. This is primarily useful in CI / CD scenarios, where you might want to download packages in a single stage before attempting to install / restore them. (#1965)",NA,NA,NA,NA
