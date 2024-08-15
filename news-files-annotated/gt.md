@@ -47,6 +47,10 @@
     `sub_*()` (@olivroy, #1759).
 
     !end-bullet!
+-   !begin-bullet!
+    More support for `cells_stubhead()` styling in interactive tables.
+
+    !end-bullet!
 
 !end-bullets-2!
 
