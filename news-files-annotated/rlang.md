@@ -13,6 +13,11 @@
     an up-to-date version of pkgload (\>= 1.4.0) following this change.
 
     !end-bullet!
+-   !begin-bullet!
+    `is_dictionaryish()` now will return TRUE for NULL (@ilovemane,
+    #1712).
+
+    !end-bullet!
 
 !end-bullets-1!
 

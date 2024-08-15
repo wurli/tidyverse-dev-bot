@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `use_data()` now uses serialization version 3 by default.
+    (@laurabrianna, #2044)
+    !end-bullet!
+-   !begin-bullet!
     Reverse dependency checks are only suggested if they exist (#1817,
     @seankross).
     !end-bullet!

@@ -17622,3 +17622,9 @@ stringr,f431d985cfa285858ce24182b5917113,"Adds `[[.stringr_pattern` method to go
 tidyr,44918b8a108de5daaa4b11b3646939d1,"`pivot_wider_spec()` now throws a more informative error on non-data frame inputs (@​catalamarti, #1510).",NA,NA,NA,NA
 tidyr,9e9f7346e45cdc1ca410b0c0c1ae963a,"tidyr now requires dplyr \>=1.1.0 (#1568, @​catalamarti).",NA,NA,NA,NA
 usethis,51b5c796151b3d67d3902d137572aa1f,"Reverse dependency checks are only suggested if they exist (#1817, @​seankross).",NA,NA,NA,NA
+ggplot2,6f4f8a56379fc8e5d742eacd081b6074,"Fixed bug in `stat_function()` so x-axis title now produced automatically when no data added. (@​phispu, #5647).",NA,NA,NA,NA
+ggplot2,8a7d85684ba8448b433342e3ba33751e,"geom_sf now accepts shape names (@​sierrajohnson, #5808)",NA,NA,NA,NA
+ggplot2,89992bd33ebdbba8b099bf8f716dcf64,"Added `gg` class to `labs()` (@​phispu, #5553).",NA,NA,NA,NA
+rlang,7573cd07793ce2a9b3f3ef0fa2d10c74,"`is_dictionaryish()` now will return TRUE for NULL (@​ilovemane, #1712).",NA,NA,NA,NA
+gh,a8fa6e489a2e21d6477a3627918cac73,"Removes usage of mockery (@​tanho63, #197)",NA,NA,NA,NA
+usethis,22f06cf1d86603126250e86fba89c43a,"`use_data()` now uses serialization version 3 by default. (@​laurabrianna, #2044)",NA,NA,NA,NA

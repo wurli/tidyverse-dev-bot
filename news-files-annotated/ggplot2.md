@@ -3,6 +3,19 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed bug in `stat_function()` so x-axis title now produced
+    automatically when no data added. (@phispu, #5647).
+
+    !end-bullet!
+-   !begin-bullet!
+    geom_sf now accepts shape names (@sierrajohnson, #5808)
+
+    !end-bullet!
+-   !begin-bullet!
+    Added `gg` class to `labs()` (@phispu, #5553).
+
+    !end-bullet!
+-   !begin-bullet!
     Missing values from discrete palettes are no longer translated
     (@teunbrand, #5929).
 

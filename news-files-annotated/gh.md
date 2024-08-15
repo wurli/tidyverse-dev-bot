@@ -1,8 +1,16 @@
 # gh (development version)
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    Removes usage of mockery (@tanho63, #197)
+    !end-bullet!
+
+!end-bullets-1!
+
 # gh 1.4.1
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     `gh_next()`, `gh_prev()`, `gh_first()` and `gh_last()` now work
@@ -17,11 +25,11 @@
 
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # gh 1.4.0
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     `gh()` gains a new `.max_rate` parameter that sets the maximum
@@ -50,11 +58,11 @@
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 # gh 1.3.1
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     gh now accepts lower-case methods i.e. both
@@ -70,11 +78,11 @@
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 # gh 1.3.0
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     gh now shows the correct number of records in its progress bar when
@@ -87,22 +95,22 @@
 
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 # gh 1.2.1
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     Token validation accounts for the new format announced 2021-03-04
     and implemented on 2021-04-01 (#148, @fmichonneau).
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # gh 1.2.0
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     `gh_gql()` now passes all arguments to `gh()` (#124).
@@ -119,7 +127,7 @@
     package. The environment variables consulted for URL-specific GitHub
     PATs have changed.
 
-    !begin-bullets-7!
+    !begin-bullets-8!
     -   !begin-bullet!
         For "https://api.github.com": `GITHUB_PAT_GITHUB_COM` now,
         instead of `GITHUB_PAT_API_GITHUB_COM`
@@ -130,7 +138,7 @@
         `GITHUB_PAT_GITHUB_ACME_COM_API_V3`
         !end-bullet!
 
-    !end-bullets-7!
+    !end-bullets-8!
     See the documentation of the gitcreds package for details.
 
     !end-bullet!
@@ -144,7 +152,7 @@
     https://docs.github.com/rest and endpoints are now documented using
     the URI template style of RFC 6570:
 
-    !begin-bullets-8!
+    !begin-bullets-9!
     -   !begin-bullet!
         Old: `GET /repos/:owner/:repo/issues`
         !end-bullet!
@@ -152,7 +160,7 @@
         New: `GET /repos/{owner}/{repo}/issues`
         !end-bullet!
 
-    !end-bullets-8!
+    !end-bullets-9!
     gh accepts and prioritizes the new style. However, it still does
     parameter substitution for the old style.
 
@@ -168,11 +176,11 @@
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 # gh 1.1.0
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     Raw responses from GitHub are now returned as raw vector.
@@ -225,7 +233,7 @@
 
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 # gh 1.0.1
 
