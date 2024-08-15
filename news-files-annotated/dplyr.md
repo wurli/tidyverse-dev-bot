@@ -11,6 +11,12 @@
     R \>=3.6.0 is now explicitly required (#7026).
 
     !end-bullet!
+-   !begin-bullet!
+    `if_any()` and `if_all()` are now fully consistent with `any()` and
+    `all()`. In particular, when called with empty inputs `if_any()`
+    returns `FALSE` and `if_all()` returns `TRUE` (#7059, @jrwinget).
+
+    !end-bullet!
 
 !end-bullets-1!
 

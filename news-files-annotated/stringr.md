@@ -3,9 +3,15 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Adds `[[.stringr_pattern` method to go along with existing
+    `[.stringr_pattern` method (@edward-burn, #569).
+
+    !end-bullet!
+-   !begin-bullet!
     In `str_replace_all()`, a `replacement` function now receives all
     values in a single vector. This radically improves performance at
     the cost of breaking some existing uses (#462).
+
     !end-bullet!
 
 !end-bullets-1!
