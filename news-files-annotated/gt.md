@@ -130,6 +130,11 @@
 
     !end-bullet!
 -   !begin-bullet!
+    Fixed an issue with multiple `text_replace()` calls would produce
+    bad result with `cells_column_labels()` (@olivroy, #1824).
+
+    !end-bullet!
+-   !begin-bullet!
     `tidyselect::where()`, `tidyselect::all_of()`,
     `tidyselect::any_of()` are now re-exported by gt.
 

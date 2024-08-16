@@ -17634,3 +17634,4 @@ usethis,910696d7d48a95c9ddd0aa99e88230c2,"`use_package()` now decreases a packag
 gt,a645bd077c38483c3bf7796c74b91260,"`tidyselect::where()`, `tidyselect::all_of()`, `tidyselect::any_of()` are now re-exported by gt.",NA,NA,NA,NA
 renv,0564765e8dd263021b21ee01a951e340,"Fixed an issue where `renv::checkout()` omitted some fields from lockfile records when using `actions = c(""snapshot"", ""restore"")`. (#1969)",NA,NA,NA,NA
 gt,5d6a7a137dd381130df78ff8c9943c7d,"`tab_footnote()` now correctly adds footnote marks in the `cells_stub_summary()` and `cells_stub_grand_summary()` (@​olivroy, #1832).",NA,NA,NA,NA
+gt,a4def5185e7889c754da3197708e9cea,"Fixed an issue with multiple `text_replace()` calls would produce bad result with `cells_column_labels()` (@​olivroy, #1824).",NA,NA,NA,NA
