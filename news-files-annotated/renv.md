@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed an issue where `renv::checkout()` omitted some fields from
+    lockfile records when using `actions = c("snapshot", "restore")`.
+    (#1969)
+
+    !end-bullet!
+-   !begin-bullet!
     `renv` gains the function `renv::retrieve()`, which can be used to
     download packages without installing them. This is primarily useful
     in CI / CD scenarios, where you might want to download packages in a

@@ -17632,3 +17632,4 @@ dplyr,624662fa388e5b34e1a84940ddf68c0e,Fixed an edge case when coercing data fra
 pkgdown,5387f0d8c1276e6153a84bc360192c40,"The `BugReports` field can now be an email (@​catalamarti, #2275).",NA,NA,NA,NA
 usethis,910696d7d48a95c9ddd0aa99e88230c2,"`use_package()` now decreases a package minimum version required when `min_version` is lower than what is currently specified in the DESCRIPTION file (@​jplecavalier, #1957).",NA,NA,NA,NA
 gt,a645bd077c38483c3bf7796c74b91260,"`tidyselect::where()`, `tidyselect::all_of()`, `tidyselect::any_of()` are now re-exported by gt.",NA,NA,NA,NA
+renv,0564765e8dd263021b21ee01a951e340,"Fixed an issue where `renv::checkout()` omitted some fields from lockfile records when using `actions = c(""snapshot"", ""restore"")`. (#1969)",NA,NA,NA,NA
