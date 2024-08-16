@@ -15,6 +15,11 @@
     pkgdown now depends on R \>= 4.0.0 (#2714)
 
     !end-bullet!
+-   !begin-bullet!
+    Updated GitHub Actions advice and workflows around Quarto install
+    (@tanho63, #2743)
+
+    !end-bullet!
 
 !end-bullets-1!
 

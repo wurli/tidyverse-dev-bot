@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `req_cache()` now prunes cache *before* checking if a given key
+    exists, eliminating the occassional error about reading from an
+    invalid RDS file. It also no longer tests for existence then later
+    reads the cache, avoiding potential race conditions.
+    !end-bullet!
+-   !begin-bullet!
     `jwt_encode_hmac()` now calls correct underlying function
     `jose::jwt_encode_hmac()` and has correct default size parameter
     value' (@denskh, #508).

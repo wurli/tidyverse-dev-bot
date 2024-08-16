@@ -17635,3 +17635,5 @@ gt,a645bd077c38483c3bf7796c74b91260,"`tidyselect::where()`, `tidyselect::all_of(
 renv,0564765e8dd263021b21ee01a951e340,"Fixed an issue where `renv::checkout()` omitted some fields from lockfile records when using `actions = c(""snapshot"", ""restore"")`. (#1969)",NA,NA,NA,NA
 gt,5d6a7a137dd381130df78ff8c9943c7d,"`tab_footnote()` now correctly adds footnote marks in the `cells_stub_summary()` and `cells_stub_grand_summary()` (@​olivroy, #1832).",NA,NA,NA,NA
 gt,a4def5185e7889c754da3197708e9cea,"Fixed an issue with multiple `text_replace()` calls would produce bad result with `cells_column_labels()` (@​olivroy, #1824).",NA,NA,NA,NA
+httr2,edf48d4c03f98063f4dbe97e897805fd,"`req_cache()` now prunes cache *before* checking if a given key exists, eliminating the occassional error about reading from an invalid RDS file. It also no longer tests for existence then later reads the cache, avoiding potential race conditions.",NA,NA,NA,NA
+pkgdown,710ebeb1e46cbbde5161856664b1e1b4,"Updated GitHub Actions advice and workflows around Quarto install (@​tanho63, #2743)",NA,NA,NA,NA
