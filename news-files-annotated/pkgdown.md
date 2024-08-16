@@ -3,22 +3,21 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Added keyboard shortcut, `/`, to focus search bar (#2423)
+    !end-bullet!
+-   !begin-bullet!
     The `BugReports` field can now be an email (@catalamarti, #2275).
-
     !end-bullet!
 -   !begin-bullet!
     New `clean_cache()` function removes the contents of the cache
     directory (#2718).
-
     !end-bullet!
 -   !begin-bullet!
     pkgdown now depends on R \>= 4.0.0 (#2714)
-
     !end-bullet!
 -   !begin-bullet!
     Updated GitHub Actions advice and workflows around Quarto install
     (@tanho63, #2743)
-
     !end-bullet!
 
 !end-bullets-1!
