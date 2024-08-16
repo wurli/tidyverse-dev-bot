@@ -48,7 +48,8 @@
 
     !end-bullet!
 -   !begin-bullet!
-    More support for `cells_stubhead()` styling in interactive tables.
+    More support for `cells_stubhead()` styling and footnotes in
+    interactive tables.
 
     !end-bullet!
 
@@ -115,6 +116,12 @@
     !end-bullet!
 -   !begin-bullet!
     Performance improvement for footnote rendering (@olivroy, #1818).
+
+    !end-bullet!
+-   !begin-bullet!
+    `tab_footnote()` now correctly adds footnote marks in the
+    `cells_stub_summary()` and `cells_stub_grand_summary()` (@olivroy,
+    #1832).
 
     !end-bullet!
 -   !begin-bullet!
