@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed an edge case when coercing data frames to matrices (#7004).
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed an issue where duckplyr's ALTREP data frames were being
     materialized early due to internal usage of `ncol()` (#7049).
 

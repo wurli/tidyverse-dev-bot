@@ -17628,3 +17628,7 @@ ggplot2,89992bd33ebdbba8b099bf8f716dcf64,"Added `gg` class to `labs()` (@​phis
 rlang,7573cd07793ce2a9b3f3ef0fa2d10c74,"`is_dictionaryish()` now will return TRUE for NULL (@​ilovemane, #1712).",NA,NA,NA,NA
 gh,a8fa6e489a2e21d6477a3627918cac73,"Removes usage of mockery (@​tanho63, #197)",NA,NA,NA,NA
 usethis,22f06cf1d86603126250e86fba89c43a,"`use_data()` now uses serialization version 3 by default. (@​laurabrianna, #2044)",NA,NA,NA,NA
+dplyr,624662fa388e5b34e1a84940ddf68c0e,Fixed an edge case when coercing data frames to matrices (#7004).,NA,NA,NA,NA
+pkgdown,5387f0d8c1276e6153a84bc360192c40,"The `BugReports` field can now be an email (@​catalamarti, #2275).",NA,NA,NA,NA
+usethis,910696d7d48a95c9ddd0aa99e88230c2,"`use_package()` now decreases a package minimum version required when `min_version` is lower than what is currently specified in the DESCRIPTION file (@​jplecavalier, #1957).",NA,NA,NA,NA
+gt,a645bd077c38483c3bf7796c74b91260,"`tidyselect::where()`, `tidyselect::all_of()`, `tidyselect::any_of()` are now re-exported by gt.",NA,NA,NA,NA

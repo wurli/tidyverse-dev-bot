@@ -3,11 +3,17 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    The `BugReports` field can now be an email (@catalamarti, #2275).
+
+    !end-bullet!
+-   !begin-bullet!
     New `clean_cache()` function removes the contents of the cache
     directory (#2718).
+
     !end-bullet!
 -   !begin-bullet!
     pkgdown now depends on R \>= 4.0.0 (#2714)
+
     !end-bullet!
 
 !end-bullets-1!

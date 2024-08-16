@@ -122,6 +122,11 @@
     duplicate id (@olivroy, #1821).
 
     !end-bullet!
+-   !begin-bullet!
+    `tidyselect::where()`, `tidyselect::all_of()`,
+    `tidyselect::any_of()` are now re-exported by gt.
+
+    !end-bullet!
 
 !end-bullets-4!
 

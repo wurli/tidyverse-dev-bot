@@ -1,14 +1,24 @@
 # usethis (development version)
 
+## Bug fixes and minor improvements
+
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `use_package()` now decreases a package minimum version required
+    when `min_version` is lower than what is currently specified in the
+    DESCRIPTION file (@jplecavalier, #1957).
+
+    !end-bullet!
+-   !begin-bullet!
     `use_data()` now uses serialization version 3 by default.
     (@laurabrianna, #2044)
+
     !end-bullet!
 -   !begin-bullet!
     Reverse dependency checks are only suggested if they exist (#1817,
     @seankross).
+
     !end-bullet!
 
 !end-bullets-1!
