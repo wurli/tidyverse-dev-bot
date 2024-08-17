@@ -17638,3 +17638,5 @@ gt,a4def5185e7889c754da3197708e9cea,"Fixed an issue with multiple `text_replace(
 httr2,edf48d4c03f98063f4dbe97e897805fd,"`req_cache()` now prunes cache *before* checking if a given key exists, eliminating the occassional error about reading from an invalid RDS file. It also no longer tests for existence then later reads the cache, avoiding potential race conditions.",NA,NA,NA,NA
 pkgdown,710ebeb1e46cbbde5161856664b1e1b4,"Updated GitHub Actions advice and workflows around Quarto install (@​tanho63, #2743)",NA,NA,NA,NA
 pkgdown,de64c4791b58311b6b6b34971ff66379,"Added keyboard shortcut, `/`, to focus search bar (#2423)",NA,NA,NA,NA
+pillar,c1b26d7606a56e82c275cfc785b36fd1,Sync with latest developments.,NA,NA,NA,NA
+tibble,a59253dbda7d338eb6eb7d007eb73274,Sync with latest developments.,NA,NA,NA,NA
