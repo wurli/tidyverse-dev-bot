@@ -17640,3 +17640,4 @@ pkgdown,710ebeb1e46cbbde5161856664b1e1b4,"Updated GitHub Actions advice and work
 pkgdown,de64c4791b58311b6b6b34971ff66379,"Added keyboard shortcut, `/`, to focus search bar (#2423)",NA,NA,NA,NA
 pillar,c1b26d7606a56e82c275cfc785b36fd1,Sync with latest developments.,NA,NA,NA,NA
 tibble,a59253dbda7d338eb6eb7d007eb73274,Sync with latest developments.,NA,NA,NA,NA
+gt,09099e44f041bb23a2cd027002791468,"`vec_fmt_markdown()` works correctly inside Quarto again (@​olivroy, #1840).",NA,NA,NA,NA

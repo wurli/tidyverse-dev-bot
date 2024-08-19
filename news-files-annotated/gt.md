@@ -139,6 +139,11 @@
     `tidyselect::any_of()` are now re-exported by gt.
 
     !end-bullet!
+-   !begin-bullet!
+    `vec_fmt_markdown()` works correctly inside Quarto again (@olivroy,
+    #1840).
+
+    !end-bullet!
 
 !end-bullets-4!
 
