@@ -3,6 +3,30 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    (internal) improvements to `pal_qualitative()` (@teunbrand, #5013)
+
+    !end-bullet!
+-   !begin-bullet!
+    `coord_radial(clip = "on")` clips to the panel area when the
+    graphics device supports clipping paths (@teunbrand, #5952).
+
+    !end-bullet!
+-   !begin-bullet!
+    (internal) Panel clipping responsibility moved from Facet class to
+    Coord class through new `Coord$draw_panel()` method.
+
+    !end-bullet!
+-   !begin-bullet!
+    `theme(strip.clip)` now defaults to `"on"` and is independent of
+    Coord clipping (@teunbrand, 5952).
+
+    !end-bullet!
+-   !begin-bullet!
+    (internal) rearranged the code of `Facet$draw_paensl()` method
+    (@teunbrand).
+
+    !end-bullet!
+-   !begin-bullet!
     Axis labels are now justified across facet panels (@teunbrand,
     #5820)
 

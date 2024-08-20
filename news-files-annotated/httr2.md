@@ -3,24 +3,27 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `jwt_encode_hmac()` now calls correct underlying function
+    `jose::jwt_encode_hmac()` and has correct default size parameter
+    value (@denskh, #508).
+
+    !end-bullet!
+-   !begin-bullet!
     `req_cache()` now prunes cache *before* checking if a given key
     exists, eliminating the occassional error about reading from an
     invalid RDS file. It also no longer tests for existence then later
     reads the cache, avoiding potential race conditions.
+
     !end-bullet!
 -   !begin-bullet!
-    `jwt_encode_hmac()` now calls correct underlying function
-    `jose::jwt_encode_hmac()` and has correct default size parameter
-    value' (@denskh, #508).
+    New `req_perform_promise()` creates a `promises::promise` so a
+    request can run in the background (#501, @gergness).
+
     !end-bullet!
 -   !begin-bullet!
     `req_perform_parallel()` now respects error handling in
-    `req_error()`
-    !end-bullet!
--   !begin-bullet!
-    New function `req_perform_promise()` allows creating a
-    `promises::promise` for a request that runs in the background (#501,
-    @gergness).
+    `req_error()`.
+
     !end-bullet!
 
 !end-bullets-1!

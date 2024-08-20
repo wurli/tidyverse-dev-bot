@@ -17643,3 +17643,8 @@ tibble,a59253dbda7d338eb6eb7d007eb73274,Sync with latest developments.,NA,NA,NA,
 gt,09099e44f041bb23a2cd027002791468,"`vec_fmt_markdown()` works correctly inside Quarto again (@​olivroy, #1840).",NA,NA,NA,NA
 bslib,7a3299e0a089541c97d79fca9e7b7e9b,"`navset_card_pills()`, `navset_card_underline()`, `navset_card_tabs()` fixed to now respect header/footer arguments (@​tanho63, #1024)",NA,NA,NA,NA
 ggplot2,a5d81fb25089a3809ad151567031740e,"Axis labels are now justified across facet panels (@​teunbrand, #5820)",NA,NA,NA,NA
+ggplot2,1e3f17cc09ccfbc145f8f76278cb59b1,"(internal) improvements to `pal_qualitative()` (@​teunbrand, #5013)",NA,NA,NA,NA
+ggplot2,af32043ec3c0c4414f0e9f23ce58216f,"`coord_radial(clip = ""on"")` clips to the panel area when the graphics device supports clipping paths (@​teunbrand, #5952).",NA,NA,NA,NA
+ggplot2,b7ae4c0f64fe726b18f99af25f3b9a27,(internal) Panel clipping responsibility moved from Facet class to Coord class through new `Coord$draw_panel()` method.,NA,NA,NA,NA
+ggplot2,81e990940d6cdb3e7ab9ea880ebab171,"`theme(strip.clip)` now defaults to `""on""` and is independent of Coord clipping (@​teunbrand, 5952).",NA,NA,NA,NA
+httr2,5226514ea8548fb080e2c7edd564e03a,`req_perform_parallel()` now respects error handling in `req_error()`.,NA,NA,NA,NA
