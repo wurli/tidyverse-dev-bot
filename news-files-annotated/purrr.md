@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `list_transpose()` now works with data.frames (@KimLopezGuell,
+    #1109).
+    !end-bullet!
+-   !begin-bullet!
     Added `imap_vec()` (#1084)
     !end-bullet!
 -   !begin-bullet!

@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `gh()` now uses a cache provided by httr2. This cache lives in
+    `tools::R_user_dir("gh", "cache")`, maxes out at 100 MB, and can be
+    disabled by setting `options(gh_cache = FALSE)` (#203).
+    !end-bullet!
+-   !begin-bullet!
     Removes usage of mockery (@tanho63, #197)
     !end-bullet!
 
