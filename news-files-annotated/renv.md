@@ -3,6 +3,17 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `renv::checkout()` now also checks out the version of `renv`
+    available and associated with the requested snapshot date. (#1966)
+
+    !end-bullet!
+-   !begin-bullet!
+    Fixed an issue where `renv::hydrate()` did not hydrate packages
+    which were also listed as dependencies within a project's
+    `DESCRIPTION` file. (#1970)
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed an issue where `renv::checkout()` omitted some fields from
     lockfile records when using `actions = c("snapshot", "restore")`.
     (#1969)

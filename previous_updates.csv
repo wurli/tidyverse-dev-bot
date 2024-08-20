@@ -17648,3 +17648,5 @@ ggplot2,af32043ec3c0c4414f0e9f23ce58216f,"`coord_radial(clip = ""on"")` clips to
 ggplot2,b7ae4c0f64fe726b18f99af25f3b9a27,(internal) Panel clipping responsibility moved from Facet class to Coord class through new `Coord$draw_panel()` method.,NA,NA,NA,NA
 ggplot2,81e990940d6cdb3e7ab9ea880ebab171,"`theme(strip.clip)` now defaults to `""on""` and is independent of Coord clipping (@​teunbrand, 5952).",NA,NA,NA,NA
 httr2,5226514ea8548fb080e2c7edd564e03a,`req_perform_parallel()` now respects error handling in `req_error()`.,NA,NA,NA,NA
+renv,a50defb55713e1b91761366341a46a24,`renv::checkout()` now also checks out the version of `renv` available and associated with the requested snapshot date. (#1966),NA,NA,NA,NA
+renv,02c03730f9cc4c5f9cb660b1fa1f8e61,Fixed an issue where `renv::hydrate()` did not hydrate packages which were also listed as dependencies within a project's `DESCRIPTION` file. (#1970),NA,NA,NA,NA
