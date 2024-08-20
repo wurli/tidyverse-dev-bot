@@ -17650,3 +17650,9 @@ ggplot2,81e990940d6cdb3e7ab9ea880ebab171,"`theme(strip.clip)` now defaults to `"
 httr2,5226514ea8548fb080e2c7edd564e03a,`req_perform_parallel()` now respects error handling in `req_error()`.,NA,NA,NA,NA
 renv,a50defb55713e1b91761366341a46a24,`renv::checkout()` now also checks out the version of `renv` available and associated with the requested snapshot date. (#1966),NA,NA,NA,NA
 renv,02c03730f9cc4c5f9cb660b1fa1f8e61,Fixed an issue where `renv::hydrate()` did not hydrate packages which were also listed as dependencies within a project's `DESCRIPTION` file. (#1970),NA,NA,NA,NA
+stringr,5f55eaa9db19cd3e5b631d4740b46aa4,"New `str_ilike()` that follows the conventions of the SQL ILIKE operator (@​edward-burn, #543).",NA,NA,NA,NA
+stringr,04ac58c38c6ec3254d02654832aec62c,"`str_like(ignore_case)` is deprecated, with `str_like()` now always case sensitive to better follow the conventions of the SQL LIKE operator (@​edward-burn, #543).",NA,NA,NA,NA
+stringr,141d3cd1689842228ef8ee6e266d5a30,`str_sub<-` now gives a more informative error if `value` is not the correct length.,NA,NA,NA,NA
+stringr,d5dd471ce03f6670ead4127a882a15eb,"Add `sep` argument to `str_dup()` so that it is possible to repeat a string and add a separator between every repeated value (@​edward-burn, #564).",NA,NA,NA,NA
+stringr,3a01dba59b20929a041d8cb94e52fbe4,"`str_*` now errors if `pattern` includes any `NA`s (@​nash-delcamp-slp, #546).",NA,NA,NA,NA
+stringr,b6d348a1060df1a976640ab98b48a1ff,"`str_view()` now displays a message when called with a zero-length character vector (@​LouisMPenrod, #497).",NA,NA,NA,NA

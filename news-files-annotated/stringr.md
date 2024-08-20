@@ -3,15 +3,39 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    New `str_ilike()` that follows the conventions of the SQL ILIKE
+    operator (@edward-burn, #543).
+    !end-bullet!
+-   !begin-bullet!
+    `str_like(ignore_case)` is deprecated, with `str_like()` now always
+    case sensitive to better follow the conventions of the SQL LIKE
+    operator (@edward-burn, #543).
+    !end-bullet!
+-   !begin-bullet!
+    `str_sub<-` now gives a more informative error if `value` is not the
+    correct length.
+    !end-bullet!
+-   !begin-bullet!
+    Add `sep` argument to `str_dup()` so that it is possible to repeat a
+    string and add a separator between every repeated value
+    (@edward-burn, #564).
+    !end-bullet!
+-   !begin-bullet!
+    `str_*` now errors if `pattern` includes any `NA`s
+    (@nash-delcamp-slp, #546).
+    !end-bullet!
+-   !begin-bullet!
+    `str_view()` now displays a message when called with a zero-length
+    character vector (@LouisMPenrod, #497).
+    !end-bullet!
+-   !begin-bullet!
     Adds `[[.stringr_pattern` method to go along with existing
     `[.stringr_pattern` method (@edward-burn, #569).
-
     !end-bullet!
 -   !begin-bullet!
     In `str_replace_all()`, a `replacement` function now receives all
     values in a single vector. This radically improves performance at
     the cost of breaking some existing uses (#462).
-
     !end-bullet!
 
 !end-bullets-1!

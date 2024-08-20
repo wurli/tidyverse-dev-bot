@@ -1,8 +1,15 @@
 # stringr (development version)
 
+* New `str_ilike()` that follows the conventions of the SQL ILIKE operator (@edward-burn, #543).
+* `str_like(ignore_case)` is deprecated, with `str_like()` now always case sensitive to better follow the conventions of the SQL LIKE operator (@edward-burn, #543).
+* `str_sub<-` now gives a more informative error if `value` is not the correct length.
+* Add `sep` argument to `str_dup()` so that it is possible to repeat a string and
+  add a separator between every repeated value (@edward-burn, #564).
+* `str_*` now errors if `pattern` includes any `NA`s (@nash-delcamp-slp, #546).
+* `str_view()` now displays a message when called with a zero-length character
+  vector (@LouisMPenrod, #497).
 * Adds `[[.stringr_pattern` method to go along with existing `[.stringr_pattern`
   method (@edward-burn, #569).
-
 * In `str_replace_all()`, a `replacement` function now receives all values in
   a single vector. This radically improves performance at the cost of breaking
   some existing uses (#462).
