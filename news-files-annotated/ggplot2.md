@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Axis labels are now justified across facet panels (@teunbrand,
+    #5820)
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed bug in `stat_function()` so x-axis title now produced
     automatically when no data added. (@phispu, #5647).
 

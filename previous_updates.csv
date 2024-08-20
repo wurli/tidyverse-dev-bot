@@ -17642,3 +17642,4 @@ pillar,c1b26d7606a56e82c275cfc785b36fd1,Sync with latest developments.,NA,NA,NA,
 tibble,a59253dbda7d338eb6eb7d007eb73274,Sync with latest developments.,NA,NA,NA,NA
 gt,09099e44f041bb23a2cd027002791468,"`vec_fmt_markdown()` works correctly inside Quarto again (@​olivroy, #1840).",NA,NA,NA,NA
 bslib,7a3299e0a089541c97d79fca9e7b7e9b,"`navset_card_pills()`, `navset_card_underline()`, `navset_card_tabs()` fixed to now respect header/footer arguments (@​tanho63, #1024)",NA,NA,NA,NA
+ggplot2,a5d81fb25089a3809ad151567031740e,"Axis labels are now justified across facet panels (@​teunbrand, #5820)",NA,NA,NA,NA
