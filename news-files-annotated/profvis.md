@@ -3,6 +3,9 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    profvis now relies on R 4.0.0.
+    !end-bullet!
+-   !begin-bullet!
     `profvis()` now uses doubles instead of integers (#114).
     !end-bullet!
 -   !begin-bullet!
