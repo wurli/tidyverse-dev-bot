@@ -23,6 +23,16 @@
     Fixes for CRAN check failures (#1645)
 
     !end-bullet!
+-   !begin-bullet!
+    New `as.raw()` method for `python.builtin.bytes` (#1649, #1652)
+
+    !end-bullet!
+-   !begin-bullet!
+    `as.character()` method for `python.builtin.bytes` gains a `nul`
+    argument, allowing for convenient handling of embedded NULs in the
+    string. (#1652)
+
+    !end-bullet!
 
 !end-bullets-1!
 

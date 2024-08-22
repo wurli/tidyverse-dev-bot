@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    The version of jQuery bundled in profvis has been upgraded to 3.7.1
+    (@hedsnz, #139).
+    !end-bullet!
+-   !begin-bullet!
     profvis no longer requires purrr or stringr, and no longer suggests
     ggplot2, devtools, knitr, or rmarkdown.
     !end-bullet!
