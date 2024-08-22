@@ -8,6 +8,10 @@
 
     !end-bullet!
 -   !begin-bullet!
+    Internal updates for NumPy 2.1 (#1651)
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed error when importing a module named `config` (#1628)
 
     !end-bullet!

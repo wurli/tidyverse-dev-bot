@@ -17659,3 +17659,4 @@ stringr,b6d348a1060df1a976640ab98b48a1ff,"`str_view()` now displays a message wh
 purrr,22d71b9abe426720af7e6a11f739bab5,"`list_transpose()` now works with data.frames (@​KimLopezGuell, #1109).",NA,NA,NA,NA
 gh,4dd58bab0be12b51aaaf58c37b086846,"`gh()` now uses a cache provided by httr2. This cache lives in `tools::R_user_dir(""gh"", ""cache"")`, maxes out at 100 MB, and can be disabled by setting `options(gh_cache = FALSE)` (#203).",NA,NA,NA,NA
 purrr,427755f3f5047fef8098de2c017fe0b3,"Added a test to assert that `list_transpose()` does not work on data frames (@​KimLopezGuell, #1141, #1149).",NA,NA,NA,NA
+reticulate,46ec400c736e4f7ab045f4f2e02d4a56,Internal updates for NumPy 2.1 (#1651),NA,NA,NA,NA
