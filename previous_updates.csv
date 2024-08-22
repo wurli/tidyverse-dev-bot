@@ -17663,3 +17663,5 @@ reticulate,46ec400c736e4f7ab045f4f2e02d4a56,Internal updates for NumPy 2.1 (#165
 profvis,800d5a82f6db807b6cb7554599c2f98c,"The version of jQuery bundled in profvis has been upgraded to 3.7.1 (@​hedsnz, #139).",NA,NA,NA,NA
 reticulate,44866041626c2b2c226ae99860247386,"New `as.raw()` method for `python.builtin.bytes` (#1649, #1652)",NA,NA,NA,NA
 reticulate,9e815cf2ba88ca10a03de7cfdaad4741,"`as.character()` method for `python.builtin.bytes` gains a `nul` argument, allowing for convenient handling of embedded NULs in the string. (#1652)",NA,NA,NA,NA
+profvis,855edd5e446302e64225a793705c7f7b,`profvis()` now uses doubles instead of integers (#114).,NA,NA,NA,NA
+profvis,68129d0a66e15a9b31abf0bcf6da1adb,Fixed #73: profvis would throw an error if used on code sourced from a remote URL.,NA,NA,NA,NA

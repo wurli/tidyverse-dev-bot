@@ -3,6 +3,9 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `profvis()` now uses doubles instead of integers (#114).
+    !end-bullet!
+-   !begin-bullet!
     The version of jQuery bundled in profvis has been upgraded to 3.7.1
     (@hedsnz, #139).
     !end-bullet!
@@ -128,7 +131,7 @@
 !begin-bullets-7!
 
 -   !begin-bullet!
-    Fixed #68: Profvis threw an error when a package was installed using
+    Fixed #68: profvis threw an error when a package was installed using
     `devtools::install_github(args = "--with-keep.source")`.
 
     !end-bullet!
@@ -138,7 +141,7 @@
 
     !end-bullet!
 -   !begin-bullet!
-    Fixed #73: Profvis would throw an error if used on code sourced from
+    Fixed #73: profvis would throw an error if used on code sourced from
     a remote URL.
 
     !end-bullet!
