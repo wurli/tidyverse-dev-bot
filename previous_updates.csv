@@ -17667,3 +17667,6 @@ profvis,855edd5e446302e64225a793705c7f7b,`profvis()` now uses doubles instead of
 profvis,68129d0a66e15a9b31abf0bcf6da1adb,Fixed #73: profvis would throw an error if used on code sourced from a remote URL.,NA,NA,NA,NA
 profvis,208689575a37b6c1c8ff925b39445334,profvis now relies on R 4.0.0.,NA,NA,NA,NA
 gt,47fd36d19a82f1e1e7c7c71fdd222ea7,Fixed a bug where spanners didn't render correctly in Quarto (#1839).,NA,NA,NA,NA
+gt,c32ebd89c095f38bf99f3bbe985b06f3,"Improved footnote rendering in Quarto with `fmt_markdown()` (@​olivroy, #1773)",NA,NA,NA,NA
+reticulate,d9e423e631c9ceebd8c82d1c718c8b5b,"The knitr engine now avoids overwriting Altair's default chart dimensions with the values of `ut.width.px` and `ut.height.px`. Instead, use `altair.fig.height`, `altair.fig.width`, or Altair's `width` and `height` parameters to adjust chart dimensions. (#1646, contributed by @​joelostblom)",NA,NA,NA,NA
+reticulate,cb0580b9a53728e09db9ed898794540b,New `as.character()` method for `python.builtin.str` with support for handling embedded NULs in strings. (#1653),NA,NA,NA,NA

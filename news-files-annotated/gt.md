@@ -149,6 +149,11 @@
     (#1839).
 
     !end-bullet!
+-   !begin-bullet!
+    Improved footnote rendering in Quarto with `fmt_markdown()`
+    (@olivroy, #1773)
+
+    !end-bullet!
 
 !end-bullets-4!
 

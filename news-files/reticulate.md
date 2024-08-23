@@ -11,10 +11,19 @@
 
 - Fixes for CRAN check failures (#1645)
 
+- The knitr engine now avoids overwriting Altair's default chart dimensions
+  with the values of `ut.width.px` and `ut.height.px`.
+  Instead, use `altair.fig.height`, `altair.fig.width`,
+  or Altair's `width` and `height` parameters
+  to adjust chart dimensions. (#1646, contributed by @joelostblom)
+
 - New `as.raw()` method for `python.builtin.bytes` (#1649, #1652)
 
 - `as.character()` method for `python.builtin.bytes` gains a `nul` argument,
   allowing for convenient handling of embedded NULs in the string. (#1652)
+  
+- New `as.character()` method for `python.builtin.str` with support for handling
+  embedded NULs in strings. (#1653)
 
 # reticulate 1.38.0
 
