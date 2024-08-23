@@ -247,8 +247,7 @@
     !end-bullet!
 -   !begin-bullet!
     Numbers use a better algorithm for picking the number of decimal
-    places to\
-    show (#63).
+    places to show (#63).
 
     !end-bullet!
 -   !begin-bullet!
