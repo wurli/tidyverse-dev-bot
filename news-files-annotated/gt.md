@@ -144,6 +144,11 @@
     #1840).
 
     !end-bullet!
+-   !begin-bullet!
+    Fixed a bug where spanners didn't render correctly in Quarto
+    (#1839).
+
+    !end-bullet!
 
 !end-bullets-4!
 
