@@ -17670,3 +17670,4 @@ gt,47fd36d19a82f1e1e7c7c71fdd222ea7,Fixed a bug where spanners didn't render cor
 gt,c32ebd89c095f38bf99f3bbe985b06f3,"Improved footnote rendering in Quarto with `fmt_markdown()` (@​olivroy, #1773)",NA,NA,NA,NA
 reticulate,d9e423e631c9ceebd8c82d1c718c8b5b,"The knitr engine now avoids overwriting Altair's default chart dimensions with the values of `ut.width.px` and `ut.height.px`. Instead, use `altair.fig.height`, `altair.fig.width`, or Altair's `width` and `height` parameters to adjust chart dimensions. (#1646, contributed by @​joelostblom)",NA,NA,NA,NA
 reticulate,cb0580b9a53728e09db9ed898794540b,New `as.character()` method for `python.builtin.str` with support for handling embedded NULs in strings. (#1653),NA,NA,NA,NA
+ggplot2,17963acff13f2c485da8a9ee2c844e38,"Layers can have names (@​teunbrand, #4066).",NA,NA,NA,NA

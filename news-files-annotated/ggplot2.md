@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Layers can have names (@teunbrand, #4066).
+
+    !end-bullet!
+-   !begin-bullet!
     (internal) improvements to `pal_qualitative()` (@teunbrand, #5013)
 
     !end-bullet!
