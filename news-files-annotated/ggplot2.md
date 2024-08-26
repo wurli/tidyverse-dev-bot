@@ -3,6 +3,21 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    New `reset_geom_defaults()` and `reset_stat_defaults()` to restore
+    all geom or stat default aesthetics at once (@teunbrand, #5975).
+
+    !end-bullet!
+-   !begin-bullet!
+    `facet_wrap()` can have `space = "free_x"` with 1-row layouts and
+    `space = "free_y"` with 1-column layouts (@teunbrand)
+
+    !end-bullet!
+-   !begin-bullet!
+    Secondary axes respect `n.breaks` setting in continuous scales
+    (@teunbrand, #4483).
+
+    !end-bullet!
+-   !begin-bullet!
     Layers can have names (@teunbrand, #4066).
 
     !end-bullet!
@@ -377,6 +392,17 @@
 -   !begin-bullet!
     Fixed bug where empty discrete scales weren't recognised as such
     (@teunbrand, #5945).
+
+    !end-bullet!
+-   !begin-bullet!
+    (internal) The summary function of `stat_summary()` and
+    `stat_summary_bin()` is setup once in total instead of once per
+    group (@teunbrand, #5971)
+
+    !end-bullet!
+-   !begin-bullet!
+    `facet_grid(space = "free")` can now be combined with
+    `coord_fixed()` (@teunbrand, #4584).
 
     !end-bullet!
 

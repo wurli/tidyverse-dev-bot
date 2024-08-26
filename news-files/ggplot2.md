@@ -1,5 +1,10 @@
 # ggplot2 (development version)
 
+* New `reset_geom_defaults()` and `reset_stat_defaults()` to restore all geom or
+  stat default aesthetics at once (@teunbrand, #5975).
+* `facet_wrap()` can have `space = "free_x"` with 1-row layouts and 
+  `space = "free_y"` with 1-column layouts (@teunbrand)
+* Secondary axes respect `n.breaks` setting in continuous scales (@teunbrand, #4483).
 * Layers can have names (@teunbrand, #4066).
 * (internal) improvements to `pal_qualitative()` (@teunbrand, #5013)
 * `coord_radial(clip = "on")` clips to the panel area when the graphics device
@@ -147,6 +152,10 @@
   (@teunbrand, #5938, #4327).
 * Fixed bug where empty discrete scales weren't recognised as such 
   (@teunbrand, #5945).
+* (internal) The summary function of `stat_summary()` and `stat_summary_bin()` 
+  is setup once in total instead of once per group (@teunbrand, #5971)
+* `facet_grid(space = "free")` can now be combined with `coord_fixed()` 
+  (@teunbrand, #4584).
 
 # ggplot2 3.5.1
 

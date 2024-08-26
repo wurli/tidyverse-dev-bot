@@ -17671,3 +17671,8 @@ gt,c32ebd89c095f38bf99f3bbe985b06f3,"Improved footnote rendering in Quarto with 
 reticulate,d9e423e631c9ceebd8c82d1c718c8b5b,"The knitr engine now avoids overwriting Altair's default chart dimensions with the values of `ut.width.px` and `ut.height.px`. Instead, use `altair.fig.height`, `altair.fig.width`, or Altair's `width` and `height` parameters to adjust chart dimensions. (#1646, contributed by @​joelostblom)",NA,NA,NA,NA
 reticulate,cb0580b9a53728e09db9ed898794540b,New `as.character()` method for `python.builtin.str` with support for handling embedded NULs in strings. (#1653),NA,NA,NA,NA
 ggplot2,17963acff13f2c485da8a9ee2c844e38,"Layers can have names (@​teunbrand, #4066).",NA,NA,NA,NA
+ggplot2,af8385219d5ddb5831d62202c455768b,"New `reset_geom_defaults()` and `reset_stat_defaults()` to restore all geom or stat default aesthetics at once (@​teunbrand, #5975).",NA,NA,NA,NA
+ggplot2,f39c89f2f47acae55919f5cdf08ddc99,"`facet_wrap()` can have `space = ""free_x""` with 1-row layouts and `space = ""free_y""` with 1-column layouts (@​teunbrand)",NA,NA,NA,NA
+ggplot2,65bc7eca1413d65261269611b9825cd9,"Secondary axes respect `n.breaks` setting in continuous scales (@​teunbrand, #4483).",NA,NA,NA,NA
+ggplot2,74260c3211a8d363320b753982431910,"(internal) The summary function of `stat_summary()` and `stat_summary_bin()` is setup once in total instead of once per group (@​teunbrand, #5971)",NA,NA,NA,NA
+ggplot2,823f3850a24dc54d1d1e4b82cc8d560d,"`facet_grid(space = ""free"")` can now be combined with `coord_fixed()` (@​teunbrand, #4584).",NA,NA,NA,NA
