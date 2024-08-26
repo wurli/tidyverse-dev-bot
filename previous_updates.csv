@@ -17678,3 +17678,5 @@ ggplot2,74260c3211a8d363320b753982431910,"(internal) The summary function of `st
 ggplot2,823f3850a24dc54d1d1e4b82cc8d560d,"`facet_grid(space = ""free"")` can now be combined with `coord_fixed()` (@​teunbrand, #4584).",NA,NA,NA,NA
 ggplot2,2f8a4979013271da55dddb5b44f50d32,"Moved {mgcv} from Imports to Suggests (@​teunbrand, #5986)",NA,NA,NA,NA
 ggplot2,c6ac6f613b9745ec9cc6f026fc35ebdd,"`theme_classic()` now has black ticks and text instead of dark gray. In addition, `theme_classic()`'s axis line end is `""square""` (@​teunbrand, #5978).",NA,NA,NA,NA
+ggplot2,c0f2b5eca22d4135ddcc71044f2030c1,"Passing empty unmapped aesthetics to layers raises a warning instead of throwing an error (@​teunbrand, #6009).",NA,NA,NA,NA
+ggplot2,d46d9681d7e8f35ef555612cc6689087,"{tibble} is now suggested instead of imported (@​teunbrand, #5986)",NA,NA,NA,NA

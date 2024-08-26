@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Passing empty unmapped aesthetics to layers raises a warning instead
+    of throwing an error (@teunbrand, #6009).
+
+    !end-bullet!
+-   !begin-bullet!
     Moved {mgcv} from Imports to Suggests (@teunbrand, #5986)
 
     !end-bullet!
@@ -413,6 +418,10 @@
     `theme_classic()` now has black ticks and text instead of dark gray.
     In addition, `theme_classic()`'s axis line end is `"square"`
     (@teunbrand, #5978).
+
+    !end-bullet!
+-   !begin-bullet!
+    {tibble} is now suggested instead of imported (@teunbrand, #5986)
 
     !end-bullet!
 
