@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Moved {mgcv} from Imports to Suggests (@teunbrand, #5986)
+
+    !end-bullet!
+-   !begin-bullet!
     New `reset_geom_defaults()` and `reset_stat_defaults()` to restore
     all geom or stat default aesthetics at once (@teunbrand, #5975).
 
@@ -403,6 +407,12 @@
 -   !begin-bullet!
     `facet_grid(space = "free")` can now be combined with
     `coord_fixed()` (@teunbrand, #4584).
+
+    !end-bullet!
+-   !begin-bullet!
+    `theme_classic()` now has black ticks and text instead of dark gray.
+    In addition, `theme_classic()`'s axis line end is `"square"`
+    (@teunbrand, #5978).
 
     !end-bullet!
 

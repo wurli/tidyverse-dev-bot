@@ -1,5 +1,6 @@
 # ggplot2 (development version)
 
+* Moved {mgcv} from Imports to Suggests (@teunbrand, #5986)
 * New `reset_geom_defaults()` and `reset_stat_defaults()` to restore all geom or
   stat default aesthetics at once (@teunbrand, #5975).
 * `facet_wrap()` can have `space = "free_x"` with 1-row layouts and 
@@ -156,6 +157,8 @@
   is setup once in total instead of once per group (@teunbrand, #5971)
 * `facet_grid(space = "free")` can now be combined with `coord_fixed()` 
   (@teunbrand, #4584).
+* `theme_classic()` now has black ticks and text instead of dark gray. In 
+  addition, `theme_classic()`'s axis line end is `"square"` (@teunbrand, #5978).
 
 # ggplot2 3.5.1
 
