@@ -673,7 +673,7 @@ Packing and chopping are interesting primarily because they are the atomic opera
 
 * `crossing()`, `nesting()`, and `expand()` have been rewritten to use 
   the vctrs package. This should not affect much existing code, but
-  considerably simplies the implementation and ensures that these functions 
+  considerably simplifies the implementation and ensures that these functions 
   work consistently across all generalised vectors (#557). As part of this
   alignment, these functions now only drop `NULL` inputs, not any 0-length
   vector.
@@ -687,7 +687,7 @@ Packing and chopping are interesting primarily because they are the atomic opera
   (@ha0ye, #657).
 
 * tidyr now re-exports `tibble()`, `as_tibble()`, and `tribble()`, 
-  as well as the tidyselect helpers (`starts_with()`, `ends_width()`, ...).
+  as well as the tidyselect helpers (`starts_with()`, `ends_with()`, ...).
   This makes generating documentation, reprexes, and tests easier, and
   makes tidyr easier to use without also attaching dplyr.
 
