@@ -17680,3 +17680,7 @@ ggplot2,2f8a4979013271da55dddb5b44f50d32,"Moved {mgcv} from Imports to Suggests 
 ggplot2,c6ac6f613b9745ec9cc6f026fc35ebdd,"`theme_classic()` now has black ticks and text instead of dark gray. In addition, `theme_classic()`'s axis line end is `""square""` (@​teunbrand, #5978).",NA,NA,NA,NA
 ggplot2,c0f2b5eca22d4135ddcc71044f2030c1,"Passing empty unmapped aesthetics to layers raises a warning instead of throwing an error (@​teunbrand, #6009).",NA,NA,NA,NA
 ggplot2,d46d9681d7e8f35ef555612cc6689087,"{tibble} is now suggested instead of imported (@​teunbrand, #5986)",NA,NA,NA,NA
+ggplot2,6291cbe4a809b9d377bd53b9db43c2ff,"(Breaking) The defaults for all geoms can be set at one in the theme. (@​teunbrand based on pioneering work by @​dpseidel, #2239)",NA,NA,NA,NA
+ggplot2,6291cbe4a809b9d377bd53b9db43c2ff,• A new `theme(geom)` argument is used to track these defaults.,NA,NA,NA,NA
+ggplot2,6291cbe4a809b9d377bd53b9db43c2ff,• The `element_geom()` function can be used to populate that argument.,NA,NA,NA,NA
+ggplot2,6291cbe4a809b9d377bd53b9db43c2ff,• The `from_theme()` function allows access to the theme default fields from inside the `aes()` function.,NA,NA,NA,NA
