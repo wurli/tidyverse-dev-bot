@@ -30,6 +30,11 @@
     Drive (#819, @UchidaMizuki)
 
     !end-bullet!
+-   !begin-bullet!
+    Fixed how previously deleted pin versions are detected (#838,
+    @MichalLauer)
+
+    !end-bullet!
 
 !end-bullets-2!
 
