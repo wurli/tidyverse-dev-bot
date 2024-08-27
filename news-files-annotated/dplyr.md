@@ -3,6 +3,18 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `case_when()` now throws a better error if one of the conditions is
+    an array (#6862, @ilovemane).
+
+    !end-bullet!
+-   !begin-bullet!
+    `between()` gains a new `ptype` argument, allowing users to specify
+    the desired output type. This is particularly useful for ordered
+    factors and other complex types where the default common type
+    behavior might not be ideal (#6906, @JamesHWade).
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed an edge case when coercing data frames to matrices (#7004).
 
     !end-bullet!
