@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `unite()` no longer errors if you provide a selection that doesn't
+    select any columns. Instead, it returns a column containing the
+    empty string (#1548, @catalamarti).
+
+    !end-bullet!
+-   !begin-bullet!
     `pivot_wider_spec()` now throws a more informative error on non-data
     frame inputs (@catalamarti, #1510).
 
@@ -855,7 +861,7 @@
 
     !begin-codeblock!
     ``` {r}
-    df <- tibble(id = 1:3, x_1 = 1:3, x_2 = 4:6)  
+    df <- tibble(id = 1:3, x_1 = 1:3, x_2 = 4:6)
     df %>% pivot_longer(-id, names_to = character())
     ```
 
@@ -875,7 +881,7 @@
 
     !begin-codeblock!
     ``` {r}
-    df <- tibble(id = 1:3, x_1 = 1:3, x_2 = 4:6)  
+    df <- tibble(id = 1:3, x_1 = 1:3, x_2 = 4:6)
     df %>% pivot_longer(-id, names_pattern = "(.)_.")
     df %>% pivot_longer(-id, names_sep = "_", names_to = c("name", NA))
     df %>% pivot_longer(-id, names_sep = "_", names_to = c(".value", NA))

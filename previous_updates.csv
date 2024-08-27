@@ -17686,3 +17686,4 @@ ggplot2,6291cbe4a809b9d377bd53b9db43c2ff,• The `element_geom()` function can b
 ggplot2,6291cbe4a809b9d377bd53b9db43c2ff,• The `from_theme()` function allows access to the theme default fields from inside the `aes()` function.,NA,NA,NA,NA
 dplyr,926d14b2760b1892fb6fd33c7af19a1e,"`case_when()` now throws a better error if one of the conditions is an array (#6862, @​ilovemane).",NA,NA,NA,NA
 dplyr,b0b6ab1aa903b9e095c11abf9d333451,"`between()` gains a new `ptype` argument, allowing users to specify the desired output type. This is particularly useful for ordered factors and other complex types where the default common type behavior might not be ideal (#6906, @​JamesHWade).",NA,NA,NA,NA
+tidyr,b86fb1dfd67b82e4451f20e1e6cfc6bb,"`unite()` no longer errors if you provide a selection that doesn't select any columns. Instead, it returns a column containing the empty string (#1548, @​catalamarti).",NA,NA,NA,NA
