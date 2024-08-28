@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `guide_bins()`, `guide_colourbar()` and `guide_coloursteps()` gain
+    an `angle` argument to overrule theme settings, similar to
+    `guide_axis(angle)` (@teunbrand, #4594).
+
+    !end-bullet!
+-   !begin-bullet!
     `coord_*(expand)` can now take a logical vector to control expansion
     at any side of the panel (top, right, bottom, left) (@teunbrand,
     #6020)
@@ -75,7 +81,7 @@
 
     !end-bullet!
 -   !begin-bullet!
-    (internal) rearranged the code of `Facet$draw_paensl()` method
+    (internal) rearranged the code of `Facet$draw_panels()` method
     (@teunbrand).
 
     !end-bullet!
@@ -452,6 +458,11 @@
 -   !begin-bullet!
     The ellipsis argument is now checked in `fortify()`,
     `get_alt_text()`, `labs()` and several guides (@teunbrand, #3196).
+
+    !end-bullet!
+-   !begin-bullet!
+    `stat_summary_bin()` no longer ignores `width` parameter
+    (@teunbrand, #4647).
 
     !end-bullet!
 

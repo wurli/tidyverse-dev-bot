@@ -17691,3 +17691,5 @@ tidyr,748e7a6c48574c3f25f5edf969064e10,"`expand_grid()` gains a new `.vary` argu
 pins,1098d75494bff37ab342f194c0d15d25,"Fixed how previously deleted pin versions are detected (#838, @​MichalLauer)",NA,NA,NA,NA
 ggplot2,089aae938dc2c2bf3ebd2a668c59e623,"`coord_*(expand)` can now take a logical vector to control expansion at any side of the panel (top, right, bottom, left) (@​teunbrand, #6020)",NA,NA,NA,NA
 ggplot2,bc85147dad44890321eae6d016ea12dc,"The ellipsis argument is now checked in `fortify()`, `get_alt_text()`, `labs()` and several guides (@​teunbrand, #3196).",NA,NA,NA,NA
+ggplot2,774415805622fc065948bda88cb03b7f,"`guide_bins()`, `guide_colourbar()` and `guide_coloursteps()` gain an `angle` argument to overrule theme settings, similar to `guide_axis(angle)` (@​teunbrand, #4594).",NA,NA,NA,NA
+ggplot2,cde7efce5fb0518462272dd39d95b800,"`stat_summary_bin()` no longer ignores `width` parameter (@​teunbrand, #4647).",NA,NA,NA,NA
