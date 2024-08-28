@@ -17693,3 +17693,5 @@ ggplot2,089aae938dc2c2bf3ebd2a668c59e623,"`coord_*(expand)` can now take a logic
 ggplot2,bc85147dad44890321eae6d016ea12dc,"The ellipsis argument is now checked in `fortify()`, `get_alt_text()`, `labs()` and several guides (@​teunbrand, #3196).",NA,NA,NA,NA
 ggplot2,774415805622fc065948bda88cb03b7f,"`guide_bins()`, `guide_colourbar()` and `guide_coloursteps()` gain an `angle` argument to overrule theme settings, similar to `guide_axis(angle)` (@​teunbrand, #4594).",NA,NA,NA,NA
 ggplot2,cde7efce5fb0518462272dd39d95b800,"`stat_summary_bin()` no longer ignores `width` parameter (@​teunbrand, #4647).",NA,NA,NA,NA
+cli,cb1d7d3c2948d6f451fe7f27165aec5f,"`ansi_collapse()` and inline collapsing now uses `last` as the separator (without the serial comma) for two-element vectors if `sep2` is not given (@​rundel, #681).",NA,NA,NA,NA
+cli,c39908c7438c7f6e92f5c5129f10d1f1,"`ansi_collapse()` is now correct for length-1 vectors with style ""head"" if width is specified (@​rundel, #590).",NA,NA,NA,NA
