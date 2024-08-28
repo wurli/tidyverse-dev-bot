@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `num_ansi_colors()` now does not warn in Emacs if the `INSIDE_EMACS`
+    environment variable is not a proper version number (@rundel, #689).
+
+    !end-bullet!
+-   !begin-bullet!
     `ansi_collapse()` and inline collapsing now uses `last` as the
     separator (without the serial comma) for two-element vectors if
     `sep2` is not given (@rundel, #681).

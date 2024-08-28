@@ -17695,3 +17695,4 @@ ggplot2,774415805622fc065948bda88cb03b7f,"`guide_bins()`, `guide_colourbar()` an
 ggplot2,cde7efce5fb0518462272dd39d95b800,"`stat_summary_bin()` no longer ignores `width` parameter (@​teunbrand, #4647).",NA,NA,NA,NA
 cli,cb1d7d3c2948d6f451fe7f27165aec5f,"`ansi_collapse()` and inline collapsing now uses `last` as the separator (without the serial comma) for two-element vectors if `sep2` is not given (@​rundel, #681).",NA,NA,NA,NA
 cli,c39908c7438c7f6e92f5c5129f10d1f1,"`ansi_collapse()` is now correct for length-1 vectors with style ""head"" if width is specified (@​rundel, #590).",NA,NA,NA,NA
+cli,28bf51049734999d843866d6925d5fb1,"`num_ansi_colors()` now does not warn in Emacs if the `INSIDE_EMACS` environment variable is not a proper version number (@​rundel, #689).",NA,NA,NA,NA
