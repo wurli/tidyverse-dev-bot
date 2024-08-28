@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `fill()` gains a `.by` argument as an alternative to
+    `dplyr::group_by()` for applying the fill per group, similar to
+    `nest(.by =)` and `dplyr::mutate(.by =)` (@olivroy, #1439).
+
+    !end-bullet!
+-   !begin-bullet!
     `unchop()` produces a more helpful error message when columns cannot
     be cast to `ptype` (@mgirlich, #1477).
 

@@ -17702,3 +17702,4 @@ desc,db64a303ba1cfea0e938a6f398946ea3,"An empty `Depends` field is now properly 
 rcmdcheck,6a24298c7a51c3f5067fbffde44c2b0b,"Fixed an issue where check output could be malformed when testing packages with multiple test files (#205, @​kevinushey).",NA,NA,NA,NA
 sessioninfo,3b0f7eeffe397965e4d056a76deab70c,"`session_info()` no longer produces an error when `info` has length \> 1 (@​nash-delcamp-slp, #96).",NA,NA,NA,NA
 desc,65c325c3c1012fc8b25d1a2eaa1cf30a,"`desc_get_built()` no longer fails if Built spans multiple lines (#145, @​seankross).",NA,NA,NA,NA
+tidyr,fa514136b8cd14a246f9d4e093dad2f5,"`fill()` gains a `.by` argument as an alternative to `dplyr::group_by()` for applying the fill per group, similar to `nest(.by =)` and `dplyr::mutate(.by =)` (@​olivroy, #1439).",NA,NA,NA,NA
