@@ -17689,3 +17689,5 @@ dplyr,b0b6ab1aa903b9e095c11abf9d333451,"`between()` gains a new `ptype` argument
 tidyr,b86fb1dfd67b82e4451f20e1e6cfc6bb,"`unite()` no longer errors if you provide a selection that doesn't select any columns. Instead, it returns a column containing the empty string (#1548, @​catalamarti).",NA,NA,NA,NA
 tidyr,748e7a6c48574c3f25f5edf969064e10,"`expand_grid()` gains a new `.vary` argument, allowing users to control whether the first column varies fastest or slowest (#1543, @​JamesHWade).",NA,NA,NA,NA
 pins,1098d75494bff37ab342f194c0d15d25,"Fixed how previously deleted pin versions are detected (#838, @​MichalLauer)",NA,NA,NA,NA
+ggplot2,089aae938dc2c2bf3ebd2a668c59e623,"`coord_*(expand)` can now take a logical vector to control expansion at any side of the panel (top, right, bottom, left) (@​teunbrand, #6020)",NA,NA,NA,NA
+ggplot2,bc85147dad44890321eae6d016ea12dc,"The ellipsis argument is now checked in `fortify()`, `get_alt_text()`, `labs()` and several guides (@​teunbrand, #3196).",NA,NA,NA,NA

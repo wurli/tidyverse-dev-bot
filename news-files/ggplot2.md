@@ -1,5 +1,7 @@
 # ggplot2 (development version)
 
+* `coord_*(expand)` can now take a logical vector to control expansion at any
+  side of the panel (top, right, bottom, left) (@teunbrand, #6020)
 * (Breaking) The defaults for all geoms can be set at one in the theme. 
   (@teunbrand based on pioneering work by @dpseidel, #2239)
     * A new `theme(geom)` argument is used to track these defaults.
@@ -168,6 +170,8 @@
 * `theme_classic()` now has black ticks and text instead of dark gray. In 
   addition, `theme_classic()`'s axis line end is `"square"` (@teunbrand, #5978).
 * {tibble} is now suggested instead of imported (@teunbrand, #5986)
+* The ellipsis argument is now checked in `fortify()`, `get_alt_text()`, 
+  `labs()` and several guides (@teunbrand, #3196).
 
 # ggplot2 3.5.1
 

@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `coord_*(expand)` can now take a logical vector to control expansion
+    at any side of the panel (top, right, bottom, left) (@teunbrand,
+    #6020)
+
+    !end-bullet!
+-   !begin-bullet!
     (Breaking) The defaults for all geoms can be set at one in the
     theme. (@teunbrand based on pioneering work by @dpseidel, #2239)
 
@@ -441,6 +447,11 @@
     !end-bullet!
 -   !begin-bullet!
     {tibble} is now suggested instead of imported (@teunbrand, #5986)
+
+    !end-bullet!
+-   !begin-bullet!
+    The ellipsis argument is now checked in `fortify()`,
+    `get_alt_text()`, `labs()` and several guides (@teunbrand, #3196).
 
     !end-bullet!
 
