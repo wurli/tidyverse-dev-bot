@@ -17701,3 +17701,4 @@ cli,3ec822171db3a5b41d5bd54ad803743a,`cli_progress_bar()` now accepts `total` = 
 desc,db64a303ba1cfea0e938a6f398946ea3,"An empty `Depends` field is now properly normalized and formatted. (#148, @​kevinushey)",NA,NA,NA,NA
 rcmdcheck,6a24298c7a51c3f5067fbffde44c2b0b,"Fixed an issue where check output could be malformed when testing packages with multiple test files (#205, @​kevinushey).",NA,NA,NA,NA
 sessioninfo,3b0f7eeffe397965e4d056a76deab70c,"`session_info()` no longer produces an error when `info` has length \> 1 (@​nash-delcamp-slp, #96).",NA,NA,NA,NA
+desc,65c325c3c1012fc8b25d1a2eaa1cf30a,"`desc_get_built()` no longer fails if Built spans multiple lines (#145, @​seankross).",NA,NA,NA,NA

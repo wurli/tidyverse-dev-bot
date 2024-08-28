@@ -3,8 +3,14 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `desc_get_built()` no longer fails if Built spans multiple lines
+    (#145, @seankross).
+
+    !end-bullet!
+-   !begin-bullet!
     An empty `Depends` field is now properly normalized and formatted.
     (#148, @kevinushey)
+
     !end-bullet!
 
 !end-bullets-1!
