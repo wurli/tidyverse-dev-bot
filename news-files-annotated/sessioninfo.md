@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `session_info()` no longer produces an error when `info` has length
+    \> 1 (@nash-delcamp-slp, #96).
+
+    !end-bullet!
+-   !begin-bullet!
     Update pkgdown url to sessioninfo.r-lib.org
 
     !end-bullet!

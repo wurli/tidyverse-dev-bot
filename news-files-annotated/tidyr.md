@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `unchop()` produces a more helpful error message when columns cannot
+    be cast to `ptype` (@mgirlich, #1477).
+
+    !end-bullet!
+-   !begin-bullet!
     `expand_grid()` gains a new `.vary` argument, allowing users to
     control whether the first column varies fastest or slowest (#1543,
     @JamesHWade).

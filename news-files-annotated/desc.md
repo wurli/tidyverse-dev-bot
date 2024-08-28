@@ -1,19 +1,28 @@
 # desc (development version)
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    An empty `Depends` field is now properly normalized and formatted.
+    (#148, @kevinushey)
+    !end-bullet!
+
+!end-bullets-1!
+
 # desc 1.4.3
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     `$set()` and `desc_set()` now can omit checks if `check = FALSE` is
     set.
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # desc 1.4.2
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     The `description$write()` method, and thus all `desc_*()` functions
@@ -21,22 +30,22 @@
     encoding.
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 # desc 1.4.1
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     The `$coerce_authors_at_r()` method now does a much better job at
     setting the authors' roles (#114, @dpprdan).
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 # desc 1.4.0
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     DESCRIPTION objects created with the `!new` command now omit
@@ -60,11 +69,11 @@
 
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 ## Breaking change
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     `desc_get_field()` gains a boolean `squish_ws` parameter to
@@ -94,11 +103,11 @@
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # 1.3.0
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     Adding authors with long names or other fields (`comment`,
@@ -176,11 +185,11 @@
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 # 1.2.0
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     Add `get_field()` method, with easier to use failure and fallback
@@ -232,21 +241,21 @@
 
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 # 1.1.1
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     Relax the R \>= 3.2.0 dependency, R 3.1.0 is enough now.
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 # 1.1.0
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     Fix bug when adding authors and there is no `Authors@R` field
@@ -262,11 +271,11 @@
 
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 # 1.0.1
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     Fix formatting of `Collate` fields, they always start at a new line
@@ -282,7 +291,7 @@
 
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 # 1.0.0
 

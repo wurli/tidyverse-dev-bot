@@ -3,7 +3,13 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed an issue where check output could be malformed when testing
+    packages with multiple test files (#205, @kevinushey).
+
+    !end-bullet!
+-   !begin-bullet!
     Update pkgdown template and move url to https://rcmdcheck.r-lib.org.
+
     !end-bullet!
 
 !end-bullets-1!

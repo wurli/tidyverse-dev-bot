@@ -17696,3 +17696,8 @@ ggplot2,cde7efce5fb0518462272dd39d95b800,"`stat_summary_bin()` no longer ignores
 cli,cb1d7d3c2948d6f451fe7f27165aec5f,"`ansi_collapse()` and inline collapsing now uses `last` as the separator (without the serial comma) for two-element vectors if `sep2` is not given (@​rundel, #681).",NA,NA,NA,NA
 cli,c39908c7438c7f6e92f5c5129f10d1f1,"`ansi_collapse()` is now correct for length-1 vectors with style ""head"" if width is specified (@​rundel, #590).",NA,NA,NA,NA
 cli,28bf51049734999d843866d6925d5fb1,"`num_ansi_colors()` now does not warn in Emacs if the `INSIDE_EMACS` environment variable is not a proper version number (@​rundel, #689).",NA,NA,NA,NA
+tidyr,eee1a25825153bbc89df73e3a3f8c043,"`unchop()` produces a more helpful error message when columns cannot be cast to `ptype` (@​mgirlich, #1477).",NA,NA,NA,NA
+cli,3ec822171db3a5b41d5bd54ad803743a,`cli_progress_bar()` now accepts `total` = Inf or -Inf which mimics the behavior of when `total` is NA.,NA,NA,NA,NA
+desc,db64a303ba1cfea0e938a6f398946ea3,"An empty `Depends` field is now properly normalized and formatted. (#148, @​kevinushey)",NA,NA,NA,NA
+rcmdcheck,6a24298c7a51c3f5067fbffde44c2b0b,"Fixed an issue where check output could be malformed when testing packages with multiple test files (#205, @​kevinushey).",NA,NA,NA,NA
+sessioninfo,3b0f7eeffe397965e4d056a76deab70c,"`session_info()` no longer produces an error when `info` has length \> 1 (@​nash-delcamp-slp, #96).",NA,NA,NA,NA

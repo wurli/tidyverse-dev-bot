@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `cli_progress_bar()` now accepts `total` = Inf or -Inf which mimics
+    the behavior of when `total` is NA.
+
+    !end-bullet!
+-   !begin-bullet!
     `num_ansi_colors()` now does not warn in Emacs if the `INSIDE_EMACS`
     environment variable is not a proper version number (@rundel, #689).
 
