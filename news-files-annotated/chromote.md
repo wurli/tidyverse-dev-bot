@@ -1,5 +1,7 @@
 # chromote (development version)
 
+# chromote 0.3.0
+
 !begin-bullets-1!
 
 -   !begin-bullet!
