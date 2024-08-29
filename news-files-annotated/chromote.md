@@ -1,10 +1,35 @@
 # chromote (development version)
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    The headless mode used by Chrome can now be selected with the
+    `chromote.headless` option or `CHROMOTE_HEADLESS` environment
+    variable.
+
+    In Chrome v128, a new headless mode became the default. The new mode
+    uses the same browser engine as the regular Chrome browser, whereas
+    the old headless mode is built on a separate architecture. The old
+    headless mode may be faster to launch and is still well-suited to
+    many of the tasks for which chromote is used.
+
+    For now, to avoid disruption, chromote defaults to using the old
+    headless mode. In the future, chromote will follow Chrome and
+    default to `"new"` headless mode. (And at some point, Chrome intends
+    to remove the old headless mode which is now offered as a separate
+    binary.) To test the new headless mode, use
+    `options(chromote.headless = "new")` or `CHROMOTE_HEADLESS="new"`
+    (in `.Renviron` or via `Sys.setenv()`). (#172)
+
+    !end-bullet!
+
+!end-bullets-1!
+
 # chromote 0.2.0
 
 ## Breaking changes
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     Breaking change: `Chromote$is_active()` method now reports if there
@@ -12,11 +37,11 @@
     than whether or not that instance is alive (#94).
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 ## Improvements and bug fixes
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     `Chromote` and `ChromoteSession` gain print methods to give you a
@@ -55,11 +80,11 @@
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 # chromote 0.1.2
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     Fixed #109: An error would occur when a `Chromote` object's
@@ -86,24 +111,24 @@
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 # chromote 0.1.1
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     Update docs for CRAN (#93)
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 # chromote 0.1.0
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     Initial package release
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
