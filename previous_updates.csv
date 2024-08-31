@@ -17708,3 +17708,41 @@ httr2,3f64cda251eb868b79f6383a4ef668c7,"`req_retry()` now correctly tries `max_t
 chromote,98e19f05d4239048cb30606dc7e408b9,"The headless mode used by Chrome can now be selected with the `chromote.headless` option or `CHROMOTE_HEADLESS` environment variable. In Chrome v128, a new headless mode became the default. The new mode uses the same browser engine as the regular Chrome browser, whereas the old headless mode is built on a separate architecture. The old headless mode may be faster to launch and is still well-suited to many of the tasks for which chromote is used. For now, to avoid disruption, chromote defaults to using the old headless mode. In the future, chromote will follow Chrome and default to `""new""` headless mode. (And at some point, Chrome intends to remove the old headless mode which is now offered as a separate binary.) To test the new headless mode, use `options(chromote.headless = ""new"")` or `CHROMOTE_HEADLESS=""new""` (in `.Renviron` or via `Sys.setenv()`). (#172)",NA,NA,NA,NA
 gt,db78d6276246af0bed3f9332fd8b344d,"Creating a caption with `tab_caption()` will now be preserved in Latex output with `as_latex()`. Cross-referencing a table using the internal cross-referencing system of **bookdown** is now enabled for PDF and HTML outputs (for HTML, set `options(""htmltools.preserve.raw"" = FALSE)`). Quarto users should use the `tbl-cap` and `label` cell options.",NA,NA,NA,NA
 chromote,9dc1d01a120e8f4eee3dbd3c60922d60,Fixed a typo that caused `launch_chrome()` to throw an error. (#175),NA,NA,NA,NA
+blob,4f0bebe2bd6d2f22b5e3d2c8d518b72e,Auto-update from GitHub Actions. Run: https://github.com/tidyverse/blob/actions/runs/10425482785,NA,NA,NA,NA
+blob,aed0d91676ce989d1c3edc9be5fb93e3,Auto-update from GitHub Actions. Run: https://github.com/tidyverse/blob/actions/runs/10200111385,NA,NA,NA,NA
+blob,cf8afb4bda6d50722835d3619aca6523,Auto-update from GitHub Actions. Run: https://github.com/tidyverse/blob/actions/runs/9728444615,NA,NA,NA,NA
+blob,8a18d27596dedc385705bc1b6bbd4738,Auto-update from GitHub Actions. Run: https://github.com/tidyverse/blob/actions/runs/9691616480,NA,NA,NA,NA
+blob,dc19de983d9ede003338385a79ce71ee,Install local package for pkgdown builds.,NA,NA,NA,NA
+blob,99cdd4fe88a05aa978196761448cc925,Improve support for protected branches with fledge.,NA,NA,NA,NA
+blob,bfdf1d8d770aa9ffe05de95c8392d0f0,"Improve support for protected branches, without fledge.",NA,NA,NA,NA
+blob,2eead7a52f1767cf7e7f46395d8d9ab0,Sync with latest developments.,NA,NA,NA,NA
+blob,a7aec0b9bd1b1bd05e72770bd0ac76f9,Use v2 instead of master.,NA,NA,NA,NA
+blob,ee60ff52800baffbb779a1428591e748,Inline action.,NA,NA,NA,NA
+blob,9b08638ac927319d0037d241e0ddcebe,Use dev roxygen2 and decor.,NA,NA,NA,NA
+blob,a76df5c8da3621ccf1f8fa3099d3d974,"Fix on Windows, tweak lock workflow.",NA,NA,NA,NA
+blob,1505e15aaba98f47687c0683fbb74cc5,Avoid checking bashisms on Windows.,NA,NA,NA,NA
+blob,f28fe4f38b3ce4765a6626b0f1d4125e,Better commit message.,NA,NA,NA,NA
+blob,e1f8a78bfac9232f0abb89e7c802af3c,"Bump versions, better default, consume custom matrix.",NA,NA,NA,NA
+blob,b7606d0099c1ec310078e474d37035b5,Recent updates.,NA,NA,NA,NA
+hms,c443c8aa3b86a056c87d4ac2a7bb1358,Auto-update from GitHub Actions. Run: https://github.com/tidyverse/hms/actions/runs/10425483161,NA,NA,NA,NA
+hms,5d5de3fddeb37b4657cda690dd2a9d34,Auto-update from GitHub Actions. Run: https://github.com/tidyverse/hms/actions/runs/10200113283,NA,NA,NA,NA
+hms,83eaa31056cb1abf17fd37446aa896c9,Auto-update from GitHub Actions. Run: https://github.com/tidyverse/hms/actions/runs/9728444063,NA,NA,NA,NA
+hms,dfbda0436b518749eb2a51177213412c,Auto-update from GitHub Actions. Run: https://github.com/tidyverse/hms/actions/runs/9691617778,NA,NA,NA,NA
+hms,ba579ca8f7d3dad86f22f12c5b8a9da2,Install local package for pkgdown builds.,NA,NA,NA,NA
+hms,121c21247802eacc9e5b0172d5145365,Improve support for protected branches with fledge.,NA,NA,NA,NA
+hms,257e4672b43ab2663aa3c354b0356a60,"Improve support for protected branches, without fledge.",NA,NA,NA,NA
+hms,28acd7726f7522317e1ebb85f9525397,Sync with latest developments.,NA,NA,NA,NA
+hms,86d708c7d7fd213f692930a1e8489df2,Use v2 instead of master.,NA,NA,NA,NA
+hms,6b047cc601cc13f9ddb94985b2f68510,Inline action.,NA,NA,NA,NA
+hms,1a7d9fb920d070b144a903665c4f55d8,Use dev roxygen2 and decor.,NA,NA,NA,NA
+hms,cb21a27d969d174bb429b24ba7a00b78,"Fix on Windows, tweak lock workflow.",NA,NA,NA,NA
+hms,c738370a8ed463ec9f77471678085680,Avoid checking bashisms on Windows.,NA,NA,NA,NA
+hms,10ece8a50ff032267e8230a1579cc465,Better commit message.,NA,NA,NA,NA
+hms,11ea58f0f6bd332cfc1cbce9499e56bf,"Bump versions, better default, consume custom matrix.",NA,NA,NA,NA
+hms,a99f0e1d9157659e658f295346028114,Recent updates.,NA,NA,NA,NA
+pillar,099121607c5ddc495f5018a3ea058b46,Install local package for pkgdown builds.,NA,NA,NA,NA
+pillar,02562bbfe32a43634532efb2c2fe1bc4,Improve support for protected branches with fledge.,NA,NA,NA,NA
+pillar,84d78bbe1f43fb0bd607b4631a715d4f,"Improve support for protected branches, without fledge.",NA,NA,NA,NA
+tibble,ab426467e5ac38a3be4ff0ee1da84817,Install local package for pkgdown builds.,NA,NA,NA,NA
+tibble,ac9853d6092ff0a8c85a2045c064117d,Improve support for protected branches with fledge.,NA,NA,NA,NA
+tibble,ab10731cbd90cdede6940cb745f9d530,"Improve support for protected branches, without fledge.",NA,NA,NA,NA

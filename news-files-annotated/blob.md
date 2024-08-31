@@ -1,27 +1,95 @@
 ```{=html}
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 ```
-# blob 1.2.4.9003 (2023-10-09)
+# blob 1.2.4.9004 (2024-08-31)
+
+## Chore
 
 !begin-bullets-1!
 
 -   !begin-bullet!
-    Internal changes only.
+    Auto-update from GitHub Actions.
+
+    Run: https://github.com/tidyverse/blob/actions/runs/10425482785
+
+    !end-bullet!
+-   !begin-bullet!
+    Auto-update from GitHub Actions.
+
+    Run: https://github.com/tidyverse/blob/actions/runs/10200111385
+
+    !end-bullet!
+-   !begin-bullet!
+    Auto-update from GitHub Actions.
+
+    Run: https://github.com/tidyverse/blob/actions/runs/9728444615
+
+    !end-bullet!
+-   !begin-bullet!
+    Auto-update from GitHub Actions.
+
+    Run: https://github.com/tidyverse/blob/actions/runs/9691616480
+
     !end-bullet!
 
 !end-bullets-1!
 
-# blob 1.2.4.9002 (2023-03-24)
+## Continuous integration
 
 !begin-bullets-2!
 
 -   !begin-bullet!
-    Merged cran-1.2.4 into main.
+    Install local package for pkgdown builds.
+
+    !end-bullet!
+-   !begin-bullet!
+    Improve support for protected branches with fledge.
+
+    !end-bullet!
+-   !begin-bullet!
+    Improve support for protected branches, without fledge.
+
+    !end-bullet!
+-   !begin-bullet!
+    Sync with latest developments.
+
+    !end-bullet!
+-   !begin-bullet!
+    Use v2 instead of master.
+
+    !end-bullet!
+-   !begin-bullet!
+    Inline action.
+
+    !end-bullet!
+-   !begin-bullet!
+    Use dev roxygen2 and decor.
+
+    !end-bullet!
+-   !begin-bullet!
+    Fix on Windows, tweak lock workflow.
+
+    !end-bullet!
+-   !begin-bullet!
+    Avoid checking bashisms on Windows.
+
+    !end-bullet!
+-   !begin-bullet!
+    Better commit message.
+
+    !end-bullet!
+-   !begin-bullet!
+    Bump versions, better default, consume custom matrix.
+
+    !end-bullet!
+-   !begin-bullet!
+    Recent updates.
+
     !end-bullet!
 
 !end-bullets-2!
 
-# blob 1.2.4.9001 (2023-03-23)
+# blob 1.2.4.9003 (2023-10-09)
 
 !begin-bullets-3!
 
@@ -31,29 +99,27 @@
 
 !end-bullets-3!
 
-# blob 1.2.4.9000 (2023-03-17)
-
-## Bug fixes
+# blob 1.2.4.9002 (2023-03-24)
 
 !begin-bullets-4!
 
 -   !begin-bullet!
-    Fix argument consistency between S3 generics and methods.
+    Merged cran-1.2.4 into main.
     !end-bullet!
 
 !end-bullets-4!
 
-## Chore
+# blob 1.2.4.9001 (2023-03-23)
 
 !begin-bullets-5!
 
 -   !begin-bullet!
-    Change maintainer e-mail.
+    Internal changes only.
     !end-bullet!
 
 !end-bullets-5!
 
-# blob 1.2.4 (2023-03-17)
+# blob 1.2.4.9000 (2023-03-17)
 
 ## Bug fixes
 
@@ -65,20 +131,42 @@
 
 !end-bullets-6!
 
-# blob 1.2.3 (2022-04-10)
+## Chore
 
 !begin-bullets-7!
+
+-   !begin-bullet!
+    Change maintainer e-mail.
+    !end-bullet!
+
+!end-bullets-7!
+
+# blob 1.2.4 (2023-03-17)
+
+## Bug fixes
+
+!begin-bullets-8!
+
+-   !begin-bullet!
+    Fix argument consistency between S3 generics and methods.
+    !end-bullet!
+
+!end-bullets-8!
+
+# blob 1.2.3 (2022-04-10)
+
+!begin-bullets-9!
 
 -   !begin-bullet!
     `as_blob(NA_character_)` returns a missing `blob` instead of
     `as_blob("NA")` (#26, @michaelchirico).
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-9!
 
 # blob 1.2.2 (2021-07-23)
 
-!begin-bullets-8!
+!begin-bullets-10!
 
 -   !begin-bullet!
     Moved to "stable" lifecycle stage.
@@ -87,11 +175,11 @@
     Remove `is_vector_s3()` (#19).
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-10!
 
 # blob 1.2.1
 
-!begin-bullets-9!
+!begin-bullets-11!
 
 -   !begin-bullet!
     Inline prettyunits.
@@ -101,13 +189,13 @@
     compatibility with vctrs 0.2.1.
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-11!
 
 # blob 1.2.0
 
 ## Breaking changes
 
-!begin-bullets-10!
+!begin-bullets-12!
 
 -   !begin-bullet!
     The `blob` class is now based on `list_of(raw())` from the vctrs
@@ -130,11 +218,11 @@
 
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-12!
 
 # blob 1.1.1 (2018-03-24)
 
-!begin-bullets-11!
+!begin-bullets-13!
 
 -   !begin-bullet!
     Now suggesting *pillar* instead of importing *tibble*, and using
@@ -151,11 +239,11 @@
 
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-13!
 
 # blob 1.1.0 (2017-06-17)
 
-!begin-bullets-12!
+!begin-bullets-14!
 
 -   !begin-bullet!
     New maintainer: Kirill Müller.
@@ -170,14 +258,14 @@
 
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-14!
 
 # blob 1.0.0
 
-!begin-bullets-13!
+!begin-bullets-15!
 
 -   !begin-bullet!
     Initial release.
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-15!
