@@ -17748,3 +17748,7 @@ tibble,ac9853d6092ff0a8c85a2045c064117d,Improve support for protected branches w
 tibble,ab10731cbd90cdede6940cb745f9d530,"Improve support for protected branches, without fledge.",NA,NA,NA,NA
 httr2,ac72794d8c732d56dc65037df2b95a22,`req_body_file()` now works with files \>64kb once more (#524).,NA,NA,NA,NA
 httr2,89f5e023f3e0bae78faa6e32c8cf0306,`resp_body_html()` and `resp_body_xml()` now work when `req_perform()` is given a path (#448).,NA,NA,NA,NA
+reticulate,c58fd8a7d1006e0c8f4f5c439d1d3158,"In Positron, `repl_python()` will now use the Positron Python console. (#1648)",NA,NA,NA,NA
+reticulate,46cd48cd7684b4a0c0a65ad7c2cf56c8,`py_main_thread_func()` is deprecated; every R function can now safely be called from background Python threads. (#1648),NA,NA,NA,NA
+reticulate,b60f18112cc788f43cb4498d504c7677,"Calls from a Python thread into R will now notify the main thread using R's native event loop, ensuring that these calls are handled even when the main thread is engaged in non-Python tasks. (#1648)",NA,NA,NA,NA
+reticulate,83a4b075b81cc9f32128f9fb5fe71035,The Python session is now finalized when the R session exits (#1648).,NA,NA,NA,NA
