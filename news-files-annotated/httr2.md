@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `resp_body_html()` and `resp_body_xml()` now work when
+    `req_perform()` is given a path (#448).
+    !end-bullet!
+-   !begin-bullet!
     `req_body_file()` now works with files \>64kb once more (#524).
     !end-bullet!
 -   !begin-bullet!
