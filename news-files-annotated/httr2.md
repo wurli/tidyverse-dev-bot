@@ -3,6 +3,17 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `req_cache()` now re-caches the response if the body is hasn't been
+    modified but the headers have changed (#442).
+    !end-bullet!
+-   !begin-bullet!
+    `req_cache()` works better when `req_perform()` sets a path (#442).
+    !end-bullet!
+-   !begin-bullet!
+    `req_body_*()` now give informative error if you attempt to change
+    the body type (#451).
+    !end-bullet!
+-   !begin-bullet!
     `resp_body_html()` and `resp_body_xml()` now work when
     `req_perform()` is given a path (#448).
     !end-bullet!
