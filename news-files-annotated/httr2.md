@@ -3,6 +3,9 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `req_body_file()` now works with files \>64kb once more (#524).
+    !end-bullet!
+-   !begin-bullet!
     New `req_perform_connection()` for working with streaming data.
     Unlike `req_perform_stream()` which uses callbacks,
     `req_perform_connection()` returns a regular response object with a

@@ -17746,3 +17746,4 @@ pillar,84d78bbe1f43fb0bd607b4631a715d4f,"Improve support for protected branches,
 tibble,ab426467e5ac38a3be4ff0ee1da84817,Install local package for pkgdown builds.,NA,NA,NA,NA
 tibble,ac9853d6092ff0a8c85a2045c064117d,Improve support for protected branches with fledge.,NA,NA,NA,NA
 tibble,ab10731cbd90cdede6940cb745f9d530,"Improve support for protected branches, without fledge.",NA,NA,NA,NA
+httr2,ac72794d8c732d56dc65037df2b95a22,`req_body_file()` now works with files \>64kb once more (#524).,NA,NA,NA,NA
