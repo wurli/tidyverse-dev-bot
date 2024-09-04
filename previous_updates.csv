@@ -17756,3 +17756,17 @@ httr2,a4c3f0c3cf621b0c764b9c313035b1f3,`req_cache()` now re-caches the response 
 httr2,a77c0d2ac57679ffc79c833e641508cc,`req_cache()` works better when `req_perform()` sets a path (#442).,NA,NA,NA,NA
 httr2,cdd8e2111037f37cfb4cb88cbe501b56,`req_body_*()` now give informative error if you attempt to change the body type (#451).,NA,NA,NA,NA
 shinytest2,b309fefb06a17496d7fe2b235f0104ba,Add support for `$click()`ing `{bslib}`'s `input_task_button()` (#829).,NA,NA,NA,NA
+R6,5675ed0ed2597de38755d50ff0597780,R6 methods no longer recommends `initialize` or `.__enclos_env__` in autocomplete.,NA,NA,NA,NA
+keras,1c61ed47b0d0647c33273224e40cc4c1,Added compatibility with Keras v3.5.0. User facing changes:,NA,NA,NA,NA
+keras,1c61ed47b0d0647c33273224e40cc4c1,• New functions:,NA,NA,NA,NA
+keras,1c61ed47b0d0647c33273224e40cc4c1,‣ `op_associative_scan()`,NA,NA,NA,NA
+keras,1c61ed47b0d0647c33273224e40cc4c1,‣ `op_searchsorted()`,NA,NA,NA,NA
+keras,1c61ed47b0d0647c33273224e40cc4c1,‣ `optimizer_lamb()`,NA,NA,NA,NA
+keras,1c61ed47b0d0647c33273224e40cc4c1,"• `keras$DTypePolicy` instances can now be supplied to `dtype` argument for losses, metrics, and layers.",NA,NA,NA,NA
+keras,1c61ed47b0d0647c33273224e40cc4c1,• Add integration with the Hugging Face Hub. You can now save models to Hugging Face Hub directly `save_model()` and load .keras models directly from Hugging Face Hub with `load_model()`.,NA,NA,NA,NA
+keras,1c61ed47b0d0647c33273224e40cc4c1,• Added compatibility with NumPy 2.0.,NA,NA,NA,NA
+keras,1c61ed47b0d0647c33273224e40cc4c1,• Improved `keras$distribution` API support for very large models.,NA,NA,NA,NA
+keras,1c61ed47b0d0647c33273224e40cc4c1,• Bug fixes and performance improvements.,NA,NA,NA,NA
+keras,1c61ed47b0d0647c33273224e40cc4c1,• Add `data_format` argument to `layer_zero_padding_1d()` layer.,NA,NA,NA,NA
+keras,1c61ed47b0d0647c33273224e40cc4c1,• Miscellaneous documentation improvements.,NA,NA,NA,NA
+keras,1c61ed47b0d0647c33273224e40cc4c1,• Bug fixes and performance improvements.,NA,NA,NA,NA
