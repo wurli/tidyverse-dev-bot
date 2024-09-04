@@ -17772,3 +17772,4 @@ keras,1c61ed47b0d0647c33273224e40cc4c1,• Miscellaneous documentation improveme
 keras,1c61ed47b0d0647c33273224e40cc4c1,• Bug fixes and performance improvements.,NA,NA,NA,NA
 reticulate,dd2f9697370e508512cb8b2092ed62dc,Reticulate will now use the `RETICULATE_VIRTUALENV_ROOT` environment variable when determining where to resolve virtual environments. (#1657),NA,NA,NA,NA
 reticulate,d5169d7921e52ee62b7a791e017fb846,"Fixed an error where opening a Python subprocess in Positron on Windows resulted in ""OSError: \[WinError 6\] The handle is invalid."" (#1658, posit-dev/positron#4457)",NA,NA,NA,NA
+renv,bd6d62bc9a3c8d686dc2895041a5cbb6,`renv::install()` now errs if an incompatible `type` argument is provided.,NA,NA,NA,NA

@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `renv::install()` now errs if an incompatible `type` argument is
+    provided.
+
+    !end-bullet!
+-   !begin-bullet!
     `renv::checkout()` now also checks out the version of `renv`
     available and associated with the requested snapshot date. (#1966)
 
