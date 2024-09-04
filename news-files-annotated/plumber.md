@@ -1,4 +1,4 @@
-# plumber (development version)
+# plumber 1.2.2
 
 !begin-bullets-1!
 
