@@ -17755,3 +17755,4 @@ reticulate,83a4b075b81cc9f32128f9fb5fe71035,The Python session is now finalized 
 httr2,a4c3f0c3cf621b0c764b9c313035b1f3,`req_cache()` now re-caches the response if the body is hasn't been modified but the headers have changed (#442).,NA,NA,NA,NA
 httr2,a77c0d2ac57679ffc79c833e641508cc,`req_cache()` works better when `req_perform()` sets a path (#442).,NA,NA,NA,NA
 httr2,cdd8e2111037f37cfb4cb88cbe501b56,`req_body_*()` now give informative error if you attempt to change the body type (#451).,NA,NA,NA,NA
+shinytest2,b309fefb06a17496d7fe2b235f0104ba,Add support for `$click()`ing `{bslib}`'s `input_task_button()` (#829).,NA,NA,NA,NA

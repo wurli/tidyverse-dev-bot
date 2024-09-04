@@ -1,10 +1,21 @@
 # shinytest2 (development version)
 
+## Bug / Improvements
+
+!begin-bullets-1!
+
+-   !begin-bullet!
+    Add support for `$click()`ing `{bslib}`'s `input_task_button()`
+    (#829).
+    !end-bullet!
+
+!end-bullets-1!
+
 # shinytest2 0.3.2
 
 ## Bug / Improvements
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     `{shinytest2}` now uses `{rlang}` and longer depends on `{ellipsis}`
@@ -19,13 +30,13 @@
 
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # shinytest2 0.3.1
 
 ## Breaking changes
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     `AppDriver$get_screenshot()`/`AppDriver$expect_screenshot()` now
@@ -36,11 +47,11 @@
     `get_screenshot()`/`expect_screenshot()` (#350).
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 ## Bug / Improvements
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     shinytest2 no longer checks if the computer running the tests is
@@ -48,13 +59,13 @@
     to the server hosting the Shiny app being tested. (@Riraro #364)
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 # shinytest2 0.3.0
 
 ## Breaking changes
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     `AppDriver$get_screenshot(selector=)`,
@@ -67,11 +78,11 @@
     (#325)
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 ## New features
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     `AppDriver$get_screenshot(selector=)`,
@@ -100,11 +111,11 @@
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 ## Bug / Improvements
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     Set the directory to the Shiny App directory before starting the
@@ -112,11 +123,11 @@
     `.Renviron` files to be found naturally. (#275)
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 # shinytest2 0.2.1
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     Fixed request from CRAN to correct C++11 problems in web checks
@@ -147,7 +158,7 @@
 
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 # shinytest2 0.2.0
 
@@ -155,7 +166,7 @@
 
 ### Shiny log levels
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     `AppDriver$get_logs()` has changed the `level` values when
@@ -163,11 +174,11 @@
     have been renamed to `"stderr"` and `"stdout"`. (#265)
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 ### Download snapshot files
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     All downloaded snapshots will contain a counter prefix (e.g. `003-`
@@ -193,7 +204,7 @@
     `tests/testthat/_snaps/003-my_custom_name.txt`. (#261)
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 ### Timeout values
 
@@ -236,7 +247,7 @@ value. For example, if `app <- AppDriver$new(timeout = 500)` then
 
 ## New Features
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     `compare_screenshot_threshold()` is a new method to compare
@@ -286,11 +297,11 @@ value. For example, if `app <- AppDriver$new(timeout = 500)` then
 
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 ## Bug / Improvements
 
-!begin-bullets-11!
+!begin-bullets-12!
 
 -   !begin-bullet!
     Fix set of bugs found by @daattali including test files should be
@@ -356,24 +367,24 @@ value. For example, if `app <- AppDriver$new(timeout = 500)` then
 
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-12!
 
 # shinytest2 0.1.1
 
-!begin-bullets-12!
+!begin-bullets-13!
 
 -   !begin-bullet!
     Update docs for CRAN (#253)
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
 
 # shinytest2 0.1.0
 
-!begin-bullets-13!
+!begin-bullets-14!
 
 -   !begin-bullet!
     Initial release of package
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-14!
