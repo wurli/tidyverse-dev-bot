@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `req_perform()` no longer displays a progress bar when sleeping
+    during tests. You can override this behaviour by setting the option
+    `httr2_progress`.
+    !end-bullet!
+-   !begin-bullet!
     `req_cache()` now re-caches the response if the body is hasn't been
     modified but the headers have changed (#442).
     !end-bullet!

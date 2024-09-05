@@ -1,5 +1,7 @@
 # reticulate (development version)
 
+# reticulate 1.39.0
+
 !begin-bullets-1!
 
 -   !begin-bullet!
