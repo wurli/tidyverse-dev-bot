@@ -1,8 +1,20 @@
-# sortable 0.5
+# sortable 0.5.0.9000
+
+## Updates
+
+!begin-bullets-1!
+
+-   !begin-bullet!
+    Update `Sortable.js` to version 1.15.3
+    !end-bullet!
+
+!end-bullets-1!
+
+# sortable 0.5.0
 
 ## Enhancements
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     Add support for `update_rank_list()` and `update_bucket_list()`
@@ -12,46 +24,46 @@
     horizontal. #92
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 ## Changes
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     A `rank_list` now has a unique CSS id, to allow updating the `text`
     of the container.
     !end-bullet!
 
-!end-bullets-2!
-
-# sortable 0.4.6
-
-## Upgrade sortable.js
-
-!begin-bullets-3!
-
--   !begin-bullet!
-    Include `sortable.js` version 1.15.0
-    !end-bullet!
-
 !end-bullets-3!
 
-# sortable 0.4.5
+# sortable 0.4.6
 
 ## Upgrade sortable.js
 
 !begin-bullets-4!
 
 -   !begin-bullet!
-    Include `sortable.js` version 1.14.0, as suggested by #82 and #73
+    Include `sortable.js` version 1.15.0
     !end-bullet!
 
 !end-bullets-4!
 
-## Bug fixes
+# sortable 0.4.5
+
+## Upgrade sortable.js
 
 !begin-bullets-5!
+
+-   !begin-bullet!
+    Include `sortable.js` version 1.14.0, as suggested by #82 and #73
+    !end-bullet!
+
+!end-bullets-5!
+
+## Bug fixes
+
+!begin-bullets-6!
 
 -   !begin-bullet!
     Capture error if bucket_list header is empty #31
@@ -63,21 +75,21 @@
     Allow bucket_list to have empty header, and capture error better #69
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 ## Other changes
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     Upgrade tests to `testthat` version 3
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 # sortable 0.4.4
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     No functional changes
@@ -88,13 +100,13 @@
     project.
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 # sortable 0.4.3
 
 ## Breaking changes:
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     Moved the `...` dots argument of `sortable_options()` to the first
@@ -103,11 +115,11 @@
     option being set.
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 ## Other:
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     Updated `sortable.js` to version 1.10.2
@@ -123,24 +135,24 @@
 
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 # sortable 0.4.2
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     First release accepted by CRAN
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 # sortable 0.4.0
 
-!begin-bullets-11!
+!begin-bullets-12!
 
 -   !begin-bullet!
     First candidate release to CRAN
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-12!

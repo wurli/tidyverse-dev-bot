@@ -17777,3 +17777,4 @@ reticulate,9796e83abfdb36ebd6d9d533555b1ba2,Fixes for CRAN check failures on mac
 httr2,1cef62216a17d638695b4c2a2154e228,`req_perform()` no longer displays a progress bar when sleeping during tests. You can override this behaviour by setting the option `httr2_progress`.,NA,NA,NA,NA
 httr2,1301e985353dc3d913cdb589d46539cf,New `req_cookie_set()` allows you to set client side cookies (#369).,NA,NA,NA,NA
 httr2,c303a75d7958ffbc42845df56b70f27d,`req_body_file()` no longer leaks a connection if the response doesn't complete succesfully (#534).,NA,NA,NA,NA
+sortable,a1e09855bbd99b33af5b027f9fad50f5,Update `Sortable.js` to version 1.15.3,NA,NA,NA,NA
