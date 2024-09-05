@@ -3,6 +3,13 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    New `req_cookie_set()` allows you to set client side cookies (#369).
+    !end-bullet!
+-   !begin-bullet!
+    `req_body_file()` no longer leaks a connection if the response
+    doesn't complete succesfully (#534).
+    !end-bullet!
+-   !begin-bullet!
     `req_perform()` no longer displays a progress bar when sleeping
     during tests. You can override this behaviour by setting the option
     `httr2_progress`.
