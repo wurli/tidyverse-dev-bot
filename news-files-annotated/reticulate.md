@@ -8,19 +8,47 @@
 
     !end-bullet!
 -   !begin-bullet!
-    In Positron, `repl_python()` will now use the Positron Python
-    console. (#1648)
-
-    !end-bullet!
--   !begin-bullet!
     `py_main_thread_func()` is deprecated; every R function can now
-    safely be called from background Python threads. (#1648)
+    safely be called from background Python threads (#1648).
 
     !end-bullet!
 -   !begin-bullet!
-    Calls from a Python thread into R will now notify the main thread
-    using R's native event loop, ensuring that these calls are handled
-    even when the main thread is engaged in non-Python tasks. (#1648)
+    Calls from Python threads into R now notify the main thread using
+    R's native event loop, ensuring that these calls are handled even
+    when the main thread is engaged in non-Python tasks (#1648).
+
+    !end-bullet!
+-   !begin-bullet!
+    The knitr engine now avoids overwriting Altair's default chart
+    dimensions with the values of `ut.width.px` and `ut.height.px`. Use
+    `altair.fig.height`, `altair.fig.width`, or Altair's `width` and
+    `height` parameters to adjust chart dimensions (contributed by
+    @joelostblom, #1646).
+
+    !end-bullet!
+-   !begin-bullet!
+    New `as.character()` method for `python.builtin.str` with support
+    for handling embedded NULs in strings (#1653).
+
+    !end-bullet!
+-   !begin-bullet!
+    New `as.raw()` method for `python.builtin.bytes` (#1649, #1652).
+
+    !end-bullet!
+-   !begin-bullet!
+    `as.character()` method for `python.builtin.bytes` gains a `nul`
+    argument, allowing for convenient handling of embedded NULs in the
+    string (#1652).
+
+    !end-bullet!
+-   !begin-bullet!
+    Reticulate now uses the `RETICULATE_VIRTUALENV_ROOT` environment
+    variable when determining where to resolve virtual environments
+    (#1657).
+
+    !end-bullet!
+-   !begin-bullet!
+    `conda_run2()` is now exported (contributed by @dramanica, #1637).
 
     !end-bullet!
 -   !begin-bullet!
@@ -29,54 +57,21 @@
 
     !end-bullet!
 -   !begin-bullet!
-    Internal updates for NumPy 2.1 (#1651)
+    Internal updates for NumPy 2.1 (#1651).
 
     !end-bullet!
 -   !begin-bullet!
-    Fixed error when importing a module named `config` (#1628)
+    Fixed error when importing a module named `config` (#1628).
 
     !end-bullet!
 -   !begin-bullet!
-    `conda_run2()` is now exported (#1637, contributed by @dramanica)
-
-    !end-bullet!
--   !begin-bullet!
-    Fixes for CRAN check failures (#1645)
-
-    !end-bullet!
--   !begin-bullet!
-    The knitr engine now avoids overwriting Altair's default chart
-    dimensions with the values of `ut.width.px` and `ut.height.px`.
-    Instead, use `altair.fig.height`, `altair.fig.width`, or Altair's
-    `width` and `height` parameters to adjust chart dimensions. (#1646,
-    contributed by @joelostblom)
-
-    !end-bullet!
--   !begin-bullet!
-    New `as.raw()` method for `python.builtin.bytes` (#1649, #1652)
-
-    !end-bullet!
--   !begin-bullet!
-    `as.character()` method for `python.builtin.bytes` gains a `nul`
-    argument, allowing for convenient handling of embedded NULs in the
-    string. (#1652)
-
-    !end-bullet!
--   !begin-bullet!
-    New `as.character()` method for `python.builtin.str` with support
-    for handling embedded NULs in strings. (#1653)
-
-    !end-bullet!
--   !begin-bullet!
-    Reticulate will now use the `RETICULATE_VIRTUALENV_ROOT` environment
-    variable when determining where to resolve virtual environments.
-    (#1657)
+    Fixes for CRAN check failures on macOS-oldrel (#1645).
 
     !end-bullet!
 -   !begin-bullet!
     Fixed an error where opening a Python subprocess in Positron on
     Windows resulted in "OSError: \[WinError 6\] The handle is invalid."
-    (#1658, posit-dev/positron#4457)
+    (#1658, posit-dev/positron#4457).
 
     !end-bullet!
 
