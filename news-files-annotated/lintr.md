@@ -87,6 +87,14 @@
     `lint()` and friends now normalize paths to forward slashes on
     Windows (@olivroy, #2613).
     !end-bullet!
+-   !begin-bullet!
+    `undesirable_function_linter()`, `undesirable_operator_linter()`,
+    and `list_comparison_linter()` were removed from the tag
+    `efficiency` (@IndrajeetPatil, #2655). If you use
+    `linters_with_tags("efficiency")` to include these linters, you'll
+    need to adjust your config to keep linting your code against them.
+    We did not find any such users on GitHub.
+    !end-bullet!
 
 !end-bullets-1!
 
