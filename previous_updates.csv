@@ -17780,3 +17780,4 @@ httr2,c303a75d7958ffbc42845df56b70f27d,`req_body_file()` no longer leaks a conne
 sortable,a1e09855bbd99b33af5b027f9fad50f5,Update `Sortable.js` to version 1.15.3,NA,NA,NA,NA
 lintr,d903c373adaf78db62b66756ec5f669c,"`undesirable_function_linter()`, `undesirable_operator_linter()`, and `list_comparison_linter()` were removed from the tag `efficiency` (@​IndrajeetPatil, #2655). If you use `linters_with_tags(""efficiency"")` to include these linters, you'll need to adjust your config to keep linting your code against them. We did not find any such users on GitHub.",NA,NA,NA,NA
 lintr,9c4cc11cb6f541f16eb5b1015ce36ef8,"`object_usage_linter()` finds global variables assigned with `=` or `->`, which avoids some issues around ""undefined global variables"" in scripts (#2654, @​MichaelChirico).",NA,NA,NA,NA
+httr2,4508dc184fbfb9a42cc9659e3ac606b9,`req_perform_iterative()` is no longer experimental.,NA,NA,NA,NA

@@ -3,6 +3,9 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `req_perform_iterative()` is no longer experimental.
+    !end-bullet!
+-   !begin-bullet!
     New `req_cookie_set()` allows you to set client side cookies (#369).
     !end-bullet!
 -   !begin-bullet!
