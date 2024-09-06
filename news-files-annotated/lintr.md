@@ -404,6 +404,11 @@
     in-place assignments like `DT[, "sPoNGeBob" := "friend"]` are still
     eligible for lints.
     !end-bullet!
+-   !begin-bullet!
+    `object_usage_linter()` finds global variables assigned with `=` or
+    `->`, which avoids some issues around "undefined global variables"
+    in scripts (#2654, @MichaelChirico).
+    !end-bullet!
 
 !end-bullets-9!
 
