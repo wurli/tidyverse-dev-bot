@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `renv` now automatically generates a lockfile when loading a project
+    containing a `manifest.json` file (typical for application bundles
+    published to Posit Connect). (#1980, @toph-allen)
+
+    !end-bullet!
+-   !begin-bullet!
     `renv::install()` now errs if an incompatible `type` argument is
     provided.
 
