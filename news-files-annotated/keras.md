@@ -1,5 +1,7 @@
 # keras3 (development version)
 
+# keras3 1.2.0
+
 !begin-bullets-1!
 
 -   !begin-bullet!

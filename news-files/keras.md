@@ -1,5 +1,7 @@
 # keras3 (development version)
 
+# keras3 1.2.0
+
 - Added compatibility with Keras v3.5.0. User facing changes:
 
   - New functions:
