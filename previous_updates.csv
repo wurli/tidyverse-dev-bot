@@ -17782,3 +17782,4 @@ lintr,d903c373adaf78db62b66756ec5f669c,"`undesirable_function_linter()`, `undesi
 lintr,9c4cc11cb6f541f16eb5b1015ce36ef8,"`object_usage_linter()` finds global variables assigned with `=` or `->`, which avoids some issues around ""undefined global variables"" in scripts (#2654, @​MichaelChirico).",NA,NA,NA,NA
 httr2,4508dc184fbfb9a42cc9659e3ac606b9,`req_perform_iterative()` is no longer experimental.,NA,NA,NA,NA
 renv,51fb764686c823a1e541ac21ecc1dfd8,"`renv` now automatically generates a lockfile when loading a project containing a `manifest.json` file (typical for application bundles published to Posit Connect). (#1980, @​toph-allen)",NA,NA,NA,NA
+ggplot2,3e57c26d521676a80ec62cc13bad50c1,"The `summary()` method for ggplots is now more terse about facets (@​teunbrand, #5989).",NA,NA,NA,NA

@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    The `summary()` method for ggplots is now more terse about facets
+    (@teunbrand, #5989).
+
+    !end-bullet!
+-   !begin-bullet!
     `guide_bins()`, `guide_colourbar()` and `guide_coloursteps()` gain
     an `angle` argument to overrule theme settings, similar to
     `guide_axis(angle)` (@teunbrand, #4594).
