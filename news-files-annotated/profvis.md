@@ -3,6 +3,13 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Bundled `highlight.js` updated to the latest version 11.10.0.
+    !end-bullet!
+-   !begin-bullet!
+    The CSS for profvis code is scoped so that it does not affect other
+    blocks of code, such as those from RMarkdown or Quarto (@wch, #140).
+    !end-bullet!
+-   !begin-bullet!
     profvis now relies on R 4.0.0.
     !end-bullet!
 -   !begin-bullet!

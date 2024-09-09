@@ -17787,3 +17787,5 @@ reticulate,6257320cb3980929d348a4592ab4b622,"Fixed segfault encountered when run
 reticulate,fbe4bffe0bb80bb14e562990fa208e86,Fixed segfault encountered in RStudio when rapidly switching between R and Python chunks in a Quarto document (#1665).,NA,NA,NA,NA
 gh,35419d7634966110a142d1ce40afc8fc,New `gh_token_exists()` tells you if a valid GH token has been set.,NA,NA,NA,NA
 dbplyr,c280e6d1449e09f4f768d5842533cdc1,"Translations of `difftime()` for Postgres, SQL server, Redshift, and Snowflake previously returned the wrong sign and are now correct (@​edward-burn, #1532).",NA,NA,NA,NA
+profvis,16b51133e60ce5993085787b215dc5a4,Bundled `highlight.js` updated to the latest version 11.10.0.,NA,NA,NA,NA
+profvis,32c76aa7ebaa3b043e7fb989baf8640e,"The CSS for profvis code is scoped so that it does not affect other blocks of code, such as those from RMarkdown or Quarto (@​wch, #140).",NA,NA,NA,NA
