@@ -3,6 +3,9 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    New `gh_token_exists()` tells you if a valid GH token has been set.
+    !end-bullet!
+-   !begin-bullet!
     `gh()` now uses a cache provided by httr2. This cache lives in
     `tools::R_user_dir("gh", "cache")`, maxes out at 100 MB, and can be
     disabled by setting `options(gh_cache = FALSE)` (#203).

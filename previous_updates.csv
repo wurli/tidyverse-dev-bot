@@ -17785,3 +17785,4 @@ renv,51fb764686c823a1e541ac21ecc1dfd8,"`renv` now automatically generates a lock
 ggplot2,3e57c26d521676a80ec62cc13bad50c1,"The `summary()` method for ggplots is now more terse about facets (@​teunbrand, #5989).",NA,NA,NA,NA
 reticulate,6257320cb3980929d348a4592ab4b622,"Fixed segfault encountered when running Python finalizer (#1663, #1664)",NA,NA,NA,NA
 reticulate,fbe4bffe0bb80bb14e562990fa208e86,Fixed segfault encountered in RStudio when rapidly switching between R and Python chunks in a Quarto document (#1665).,NA,NA,NA,NA
+gh,35419d7634966110a142d1ce40afc8fc,New `gh_token_exists()` tells you if a valid GH token has been set.,NA,NA,NA,NA
