@@ -17786,3 +17786,4 @@ ggplot2,3e57c26d521676a80ec62cc13bad50c1,"The `summary()` method for ggplots is 
 reticulate,6257320cb3980929d348a4592ab4b622,"Fixed segfault encountered when running Python finalizer (#1663, #1664)",NA,NA,NA,NA
 reticulate,fbe4bffe0bb80bb14e562990fa208e86,Fixed segfault encountered in RStudio when rapidly switching between R and Python chunks in a Quarto document (#1665).,NA,NA,NA,NA
 gh,35419d7634966110a142d1ce40afc8fc,New `gh_token_exists()` tells you if a valid GH token has been set.,NA,NA,NA,NA
+dbplyr,c280e6d1449e09f4f768d5842533cdc1,"Translations of `difftime()` for Postgres, SQL server, Redshift, and Snowflake previously returned the wrong sign and are now correct (@​edward-burn, #1532).",NA,NA,NA,NA

@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Translations of `difftime()` for Postgres, SQL server, Redshift, and
+    Snowflake previously returned the wrong sign and are now correct
+    (@edward-burn, #1532).
+
+    !end-bullet!
+-   !begin-bullet!
     `across(everything())` doesn't select grouping columns created via
     `.by` in `summarise()` (@mgirlich, #1493).
 
