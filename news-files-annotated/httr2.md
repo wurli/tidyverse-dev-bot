@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `req_retry()` no longer treates low-level HTTP failures the same way
+    as transient errors by default. You can return to the previous
+    behaviour with `retry_on_error = TRUE`.
+    !end-bullet!
+-   !begin-bullet!
     `req_perform_iterative()` is no longer experimental.
     !end-bullet!
 -   !begin-bullet!
