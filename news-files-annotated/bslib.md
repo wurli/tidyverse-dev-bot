@@ -6,6 +6,13 @@
     `navset_card_pills()`, `navset_card_underline()`,
     `navset_card_tabs()` fixed to now respect header/footer arguments
     (@tanho63, #1024)
+
+    !end-bullet!
+-   !begin-bullet!
+    Fixed a bug in `bs_themer()` (and `bs_theme_preview()`) that caused
+    it to stop applying changes if a Sass variable was `NULL`. (@meztez,
+    #1112)
+
     !end-bullet!
 
 !end-bullets-1!
