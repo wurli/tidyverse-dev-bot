@@ -17791,3 +17791,4 @@ profvis,16b51133e60ce5993085787b215dc5a4,Bundled `highlight.js` updated to the l
 profvis,32c76aa7ebaa3b043e7fb989baf8640e,"The CSS for profvis code is scoped so that it does not affect other blocks of code, such as those from RMarkdown or Quarto (@​wch, #140).",NA,NA,NA,NA
 httr2,fd6a917eda91c6dc808a78628511112b,`req_retry()` no longer treates low-level HTTP failures the same way as transient errors by default. You can return to the previous behaviour with `retry_on_error = TRUE`.,NA,NA,NA,NA
 bslib,b2d872a6dcc1d4c10357f67f6ce2332f,"Fixed a bug in `bs_themer()` (and `bs_theme_preview()`) that caused it to stop applying changes if a Sass variable was `NULL`. (@​meztez, #1112)",NA,NA,NA,NA
+ragg,83812ed0e84bfb125efba860dfa39826,Fixed a regression from upstream changes in Freetype (#172),NA,NA,NA,NA
