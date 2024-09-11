@@ -1,5 +1,7 @@
 # ragg (development version)
 
+# ragg 1.3.3
+
 * Fixed a regression from upstream changes in Freetype (#172)
 
 # ragg 1.3.2
