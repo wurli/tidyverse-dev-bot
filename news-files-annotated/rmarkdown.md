@@ -6,6 +6,37 @@
     `find_external_resources()` now correctly detects knitr child
     document provided with option like `child = c("child.Rmd")` (thanks,
     @rempsyc, #2574).
+
+    !end-bullet!
+-   !begin-bullet!
+    `knit_params_ask()` uses a `select` input for parameters which allow
+    multiple selected values. Previously, a `radio` input was
+    incorrectly used when the parameter had a small number of choices.
+
+    !begin-codeblock!
+    ``` yaml
+    params:
+        primaries:
+            choices: ["red", "yellow", "blue"]
+            multiple: true
+    ```
+
+    !end-codeblock!
+    When `multiple` is not enabled, parameter configuration still uses
+    `radio` when there are fewer than five choices.
+
+    The `input` parameter field can still be used to force the
+    configuration control.
+
+    !begin-codeblock!
+    ``` yaml
+    params:
+        grade:
+            input: radio
+            choices: ["A", "B", "C", "D", "F"]
+    ```
+
+    !end-codeblock!
     !end-bullet!
 
 !end-bullets-1!

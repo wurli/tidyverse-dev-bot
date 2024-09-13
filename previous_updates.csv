@@ -17801,3 +17801,19 @@ httr2,8a49b41f3d9eed7fa877e5e6f3193fc0,`req_body_file()` now works with files \>
 httr2,91388ba11ee613b5a0402c87b8ebf953,`req_cache()` now re-caches the response if the body is hasn't been modified but the headers have changed (#442). It also works better when `req_perform()` sets a path (#442).,NA,NA,NA,NA
 httr2,8c2b9b3f03dec1bbded56dee0b515a97,"New `req_perform_connection()` for working with streaming data. Unlike `req_perform_stream()` which uses callbacks, `req_perform_connection()` returns a regular response object with a connection as the body. Unlike `req_perform_stream()` it supports `req_retry()` (with @​jcheng5, #519).",NA,NA,NA,NA
 httr2,66917b995fe5cbd10863db2be030e103,"New `resp_stream_bytes()`, `resp_stream_lines()`, and `resp_stream_sse()` for streaming chunk from a connection response (#519).",NA,NA,NA,NA
+rmarkdown,85f7c814bda3e0d9bc5de68a3701f1f6,"`knit_params_ask()` uses a `select` input for parameters which allow multiple selected values. Previously, a `radio` input was incorrectly used when the parameter had a small number of choices.",NA,NA,NA,NA
+rmarkdown,85f7c814bda3e0d9bc5de68a3701f1f6,"```
+``` yaml
+params:
+    primaries:
+        choices: [""red"", ""yellow"", ""blue""]
+        multiple: true
+```",NA,NA,NA,NA
+rmarkdown,85f7c814bda3e0d9bc5de68a3701f1f6,"When `multiple` is not enabled, parameter configuration still uses `radio` when there are fewer than five choices. The `input` parameter field can still be used to force the configuration control.",NA,NA,NA,NA
+rmarkdown,85f7c814bda3e0d9bc5de68a3701f1f6,"```
+``` yaml
+params:
+    grade:
+        input: radio
+        choices: [""A"", ""B"", ""C"", ""D"", ""F""]
+```",NA,NA,NA,NA
