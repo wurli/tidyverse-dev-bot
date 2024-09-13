@@ -17797,3 +17797,7 @@ sortable,10b870e3be532a8322c96ff92a4d25c6,New functionality to update `labels` i
 sortable,09c2567b9de0a8b62bc4046645a3f0b2,Add support for `update_rank_list()`,NA,NA,NA,NA
 rmarkdown,a689bcd22dbf2c1f0317727a42f157c5,"`find_external_resources()` now correctly detects knitr child document provided with option like `child = c(""child.Rmd"")` (thanks, @​rempsyc, #2574).",NA,NA,NA,NA
 ggplot2,1629820c1ca3f2066e73afeb8e2f49cf,Built-in `theme_*()` functions now have `ink` and `paper` arguments to control foreground and background colours respectively (@​teunbrand),NA,NA,NA,NA
+httr2,8a49b41f3d9eed7fa877e5e6f3193fc0,`req_body_file()` now works with files \>64kb once more (#524) and no longer leaks a connection if the response doesn't complete succesfully (#534).,NA,NA,NA,NA
+httr2,91388ba11ee613b5a0402c87b8ebf953,`req_cache()` now re-caches the response if the body is hasn't been modified but the headers have changed (#442). It also works better when `req_perform()` sets a path (#442).,NA,NA,NA,NA
+httr2,8c2b9b3f03dec1bbded56dee0b515a97,"New `req_perform_connection()` for working with streaming data. Unlike `req_perform_stream()` which uses callbacks, `req_perform_connection()` returns a regular response object with a connection as the body. Unlike `req_perform_stream()` it supports `req_retry()` (with @​jcheng5, #519).",NA,NA,NA,NA
+httr2,66917b995fe5cbd10863db2be030e103,"New `resp_stream_bytes()`, `resp_stream_lines()`, and `resp_stream_sse()` for streaming chunk from a connection response (#519).",NA,NA,NA,NA
