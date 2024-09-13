@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Built-in `theme_*()` functions now have `ink` and `paper` arguments
+    to control foreground and background colours respectively
+    (@teunbrand)
+
+    !end-bullet!
+-   !begin-bullet!
     The `summary()` method for ggplots is now more terse about facets
     (@teunbrand, #5989).
 

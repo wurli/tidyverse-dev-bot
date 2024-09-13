@@ -17796,3 +17796,4 @@ sortable,6ba456573fea82dbf47d1d6172647124,New function `update_bucket_list()` to
 sortable,10b870e3be532a8322c96ff92a4d25c6,New functionality to update `labels` in `update_rank_list()`,NA,NA,NA,NA
 sortable,09c2567b9de0a8b62bc4046645a3f0b2,Add support for `update_rank_list()`,NA,NA,NA,NA
 rmarkdown,a689bcd22dbf2c1f0317727a42f157c5,"`find_external_resources()` now correctly detects knitr child document provided with option like `child = c(""child.Rmd"")` (thanks, @​rempsyc, #2574).",NA,NA,NA,NA
+ggplot2,1629820c1ca3f2066e73afeb8e2f49cf,Built-in `theme_*()` functions now have `ink` and `paper` arguments to control foreground and background colours respectively (@​teunbrand),NA,NA,NA,NA
