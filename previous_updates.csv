@@ -17795,3 +17795,4 @@ ragg,83812ed0e84bfb125efba860dfa39826,Fixed a regression from upstream changes i
 sortable,6ba456573fea82dbf47d1d6172647124,New function `update_bucket_list()` to update the items in a bucket list,NA,NA,NA,NA
 sortable,10b870e3be532a8322c96ff92a4d25c6,New functionality to update `labels` in `update_rank_list()`,NA,NA,NA,NA
 sortable,09c2567b9de0a8b62bc4046645a3f0b2,Add support for `update_rank_list()`,NA,NA,NA,NA
+rmarkdown,a689bcd22dbf2c1f0317727a42f157c5,"`find_external_resources()` now correctly detects knitr child document provided with option like `child = c(""child.Rmd"")` (thanks, @​rempsyc, #2574).",NA,NA,NA,NA
