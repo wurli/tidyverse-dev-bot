@@ -17817,3 +17817,15 @@ params:
         input: radio
         choices: [""A"", ""B"", ""C"", ""D"", ""F""]
 ```",NA,NA,NA,NA
+blob,70f688f6b5f8c7ee79d6a993e758f77e,"Install via R CMD INSTALL ., not pak (#30).",NA,NA,NA,NA
+blob,70f688f6b5f8c7ee79d6a993e758f77e,"• ci: Install via R CMD INSTALL ., not pak",NA,NA,NA,NA
+blob,70f688f6b5f8c7ee79d6a993e758f77e,• ci: Bump version of upload-artifact action,NA,NA,NA,NA
+hms,8d69847f6726a3393b1ca85da72ddf1b,"Install via R CMD INSTALL ., not pak (#122).",NA,NA,NA,NA
+hms,8d69847f6726a3393b1ca85da72ddf1b,"• ci: Install via R CMD INSTALL ., not pak",NA,NA,NA,NA
+hms,8d69847f6726a3393b1ca85da72ddf1b,• ci: Bump version of upload-artifact action,NA,NA,NA,NA
+pillar,fb9a143dd6bb7ecd82f79f73613197c5,"Install via R CMD INSTALL ., not pak (#672).",NA,NA,NA,NA
+pillar,fb9a143dd6bb7ecd82f79f73613197c5,"• ci: Install via R CMD INSTALL ., not pak",NA,NA,NA,NA
+pillar,fb9a143dd6bb7ecd82f79f73613197c5,• ci: Bump version of upload-artifact action,NA,NA,NA,NA
+tibble,45ae7848d6f7fdfd6918b5f7d25ecfbc,"Install via R CMD INSTALL ., not pak (#1601).",NA,NA,NA,NA
+tibble,45ae7848d6f7fdfd6918b5f7d25ecfbc,"• ci: Install via R CMD INSTALL ., not pak",NA,NA,NA,NA
+tibble,45ae7848d6f7fdfd6918b5f7d25ecfbc,• ci: Bump version of upload-artifact action,NA,NA,NA,NA
