@@ -3,6 +3,14 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    New technique for trimming uninteresting frames from the stack
+    (#130). This requires a new evaluation model where the code you
+    supply to `profvis()` is turned into the body of a zero-argument
+    anonymous function that is then called by profvis. This subtly
+    changes the semantics of evaluation, but it's very unlikely to
+    affect the type of code that you are typically profiling.
+    !end-bullet!
+-   !begin-bullet!
     Bundled `highlight.js` updated to the latest version 11.10.0.
     !end-bullet!
 -   !begin-bullet!

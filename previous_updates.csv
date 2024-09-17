@@ -17830,3 +17830,4 @@ tibble,45ae7848d6f7fdfd6918b5f7d25ecfbc,"Install via R CMD INSTALL ., not pak (#
 tibble,45ae7848d6f7fdfd6918b5f7d25ecfbc,"• ci: Install via R CMD INSTALL ., not pak",NA,NA,NA,NA
 tibble,45ae7848d6f7fdfd6918b5f7d25ecfbc,• ci: Bump version of upload-artifact action,NA,NA,NA,NA
 reticulate,a88e132b0728ba9af8627fb925b2c33e,"Fixed error when using reticulate with radian (#1668, #1670).",NA,NA,NA,NA
+profvis,d9f6d93661097de169f79918344167bb,"New technique for trimming uninteresting frames from the stack (#130). This requires a new evaluation model where the code you supply to `profvis()` is turned into the body of a zero-argument anonymous function that is then called by profvis. This subtly changes the semantics of evaluation, but it's very unlikely to affect the type of code that you are typically profiling.",NA,NA,NA,NA
