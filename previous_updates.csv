@@ -17829,3 +17829,4 @@ pillar,fb9a143dd6bb7ecd82f79f73613197c5,• ci: Bump version of upload-artifact 
 tibble,45ae7848d6f7fdfd6918b5f7d25ecfbc,"Install via R CMD INSTALL ., not pak (#1601).",NA,NA,NA,NA
 tibble,45ae7848d6f7fdfd6918b5f7d25ecfbc,"• ci: Install via R CMD INSTALL ., not pak",NA,NA,NA,NA
 tibble,45ae7848d6f7fdfd6918b5f7d25ecfbc,• ci: Bump version of upload-artifact action,NA,NA,NA,NA
+reticulate,a88e132b0728ba9af8627fb925b2c33e,"Fixed error when using reticulate with radian (#1668, #1670).",NA,NA,NA,NA

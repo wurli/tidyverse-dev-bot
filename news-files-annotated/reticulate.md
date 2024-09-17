@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed error when using reticulate with radian (#1668, #1670).
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed segfault encountered when running Python finalizer (#1663,
     #1664)
 
