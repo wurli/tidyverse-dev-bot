@@ -3,36 +3,35 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
-    New technique for trimming uninteresting frames from the stack
-    (#130). This requires a new evaluation model where the code you
-    supply to `profvis()` is turned into the body of a zero-argument
-    anonymous function that is then called by profvis. This subtly
-    changes the semantics of evaluation, but it's very unlikely to
-    affect the type of code that you are typically profiling.
+    profvis now requires R 4.0.0. The bundled version of jQuery has been
+    upgraded to 3.7.1 (@hedsnz, #139) and the bundled `highlight.js` has
+    been updated to the 11.10.0 (#140). It no longer longer requires
+    purrr or stringr, and no longer suggests ggplot2, devtools, knitr,
+    or rmarkdown.
+
     !end-bullet!
 -   !begin-bullet!
-    Bundled `highlight.js` updated to the latest version 11.10.0.
+    `provis()` uses a new technique for trimming uninteresting frames
+    from the stack (#130). This requires a new evaluation model where
+    the code you supply to `profvis()` is turned into the body of a
+    zero-argument anonymous function that is then called by profvis.
+    This subtly changes the semantics of evaluation, but the primary
+    effect is that if you create variables inside of the profiled code
+    they will no longer be available outside of it.
+
+    !end-bullet!
+-   !begin-bullet!
+    `profvis()` now uses elapsed time where possible (#72).
+
+    !end-bullet!
+-   !begin-bullet!
+    `profvis()` now uses doubles instead of integers (#114).
+
     !end-bullet!
 -   !begin-bullet!
     The CSS for profvis code is scoped so that it does not affect other
     blocks of code, such as those from RMarkdown or Quarto (@wch, #140).
-    !end-bullet!
--   !begin-bullet!
-    profvis now relies on R 4.0.0.
-    !end-bullet!
--   !begin-bullet!
-    `profvis()` now uses doubles instead of integers (#114).
-    !end-bullet!
--   !begin-bullet!
-    The version of jQuery bundled in profvis has been upgraded to 3.7.1
-    (@hedsnz, #139).
-    !end-bullet!
--   !begin-bullet!
-    profvis no longer requires purrr or stringr, and no longer suggests
-    ggplot2, devtools, knitr, or rmarkdown.
-    !end-bullet!
--   !begin-bullet!
-    `profvis()` now uses elapsed time where possible (#72).
+
     !end-bullet!
 
 !end-bullets-1!

@@ -1290,7 +1290,7 @@ improvements to customisation, and implementation of local search.
 -   !begin-bullet!
     `build_reference()` now allows linking to topics from other packages
     (either function names e.g. `rlang::is_installed` or topic names
-    e.g.  `sass::font_face`). (#1664)
+    e.g. `sass::font_face`). (#1664)
 
     !end-bullet!
 -   !begin-bullet!
@@ -2250,7 +2250,7 @@ See additional details in `?build_news`:
 !begin-bullets-62!
 
 -   !begin-bullet!
-    News page recognises more version specifications (including the\
+    News page recognises more version specifications (including the
     "(development version)" now used by usethis) (#980).
 
     !end-bullet!
@@ -2401,7 +2401,7 @@ See additional details in `?build_news`:
 
     !end-bullet!
 -   !begin-bullet!
-    `\usage{}` now supports qualified functions eliminating\
+    `\usage{}` now supports qualified functions eliminating
     `Error in fun_info(x) : Unknown call: ::` errors (#795).
 
     !end-bullet!
