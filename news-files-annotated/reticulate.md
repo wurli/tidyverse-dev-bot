@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed error when converting an empty NumPy char array to R (#1662).
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed error when using reticulate with radian (#1668, #1670).
 
     !end-bullet!
@@ -14,6 +18,12 @@
 -   !begin-bullet!
     Fixed segfault encountered in RStudio when rapidly switching between
     R and Python chunks in a Quarto document (#1665).
+
+    !end-bullet!
+-   !begin-bullet!
+    Improved behavior when the conda binary used to create an
+    environment could not be resolved (contributed by @tl-hbk, #1654,
+    #1659)
 
     !end-bullet!
 
