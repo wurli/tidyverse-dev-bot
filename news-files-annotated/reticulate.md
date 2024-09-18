@@ -3,6 +3,13 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed error where `py_discover_config()` attempted to detect Windows
+    App Store Python installations, which are now excluded from
+    discovery by both `py_discover_config()` and `virtualenv_starter()`
+    (#1656, #1673).
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed error when converting an empty NumPy char array to R (#1662).
 
     !end-bullet!
