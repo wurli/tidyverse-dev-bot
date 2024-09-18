@@ -1,5 +1,7 @@
 # pkgdown (development version)
 
+# pkgdown 2.1.1
+
 * Added keyboard shortcut, `/`, to focus search bar (#2423)
 * The `BugReports` field can now be an email (@catalamarti, #2275).
 * New `clean_cache()` function removes the contents of the cache directory (#2718).
