@@ -164,6 +164,12 @@
     (@olivroy, #1773)
 
     !end-bullet!
+-   !begin-bullet!
+    Fixed an issue where `md()` and `fmt_markdown()` would render
+    factors as their numeric levels rather than their text labels
+    (@rossellhayes, #1883).
+
+    !end-bullet!
 
 !end-bullets-4!
 
