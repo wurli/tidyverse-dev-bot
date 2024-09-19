@@ -17838,3 +17838,4 @@ gt,f44eb2e8ac9ce185907d504fe433f0d6,"Fixed an issue where `md()` and `fmt_markdo
 reticulate,20fd125d3f959d5b420cdf474dd6fa33,Fixed error when converting an empty NumPy char array to R (#1662).,NA,NA,NA,NA
 reticulate,7c5b8afe1ca196ad77fc6cedd125f543,"Improved behavior when the conda binary used to create an environment could not be resolved (contributed by @​tl-hbk, #1654, #1659)",NA,NA,NA,NA
 reticulate,c25b1d2e0badffe5df84ec1cac48aa39,"Fixed error where `py_discover_config()` attempted to detect Windows App Store Python installations, which are now excluded from discovery by both `py_discover_config()` and `virtualenv_starter()` (#1656, #1673).",NA,NA,NA,NA
+renv,11c30d09038577c07d374d468dcea272,"`renv` now infers a dependency on the `ragg` package when the `ragg_png` device is used in R Markdown / Quarto documents, for documents using the code `knitr::opts_chunk$set(dev = ""ragg_png"")`. (#1985)",NA,NA,NA,NA
