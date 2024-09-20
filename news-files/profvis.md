@@ -1,5 +1,7 @@
 # profvis (development version)
 
+# profvis 0.4.0
+
 * profvis now requires R 4.0.0. The bundled version of jQuery has been upgraded
   to 3.7.1 (@hedsnz, #139) and the bundled `highlight.js` has been updated to
   the 11.10.0 (#140). It no longer longer requires purrr or stringr, and no

@@ -1,4 +1,6 @@
-# renv (development version)
+# renv 1.1.0 (UNRELEASED)
+
+# renv 1.0.8
 
 !begin-bullets-1!
 

@@ -1,5 +1,7 @@
 # profvis (development version)
 
+# profvis 0.4.0
+
 !begin-bullets-1!
 
 -   !begin-bullet!
