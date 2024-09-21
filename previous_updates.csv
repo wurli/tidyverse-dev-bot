@@ -17848,3 +17848,143 @@ pointblank,9623ec88fe953a9053b03b66d8ddc278,Fixed bug with non-standard column n
 pointblank,a58e10999ed24fbef7f760aa2b70c543,"Fixed a regression in `col_vals_*()` functions, where `vars(""col"")` was evaluating to the string `""col""`. Behavior of `vars(""col"")` is now aligned back with `vars(col)` - both evaluate to the column name `col`. (#535)",NA,NA,NA,NA
 pointblank,598193d7ff64220ac9453ec8460ff635,"Problems arising from comparing `columns` to a `value` of different class (for example, comparing a datetime column to a date value `Sys.Date()` instead of another datetime value `Sys.time()`) are now signalled appropriately at `interrogate()`. (#539)",NA,NA,NA,NA
 pointblank,4d66445c93c82953a8685e8ed18ed912,Fixed bug in `has_columns()` failing to detect non-existing columns when supplied as a character vector. (#540),NA,NA,NA,NA
+duckplyr,c9c5c12accbdfbf93375626b01625829,Detect functions from the duckplyr package (#246).,1,1,FALSE,NA
+duckplyr,6454c7dc336694ec16abc1127ab86435,"New `duckplyr_execute()` to execute configuration queries against the default duckdb connection (#39, #165, #227).",1,2,FALSE,NA
+duckplyr,dcf6db80fc9dd01050f9e466a3667231,"`as_duckplyr_tibble()` supports dbplyr connections to a duckdb database (#86, #211, #226).",1,3,FALSE,NA
+duckplyr,83e4cd888eaf18a34e478240e8a64cf7,Avoid failures if artifact is missing.,1,4,FALSE,NA
+duckplyr,7f3719edac0b106a732e94cb9bb92312,Store SHA as artifact.,1,5,FALSE,NA
+duckplyr,693b790cb5eb8196a2be9bdc47a7006a,Move towards external status updates.,1,6,FALSE,NA
+duckplyr,0dc145efe1255cddb8b41deb202abf3c,Tweak status workflow.,1,7,FALSE,NA
+duckplyr,f310bf07e6e5ff33b40188b575adcb36,Use token.,1,8,FALSE,NA
+duckplyr,252c09c470667bc9bb77f14c75ceacc0,Add external workflow to update commit statuses.,1,9,FALSE,NA
+duckplyr,a3cb026ea47215937ab7d8beb89a2e43,Avoid manually installing package for pkgdown (#245).,1,10,FALSE,NA
+duckplyr,27ecff2cc6a7b6a24443a1f065315793,Fix fledge (#243).,1,11,FALSE,NA
+duckplyr,035941815f07ce7d298daa225d034185,Use proper remote repo (#241).,1,12,FALSE,NA
+duckplyr,fe34b16ffcf5fa4775b65762074df7eb,Add permissions to fledge workflow (#238).,1,13,FALSE,NA
+duckplyr,535510eb92db44b710e04c59103c4f0a,Fix tests without suggested packages (#236).,1,14,FALSE,NA
+duckplyr,e921719ddfaa579b6933f42e449ca6d4,Add permissions to fledge workflow (#235).,1,15,FALSE,NA
+duckplyr,e84052157f13d07134e21f7ec944d218,Add permissions to fledge workflow (#234).,1,16,FALSE,NA
+duckplyr,8dcb26a92a5bdedf4ecdc4cd434c03fd,Add input to fledge workflow (#233).,1,17,FALSE,NA
+duckplyr,4fba03c9216f0d38dc036fc94b742238,Use proper token for fledge (#232).,1,18,FALSE,NA
+duckplyr,4d0059b185a9d17345a908688e092666,Fix fledge workflow (#231).,1,19,FALSE,NA
+duckplyr,edacbead8941cf1f029a205c8ae5545f,Bump version via PR (#230).,1,20,FALSE,NA
+duckplyr,990e42e983ea3df537ca838397e59be9,Sync with duckdb.,1,21,FALSE,NA
+duckplyr,f60c6f3fbfd25d296beba53ca4571205,Move to tidyverse (#225).,1,22,FALSE,NA
+duckplyr,643ad84de5a9afea045e8e9121eb1444,Merge branch 'cran-0.4.1'.,1,23,FALSE,NA
+duckplyr,b261d22eab74c9a7f88c7d7951e5fa42,Merge branch 'cran-0.4.1'.,1,24,FALSE,NA
+duckplyr,6443511aaf333ae27ac77418f5012c74,"`df_from_file()` and related functions support multiple files (#194, #195), show a clear error message for non-string `path` arguments (#182), and create a tibble by default (#177).",1,25,FALSE,NA
+duckplyr,6f9966dedb84d1a193366da0e15be03f,New `as_duckplyr_tibble()` to convert a data frame to a duckplyr tibble (#177).,1,26,FALSE,NA
+duckplyr,40fec22c1c9c659bec1b17c46f7e5c82,"Support descending sort for character and other non-numeric data (@​toppyy, #92, #175).",1,27,FALSE,NA
+duckplyr,b5965393edb5012ed5e55f138371b138,Avoid setting memory limit (#193).,1,28,FALSE,NA
+duckplyr,d258b2fba358b17f64e0edecd6db9fb2,"Check compatibility of join columns (#168, #185).",1,29,FALSE,NA
+duckplyr,6afb365d4252dac68e52910872ad36b5,"Explicitly list supported functions, add contributing guide, add analysis scripts for GitHub activity data (#179).",1,30,FALSE,NA
+duckplyr,31cb4a4eebdeb97de9c142a0eba3d0a3,Add contributing guide (#179).,1,31,FALSE,NA
+duckplyr,e23808b8be3427c5e7da31328dc0988a,"Show a startup message at package load if telemetry is not configured (#188, #198).",1,32,FALSE,NA
+duckplyr,37496ca842bcb9a356c05eaa0bfab728,"`?df_from_file` shows how to read multiple files (#181, #186) and how to specify CSV column types (#140, #189), and is shown correctly in reference index (#173, #190).",1,33,FALSE,NA
+duckplyr,28dd6e4f1168c8e4c9e5303264dfad9d,"Discuss dbplyr in README (#145, #191).",1,34,FALSE,NA
+duckplyr,06b3893a5b5e6b6c0c092b51fea69a45,Add analysis scripts for GitHub activity data (#179).,1,35,FALSE,NA
+duckplyr,8015939f1badd936dd9e0dbf26d6f5a8,"Use built-in rfuns extension to implement equality and inequality operators, improve translation for `as.integer()`, `NA` and `%in%` (#83, #154, #148, #155, #159, #160).",1,36,FALSE,NA
+duckplyr,5bd3357a4e025f043a9d872a4ff96f87,"Reexport non-deprecated dplyr functions (#144, #163).",1,37,FALSE,NA
+duckplyr,f64b030b250de2f87748126a164df3cc,`library(duckplyr)` calls `methods_overwrite()` (#164).,1,38,FALSE,NA
+duckplyr,46241619bd678ec808d12ef2da865534,Only allow constant patterns in `grepl()`.,1,39,FALSE,NA
+duckplyr,259c2903d4ff7eaf362ef29c9080a040,Explicitly reject calls with named arguments for now.,1,40,FALSE,NA
+duckplyr,1be89a17773844b9e37b16b6fccd6599,Reduce default memory limit to 1 GB.,1,41,FALSE,NA
+duckplyr,50123e16049f3720e32fac8d3f34368e,"Stricter type checks in the set operations `intersect()`, `setdiff()`, `symdiff()`, `union()`, and `union_all()` (#169).",1,42,FALSE,NA
+duckplyr,d7dbf652d9a3dd5b1c1f6736e87e82fd,Distinguish between constant `NA` and those used in an expression (#157).,1,43,FALSE,NA
+duckplyr,03198cdd55442e71fdd19829fd6e35f4,"`head(-1)` forwards to the default implementation (#131, #156).",1,44,FALSE,NA
+duckplyr,df2a690da5f0de162f4e9e9a75607278,Fix cli syntax for internal error message (#151).,1,45,FALSE,NA
+duckplyr,fee8a3d7337c8b2fc97b1e7bd0648474,More careful detection of row names in data frame.,1,46,FALSE,NA
+duckplyr,9aae6fac7d93c9282bfd9a8becf90091,Always check roundtrip for timestamp columns.,1,47,FALSE,NA
+duckplyr,c43372483c6e240fff870b6f293992d1,`left_join()` and other join functions call `auto_copy()`.,1,48,FALSE,NA
+duckplyr,1044cb49dc5ed0d6205ead8f511a9afc,Only reset expression depth if it has been set before.,1,49,FALSE,NA
+duckplyr,6a3174ecc237aa99e8d842a88eb51857,Require fallback if the result contains duplicate column names when ignoring case.,1,50,FALSE,NA
+duckplyr,816f057af420c424b2ff60884bd58b9b,`row_number()` returns integer.,1,51,FALSE,NA
+duckplyr,d7af52a77a65d372bb350370954ed859,`is.na(NaN)` is `TRUE`.,1,52,FALSE,NA
+duckplyr,f3d3f926883b689efa7e13e7125051ea,"`summarise(count = n(), count = n())` creates only one column named `count`.",1,53,FALSE,NA
+duckplyr,0fb87a1acd01bfd1bc2a357a96984d7a,"Correct wording in instructions for enabling fallback logging (@​TimTaylor, #141).",1,54,FALSE,NA
+duckplyr,cb3bcb20afd923d2a1e3c43a817c2535,"Remove styler dependency (#137, #138).",1,55,FALSE,NA
+duckplyr,3a67d1f9f11ba18aa72bfb067ed417bd,Avoid error from stats collection.,1,56,FALSE,NA
+duckplyr,93db9ad2669543e6071909096b140ebb,"Mention wildcards to read multiple files in `?df_from_file` (@​andreranza, #133, #134).",1,57,FALSE,NA
+duckplyr,f553d4d8284a96901bc4f2442df11f68,Reenable tests that now run successfully (#166).,1,58,FALSE,NA
+duckplyr,5d967e82f4dbd86bb6bc367f5f7adb74,Synchronize tests (#153).,1,59,FALSE,NA
+duckplyr,d7ebe05c2b8bebd531fff00fad8cbc6a,Test that `vec_ptype()` does not materialize (#149).,1,60,FALSE,NA
+duckplyr,f8a362bebaae3e3ca8be8607a3c43fcf,Improve telemetry tests.,1,61,FALSE,NA
+duckplyr,7b6c5612257a9f85ec2e9ba634f8a3a8,Promote equality checks to `expect_identical()` to capture differences between doubles and integers.,1,62,FALSE,NA
+duckplyr,9d50e6688d0f8bd4c5513269df184fe6,Run autoupload in function so that it will be checked by static analysis (#122).,1,63,FALSE,NA
+duckplyr,81ffd2c2b0bdcdf4a26a569af82a13f0,"New `df_to_parquet()` to write to Parquet, new convenience functions `df_from_csv()`, `duckdb_df_from_csv()`, `df_from_parquet()` and `duckdb_df_from_parquet()` (#87, #89, #96, #128).",1,64,FALSE,NA
+duckplyr,d07afed69146bb77257625914a3dc6fd,"Forbid reuse of new columns created in `summarise()` (#72, #106).",1,65,FALSE,NA
+duckplyr,88f1ce6202e176b1fc15441eda3e0123,`summarise()` no longer restores subclass.,1,66,FALSE,NA
+duckplyr,36924ad9ee15d76c9c58039b3ad0447b,Disambiguate computation of `log10()` and `log()`.,1,67,FALSE,NA
+duckplyr,3beda9a53ce3c7ee6df9f03f8ce4e0eb,Fix division by zero for positive and negative numbers.,1,68,FALSE,NA
+duckplyr,d7c19b135a373147e08a22dafdb59e82,"New `fallback_sitrep()` and related functionality for collecting telemetry data (#102, #107, #110, #111, #115). No data is collected by default, only a message is displayed once per session and then every eight hours. Opt in or opt out by setting environment variables.",1,69,FALSE,NA
+duckplyr,bc1b86ae4635d5410e46e1f4760141d3,"Implement `group_by()` and other methods to collect fallback information (#94, #104, #105).",1,70,FALSE,NA
+duckplyr,672e81d2ebf7cf59633cc260124e8f41,Set memory limit and temporary directory for duckdb.,1,71,FALSE,NA
+duckplyr,3194704816d04dc0643f7e4b7bbf0112,Implement `suppressWarnings()` as the identity function.,1,72,FALSE,NA
+duckplyr,80c95f844d0f35cb032d2ef29bd588b8,Prefer `cli::cli_abort()` over `stop()` or `rlang::abort()` (#114).,1,73,FALSE,NA
+duckplyr,a29386f5610610eca7990955d55a1195,Translate `.data$a` and `.env$a`.,1,74,FALSE,NA
+duckplyr,5d7f1ce7a3b655d89c0388ef2dc76da9,"Strict checks for column class, only supporting `integer`, `numeric`, `logical`, `Date`, `POSIXct`, and `difftime` for now.",1,75,FALSE,NA
+duckplyr,de4b2855a7ea65b56f3ba1ab6e22656d,"If the environment variable `DUCKPLYR_METHODS_OVERWRITE` is set to `TRUE`, loading duckplyr automatically calls `methods_overwrite()`.",1,76,FALSE,NA
+duckplyr,5ef7426c0d08260afb1f2c21bcf4bccc,Better duckdb tests.,1,77,FALSE,NA
+duckplyr,6da82cc7bedd545d28858d4078e0bb84,Use standalone purrr for dplyr compatibility.,1,78,FALSE,NA
+duckplyr,e0f18a2a8836fa0f99444683f8e26625,Add tests for correct base of `log()` and `log10()`.,1,79,FALSE,NA
+duckplyr,86e051c4e02672932ea9786b11386841,`methods_overwrite()` and `methods_restore()` show a message.,1,80,FALSE,NA
+duckplyr,42f1b8a6b2b3cad9a0319c7a7933a40e,`grepl(x = NA)` gives correct results.,1,81,FALSE,NA
+duckplyr,e45eb90b596fb8a661259c17d6ea9167,Fix `auto_copy()` for non-data-frame input.,1,82,FALSE,NA
+duckplyr,d96794e51d5f26a8c2552f11c11ad0cf,Add output order preservation for filters.,1,83,FALSE,NA
+duckplyr,d45143a02b743976105f2c2c01c89569,"`distinct()` now preserves order in corner cases (#77, #78).",1,84,FALSE,NA
+duckplyr,cbb9aa5447412a166cd1c957772c529a,"Consistent computation of `log(0)` and `log(-1)` (#75, #76).",1,85,FALSE,NA
+duckplyr,7d8f108e65493f5050bdd81832344a19,Only allow constants in `mutate()` that are actually representable in duckdb (#73).,1,86,FALSE,NA
+duckplyr,b0181d77a9deecefaa7e65522c758178,"Avoid translating `ifelse()`, support `if_else()` (#79).",1,87,FALSE,NA
+duckplyr,750d72b48b50be0d9240ec56a4581edf,"Separate and explain the new relational examples (@​wibeasley, #84).",1,88,FALSE,NA
+duckplyr,93978296a2837808cf23b3aa4f013fc2,Add test that TPC-H queries can be processed.,1,89,FALSE,NA
+duckplyr,f622030282544f7c80f527416d50b979,Sync with dplyr 1.1.4 (#82).,1,90,FALSE,NA
+duckplyr,23aa077b1d8c90e767250166b839ec84,Remove `dplyr_reconstruct()` method (#48).,1,91,FALSE,NA
+duckplyr,bdc87b49a3090137243464379ddc18d1,Render README.,1,92,FALSE,NA
+duckplyr,46f5fbcc4abca0ec14cda9d305a7b9ca,Fix code generated by `meta_replay()`.,1,93,FALSE,NA
+duckplyr,423a4bfbe311c40521db9f2083e8dc0e,Bump constructive dependency.,1,94,FALSE,NA
+duckplyr,f98e47d1d1ba3dfc0cb9b95296d4944b,Fix output order for `arrange()` in case of ties.,1,95,FALSE,NA
+duckplyr,66cab6b408a8d6130d8868e1d90c32dd,Update duckdb tests.,1,96,FALSE,NA
+duckplyr,a6f398b314d899c28bc6780e478dd360,"Only implement newer `slice_sample()`, not `sample_n()` or `sample_frac()` (#74).",1,97,FALSE,NA
+duckplyr,d330526f3ac25f146aee450dc96fa0c5,Sync generated files (#71).,1,98,FALSE,NA
+duckplyr,567ab1fa52857c388c3fe6c6465a11eb,"Join using `IS NOT DISTINCT FROM` for faster execution (duckdb/duckdb-r#41, #68).",1,99,FALSE,NA
+duckplyr,ae28caed81e9f7dc2d741d4ffe3e9c29,"Add stability to README output (@​maelle, #62, #65).",1,100,FALSE,NA
+duckplyr,8578f860123b92963d18cc818389174f,"`summarise()` keeps `""duckplyr_df""` class (#63, #64).",1,101,FALSE,NA
+duckplyr,6f44e35aea34831e46fd2e2aa2e99737,Fix compatibility with duckdb \>= 0.9.1.,1,102,FALSE,NA
+duckplyr,0a83a96b9d9b392cc50d950b99568539,Skip tests that give different output on dev tidyselect.,1,103,FALSE,NA
+duckplyr,1cd6552f2325a121b3872ed90e2e6339,Import `utils::globalVariables()`.,1,104,FALSE,NA
+duckplyr,2e87610f5e49dff4e7e76d444ef29f83,"Small README improvements (@​maelle, #34, #57).",1,105,FALSE,NA
+duckplyr,4cb8cfaf4b7e3076092b27f9d5340d8a,Fix 301 in README.,1,106,FALSE,NA
+duckplyr,2cf2c48a7910912428c6bb96882221c1,Improve documentation.,1,107,FALSE,NA
+duckplyr,5d9b8bc2ad4742163654aeb2034f9a1f,Work around problem with `dplyr_reconstruct()` in R 4.3.,1,108,FALSE,NA
+duckplyr,55a6ce7e26c88b09e486a2b1e17d148f,Rename `duckdb_from_file()` to `df_from_file()`.,1,109,FALSE,NA
+duckplyr,8b3c32fbcc85e0fa34ecba700640b4d5,"Unexport private `duckdb_rel_from_df()`, `rel_from_df()`, `wrap_df()` and `wrap_integer()`.",1,110,FALSE,NA
+duckplyr,e67649d461eb27e993d3c48100ce8efb,Reexport `%>%` and `tibble()`.,1,111,FALSE,NA
+duckplyr,84172b2a9f72521869701104c55dbe63,Implement relational API for DuckDB.,1,112,FALSE,NA
+duckplyr,874012e6598aed7d16a7d0d9b1e486e0,Fix examples.,1,113,FALSE,NA
+duckplyr,c571226e4de37d870350c0e6c451dcad,Add CRAN install instructions.,1,114,FALSE,NA
+duckplyr,0b5a198db69996dc418d1ee2224d0792,Satisfy `R CMD check`.,1,115,FALSE,NA
+duckplyr,a19e6937f7f0f6e2396270d9655cd9ba,Document argument.,1,116,FALSE,NA
+duckplyr,23fea4fc7c6c9382c7ff6d8ec33d8f16,Error on NOTE.,1,117,FALSE,NA
+duckplyr,72fbd854606fa47352941be56a3a2b93,Remove `relexpr_window()` for now.,1,118,FALSE,NA
+duckplyr,79c59c6b81bd726c87f26441c494a0f9,Clean up reference.,1,119,FALSE,NA
+quarto,ee8328dacf143b531217c599bdbcd8f3,"Add `quarto.quiet` options to allow more verbose error message when `quarto_*` function are used inside other package. For example, inside **pkgdown** for building Quarto vignettes. **pkgdown** sets `quiet = TRUE` internally for its call to `quarto_render()`, and setting `options(quarto.quiet = TRUE)` allows to overwrite this.",1,1,FALSE,NA
+quarto,7507a717308e493bb0c44fbdbfb28973,"`quarto_path()` now returns a normalized path with potential symlink resolved, for less confusion with `quarto_binary_sitrep()` (thanks, @​jennybc).",1,2,FALSE,NA
+quarto,4eabcafc3e291a8bc23858129b3d87ff,"Fix an error with interactive prompt for extension approval (thanks, @​wjschne, #212).",1,3,FALSE,NA
+quarto,8d3e2a7d96094cf987c855f53d066bcb,"`quarto_preview()` now looks at `quarto preview` log to browse to the correct url when inside RStudio viewer (thanks, @​aronatkins, #167).",1,4,FALSE,NA
+quarto,bd414ceece23e647faab720c68e5aeb6,"This package now uses the x.y.z.dev versionning scheme to indicate development, patch, minor and major versions. This follows Tidyverse package version conventions.",1,5,FALSE,NA
+quarto,ee864353ebfa2f07915290a2d64d2742,Adapt tests for CRAN checks issues due to Quarto v1.5.54 regression (though it is fixed upstream).,1,6,FALSE,NA
+quarto,0f6df608d56f285d92170d8917da9c83,"Approval check in `quarto_add_extension()` and `quarto_use_template()` now works correctly (thanks, @​eveyp, #172).",1,7,FALSE,NA
+quarto,eddcae515c99c381390490251076f795,This version is now adapted to Quarto 1.4 latest stable release.,1,8,FALSE,NA
+quarto,f9db65b4094b7bd16fdda250ed685393,"Add registration of vignette engine to use `quarto` as a vignette builder, and use `.qmd` file as vignette. See `vignette(""hello"", package = ""quarto"")`. (thanks, @​dcnorris, #57).",1,9,FALSE,NA
+quarto,dde53aad60d2e86224d7931f5763a303,"New `quarto_binary_sitrep()` checks possible difference in Quarto binary used by this package, and the one used by RStudio IDE (thanks, @​jthomasmock, #12).",1,10,FALSE,NA
+quarto,8eef6e17eed7b2e95dc82957be7d347f,"New `is_using_quarto()` to check if a directory requires using Quarto (i.e. it has a `_quarto.yml` or at least one `*.qmd` file) (thanks, @​hadley, #103).",1,11,FALSE,NA
+quarto,d824f45e78463c9be6b7f6152659a312,"New `quarto_create_project()` calls `quarto create project <type> <name>` (thanks, @​maelle, #87).",1,12,FALSE,NA
+quarto,c2f2c4bff291bf2699f126b7c260387e,"New `quarto_add_extension()` and `quarto_use_template()` to deal with Quarto extensions for a Quarto project. (thanks, @​mcanouil, #45, @​remlapmot, #42).",1,13,FALSE,NA
+quarto,883818a4891bec2c16478ec190ccc7b8,"`quarto_render()` and `quarto_inspect()` gains a `profile` argument (thanks, @​andrewheiss, #95, @​salim-b, #123).",1,14,FALSE,NA
+quarto,82c82d420fefa5c447d9106effff64a4,"`quarto_render()` gains `metadata` and `metadata_file` arguments. They can be used to pass modified Quarto metadata at render time. If both are set, `metadata` will be merged over `metadata_file` content. Internally, metadata will be passed as a `--metadata-file` to `quarto render` (thanks, @​mcanouil, #52, @​maelle, #49).",1,15,FALSE,NA
+quarto,415957d5ffa45d04b0e23b0123b51562,"`quarto_render()` and all other relevant functions gain a `quarto_args` argument. It allows to pass additional options flag to `quarto` CLI. This is for advanced usage e.g. when new options are added to Quarto CLI that would not be user-facing in this package's functions (thanks, @​gadenbuie, #125).",1,16,FALSE,NA
+quarto,e018ed4561d7cd50427bd5cb3753a746,Add `quiet` argument in most functions to remove warnings and messages. It default to `FALSE` in most function to match with `quarto` CLI default.,1,17,FALSE,NA
+quarto,77c1cec2a061e67902c299bf20e4b074,"In `quarto_render()`, `execute_params` now converts boolean value to `true/false` correctly as expected by `quarto render` (thanks, @​marianklose, #124).",1,18,FALSE,NA
+quarto,2206989ede5af8831554ac3cb4261331,"Error message now advises to re-run with `quiet = FALSE` because `quarto_render(quiet = TRUE)` will run `quarto render` in quiet mode (thanks to @​gadenbuie, #126, @​wlandau, #16).",1,19,FALSE,NA
+quarto,1a73f03a373f80c0fd36440a53d8a565,**rsconnect** R package dependency has been moved to Suggest to reduce this package's overall number of dependencies. **rsconnect** package is only required for publishing using `quarto_publish_*()` functions. Users will be prompted to install (when in interactive mode) if not installed.,1,20,FALSE,NA
+quarto,982324615a5658c82eb3a7eaee256db8,Added a `NEWS.md` file to track changes to the package.,1,21,FALSE,NA
