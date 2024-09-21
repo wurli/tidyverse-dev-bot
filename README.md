@@ -1,4 +1,4 @@
-# Tidyverse News Twitter Bot
+# 🤖 Tidyverse News Twitter Bot
 
 This bot scrapes updates about tidyverse packages from GitHub and posts
 them to twitter 🚀
@@ -8,7 +8,7 @@ them to twitter 🚀
 
 -   👨‍💻 This bot is maintained by [\@_wurli](https://twitter.com/_wurli)
 
-## How does it work?
+## ❓ How does it work?
 
 1.  `NEWS.md` files are scraped from GitHub for all the packages listed
     by `tidyverse::tidyverse_packages()`
@@ -31,13 +31,13 @@ them to twitter 🚀
 
 This is all automated using GitHub Actions, which simply sources `run.R` once every hour. 
 
-## Why?
+## ❓ Why?
 
 If you use R a lot it's interesting to see what features are in the
 works for popular packages. I also wanted to learn more about twitter
 bots and GitHub actions, so this seemed like a good learning exercise.
 
-## Packages
+## 📦 Packages
 
 See [`R/news_urls.R`](R/news_urls.R) for the full list of packages this 
 bot follows. If you think any are missing, please open an issue on 
