@@ -14,6 +14,7 @@ news_urls <- function(..., .package = NULL, .for_humans = FALSE) {
               "dplyr",          "dplyr",  "tidyverse",   "main",
              "dtplyr",         "dtplyr",  "tidyverse",   "main",
               "dsbox",          "dsbox",  "tidyverse",   "main",
+           "duckplyr",       "duckplyr",  "tidyverse",   "main",
             "forcats",        "forcats",  "tidyverse",   "main",
                "funs",           "funs",  "tidyverse",   "main",
             "ggplot2",        "ggplot2",  "tidyverse",   "main",
