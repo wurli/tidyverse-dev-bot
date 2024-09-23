@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed bug where the `ggplot2::`-prefix did not work with `stage()`
+    (@teunbrand, #6104).
+
+    !end-bullet!
+-   !begin-bullet!
     New `get_labs()` function for retrieving completed plot labels
     (@teunbrand, #6008).
 
