@@ -3,9 +3,15 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed an issue where repository URLs were inappropriately
+    transformed into binary repository URLs on Linux. (#1991)
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed an issue where code following `source("renv/activate.R")` in
     the project `.Rprofile` was not invoked for projects using RStudio.
     (#1990)
+
     !end-bullet!
 
 !end-bullets-1!
