@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    New `get_labs()` function for retrieving completed plot labels
+    (@teunbrand, #6008).
+
+    !end-bullet!
+-   !begin-bullet!
     Built-in `theme_*()` functions now have `ink` and `paper` arguments
     to control foreground and background colours respectively
     (@teunbrand)

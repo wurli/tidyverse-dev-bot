@@ -17988,3 +17988,4 @@ quarto,77c1cec2a061e67902c299bf20e4b074,"In `quarto_render()`, `execute_params` 
 quarto,2206989ede5af8831554ac3cb4261331,"Error message now advises to re-run with `quiet = FALSE` because `quarto_render(quiet = TRUE)` will run `quarto render` in quiet mode (thanks to @​gadenbuie, #126, @​wlandau, #16).",1,19,FALSE,NA
 quarto,1a73f03a373f80c0fd36440a53d8a565,**rsconnect** R package dependency has been moved to Suggest to reduce this package's overall number of dependencies. **rsconnect** package is only required for publishing using `quarto_publish_*()` functions. Users will be prompted to install (when in interactive mode) if not installed.,1,20,FALSE,NA
 quarto,982324615a5658c82eb3a7eaee256db8,Added a `NEWS.md` file to track changes to the package.,1,21,FALSE,NA
+ggplot2,2208f7d6d5cc40aa564fd5289565b7d1,"New `get_labs()` function for retrieving completed plot labels (@​teunbrand, #6008).",NA,NA,NA,NA
