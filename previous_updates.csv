@@ -17990,3 +17990,4 @@ quarto,1a73f03a373f80c0fd36440a53d8a565,**rsconnect** R package dependency has b
 quarto,982324615a5658c82eb3a7eaee256db8,Added a `NEWS.md` file to track changes to the package.,1,21,FALSE,NA
 ggplot2,2208f7d6d5cc40aa564fd5289565b7d1,"New `get_labs()` function for retrieving completed plot labels (@​teunbrand, #6008).",NA,NA,NA,NA
 ggplot2,7556276132d4f28746eabb9312ac99b6,"Fixed bug where the `ggplot2::`-prefix did not work with `stage()` (@​teunbrand, #6104).",NA,NA,NA,NA
+renv,3271042c9afee63dff0aebc3a8f6f1d3,"Fixed an issue where code following `source(""renv/activate.R"")` in the project `.Rprofile` was not invoked for projects using RStudio. (#1990)",NA,NA,NA,NA
