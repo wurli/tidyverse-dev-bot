@@ -1,5 +1,7 @@
 # httr2 (development version)
 
+# httr2 1.0.5
+
 * `req_perform_parallel()` and `req_perform_promise()` now correctly set up the method and body (#549).
 
 # httr2 1.0.4
