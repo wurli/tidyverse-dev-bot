@@ -175,6 +175,10 @@
     now (@olivroy, #1888, #1891).
 
     !end-bullet!
+-   !begin-bullet!
+    `cols_add()` works in more cases (#1893).
+
+    !end-bullet!
 
 !end-bullets-4!
 
