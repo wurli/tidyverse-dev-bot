@@ -17994,3 +17994,4 @@ renv,3271042c9afee63dff0aebc3a8f6f1d3,"Fixed an issue where code following `sour
 renv,12407d38b6b0c90742c82b03a1460534,Fixed an issue where repository URLs were inappropriately transformed into binary repository URLs on Linux. (#1991),NA,NA,NA,NA
 gt,05c4792e9ba1b8022415c21c088d3b5e,"`vec_fmt_*()` (and incidentally `cols_nanoplot()`) should be faster now (@​olivroy, #1888, #1891).",NA,NA,NA,NA
 gt,d870c205418554616a0757ad7ca708cd,`cols_add()` works in more cases (#1893).,NA,NA,NA,NA
+shiny,7c810a1eb6ca049fc4c358cf76e8f638,Small improvements to the default pulse busy indicator to better blend with any background. It's also now slightly smaller by default. (#4122),NA,NA,NA,NA

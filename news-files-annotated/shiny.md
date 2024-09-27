@@ -1,10 +1,22 @@
 # shiny (development version)
 
+## New features and improvements
+
+!begin-bullets-1!
+
+-   !begin-bullet!
+    Small improvements to the default pulse busy indicator to better
+    blend with any background. It's also now slightly smaller by
+    default. (#4122)
+    !end-bullet!
+
+!end-bullets-1!
+
 # shiny 1.9.1
 
 ## Bug fixes
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     Fixed a bug introduced in v1.9.0 where the boundaries of
@@ -12,7 +24,7 @@
     when browser zoom was used. (#4111)
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # shiny 1.9.0
 
@@ -34,7 +46,7 @@ customized with `busyIndicatorOptions()`. For more details, see
 
 ## New features and improvements
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     The client-side TypeScript code for Shiny has been refactored so
@@ -73,11 +85,11 @@ customized with `busyIndicatorOptions()`. For more details, see
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 ## Bug fixes
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     `downloadButton()` and `downloadLink()` are now disabled up until
@@ -103,11 +115,11 @@ customized with `busyIndicatorOptions()`. For more details, see
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 # shiny 1.8.1.1
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     In v1.8.1, shiny.js starting throwing an error when input/output
@@ -117,13 +129,13 @@ customized with `busyIndicatorOptions()`. For more details, see
     breaking apps that happen to work with duplicate IDs. (#4019)
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 # shiny 1.8.1
 
 ## New features and improvements
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     Added `ExtendedTask`, a new simple way to launch long-running
@@ -159,11 +171,11 @@ customized with `busyIndicatorOptions()`. For more details, see
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 ## Changes
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     `renderDataTable()`/`dataTableOutput()` are officially deprecated in
@@ -192,11 +204,11 @@ customized with `busyIndicatorOptions()`. For more details, see
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 ## Bug fixes
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     Notifications are now constrained to the width of the viewport for
@@ -223,13 +235,13 @@ customized with `busyIndicatorOptions()`. For more details, see
 
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 # shiny 1.8.0
 
 ## Breaking changes
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     Closed #3899: The JS function `Shiny.bindAll()` is now asynchronous.
@@ -241,7 +253,7 @@ customized with `busyIndicatorOptions()`. For more details, see
     relies on it being synchronous (i.e., blocking the main thread). In
     this case, consider placing any downstream code in a `.then()`
     callback (or `await` the result in a `async` function). (#3929)
-    !begin-bullets-9!
+    !begin-bullets-10!
     -   !begin-bullet!
         Since `renderContent()` calls `bindAll()` (after it inserts
         content), it now returns a `Promise<void>` instead of `void`,
@@ -249,14 +261,14 @@ customized with `busyIndicatorOptions()`. For more details, see
         binding to complete.
         !end-bullet!
 
-    !end-bullets-9!
+    !end-bullets-10!
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 ## New features and improvements
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     Updated `selectizeInput()`'s selectize.js dependency from v0.12.4 to
@@ -291,11 +303,11 @@ customized with `busyIndicatorOptions()`. For more details, see
 
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 ## Bug fixes
 
-!begin-bullets-11!
+!begin-bullets-12!
 
 -   !begin-bullet!
     `fileInput()` no longer has unwanted round corners applied to the
@@ -308,26 +320,26 @@ customized with `busyIndicatorOptions()`. For more details, see
 
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-12!
 
 # shiny 1.7.5.1
 
 ## Bug fixes
 
-!begin-bullets-12!
+!begin-bullets-13!
 
 -   !begin-bullet!
     On r-devel (R \> 4.3.1), `isTruthy(NULL)` now returns `FALSE` (as it
     does with older versions of R). (#3906)
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
 
 # shiny 1.7.5
 
 ## Possibly breaking changes
 
-!begin-bullets-13!
+!begin-bullets-14!
 
 -   !begin-bullet!
     For `reactiveValues()` objects, whenever the `$names()` or
@@ -346,11 +358,11 @@ customized with `busyIndicatorOptions()`. For more details, see
 
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-14!
 
 ## New features and improvements
 
-!begin-bullets-14!
+!begin-bullets-15!
 
 -   !begin-bullet!
     Closed #789: Dynamic UI is now rendered asynchronously, thanks in
@@ -395,11 +407,11 @@ customized with `busyIndicatorOptions()`. For more details, see
 
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-15!
 
 ## Bug fixes
 
-!begin-bullets-15!
+!begin-bullets-16!
 
 -   !begin-bullet!
     Fixed #3771: Sometimes the error
@@ -413,13 +425,13 @@ customized with `busyIndicatorOptions()`. For more details, see
 
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-16!
 
 # shiny 1.7.4.1
 
 ## Full changelog
 
-!begin-bullets-16!
+!begin-bullets-17!
 
 -   !begin-bullet!
     Closed #3849: In R-devel, a warning was raised when Shiny was loaded
@@ -427,7 +439,7 @@ customized with `busyIndicatorOptions()`. For more details, see
     string. (#3850)
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-17!
 
 # shiny 1.7.4
 
@@ -435,7 +447,7 @@ customized with `busyIndicatorOptions()`. For more details, see
 
 ### Breaking changes
 
-!begin-bullets-17!
+!begin-bullets-18!
 
 -   !begin-bullet!
     Closed #3719: Output container sizes, which are available via
@@ -454,11 +466,11 @@ customized with `busyIndicatorOptions()`. For more details, see
 
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-18!
 
 ### New features and improvements
 
-!begin-bullets-18!
+!begin-bullets-19!
 
 -   !begin-bullet!
     `plotOutput()`, `imageOutput()`, and `uiOutput()` gain a `fill`
@@ -480,13 +492,13 @@ customized with `busyIndicatorOptions()`. For more details, see
 
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-19!
 
 # shiny 1.7.3
 
 ### Bug fixes
 
-!begin-bullets-19!
+!begin-bullets-20!
 
 -   !begin-bullet!
     Shiny 1.7.0 changed the `icon(lib="fontawesome")` implementation
@@ -500,7 +512,7 @@ customized with `busyIndicatorOptions()`. For more details, see
     \>=0.4.0.
     !end-bullet!
 
-!end-bullets-19!
+!end-bullets-20!
 
 # shiny 1.7.2
 
@@ -508,7 +520,7 @@ customized with `busyIndicatorOptions()`. For more details, see
 
 ### Breaking changes
 
-!begin-bullets-20!
+!begin-bullets-21!
 
 -   !begin-bullet!
     Closed #3626: `renderPlot()` (and `plotPNG()`) now uses
@@ -517,11 +529,11 @@ customized with `busyIndicatorOptions()`. For more details, see
     `options(shiny.useragg = FALSE)`. (#3654)
     !end-bullet!
 
-!end-bullets-20!
+!end-bullets-21!
 
 ### New features and improvements
 
-!begin-bullets-21!
+!begin-bullets-22!
 
 -   !begin-bullet!
     Closed #1545: `insertUI()` now executes `<script>` tags. (#3630)
@@ -556,11 +568,11 @@ customized with `busyIndicatorOptions()`. For more details, see
 
     !end-bullet!
 
-!end-bullets-21!
+!end-bullets-22!
 
 ### Bug fixes
 
-!begin-bullets-22!
+!begin-bullets-23!
 
 -   !begin-bullet!
     Closed #3250:`{rlang}`/`{tidyeval}` conditions (i.e., warnings and
@@ -611,11 +623,11 @@ customized with `busyIndicatorOptions()`. For more details, see
 
     !end-bullet!
 
-!end-bullets-22!
+!end-bullets-23!
 
 ### Minor improvements
 
-!begin-bullets-23!
+!begin-bullets-24!
 
 -   !begin-bullet!
     When taking a test snapshot, the sort order of the json keys of the
@@ -644,13 +656,13 @@ customized with `busyIndicatorOptions()`. For more details, see
 
     !end-bullet!
 
-!end-bullets-23!
+!end-bullets-24!
 
 # shiny 1.7.1
 
 ## Bug Fixes
 
-!begin-bullets-24!
+!begin-bullets-25!
 
 -   !begin-bullet!
     Closed #3516: Fix regression in repeated calls to `appendTab()` when
@@ -663,7 +675,7 @@ customized with `busyIndicatorOptions()`. For more details, see
 
     !end-bullet!
 
-!end-bullets-24!
+!end-bullets-25!
 
 # shiny 1.7.0
 
@@ -671,7 +683,7 @@ customized with `busyIndicatorOptions()`. For more details, see
 
 ### Breaking changes
 
-!begin-bullets-25!
+!begin-bullets-26!
 
 -   !begin-bullet!
     The `format` and `locale` arguments to `sliderInput()` have been
@@ -688,23 +700,23 @@ customized with `busyIndicatorOptions()`. For more details, see
 
     !end-bullet!
 
-!end-bullets-25!
+!end-bullets-26!
 
 ### New features and improvements
 
-!begin-bullets-26!
+!begin-bullets-27!
 
 -   !begin-bullet!
     Bootstrap 5 support. (#3410 and rstudio/bslib#304)
 
-    !begin-bullets-27!
+    !begin-bullets-28!
     -   !begin-bullet!
         As explained here, to opt-in to Bootstrap 5, provide
         `bslib::bs_theme(version = 5)` to a page layout function with a
         `theme` argument (e.g., `fluidPage()`, `navbarPage()`, etc).
         !end-bullet!
 
-    !end-bullets-27!
+    !end-bullets-28!
     !end-bullet!
 -   !begin-bullet!
     Closed #3322, #3313, #1823, #3321, #3320, #1928, and #2310: Various
@@ -760,11 +772,11 @@ customized with `busyIndicatorOptions()`. For more details, see
 
     !end-bullet!
 
-!end-bullets-26!
+!end-bullets-27!
 
 ### Other improvements
 
-!begin-bullets-28!
+!begin-bullets-29!
 
 -   !begin-bullet!
     Shiny's core JavaScript code was converted to TypeScript. For the
@@ -788,11 +800,11 @@ customized with `busyIndicatorOptions()`. For more details, see
 
     !end-bullet!
 
-!end-bullets-28!
+!end-bullets-29!
 
 ### Bug fixes
 
-!begin-bullets-29!
+!begin-bullets-30!
 
 -   !begin-bullet!
     Closed #3345: Shiny now correctly renders
@@ -828,11 +840,11 @@ customized with `busyIndicatorOptions()`. For more details, see
 
     !end-bullet!
 
-!end-bullets-29!
+!end-bullets-30!
 
 ### Library updates
 
-!begin-bullets-30!
+!begin-bullets-31!
 
 -   !begin-bullet!
     Closed #3286: Updated to Font-Awesome 5.15.2. (#3288)
@@ -843,7 +855,7 @@ customized with `busyIndicatorOptions()`. For more details, see
 
     !end-bullet!
 
-!end-bullets-30!
+!end-bullets-31!
 
 # shiny 1.6.0
 
@@ -851,7 +863,7 @@ This release focuses on improvements in three main areas:
 
 1.  Better theming (and Bootstrap 4) support:
 
-!begin-bullets-31!
+!begin-bullets-32!
 
 -   !begin-bullet!
     The `theme` argument of `fluidPage()`, `navbarPage()`, and
@@ -870,12 +882,12 @@ This release focuses on improvements in three main areas:
     For more details, see `{bslib}`'s website
     !end-bullet!
 
-!end-bullets-31!
+!end-bullets-32!
 
 2.  Caching of `reactive()` and `render*()` (e.g. `renderText()`,
     `renderTable()`, etc) expressions.
 
-!begin-bullets-32!
+!begin-bullets-33!
 
 -   !begin-bullet!
     Such expressions automatically cache their *most recent value*,
@@ -890,24 +902,24 @@ This release focuses on improvements in three main areas:
     For more details, see `help(bindCache, package = "shiny")`
     !end-bullet!
 
-!end-bullets-32!
+!end-bullets-33!
 
 3.  Various improvements to accessibility for screen-reader and keyboard
     users.
 
-!begin-bullets-33!
+!begin-bullets-34!
 
 -   !begin-bullet!
     For more details, see the accessibility section below.
     !end-bullet!
 
-!end-bullets-33!
+!end-bullets-34!
 
 ## Full changelog
 
 ### Breaking changes
 
-!begin-bullets-34!
+!begin-bullets-35!
 
 -   !begin-bullet!
     Closed #3074: Shiny no longer supports file uploads for Internet
@@ -942,11 +954,11 @@ This release focuses on improvements in three main areas:
 
     !end-bullet!
 
-!end-bullets-34!
+!end-bullets-35!
 
 ### Accessibility
 
-!begin-bullets-35!
+!begin-bullets-36!
 
 -   !begin-bullet!
     Added bootstrap accessibility plugin under the hood to improve
@@ -1019,11 +1031,11 @@ This release focuses on improvements in three main areas:
 
     !end-bullet!
 
-!end-bullets-35!
+!end-bullets-36!
 
 ### Minor new features and improvements
 
-!begin-bullets-36!
+!begin-bullets-37!
 
 -   !begin-bullet!
     Added support for Shiny Developer Mode. Developer Mode enables a
@@ -1114,11 +1126,11 @@ This release focuses on improvements in three main areas:
 
     !end-bullet!
 
-!end-bullets-36!
+!end-bullets-37!
 
 ### Bug fixes
 
-!begin-bullets-37!
+!begin-bullets-38!
 
 -   !begin-bullet!
     Fixed #1942: Calling `runApp("app.R")` no longer ignores options
@@ -1170,11 +1182,11 @@ This release focuses on improvements in three main areas:
 
     !end-bullet!
 
-!end-bullets-37!
+!end-bullets-38!
 
 ### Library updates
 
-!begin-bullets-38!
+!begin-bullets-39!
 
 -   !begin-bullet!
     Removed html5shiv and respond.js, which were used for IE 8 and IE 9
@@ -1187,7 +1199,7 @@ This release focuses on improvements in three main areas:
 
     !end-bullet!
 
-!end-bullets-38!
+!end-bullets-39!
 
 # shiny 1.5.0
 
@@ -1195,7 +1207,7 @@ This release focuses on improvements in three main areas:
 
 ### Breaking changes
 
-!begin-bullets-39!
+!begin-bullets-40!
 
 -   !begin-bullet!
     Fixed #2869: Until this release, `renderImage()` had a dangerous
@@ -1206,11 +1218,11 @@ This release focuses on improvements in three main areas:
     (#2881)
     !end-bullet!
 
-!end-bullets-39!
+!end-bullets-40!
 
 ### New features
 
-!begin-bullets-40!
+!begin-bullets-41!
 
 -   !begin-bullet!
     The new `shinyAppTemplate()` function creates a new template Shiny
@@ -1252,11 +1264,11 @@ This release focuses on improvements in three main areas:
 
     !end-bullet!
 
-!end-bullets-40!
+!end-bullets-41!
 
 ### Minor new features and improvements
 
-!begin-bullets-41!
+!begin-bullets-42!
 
 -   !begin-bullet!
     Fixed #2042, #2628: In a `dateInput` and `dateRangeInput`, disabled
@@ -1304,11 +1316,11 @@ This release focuses on improvements in three main areas:
 
     !end-bullet!
 
-!end-bullets-41!
+!end-bullets-42!
 
 ### Bug fixes
 
-!begin-bullets-42!
+!begin-bullets-43!
 
 -   !begin-bullet!
     Fixed #2606: `debounce()` would not work properly if the code in the
@@ -1321,13 +1333,13 @@ This release focuses on improvements in three main areas:
 
     !end-bullet!
 
-!end-bullets-42!
+!end-bullets-43!
 
 ### Documentation Updates
 
 ### Library updates
 
-!begin-bullets-43!
+!begin-bullets-44!
 
 -   !begin-bullet!
     Updated from Font-Awesome 5.3.1 to 5.13.0, which includes icons
@@ -1336,7 +1348,7 @@ This release focuses on improvements in three main areas:
     (#2891)
     !end-bullet!
 
-!end-bullets-43!
+!end-bullets-44!
 
 # shiny 1.4.0.2
 
@@ -1354,7 +1366,7 @@ be upcoming in the R 4.0 release (#2776).
 
 ### Breaking changes
 
-!begin-bullets-44!
+!begin-bullets-45!
 
 -   !begin-bullet!
     Resolved #2554: Upgraded jQuery from v.1.12.4 to v3.4.1 and
@@ -1367,11 +1379,11 @@ be upcoming in the R 4.0 release (#2776).
     `shared/legacy/jquery[.min].js`.
     !end-bullet!
 
-!end-bullets-44!
+!end-bullets-45!
 
 ### Improvements
 
-!begin-bullets-45!
+!begin-bullets-46!
 
 -   !begin-bullet!
     Resolved #1433: `plotOutput()`'s coordmap info now includes discrete
@@ -1435,11 +1447,11 @@ be upcoming in the R 4.0 release (#2776).
 
     !end-bullet!
 
-!end-bullets-45!
+!end-bullets-46!
 
 ### Bug fixes
 
-!begin-bullets-46!
+!begin-bullets-47!
 
 -   !begin-bullet!
     Partially resolved #2423: Reactivity in Shiny leaked some memory,
@@ -1535,13 +1547,13 @@ be upcoming in the R 4.0 release (#2776).
 
     !end-bullet!
 
-!end-bullets-46!
+!end-bullets-47!
 
 # shiny 1.3.2
 
 ### Bug fixes
 
-!begin-bullets-47!
+!begin-bullets-48!
 
 -   !begin-bullet!
     Fixed #2385: Static CSS/JS resources in subapps in R Markdown
@@ -1554,7 +1566,7 @@ be upcoming in the R 4.0 release (#2776).
 
     !end-bullet!
 
-!end-bullets-47!
+!end-bullets-48!
 
 # shiny 1.3.1
 
@@ -1562,14 +1574,14 @@ be upcoming in the R 4.0 release (#2776).
 
 ### Bug fixes
 
-!begin-bullets-48!
+!begin-bullets-49!
 
 -   !begin-bullet!
     Fixed a performance issue introduced in v1.3.0 when using large
     nested lists within Shiny. (#2377)
     !end-bullet!
 
-!end-bullets-48!
+!end-bullets-49!
 
 # shiny 1.3.0
 
@@ -1579,7 +1591,7 @@ be upcoming in the R 4.0 release (#2776).
 
 ### New features
 
-!begin-bullets-49!
+!begin-bullets-50!
 
 -   !begin-bullet!
     Revamped Shiny's reactlog viewer which debugs reactivity within a
@@ -1598,11 +1610,11 @@ be upcoming in the R 4.0 release (#2776).
 
     !end-bullet!
 
-!end-bullets-49!
+!end-bullets-50!
 
 ### Minor new features and improvements
 
-!begin-bullets-50!
+!begin-bullets-51!
 
 -   !begin-bullet!
     The `Shiny-Shared-Secret` security header is now checked using
@@ -1610,11 +1622,11 @@ be upcoming in the R 4.0 release (#2776).
     @dirkschumacher!). (#2319)
     !end-bullet!
 
-!end-bullets-50!
+!end-bullets-51!
 
 ### Bug fixes
 
-!begin-bullets-51!
+!begin-bullets-52!
 
 -   !begin-bullet!
     Fixed #2245: `updateSelectizeInput()` did not update labels. (#2248)
@@ -1638,11 +1650,11 @@ be upcoming in the R 4.0 release (#2776).
 
     !end-bullet!
 
-!end-bullets-51!
+!end-bullets-52!
 
 ### Documentation Updates
 
-!begin-bullets-52!
+!begin-bullets-53!
 
 -   !begin-bullet!
     Fixed #2247: `renderCachedPlot` now supports using promises for
@@ -1652,7 +1664,7 @@ be upcoming in the R 4.0 release (#2776).
     #2261
     !end-bullet!
 
-!end-bullets-52!
+!end-bullets-53!
 
 # shiny 1.2.0
 
@@ -1668,7 +1680,7 @@ read this article to get the most out of this feature.
 
 ### Breaking changes
 
-!begin-bullets-53!
+!begin-bullets-54!
 
 -   !begin-bullet!
     The URL paths for FontAwesome CSS/JS/font assets have changed, due
@@ -1680,22 +1692,22 @@ read this article to get the most out of this feature.
     management of web dependencies.
     !end-bullet!
 
-!end-bullets-53!
+!end-bullets-54!
 
 ### New features
 
-!begin-bullets-54!
+!begin-bullets-55!
 
 -   !begin-bullet!
     Added `renderCachedPlot()`, which stores plots in a cache so that
     they can be served up almost instantly. (#1997)
     !end-bullet!
 
-!end-bullets-54!
+!end-bullets-55!
 
 ### Minor new features and improvements
 
-!begin-bullets-55!
+!begin-bullets-56!
 
 -   !begin-bullet!
     Upgrade FontAwesome from 4.7.0 to 5.3.1 and made `icon` tags
@@ -1753,11 +1765,11 @@ read this article to get the most out of this feature.
 
     !end-bullet!
 
-!end-bullets-55!
+!end-bullets-56!
 
 ### Bug fixes
 
-!begin-bullets-56!
+!begin-bullets-57!
 
 -   !begin-bullet!
     Fixed #2033: RStudio Viewer window not closed on `shiny::stopApp()`.
@@ -1822,18 +1834,18 @@ read this article to get the most out of this feature.
 
     !end-bullet!
 
-!end-bullets-56!
+!end-bullets-57!
 
 ### Documentation Updates
 
-!begin-bullets-57!
+!begin-bullets-58!
 
 -   !begin-bullet!
     Addressed #1864 by changing `optgroup` documentation to use `list`
     instead of `c`. (#2084)
     !end-bullet!
 
-!end-bullets-57!
+!end-bullets-58!
 
 # shiny 1.1.0
 
@@ -1850,7 +1862,7 @@ documentation to learn more.
 
 ### Breaking changes
 
-!begin-bullets-58!
+!begin-bullets-59!
 
 -   !begin-bullet!
     `extractStackTrace` and `formatStackTrace` are deprecated and will
@@ -1859,11 +1871,11 @@ documentation to learn more.
     vestigial; if you need this functionality, please file an issue.
     !end-bullet!
 
-!end-bullets-58!
+!end-bullets-59!
 
 ### New features
 
-!begin-bullets-59!
+!begin-bullets-60!
 
 -   !begin-bullet!
     Support for asynchronous operations! Built-in render functions that
@@ -1889,11 +1901,11 @@ documentation to learn more.
 
     !end-bullet!
 
-!end-bullets-59!
+!end-bullets-60!
 
 ### Minor new features and improvements
 
-!begin-bullets-60!
+!begin-bullets-61!
 
 -   !begin-bullet!
     Addressed #1978: `shiny:value` is now triggered when duplicate
@@ -1965,11 +1977,11 @@ documentation to learn more.
 
     !end-bullet!
 
-!end-bullets-60!
+!end-bullets-61!
 
 ### Bug fixes
 
-!begin-bullets-61!
+!begin-bullets-62!
 
 -   !begin-bullet!
     Fixed #1006: Slider inputs sometimes showed too many digits. (#1956)
@@ -2035,17 +2047,17 @@ documentation to learn more.
 
     !end-bullet!
 
-!end-bullets-61!
+!end-bullets-62!
 
 ### Library updates
 
-!begin-bullets-62!
+!begin-bullets-63!
 
 -   !begin-bullet!
     Updated to ion.rangeSlider 2.2.0. (#1955)
     !end-bullet!
 
-!end-bullets-62!
+!end-bullets-63!
 
 ## Known issues
 
@@ -2061,7 +2073,7 @@ in a future version of the later package (more information here).
 
 ### Bug fixes
 
-!begin-bullets-63!
+!begin-bullets-64!
 
 -   !begin-bullet!
     Fixed #1818: `conditionalPanel()` expressions that have a newline
@@ -2079,7 +2091,7 @@ in a future version of the later package (more information here).
 
     !end-bullet!
 
-!end-bullets-63!
+!end-bullets-64!
 
 # shiny 1.0.4
 
@@ -2095,7 +2107,7 @@ more details.
 
 ### New features
 
-!begin-bullets-64!
+!begin-bullets-65!
 
 -   !begin-bullet!
     Implemented #1668: dynamic tabs: added functions (`insertTab`,
@@ -2122,11 +2134,11 @@ more details.
 
     !end-bullet!
 
-!end-bullets-64!
+!end-bullets-65!
 
 ### Minor new features and improvements
 
-!begin-bullets-65!
+!begin-bullets-66!
 
 -   !begin-bullet!
     Addressed #1688: trigger a new `shiny:outputinvalidated` event when
@@ -2199,11 +2211,11 @@ more details.
 
     !end-bullet!
 
-!end-bullets-65!
+!end-bullets-66!
 
 ### Bug fixes
 
-!begin-bullets-66!
+!begin-bullets-67!
 
 -   !begin-bullet!
     Fixed #1546: make it possible (without any hacks) to write arbitrary
@@ -2257,7 +2269,7 @@ more details.
 
     !end-bullet!
 
-!end-bullets-66!
+!end-bullets-67!
 
 # shiny 1.0.3
 
@@ -2272,7 +2284,7 @@ we are releasing a new version of Shiny that fixes this issue.
 
 ### Bug fixes
 
-!begin-bullets-67!
+!begin-bullets-68!
 
 -   !begin-bullet!
     Fixed #1672: When an error occurred while uploading a file, the
@@ -2285,7 +2297,7 @@ we are releasing a new version of Shiny that fixes this issue.
 
     !end-bullet!
 
-!end-bullets-67!
+!end-bullets-68!
 
 # shiny 1.0.2
 
@@ -2302,7 +2314,7 @@ https://www.mathjax.org/cdn-shutting-down/.
 
 ### Minor new features and improvements
 
-!begin-bullets-68!
+!begin-bullets-69!
 
 -   !begin-bullet!
     Added a `shiny:sessioninitialized` Javascript event, which is fired
@@ -2325,17 +2337,17 @@ https://www.mathjax.org/cdn-shutting-down/.
 
     !end-bullet!
 
-!end-bullets-68!
+!end-bullets-69!
 
 ### Bug fixes
 
-!begin-bullets-69!
+!begin-bullets-70!
 
 -   !begin-bullet!
     Fixed #1653: wrong code example in documentation. (#1658)
     !end-bullet!
 
-!end-bullets-69!
+!end-bullets-70!
 
 # shiny 1.0.1
 
@@ -2350,7 +2362,7 @@ HTML content instead of just plain text.
 
 ### Breaking changes
 
-!begin-bullets-70!
+!begin-bullets-71!
 
 -   !begin-bullet!
     The functions `radioButtons()`, `checkboxGroupInput()` and
@@ -2362,11 +2374,11 @@ HTML content instead of just plain text.
     unsupported.
     !end-bullet!
 
-!end-bullets-70!
+!end-bullets-71!
 
 ### New features
 
-!begin-bullets-71!
+!begin-bullets-72!
 
 -   !begin-bullet!
     Added `reactiveVal` function, for storing a single value which can
@@ -2375,11 +2387,11 @@ HTML content instead of just plain text.
     of storing multiple values by name. (#1614)
     !end-bullet!
 
-!end-bullets-71!
+!end-bullets-72!
 
 ### Minor new features and improvements
 
-!begin-bullets-72!
+!begin-bullets-73!
 
 -   !begin-bullet!
     Fixed #1637: Outputs stay faded on MS Edge. (#1640)
@@ -2463,11 +2475,11 @@ HTML content instead of just plain text.
 
     !end-bullet!
 
-!end-bullets-72!
+!end-bullets-73!
 
 ### Bug fixes
 
-!begin-bullets-73!
+!begin-bullets-74!
 
 -   !begin-bullet!
     Fixed #1511: `fileInput`s did not trigger the `shiny:inputchanged`
@@ -2520,17 +2532,17 @@ HTML content instead of just plain text.
 
     !end-bullet!
 
-!end-bullets-73!
+!end-bullets-74!
 
 ### Library updates
 
-!begin-bullets-74!
+!begin-bullets-75!
 
 -   !begin-bullet!
     Closed #1500: Updated ion.rangeSlider to 2.1.6. (#1540)
     !end-bullet!
 
-!end-bullets-74!
+!end-bullets-75!
 
 # shiny 1.0.0
 
@@ -2560,7 +2572,7 @@ expression that doesn't invalidate as often. (#1510)
 
 ### Breaking changes
 
-!begin-bullets-75!
+!begin-bullets-76!
 
 -   !begin-bullet!
     Added a new `placeholder` argument to `verbatimTextOutput()`. The
@@ -2571,11 +2583,11 @@ expression that doesn't invalidate as often. (#1510)
     `placeholder = TRUE` to revert back to that look. (#1480)
     !end-bullet!
 
-!end-bullets-75!
+!end-bullets-76!
 
 ### New features
 
-!begin-bullets-76!
+!begin-bullets-77!
 
 -   !begin-bullet!
     Added support for testing Shiny applications with the shinytest
@@ -2588,11 +2600,11 @@ expression that doesn't invalidate as often. (#1510)
 
     !end-bullet!
 
-!end-bullets-76!
+!end-bullets-77!
 
 ### Minor new features and improvements
 
-!begin-bullets-77!
+!begin-bullets-78!
 
 -   !begin-bullet!
     Addressed #1486 by adding a new argument to `observeEvent` and
@@ -2651,11 +2663,11 @@ expression that doesn't invalidate as often. (#1510)
 
     !end-bullet!
 
-!end-bullets-77!
+!end-bullets-78!
 
 ### Bug fixes
 
-!begin-bullets-78!
+!begin-bullets-79!
 
 -   !begin-bullet!
     Fixed #969: allow navbarPage's `fluid` param to control both
@@ -2698,17 +2710,17 @@ expression that doesn't invalidate as often. (#1510)
 
     !end-bullet!
 
-!end-bullets-78!
+!end-bullets-79!
 
 ### Library updates
 
-!begin-bullets-79!
+!begin-bullets-80!
 
 -   !begin-bullet!
     Updated to Font Awesome 4.7.0.
     !end-bullet!
 
-!end-bullets-79!
+!end-bullets-80!
 
 # shiny 0.14.2
 
@@ -2719,7 +2731,7 @@ new features.
 
 ### Minor new features and improvements
 
-!begin-bullets-80!
+!begin-bullets-81!
 
 -   !begin-bullet!
     Added a `fade` argument to `modalDialog()` -- setting it to `FALSE`
@@ -2750,11 +2762,11 @@ new features.
 
     !end-bullet!
 
-!end-bullets-80!
+!end-bullets-81!
 
 ### Bug fixes
 
-!begin-bullets-81!
+!begin-bullets-82!
 
 -   !begin-bullet!
     Fixed #1427: make sure that modals do not close incorrectly when an
@@ -2779,7 +2791,7 @@ new features.
 
     !end-bullet!
 
-!end-bullets-81!
+!end-bullets-82!
 
 # shiny 0.14.1
 
@@ -2790,7 +2802,7 @@ new features.
 
 ### Minor new features and improvements
 
-!begin-bullets-82!
+!begin-bullets-83!
 
 -   !begin-bullet!
     Restored file inputs are now copied on restore, so that the restored
@@ -2805,11 +2817,11 @@ new features.
 
     !end-bullet!
 
-!end-bullets-82!
+!end-bullets-83!
 
 ### Bug fixes
 
-!begin-bullets-83!
+!begin-bullets-84!
 
 -   !begin-bullet!
     Fixed #1093 better: `updateRadioButtons()` and
@@ -2838,11 +2850,11 @@ new features.
 
     !end-bullet!
 
-!end-bullets-83!
+!end-bullets-84!
 
 ### Library updates
 
-!begin-bullets-84!
+!begin-bullets-85!
 
 -   !begin-bullet!
     Updated to bootstrap-datepicker 1.6.4. (#1218, #1374)
@@ -2856,7 +2868,7 @@ new features.
 
     !end-bullet!
 
-!end-bullets-84!
+!end-bullets-85!
 
 # shiny 0.14
 
@@ -3014,7 +3026,7 @@ than we can cover here, so we'll just mention a few of the more
 noteworthy ones (the full changelog, with links to all the relevant
 issues and pull requests, is right below this section):
 
-!begin-bullets-85!
+!begin-bullets-86!
 
 -   !begin-bullet!
     **Error Sanitization**: you now have the option to sanitize error
@@ -3077,13 +3089,13 @@ issues and pull requests, is right below this section):
 
     !end-bullet!
 
-!end-bullets-85!
+!end-bullets-86!
 
 ## Full changelog
 
 ### Breaking changes
 
-!begin-bullets-86!
+!begin-bullets-87!
 
 -   !begin-bullet!
     Progress indicators can now either use the new notification API,
@@ -3107,11 +3119,11 @@ issues and pull requests, is right below this section):
 
     !end-bullet!
 
-!end-bullets-86!
+!end-bullets-87!
 
 ### New features
 
-!begin-bullets-87!
+!begin-bullets-88!
 
 -   !begin-bullet!
     Added the ability to bookmark and restore application state. (main
@@ -3158,11 +3170,11 @@ issues and pull requests, is right below this section):
 
     !end-bullet!
 
-!end-bullets-87!
+!end-bullets-88!
 
 ### Minor new features and improvements
 
-!begin-bullets-88!
+!begin-bullets-89!
 
 -   !begin-bullet!
     Added `cancelOutput` argument to `req()`. This causes the currently
@@ -3258,11 +3270,11 @@ issues and pull requests, is right below this section):
 
     !end-bullet!
 
-!end-bullets-88!
+!end-bullets-89!
 
 ### Bug fixes
 
-!begin-bullets-89!
+!begin-bullets-90!
 
 -   !begin-bullet!
     Fixed #1350: Highlighting of reactives didn't work in showcase mode.
@@ -3352,11 +3364,11 @@ issues and pull requests, is right below this section):
 
     !end-bullet!
 
-!end-bullets-89!
+!end-bullets-90!
 
 ### Library updates
 
-!begin-bullets-90!
+!begin-bullets-91!
 
 -   !begin-bullet!
     Updated to ion.RangeSlider 2.1.2.
@@ -3375,21 +3387,21 @@ issues and pull requests, is right below this section):
 
     !end-bullet!
 
-!end-bullets-90!
+!end-bullets-91!
 
 # shiny 0.13.2
 
-!begin-bullets-91!
+!begin-bullets-92!
 
 -   !begin-bullet!
     Updated documentation for `htmlTemplate`.
     !end-bullet!
 
-!end-bullets-91!
+!end-bullets-92!
 
 # shiny 0.13.1
 
-!begin-bullets-92!
+!begin-bullets-93!
 
 -   !begin-bullet!
     `flexCol` did not work on RStudio for Windows or Linux.
@@ -3406,11 +3418,11 @@ issues and pull requests, is right below this section):
 
     !end-bullet!
 
-!end-bullets-92!
+!end-bullets-93!
 
 # shiny 0.13.0
 
-!begin-bullets-93!
+!begin-bullets-94!
 
 -   !begin-bullet!
     Fixed #962: plot interactions did not work with the development
@@ -3549,11 +3561,11 @@ issues and pull requests, is right below this section):
 
     !end-bullet!
 
-!end-bullets-93!
+!end-bullets-94!
 
 # shiny 0.12.2
 
-!begin-bullets-94!
+!begin-bullets-95!
 
 -   !begin-bullet!
     GitHub changed URLs for gists from .tar.gz to .zip, so `runGist` was
@@ -3606,11 +3618,11 @@ issues and pull requests, is right below this section):
 
     !end-bullet!
 
-!end-bullets-94!
+!end-bullets-95!
 
 # shiny 0.12.1
 
-!begin-bullets-95!
+!begin-bullets-96!
 
 -   !begin-bullet!
     Fixed an issue where unbindAll() causes subsequent bindAll() to be
@@ -3625,7 +3637,7 @@ issues and pull requests, is right below this section):
 
     !end-bullet!
 
-!end-bullets-95!
+!end-bullets-96!
 
 # shiny 0.12.0
 
@@ -3659,7 +3671,7 @@ functions until DT has had more time to mature.
 
 ## Full Changelog
 
-!begin-bullets-96!
+!begin-bullets-97!
 
 -   !begin-bullet!
     Switched from RJSONIO to jsonlite. This improves consistency and
@@ -3758,11 +3770,11 @@ functions until DT has had more time to mature.
 
     !end-bullet!
 
-!end-bullets-96!
+!end-bullets-97!
 
 # shiny 0.11.1
 
-!begin-bullets-97!
+!begin-bullets-98!
 
 -   !begin-bullet!
     Major client-side performance improvements for pages that have many
@@ -3828,7 +3840,7 @@ functions until DT has had more time to mature.
 
     !end-bullet!
 
-!end-bullets-97!
+!end-bullets-98!
 
 # shiny 0.11
 
@@ -3839,7 +3851,7 @@ ecosystem of Bootstrap 3 themes.
 
 ### Known issues for migration
 
-!begin-bullets-98!
+!begin-bullets-99!
 
 -   !begin-bullet!
     In Bootstrap 3, images in `<img>` tags are no longer automatically
@@ -3849,7 +3861,7 @@ ecosystem of Bootstrap 3 themes.
     you can add the `img-responsive` class:
     !end-bullet!
 
-!end-bullets-98!
+!end-bullets-99!
 
 !begin-codeblock!
 
@@ -3865,7 +3877,7 @@ ecosystem of Bootstrap 3 themes.
 
 !end-codeblock!
 
-!begin-bullets-99!
+!begin-bullets-100!
 
 -   !begin-bullet!
     The sliders have been replaced. Previously, Shiny used the jslider
@@ -3894,7 +3906,7 @@ ecosystem of Bootstrap 3 themes.
 
     !end-bullet!
 
-!end-bullets-99!
+!end-bullets-100!
 
 If you encounter other migration issues, please let us know on the
 shiny-discuss mailing list, or on the Shiny issue tracker.
@@ -3933,7 +3945,7 @@ Bootstrap themes with Shiny.
 
 ## Full Changelog
 
-!begin-bullets-100!
+!begin-bullets-101!
 
 -   !begin-bullet!
     Changed sliders from jquery-slider to ion.rangeSlider. These sliders
@@ -4001,32 +4013,32 @@ Bootstrap themes with Shiny.
 
     !end-bullet!
 
-!end-bullets-100!
+!end-bullets-101!
 
 # shiny 0.10.2.2
 
-!begin-bullets-101!
+!begin-bullets-102!
 
 -   !begin-bullet!
     Remove use of `rstudio::viewer` in a code example, for R CMD check.
     !end-bullet!
 
-!end-bullets-101!
+!end-bullets-102!
 
 # shiny 0.10.2.1
 
-!begin-bullets-102!
+!begin-bullets-103!
 
 -   !begin-bullet!
     Changed some examples to use `\donttest `{=tex}instead of
     `\dontrun`{=tex}.
     !end-bullet!
 
-!end-bullets-102!
+!end-bullets-103!
 
 # shiny 0.10.2
 
-!begin-bullets-103!
+!begin-bullets-104!
 
 -   !begin-bullet!
     The minimal version of R required for the shiny package is 3.0.0
@@ -4106,11 +4118,11 @@ Bootstrap themes with Shiny.
 
     !end-bullet!
 
-!end-bullets-103!
+!end-bullets-104!
 
 # shiny 0.10.1
 
-!begin-bullets-104!
+!begin-bullets-105!
 
 -   !begin-bullet!
     Added Unicode support for Windows. Shiny apps running on Windows
@@ -4151,11 +4163,11 @@ Bootstrap themes with Shiny.
 
     !end-bullet!
 
-!end-bullets-104!
+!end-bullets-105!
 
 # shiny 0.10.0
 
-!begin-bullets-105!
+!begin-bullets-106!
 
 -   !begin-bullet!
     BREAKING CHANGE: By default, observers now terminate themselves if
@@ -4268,11 +4280,11 @@ Bootstrap themes with Shiny.
 
     !end-bullet!
 
-!end-bullets-105!
+!end-bullets-106!
 
 # shiny 0.9.1
 
-!begin-bullets-106!
+!begin-bullets-107!
 
 -   !begin-bullet!
     Fixed warning 'Error in Context\$new : could not find function
@@ -4280,11 +4292,11 @@ Bootstrap themes with Shiny.
     check".
     !end-bullet!
 
-!end-bullets-106!
+!end-bullets-107!
 
 # shiny 0.9.0
 
-!begin-bullets-107!
+!begin-bullets-108!
 
 -   !begin-bullet!
     BREAKING CHANGE: Added a `host` parameter to runApp() and
@@ -4507,11 +4519,11 @@ Bootstrap themes with Shiny.
 
     !end-bullet!
 
-!end-bullets-107!
+!end-bullets-108!
 
 # shiny 0.8.0
 
-!begin-bullets-108!
+!begin-bullets-109!
 
 -   !begin-bullet!
     Debug hooks are registered on all user-provided functions and
@@ -4572,11 +4584,11 @@ Bootstrap themes with Shiny.
 
     !end-bullet!
 
-!end-bullets-108!
+!end-bullets-109!
 
 # shiny 0.7.0
 
-!begin-bullets-109!
+!begin-bullets-110!
 
 -   !begin-bullet!
     Stopped sending websocket subprotocol. This fixes a compatibility
@@ -4653,11 +4665,11 @@ Bootstrap themes with Shiny.
 
     !end-bullet!
 
-!end-bullets-109!
+!end-bullets-110!
 
 # shiny 0.6.0
 
-!begin-bullets-110!
+!begin-bullets-111!
 
 -   !begin-bullet!
     `tabsetPanel()` can be directed to start with a specific tab
@@ -4725,11 +4737,11 @@ Bootstrap themes with Shiny.
 
     !end-bullet!
 
-!end-bullets-110!
+!end-bullets-111!
 
 # shiny 0.5.0
 
-!begin-bullets-111!
+!begin-bullets-112!
 
 -   !begin-bullet!
     Switch from websockets package for handling websocket connections to
@@ -4767,11 +4779,11 @@ Bootstrap themes with Shiny.
 
     !end-bullet!
 
-!end-bullets-111!
+!end-bullets-112!
 
 # shiny 0.4.1
 
-!begin-bullets-112!
+!begin-bullets-113!
 
 -   !begin-bullet!
     Fix bug where width and height weren't passed along properly from
@@ -4784,11 +4796,11 @@ Bootstrap themes with Shiny.
 
     !end-bullet!
 
-!end-bullets-112!
+!end-bullets-113!
 
 # shiny 0.4.0
 
-!begin-bullets-113!
+!begin-bullets-114!
 
 -   !begin-bullet!
     Added suspend/resume capability to observers.
@@ -4821,11 +4833,11 @@ Bootstrap themes with Shiny.
 
     !end-bullet!
 
-!end-bullets-113!
+!end-bullets-114!
 
 # shiny 0.3.1
 
-!begin-bullets-114!
+!begin-bullets-115!
 
 -   !begin-bullet!
     Fix issue #91: bug where downloading files did not work.
@@ -4842,11 +4854,11 @@ Bootstrap themes with Shiny.
 
     !end-bullet!
 
-!end-bullets-114!
+!end-bullets-115!
 
 # shiny 0.3.0
 
-!begin-bullets-115!
+!begin-bullets-116!
 
 -   !begin-bullet!
     Reactive functions are now evaluated lazily.
@@ -4903,11 +4915,11 @@ Bootstrap themes with Shiny.
 
     !end-bullet!
 
-!end-bullets-115!
+!end-bullets-116!
 
 # shiny 0.2.4
 
-!begin-bullets-116!
+!begin-bullets-117!
 
 -   !begin-bullet!
     `runGist` has been updated to use the new download URLs from
@@ -4920,31 +4932,31 @@ Bootstrap themes with Shiny.
 
     !end-bullet!
 
-!end-bullets-116!
+!end-bullets-117!
 
 # shiny 0.2.3
 
-!begin-bullets-117!
+!begin-bullets-118!
 
 -   !begin-bullet!
     Ignore request variables for routing purposes
     !end-bullet!
 
-!end-bullets-117!
+!end-bullets-118!
 
 # shiny 0.2.2
 
-!begin-bullets-118!
+!begin-bullets-119!
 
 -   !begin-bullet!
     Fix CRAN warning (assigning to global environment)
     !end-bullet!
 
-!end-bullets-118!
+!end-bullets-119!
 
 # shiny 0.2.1
 
-!begin-bullets-119!
+!begin-bullets-120!
 
 -   !begin-bullet!
     \[BREAKING\] Modify API of `downloadHandler`: The `content` function
@@ -4953,11 +4965,11 @@ Bootstrap themes with Shiny.
     paths, not connections.
     !end-bullet!
 
-!end-bullets-119!
+!end-bullets-120!
 
 # shiny 0.2.0
 
-!begin-bullets-120!
+!begin-bullets-121!
 
 -   !begin-bullet!
     Fix subtle name resolution bug--the usual symptom being S4 methods
@@ -4965,31 +4977,31 @@ Bootstrap themes with Shiny.
     server.R
     !end-bullet!
 
-!end-bullets-120!
+!end-bullets-121!
 
 # shiny 0.1.14
 
-!begin-bullets-121!
+!begin-bullets-122!
 
 -   !begin-bullet!
     Fix slider animator, which broke in 0.1.10
     !end-bullet!
 
-!end-bullets-121!
+!end-bullets-122!
 
 # shiny 0.1.13
 
-!begin-bullets-122!
+!begin-bullets-123!
 
 -   !begin-bullet!
     Fix temp file leak in reactivePlot
     !end-bullet!
 
-!end-bullets-122!
+!end-bullets-123!
 
 # shiny 0.1.12
 
-!begin-bullets-123!
+!begin-bullets-124!
 
 -   !begin-bullet!
     Fix problems with runGist on Windows
@@ -5004,11 +5016,11 @@ Bootstrap themes with Shiny.
 
     !end-bullet!
 
-!end-bullets-123!
+!end-bullets-124!
 
 # shiny 0.1.11
 
-!begin-bullets-124!
+!begin-bullets-125!
 
 -   !begin-bullet!
     Fix input binding with IE8 on Shiny Server
@@ -5024,11 +5036,11 @@ Bootstrap themes with Shiny.
 
     !end-bullet!
 
-!end-bullets-124!
+!end-bullets-125!
 
 # shiny 0.1.10
 
-!begin-bullets-125!
+!begin-bullets-126!
 
 -   !begin-bullet!
     Support more MIME types when serving out of www
@@ -5051,11 +5063,11 @@ Bootstrap themes with Shiny.
 
     !end-bullet!
 
-!end-bullets-125!
+!end-bullets-126!
 
 # shiny 0.1.9
 
-!begin-bullets-126!
+!begin-bullets-127!
 
 -   !begin-bullet!
     Much less flicker when updating plots
@@ -5072,11 +5084,11 @@ Bootstrap themes with Shiny.
 
     !end-bullet!
 
-!end-bullets-126!
+!end-bullets-127!
 
 # shiny 0.1.8
 
-!begin-bullets-127!
+!begin-bullets-128!
 
 -   !begin-bullet!
     Add `runGist` function for conveniently running a Shiny app that is
@@ -5101,11 +5113,11 @@ Bootstrap themes with Shiny.
 
     !end-bullet!
 
-!end-bullets-127!
+!end-bullets-128!
 
 # shiny 0.1.7
 
-!begin-bullets-128!
+!begin-bullets-129!
 
 -   !begin-bullet!
     Fix issue #26: Shiny.OutputBindings not correctly exported.
@@ -5122,11 +5134,11 @@ Bootstrap themes with Shiny.
 
     !end-bullet!
 
-!end-bullets-128!
+!end-bullets-129!
 
 # shiny 0.1.6
 
-!begin-bullets-129!
+!begin-bullets-130!
 
 -   !begin-bullet!
     Import package dependencies, instead of attaching them (with the
@@ -5144,11 +5156,11 @@ Bootstrap themes with Shiny.
 
     !end-bullet!
 
-!end-bullets-129!
+!end-bullets-130!
 
 # shiny 0.1.5
 
-!begin-bullets-130!
+!begin-bullets-131!
 
 -   !begin-bullet!
     BREAKING CHANGE: JS APIs Shiny.bindInput and Shiny.bindOutput
@@ -5183,11 +5195,11 @@ Bootstrap themes with Shiny.
 
     !end-bullet!
 
-!end-bullets-130!
+!end-bullets-131!
 
 # shiny 0.1.4
 
-!begin-bullets-131!
+!begin-bullets-132!
 
 -   !begin-bullet!
     Allow Bootstrap tabsets to act as reactive inputs; their value
@@ -5216,11 +5228,11 @@ Bootstrap themes with Shiny.
 
     !end-bullet!
 
-!end-bullets-131!
+!end-bullets-132!
 
 # shiny 0.1.3
 
-!begin-bullets-132!
+!begin-bullets-133!
 
 -   !begin-bullet!
     Introduce Shiny.inputBindings.register JS API and InputBinding
@@ -5244,14 +5256,14 @@ Bootstrap themes with Shiny.
 
     !end-bullet!
 
-!end-bullets-132!
+!end-bullets-133!
 
 # shiny 0.1.2
 
-!begin-bullets-133!
+!begin-bullets-134!
 
 -   !begin-bullet!
     Initial private beta release!
     !end-bullet!
 
-!end-bullets-133!
+!end-bullets-134!
