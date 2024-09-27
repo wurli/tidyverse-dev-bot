@@ -23,7 +23,7 @@
 
     !end-bullet!
 -   !begin-bullet!
-    Fixed a bug with `input_slider()` when used as a range slider that
+    Fixed a bug with `sliderInput()` when used as a range slider that
     made it impossible to change the slider value when both handles were
     at the maximum value. (#4131)
 

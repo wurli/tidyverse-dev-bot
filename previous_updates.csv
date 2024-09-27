@@ -17997,3 +17997,4 @@ gt,d870c205418554616a0757ad7ca708cd,`cols_add()` works in more cases (#1893).,NA
 shiny,7c810a1eb6ca049fc4c358cf76e8f638,Small improvements to the default pulse busy indicator to better blend with any background. It's also now slightly smaller by default. (#4122),NA,NA,NA,NA
 shiny,1e106a7993593a5145eaecd53ebcaaa0,"Fixed a bug in `conditionalPanel()` that would cause the panel to repeatedly show/hide itself when the provided condition was not boolean. (@​kamilzyla, #4127)",NA,NA,NA,NA
 shiny,ede01975c9eb9eb52619ced8780100b7,Fixed a bug with `input_slider()` when used as a range slider that made it impossible to change the slider value when both handles were at the maximum value. (#4131),NA,NA,NA,NA
+shiny,df99cc4bd5948526d9effec57d516a73,Fixed a bug with `sliderInput()` when used as a range slider that made it impossible to change the slider value when both handles were at the maximum value. (#4131),NA,NA,NA,NA
