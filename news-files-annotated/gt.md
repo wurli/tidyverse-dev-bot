@@ -22,6 +22,11 @@
     `tab_option(latex.use_longtable = TRUE)`.
 
     !end-bullet!
+-   !begin-bullet!
+    The `locale` argument of `gt()` now defaults to
+    `getOption("gt.locale")` if set (#1894).
+
+    !end-bullet!
 
 !end-bullets-1!
 
