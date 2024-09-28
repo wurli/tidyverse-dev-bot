@@ -18001,3 +18001,5 @@ shiny,df99cc4bd5948526d9effec57d516a73,Fixed a bug with `sliderInput()` when use
 gt,c7ab05c022554b50f3b8226d7ec1ad28,"The `locale` argument of `gt()` now defaults to `getOption(""gt.locale"")` if set (#1894).",NA,NA,NA,NA
 renv,51a458728be4d986a77c113e170422f7,Fixed an issue where `renv` tests could fail if the `parallel` package was loaded during test execution.,NA,NA,NA,NA
 renv,b0ef5b452c13b619d6c041801eedb84c,`renv` now determines a package repository's type through the HTTP headers provided when accessing `src/contrib/PACKAGES`. This is mainly relevant when detecting Nexus and Artifactory repositories.,NA,NA,NA,NA
+gt,7c12a1b056d8e3abc06c399aa80d8d17,"The `extract_body()` function now, by default, will not display columns that have been hidden (e.g., by `cols_hide()` or `cols_merge*()`); the previous behavior can be restored by using `incl_hidden_cols = TRUE`.",NA,NA,NA,NA
+gt,764d35ebfcfac4a780cb98b0abe5822c,New arguments have been added to `extract_body()` to better control which columns will be present in the returned data (#1875). (#1889),NA,NA,NA,NA
