@@ -35,6 +35,14 @@
     at the maximum value. (#4131)
 
     !end-bullet!
+-   !begin-bullet!
+    `dateInput` and `dateRangeInput` no longer send immediate updates to
+    the server when the user is typing a date input. Instead, it waits
+    until the user presses Enter or clicks out of the field to send the
+    update, avoiding spurious and incorrect date values. Note that an
+    update is still sent immediately when the field is cleared. (#3664)
+
+    !end-bullet!
 
 !end-bullets-2!
 
