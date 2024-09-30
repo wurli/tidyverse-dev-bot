@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed a performance regression in `renv::dependencies()`. (#1999)
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed an issue where `renv` tests could fail if the `parallel`
     package was loaded during test execution.
 

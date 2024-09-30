@@ -18004,3 +18004,4 @@ renv,b0ef5b452c13b619d6c041801eedb84c,`renv` now determines a package repository
 gt,7c12a1b056d8e3abc06c399aa80d8d17,"The `extract_body()` function now, by default, will not display columns that have been hidden (e.g., by `cols_hide()` or `cols_merge*()`); the previous behavior can be restored by using `incl_hidden_cols = TRUE`.",NA,NA,NA,NA
 gt,764d35ebfcfac4a780cb98b0abe5822c,New arguments have been added to `extract_body()` to better control which columns will be present in the returned data (#1875). (#1889),NA,NA,NA,NA
 shiny,c7e62e8df5d2de180af7ecb729c63bfa,"When spinners and the pulse busy indicators are enabled, Shiny now shows the pulse indicator when dynamic UI elements are recalculating if no other spinners are present in the app. (#4137)",NA,NA,NA,NA
+renv,21369bcdffaea3cfe3c66ac71e05f6b3,Fixed a performance regression in `renv::dependencies()`. (#1999),NA,NA,NA,NA
