@@ -8,6 +8,13 @@
     Small improvements to the default pulse busy indicator to better
     blend with any background. It's also now slightly smaller by
     default. (#4122)
+
+    !end-bullet!
+-   !begin-bullet!
+    When spinners and the pulse busy indicators are enabled, Shiny now
+    shows the pulse indicator when dynamic UI elements are recalculating
+    if no other spinners are present in the app. (#4137)
+
     !end-bullet!
 
 !end-bullets-1!
