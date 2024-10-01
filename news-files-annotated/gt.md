@@ -195,7 +195,7 @@
     !end-bullet!
 -   !begin-bullet!
     `vec_fmt_*()` (and incidentally `cols_nanoplot()`) should be faster
-    now (@olivroy, #1888, #1891).
+    now (@olivroy, #1888, #1891, #1896).
 
     !end-bullet!
 -   !begin-bullet!
