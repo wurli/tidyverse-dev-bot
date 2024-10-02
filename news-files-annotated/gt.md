@@ -93,6 +93,11 @@
 !begin-bullets-5!
 
 -   !begin-bullet!
+    Fixed an issue where column widths weren't set properly using
+    `col_widths()` for LaTeX output. (#1837)
+
+    !end-bullet!
+-   !begin-bullet!
     Improved error messages for the `text_transform()` function if
     `locations` couldn't be resolved. (@olivroy, #1774)
 
