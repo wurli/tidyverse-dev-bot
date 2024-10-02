@@ -207,6 +207,11 @@
     `cols_add()` works in more cases (#1893).
 
     !end-bullet!
+-   !begin-bullet!
+    LaTeX now correctly renders if text size is changed (@olivroy,
+    #1885).
+
+    !end-bullet!
 
 !end-bullets-5!
 

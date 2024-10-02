@@ -18008,3 +18008,4 @@ renv,21369bcdffaea3cfe3c66ac71e05f6b3,Fixed a performance regression in `renv::d
 shiny,56e6077cf10aeeaaef1663a373dd16ad,"`dateInput` and `dateRangeInput` no longer send immediate updates to the server when the user is typing a date input. Instead, it waits until the user presses Enter or clicks out of the field to send the update, avoiding spurious and incorrect date values. Note that an update is still sent immediately when the field is cleared. (#3664)",NA,NA,NA,NA
 tibble,990e85bdb47cf8ffcd36c7f7e30b75f4,"Rework `view()` to better work with RStudio and Positron (@​DavisVaughan, #1551, #1603).",NA,NA,NA,NA
 gt,5a5a987863762613188b0a0dce6ad20d,Fixed an issue where column widths weren't set properly using `col_widths()` for LaTeX output. (#1837),NA,NA,NA,NA
+gt,5997e36b0b05db0a0cb8285a42c9ee35,"LaTeX now correctly renders if text size is changed (@​olivroy, #1885).",NA,NA,NA,NA
