@@ -17,6 +17,11 @@
 !begin-bullets-2!
 
 -   !begin-bullet!
+    Added new board for Databricks Volumes `board_databricks()` (#839,
+    @edgararuiz).
+
+    !end-bullet!
+-   !begin-bullet!
     Added example Python code to pin previews for Posit Connect (#806).
 
     !end-bullet!
