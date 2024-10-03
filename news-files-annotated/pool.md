@@ -1,19 +1,27 @@
 # pool (development version)
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    Switched from hosted MySQL database to local SQLite database.
+    !end-bullet!
+
+!end-bullets-1!
+
 # pool 1.0.3
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     Now explicitly requires DBI 1.2.0 (#178) and messages if you're
     using an old dbplyr (#179).
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # pool 1.0.2
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     No longer depends on the withr package, by instead requiring R 3.6.
@@ -34,11 +42,11 @@
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 # pool 1.0.1
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     `copy_to()` now returns a tbl that uses the Pool.
@@ -50,13 +58,13 @@
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 # pool 1.0.0
 
 ## New features
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     Pool has been re-licensed to MIT (#158).
@@ -74,11 +82,11 @@
 
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     Pools now get a useful print method (#140).
@@ -120,11 +128,11 @@
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # pool 0.1.6
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     `left_join()` and friends once again work with pool objects (#111).
@@ -135,11 +143,11 @@
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 # pool 0.1.5
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     dplyr and dbplyr are now Suggests instead of Imports. Thanks,
@@ -158,11 +166,11 @@
 
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 # pool 0.1.4.3
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     Previously, pool would always set `options(warn=1)` when running
@@ -171,31 +179,31 @@
     used. (#90)
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 # pool 0.1.4.2
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     Update unit test for compatibility with future dbplyr. (#82)
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 # pool 0.1.4.1
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     Change package maintainer
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 # pool 0.1.4
 
-!begin-bullets-11!
+!begin-bullets-12!
 
 -   !begin-bullet!
     Changed the methods `dbExistsTable()`, `dbRemoveTable()`,
@@ -204,11 +212,11 @@
     the default definition in DBI. (#57)
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-12!
 
 # pool 0.1.3
 
-!begin-bullets-12!
+!begin-bullets-13!
 
 -   !begin-bullet!
     Use `requireNamespace("pkg", quietly = TRUE)` for `RMySQL` and
@@ -216,13 +224,13 @@
     packages (i.e. not "Depends"). (commit 4205feb)
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
 
 # pool 0.1.2
 
 ### Minor new features and improvements
 
-!begin-bullets-13!
+!begin-bullets-14!
 
 -   !begin-bullet!
     Included more examples in the documentation. (#50)
@@ -247,11 +255,11 @@
 
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-14!
 
 ### Bug fixes
 
-!begin-bullets-14!
+!begin-bullets-15!
 
 -   !begin-bullet!
     Fix all dbplyr wrapper functions that weren't passing in additional
@@ -272,13 +280,13 @@
 
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-15!
 
 # pool 0.1.1
 
 ### Breaking changes
 
-!begin-bullets-15!
+!begin-bullets-16!
 
 -   !begin-bullet!
     Fix #39: Moved `dplyr` support in `pool` from `dplyr` 0.5.0 to
@@ -342,11 +350,11 @@
     !end-codeblock!
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-16!
 
 ### New features
 
-!begin-bullets-16!
+!begin-bullets-17!
 
 -   !begin-bullet!
     Use `later` package for scheduling tasks (#44). This also has the
@@ -354,24 +362,24 @@
     of the `naiveScheduler` completely.
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-17!
 
 ### Library updates
 
-!begin-bullets-17!
+!begin-bullets-18!
 
 -   !begin-bullet!
     Roxygen 5.0.1 to 6.0.1. (commit #9952000)
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-18!
 
 # pool 0.1.0
 
-!begin-bullets-18!
+!begin-bullets-19!
 
 -   !begin-bullet!
     Initial release!
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-19!
