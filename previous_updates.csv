@@ -18011,3 +18011,4 @@ gt,5a5a987863762613188b0a0dce6ad20d,Fixed an issue where column widths weren't s
 gt,5997e36b0b05db0a0cb8285a42c9ee35,"LaTeX now correctly renders if text size is changed (@​olivroy, #1885).",NA,NA,NA,NA
 pins,a7d93613aa0a934690b17eb1ddc6e718,"Added new board for Databricks Volumes `board_databricks()` (#839, @​edgararuiz).",NA,NA,NA,NA
 pool,28ec6981a68e5df98a01799ee6c6cf9d,Switched from hosted MySQL database to local SQLite database.,NA,NA,NA,NA
+pins,fe9fa822348010596bb78d8182e6d3ff,"Switched writing with `type = ""parquet""` to use the nanoparquet package (#843).",NA,NA,NA,NA

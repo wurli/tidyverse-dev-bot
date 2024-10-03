@@ -17,11 +17,6 @@
 !begin-bullets-2!
 
 -   !begin-bullet!
-    Added new board for Databricks Volumes `board_databricks()` (#839,
-    @edgararuiz).
-
-    !end-bullet!
--   !begin-bullet!
     Added example Python code to pin previews for Posit Connect (#806).
 
     !end-bullet!
@@ -32,12 +27,22 @@
     !end-bullet!
 -   !begin-bullet!
     Fixed a bug in handling folders with duplicate names for Google
-    Drive (#819, @UchidaMizuki)
+    Drive (#819, @UchidaMizuki).
 
     !end-bullet!
 -   !begin-bullet!
     Fixed how previously deleted pin versions are detected (#838,
-    @MichalLauer)
+    @MichalLauer).
+
+    !end-bullet!
+-   !begin-bullet!
+    Added new board for Databricks Volumes `board_databricks()` (#839,
+    @edgararuiz).
+
+    !end-bullet!
+-   !begin-bullet!
+    Switched writing with `type = "parquet"` to use the nanoparquet
+    package (#843).
 
     !end-bullet!
 
