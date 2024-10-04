@@ -18012,3 +18012,18 @@ gt,5997e36b0b05db0a0cb8285a42c9ee35,"LaTeX now correctly renders if text size is
 pins,a7d93613aa0a934690b17eb1ddc6e718,"Added new board for Databricks Volumes `board_databricks()` (#839, @​edgararuiz).",NA,NA,NA,NA
 pool,28ec6981a68e5df98a01799ee6c6cf9d,Switched from hosted MySQL database to local SQLite database.,NA,NA,NA,NA
 pins,fe9fa822348010596bb78d8182e6d3ff,"Switched writing with `type = ""parquet""` to use the nanoparquet package (#843).",NA,NA,NA,NA
+gt,65fb9f9139d0973556fc54db6fd36eac,"Creating a caption with `tab_caption()` will now be preserved in LaTeX output with `as_latex()`. Cross-referencing a table using the internal cross-referencing system of **bookdown** is now enabled for PDF and HTML outputs (for HTML, set `options(""htmltools.preserve.raw"" = FALSE)`). Quarto users should use the `tbl-cap` and `label` cell options. (@​nielsbock, #1800)",NA,NA,NA,NA
+gt,996b6888335a38cca2cc64878db09bb0,"Fixed a bug that caused an error in LaTeX when (1) `row_group_as_column = TRUE`, (2) the row groups were specified using `tab_row_group()`, and (3) the user specified a width for the row label column. (@​kbrevoort, #1804)",NA,NA,NA,NA
+gt,55337b0e5c6fd03f223cf3897aa639a8,"Fixed an issue where column widths weren't set properly using `col_widths()` for LaTeX output (#1837). (@​snhansen, #1867)",NA,NA,NA,NA
+gt,beeb20a23b43ef9524603ac2fa95610f,"Interactive tables now respect more styling options, namely: `column_labels.background.color`, `row_group.background.color`, `row_group.font.weight`, `table_body.hlines.style`, `table.font.weight`, `table.font.size`, and `stub.font.weight`. (#1693)",NA,NA,NA,NA
+gt,3abaeb44f08595afcb32ee85791574d5,"The optional argument `levels` was added to `cells_column_spanners()` to constrain targeting of column spanners by their level. (@​obsaditelnost, #1858)",NA,NA,NA,NA
+gt,4620f0e6fa381c3d23fcb31489534d8c,"Fixed a bug in using `pct()` column widths with `as_gtable()` (#1771). (@​teunbrand, #1776)",NA,NA,NA,NA
+gt,6e97ed1dd663a1894118a289fb3f044a,"Showing currency symbols in grid output now works. (@​olivroy, #1788)",NA,NA,NA,NA
+gt,3ba4c7eb51047652575c694687b441a5,"`data_color()` no longer errors when a tidyselect selection is empty (like `fmt_*()` functions) (#1665). (@​olivroy, #1795)",NA,NA,NA,NA
+gt,af21510997d242e2a5bacd1f55c1c365,"Improved performance during footnote rendering. (@​olivroy, #1818)",NA,NA,NA,NA
+gt,48ab7712ab8773679890a4e144960ca9,"Improved footnote rendering in Quarto with `fmt_markdown()` (#1773). (@​olivroy, #1860)",NA,NA,NA,NA
+gt,2ac7274682b5e0fef71f945d592bd5ba,Fixed a bug where spanners didn't render correctly in Quarto (#1839). (#1856),NA,NA,NA,NA
+gt,18e78ee050cc012f252d82e61db7af43,"Fixed an issue where `tab_spanner_delim()` would fail to resolve a duplicate ID value. (@​olivroy, #1821)",NA,NA,NA,NA
+gt,6daa3671d5bf320bd2c3b8040047a520,`cols_add()` works correctly in more cases. (#1893),NA,NA,NA,NA
+gt,429dd29e70440b8287b1e16a4f23e956,"`tidyselect::where()`, `tidyselect::all_of()`, and `tidyselect::any_of()` are now re-exported by gt. (#1830)",NA,NA,NA,NA
+gt,56389deddac2425cf65263a683ce3b66,"`vec_fmt_*()` (and incidentally `cols_nanoplot()`) should be faster now. (@​olivroy, #1888, #1891, #1896, #1901)",NA,NA,NA,NA
