@@ -1,5 +1,7 @@
-
 # renv (development version)
+
+
+# renv 1.0.10
 
 * Fixed a performance regression in `renv::dependencies()`. (#1999)
 
