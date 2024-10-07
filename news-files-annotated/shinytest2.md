@@ -7,6 +7,12 @@
 -   !begin-bullet!
     Add support for `$click()`ing `{bslib}`'s `input_task_button()`
     (#829).
+
+    !end-bullet!
+-   !begin-bullet!
+    Improved the error message when an app takes too long to start up
+    (@LouisLeNezet, #394).
+
     !end-bullet!
 
 !end-bullets-1!

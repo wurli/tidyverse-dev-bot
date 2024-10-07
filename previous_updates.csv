@@ -18030,3 +18030,4 @@ gt,56389deddac2425cf65263a683ce3b66,"`vec_fmt_*()` (and incidentally `cols_nanop
 pins,2fda1b346c3715a167bfe35e4cd39db1,Started gradual deprecation process for legacy pins functions such as `pin()` (#844).,NA,NA,NA,NA
 pool,19e4a5f64356b6634bd6fbaf49ca6498,Switched from hosted MySQL database to local SQLite database in examples.,NA,NA,NA,NA
 reticulate,7e4e6982f7e9b8fe38c1c40682b05429,Fixed error when attempting to use a python venv created with `uv` (#1678),NA,NA,NA,NA
+shinytest2,7af7b36e70c795e73c834a73114d2080,"Improved the error message when an app takes too long to start up (@​LouisLeNezet, #394).",NA,NA,NA,NA
