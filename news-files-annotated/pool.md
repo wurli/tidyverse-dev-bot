@@ -3,7 +3,8 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
-    Switched from hosted MySQL database to local SQLite database.
+    Switched from hosted MySQL database to local SQLite database in
+    examples.
     !end-bullet!
 
 !end-bullets-1!

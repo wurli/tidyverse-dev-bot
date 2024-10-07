@@ -18028,3 +18028,4 @@ gt,6daa3671d5bf320bd2c3b8040047a520,`cols_add()` works correctly in more cases. 
 gt,429dd29e70440b8287b1e16a4f23e956,"`tidyselect::where()`, `tidyselect::all_of()`, and `tidyselect::any_of()` are now re-exported by gt. (#1830)",NA,NA,NA,NA
 gt,56389deddac2425cf65263a683ce3b66,"`vec_fmt_*()` (and incidentally `cols_nanoplot()`) should be faster now. (@​olivroy, #1888, #1891, #1896, #1901)",NA,NA,NA,NA
 pins,2fda1b346c3715a167bfe35e4cd39db1,Started gradual deprecation process for legacy pins functions such as `pin()` (#844).,NA,NA,NA,NA
+pool,19e4a5f64356b6634bd6fbaf49ca6498,Switched from hosted MySQL database to local SQLite database in examples.,NA,NA,NA,NA
