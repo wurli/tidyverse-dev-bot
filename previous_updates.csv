@@ -18027,3 +18027,4 @@ gt,18e78ee050cc012f252d82e61db7af43,"Fixed an issue where `tab_spanner_delim()` 
 gt,6daa3671d5bf320bd2c3b8040047a520,`cols_add()` works correctly in more cases. (#1893),NA,NA,NA,NA
 gt,429dd29e70440b8287b1e16a4f23e956,"`tidyselect::where()`, `tidyselect::all_of()`, and `tidyselect::any_of()` are now re-exported by gt. (#1830)",NA,NA,NA,NA
 gt,56389deddac2425cf65263a683ce3b66,"`vec_fmt_*()` (and incidentally `cols_nanoplot()`) should be faster now. (@​olivroy, #1888, #1891, #1896, #1901)",NA,NA,NA,NA
+pins,2fda1b346c3715a167bfe35e4cd39db1,Started gradual deprecation process for legacy pins functions such as `pin()` (#844).,NA,NA,NA,NA

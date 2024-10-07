@@ -8,6 +8,12 @@
     Changed the function signature of `pin_upload()` to be consistent
     with `pin_write()` i.e. arguments like `tags` must be passed by name
     and not position (#809).
+
+    !end-bullet!
+-   !begin-bullet!
+    Started gradual deprecation process for legacy pins functions such
+    as `pin()` (#844).
+
     !end-bullet!
 
 !end-bullets-1!
