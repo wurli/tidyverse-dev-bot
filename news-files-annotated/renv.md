@@ -3,8 +3,16 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `renv` now includes compiled extensions on Linux + macOS. These
+    extensions are primarily used to improve the performance of
+    `renv::dependencies()` and other static analysis code. Support for
+    Windows will come in a future release.
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed an issue where `renv::snapshot()` could fail if the project
     contained a call to `module()` with no arguments. (#2007)
+
     !end-bullet!
 
 !end-bullets-1!
