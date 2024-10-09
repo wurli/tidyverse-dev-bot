@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `renv` now assumes that Artifactory package repositories will use a
+    CRAN-like layout of packages for packages in the archive. (#1996)
+
+    !end-bullet!
+-   !begin-bullet!
     `renv` now includes compiled extensions on Linux + macOS. These
     extensions are primarily used to improve the performance of
     `renv::dependencies()` and other static analysis code. Support for
