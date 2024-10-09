@@ -18034,3 +18034,4 @@ shinytest2,7af7b36e70c795e73c834a73114d2080,"Improved the error message when an 
 renv,5d77d59254018fc883ae8ecf72386197,Fixed an issue where `renv::snapshot()` could fail if the project contained a call to `module()` with no arguments. (#2007),NA,NA,NA,NA
 renv,a797ce1ebd98cb605237a6c5170bd33f,`renv` now includes compiled extensions on Linux + macOS. These extensions are primarily used to improve the performance of `renv::dependencies()` and other static analysis code. Support for Windows will come in a future release.,NA,NA,NA,NA
 renv,ee2f32d3cb70672932a72e25bc084bf4,`renv` now assumes that Artifactory package repositories will use a CRAN-like layout of packages for packages in the archive. (#1996),NA,NA,NA,NA
+renv,042ce71f5fca9e774ddcc28293a40dae,Fixed an issue where headers were not properly passed to `available.packages()` during `renv` bootstrap. (#1942),NA,NA,NA,NA

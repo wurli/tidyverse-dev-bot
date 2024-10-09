@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed an issue where headers were not properly passed to
+    `available.packages()` during `renv` bootstrap. (#1942)
+
+    !end-bullet!
+-   !begin-bullet!
     `renv` now assumes that Artifactory package repositories will use a
     CRAN-like layout of packages for packages in the archive. (#1996)
 
