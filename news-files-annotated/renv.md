@@ -3,6 +3,13 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed an issue where `renv::restore()` could fail when using `pak`
+    if one or more of the packages to be installed declared remotes that
+    were incompatible with the package records recorded in the `renv`
+    lockfile. (#1883)
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed an issue where headers were not properly passed to
     `available.packages()` during `renv` bootstrap. (#1942)
 
