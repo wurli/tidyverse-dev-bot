@@ -24,6 +24,13 @@
     contained a call to `module()` with no arguments. (#2007)
 
     !end-bullet!
+-   !begin-bullet!
+    On Linux, `renv` now emits a message on load if the R temporary
+    directory is within a folder that has been mounted as 'noexec'. This
+    message can be suppressed by setting the
+    `RENV_TEMPDIR_NOEXEC_CHECK=FALSE` environment variable.
+
+    !end-bullet!
 
 !end-bullets-1!
 
