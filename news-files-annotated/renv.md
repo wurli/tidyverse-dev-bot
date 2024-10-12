@@ -1,4 +1,6 @@
-# renv (development version)
+# renv 1.1.0 (UNRELEASED)
+
+# renv 1.0.11
 
 !begin-bullets-1!
 
@@ -16,7 +18,7 @@
     `renv` now includes compiled extensions on Linux + macOS. These
     extensions are primarily used to improve the performance of
     `renv::dependencies()` and other static analysis code. Support for
-    Windows will come in a future release.
+    Windows may come in a future release.
 
     !end-bullet!
 -   !begin-bullet!
