@@ -1,4 +1,6 @@
-# rstudioapi (under development)
+# rstudioapi (development version)
+
+# rstudioapi 0.17.0
 
 !begin-bullets-1!
 
