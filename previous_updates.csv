@@ -18039,3 +18039,30 @@ renv,b40a4e4dfe7bc8cc54be4f069767a799,Fixed an issue where `renv::restore()` cou
 renv,718394810c2afd8d0653b67f4e76ff86,"On Linux, `renv` now emits a message on load if the R temporary directory is within a folder that has been mounted as 'noexec'. This message can be suppressed by setting the `RENV_TEMPDIR_NOEXEC_CHECK=FALSE` environment variable.",NA,NA,NA,NA
 renv,b8be98c124514cb4581c526030f795b1,Fixed an issue where `renv` could erroneously create a binding called 'object' in the global environment on startup. (#2017),NA,NA,NA,NA
 rstudioapi,b411819835825028a78b179c89880db1,"Added `getMode()`, which can be used to differentiate between Desktop and Server installations of RStudio. (#280)",NA,NA,NA,NA
+keras,cc7bad19dd6f50b74ee06a889e42c188,"`install_keras()` changes: if a GPU is available, the default is now to install a CPU build of TensorFlow and a GPU build of JAX. To use a GPU in the current session, call `use_backend(""jax"")`.",NA,NA,NA,NA
+keras,44bbd92f1c2250bf0d488f042439401d,"When using `get_file()` with `extract = TRUE` or `untar = TRUE`, the return value is now the path of the extracted directory, rather than the path of the archive.",NA,NA,NA,NA
+keras,6c74feb2491ceffbc2969d96a9ec21c5,"Logging is now asynchronous in `fit()`, `evaluate()`, and `predict()`. This enables 100% compact stacking of `train_step` calls on accelerators (e.g. when running small models on TPU).",NA,NA,NA,NA
+keras,6c74feb2491ceffbc2969d96a9ec21c5,"• If you are using custom callbacks that rely on `on_batch_end`, this will disable async logging. You can re-enable it by adding `self$async_safe <- TRUE` to your callbacks. Note that the TensorBoard callback is not considered async-safe by default. Default callbacks like the progress bar are async-safe.",NA,NA,NA,NA
+keras,e1750055b7f9d6379aeec3c951781390,New bitwise operations:,NA,NA,NA,NA
+keras,e1750055b7f9d6379aeec3c951781390,• `op_bitwise_and()`,NA,NA,NA,NA
+keras,e1750055b7f9d6379aeec3c951781390,• `op_bitwise_invert()`,NA,NA,NA,NA
+keras,e1750055b7f9d6379aeec3c951781390,• `op_bitwise_left_shift()`,NA,NA,NA,NA
+keras,e1750055b7f9d6379aeec3c951781390,• `op_bitwise_not()`,NA,NA,NA,NA
+keras,e1750055b7f9d6379aeec3c951781390,• `op_bitwise_or()`,NA,NA,NA,NA
+keras,e1750055b7f9d6379aeec3c951781390,• `op_bitwise_right_shift()`,NA,NA,NA,NA
+keras,e1750055b7f9d6379aeec3c951781390,• `op_bitwise_xor()`,NA,NA,NA,NA
+keras,e1664a00e5488dc505dddf87f8010c1d,New math operations:,NA,NA,NA,NA
+keras,e1664a00e5488dc505dddf87f8010c1d,• `op_logdet()`,NA,NA,NA,NA
+keras,e1664a00e5488dc505dddf87f8010c1d,• `op_trunc()`,NA,NA,NA,NA
+keras,e1664a00e5488dc505dddf87f8010c1d,• `op_histogram()`,NA,NA,NA,NA
+keras,c864ef459d698a106bc147d75d8b284c,New neural network operation: `op_dot_product_attention()`,NA,NA,NA,NA
+keras,b439c5f2b0f3b885e7a162c870adb079,New image preprocessing layers:,NA,NA,NA,NA
+keras,b439c5f2b0f3b885e7a162c870adb079,• `layer_auto_contrast()`,NA,NA,NA,NA
+keras,b439c5f2b0f3b885e7a162c870adb079,• `layer_solarization()`,NA,NA,NA,NA
+keras,d5fca22d5c8f400c2650e67eeebc09bc,"New Model functions `get_state_tree()` and `set_state_tree()`, for retrieving all model variables, including trainable, non-trainable, optimizer variables, and metric variables.",NA,NA,NA,NA
+keras,9bcb5c859075149b7530b4bbd70976f0,"New `layer_pipeline()` for composing a sequence of layers. This class is useful for building a preprocessing pipeline. Compared to a `keras_model_sequential()`, `layer_pipeline()` has a few key differences:",NA,NA,NA,NA
+keras,9bcb5c859075149b7530b4bbd70976f0,"• It's not a Model, just a plain layer.",NA,NA,NA,NA
+keras,9bcb5c859075149b7530b4bbd70976f0,"• When the layers in the pipeline are compatible with `tf.data`, the pipeline will also remain `tf.data` compatible, regardless of the backend you use.",NA,NA,NA,NA
+keras,3e8a107af1aa6a32cde411c0074bfecd,New argument: `export_savedmodel(verbose = )`,NA,NA,NA,NA
+keras,f6f3b6419ed8d5a21d4beee41884a81d,New argument: `op_normalize(epsilon = )`,NA,NA,NA,NA
+keras,7c552d8d95b8d9663316e71437ad255a,Various documentation improvements and bug fixes.,NA,NA,NA,NA
