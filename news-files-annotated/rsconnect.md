@@ -3,8 +3,16 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Primary Quarto document detection only considers `.R`, `.Rmd`, and
+    `.qmd` as end-of-file extensions. Previously, a file with `.R`
+    elsewhere in its name, such as `.Rprofile`, was incorrectly
+    considered. (#1106)
+
+    !end-bullet!
+-   !begin-bullet!
     Use the public Connect server API endpoint `/v1/tasks/{id}` to poll
     task progress. (#1088)
+
     !end-bullet!
 
 !end-bullets-1!
