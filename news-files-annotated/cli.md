@@ -23,6 +23,11 @@
     "head" if width is specified (@rundel, #590).
 
     !end-bullet!
+-   !begin-bullet!
+    New `hash_xxhash()` etc. functions to calculate the xxHash of
+    strings, raw vectors, objects, files.
+
+    !end-bullet!
 
 !end-bullets-1!
 

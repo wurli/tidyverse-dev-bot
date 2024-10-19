@@ -18068,3 +18068,4 @@ keras,f6f3b6419ed8d5a21d4beee41884a81d,New argument: `op_normalize(epsilon = )`,
 keras,7c552d8d95b8d9663316e71437ad255a,Various documentation improvements and bug fixes.,NA,NA,NA,NA
 rsconnect,833104c30e134226ebc8c57112f8b094,"Primary Quarto document detection only considers `.R`, `.Rmd`, and `.qmd` as end-of-file extensions. Previously, a file with `.R` elsewhere in its name, such as `.Rprofile`, was incorrectly considered. (#1106)",NA,NA,NA,NA
 dbplyr,947fc66e87417c1c290ccf77cbbb8111,"New translations of clock function `date_count_between()` for SQL server, Redshift, Snowflake, Postgres, and Spark (@​edward-burn, #1495).",NA,NA,NA,NA
+cli,bf430fa2e269b729b9673444e32dd9de,"New `hash_xxhash()` etc. functions to calculate the xxHash of strings, raw vectors, objects, files.",NA,NA,NA,NA
