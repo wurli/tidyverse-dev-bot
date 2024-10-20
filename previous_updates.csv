@@ -18069,3 +18069,4 @@ keras,7c552d8d95b8d9663316e71437ad255a,Various documentation improvements and bu
 rsconnect,833104c30e134226ebc8c57112f8b094,"Primary Quarto document detection only considers `.R`, `.Rmd`, and `.qmd` as end-of-file extensions. Previously, a file with `.R` elsewhere in its name, such as `.Rprofile`, was incorrectly considered. (#1106)",NA,NA,NA,NA
 dbplyr,947fc66e87417c1c290ccf77cbbb8111,"New translations of clock function `date_count_between()` for SQL server, Redshift, Snowflake, Postgres, and Spark (@​edward-burn, #1495).",NA,NA,NA,NA
 cli,bf430fa2e269b729b9673444e32dd9de,"New `hash_xxhash()` etc. functions to calculate the xxHash of strings, raw vectors, objects, files.",NA,NA,NA,NA
+pillar,9f80faaf34a7e5dbd5aefcb7f11aff9d,Revdepcheck results.,NA,NA,NA,NA
