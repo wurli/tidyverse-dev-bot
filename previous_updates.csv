@@ -18080,3 +18080,4 @@ waldo,2d3306021083ef6a7ea5726da5834ef0,waldo now requires R 4.0.0.,NA,NA,NA,NA
 waldo,d2ab3314b8b629498a171c3e4d9d7c07,`compare()` can now distinguish between objects that differ only in the value of their S4 bit (#189).,NA,NA,NA,NA
 waldo,9df036a34bdbe41729b00fc6c5c2fe2f,Double comparisons now always display one more digit than the absolute minimum necessary (#141).,NA,NA,NA,NA
 waldo,480d64d126738c06933bf4e5575d2d9d,`as_map()` now preserves attributes (#185).,NA,NA,NA,NA
+waldo,57a6fdac3dcfc04d0b2379e0a5956a38,waldo gains basic support for S7 objects (#200).,NA,NA,NA,NA

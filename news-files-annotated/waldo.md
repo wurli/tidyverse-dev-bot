@@ -3,6 +3,9 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    waldo gains basic support for S7 objects (#200).
+    !end-bullet!
+-   !begin-bullet!
     `as_map()` now preserves attributes (#185).
     !end-bullet!
 -   !begin-bullet!
