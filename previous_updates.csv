@@ -18083,3 +18083,4 @@ waldo,480d64d126738c06933bf4e5575d2d9d,`as_map()` now preserves attributes (#185
 waldo,57a6fdac3dcfc04d0b2379e0a5956a38,waldo gains basic support for S7 objects (#200).,NA,NA,NA,NA
 tidyverse,622e6dfe348f4580e6a6d80ba5cd8f81,tidyverse now requires R 4.0.0.,NA,NA,NA,NA
 waldo,a483f8fe511fbd12e4cc9b139193b2ac,`compare()` now gives informative errors if you misspecify the argument types (#181),NA,NA,NA,NA
+tidyverse,be24fb9a1ba1b99a6863ed3bb302f874,Drop modelr since it's superseded.,NA,NA,NA,NA

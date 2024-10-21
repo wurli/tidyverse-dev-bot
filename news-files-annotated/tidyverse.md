@@ -3,6 +3,9 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Drop modelr since it's superseded.
+    !end-bullet!
+-   !begin-bullet!
     tidyverse now requires R 4.0.0.
     !end-bullet!
 
