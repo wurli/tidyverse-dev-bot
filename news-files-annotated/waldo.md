@@ -3,6 +3,9 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `as_map()` now preserves attributes (#185).
+    !end-bullet!
+-   !begin-bullet!
     `compare()` can now distinguish between objects that differ only in
     the value of their S4 bit (#189).
     !end-bullet!
