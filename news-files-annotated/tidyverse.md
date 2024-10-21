@@ -1,8 +1,16 @@
 # tidyverse (development version)
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    tidyverse now requires R 4.0.0.
+    !end-bullet!
+
+!end-bullets-1!
+
 # tidyverse 2.0.0
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     lubridate is now a member of the core tidyverse (#157)!
@@ -24,11 +32,11 @@
 
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # tidyverse 1.3.2
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     Text version of the citation now lists all authors (#269).
@@ -43,11 +51,11 @@
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 # tidyverse 1.3.1
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     tidyverse now installs dtplyr (#216), googledrive, and googlesheets4
@@ -59,11 +67,11 @@
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 # tidyverse 1.3.0
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     The tidyverse now has an associated paper at the Journal of Open
@@ -111,11 +119,11 @@
 
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 # tidyverse 1.2.1
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     Require modern versions of all packages (#85)
@@ -126,13 +134,13 @@
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # tidyverse 1.2.0
 
 ## Changes to tidyverse membership
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     stringr and forcats have been added to the core tidyverse, so they
@@ -145,11 +153,11 @@
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 ## Other improvements
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     On attach, tidyverse now makes better use of the horizontal space,
@@ -180,11 +188,11 @@
 
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 # tidyverse 1.1.1
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     Moved feather from Imports to Suggests - feather is part of the
@@ -192,11 +200,11 @@
     make it painful in many scenarios (#36).
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 # tidyverse 1.1.0
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     Added a `NEWS.md` file to track changes to the package.
@@ -205,7 +213,7 @@
 -   !begin-bullet!
     Membership changes:
 
-    !begin-bullets-10!
+    !begin-bullets-11!
     -   !begin-bullet!
         Removed DBI (since very different API, #16)
         !end-bullet!
@@ -213,7 +221,7 @@
         Added feather (#15)
         !end-bullet!
 
-    !end-bullets-10!
+    !end-bullets-11!
     !end-bullet!
 -   !begin-bullet!
     `tidyverse_deps()` and `tidyverse_packages()` are now exported so
@@ -228,4 +236,4 @@
 
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!

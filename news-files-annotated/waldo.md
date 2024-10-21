@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `compare()` now gives informative errors if you misspecify the
+    argument types (#181)
+    !end-bullet!
+-   !begin-bullet!
     waldo gains basic support for S7 objects (#200).
     !end-bullet!
 -   !begin-bullet!
