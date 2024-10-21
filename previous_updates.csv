@@ -18071,3 +18071,4 @@ dbplyr,947fc66e87417c1c290ccf77cbbb8111,"New translations of clock function `dat
 cli,bf430fa2e269b729b9673444e32dd9de,"New `hash_xxhash()` etc. functions to calculate the xxHash of strings, raw vectors, objects, files.",NA,NA,NA,NA
 pillar,9f80faaf34a7e5dbd5aefcb7f11aff9d,Revdepcheck results.,NA,NA,NA,NA
 scales,59dae55293c8e5460edc76a2dccbe78d,"`label_log()` has a `signed` argument for displaying negative numbers (@​teunbrand, #421).",NA,NA,NA,NA
+scales,bd1624c27255f1c446bfb774be282438,The scales package now keeps track of known palettes. These can be retrieved using `get_palette()` or registered using `set_palette()` (#396).,NA,NA,NA,NA

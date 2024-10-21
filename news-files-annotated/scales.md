@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    The scales package now keeps track of known palettes. These can be
+    retrieved using `get_palette()` or registered using `set_palette()`
+    (#396).
+    !end-bullet!
+-   !begin-bullet!
     `label_log()` has a `signed` argument for displaying negative
     numbers (@teunbrand, #421).
     !end-bullet!
