@@ -3,6 +3,14 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `compare()` can now distinguish between objects that differ only in
+    the value of their S4 bit (#189).
+    !end-bullet!
+-   !begin-bullet!
+    Double comparisons now always display one more digit than the
+    absolute minimum necessary (#141).
+    !end-bullet!
+-   !begin-bullet!
     waldo no longer imports tibble and rematch2 (@olivroy, #196).
     !end-bullet!
 -   !begin-bullet!

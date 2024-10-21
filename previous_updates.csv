@@ -18077,3 +18077,5 @@ scales,7064f3433a0a2431f24f3c8166ddb4f6,`breaks_pretty()` will return the input 
 scales,8dcd4196afac9c174a984dfa2ea40be3,"`transform_exp()` now has more sensible breaks, available in `breaks_exp()` (@​teunbrand, #405).",NA,NA,NA,NA
 waldo,e0f6996315080aedba7e9fbb59373a8e,"waldo no longer imports tibble and rematch2 (@​olivroy, #196).",NA,NA,NA,NA
 waldo,2d3306021083ef6a7ea5726da5834ef0,waldo now requires R 4.0.0.,NA,NA,NA,NA
+waldo,d2ab3314b8b629498a171c3e4d9d7c07,`compare()` can now distinguish between objects that differ only in the value of their S4 bit (#189).,NA,NA,NA,NA
+waldo,9df036a34bdbe41729b00fc6c5c2fe2f,Double comparisons now always display one more digit than the absolute minimum necessary (#141).,NA,NA,NA,NA
