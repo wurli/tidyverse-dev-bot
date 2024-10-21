@@ -3,6 +3,18 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    New `label_date_short(leading)` argument to replace leading zeroes
+    (#442)
+    !end-bullet!
+-   !begin-bullet!
+    `breaks_pretty()` will return the input limit when it has no range
+    (#446)
+    !end-bullet!
+-   !begin-bullet!
+    `transform_exp()` now has more sensible breaks, available in
+    `breaks_exp()` (@teunbrand, #405).
+    !end-bullet!
+-   !begin-bullet!
     The scales package now keeps track of known palettes. These can be
     retrieved using `get_palette()` or registered using `set_palette()`
     (#396).
