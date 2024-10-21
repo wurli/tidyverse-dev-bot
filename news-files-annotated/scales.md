@@ -1,10 +1,19 @@
 # scales (development version)
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    `label_log()` has a `signed` argument for displaying negative
+    numbers (@teunbrand, #421).
+    !end-bullet!
+
+!end-bullets-1!
+
 # scales 1.3.0
 
 ## Better type support
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     `rescale(I(x), ...)` and `rescale_mid(I(x), ...)` return `I(x)`
@@ -22,11 +31,11 @@
     alternative to `transform_hms()` (#212)
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 ## Ranges
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     `train_continuous()` coerces `new` to numeric before calculating
@@ -48,11 +57,11 @@
     the training starts with a charactor vector
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 ## Transformations
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     Transformation function have been renamed to `transform_*`-prefixed
@@ -80,11 +89,11 @@
     transform and the inverse transform (@mjskay, #322).
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 ## Misc
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     The `scale_cut` argument in `number()` now works as advertised for
@@ -110,28 +119,28 @@
     `_pal`-suffixed versions are kept for backward compatibility.
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 # scales 1.2.1
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     Re-document to fix HTML issues in `.Rd`.
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # scales 1.2.0
 
 ## New features
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     `label_number()`:
 
-    !begin-bullets-7!
+    !begin-bullets-8!
     -   !begin-bullet!
         New `style_positive` and `style_negative` argument control how
         positive and negative numbers are styled (#249, #262).
@@ -164,7 +173,7 @@
 
         !end-bullet!
 
-    !end-bullets-7!
+    !end-bullets-8!
     !end-bullet!
 -   !begin-bullet!
     `label_bytes()` now correctly accounts for the `scale` argument when
@@ -192,11 +201,11 @@
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 ## Bug fixes and minor improvements
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     `breaks_width()` now supports units like `"3 months"` in the
@@ -240,11 +249,11 @@
 
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 # scales 1.1.1
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     `breaks_width()` now handles `difftime`/`hms` objects
@@ -276,11 +285,11 @@
 
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 # scales 1.1.0
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     Axis breaks and labels have a new naming scheme: functions that
@@ -295,11 +304,11 @@
 
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 ## Labels
 
-!begin-bullets-11!
+!begin-bullets-12!
 
 -   !begin-bullet!
     All label functions preserve names (#202) and keep `NA`s as `NA`s
@@ -378,11 +387,11 @@
 
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-12!
 
 ## Breaks
 
-!begin-bullets-12!
+!begin-bullets-13!
 
 -   !begin-bullet!
     The built in breaks functions now returns a function that takes both
@@ -403,11 +412,11 @@
 
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
 
 ## Transformations
 
-!begin-bullets-13!
+!begin-bullets-14!
 
 -   !begin-bullet!
     New `yj_trans()` implements the Yeo-Johnson transformation
@@ -425,11 +434,11 @@
 
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-14!
 
 ## Other bug fixes and minor improvements
 
-!begin-bullets-14!
+!begin-bullets-15!
 
 -   !begin-bullet!
     scales now uses the farver package for colour manipulation instead
@@ -484,7 +493,7 @@
 
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-15!
 
 # scales 1.0.0
 
@@ -492,7 +501,7 @@
 
 ### Formatters
 
-!begin-bullets-15!
+!begin-bullets-16!
 
 -   !begin-bullet!
     `comma_format()`, `percent_format()` and `unit_format()` gain new
@@ -536,11 +545,11 @@
 
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-16!
 
 ### Transformations & breaks
 
-!begin-bullets-16!
+!begin-bullets-17!
 
 -   !begin-bullet!
     `boxcox_trans()` is now invertible for `x >= 0` and requires
@@ -565,11 +574,11 @@
 
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-17!
 
 ## Minor bug fixes and improvements
 
-!begin-bullets-17!
+!begin-bullets-18!
 
 -   !begin-bullet!
     scales functions now work as expected when it is used inside a for
@@ -615,11 +624,11 @@
 
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-18!
 
 # scales 0.5.0
 
-!begin-bullets-18!
+!begin-bullets-19!
 
 -   !begin-bullet!
     New function `regular_minor_breaks()` calculates minor breaks as a
@@ -642,11 +651,11 @@
 
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-19!
 
 # scales 0.4.1
 
-!begin-bullets-19!
+!begin-bullets-20!
 
 -   !begin-bullet!
     `extended_breaks()` no longer fails on pathological inputs.
@@ -662,11 +671,11 @@
 
     !end-bullet!
 
-!end-bullets-19!
+!end-bullets-20!
 
 # scales 0.4.0
 
-!begin-bullets-20!
+!begin-bullets-21!
 
 -   !begin-bullet!
     Switched from `NEWS` to `NEWS.md`.
@@ -692,11 +701,11 @@
 
     !end-bullet!
 
-!end-bullets-20!
+!end-bullets-21!
 
 # scales 0.3.0
 
-!begin-bullets-21!
+!begin-bullets-22!
 
 -   !begin-bullet!
     `rescale()` preserves missing values in input when the range of `x`
@@ -710,13 +719,13 @@
 
     !end-bullet!
 
-!end-bullets-21!
+!end-bullets-22!
 
 # scales 0.2.5
 
 ## Improved formatting functions
 
-!begin-bullets-22!
+!begin-bullets-23!
 
 -   !begin-bullet!
     `date_format()` gains an option to specify time zone (#51).
@@ -745,11 +754,11 @@
 
     !end-bullet!
 
-!end-bullets-22!
+!end-bullets-23!
 
 ## New colour scaling functions
 
-!begin-bullets-23!
+!begin-bullets-24!
 
 -   !begin-bullet!
     New color scaling functions `col_numeric()`, `col_bin()`,
@@ -765,11 +774,11 @@
 
     !end-bullet!
 
-!end-bullets-23!
+!end-bullets-24!
 
 ## Other bug fixes and minor improvements
 
-!begin-bullets-24!
+!begin-bullets-25!
 
 -   !begin-bullet!
     `boxcox_trans()` returns correct value when p is close to zero
@@ -797,11 +806,11 @@
 
     !end-bullet!
 
-!end-bullets-24!
+!end-bullets-25!
 
 # scales 0.2.4
 
-!begin-bullets-25!
+!begin-bullets-26!
 
 -   !begin-bullet!
     Eliminate stringr dependency.
@@ -812,11 +821,11 @@
 
     !end-bullet!
 
-!end-bullets-25!
+!end-bullets-26!
 
 # scales 0.2.3
 
-!begin-bullets-26!
+!begin-bullets-27!
 
 -   !begin-bullet!
     `floor_time()` calls `to_time()`, but that function was moved into a
@@ -837,11 +846,11 @@
 
     !end-bullet!
 
-!end-bullets-26!
+!end-bullets-27!
 
 # scales 0.2.2
 
-!begin-bullets-27!
+!begin-bullets-28!
 
 -   !begin-bullet!
     `zero_range()` has improved behaviour thanks to Brian Diggs.
@@ -881,11 +890,11 @@
 
     !end-bullet!
 
-!end-bullets-27!
+!end-bullets-28!
 
 # scales 0.2.1
 
-!begin-bullets-28!
+!begin-bullets-29!
 
 -   !begin-bullet!
     `suppressWarnings` from `train_continuous()` so zero-row or all
@@ -916,11 +925,11 @@
 
     !end-bullet!
 
-!end-bullets-28!
+!end-bullets-29!
 
 # scales 0.2.0
 
-!begin-bullets-29!
+!begin-bullets-30!
 
 -   !begin-bullet!
     `censor()` and `squish()` gain `only.finite` argument and default to
@@ -953,4 +962,4 @@
 
     !end-bullet!
 
-!end-bullets-29!
+!end-bullets-30!
