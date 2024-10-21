@@ -18075,3 +18075,5 @@ scales,bd1624c27255f1c446bfb774be282438,The scales package now keeps track of kn
 scales,ac0f96b2157f6c8df77168e2fc73f4c6,New `label_date_short(leading)` argument to replace leading zeroes (#442),NA,NA,NA,NA
 scales,7064f3433a0a2431f24f3c8166ddb4f6,`breaks_pretty()` will return the input limit when it has no range (#446),NA,NA,NA,NA
 scales,8dcd4196afac9c174a984dfa2ea40be3,"`transform_exp()` now has more sensible breaks, available in `breaks_exp()` (@​teunbrand, #405).",NA,NA,NA,NA
+waldo,e0f6996315080aedba7e9fbb59373a8e,"waldo no longer imports tibble and rematch2 (@​olivroy, #196).",NA,NA,NA,NA
+waldo,2d3306021083ef6a7ea5726da5834ef0,waldo now requires R 4.0.0.,NA,NA,NA,NA
