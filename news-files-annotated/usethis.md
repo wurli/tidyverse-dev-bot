@@ -1,8 +1,19 @@
 # usethis (development version)
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    `use_tidy_upkeep_issue()` now records the year it is being run in
+    the `Config/usethis/upkeep` field in DESCRIPTION. If this value
+    exists it is furthermore used to filter the checklist when making
+    the issue.
+    !end-bullet!
+
+!end-bullets-1!
+
 ## Bug fixes and minor improvements
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     `use_package()` now decreases a package minimum version required
@@ -21,13 +32,13 @@
 
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # usethis 3.0.0
 
 ## Transition to cli package for UI
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     The `ui_*()` functions have been marked as superseded. External
@@ -40,7 +51,7 @@
     of new cli-based helpers that are not exported.
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 ## Deprecated function and argument removal
 
@@ -49,7 +60,7 @@ usethis v2.0.0, which was released in December 2020.
 
 These changes have been in place for a long time now:
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     Switch from git2r to gert (+ credentials).
@@ -62,11 +73,11 @@ These changes have been in place for a long time now:
     Pivot towards GitHub Actions and away from Travis and AppVeyor.
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 Functions that are removed and, where applicable, what to use instead:
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     `git_credentials()`
@@ -116,11 +127,11 @@ Functions that are removed and, where applicable, what to use instead:
     `use_tidy_github_labels()`)
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 Function arguments that are removed:
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     `create_from_github(auth_token =, credentials =)`
@@ -138,11 +149,11 @@ Function arguments that are removed:
     `use_github_release(host =, auth_token =)`
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 ## Other changes
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     `use_zip()` and `use_course()` are equipped to handle a ZIP where
@@ -212,21 +223,21 @@ Function arguments that are removed:
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 # usethis 2.2.3
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     Patch release with changes to `.Rd` files requested by CRAN.
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 # usethis 2.2.2
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     Implicit usage of `numeric_version()` via comparison now always
@@ -235,11 +246,11 @@ Function arguments that are removed:
     https://bugs.r-project.org/show_bug.cgi?id=18548.
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 # usethis 2.2.1
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     Internal helper `cran_version()`, used in functions such as
@@ -256,13 +267,13 @@ Function arguments that are removed:
 
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 # usethis 2.2.0
 
 ## New functions
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     `use_author()` is a new function to introduce a new person into the
@@ -289,11 +300,11 @@ Function arguments that are removed:
 
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 ## Package development
 
-!begin-bullets-11!
+!begin-bullets-12!
 
 -   !begin-bullet!
     Although nested projects are discouraged, they can be useful in
@@ -341,11 +352,11 @@ Function arguments that are removed:
 
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-12!
 
 ## Package release
 
-!begin-bullets-12!
+!begin-bullets-13!
 
 -   !begin-bullet!
     `use_release_issue()` will now remind you to run
@@ -387,11 +398,11 @@ Function arguments that are removed:
 
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
 
 ## Package file management
 
-!begin-bullets-13!
+!begin-bullets-14!
 
 -   !begin-bullet!
     `rename_files()` now also affects files in `src/` (#1585).
@@ -414,11 +425,11 @@ Function arguments that are removed:
 
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-14!
 
 ## Git and GitHub
 
-!begin-bullets-14!
+!begin-bullets-15!
 
 -   !begin-bullet!
     `create_from_github()` will now use an existing `.Rproj` file if it
@@ -456,11 +467,11 @@ Function arguments that are removed:
 
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-15!
 
 ## Minor improvements and fixes
 
-!begin-bullets-15!
+!begin-bullets-16!
 
 -   !begin-bullet!
     Links to the R Packages book have been updated to the second edition
@@ -494,11 +505,11 @@ Function arguments that are removed:
 
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-16!
 
 ## Tidyverse-related
 
-!begin-bullets-16!
+!begin-bullets-17!
 
 -   !begin-bullet!
     `use_release_issue()` now uses internal `release_extra_revdeps()` to
@@ -513,11 +524,11 @@ Function arguments that are removed:
 
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-17!
 
 ## Deprecated functions
 
-!begin-bullets-17!
+!begin-bullets-18!
 
 -   !begin-bullet!
     `use_tidy_eval()` is now deprecated because it imports and
@@ -532,13 +543,13 @@ Function arguments that are removed:
 
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-18!
 
 # usethis 2.1.6
 
 ### GitHub-related
 
-!begin-bullets-18!
+!begin-bullets-19!
 
 -   !begin-bullet!
     `use_github_action()` and friends gain a `ref` argument, which
@@ -559,11 +570,11 @@ Function arguments that are removed:
 
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-19!
 
 ### Other changes
 
-!begin-bullets-19!
+!begin-bullets-20!
 
 -   !begin-bullet!
     `use_roxygen_md()` gains an `overwrite` argument (#1599).
@@ -586,11 +597,11 @@ Function arguments that are removed:
 
     !end-bullet!
 
-!end-bullets-19!
+!end-bullets-20!
 
 # usethis 2.1.5
 
-!begin-bullets-20!
+!begin-bullets-21!
 
 -   !begin-bullet!
     pkgdown-related functions no longer automatically strip a trailing
@@ -616,22 +627,22 @@ Function arguments that are removed:
 
     !end-bullet!
 
-!end-bullets-20!
+!end-bullets-21!
 
 # usethis 2.1.3
 
-!begin-bullets-21!
+!begin-bullets-22!
 
 -   !begin-bullet!
     Modified a test to ensure that intermittent GitHub rate limiting
     does not lead to ungraceful failure on CRAN.
     !end-bullet!
 
-!end-bullets-21!
+!end-bullets-22!
 
 # usethis 2.1.2
 
-!begin-bullets-22!
+!begin-bullets-23!
 
 -   !begin-bullet!
     `git_default_branch_rename()` no longer errors on repos where README
@@ -649,7 +660,7 @@ Function arguments that are removed:
 
     !end-bullet!
 
-!end-bullets-22!
+!end-bullets-23!
 
 # usethis 2.1.0
 
@@ -658,7 +669,7 @@ Function arguments that are removed:
 usethis has a more sophisticated understanding of the default branch and
 gains several functions to support default branch renaming.
 
-!begin-bullets-23!
+!begin-bullets-24!
 
 -   !begin-bullet!
     `git_branch_default()` has been renamed to `git_default_branch()`,
@@ -670,13 +681,13 @@ gains several functions to support default branch renaming.
     default branch. Instead of only consulting the local repo, now we
     integrate local info with the default branch reported by the
     `upstream` or `origin` remote, if applicable.
-    !begin-bullets-24!
+    !begin-bullets-25!
     -   !begin-bullet!
         This is intended to surface the case where a project has renamed
         its default branch and the local repo needs sync up with that.
         !end-bullet!
 
-    !end-bullets-24!
+    !end-bullets-25!
     !end-bullet!
 -   !begin-bullet!
     `git_default_branch_rediscover()` is a new function that helps
@@ -697,11 +708,11 @@ gains several functions to support default branch renaming.
     sophisticated analysis of `git_default_branch()`.
     !end-bullet!
 
-!end-bullets-23!
+!end-bullets-24!
 
 ## Other GitHub-related changes
 
-!begin-bullets-25!
+!begin-bullets-26!
 
 -   !begin-bullet!
     `git_sitrep()` and `gh_token_help()` try even harder to help people
@@ -764,11 +775,11 @@ gains several functions to support default branch renaming.
 
     !end-bullet!
 
-!end-bullets-25!
+!end-bullets-26!
 
 ## Package development
 
-!begin-bullets-26!
+!begin-bullets-27!
 
 -   !begin-bullet!
     `use_readme_rmd()` and `use_readme_md()` no longer include CRAN
@@ -816,14 +827,14 @@ gains several functions to support default branch renaming.
 
     !end-bullet!
 
-!end-bullets-26!
+!end-bullets-27!
 
 ### Aimed at the tidyverse team
 
 These functions are exported for anyone to use, but are aimed primarily
 at the maintainers of tidyverse, r-lib, and tidymodels packages.
 
-!begin-bullets-27!
+!begin-bullets-28!
 
 -   !begin-bullet!
     `use_tidy_dependencies()` is a new function that sets up standard
@@ -855,11 +866,11 @@ at the maintainers of tidyverse, r-lib, and tidymodels packages.
 
     !end-bullet!
 
-!end-bullets-27!
+!end-bullets-28!
 
 ## User-level configuration
 
-!begin-bullets-28!
+!begin-bullets-29!
 
 -   !begin-bullet!
     `"usethis.overwrite"` is a new option. When set to `TRUE`, usethis
@@ -882,11 +893,11 @@ at the maintainers of tidyverse, r-lib, and tidymodels packages.
 
     !end-bullet!
 
-!end-bullets-28!
+!end-bullets-29!
 
 # usethis 2.0.1
 
-!begin-bullets-29!
+!begin-bullets-30!
 
 -   !begin-bullet!
     All functions that require a package now ask you if you'd like to
@@ -929,7 +940,7 @@ at the maintainers of tidyverse, r-lib, and tidymodels packages.
 
     !end-bullet!
 
-!end-bullets-29!
+!end-bullets-30!
 
 # usethis 2.0.0
 
@@ -959,7 +970,7 @@ Under the hood, both gert and gh are now consulting your local Git
 credential store, when they need credentials. At the time of writing,
 they are using two different even-lower-level packages to do this:
 
-!begin-bullets-30!
+!begin-bullets-31!
 
 -   !begin-bullet!
     gert uses the credentials package
@@ -969,7 +980,7 @@ they are using two different even-lower-level packages to do this:
     gh uses the gitcreds package (https://gitcreds.r-lib.org/)
     !end-bullet!
 
-!end-bullets-30!
+!end-bullets-31!
 
 Even now, gert and gh should discover the same credentials, at least for
 github.com. In the future, these two packages may merge into one.
@@ -979,7 +990,7 @@ Git(Hub) Credentials
 
 The main user-facing changes in usethis are:
 
-!begin-bullets-31!
+!begin-bullets-32!
 
 -   !begin-bullet!
     usethis should discover and use the same credentials as command line
@@ -992,16 +1003,16 @@ The main user-facing changes in usethis are:
     project's configured GitHub remotes, whenever possible.
     !end-bullet!
 
-!end-bullets-31!
+!end-bullets-32!
 
 As a result, several functions are deprecated and several other
 functions have some deprecated arguments.
 
-!begin-bullets-32!
+!begin-bullets-33!
 
 -   !begin-bullet!
     Deprecated functions:
-    !begin-bullets-33!
+    !begin-bullets-34!
     -   !begin-bullet!
         `use_git_credentials()`
         !end-bullet!
@@ -1012,11 +1023,11 @@ functions have some deprecated arguments.
         `github_token()`
         !end-bullet!
 
-    !end-bullets-33!
+    !end-bullets-34!
     !end-bullet!
 -   !begin-bullet!
     Functions with (deprecated arguments):
-    !begin-bullets-34!
+    !begin-bullets-35!
     -   !begin-bullet!
         `create_from_github()` (`auth_token`, `credentials`)
         !end-bullet!
@@ -1036,10 +1047,10 @@ functions have some deprecated arguments.
         `use_github_release()` (`host`, `auth_token`)
         !end-bullet!
 
-    !end-bullets-34!
+    !end-bullets-35!
     !end-bullet!
 
-!end-bullets-32!
+!end-bullets-33!
 
 The switch to gert + credentials should eliminate most
 credential-finding fiascos. Gert also takes a different approach to
@@ -1054,7 +1065,7 @@ HTTPS remotes. There should be fewer "unsupported protocol" errors.
 Usethis gains a more formal framework for characterizing a GitHub remote
 configuration. We look at:
 
-!begin-bullets-35!
+!begin-bullets-36!
 
 -   !begin-bullet!
     Which GitHub repositories `origin` and `upstream` point to
@@ -1066,7 +1077,7 @@ configuration. We look at:
     How they relate to each other, e.g. fork-parent relationship
     !end-bullet!
 
-!end-bullets-35!
+!end-bullets-36!
 
 This is an internal matter, but users will notice that usethis is more
 clear about which configurations are supported by various functions and
@@ -1271,7 +1282,7 @@ usethis tests.
 Patch release to align some path handling internals with an update
 coming in the fs package.
 
-!begin-bullets-36!
+!begin-bullets-37!
 
 -   !begin-bullet!
     `use_github_links()` is a bit more clever about remotes
@@ -1301,13 +1312,13 @@ coming in the fs package.
 
     !end-bullet!
 
-!end-bullets-36!
+!end-bullets-37!
 
 # usethis 1.6.0
 
 ## GitHub actions
 
-!begin-bullets-37!
+!begin-bullets-38!
 
 -   !begin-bullet!
     New `use_github_actions()`, `use_github_action_check_release()`,
@@ -1326,11 +1337,11 @@ coming in the fs package.
 
     !end-bullet!
 
-!end-bullets-37!
+!end-bullets-38!
 
 ## Package creation
 
-!begin-bullets-38!
+!begin-bullets-39!
 
 -   !begin-bullet!
     `create_package()` gains a `roxygen` argument. If `TRUE` (the
@@ -1356,11 +1367,11 @@ coming in the fs package.
 
     !end-bullet!
 
-!end-bullets-38!
+!end-bullets-39!
 
 ## PR helpers
 
-!begin-bullets-39!
+!begin-bullets-40!
 
 -   !begin-bullet!
     A new article Pull request helpers demonstrates how to use the
@@ -1389,11 +1400,11 @@ coming in the fs package.
 
     !end-bullet!
 
-!end-bullets-39!
+!end-bullets-40!
 
 ## Other new features
 
-!begin-bullets-40!
+!begin-bullets-41!
 
 -   !begin-bullet!
     New `rename_files()` makes it easy to rename paired `R/` and `test/`
@@ -1433,11 +1444,11 @@ coming in the fs package.
 
     !end-bullet!
 
-!end-bullets-40!
+!end-bullets-41!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-41!
+!begin-bullets-42!
 
 -   !begin-bullet!
     When writing files, usethis now respects line endings. Default line
@@ -1627,7 +1638,7 @@ coming in the fs package.
 
     !end-bullet!
 
-!end-bullets-41!
+!end-bullets-42!
 
 ## Dependency changes
 
@@ -1644,7 +1655,7 @@ This is a patch release with various small features and bug fixes.
 
 ## Using the pipe `%>%` or the tidy eval toolkit in your package
 
-!begin-bullets-42!
+!begin-bullets-43!
 
 -   !begin-bullet!
     The templates used by `use_pipe()` and `use_tidy_eval()` use a more
@@ -1661,11 +1672,11 @@ This is a patch release with various small features and bug fixes.
 
     !end-bullet!
 
-!end-bullets-42!
+!end-bullets-43!
 
 ## Git, GitHub, and pull requests
 
-!begin-bullets-43!
+!begin-bullets-44!
 
 -   !begin-bullet!
     `use_github()` removes newline `\n` characters from the description
@@ -1688,11 +1699,11 @@ This is a patch release with various small features and bug fixes.
 
     !end-bullet!
 
-!end-bullets-43!
+!end-bullets-44!
 
 ## Build tools and continuous integration
 
-!begin-bullets-44!
+!begin-bullets-45!
 
 -   !begin-bullet!
     `use_tidy_ci()` is updated for R 3.6, meaning that R 3.2 is the
@@ -1710,11 +1721,11 @@ This is a patch release with various small features and bug fixes.
 
     !end-bullet!
 
-!end-bullets-44!
+!end-bullets-45!
 
 ## Other
 
-!begin-bullets-45!
+!begin-bullets-46!
 
 -   !begin-bullet!
     `use_zip()` is a new variant of `use_course()` that downloads and
@@ -1729,7 +1740,7 @@ This is a patch release with various small features and bug fixes.
 
     !end-bullet!
 
-!end-bullets-45!
+!end-bullets-46!
 
 ## Dependency changes
 
@@ -1750,7 +1761,7 @@ situation for the current project = repository. We also provide more
 control and visibility into git2r's workings, especially around
 credentials (usethis uses git2r for all Git operations).
 
-!begin-bullets-46!
+!begin-bullets-47!
 
 -   !begin-bullet!
     `git_sitrep()` lets you know what's up with your Git, git2r and
@@ -1782,11 +1793,11 @@ credentials (usethis uses git2r for all Git operations).
 
     !end-bullet!
 
-!end-bullets-46!
+!end-bullets-47!
 
 Other improvements and bug fixes:
 
-!begin-bullets-47!
+!begin-bullets-48!
 
 -   !begin-bullet!
     `use_github()` tries harder but also fails earlier, with more
@@ -1833,7 +1844,7 @@ Other improvements and bug fixes:
 
     !end-bullet!
 
-!end-bullets-47!
+!end-bullets-48!
 
 ## GitHub pull requests
 
@@ -1842,7 +1853,7 @@ requests. They are aimed at both a maintainer (who may make, review, and
 modify pull requests) and a contributor (who may make or explore pull
 requests).
 
-!begin-bullets-48!
+!begin-bullets-49!
 
 -   !begin-bullet!
     `git_sitrep()` includes a section at the end aimed at describing
@@ -1858,14 +1869,14 @@ requests).
 
     !end-bullet!
 
-!end-bullets-48!
+!end-bullets-49!
 
 ## Partial file management
 
 usethis gains tooling to manage part of a file. This is currently used
 for managing badges in your README and roxygen import tags:
 
-!begin-bullets-49!
+!begin-bullets-50!
 
 -   !begin-bullet!
     `use_badge()` and friends now automatically add badges if your
@@ -1896,11 +1907,11 @@ for managing badges in your README and roxygen import tags:
 
     !end-bullet!
 
-!end-bullets-49!
+!end-bullets-50!
 
 ## Extending and wrapping usethis
 
-!begin-bullets-50!
+!begin-bullets-51!
 
 -   !begin-bullet!
     New `proj_activate()` lets you activate a project, either opening a
@@ -1921,7 +1932,7 @@ for managing badges in your README and roxygen import tags:
     crayon and packages to power easy interpolation and formatting.
     There are four families of functions:
 
-    !begin-bullets-51!
+    !begin-bullets-52!
     -   !begin-bullet!
         block styles: `ui_line()`, `ui_done()`, `ui_todo()`,
         `ui_oops()`, `ui_info()`.
@@ -1937,7 +1948,7 @@ for managing badges in your README and roxygen import tags:
         `ui_code()`.
         !end-bullet!
 
-    !end-bullets-51!
+    !end-bullets-52!
     !end-bullet!
 -   !begin-bullet!
     `with_project()` and `local_project()` are new withr-style functions
@@ -1947,14 +1958,14 @@ for managing badges in your README and roxygen import tags:
 
     !end-bullet!
 
-!end-bullets-50!
+!end-bullets-51!
 
 ## Tidyverse standards
 
 These standards are (aspirationally) used by all tidyverse packages; you
 are welcome to use them if you find them helpful.
 
-!begin-bullets-52!
+!begin-bullets-53!
 
 -   !begin-bullet!
     Call `use_tidy_labels()` to update GitHub labels. Colours are less
@@ -2012,11 +2023,11 @@ are welcome to use them if you find them helpful.
 
     !end-bullet!
 
-!end-bullets-52!
+!end-bullets-53!
 
 ## New functions not already mentioned
 
-!begin-bullets-53!
+!begin-bullets-54!
 
 -   !begin-bullet!
     `use_devtools()` (#624), `use_conflicted()` (#362), and
@@ -2083,11 +2094,11 @@ are welcome to use them if you find them helpful.
 
     !end-bullet!
 
-!end-bullets-53!
+!end-bullets-54!
 
 ## Other minor bug fixes and improvements
 
-!begin-bullets-54!
+!begin-bullets-55!
 
 -   !begin-bullet!
     `write_union()` appends the novel `lines`, but does not remove
@@ -2218,11 +2229,11 @@ are welcome to use them if you find them helpful.
 
     !end-bullet!
 
-!end-bullets-54!
+!end-bullets-55!
 
 ## Dependency changes
 
-!begin-bullets-55!
+!begin-bullets-56!
 
 -   !begin-bullet!
     withr moves from Suggests to Imports.
@@ -2233,7 +2244,7 @@ are welcome to use them if you find them helpful.
 
     !end-bullet!
 
-!end-bullets-55!
+!end-bullets-56!
 
 # usethis 1.4.0
 
@@ -2243,7 +2254,7 @@ All usethis file system operations now use the fs package (#177). This
 should not change how usethis functions, but users may notice these
 features of fs-mediated paths:
 
-!begin-bullets-56!
+!begin-bullets-57!
 
 -   !begin-bullet!
     Paths are "tidy", meaning `/` is the path separator and there are
@@ -2260,7 +2271,7 @@ features of fs-mediated paths:
     `fs::path_expand()`.
     !end-bullet!
 
-!end-bullets-56!
+!end-bullets-57!
 
 ## Extending or wrapping usethis
 
@@ -2268,7 +2279,7 @@ These changes make it easier for others to extend usethis, i.e. to
 create workflow packages specific to their organization, or to use
 usethis in other packages.
 
-!begin-bullets-57!
+!begin-bullets-58!
 
 -   !begin-bullet!
     `proj_path()` is newly exported. Use it to build paths within the
@@ -2278,7 +2289,7 @@ usethis in other packages.
     programmatically detect a project and build paths within it (#415,
     #425).
 
-    !begin-bullets-58!
+    !begin-bullets-59!
     -   !begin-bullet!
         `edit_file()`, `write_over()`, and `write_union()` are newly
         exported helpers. They are mostly for internal use, but can also
@@ -2286,7 +2297,7 @@ usethis in other packages.
         #366, #389).
         !end-bullet!
 
-    !end-bullets-58!
+    !end-bullets-59!
     !end-bullet!
 -   !begin-bullet!
     `use_template()` no longer errors when a user chooses not to
@@ -2303,11 +2314,11 @@ usethis in other packages.
 
     !end-bullet!
 
-!end-bullets-57!
+!end-bullets-58!
 
 ## New functions
 
-!begin-bullets-59!
+!begin-bullets-60!
 
 -   !begin-bullet!
     `proj_sitrep()` reports current working directory, the active
@@ -2335,11 +2346,11 @@ usethis in other packages.
 
     !end-bullet!
 
-!end-bullets-59!
+!end-bullets-60!
 
 ## Other small changes and bug fixes
 
-!begin-bullets-60!
+!begin-bullets-61!
 
 -   !begin-bullet!
     usethis has a new logo! (#429)
@@ -2386,7 +2397,7 @@ usethis in other packages.
 
     !end-bullet!
 
-!end-bullets-60!
+!end-bullets-61!
 
 ## Dependency changes
 
@@ -2397,7 +2408,7 @@ Suggests), styler (moved to Suggests)
 
 # usethis 1.3.0
 
-!begin-bullets-61!
+!begin-bullets-62!
 
 -   !begin-bullet!
     usethis has a website: https://usethis.r-lib.org (#217). It includes
@@ -2450,11 +2461,11 @@ Suggests), styler (moved to Suggests)
 
     !end-bullet!
 
-!end-bullets-61!
+!end-bullets-62!
 
 ## New functions
 
-!begin-bullets-62!
+!begin-bullets-63!
 
 -   !begin-bullet!
     `use_git_config()` can set user's Git name or email, globally or
@@ -2494,13 +2505,13 @@ Suggests), styler (moved to Suggests)
 
     !end-bullet!
 
-!end-bullets-62!
+!end-bullets-63!
 
 # usethis 1.2.0
 
 ## New functions
 
-!begin-bullets-63!
+!begin-bullets-64!
 
 -   !begin-bullet!
     `use_course()` downloads a folder's worth of materials from a ZIP
@@ -2529,11 +2540,11 @@ Suggests), styler (moved to Suggests)
 
     !end-bullet!
 
-!end-bullets-63!
+!end-bullets-64!
 
 Other changes
 
-!begin-bullets-64!
+!begin-bullets-65!
 
 -   !begin-bullet!
     New projects that don't exhibit other obvious criteria for being a
@@ -2566,13 +2577,13 @@ Other changes
 
     !end-bullet!
 
-!end-bullets-64!
+!end-bullets-65!
 
 # usethis 1.1.0
 
 ## New helpers
 
-!begin-bullets-65!
+!begin-bullets-66!
 
 -   !begin-bullet!
     `browse_github()`, `browse_github_issues()`,
@@ -2612,11 +2623,11 @@ Other changes
 
     !end-bullet!
 
-!end-bullets-65!
+!end-bullets-66!
 
 ## Bug fixes and improvements
 
-!begin-bullets-66!
+!begin-bullets-67!
 
 -   !begin-bullet!
     `use_dev_version()` now correctly updates the `Version` field in a
@@ -2633,7 +2644,7 @@ Other changes
 
     !end-bullet!
 
-!end-bullets-66!
+!end-bullets-67!
 
 # usethis 1.0.0
 
@@ -2642,7 +2653,7 @@ lived in devtools, as well as providing more building blocks so you can
 create your own helpers. As well as the many new helpers listed below,
 there are three main improvements to the package:
 
-!begin-bullets-67!
+!begin-bullets-68!
 
 -   !begin-bullet!
     More support for general R projects, other than packages.
@@ -2654,7 +2665,7 @@ there are three main improvements to the package:
     Refined output.
     !end-bullet!
 
-!end-bullets-67!
+!end-bullets-68!
 
 usethis is gradually evolving towards supporting more general R
 "projects", not just packages. This is still a work in progress, so
@@ -2678,7 +2689,7 @@ you need to do vs. what has been done for you.
 
 ## New functions
 
-!begin-bullets-68!
+!begin-bullets-69!
 
 -   !begin-bullet!
     `use_apl2_license()` if you want to use the Apache 2.0 license.
@@ -2724,13 +2735,13 @@ you need to do vs. what has been done for you.
 
     !end-bullet!
 
-!end-bullets-68!
+!end-bullets-69!
 
 ## New edit functions
 
 A new class of functions make it easy to edit common config files:
 
-!begin-bullets-69!
+!begin-bullets-70!
 
 -   !begin-bullet!
     `edit_r_profile_user()` opens `.Rprofile`
@@ -2751,11 +2762,11 @@ A new class of functions make it easy to edit common config files:
     `edit_rstudio_snippets(type)` opens `~/R/snippets/{type}.snippets`
     !end-bullet!
 
-!end-bullets-69!
+!end-bullets-70!
 
 ## Updates
 
-!begin-bullets-70!
+!begin-bullets-71!
 
 -   !begin-bullet!
     `use_coverage("codecov")` now sets a default threshold of 1% to try
@@ -2798,11 +2809,11 @@ A new class of functions make it easy to edit common config files:
 
     !end-bullet!
 
-!end-bullets-70!
+!end-bullets-71!
 
 ## Building blocks
 
-!begin-bullets-71!
+!begin-bullets-72!
 
 -   !begin-bullet!
     New `use_badge()` for adding any badge to a README. Now only prints
@@ -2814,11 +2825,11 @@ A new class of functions make it easy to edit common config files:
 
     !end-bullet!
 
-!end-bullets-71!
+!end-bullets-72!
 
 ## Bug fixes and minor improvements
 
-!begin-bullets-72!
+!begin-bullets-73!
 
 -   !begin-bullet!
     Functions which require code to be copied now automatically put the
@@ -2862,4 +2873,4 @@ A new class of functions make it easy to edit common config files:
 
     !end-bullet!
 
-!end-bullets-72!
+!end-bullets-73!

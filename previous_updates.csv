@@ -18088,3 +18088,4 @@ scales,766a7d10e1ba0fdb8a6b2242800974f0,New `label_glue()` labelling function fo
 scales,7c432b8849945a5d9c1312b72a02f2b0,`fullseq()` and by extension `breaks_width()` can now deal with unsorted ranges (#435).,NA,NA,NA,NA
 scales,dc92e777563e58bff6373ef97daa24bd,New `label_dictionary()` for named lookup of labels (#458).,NA,NA,NA,NA
 scales,dbf40f30dcc54ba448df78b04309f05b,New function `compose_label()` to chain together label formatting functions (#462),NA,NA,NA,NA
+usethis,24cec79303ac8a2ef14c5b23643b8b64,`use_tidy_upkeep_issue()` now records the year it is being run in the `Config/usethis/upkeep` field in DESCRIPTION. If this value exists it is furthermore used to filter the checklist when making the issue.,NA,NA,NA,NA
