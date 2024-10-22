@@ -18084,3 +18084,5 @@ waldo,57a6fdac3dcfc04d0b2379e0a5956a38,waldo gains basic support for S7 objects 
 tidyverse,622e6dfe348f4580e6a6d80ba5cd8f81,tidyverse now requires R 4.0.0.,NA,NA,NA,NA
 waldo,a483f8fe511fbd12e4cc9b139193b2ac,`compare()` now gives informative errors if you misspecify the argument types (#181),NA,NA,NA,NA
 tidyverse,be24fb9a1ba1b99a6863ed3bb302f874,Drop modelr since it's superseded.,NA,NA,NA,NA
+scales,766a7d10e1ba0fdb8a6b2242800974f0,New `label_glue()` labelling function for interpolated strings (#457).,NA,NA,NA,NA
+scales,7c432b8849945a5d9c1312b72a02f2b0,`fullseq()` and by extension `breaks_width()` can now deal with unsorted ranges (#435).,NA,NA,NA,NA

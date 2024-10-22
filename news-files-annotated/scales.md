@@ -3,6 +3,14 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    New `label_glue()` labelling function for interpolated strings
+    (#457).
+    !end-bullet!
+-   !begin-bullet!
+    `fullseq()` and by extension `breaks_width()` can now deal with
+    unsorted ranges (#435).
+    !end-bullet!
+-   !begin-bullet!
     New `label_date_short(leading)` argument to replace leading zeroes
     (#442)
     !end-bullet!
