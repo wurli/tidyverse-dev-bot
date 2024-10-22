@@ -18086,3 +18086,5 @@ waldo,a483f8fe511fbd12e4cc9b139193b2ac,`compare()` now gives informative errors 
 tidyverse,be24fb9a1ba1b99a6863ed3bb302f874,Drop modelr since it's superseded.,NA,NA,NA,NA
 scales,766a7d10e1ba0fdb8a6b2242800974f0,New `label_glue()` labelling function for interpolated strings (#457).,NA,NA,NA,NA
 scales,7c432b8849945a5d9c1312b72a02f2b0,`fullseq()` and by extension `breaks_width()` can now deal with unsorted ranges (#435).,NA,NA,NA,NA
+scales,dc92e777563e58bff6373ef97daa24bd,New `label_dictionary()` for named lookup of labels (#458).,NA,NA,NA,NA
+scales,dbf40f30dcc54ba448df78b04309f05b,New function `compose_label()` to chain together label formatting functions (#462),NA,NA,NA,NA
