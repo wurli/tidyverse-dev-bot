@@ -10,6 +10,10 @@
 
     !end-bullet!
 -   !begin-bullet!
+    Remove remaining directory layout validation check. (#1102)
+
+    !end-bullet!
+-   !begin-bullet!
     Use the public Connect server API endpoint `/v1/tasks/{id}` to poll
     task progress. (#1088)
 

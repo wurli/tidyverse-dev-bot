@@ -18105,3 +18105,4 @@ pointblank,bdef6db59df37348a38663014b8daf02,"Replace uses of `crayon::make_style
 pointblank,e98035d559e001716be86db6d37472d0,"Use `rlang::check_installed()` to perform checks of optional package installs. (#559, @​olivroy)",NA,NA,NA,NA
 pointblank,0a1cd7f73c7ca8b51f8c6388b8daf036,"Modernized CI workflows with dedicated linting action. (#560, @​olivroy)",NA,NA,NA,NA
 pointblank,9f94691e38390eace03adbedd709bde8,"Avoid unwanted equation formatting in agent report arising from arbitrary `""$""` characters (#561). (#562)",NA,NA,NA,NA
+rsconnect,5cfa8e0c52f49f64bf284f1493b31dd5,Remove remaining directory layout validation check. (#1102),NA,NA,NA,NA
