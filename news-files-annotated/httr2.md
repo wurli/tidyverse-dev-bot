@@ -5,6 +5,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    New `resp_stream_aws()` to retrieve AWS's special streaming format.
+    With thanks to https://github.com/lifion/lifion-aws-event-stream/
+    for a simple reference implementation.
+    !end-bullet!
+-   !begin-bullet!
     New `req_auth_aws_v4()` signs request using AWS's special format
     (#562, #566).
     !end-bullet!
