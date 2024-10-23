@@ -18097,3 +18097,11 @@ waldo,c415f3398d0526a40808322bcc5c7e1d,"waldo no longer imports tibble and remat
 waldo,99eab8af2269964b3c6bb41c94860661,"`compare()` displays an extract digit in numeric comparisons, making it a bit easier to see the different (#141). It can also show numeric differences between int64 objects and integers/doubles when `tolerance` is set (#159).",NA,NA,NA,NA
 waldo,c6a61daf6ca865d75312a58473fdbbbd,"`compare()` gains basic support for S7 objects (#200), and can now distinguish between objects that differ only in the value of their S4 bit (#189).",NA,NA,NA,NA
 waldo,2246ff2fdaa6d02b70282f4c930b9d16,`compare(list_as_map = TRUE)` now preserves attributes (#185).,NA,NA,NA,NA
+pointblank,36dd1e5d0189a9afee4c4e64d2f09af6,The new argument `na_rm` in `snip_list()` suppresses any `NA` values so that they won't included in the snippet's list of items (#547). (#556),NA,NA,NA,NA
+pointblank,e9a853eae13e13d0be60b83d55a997d5,Improved the matching of rows between `agent$validation_step` and the rows of the agent report (#563). (#565),NA,NA,NA,NA
+pointblank,9d0edce5583a0b42036b922fcc000c80,"Fixed bug with non-standard column names in some validation functions (#545, #546). (#555)",NA,NA,NA,NA
+pointblank,eee48ab0d177a485d992259489312dc2,"Problems arising from comparing `columns` to a `value` of different class (for example, comparing a datetime column to a date value `Sys.Date()` instead of another datetime value `Sys.time()`) are now signalled appropriately at `interrogate()` (#536, #537). (#539)",NA,NA,NA,NA
+pointblank,bdef6db59df37348a38663014b8daf02,"Replace uses of `crayon::make_style()` with `cli::make_ansi_style()`, removing the `crayon` dependency. (#559, thanks @​olivroy!)",NA,NA,NA,NA
+pointblank,e98035d559e001716be86db6d37472d0,"Use `rlang::check_installed()` to perform checks of optional package installs. (#559, @​olivroy)",NA,NA,NA,NA
+pointblank,0a1cd7f73c7ca8b51f8c6388b8daf036,"Modernized CI workflows with dedicated linting action. (#560, @​olivroy)",NA,NA,NA,NA
+pointblank,9f94691e38390eace03adbedd709bde8,"Avoid unwanted equation formatting in agent report arising from arbitrary `""$""` characters (#561). (#562)",NA,NA,NA,NA
