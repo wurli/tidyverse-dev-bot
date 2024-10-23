@@ -18093,3 +18093,7 @@ rstudioapi,719a2cc3a98026107bc9f6b4e380fa04,Ensure a more appropriate error mess
 tidyselect,01ccf7c6d52fdc0d67cb0de3722caad9,"`eval_select(allow_empty = FALSE)` gains a new argument to yield a better error message in case of empty selection (@​olivroy, #327)",NA,NA,NA,NA
 tidyselect,2b069d52eb3f7599cbe9ecee254e8dec,`eval_select()` and `eval_relocate()` gain a new `error_arg` argument that can be specified to throw a better error message when `allow_empty = FALSE`.,NA,NA,NA,NA
 tidyselect,6b3273b97cbf3bdcfed1634a2e6d7153,"`eval_select()` and `eval_relocate()` throw a classed error message when `allow_empty = FALSE` (@​olivroy, #347).",NA,NA,NA,NA
+waldo,c415f3398d0526a40808322bcc5c7e1d,"waldo no longer imports tibble and rematch2 (@​olivroy, #196), and requires R 4.0.0.",NA,NA,NA,NA
+waldo,99eab8af2269964b3c6bb41c94860661,"`compare()` displays an extract digit in numeric comparisons, making it a bit easier to see the different (#141). It can also show numeric differences between int64 objects and integers/doubles when `tolerance` is set (#159).",NA,NA,NA,NA
+waldo,c6a61daf6ca865d75312a58473fdbbbd,"`compare()` gains basic support for S7 objects (#200), and can now distinguish between objects that differ only in the value of their S4 bit (#189).",NA,NA,NA,NA
+waldo,2246ff2fdaa6d02b70282f4c930b9d16,`compare(list_as_map = TRUE)` now preserves attributes (#185).,NA,NA,NA,NA
