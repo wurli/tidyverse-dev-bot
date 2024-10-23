@@ -1,8 +1,29 @@
 # tidyselect (development version)
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    `eval_select(allow_empty = FALSE)` gains a new argument to yield a
+    better error message in case of empty selection (@olivroy, #327)
+
+    !end-bullet!
+-   !begin-bullet!
+    `eval_select()` and `eval_relocate()` gain a new `error_arg`
+    argument that can be specified to throw a better error message when
+    `allow_empty = FALSE`.
+
+    !end-bullet!
+-   !begin-bullet!
+    `eval_select()` and `eval_relocate()` throw a classed error message
+    when `allow_empty = FALSE` (@olivroy, #347).
+
+    !end-bullet!
+
+!end-bullets-1!
+
 # tidyselect 1.2.1
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     Performance improvements (#337, #338, #339, #341)
@@ -19,13 +40,13 @@
 
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # tidyselect 1.2.0
 
 ## New features
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     New `tidyselect_data_proxy()` and `tidyselect_data_has_predicates()`
@@ -38,11 +59,11 @@
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 ## Lifecycle changes
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     Using `all_of()` outside of a tidyselect context is now deprecated
@@ -62,16 +83,16 @@
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     Selection language:
 
-    !begin-bullets-5!
+    !begin-bullets-6!
     -   !begin-bullet!
         `any_of()` generates a more informative error if you supply too
         many arguments (#241).
@@ -99,7 +120,7 @@
 
         !end-bullet!
 
-    !end-bullets-5!
+    !end-bullets-6!
     !end-bullet!
 -   !begin-bullet!
     `eval_select()` with `include` now preserves the order of the
@@ -148,11 +169,11 @@
 
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 # tidyselect 1.1.2
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     Fix for CRAN checks.
@@ -163,11 +184,11 @@
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 # tidyselect 1.1.1
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     Fix for CRAN checks.
@@ -178,11 +199,11 @@
 
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 # tidyselect 1.1.0
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     Predicate functions must now be wrapped with `where()`.
@@ -232,7 +253,7 @@
 
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 # tidyselect 1.0.0
 
@@ -242,7 +263,7 @@ boolean operators, and much more.
 
 ## Documentation
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     New Get started vignette for client packages. Read it with
@@ -257,11 +278,11 @@ boolean operators, and much more.
 
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 ## Breaking changes
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     Selecting non-column variables with bare names now triggers an
@@ -270,14 +291,14 @@ boolean operators, and much more.
     be masked by a data frame column. Using `all_of()` is safe (#76).
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 tidyselect now uses vctrs for validating inputs. These changes may
 reveal programming errors that were previously silent. They may also
 cause failures if your unit tests make faulty assumptions about the
 content of error messages created in tidyselect:
 
-!begin-bullets-11!
+!begin-bullets-12!
 
 -   !begin-bullet!
     Out-of-bounds errors are thrown when a name doesn't exist or a
@@ -298,7 +319,7 @@ content of error messages created in tidyselect:
 
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-12!
 
 Note that we recommend `testthat::verify_output()` for monitoring error
 messages thrown from packages that you don't control. Unlike
@@ -309,12 +330,12 @@ information.
 
 ## Syntax
 
-!begin-bullets-12!
+!begin-bullets-13!
 
 -   !begin-bullet!
     The boolean operators can now be used to create selections (#106).
 
-    !begin-bullets-13!
+    !begin-bullets-14!
     -   !begin-bullet!
         `!` negates a selection.
         !end-bullet!
@@ -325,7 +346,7 @@ information.
         `&` takes the intersection of two selections.
         !end-bullet!
 
-    !end-bullets-13!
+    !end-bullets-14!
     These patterns can currently be achieved using `-`, `c()` and
     `intersect()` respectively. The boolean operators should be more
     intuitive to use.
@@ -407,11 +428,11 @@ information.
     !end-codeblock!
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
 
 ## User-facing improvements
 
-!begin-bullets-14!
+!begin-bullets-15!
 
 -   !begin-bullet!
     The new selection helpers `all_of()` and `any_of()` are strict
@@ -477,7 +498,7 @@ information.
 
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-15!
 
 ## API
 
@@ -485,7 +506,7 @@ New `eval_select()` and `eval_rename()` functions for client packages.
 These replace `vars_select()` and `vars_rename()`, which are now
 deprecated. These functions:
 
-!begin-bullets-15!
+!begin-bullets-16!
 
 -   !begin-bullet!
     Take the full data rather than just names. This makes it possible to
@@ -499,11 +520,11 @@ deprecated. These functions:
 
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-16!
 
 ## Other features and fixes
 
-!begin-bullets-16!
+!begin-bullets-17!
 
 -   !begin-bullet!
     The `.strict` argument of `vars_select()` now works more robustly
@@ -561,7 +582,7 @@ deprecated. These functions:
 
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-17!
 
 # tidyselect 0.2.5
 
@@ -569,7 +590,7 @@ This is a maintenance release for compatibility with rlang 0.3.0.
 
 # tidyselect 0.2.4
 
-!begin-bullets-17!
+!begin-bullets-18!
 
 -   !begin-bullet!
     Fixed a warning that occurred when a vector of column positions was
@@ -582,11 +603,11 @@ This is a maintenance release for compatibility with rlang 0.3.0.
 
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-18!
 
 # tidyselect 0.2.3
 
-!begin-bullets-18!
+!begin-bullets-19!
 
 -   !begin-bullet!
     Internal fixes in prevision of using `tidyselect` within `dplyr`.
@@ -602,21 +623,21 @@ This is a maintenance release for compatibility with rlang 0.3.0.
 
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-19!
 
 # tidyselect 0.2.2
 
-!begin-bullets-19!
+!begin-bullets-20!
 
 -   !begin-bullet!
     `dplyr` is now correctly mentioned as suggested package.
     !end-bullet!
 
-!end-bullets-19!
+!end-bullets-20!
 
 # tidyselect 0.2.1
 
-!begin-bullets-20!
+!begin-bullets-21!
 
 -   !begin-bullet!
     `-` now supports character vectors in addition to strings. This
@@ -646,7 +667,7 @@ This is a maintenance release for compatibility with rlang 0.3.0.
 
     !end-bullet!
 
-!end-bullets-20!
+!end-bullets-21!
 
 # tidyselect 0.2.0
 
@@ -715,7 +736,7 @@ vars_select(names(mtcars), .data$cyl : .data$drat)
 
 ## New features
 
-!begin-bullets-21!
+!begin-bullets-22!
 
 -   !begin-bullet!
     The new select helper `last_col()` is helpful to select over a
@@ -763,18 +784,18 @@ vars_select(names(mtcars), .data$cyl : .data$drat)
 
     !end-bullet!
 
-!end-bullets-21!
+!end-bullets-22!
 
 ## Fixes
 
-!begin-bullets-22!
+!begin-bullets-23!
 
 -   !begin-bullet!
     `one_of()` argument `vars` has been renamed to `.vars` to avoid
     spurious matching.
     !end-bullet!
 
-!end-bullets-22!
+!end-bullets-23!
 
 # tidyselect 0.1.1
 
@@ -786,7 +807,7 @@ tidyselect is the new home for the legacy functions
 
 We took this opportunity to make a few changes to the API:
 
-!begin-bullets-23!
+!begin-bullets-24!
 
 -   !begin-bullet!
     `select_vars()` and `rename_vars()` are now `vars_select()` and
@@ -818,13 +839,13 @@ We took this opportunity to make a few changes to the API:
 
     !end-bullet!
 
-!end-bullets-23!
+!end-bullets-24!
 
 ## Establishing a variable context
 
 tidyselect provides a few more ways of establishing a variable context:
 
-!begin-bullets-24!
+!begin-bullets-25!
 
 -   !begin-bullet!
     `scoped_vars()` sets up a variable context along with an an exit
@@ -845,7 +866,7 @@ tidyselect provides a few more ways of establishing a variable context:
 
     !end-bullet!
 
-!end-bullets-24!
+!end-bullets-25!
 
 ## New evaluation semantics
 

@@ -18090,3 +18090,6 @@ scales,dc92e777563e58bff6373ef97daa24bd,New `label_dictionary()` for named looku
 scales,dbf40f30dcc54ba448df78b04309f05b,New function `compose_label()` to chain together label formatting functions (#462),NA,NA,NA,NA
 usethis,24cec79303ac8a2ef14c5b23643b8b64,`use_tidy_upkeep_issue()` now records the year it is being run in the `Config/usethis/upkeep` field in DESCRIPTION. If this value exists it is furthermore used to filter the checklist when making the issue.,NA,NA,NA,NA
 rstudioapi,719a2cc3a98026107bc9f6b4e380fa04,Ensure a more appropriate error message is emitted for calls to `rstudioapi::getVersion()` and `rstudioapi::getMode()` outside of RStudio.,NA,NA,NA,NA
+tidyselect,01ccf7c6d52fdc0d67cb0de3722caad9,"`eval_select(allow_empty = FALSE)` gains a new argument to yield a better error message in case of empty selection (@​olivroy, #327)",NA,NA,NA,NA
+tidyselect,2b069d52eb3f7599cbe9ecee254e8dec,`eval_select()` and `eval_relocate()` gain a new `error_arg` argument that can be specified to throw a better error message when `allow_empty = FALSE`.,NA,NA,NA,NA
+tidyselect,6b3273b97cbf3bdcfed1634a2e6d7153,"`eval_select()` and `eval_relocate()` throw a classed error message when `allow_empty = FALSE` (@​olivroy, #347).",NA,NA,NA,NA
