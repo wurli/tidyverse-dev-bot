@@ -5,6 +5,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    New `req_auth_aws_v4()` signs request using AWS's special format
+    (#562, #566).
+    !end-bullet!
+-   !begin-bullet!
     `req_perform_parallel()` and `req_perform_promise()` now correctly
     set up the method and body (#549).
     !end-bullet!
