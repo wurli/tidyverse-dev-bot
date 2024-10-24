@@ -134,6 +134,10 @@
     during coercion for code like `as.integer("a")` (#2566,
     @MichaelChirico).
     !end-bullet!
+-   !begin-bullet!
+    `commented_code_linter()` can detect commented code that ends with a
+    pipe (#2671, @jcken95)
+    !end-bullet!
 
 !end-bullets-3!
 

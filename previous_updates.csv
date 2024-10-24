@@ -18111,3 +18111,4 @@ httr2,58c8bea979cf39815f50ae03d4b85456,New `resp_stream_aws()` to retrieve AWS's
 dbplyr,f7b4686b1ab3c7f21b3a80d743940820,"Translations for `as.double()` and `as.character()` with Teradata previously raised errors and are now correct (@​rplsmn, #1545).",NA,NA,NA,NA
 reticulate,0f97650aa0d3dae75dd28c298972935a,`py_is_null_xptr()` and `[[` now load delayed modules (#1688).,NA,NA,NA,NA
 rsconnect,239f506f94a47b63f02ff20b923d477a,"Use the repository name identified by renv when `available.packages()` does not enumerate the package, which occurs for archived packages. (#1110)",NA,NA,NA,NA
+lintr,7aad69f5c8b497e362a9fee1403bba6f,"`commented_code_linter()` can detect commented code that ends with a pipe (#2671, @​jcken95)",NA,NA,NA,NA
