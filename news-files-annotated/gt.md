@@ -1876,7 +1876,7 @@
 -   !begin-bullet!
     There is now a `locale` argument in the `gt()` function. If set,
     formatter functions like `fmt_number()` will automatically use this
-    global locale while formatting. There also remains the the option to
+    global locale while formatting. There also remains the option to
     override the global locale with any non-`NULL` value set for
     `locale` within a `fmt_*()` call (#682). (#866)
 
