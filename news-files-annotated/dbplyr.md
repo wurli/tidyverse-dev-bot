@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Translations for `as.double()` and `as.character()` with Teradata
+    previously raised errors and are now correct (@rplsmn, #1545).
+
+    !end-bullet!
+-   !begin-bullet!
     Translations of `difftime()` for Postgres, SQL server, Redshift, and
     Snowflake previously returned the wrong sign and are now correct
     (@edward-burn, #1532).

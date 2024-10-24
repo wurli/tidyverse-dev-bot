@@ -18108,3 +18108,4 @@ pointblank,9f94691e38390eace03adbedd709bde8,"Avoid unwanted equation formatting 
 rsconnect,5cfa8e0c52f49f64bf284f1493b31dd5,Remove remaining directory layout validation check. (#1102),NA,NA,NA,NA
 httr2,d296d21add52c32c070c0d6544ac568a,"New `req_auth_aws_v4()` signs request using AWS's special format (#562, #566).",NA,NA,NA,NA
 httr2,58c8bea979cf39815f50ae03d4b85456,New `resp_stream_aws()` to retrieve AWS's special streaming format. With thanks to https://github.com/lifion/lifion-aws-event-stream/ for a simple reference implementation.,NA,NA,NA,NA
+dbplyr,f7b4686b1ab3c7f21b3a80d743940820,"Translations for `as.double()` and `as.character()` with Teradata previously raised errors and are now correct (@​rplsmn, #1545).",NA,NA,NA,NA
