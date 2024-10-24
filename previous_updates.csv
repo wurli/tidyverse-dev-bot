@@ -18109,3 +18109,5 @@ rsconnect,5cfa8e0c52f49f64bf284f1493b31dd5,Remove remaining directory layout val
 httr2,d296d21add52c32c070c0d6544ac568a,"New `req_auth_aws_v4()` signs request using AWS's special format (#562, #566).",NA,NA,NA,NA
 httr2,58c8bea979cf39815f50ae03d4b85456,New `resp_stream_aws()` to retrieve AWS's special streaming format. With thanks to https://github.com/lifion/lifion-aws-event-stream/ for a simple reference implementation.,NA,NA,NA,NA
 dbplyr,f7b4686b1ab3c7f21b3a80d743940820,"Translations for `as.double()` and `as.character()` with Teradata previously raised errors and are now correct (@​rplsmn, #1545).",NA,NA,NA,NA
+reticulate,0f97650aa0d3dae75dd28c298972935a,`py_is_null_xptr()` and `[[` now load delayed modules (#1688).,NA,NA,NA,NA
+rsconnect,239f506f94a47b63f02ff20b923d477a,"Use the repository name identified by renv when `available.packages()` does not enumerate the package, which occurs for archived packages. (#1110)",NA,NA,NA,NA

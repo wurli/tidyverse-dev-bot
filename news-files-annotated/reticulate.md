@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `py_is_null_xptr()` and `[[` now load delayed modules (#1688).
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed error when attempting to use a python venv created with `uv`
     (#1678)
 

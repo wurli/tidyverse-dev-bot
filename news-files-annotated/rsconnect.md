@@ -10,6 +10,12 @@
 
     !end-bullet!
 -   !begin-bullet!
+    Use the repository name identified by renv when
+    `available.packages()` does not enumerate the package, which occurs
+    for archived packages. (#1110)
+
+    !end-bullet!
+-   !begin-bullet!
     Remove remaining directory layout validation check. (#1102)
 
     !end-bullet!
