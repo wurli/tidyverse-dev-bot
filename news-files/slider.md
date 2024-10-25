@@ -1,5 +1,9 @@
 # slider (development version)
 
+* Removed usage of non-API `STRING_PTR()` (#209).
+
+* R >=4.0.0 is now required, inline with tidyverse guidelines.
+
 * Updated snapshot tests to use the latest version of cli.
 
 # slider 0.3.1

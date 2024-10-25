@@ -3,7 +3,16 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Removed usage of non-API `STRING_PTR()` (#209).
+
+    !end-bullet!
+-   !begin-bullet!
+    R \>=4.0.0 is now required, inline with tidyverse guidelines.
+
+    !end-bullet!
+-   !begin-bullet!
     Updated snapshot tests to use the latest version of cli.
+
     !end-bullet!
 
 !end-bullets-1!
