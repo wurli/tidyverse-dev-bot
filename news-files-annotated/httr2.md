@@ -5,6 +5,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `req_cache()` no longer retrieves anything but `GET` requests from
+    the cache.
+    !end-bullet!
+-   !begin-bullet!
     New `resp_stream_aws()` to retrieve AWS's special streaming format.
     With thanks to https://github.com/lifion/lifion-aws-event-stream/
     for a simple reference implementation.

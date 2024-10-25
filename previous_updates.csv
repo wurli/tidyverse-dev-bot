@@ -18115,3 +18115,4 @@ lintr,7aad69f5c8b497e362a9fee1403bba6f,"`commented_code_linter()` can detect com
 tidyselect,7fa67712c75256cc335927e5e0bbfb6e,"`eval_select()` and `eval_relocate()` gain a new `error_arg` argument that can be specified to throw a better error message when `allow_empty = FALSE` or `allow_rename = FALSE` (@​olivroy, #327).",NA,NA,NA,NA
 tidyselect,28dd0dd811910b00785fef6582a583ec,"`vars_pull()` now also warns when using `.data` (#335). Please use string-quotation programmatic usage, consistently with other tidyselect contexts.",NA,NA,NA,NA
 tidyselect,378d2ac94e3d257116443b16280fa1a7,"`num_range()` now recycles its arguments using tidyverse rules (#355). In addition, it gains a `cross` argument that allows you to take the cartesian product of these arguments instead.",NA,NA,NA,NA
+httr2,cb3ffe77ea4476265b9bc300bf5a2fa3,`req_cache()` no longer retrieves anything but `GET` requests from the cache.,NA,NA,NA,NA
