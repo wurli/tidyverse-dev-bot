@@ -18112,3 +18112,6 @@ dbplyr,f7b4686b1ab3c7f21b3a80d743940820,"Translations for `as.double()` and `as.
 reticulate,0f97650aa0d3dae75dd28c298972935a,`py_is_null_xptr()` and `[[` now load delayed modules (#1688).,NA,NA,NA,NA
 rsconnect,239f506f94a47b63f02ff20b923d477a,"Use the repository name identified by renv when `available.packages()` does not enumerate the package, which occurs for archived packages. (#1110)",NA,NA,NA,NA
 lintr,7aad69f5c8b497e362a9fee1403bba6f,"`commented_code_linter()` can detect commented code that ends with a pipe (#2671, @​jcken95)",NA,NA,NA,NA
+tidyselect,7fa67712c75256cc335927e5e0bbfb6e,"`eval_select()` and `eval_relocate()` gain a new `error_arg` argument that can be specified to throw a better error message when `allow_empty = FALSE` or `allow_rename = FALSE` (@​olivroy, #327).",NA,NA,NA,NA
+tidyselect,28dd0dd811910b00785fef6582a583ec,"`vars_pull()` now also warns when using `.data` (#335). Please use string-quotation programmatic usage, consistently with other tidyselect contexts.",NA,NA,NA,NA
+tidyselect,378d2ac94e3d257116443b16280fa1a7,"`num_range()` now recycles its arguments using tidyverse rules (#355). In addition, it gains a `cross` argument that allows you to take the cartesian product of these arguments instead.",NA,NA,NA,NA
