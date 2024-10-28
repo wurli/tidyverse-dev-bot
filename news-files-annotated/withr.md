@@ -1,26 +1,36 @@
-# withr (development version)
+# withr 3.0.2
+
+!begin-bullets-1!
+
+-   !begin-bullet!
+    `local_language()` now never warns when set to `"C"` (#254). This is
+    a cross-platform and silent way of disabling `gettext()`
+    translations.
+    !end-bullet!
+
+!end-bullets-1!
 
 # withr 3.0.1
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     Fixes for CRAN checks.
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # withr 3.0.0
 
 ## Performance of withr
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     `defer()` is now a thin wrapper around `base::on.exit()`. This is
     possible thanks to two contributions that we made to R 3.5:
 
-    !begin-bullets-3!
+    !begin-bullets-4!
     -   !begin-bullet!
         We added an argument for LIFO cleanup: `on.exit(after = FALSE)`.
         !end-bullet!
@@ -29,7 +39,7 @@
         This is needed for manual invocation with `deferred_run()`.
         !end-bullet!
 
-    !end-bullets-3!
+    !end-bullets-4!
     Following this change, `defer()` is now much faster (although still
     slower than `on.exit()` which is a primitive function and about as
     fast as it gets). This also increases the compatibility of `defer()`
@@ -39,11 +49,11 @@
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 ## Breaking change
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     When `source()` is used with a local environment, as opposed to
@@ -54,11 +64,11 @@
     performance penalty in normal usage of withr features.
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 ## Other features and bugfixes
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     `deferred_run()` now reports the number of executed expressions with
@@ -97,19 +107,9 @@
 
     !end-bullet!
 
-!end-bullets-5!
-
-# withr 2.5.2
-
-!begin-bullets-6!
-
--   !begin-bullet!
-    Fixes for CRAN checks.
-    !end-bullet!
-
 !end-bullets-6!
 
-# withr 2.5.1
+# withr 2.5.2
 
 !begin-bullets-7!
 
@@ -119,9 +119,19 @@
 
 !end-bullets-7!
 
-# withr 2.5.0
+# withr 2.5.1
 
 !begin-bullets-8!
+
+-   !begin-bullet!
+    Fixes for CRAN checks.
+    !end-bullet!
+
+!end-bullets-8!
+
+# withr 2.5.0
+
+!begin-bullets-9!
 
 -   !begin-bullet!
     `defer()` and all `local_*()` functions now work when run inside of
@@ -164,7 +174,7 @@
     These `with_` and `local_` functions are now robust to early exits
     (see next bullet):
 
-    !begin-bullets-9!
+    !begin-bullets-10!
     -   !begin-bullet!
         `_locale()`
         !end-bullet!
@@ -187,7 +197,7 @@
         `_seed()`
         !end-bullet!
 
-    !end-bullets-9!
+    !end-bullets-10!
     !end-bullet!
 -   !begin-bullet!
     `with_namespace()` and `local_namespace()` now pass `warn.conflicts`
@@ -220,11 +230,11 @@
 
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 # withr 2.4.3
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     Lionel Henry is the new maintainer.
@@ -252,11 +262,11 @@
 
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 # withr 2.4.2
 
-!begin-bullets-11!
+!begin-bullets-12!
 
 -   !begin-bullet!
     `local_options()` now lets you set an option to `NULL` as intended
@@ -286,21 +296,21 @@
 
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-12!
 
 # withr 2.4.1
 
-!begin-bullets-12!
+!begin-bullets-13!
 
 -   !begin-bullet!
     Tests which require `capabilities("cairo")` are now skipped.
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
 
 # withr 2.4.0
 
-!begin-bullets-13!
+!begin-bullets-14!
 
 -   !begin-bullet!
     withr is now licensed as MIT (#154).
@@ -317,13 +327,13 @@
 
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-14!
 
 # withr 2.3.0
 
 ## Deprecations
 
-!begin-bullets-14!
+!begin-bullets-15!
 
 -   !begin-bullet!
     `local_tempfile()` argument `new` is deprecated, in favor of
@@ -332,11 +342,11 @@
     `xyx <- local_tempfile()` in your code (#141).
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-15!
 
 ## New features
 
-!begin-bullets-15!
+!begin-bullets-16!
 
 -   !begin-bullet!
     New `local_seed()` function and `local_preserve_seed()` functions to
@@ -356,11 +366,11 @@
 
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-16!
 
 ## Minor improvements and fixes
 
-!begin-bullets-16!
+!begin-bullets-17!
 
 -   !begin-bullet!
     `defer()` now throws an error if an error occurs in the deferred
@@ -373,11 +383,11 @@
 
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-17!
 
 # withr 2.2.0
 
-!begin-bullets-17!
+!begin-bullets-18!
 
 -   !begin-bullet!
     `defer()` can set deferred events on `.GlobalEnv` to facilitate the
@@ -436,11 +446,11 @@
 
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-18!
 
 # withr 2.1.2
 
-!begin-bullets-18!
+!begin-bullets-19!
 
 -   !begin-bullet!
     `set_makevars()` is now exported (#68, @gaborcsardi).
@@ -452,11 +462,11 @@
 
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-19!
 
 # withr 2.1.1
 
-!begin-bullets-19!
+!begin-bullets-20!
 
 -   !begin-bullet!
     Fixes test failures with testthat 2.0.0
@@ -467,11 +477,11 @@
 
     !end-bullet!
 
-!end-bullets-19!
+!end-bullets-20!
 
 # withr 2.1.0
 
-!begin-bullets-20!
+!begin-bullets-21!
 
 -   !begin-bullet!
     `with_connection()` function to automatically close R file
@@ -504,11 +514,11 @@
 
     !end-bullet!
 
-!end-bullets-20!
+!end-bullets-21!
 
 # withr 2.0.0
 
-!begin-bullets-21!
+!begin-bullets-22!
 
 -   !begin-bullet!
     Each `with_` function now has a `local_` variant, which reset at the
@@ -521,22 +531,22 @@
 
     !end-bullet!
 
-!end-bullets-21!
+!end-bullets-22!
 
 # withr 1.0.2
 
-!begin-bullets-22!
+!begin-bullets-23!
 
 -   !begin-bullet!
     `with_makevars()` gains an `assignment` argument to allow specifying
     additional assignment types.
     !end-bullet!
 
-!end-bullets-22!
+!end-bullets-23!
 
 # withr 1.0.1
 
-!begin-bullets-23!
+!begin-bullets-24!
 
 -   !begin-bullet!
     Relaxed R version requirement to 3.0.2 (#35, #39).
@@ -545,14 +555,14 @@
     New `with_output_sink()` and `with_message_sink()` (#24).
     !end-bullet!
 
-!end-bullets-23!
+!end-bullets-24!
 
 # withr 1.0.0
 
-!begin-bullets-24!
+!begin-bullets-25!
 
 -   !begin-bullet!
     First Public Release
     !end-bullet!
 
-!end-bullets-24!
+!end-bullets-25!
