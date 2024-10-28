@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed bug where binned scales wouldn't simultaneously accept
+    transformations and function-limits (@teunbrand, #6144).
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed bug where the `ggplot2::`-prefix did not work with `stage()`
     (@teunbrand, #6104).
 

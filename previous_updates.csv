@@ -18142,3 +18142,6 @@ tidyselect,21de925b121beba1c44d33146aa3eaa5,"```
 #' @​param ... <[`tidy-select`][tidyselect::args_tidy_select]> *doc*
 #' @​param sel <[`tidy-select`][tidyselect::args_tidy_select]> *doc*
 ```",NA,NA,NA,NA
+ggplot2,d117de03282c66f6e5e3203a30afc17e,"Fixed bug where binned scales wouldn't simultaneously accept transformations and function-limits (@​teunbrand, #6144).",NA,NA,NA,NA
+testthat,c43ea6ac256185666050a6264f810228,"`LANGUAGE` is now set to `""C""` in reprocucible environments (i.e. `test_that()` blocks) to disable translations. This fixes warnings about being unable to set the language to `""en""` (#1925).",NA,NA,NA,NA
+shiny,25bcb70bcbb278cd1dfd99221312be69,Fixed a bug in `onBookmark` hook that caused elements to not be excluded from URL bookmarking. (#3762),NA,NA,NA,NA

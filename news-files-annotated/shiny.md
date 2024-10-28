@@ -43,6 +43,11 @@
     update is still sent immediately when the field is cleared. (#3664)
 
     !end-bullet!
+-   !begin-bullet!
+    Fixed a bug in `onBookmark` hook that caused elements to not be
+    excluded from URL bookmarking. (#3762)
+
+    !end-bullet!
 
 !end-bullets-2!
 
