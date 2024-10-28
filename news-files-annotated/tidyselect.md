@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `matches()` now uses `perl = TRUE` by default. This makes it more
+    consitent with regular expressions in stringr (#330).
+
+    !end-bullet!
+-   !begin-bullet!
     `eval_select()` and `eval_relocate()` gain a new `error_arg`
     argument that can be specified to throw a better error message when
     `allow_empty = FALSE` or `allow_rename = FALSE` (@olivroy, #327).

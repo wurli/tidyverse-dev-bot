@@ -18135,3 +18135,4 @@ tibble,92a1f2a4ef6c6b91ccabcc560f7a75c7,• ci: Use pkgdown branch,NA,NA,NA,NA
 tibble,92a1f2a4ef6c6b91ccabcc560f7a75c7,• ci: Updates from duckdb,NA,NA,NA,NA
 tibble,92a1f2a4ef6c6b91ccabcc560f7a75c7,• ci: Trigger run,NA,NA,NA,NA
 withr,4ce7fbb31e6d6fa765800be3cfeffc1c,"`local_language()` now never warns when set to `""C""` (#254). This is a cross-platform and silent way of disabling `gettext()` translations.",NA,NA,NA,NA
+tidyselect,fa240152144b1e27dfbf03ec28fb9467,`matches()` now uses `perl = TRUE` by default. This makes it more consitent with regular expressions in stringr (#330).,NA,NA,NA,NA
