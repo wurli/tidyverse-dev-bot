@@ -1,5 +1,7 @@
 # rsconnect (development version)
 
+# rsconnect 1.3.2
+
 * Primary Quarto document detection only considers `.R`, `.Rmd`, and `.qmd` as
   end-of-file extensions. Previously, a file with `.R` elsewhere in its name,
   such as `.Rprofile`, was incorrectly considered. (#1106)
