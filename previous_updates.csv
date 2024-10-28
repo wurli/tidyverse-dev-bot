@@ -18136,3 +18136,9 @@ tibble,92a1f2a4ef6c6b91ccabcc560f7a75c7,• ci: Updates from duckdb,NA,NA,NA,NA
 tibble,92a1f2a4ef6c6b91ccabcc560f7a75c7,• ci: Trigger run,NA,NA,NA,NA
 withr,4ce7fbb31e6d6fa765800be3cfeffc1c,"`local_language()` now never warns when set to `""C""` (#254). This is a cross-platform and silent way of disabling `gettext()` translations.",NA,NA,NA,NA
 tidyselect,fa240152144b1e27dfbf03ec28fb9467,`matches()` now uses `perl = TRUE` by default. This makes it more consitent with regular expressions in stringr (#330).,NA,NA,NA,NA
+tidyselect,e638142b43b8c8ea48759d709eca2157,`eval_select()` now fails when data has duplicate names and a character vector is provided as input (#346).,NA,NA,NA,NA
+tidyselect,21de925b121beba1c44d33146aa3eaa5,New `args_tidy_select` documentation topic. Use the following tags to document tidyselect arguments in your functions:,NA,NA,NA,NA
+tidyselect,21de925b121beba1c44d33146aa3eaa5,"```
+#' @​param ... <[`tidy-select`][tidyselect::args_tidy_select]> *doc*
+#' @​param sel <[`tidy-select`][tidyselect::args_tidy_select]> *doc*
+```",NA,NA,NA,NA
