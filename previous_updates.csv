@@ -18150,3 +18150,8 @@ reticulate,8e116617d7ed1bc6a098be639368e095,"• Attempts to resolve it from the
 reticulate,8e116617d7ed1bc6a098be639368e095,"• If no string can be resolved, reticulate no longer implicitly prepends 'python.builtin.' as the class prefix, instead it uses just the `__name__`. (See #1686 for more context)",NA,NA,NA,NA
 reticulate,281c5e33ff464360e657311fde838bda,"Added support for Python 3.13. Note that Python 3.13 removed support for `classmethod` descriptors, which may affect the S3 class of some Python objects that use metaclass properties to resolve a class's `__module__` or `__name__` attribute. (#1686)",NA,NA,NA,NA
 testthat,d086b38a2dc9a53c8e29d9942907da51,"`expect_condition()` and friends now include the `class` of the expected condition in the failure mesage, if used (#1987).",NA,NA,NA,NA
+httr2,7a9120a4a0d513e891c6a022492c9c12,"Fix stochastic test failure, particularly on CRAN (#572)",NA,NA,NA,NA
+testthat,e3f07f4b535ef683897b3e31cda4f2a9,"`expect_snapshot()` now strips line breaks in test descriptions (@​LDSamson, #1900).",NA,NA,NA,NA
+testthat,92c9a3798dbf2a8147a95bb409e3fb0c,"`expect_snapshot()` now errors when called from a `test_that()` that has an empty description (2, #1980).",NA,NA,NA,NA
+testthat,941874b932c6e1cb38a5288bfbe22cb1,"`skip_if_not_installed()` produces a clearer message (@​MichaelChirico, #1959).",NA,NA,NA,NA
+testthat,03165998034de4fab031666df5407f9c,`with_mock()` and `local_mock()` have been unconditionally deprecated as they will no longer work in future versions of R (#1999).,NA,NA,NA,NA

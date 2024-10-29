@@ -3,6 +3,13 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fix stochastic test failure, particularly on CRAN (#572)
+    !end-bullet!
+-   !begin-bullet!
+    New `req_auth_aws_v4()` signs request using AWS's special format
+    (#562, #566).
+    !end-bullet!
+-   !begin-bullet!
     `req_cache()` no longer retrieves anything but `GET` requests from
     the cache.
     !end-bullet!
@@ -10,10 +17,6 @@
     New `resp_stream_aws()` to retrieve AWS's special streaming format.
     With thanks to https://github.com/lifion/lifion-aws-event-stream/
     for a simple reference implementation.
-    !end-bullet!
--   !begin-bullet!
-    New `req_auth_aws_v4()` signs request using AWS's special format
-    (#562, #566).
     !end-bullet!
 
 !end-bullets-1!

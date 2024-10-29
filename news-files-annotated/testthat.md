@@ -3,6 +3,23 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `expect_snapshot()` now strips line breaks in test descriptions
+    (@LDSamson, #1900).
+    !end-bullet!
+-   !begin-bullet!
+    `expect_snapshot()` now errors when called from a `test_that()` that
+    has an empty description (2, #1980).
+    !end-bullet!
+-   !begin-bullet!
+    `skip_if_not_installed()` produces a clearer message
+    (@MichaelChirico, #1959).
+    !end-bullet!
+-   !begin-bullet!
+    `with_mock()` and `local_mock()` have been unconditionally
+    deprecated as they will no longer work in future versions of R
+    (#1999).
+    !end-bullet!
+-   !begin-bullet!
     `expect_condition()` and friends now include the `class` of the
     expected condition in the failure mesage, if used (#1987).
     !end-bullet!
