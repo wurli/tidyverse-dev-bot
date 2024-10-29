@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `expect_condition()` and friends now include the `class` of the
+    expected condition in the failure mesage, if used (#1987).
+    !end-bullet!
+-   !begin-bullet!
     `LANGUAGE` is now set to `"C"` in reprocucible environments (i.e.
     `test_that()` blocks) to disable translations. This fixes warnings
     about being unable to set the language to `"en"` (#1925).
@@ -1990,7 +1994,7 @@ upfront (#529). You can return to the previous default by setting
 
     !end-bullet!
 -   !begin-bullet!
-    New `JunitReporter` generates reports in JUnit compatible format.\
+    New `JunitReporter` generates reports in JUnit compatible format.
     (#481, @lbartnik; #640, @nealrichardson; #575)
 
     !end-bullet!
@@ -2273,9 +2277,9 @@ magrittr:
 !begin-codeblock!
 
 ``` r
-factor("a") %>% 
-  expect_type("integer") %>% 
-  expect_s3_class("factor") %>% 
+factor("a") %>%
+  expect_type("integer") %>%
+  expect_s3_class("factor") %>%
   expect_length(1)
 ```
 
