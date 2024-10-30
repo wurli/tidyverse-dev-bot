@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `expect_visible()` and `expect_invisible()` have improved failure
+    messages (#1966).
+    !end-bullet!
+-   !begin-bullet!
     `expect_snapshot()` now strips line breaks in test descriptions
     (@LDSamson, #1900).
     !end-bullet!

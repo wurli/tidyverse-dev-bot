@@ -18158,3 +18158,4 @@ testthat,03165998034de4fab031666df5407f9c,`with_mock()` and `local_mock()` have 
 ggplot2,d28d730cb1328842a056dc6a27caab5f,"`ggsave()` now offers to install svglite if needed (@​eliocamp, #6166).",NA,NA,NA,NA
 ggplot2,f9a6824e43231f110db322b3c4d4666e,"(internal) Using `after_scale()` in the `Geom*$default_aes()` field is now evaluated in the context of data (@​teunbrand, #6135)",NA,NA,NA,NA
 ggplot2,27ebc70008ebb084f62fed014dec000e,"Added `keep.zeroes` argument to `stat_bin()` (@​teunbrand, #3449)",NA,NA,NA,NA
+testthat,50b960c0a202f2c9d03f308e128452ee,`expect_visible()` and `expect_invisible()` have improved failure messages (#1966).,NA,NA,NA,NA
