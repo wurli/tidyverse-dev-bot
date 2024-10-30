@@ -3,8 +3,14 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    The performance of `renv`'s built-in JSON reader has been improved.
+    (#2021)
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed an issue where `renv` could erroneously create a binding
     called 'object' in the global environment on startup. (#2017)
+
     !end-bullet!
 
 !end-bullets-1!
