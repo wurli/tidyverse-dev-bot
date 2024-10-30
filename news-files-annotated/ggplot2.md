@@ -496,6 +496,10 @@
     (@teunbrand, #4647).
 
     !end-bullet!
+-   !begin-bullet!
+    Added `keep.zeroes` argument to `stat_bin()` (@teunbrand, #3449)
+
+    !end-bullet!
 
 !end-bullets-1!
 
