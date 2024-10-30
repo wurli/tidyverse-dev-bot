@@ -589,6 +589,10 @@ documentation updates.
     `guide_coloursteps(even.steps = FALSE)` now works with discrete data
     that has been formatted by `cut()` (@teunbrand, #3877).
     !end-bullet!
+-   !begin-bullet!
+    `ggsave()` now offers to install svglite if needed (@eliocamp,
+    #6166).
+    !end-bullet!
 
 !end-bullets-4!
 
