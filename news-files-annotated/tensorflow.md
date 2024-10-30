@@ -3,6 +3,9 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `install_tensorflow()` installs TensorFlow v2.18 by default.
+    !end-bullet!
+-   !begin-bullet!
     Fixed an issue where GPUs would not be found when running on Windows
     WSL Linux (reported in rstudio/keras3#1456, fixed in #599)
     !end-bullet!
