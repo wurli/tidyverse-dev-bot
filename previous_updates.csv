@@ -18156,3 +18156,4 @@ testthat,92c9a3798dbf2a8147a95bb409e3fb0c,"`expect_snapshot()` now errors when c
 testthat,941874b932c6e1cb38a5288bfbe22cb1,"`skip_if_not_installed()` produces a clearer message (@​MichaelChirico, #1959).",NA,NA,NA,NA
 testthat,03165998034de4fab031666df5407f9c,`with_mock()` and `local_mock()` have been unconditionally deprecated as they will no longer work in future versions of R (#1999).,NA,NA,NA,NA
 ggplot2,d28d730cb1328842a056dc6a27caab5f,"`ggsave()` now offers to install svglite if needed (@​eliocamp, #6166).",NA,NA,NA,NA
+ggplot2,f9a6824e43231f110db322b3c4d4666e,"(internal) Using `after_scale()` in the `Geom*$default_aes()` field is now evaluated in the context of data (@​teunbrand, #6135)",NA,NA,NA,NA

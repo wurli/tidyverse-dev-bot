@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    (internal) Using `after_scale()` in the `Geom*$default_aes()` field
+    is now evaluated in the context of data (@teunbrand, #6135)
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed bug where binned scales wouldn't simultaneously accept
     transformations and function-limits (@teunbrand, #6144).
 
