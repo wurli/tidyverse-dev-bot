@@ -4,7 +4,7 @@
   ranges (#435).
 * New `label_date_short(leading)` argument to replace leading zeroes (#442)
 * `breaks_pretty()` will return the input limit when it has no range (#446)
-* `transform_exp()` now has more sensible breaks, available in `breaks_exp()` 
+* `breaks_exp()` now provides more sensible breaks for the exponential transform
   (@teunbrand, #405).
 * The scales package now keeps track of known palettes. These can be retrieved
   using `get_palette()` or registered using `set_palette()` (#396).
@@ -14,6 +14,10 @@
 
 * New function `compose_label()` to chain together label formatting functions 
   (#462)
+* Palette function now have classes, attributes and coercion methods 
+  (@teunbrand, #426).
+* Added colour manipulation functions: `col_shift()`, `col_saturate()`, 
+  `col_darker()`, `col_lighter()` and `col_mix()` (@teunbrand, #423)
 
 # scales 1.3.0
 

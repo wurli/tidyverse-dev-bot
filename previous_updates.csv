@@ -18160,3 +18160,5 @@ ggplot2,f9a6824e43231f110db322b3c4d4666e,"(internal) Using `after_scale()` in th
 ggplot2,27ebc70008ebb084f62fed014dec000e,"Added `keep.zeroes` argument to `stat_bin()` (@​teunbrand, #3449)",NA,NA,NA,NA
 testthat,50b960c0a202f2c9d03f308e128452ee,`expect_visible()` and `expect_invisible()` have improved failure messages (#1966).,NA,NA,NA,NA
 renv,545aad5253528dc277b070446d627231,The performance of `renv`'s built-in JSON reader has been improved. (#2021),NA,NA,NA,NA
+scales,021908491e8f0a1873ad283af7441ee8,"Palette function now have classes, attributes and coercion methods (@​teunbrand, #426).",NA,NA,NA,NA
+scales,9e505220f42e6e104590ddbdfcde1552,"Added colour manipulation functions: `col_shift()`, `col_saturate()`, `col_darker()`, `col_lighter()` and `col_mix()` (@​teunbrand, #423)",NA,NA,NA,NA

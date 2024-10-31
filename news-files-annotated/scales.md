@@ -23,8 +23,8 @@
 
     !end-bullet!
 -   !begin-bullet!
-    `transform_exp()` now has more sensible breaks, available in
-    `breaks_exp()` (@teunbrand, #405).
+    `breaks_exp()` now provides more sensible breaks for the exponential
+    transform (@teunbrand, #405).
 
     !end-bullet!
 -   !begin-bullet!
@@ -45,6 +45,17 @@
 -   !begin-bullet!
     New function `compose_label()` to chain together label formatting
     functions (#462)
+
+    !end-bullet!
+-   !begin-bullet!
+    Palette function now have classes, attributes and coercion methods
+    (@teunbrand, #426).
+
+    !end-bullet!
+-   !begin-bullet!
+    Added colour manipulation functions: `col_shift()`,
+    `col_saturate()`, `col_darker()`, `col_lighter()` and `col_mix()`
+    (@teunbrand, #423)
 
     !end-bullet!
 
