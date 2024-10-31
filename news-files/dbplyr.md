@@ -1,5 +1,7 @@
 # dbplyr (development version)
 
+* `clock::add_years()` translates to correct SQL on Spark (@ablack3, #1510).
+
 * Translations for `as.double()` and `as.character()` with Teradata previously
   raised errors and are now correct (@rplsmn, #1545).
 

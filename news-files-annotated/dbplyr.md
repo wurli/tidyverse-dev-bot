@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `clock::add_years()` translates to correct SQL on Spark (@ablack3,
+    #1510).
+
+    !end-bullet!
+-   !begin-bullet!
     Translations for `as.double()` and `as.character()` with Teradata
     previously raised errors and are now correct (@rplsmn, #1545).
 
