@@ -3,6 +3,14 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Tightened argument checks for Snowflake SQL translations. These
+    changes should result in more informative errors in cases where code
+    already failed; if you see errors with code that used to run without
+    issue, please report them to the package authors (@simonpcouch,
+    #1554).
+
+    !end-bullet!
+-   !begin-bullet!
     `clock::add_years()` translates to correct SQL on Spark (@ablack3,
     #1510).
 
