@@ -6,6 +6,10 @@
     Fix stochastic test failure, particularly on CRAN (#572)
     !end-bullet!
 -   !begin-bullet!
+    New `oauth_cache_clear()` is an exported end point to clear the
+    OAuth cache.
+    !end-bullet!
+-   !begin-bullet!
     New `req_auth_aws_v4()` signs request using AWS's special format
     (#562, #566).
     !end-bullet!
