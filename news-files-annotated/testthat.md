@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `expect_no_*()` expectations no longer incorrectly emit a passing
+    test result if they in fact fail (#1997).
+    !end-bullet!
+-   !begin-bullet!
     Require the latest version of waldo (0.6.0) in order to get the
     latest goodies (#1955).
     !end-bullet!
