@@ -18167,3 +18167,4 @@ dbplyr,8cfb481a745a63bd9791066a52638a94,"Tightened argument checks for Snowflake
 httr2,202b37863404f966d8ca0dd940064de2,New `oauth_cache_clear()` is an exported end point to clear the OAuth cache.,NA,NA,NA,NA
 testthat,7421780898358d9a0a86d294c85e69c3,Require the latest version of waldo (0.6.0) in order to get the latest goodies (#1955).,NA,NA,NA,NA
 testthat,c63d09ff3c7b7621ab6f9698b2e44825,`expect_no_*()` expectations no longer incorrectly emit a passing test result if they in fact fail (#1997).,NA,NA,NA,NA
+testthat,59c487b66706e3c061f47cd99013e054,`expect_true()` and `expect_false()` give better errors if `actual` isn't a vector (#1996).,NA,NA,NA,NA

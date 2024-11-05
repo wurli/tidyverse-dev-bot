@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `expect_true()` and `expect_false()` give better errors if `actual`
+    isn't a vector (#1996).
+    !end-bullet!
+-   !begin-bullet!
     `expect_no_*()` expectations no longer incorrectly emit a passing
     test result if they in fact fail (#1997).
     !end-bullet!
