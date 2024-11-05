@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Require the latest version of waldo (0.6.0) in order to get the
+    latest goodies (#1955).
+    !end-bullet!
+-   !begin-bullet!
     `expect_visible()` and `expect_invisible()` have improved failure
     messages (#1966).
     !end-bullet!

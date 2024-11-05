@@ -18165,3 +18165,4 @@ scales,9e505220f42e6e104590ddbdfcde1552,"Added colour manipulation functions: `c
 dbplyr,3563999df9af7fef2b89a5148df6b73f,"`clock::add_years()` translates to correct SQL on Spark (@​ablack3, #1510).",NA,NA,NA,NA
 dbplyr,8cfb481a745a63bd9791066a52638a94,"Tightened argument checks for Snowflake SQL translations. These changes should result in more informative errors in cases where code already failed; if you see errors with code that used to run without issue, please report them to the package authors (@​simonpcouch, #1554).",NA,NA,NA,NA
 httr2,202b37863404f966d8ca0dd940064de2,New `oauth_cache_clear()` is an exported end point to clear the OAuth cache.,NA,NA,NA,NA
+testthat,7421780898358d9a0a86d294c85e69c3,Require the latest version of waldo (0.6.0) in order to get the latest goodies (#1955).,NA,NA,NA,NA
