@@ -18173,3 +18173,5 @@ testthat,38703001765afd7e314059c160fd8698,New `expect_s7_class()` for testing if
 testthat,ad355b44640888dd8f62e8c33724dfd6,`expect_error()` and friends now error if you supply `...` but not `pattern` (#1932).,NA,NA,NA,NA
 testthat,932fb732804b76760e12f979ef6021d2,"New `expect_no_failure()`, `expect_no_success()` and `expect_snapshot_failure()` provide more options for testing expectations.",NA,NA,NA,NA
 testthat,0c93817e76b6b84acfbe780ee71c0d65,`expect_error()` and friends no longer give an uninformative error if they fail inside a magrittr pipe (#1994).,NA,NA,NA,NA
+gt,c9cce08f6ef2fd12e76a11bd22ce3abc,"Interactive tables can support selection through the `ihtml.selection_mode` option. (@​jonthegeek, #1909)",NA,NA,NA,NA
+gt,629c06c6c173cb1cf37f5496416c9313,"Tables embedded in Shiny apps with `gt_output()` and `render_gt()` with `ihtml.selection_mode` enabled also act as inputs, reporting the row numbers that are selected (#354, #1368). (@​jonthegeek, #1909)",NA,NA,NA,NA
