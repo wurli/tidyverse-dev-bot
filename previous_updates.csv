@@ -18169,3 +18169,7 @@ testthat,7421780898358d9a0a86d294c85e69c3,Require the latest version of waldo (0
 testthat,c63d09ff3c7b7621ab6f9698b2e44825,`expect_no_*()` expectations no longer incorrectly emit a passing test result if they in fact fail (#1997).,NA,NA,NA,NA
 testthat,59c487b66706e3c061f47cd99013e054,`expect_true()` and `expect_false()` give better errors if `actual` isn't a vector (#1996).,NA,NA,NA,NA
 testthat,a8c295c060dd1c8d2eb9a05d4c4efa36,`expect_setequal()` correctly identifies what is missing where (#1962).,NA,NA,NA,NA
+testthat,38703001765afd7e314059c160fd8698,New `expect_s7_class()` for testing if an object is an S7 class (#1580).,NA,NA,NA,NA
+testthat,ad355b44640888dd8f62e8c33724dfd6,`expect_error()` and friends now error if you supply `...` but not `pattern` (#1932).,NA,NA,NA,NA
+testthat,932fb732804b76760e12f979ef6021d2,"New `expect_no_failure()`, `expect_no_success()` and `expect_snapshot_failure()` provide more options for testing expectations.",NA,NA,NA,NA
+testthat,0c93817e76b6b84acfbe780ee71c0d65,`expect_error()` and friends no longer give an uninformative error if they fail inside a magrittr pipe (#1994).,NA,NA,NA,NA

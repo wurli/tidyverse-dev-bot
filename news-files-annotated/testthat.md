@@ -3,6 +3,23 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    New `expect_s7_class()` for testing if an object is an S7 class
+    (#1580).
+    !end-bullet!
+-   !begin-bullet!
+    `expect_error()` and friends now error if you supply `...` but not
+    `pattern` (#1932).
+    !end-bullet!
+-   !begin-bullet!
+    New `expect_no_failure()`, `expect_no_success()` and
+    `expect_snapshot_failure()` provide more options for testing
+    expectations.
+    !end-bullet!
+-   !begin-bullet!
+    `expect_error()` and friends no longer give an uninformative error
+    if they fail inside a magrittr pipe (#1994).
+    !end-bullet!
+-   !begin-bullet!
     `expect_setequal()` correctly identifies what is missing where
     (#1962).
     !end-bullet!
