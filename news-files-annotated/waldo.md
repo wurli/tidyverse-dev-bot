@@ -1,5 +1,7 @@
 # waldo (development version)
 
+# waldo 0.6.1
+
 !begin-bullets-1!
 
 -   !begin-bullet!
