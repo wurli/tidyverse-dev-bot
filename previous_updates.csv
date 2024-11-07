@@ -18175,3 +18175,4 @@ testthat,932fb732804b76760e12f979ef6021d2,"New `expect_no_failure()`, `expect_no
 testthat,0c93817e76b6b84acfbe780ee71c0d65,`expect_error()` and friends no longer give an uninformative error if they fail inside a magrittr pipe (#1994).,NA,NA,NA,NA
 gt,c9cce08f6ef2fd12e76a11bd22ce3abc,"Interactive tables can support selection through the `ihtml.selection_mode` option. (@​jonthegeek, #1909)",NA,NA,NA,NA
 gt,629c06c6c173cb1cf37f5496416c9313,"Tables embedded in Shiny apps with `gt_output()` and `render_gt()` with `ihtml.selection_mode` enabled also act as inputs, reporting the row numbers that are selected (#354, #1368). (@​jonthegeek, #1909)",NA,NA,NA,NA
+waldo,e357942777ce9c97176f4fa5e19dfdc4,Only use special bit64 comparison if package is installed.,NA,NA,NA,NA
