@@ -18183,3 +18183,4 @@ testthat,cb026e5e5f1ced40cec7a9a804c6ed13,`expect_error()` and friends now error
 testthat,807002151ea954cfc7096136c570069b,"`expect_snapshot()` now strips line breaks in test descriptions (@​LDSamson, #1900), and errors when called from a `test_that()` that has an empty description (2, #1980).",NA,NA,NA,NA
 testthat,74b377a60a7bdd1e15d5fcba180f9be3,"`local_reproducible_output()` (used in `test_that()` blocks) now sets `LANGUAGE` to `""C""` instead of `""en""` to disable translations, avoiding warnings on some platforms (#1925).",NA,NA,NA,NA
 testthat,290dcd3fa9d1c675ab35e2e7ba753988,"`skip_if_not_installed()` generates a clearer message that sorts better (@​MichaelChirico, #1959).",NA,NA,NA,NA
+pkgdown,3ae20de4038be03b2362a2d0ef52aa5d,"Support ANSI sequences in `index.md` (@​krlmlr, #2787).",NA,NA,NA,NA
