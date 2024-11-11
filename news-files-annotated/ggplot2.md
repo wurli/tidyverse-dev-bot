@@ -3,6 +3,17 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `geom_contour()` should be able to recognise a rotated grid of
+    points (@teunbrand, #4320)
+
+    !end-bullet!
+-   !begin-bullet!
+    `geom_boxplot()` gains additional arguments to style the colour,
+    linetype and linewidths of the box, whiskers, median line and
+    staples (@teunbrand, #5126)
+
+    !end-bullet!
+-   !begin-bullet!
     (internal) Using `after_scale()` in the `Geom*$default_aes()` field
     is now evaluated in the context of data (@teunbrand, #6135)
 
