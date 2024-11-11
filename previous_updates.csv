@@ -18184,3 +18184,15 @@ testthat,807002151ea954cfc7096136c570069b,"`expect_snapshot()` now strips line b
 testthat,74b377a60a7bdd1e15d5fcba180f9be3,"`local_reproducible_output()` (used in `test_that()` blocks) now sets `LANGUAGE` to `""C""` instead of `""en""` to disable translations, avoiding warnings on some platforms (#1925).",NA,NA,NA,NA
 testthat,290dcd3fa9d1c675ab35e2e7ba753988,"`skip_if_not_installed()` generates a clearer message that sorts better (@​MichaelChirico, #1959).",NA,NA,NA,NA
 pkgdown,3ae20de4038be03b2362a2d0ef52aa5d,"Support ANSI sequences in `index.md` (@​krlmlr, #2787).",NA,NA,NA,NA
+blob,311cd4eba8b55206f5502ed654a8e1c6,Trigger run (#33).,NA,NA,NA,NA
+blob,311cd4eba8b55206f5502ed654a8e1c6,• ci: Trigger run,NA,NA,NA,NA
+blob,311cd4eba8b55206f5502ed654a8e1c6,• ci: Latest changes,NA,NA,NA,NA
+hms,7e497ed23ce7a93102d0f148fd0642cd,Trigger run (#126).,NA,NA,NA,NA
+hms,7e497ed23ce7a93102d0f148fd0642cd,• ci: Trigger run,NA,NA,NA,NA
+hms,7e497ed23ce7a93102d0f148fd0642cd,• ci: Latest changes,NA,NA,NA,NA
+pillar,dd9c711b259dcf2513617e7065ed87fc,Trigger run (#676).,NA,NA,NA,NA
+pillar,dd9c711b259dcf2513617e7065ed87fc,• ci: Trigger run,NA,NA,NA,NA
+pillar,dd9c711b259dcf2513617e7065ed87fc,• ci: Latest changes,NA,NA,NA,NA
+tibble,3299f9eada2bcf1735af679f2efc7557,Trigger run (#1606).,NA,NA,NA,NA
+tibble,3299f9eada2bcf1735af679f2efc7557,• ci: Trigger run,NA,NA,NA,NA
+tibble,3299f9eada2bcf1735af679f2efc7557,• ci: Latest changes,NA,NA,NA,NA

@@ -1,11 +1,35 @@
 ```{=html}
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 ```
-# pillar 1.9.0.9025
+# pillar 1.9.0.9026
 
 ## Continuous integration
 
 !begin-bullets-1!
+
+-   !begin-bullet!
+    Trigger run (#676).
+
+    !begin-bullets-2!
+    -   !begin-bullet!
+        ci: Trigger run
+
+        !end-bullet!
+    -   !begin-bullet!
+        ci: Latest changes
+
+        !end-bullet!
+
+    !end-bullets-2!
+    !end-bullet!
+
+!end-bullets-1!
+
+# pillar 1.9.0.9025
+
+## Continuous integration
+
+!begin-bullets-3!
 
 -   !begin-bullet!
     Trigger run (#675).
@@ -14,7 +38,7 @@
 -   !begin-bullet!
     Use pkgdown branch (#674).
 
-    !begin-bullets-2!
+    !begin-bullets-4!
     -   !begin-bullet!
         ci: Use pkgdown branch
 
@@ -24,33 +48,33 @@
 
         !end-bullet!
 
-    !end-bullets-2!
+    !end-bullets-4!
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-3!
 
 # pillar 1.9.0.9024
 
 ## Chore
 
-!begin-bullets-3!
+!begin-bullets-5!
 
 -   !begin-bullet!
     Revdepcheck results.
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-5!
 
 # pillar 1.9.0.9023
 
 ## Continuous integration
 
-!begin-bullets-4!
+!begin-bullets-6!
 
 -   !begin-bullet!
     Install via R CMD INSTALL ., not pak (#672).
 
-    !begin-bullets-5!
+    !begin-bullets-7!
     -   !begin-bullet!
         ci: Install via R CMD INSTALL ., not pak
 
@@ -60,16 +84,16 @@
 
         !end-bullet!
 
-    !end-bullets-5!
+    !end-bullets-7!
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-6!
 
 # pillar 1.9.0.9022
 
 ## Continuous integration
 
-!begin-bullets-6!
+!begin-bullets-8!
 
 -   !begin-bullet!
     Install local package for pkgdown builds.
@@ -84,25 +108,25 @@
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-8!
 
 # pillar 1.9.0.9021
 
 ## Continuous integration
 
-!begin-bullets-7!
+!begin-bullets-9!
 
 -   !begin-bullet!
     Sync with latest developments.
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-9!
 
 # pillar 1.9.0.9020
 
 ## Continuous integration
 
-!begin-bullets-8!
+!begin-bullets-10!
 
 -   !begin-bullet!
     Fix edge case of no suggested packages.
@@ -113,47 +137,21 @@
 
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-10!
 
 # pillar 1.9.0.9019
-
-## Continuous integration
-
-!begin-bullets-9!
-
--   !begin-bullet!
-    Inline action.
-    !end-bullet!
-
-!end-bullets-9!
-
-# pillar 1.9.0.9018
-
-## Chore
-
-!begin-bullets-10!
-
--   !begin-bullet!
-    Auto-update from GitHub Actions.
-
-    Run: https://github.com/r-lib/pillar/actions/runs/10224241696
-
-    !end-bullet!
-
-!end-bullets-10!
 
 ## Continuous integration
 
 !begin-bullets-11!
 
 -   !begin-bullet!
-    Refactor dep-suggests-matrix, avoid killing base and recommended
-    packages.
+    Inline action.
     !end-bullet!
 
 !end-bullets-11!
 
-# pillar 1.9.0.9017
+# pillar 1.9.0.9018
 
 ## Chore
 
@@ -162,7 +160,7 @@
 -   !begin-bullet!
     Auto-update from GitHub Actions.
 
-    Run: https://github.com/r-lib/pillar/actions/runs/10200114378
+    Run: https://github.com/r-lib/pillar/actions/runs/10224241696
 
     !end-bullet!
 
@@ -173,50 +171,76 @@
 !begin-bullets-13!
 
 -   !begin-bullet!
-    Use dev roxygen2 and decor.
+    Refactor dep-suggests-matrix, avoid killing base and recommended
+    packages.
     !end-bullet!
 
 !end-bullets-13!
+
+# pillar 1.9.0.9017
+
+## Chore
+
+!begin-bullets-14!
+
+-   !begin-bullet!
+    Auto-update from GitHub Actions.
+
+    Run: https://github.com/r-lib/pillar/actions/runs/10200114378
+
+    !end-bullet!
+
+!end-bullets-14!
+
+## Continuous integration
+
+!begin-bullets-15!
+
+-   !begin-bullet!
+    Use dev roxygen2 and decor.
+    !end-bullet!
+
+!end-bullets-15!
 
 # pillar 1.9.0.9016
 
 ## Documentation
 
-!begin-bullets-14!
+!begin-bullets-16!
 
 -   !begin-bullet!
     Update \_pkgdown.yml to bring back search bar (@olivroy, #667).
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-16!
 
 # pillar 1.9.0.9015
 
 ## Testing
 
-!begin-bullets-15!
+!begin-bullets-17!
 
 -   !begin-bullet!
     Remove empty snapshot tests (#664).
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-17!
 
 # pillar 1.9.0.9014
 
 ## Features
 
-!begin-bullets-16!
+!begin-bullets-18!
 
 -   !begin-bullet!
     Show missing values in red in `glimpse()` (@ryanzomorrodi, #662).
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-18!
 
 ## Chore
 
-!begin-bullets-17!
+!begin-bullets-19!
 
 -   !begin-bullet!
     Auto-update from GitHub Actions.
@@ -225,13 +249,13 @@
 
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-19!
 
 # pillar 1.9.0.9013
 
 ## Chore
 
-!begin-bullets-18!
+!begin-bullets-20!
 
 -   !begin-bullet!
     Add Aviator configuration.
@@ -248,46 +272,19 @@
 
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-20!
 
 ## Continuous integration
 
-!begin-bullets-19!
+!begin-bullets-21!
 
 -   !begin-bullet!
     Fix on Windows, tweak lock workflow.
     !end-bullet!
 
-!end-bullets-19!
-
-# pillar 1.9.0.9012
-
-## Chore
-
-!begin-bullets-20!
-
--   !begin-bullet!
-    Auto-update from GitHub Actions.
-
-    Run: https://github.com/r-lib/pillar/actions/runs/9728438554
-
-    !end-bullet!
-
-!end-bullets-20!
-
-# pillar 1.9.0.9011
-
-## Documentation
-
-!begin-bullets-21!
-
--   !begin-bullet!
-    Only implement `type_sum.accel()` in pkgdown mode (#661).
-    !end-bullet!
-
 !end-bullets-21!
 
-# pillar 1.9.0.9010
+# pillar 1.9.0.9012
 
 ## Chore
 
@@ -296,15 +293,42 @@
 -   !begin-bullet!
     Auto-update from GitHub Actions.
 
-    Run: https://github.com/r-lib/pillar/actions/runs/9691618335
+    Run: https://github.com/r-lib/pillar/actions/runs/9728438554
 
     !end-bullet!
 
 !end-bullets-22!
 
-## Continuous integration
+# pillar 1.9.0.9011
+
+## Documentation
 
 !begin-bullets-23!
+
+-   !begin-bullet!
+    Only implement `type_sum.accel()` in pkgdown mode (#661).
+    !end-bullet!
+
+!end-bullets-23!
+
+# pillar 1.9.0.9010
+
+## Chore
+
+!begin-bullets-24!
+
+-   !begin-bullet!
+    Auto-update from GitHub Actions.
+
+    Run: https://github.com/r-lib/pillar/actions/runs/9691618335
+
+    !end-bullet!
+
+!end-bullets-24!
+
+## Continuous integration
+
+!begin-bullets-25!
 
 -   !begin-bullet!
     Avoid checking bashisms on Windows.
@@ -323,45 +347,22 @@
 
     !end-bullet!
 
-!end-bullets-23!
+!end-bullets-25!
 
 # pillar 1.9.0.9009
 
 ## Features
 
-!begin-bullets-24!
+!begin-bullets-26!
 
 -   !begin-bullet!
     Math operations on `num()` objects now pass additional arguments to
     the mathematical function (@gvelasq, #659, #660).
     !end-bullet!
 
-!end-bullets-24!
-
-# pillar 1.9.0.9008
-
-!begin-bullets-25!
-
--   !begin-bullet!
-    Internal changes only.
-    !end-bullet!
-
-!end-bullets-25!
-
-# pillar 1.9.0.9007
-
-## Documentation
-
-!begin-bullets-26!
-
--   !begin-bullet!
-    Avoid displaying deprecated argument in `@inheritDotParams`
-    (@olivroy, #657).
-    !end-bullet!
-
 !end-bullets-26!
 
-# pillar 1.9.0.9006
+# pillar 1.9.0.9008
 
 !begin-bullets-27!
 
@@ -371,17 +372,20 @@
 
 !end-bullets-27!
 
-# pillar 1.9.0.9005
+# pillar 1.9.0.9007
+
+## Documentation
 
 !begin-bullets-28!
 
 -   !begin-bullet!
-    Internal changes only.
+    Avoid displaying deprecated argument in `@inheritDotParams`
+    (@olivroy, #657).
     !end-bullet!
 
 !end-bullets-28!
 
-# pillar 1.9.0.9004
+# pillar 1.9.0.9006
 
 !begin-bullets-29!
 
@@ -391,7 +395,7 @@
 
 !end-bullets-29!
 
-# pillar 1.9.0.9003
+# pillar 1.9.0.9005
 
 !begin-bullets-30!
 
@@ -401,17 +405,17 @@
 
 !end-bullets-30!
 
-# pillar 1.9.0.9002
+# pillar 1.9.0.9004
 
 !begin-bullets-31!
 
 -   !begin-bullet!
-    Merged cran-1.9.0 into main.
+    Internal changes only.
     !end-bullet!
 
 !end-bullets-31!
 
-# pillar 1.9.0.9001
+# pillar 1.9.0.9003
 
 !begin-bullets-32!
 
@@ -421,21 +425,41 @@
 
 !end-bullets-32!
 
-# pillar 1.9.0.9000
+# pillar 1.9.0.9002
 
 !begin-bullets-33!
+
+-   !begin-bullet!
+    Merged cran-1.9.0 into main.
+    !end-bullet!
+
+!end-bullets-33!
+
+# pillar 1.9.0.9001
+
+!begin-bullets-34!
 
 -   !begin-bullet!
     Internal changes only.
     !end-bullet!
 
-!end-bullets-33!
+!end-bullets-34!
+
+# pillar 1.9.0.9000
+
+!begin-bullets-35!
+
+-   !begin-bullet!
+    Internal changes only.
+    !end-bullet!
+
+!end-bullets-35!
 
 # pillar 1.9.0
 
 ## Features
 
-!begin-bullets-34!
+!begin-bullets-36!
 
 -   !begin-bullet!
     Math operations on `num()` objects no longer perform type checks.
@@ -443,11 +467,11 @@
     #632).
     !end-bullet!
 
-!end-bullets-34!
+!end-bullets-36!
 
 ## Printing
 
-!begin-bullets-35!
+!begin-bullets-37!
 
 -   !begin-bullet!
     The default for the `pillar.min_title_chars` option has been bumped
@@ -461,22 +485,22 @@
 
     !end-bullet!
 
-!end-bullets-35!
+!end-bullets-37!
 
 ## Breaking changes
 
-!begin-bullets-36!
+!begin-bullets-38!
 
 -   !begin-bullet!
     `colonnade()`, `extra_cols()` and `squeeze()` are now
     hard-deprecated (#272, #374, #631).
     !end-bullet!
 
-!end-bullets-36!
+!end-bullets-38!
 
 ## Bug fixes
 
-!begin-bullets-37!
+!begin-bullets-39!
 
 -   !begin-bullet!
     Show `colnames()` hint only when needed (tidyverse/tibble#1488,
@@ -502,11 +526,11 @@
 
     !end-bullet!
 
-!end-bullets-37!
+!end-bullets-39!
 
 ## Documentation
 
-!begin-bullets-38!
+!begin-bullets-40!
 
 -   !begin-bullet!
     Polish `?pillar_options` (#583).
@@ -518,23 +542,23 @@
 
     !end-bullet!
 
-!end-bullets-38!
+!end-bullets-40!
 
 ## Internal
 
-!begin-bullets-39!
+!begin-bullets-41!
 
 -   !begin-bullet!
     Require vctrs \>= 0.5.0
     !end-bullet!
 
-!end-bullets-39!
+!end-bullets-41!
 
 # pillar 1.8.1
 
 ## Features
 
-!begin-bullets-40!
+!begin-bullets-42!
 
 -   !begin-bullet!
     New `pillar.advice` option to turn off advice in the footer, see
@@ -542,13 +566,13 @@
     (#577).
     !end-bullet!
 
-!end-bullets-40!
+!end-bullets-42!
 
 # pillar 1.8.0
 
 ## Display
 
-!begin-bullets-41!
+!begin-bullets-43!
 
 -   !begin-bullet!
     Column names that are abbreviated in the header gain a footnote and
@@ -578,11 +602,11 @@
 
     !end-bullet!
 
-!end-bullets-41!
+!end-bullets-43!
 
 ## Features
 
-!begin-bullets-42!
+!begin-bullets-44!
 
 -   !begin-bullet!
     Pick up `"pillar_focus"` attribute on printing to define focus
@@ -595,11 +619,11 @@
 
     !end-bullet!
 
-!end-bullets-42!
+!end-bullets-44!
 
 ## Bug fixes
 
-!begin-bullets-43!
+!begin-bullets-45!
 
 -   !begin-bullet!
     Fix printing of `Surv` and `Surv2` objects (#561).
@@ -615,11 +639,11 @@
 
     !end-bullet!
 
-!end-bullets-43!
+!end-bullets-45!
 
 ## Documentation
 
-!begin-bullets-44!
+!begin-bullets-46!
 
 -   !begin-bullet!
     `ctl_new_pillar_list()` is documented on a separate help page
@@ -631,11 +655,11 @@
 
     !end-bullet!
 
-!end-bullets-44!
+!end-bullets-46!
 
 ## Chore
 
-!begin-bullets-45!
+!begin-bullets-47!
 
 -   !begin-bullet!
     Drop crayon dependency (#559).
@@ -651,11 +675,11 @@
 
     !end-bullet!
 
-!end-bullets-45!
+!end-bullets-47!
 
 ## API
 
-!begin-bullets-46!
+!begin-bullets-48!
 
 -   !begin-bullet!
     Soft-deprecate `colonnade()`, `squeeze()` and `extra_cols()` (#496).
@@ -666,13 +690,13 @@
 
     !end-bullet!
 
-!end-bullets-46!
+!end-bullets-48!
 
 # pillar 1.7.0
 
 ## Breaking changes
 
-!begin-bullets-47!
+!begin-bullets-49!
 
 -   !begin-bullet!
     `colonnade()` is now soft-deprecated (#485).
@@ -685,11 +709,11 @@
     `new_pillar()` deprecates `extra` argument (#497).
     !end-bullet!
 
-!end-bullets-47!
+!end-bullets-49!
 
 ## Features
 
-!begin-bullets-48!
+!begin-bullets-50!
 
 -   !begin-bullet!
     Focus columns specified via the `focus` argument to
@@ -697,46 +721,46 @@
     the maximum width and with the "type" component underlined (#465).
     !end-bullet!
 
-!end-bullets-48!
+!end-bullets-50!
 
 ## Bug fixes
 
-!begin-bullets-49!
+!begin-bullets-51!
 
 -   !begin-bullet!
     Update `s3_register()` to use new implementation from rlang, this
     fixes CRAN checks related to `scale_type()` (#462).
     !end-bullet!
 
-!end-bullets-49!
+!end-bullets-51!
 
 ## Internal
 
-!begin-bullets-50!
+!begin-bullets-52!
 
 -   !begin-bullet!
     Single pillars constructed with `pillar()` use only as much width as
     required when printing (#484).
     !end-bullet!
 
-!end-bullets-50!
+!end-bullets-52!
 
 # pillar 1.6.5
 
 ## Breaking changes
 
-!begin-bullets-51!
+!begin-bullets-53!
 
 -   !begin-bullet!
     New `ctl_new_pillar_list()`, supersedes `ctl_new_compound_pillar()`
     (#433).
     !end-bullet!
 
-!end-bullets-51!
+!end-bullets-53!
 
 ## Features
 
-!begin-bullets-52!
+!begin-bullets-54!
 
 -   !begin-bullet!
     If some but not all sub-columns of a data frame or matrix column are
@@ -775,11 +799,11 @@
     return value (#390).
     !end-bullet!
 
-!end-bullets-52!
+!end-bullets-54!
 
 ## Bug fixes
 
-!begin-bullets-53!
+!begin-bullets-55!
 
 -   !begin-bullet!
     Extra columns in footer show backticks again if they are
@@ -793,21 +817,21 @@
     Fix support for `nanotime::nanotime()` classes (#378, #380).
     !end-bullet!
 
-!end-bullets-53!
+!end-bullets-55!
 
 ## Documentation
 
-!begin-bullets-54!
+!begin-bullets-56!
 
 -   !begin-bullet!
     `?num` and `?char` now point to tibble (#382).
     !end-bullet!
 
-!end-bullets-54!
+!end-bullets-56!
 
 ## Internal
 
-!begin-bullets-55!
+!begin-bullets-57!
 
 -   !begin-bullet!
     Use eager registration via `NAMESPACE` for own methods for classes
@@ -830,13 +854,13 @@
     (#279).
     !end-bullet!
 
-!end-bullets-55!
+!end-bullets-57!
 
 # pillar 1.6.4
 
 ## Bug fixes
 
-!begin-bullets-56!
+!begin-bullets-58!
 
 -   !begin-bullet!
     Fix printing for some tibbles where a fixed-width column is followed
@@ -846,44 +870,44 @@
     Avoid nested backtick blocks in vignette.
     !end-bullet!
 
-!end-bullets-56!
+!end-bullets-58!
 
 ## Breaking changes
 
-!begin-bullets-57!
+!begin-bullets-59!
 
 -   !begin-bullet!
     `num()` requires an integerish `digits` argument (#362).
     !end-bullet!
 
-!end-bullets-57!
+!end-bullets-59!
 
 ## Documentation
 
-!begin-bullets-58!
+!begin-bullets-60!
 
 -   !begin-bullet!
     Link to tibble vignettes and documentation pages.
     !end-bullet!
 
-!end-bullets-58!
+!end-bullets-60!
 
 # pillar 1.6.3
 
-!begin-bullets-59!
+!begin-bullets-61!
 
 -   !begin-bullet!
     Avoid blanket import for lifecycle package for compatibility with
     upcoming rlang (#368, @romainfrancois).
     !end-bullet!
 
-!end-bullets-59!
+!end-bullets-61!
 
 # pillar 1.6.2
 
 ## Options
 
-!begin-bullets-60!
+!begin-bullets-62!
 
 -   !begin-bullet!
     Options `pillar.print_max`, `pillar.print_min`, `pillar.width` and
@@ -901,11 +925,11 @@
     in addition to the existing `tibble.max_extra_cols` option (#263).
     !end-bullet!
 
-!end-bullets-60!
+!end-bullets-62!
 
 ## Formatting
 
-!begin-bullets-61!
+!begin-bullets-63!
 
 -   !begin-bullet!
     If a column doesn't make use of all horizontal width offered to it,
@@ -921,11 +945,11 @@
     implementation of custom `pillar_shaft()` methods (#347).
     !end-bullet!
 
-!end-bullets-61!
+!end-bullets-63!
 
 ## Features
 
-!begin-bullets-62!
+!begin-bullets-64!
 
 -   !begin-bullet!
     `num()` gains `extra_sigfig` argument to automatically show more
@@ -942,11 +966,11 @@
     argument to `max_extra_cols` for consistency (#360).
     !end-bullet!
 
-!end-bullets-62!
+!end-bullets-64!
 
 ## Bug fixes
 
-!begin-bullets-63!
+!begin-bullets-65!
 
 -   !begin-bullet!
     Avoid mangling of duplicate column names in footer (#332).
@@ -955,11 +979,11 @@
     Fix warning with zero of type `bit64::integer64()` (#319).
     !end-bullet!
 
-!end-bullets-63!
+!end-bullets-65!
 
 ## Documentation
 
-!begin-bullets-64!
+!begin-bullets-66!
 
 -   !begin-bullet!
     All package options are now documented in `?pillar_options` (#339).
@@ -973,11 +997,11 @@
     `vctrs::vec_restore()` (#322).
     !end-bullet!
 
-!end-bullets-64!
+!end-bullets-66!
 
 ## Internal
 
-!begin-bullets-65!
+!begin-bullets-67!
 
 -   !begin-bullet!
     Using `attr(exact = TRUE)` everywhere.
@@ -989,11 +1013,11 @@
     Fix internal logic around `vec_proxy()` and `vec_restore()` (#316).
     !end-bullet!
 
-!end-bullets-65!
+!end-bullets-67!
 
 # pillar 1.6.1
 
-!begin-bullets-66!
+!begin-bullets-68!
 
 -   !begin-bullet!
     Bump required versions of ellipsis and vctrs to avoid warning during
@@ -1003,13 +1027,13 @@
     `obj_sum()` no longer includes shape twice (#315).
     !end-bullet!
 
-!end-bullets-66!
+!end-bullets-68!
 
 # pillar 1.6.0
 
 ## Features
 
-!begin-bullets-67!
+!begin-bullets-69!
 
 -   !begin-bullet!
     New `num()` and `char()` offer a flexible way to customize the
@@ -1031,11 +1055,11 @@
     same rules regarding significant or decimal digits (#297).
     !end-bullet!
 
-!end-bullets-67!
+!end-bullets-69!
 
 ## Bug fixes
 
-!begin-bullets-68!
+!begin-bullets-70!
 
 -   !begin-bullet!
     Load the debugme package only if the `DEBUGME` environment variable
@@ -1050,21 +1074,21 @@
     character columns.
     !end-bullet!
 
-!end-bullets-68!
+!end-bullets-70!
 
 ## Documentation
 
-!begin-bullets-69!
+!begin-bullets-71!
 
 -   !begin-bullet!
     New `vignette("numbers")` and `vignette("digits")` (#308).
     !end-bullet!
 
-!end-bullets-69!
+!end-bullets-71!
 
 ## Internal
 
-!begin-bullets-70!
+!begin-bullets-72!
 
 -   !begin-bullet!
     Compatibility with vctrs 0.3.7 (#291).
@@ -1074,34 +1098,34 @@
     longer defaults to `pillar_na()` (#273).
     !end-bullet!
 
-!end-bullets-70!
+!end-bullets-72!
 
 # pillar 1.5.1
 
 ## Features
 
-!begin-bullets-71!
+!begin-bullets-73!
 
 -   !begin-bullet!
     New `format_glimpse()` (#177).
     !end-bullet!
 
-!end-bullets-71!
+!end-bullets-73!
 
 ## Bug fixes
 
-!begin-bullets-72!
+!begin-bullets-74!
 
 -   !begin-bullet!
     Color and formatting can now be reliably turned off by setting the
     `"cli.num_colors"` option to 1 (#269).
     !end-bullet!
 
-!end-bullets-72!
+!end-bullets-74!
 
 ## Documentation
 
-!begin-bullets-73!
+!begin-bullets-75!
 
 -   !begin-bullet!
     Add examples for new functions (#264).
@@ -1110,13 +1134,13 @@
     Fix lifecycle badges everywhere.
     !end-bullet!
 
-!end-bullets-73!
+!end-bullets-75!
 
 # pillar 1.5.0
 
 ## Breaking changes
 
-!begin-bullets-74!
+!begin-bullets-76!
 
 -   !begin-bullet!
     `obj_sum()` now always returns a string. `pillar_shaft.list()`
@@ -1133,11 +1157,11 @@
 
     !end-bullet!
 
-!end-bullets-74!
+!end-bullets-76!
 
 ## Extensibility
 
-!begin-bullets-75!
+!begin-bullets-77!
 
 -   !begin-bullet!
     New `size_sum()` generic (#239).
@@ -1162,11 +1186,11 @@
 
     !end-bullet!
 
-!end-bullets-75!
+!end-bullets-77!
 
 ## Formatting
 
-!begin-bullets-76!
+!begin-bullets-78!
 
 -   !begin-bullet!
     All printing code has been moved from tibble to pillar (#179),
@@ -1203,11 +1227,11 @@
 
     !end-bullet!
 
-!end-bullets-76!
+!end-bullets-78!
 
 ## Internal
 
-!begin-bullets-77!
+!begin-bullets-79!
 
 -   !begin-bullet!
     Now using debugme to simplify understand the complex control flow,
@@ -1232,33 +1256,33 @@
 
     !end-bullet!
 
-!end-bullets-77!
+!end-bullets-79!
 
 # pillar 1.4.7
 
-!begin-bullets-78!
+!begin-bullets-80!
 
 -   !begin-bullet!
     Adapt to changed environment on CRAN's Solaris machine.
     !end-bullet!
 
-!end-bullets-78!
+!end-bullets-80!
 
 # pillar 1.4.6
 
-!begin-bullets-79!
+!begin-bullets-81!
 
 -   !begin-bullet!
     Restore compatibility with R 3.2.
     !end-bullet!
 
-!end-bullets-79!
+!end-bullets-81!
 
 # pillar 1.4.5
 
 ## Features
 
-!begin-bullets-80!
+!begin-bullets-82!
 
 -   !begin-bullet!
     New `pillar.min_chars` option allows controlling the minimum number
@@ -1276,11 +1300,11 @@
 
     !end-bullet!
 
-!end-bullets-80!
+!end-bullets-82!
 
 ## Technical
 
-!begin-bullets-81!
+!begin-bullets-83!
 
 -   !begin-bullet!
     `pillar_shaft()`, `format_type_sum()` and `extra_cols()` issue a
@@ -1293,11 +1317,11 @@
 
     !end-bullet!
 
-!end-bullets-81!
+!end-bullets-83!
 
 ## Internal
 
-!begin-bullets-82!
+!begin-bullets-84!
 
 -   !begin-bullet!
     Use lifecycle package.
@@ -1308,11 +1332,11 @@
 
     !end-bullet!
 
-!end-bullets-82!
+!end-bullets-84!
 
 # pillar 1.4.4
 
-!begin-bullets-83!
+!begin-bullets-85!
 
 -   !begin-bullet!
     `obj_sum()` uses `vctrs::vec_size()` internally.
@@ -1328,11 +1352,11 @@
 
     !end-bullet!
 
-!end-bullets-83!
+!end-bullets-85!
 
 # pillar 1.4.3
 
-!begin-bullets-84!
+!begin-bullets-86!
 
 -   !begin-bullet!
     `new_pillar_shaft_simple()` gains `na` argument to control
@@ -1360,11 +1384,11 @@
 
     !end-bullet!
 
-!end-bullets-84!
+!end-bullets-86!
 
 # pillar 1.4.2
 
-!begin-bullets-85!
+!begin-bullets-87!
 
 -   !begin-bullet!
     List columns are shown with their perceived dimensions, which may be
@@ -1377,11 +1401,11 @@
 
     !end-bullet!
 
-!end-bullets-85!
+!end-bullets-87!
 
 # pillar 1.4.1
 
-!begin-bullets-86!
+!begin-bullets-88!
 
 -   !begin-bullet!
     More careful specification of minimum package versions for the
@@ -1399,13 +1423,13 @@
     Implement methods for vctrs objects.
     !end-bullet!
 
-!end-bullets-86!
+!end-bullets-88!
 
 # pillar 1.4.0
 
 ## Breaking changes
 
-!begin-bullets-87!
+!begin-bullets-89!
 
 -   !begin-bullet!
     `type_sum()` forwards to `vctrs::vec_ptype_abbr()` (#134). This
@@ -1419,11 +1443,11 @@
     warning once per session (#157).
     !end-bullet!
 
-!end-bullets-87!
+!end-bullets-89!
 
 ## Output
 
-!begin-bullets-88!
+!begin-bullets-90!
 
 -   !begin-bullet!
     Removed extra space for pillars with a negative value of lower
@@ -1434,11 +1458,11 @@
     containing `[,0]` and an empty shaft (#149).
     !end-bullet!
 
-!end-bullets-88!
+!end-bullets-90!
 
 ## Performance
 
-!begin-bullets-89!
+!begin-bullets-91!
 
 -   !begin-bullet!
     `squeeze()` is now faster (because the width computation in
@@ -1452,11 +1476,11 @@
     and styling is implemented manually (#133, @jimhester).
     !end-bullet!
 
-!end-bullets-89!
+!end-bullets-91!
 
 ## Internal
 
-!begin-bullets-90!
+!begin-bullets-92!
 
 -   !begin-bullet!
     All internal S3 classes have the `pillar_` prefix (#156).
@@ -1466,23 +1490,23 @@
     running on Linux in a latin1 locale.
     !end-bullet!
 
-!end-bullets-90!
+!end-bullets-92!
 
 # pillar 1.3.1
 
 ## Bug fixes
 
-!begin-bullets-91!
+!begin-bullets-93!
 
 -   !begin-bullet!
     Fix off-by-one error in distribution of empty space (#141).
     !end-bullet!
 
-!end-bullets-91!
+!end-bullets-93!
 
 ## Visible changes
 
-!begin-bullets-92!
+!begin-bullets-94!
 
 -   !begin-bullet!
     `NA` in names is no longer escaped with backticks.
@@ -1492,11 +1516,11 @@
     (tidyverse/tibble#448).
     !end-bullet!
 
-!end-bullets-92!
+!end-bullets-94!
 
 ## Internal changes
 
-!begin-bullets-93!
+!begin-bullets-95!
 
 -   !begin-bullet!
     Update base type abbrevs to rlang 0.3.0 (#140, @lionel-).
@@ -1505,13 +1529,13 @@
     Tests work again in a 256-color terminal (#129).
     !end-bullet!
 
-!end-bullets-93!
+!end-bullets-95!
 
 # pillar 1.3.0
 
 ## Visible changes
 
-!begin-bullets-94!
+!begin-bullets-96!
 
 -   !begin-bullet!
     Unknown data types are formatted using `format()`, not
@@ -1534,21 +1558,21 @@
 
     !end-bullet!
 
-!end-bullets-94!
+!end-bullets-96!
 
 ## Interface changes
 
-!begin-bullets-95!
+!begin-bullets-97!
 
 -   !begin-bullet!
     `format_type_sum()` gains `width` argument (#73).
     !end-bullet!
 
-!end-bullets-95!
+!end-bullets-97!
 
 ## Performance improvements
 
-!begin-bullets-96!
+!begin-bullets-98!
 
 -   !begin-bullet!
     Printing large multi-tier colonnades is much faster, the code that
@@ -1568,11 +1592,11 @@
 
     !end-bullet!
 
-!end-bullets-96!
+!end-bullets-98!
 
 ## Internal
 
-!begin-bullets-97!
+!begin-bullets-99!
 
 -   !begin-bullet!
     `pillar()` no longer adds backticks if `title` is non-syntactic.
@@ -1594,11 +1618,11 @@
 
     !end-bullet!
 
-!end-bullets-97!
+!end-bullets-99!
 
 # pillar 1.2.3
 
-!begin-bullets-98!
+!begin-bullets-100!
 
 -   !begin-bullet!
     Eliminate CRAN check warning about undeclared withr dependency.
@@ -1613,11 +1637,11 @@
     `pillar_shaft.character()` gains `min_width` argument.
     !end-bullet!
 
-!end-bullets-98!
+!end-bullets-100!
 
 # pillar 1.2.2
 
-!begin-bullets-99!
+!begin-bullets-101!
 
 -   !begin-bullet!
     Whole numbers are printed without a decimal dot again. Numbers that
@@ -1639,13 +1663,13 @@
     date-time values (#102).
     !end-bullet!
 
-!end-bullets-99!
+!end-bullets-101!
 
 # pillar 1.2.1
 
 ## Display
 
-!begin-bullets-100!
+!begin-bullets-102!
 
 -   !begin-bullet!
     Turned off using subtle style for digits that are considered
@@ -1677,11 +1701,11 @@
     notation.
     !end-bullet!
 
-!end-bullets-100!
+!end-bullets-102!
 
 ## Bug fixes
 
-!begin-bullets-101!
+!begin-bullets-103!
 
 -   !begin-bullet!
     Numeric values with a `"class"` attribute (e.g., `Duration` from
@@ -1701,22 +1725,22 @@
     value \>= 1 (#98).
     !end-bullet!
 
-!end-bullets-101!
+!end-bullets-103!
 
 ## New functions
 
-!begin-bullets-102!
+!begin-bullets-104!
 
 -   !begin-bullet!
     New styling helper `style_subtle_num()`, formatting depends on the
     `pillar.subtle_num` option.
     !end-bullet!
 
-!end-bullets-102!
+!end-bullets-104!
 
 # pillar 1.1.0
 
-!begin-bullets-103!
+!begin-bullets-105!
 
 -   !begin-bullet!
     `NA` values are now shown in plain red, without changing the
@@ -1725,7 +1749,7 @@
 -   !begin-bullet!
     New options to control the output, with defaults that match the
     current behavior unless stated otherwise:
-    !begin-bullets-104!
+    !begin-bullets-106!
     -   !begin-bullet!
         `pillar.sigfig` to control the number of significant digits, for
         highlighting and truncation (#72),
@@ -1748,7 +1772,7 @@
         characters, #75).
         !end-bullet!
 
-    !end-bullets-104!
+    !end-bullets-106!
     !end-bullet!
 -   !begin-bullet!
     Shortened abbreviations for types: complex: cplx -\> cpl, function:
@@ -1762,17 +1786,17 @@
     Very wide tibbles now print faster (#85).
     !end-bullet!
 
-!end-bullets-103!
+!end-bullets-105!
 
 # pillar 1.0.1
 
-!begin-bullets-105!
+!begin-bullets-107!
 
 -   !begin-bullet!
     Work around failing CRAN tests on Windows.
     !end-bullet!
 
-!end-bullets-105!
+!end-bullets-107!
 
 # pillar 1.0.0
 
