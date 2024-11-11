@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `geom_errorbarh()` is deprecated in favour of
+    `geom_errorbar(orientation = "y")` (@teunbrand, #5961).
+
+    !end-bullet!
+-   !begin-bullet!
     `geom_contour()` should be able to recognise a rotated grid of
     points (@teunbrand, #4320)
 

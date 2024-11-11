@@ -18197,3 +18197,4 @@ tibble,3299f9eada2bcf1735af679f2efc7557,Trigger run (#1606).,NA,NA,NA,NA
 tibble,3299f9eada2bcf1735af679f2efc7557,• ci: Trigger run,NA,NA,NA,NA
 tibble,3299f9eada2bcf1735af679f2efc7557,• ci: Latest changes,NA,NA,NA,NA
 ggplot2,ebc12ffa6533f3f9b6d851f7c19f251a,"`geom_contour()` should be able to recognise a rotated grid of points (@​teunbrand, #4320)",NA,NA,NA,NA
+ggplot2,65adfac66c6949a92e15681255f1b231,"`geom_errorbarh()` is deprecated in favour of `geom_errorbar(orientation = ""y"")` (@​teunbrand, #5961).",NA,NA,NA,NA
