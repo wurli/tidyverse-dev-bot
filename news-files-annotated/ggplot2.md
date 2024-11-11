@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    When discrete breaks have names, they'll be used as labels by
+    default (@teunbrand, #6147).
+
+    !end-bullet!
+-   !begin-bullet!
     The helper function `is.waiver()` is now exported to help extensions
     to work with `waiver()` objects (@arcresu, #6173).
 
@@ -525,6 +530,11 @@
     !end-bullet!
 -   !begin-bullet!
     Added `keep.zeroes` argument to `stat_bin()` (@teunbrand, #3449)
+
+    !end-bullet!
+-   !begin-bullet!
+    `coord_sf()` no longer errors when dealing with empty graticules
+    (@teunbrand, #6052)
 
     !end-bullet!
 

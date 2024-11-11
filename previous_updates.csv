@@ -18200,3 +18200,5 @@ ggplot2,ebc12ffa6533f3f9b6d851f7c19f251a,"`geom_contour()` should be able to rec
 ggplot2,65adfac66c6949a92e15681255f1b231,"`geom_errorbarh()` is deprecated in favour of `geom_errorbar(orientation = ""y"")` (@​teunbrand, #5961).",NA,NA,NA,NA
 ggplot2,10bf627007910d72c2d554726bbaf689,"The helper function `is.waiver()` is now exported to help extensions to work with `waiver()` objects (@​arcresu, #6173).",NA,NA,NA,NA
 ggplot2,7a662092f954dd168959f5f92d04573f,"Date(time) scales now throw appropriate errors when `date_breaks`, `date_minor_breaks` or `date_labels` are not strings (@​RodDalBen, #5880)",NA,NA,NA,NA
+ggplot2,a8e774d7a0587ac37299bc8ab826ed76,"When discrete breaks have names, they'll be used as labels by default (@​teunbrand, #6147).",NA,NA,NA,NA
+ggplot2,79f0a2c413b818c1fa004fd3991cb2f2,"`coord_sf()` no longer errors when dealing with empty graticules (@​teunbrand, #6052)",NA,NA,NA,NA
