@@ -18198,3 +18198,5 @@ tibble,3299f9eada2bcf1735af679f2efc7557,• ci: Trigger run,NA,NA,NA,NA
 tibble,3299f9eada2bcf1735af679f2efc7557,• ci: Latest changes,NA,NA,NA,NA
 ggplot2,ebc12ffa6533f3f9b6d851f7c19f251a,"`geom_contour()` should be able to recognise a rotated grid of points (@​teunbrand, #4320)",NA,NA,NA,NA
 ggplot2,65adfac66c6949a92e15681255f1b231,"`geom_errorbarh()` is deprecated in favour of `geom_errorbar(orientation = ""y"")` (@​teunbrand, #5961).",NA,NA,NA,NA
+ggplot2,10bf627007910d72c2d554726bbaf689,"The helper function `is.waiver()` is now exported to help extensions to work with `waiver()` objects (@​arcresu, #6173).",NA,NA,NA,NA
+ggplot2,7a662092f954dd168959f5f92d04573f,"Date(time) scales now throw appropriate errors when `date_breaks`, `date_minor_breaks` or `date_labels` are not strings (@​RodDalBen, #5880)",NA,NA,NA,NA

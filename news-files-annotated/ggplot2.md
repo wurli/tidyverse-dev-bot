@@ -3,6 +3,17 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    The helper function `is.waiver()` is now exported to help extensions
+    to work with `waiver()` objects (@arcresu, #6173).
+
+    !end-bullet!
+-   !begin-bullet!
+    Date(time) scales now throw appropriate errors when `date_breaks`,
+    `date_minor_breaks` or `date_labels` are not strings (@RodDalBen,
+    #5880)
+
+    !end-bullet!
+-   !begin-bullet!
     `geom_errorbarh()` is deprecated in favour of
     `geom_errorbar(orientation = "y")` (@teunbrand, #5961).
 
