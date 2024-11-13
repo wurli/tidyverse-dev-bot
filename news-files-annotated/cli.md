@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    The format of the URI part of "run", "help" and "vignette"
+    hyperlinks can now be configured via options and env vars (@jennybc,
+    #739).
+
+    !end-bullet!
+-   !begin-bullet!
     `cli_progress_bar()` now accepts `total` = Inf or -Inf which mimics
     the behavior of when `total` is NA.
 

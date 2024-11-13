@@ -18204,3 +18204,4 @@ ggplot2,a8e774d7a0587ac37299bc8ab826ed76,"When discrete breaks have names, they'
 ggplot2,79f0a2c413b818c1fa004fd3991cb2f2,"`coord_sf()` no longer errors when dealing with empty graticules (@​teunbrand, #6052)",NA,NA,NA,NA
 httr2,7d5426775ac63afc4a53b97fd5b2eb9e,`req_perform_promise()` upgraded to use event-driven async based on waiting efficiently on curl socket activity (#579).,NA,NA,NA,NA
 ggplot2,b63b638537b9c311438f0d7f7f9e83b0,"Custom and raster annotation now respond to scale transformations, and can use AsIs variables for relative placement (@​teunbrand based on @​yutannihilation's prior work, #3120)",NA,NA,NA,NA
+cli,8ccf28d48cf34be88173243a0869a84d,"The format of the URI part of ""run"", ""help"" and ""vignette"" hyperlinks can now be configured via options and env vars (@​jennybc, #739).",NA,NA,NA,NA
