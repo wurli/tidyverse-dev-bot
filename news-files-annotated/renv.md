@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `renv` now infers a dependency on `rmarkdown` and `knitr` for R
+    scripts which include YAML front-matter. (#2023)
+
+    !end-bullet!
+-   !begin-bullet!
     The performance of `renv`'s built-in JSON reader has been improved.
     (#2021)
 
