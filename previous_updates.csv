@@ -18206,3 +18206,4 @@ httr2,7d5426775ac63afc4a53b97fd5b2eb9e,`req_perform_promise()` upgraded to use e
 ggplot2,b63b638537b9c311438f0d7f7f9e83b0,"Custom and raster annotation now respond to scale transformations, and can use AsIs variables for relative placement (@​teunbrand based on @​yutannihilation's prior work, #3120)",NA,NA,NA,NA
 cli,8ccf28d48cf34be88173243a0869a84d,"The format of the URI part of ""run"", ""help"" and ""vignette"" hyperlinks can now be configured via options and env vars (@​jennybc, #739).",NA,NA,NA,NA
 renv,df74f963376a40d335ca080c165d0ead,`renv` now infers a dependency on `rmarkdown` and `knitr` for R scripts which include YAML front-matter. (#2023),NA,NA,NA,NA
+renv,376af92e71237b1265fd0a0505b5e82b,"`renv::run()` gains the `args` parameter, which can be used to pass command-line arguments to a script. (#2015)",NA,NA,NA,NA
