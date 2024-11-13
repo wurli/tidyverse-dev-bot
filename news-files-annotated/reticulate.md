@@ -25,7 +25,7 @@
     Added support for Python 3.13. Note that Python 3.13 removed support
     for `classmethod` descriptors, which may affect the S3 class of some
     Python objects that use metaclass properties to resolve a class's
-    `__module__` or `__name__` attribute. (#1686)
+    `__module__` or `__name__` attribute. (#1686, #1698)
 
     !end-bullet!
 -   !begin-bullet!
