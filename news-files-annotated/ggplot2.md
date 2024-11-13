@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Custom and raster annotation now respond to scale transformations,
+    and can use AsIs variables for relative placement (@teunbrand based
+    on @yutannihilation's prior work, #3120)
+
+    !end-bullet!
+-   !begin-bullet!
     When discrete breaks have names, they'll be used as labels by
     default (@teunbrand, #6147).
 

@@ -18203,3 +18203,4 @@ ggplot2,7a662092f954dd168959f5f92d04573f,"Date(time) scales now throw appropriat
 ggplot2,a8e774d7a0587ac37299bc8ab826ed76,"When discrete breaks have names, they'll be used as labels by default (@​teunbrand, #6147).",NA,NA,NA,NA
 ggplot2,79f0a2c413b818c1fa004fd3991cb2f2,"`coord_sf()` no longer errors when dealing with empty graticules (@​teunbrand, #6052)",NA,NA,NA,NA
 httr2,7d5426775ac63afc4a53b97fd5b2eb9e,`req_perform_promise()` upgraded to use event-driven async based on waiting efficiently on curl socket activity (#579).,NA,NA,NA,NA
+ggplot2,b63b638537b9c311438f0d7f7f9e83b0,"Custom and raster annotation now respond to scale transformations, and can use AsIs variables for relative placement (@​teunbrand based on @​yutannihilation's prior work, #3120)",NA,NA,NA,NA
