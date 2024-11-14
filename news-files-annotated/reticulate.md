@@ -38,34 +38,40 @@
 
     !end-bullet!
 -   !begin-bullet!
-    Fixed error where `py_discover_config()` attempted to detect Windows
-    App Store Python installations, which are now excluded from
+    Resolved an issue where `py_discover_config()` attempted to detect
+    Windows App Store Python installations. These are now excluded from
     discovery by both `py_discover_config()` and `virtualenv_starter()`
     (#1656, #1673).
 
     !end-bullet!
 -   !begin-bullet!
-    Fixed error when converting an empty NumPy char array to R (#1662).
+    Fixed an error when converting an empty NumPy char array to R
+    (#1662).
 
     !end-bullet!
 -   !begin-bullet!
-    Fixed error when using reticulate with radian (#1668, #1670).
+    Fixed an error when using reticulate with radian (#1668, #1670).
 
     !end-bullet!
 -   !begin-bullet!
-    Fixed segfault encountered when running Python finalizer (#1663,
-    #1664)
+    Fixed a segfault encountered when running the Python session
+    finalizer (#1663, #1664).
 
     !end-bullet!
 -   !begin-bullet!
-    Fixed segfault encountered in RStudio when rapidly switching between
-    R and Python chunks in a Quarto document (#1665).
+    Resolved a segfault in RStudio when rapidly switching between R and
+    Python chunks in a Quarto document (#1665).
 
     !end-bullet!
 -   !begin-bullet!
     Improved behavior when the conda binary used to create an
-    environment could not be resolved (contributed by @tl-hbk, #1654,
-    #1659)
+    environment cannot be resolved (contributed by @tl-hbk, #1654,
+    #1659).
+
+    !end-bullet!
+-   !begin-bullet!
+    Added Positron support for the Variables Pane and `repl_python()`
+    (#1692, #1641, #1648, #1658, #1681, #1687).
 
     !end-bullet!
 

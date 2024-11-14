@@ -18207,3 +18207,6 @@ ggplot2,b63b638537b9c311438f0d7f7f9e83b0,"Custom and raster annotation now respo
 cli,8ccf28d48cf34be88173243a0869a84d,"The format of the URI part of ""run"", ""help"" and ""vignette"" hyperlinks can now be configured via options and env vars (@​jennybc, #739).",NA,NA,NA,NA
 renv,df74f963376a40d335ca080c165d0ead,`renv` now infers a dependency on `rmarkdown` and `knitr` for R scripts which include YAML front-matter. (#2023),NA,NA,NA,NA
 renv,376af92e71237b1265fd0a0505b5e82b,"`renv::run()` gains the `args` parameter, which can be used to pass command-line arguments to a script. (#2015)",NA,NA,NA,NA
+reticulate,e97fc505dedff5451ba0f3ce5d00e34f,"Resolved an issue where `py_discover_config()` attempted to detect Windows App Store Python installations. These are now excluded from discovery by both `py_discover_config()` and `virtualenv_starter()` (#1656, #1673).",NA,NA,NA,NA
+reticulate,c4321663a7f20d759c300ca7ac774bc1,Resolved a segfault in RStudio when rapidly switching between R and Python chunks in a Quarto document (#1665).,NA,NA,NA,NA
+reticulate,891025352c600756c86de59e9984b52e,"Added Positron support for the Variables Pane and `repl_python()` (#1692, #1641, #1648, #1658, #1681, #1687).",NA,NA,NA,NA
