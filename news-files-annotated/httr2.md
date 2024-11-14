@@ -6,6 +6,11 @@
     `req_perform_promise()` upgraded to use event-driven async based on
     waiting efficiently on curl socket activity (#579).
     !end-bullet!
+-   !begin-bullet!
+    New `req_oauth_token_exchange()` and `oauth_flow_token_exchange()`
+    functions implement the OAuth token exchange protocol from RFC 8693
+    (@atheriel, #460).
+    !end-bullet!
 
 !end-bullets-1!
 

@@ -18210,3 +18210,5 @@ renv,376af92e71237b1265fd0a0505b5e82b,"`renv::run()` gains the `args` parameter,
 reticulate,e97fc505dedff5451ba0f3ce5d00e34f,"Resolved an issue where `py_discover_config()` attempted to detect Windows App Store Python installations. These are now excluded from discovery by both `py_discover_config()` and `virtualenv_starter()` (#1656, #1673).",NA,NA,NA,NA
 reticulate,c4321663a7f20d759c300ca7ac774bc1,Resolved a segfault in RStudio when rapidly switching between R and Python chunks in a Quarto document (#1665).,NA,NA,NA,NA
 reticulate,891025352c600756c86de59e9984b52e,"Added Positron support for the Variables Pane and `repl_python()` (#1692, #1641, #1648, #1658, #1681, #1687).",NA,NA,NA,NA
+httr2,3408367fb816210c1e82494d8cf93b52,"New `req_oauth_token_exchange()` and `oauth_flow_token_exchange()` functions implement the OAuth token exchange protocol from RFC 8693 (@​atheriel, #460).",NA,NA,NA,NA
+plumber,83aab442f6eb8987f35805b8c3126009,Added support for graphic devices provided by ragg and svglite (@​thomasp85 #964),NA,NA,NA,NA
