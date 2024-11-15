@@ -1,5 +1,7 @@
 # reticulate (development version)
 
+# reticulate 1.40.0
+
 - The S3 classes for some (rarely encountered) Python objects have changed.
   Only Python objects with non-standard `__module__` values are affected.
   If a Python object’s parent class’s `__module__` attribute does not resolve to a string,
