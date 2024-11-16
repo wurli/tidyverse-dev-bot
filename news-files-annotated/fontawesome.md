@@ -1,28 +1,54 @@
 # fontawesome (development version)
 
-# fontawesome 0.5.2
+# fontawesome 0.5.3
 
 !begin-bullets-1!
+
+-   !begin-bullet!
+    Updated icon set to that of Font Awesome 6.5.2. (#119)
+
+    !end-bullet!
+-   !begin-bullet!
+    Added page on pkgdown site that contains a table showing all of the
+    icons available in the package. (#113)
+
+    !end-bullet!
+-   !begin-bullet!
+    The `fa()` function now allows percentage values to be used as
+    `height` and `width` args (#117). (#125)
+
+    !end-bullet!
+-   !begin-bullet!
+    When using `fa_i()`, the `class` value is appended when a
+    fully-qualified `name` is used (#122. (#123, thanks @averissimo!)
+
+    !end-bullet!
+
+!end-bullets-1!
+
+# fontawesome 0.5.2
+
+!begin-bullets-2!
 
 -   !begin-bullet!
     Updated icon set to that of Font Awesome 6.4.2. (#111)
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # fontawesome 0.5.1
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     Updated icon set to that of Font Awesome 6.4.0. (#109)
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 # fontawesome 0.5.0
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     Updated icon set to that of Font Awesome 6.2.1. (#102)
@@ -38,11 +64,11 @@
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 # fontawesome 0.4.0
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     Updated icon set to that of Font Awesome 6.2.0. (#96)
@@ -61,11 +87,11 @@
 
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 # fontawesome 0.3.0
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     Closed #80: Updated icon set to that of Font Awesome 6.1. (#85)
@@ -83,11 +109,11 @@
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # fontawesome 0.2.2
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     .ttf font files (and associated CSS) have been added back to the
@@ -96,11 +122,11 @@
     Windows. (#61)
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 # fontawesome 0.2.1
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     Closed #53: The `margin_right` argument of `fa()` is now functional,
@@ -114,11 +140,11 @@
 
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 # fontawesome 0.2.0
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     Closed #42: Support for additional R Markdown output formats with
@@ -152,15 +178,15 @@
 
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 # fontawesome 0.1.0
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     Added functions `fa()`, `fa_i()`, and `fa_png()` for preparing Font
     Awesome icons in three ways.
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
