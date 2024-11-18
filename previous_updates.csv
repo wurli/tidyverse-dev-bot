@@ -18216,3 +18216,7 @@ fontawesome,7dfb176725546c25d48edf83e65a7d6a,Updated icon set to that of Font Aw
 fontawesome,80e6b6cd2d2460e98d53e7e0bcd9694f,Added page on pkgdown site that contains a table showing all of the icons available in the package. (#113),NA,NA,NA,NA
 fontawesome,ff469df88f64a87b6e784db35f808a25,The `fa()` function now allows percentage values to be used as `height` and `width` args (#117). (#125),NA,NA,NA,NA
 fontawesome,5872758bb492cc7ad063cbcc02fccd01,"When using `fa_i()`, the `class` value is appended when a fully-qualified `name` is used (#122. (#123, thanks @​averissimo!)",NA,NA,NA,NA
+blob,faf76a91112d306fb4ef82333218dade,Use stable pak (#34).,NA,NA,NA,NA
+hms,7c52112238c2f190573a6d99fa90211b,Use stable pak (#129).,NA,NA,NA,NA
+pillar,46937ece14c57fad4fce50491381e923,Use stable pak (#677).,NA,NA,NA,NA
+tibble,cb946574498258d4faba884aacae0b65,Use stable pak (#1607).,NA,NA,NA,NA
