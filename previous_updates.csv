@@ -18221,3 +18221,4 @@ hms,7c52112238c2f190573a6d99fa90211b,Use stable pak (#129).,NA,NA,NA,NA
 pillar,46937ece14c57fad4fce50491381e923,Use stable pak (#677).,NA,NA,NA,NA
 tibble,cb946574498258d4faba884aacae0b65,Use stable pak (#1607).,NA,NA,NA,NA
 rsconnect,6f96cf14580eb1e1984fa56d8c8fb5e7,"Avoid ""legacy"" time zone names in tests, as they are not available by default in all environments. Addresses CRAN test failures. (#1115)",NA,NA,NA,NA
+renv,48fe8ce1d7d98901b6be57bb07e6619b,Fixed an issue where `renv` library paths were not properly reset following a suspend / resume in RStudio Server. (#2036),NA,NA,NA,NA

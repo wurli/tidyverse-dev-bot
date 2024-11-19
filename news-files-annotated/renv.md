@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed an issue where `renv` library paths were not properly reset
+    following a suspend / resume in RStudio Server. (#2036)
+
+    !end-bullet!
+-   !begin-bullet!
     `renv::run()` gains the `args` parameter, which can be used to pass
     command-line arguments to a script. (#2015)
 
