@@ -1,5 +1,7 @@
 # rsconnect (development version)
 
+# rsconnect 1.3.3
+
 !begin-bullets-1!
 
 -   !begin-bullet!
