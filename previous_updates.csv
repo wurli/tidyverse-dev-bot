@@ -18223,3 +18223,4 @@ tibble,cb946574498258d4faba884aacae0b65,Use stable pak (#1607).,NA,NA,NA,NA
 rsconnect,6f96cf14580eb1e1984fa56d8c8fb5e7,"Avoid ""legacy"" time zone names in tests, as they are not available by default in all environments. Addresses CRAN test failures. (#1115)",NA,NA,NA,NA
 renv,48fe8ce1d7d98901b6be57bb07e6619b,Fixed an issue where `renv` library paths were not properly reset following a suspend / resume in RStudio Server. (#2036),NA,NA,NA,NA
 renv,9d24f7fb013740c68020a025dfe2d0d2,`renv` now supports updating of currently-installed packages via `renv::install()` when configured to use `pak`. (#2037),NA,NA,NA,NA
+renv,7d86b7a01b93073aa4e77ccb3f278b55,Fixed an issue where `renv` erroneously reported that installed packages were cached when the cache was not writable. (#2041).,NA,NA,NA,NA
