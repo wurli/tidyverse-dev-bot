@@ -18227,3 +18227,8 @@ renv,7d86b7a01b93073aa4e77ccb3f278b55,Fixed an issue where `renv` erroneously re
 blob,2f3c9ed8481cd1e618bff37a264d1bdd,Correctly detect branch protection (#35).,NA,NA,NA,NA
 tibble,3d3280734443408702301ed95cafc187,Correctly detect branch protection (#1608).,NA,NA,NA,NA
 gt,83b0d7e3c13665e60dc979b16eb068d0,"Significantly faster rendering of certain large tables, by optimizing the internal `rownum_translation()` utility. (@​magnusdv, #1924)",NA,NA,NA,NA
+pillar,3b2d6f0c47605935d4498705ba71e533,New `tbl_nrow()` to support lazy data frames (#679).,NA,NA,NA,NA
+pillar,b81b184a465b7e9525eae468b54fd90c,Fix vignette building if tibble is missing (#681).,NA,NA,NA,NA
+pillar,7791956e87857d9c719c755e1404381d,Refactorings to improve duckplyr support (#682).,NA,NA,NA,NA
+pillar,8fda3aad38b818d6608f87d3dd644849,Use styler from PR.,NA,NA,NA,NA
+pillar,5f490344e4568edf02796d86ea1307a5,Correctly detect branch protection (#678).,NA,NA,NA,NA
