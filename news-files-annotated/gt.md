@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Significantly faster rendering of certain large tables, by
+    optimizing the internal `rownum_translation()` utility. (@magnusdv,
+    #1924)
+
+    !end-bullet!
+-   !begin-bullet!
     Interactive tables can support selection through the
     `ihtml.selection_mode` option. (@jonthegeek, #1909)
 
