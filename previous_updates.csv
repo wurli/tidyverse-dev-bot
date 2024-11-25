@@ -18242,3 +18242,6 @@ usethis,4d2fb3673c0b0492b143b706b0d91316,"`use_vignette()` and `use_article()` n
 usethis,4568808b40ec6804ca80f2d636736300,"`use_data()` defaults to serialization version 3 (@​laurabrianna, #2044).",NA,NA,NA,NA
 usethis,4cd925ea697fe3a75a16c5b826c8f8d0,"`use_package()` can lower a minimum version requirement (@​jplecavalier, #1957).",NA,NA,NA,NA
 usethis,b311f466488dacaed28ff489e59a9a9f,"`use_release_issue()` only suggests doing reverse dependency checks if there are, in fact, reverse dependencies (#1817, @​seankross).",NA,NA,NA,NA
+pkgdown,f19f70589a9afabd15452ecaa1fb822c,"The language of the site is set from the first `Language:` in the `DESCRIPTION` if it is available and no other language is specified (@​jonthegeek, #2808).",NA,NA,NA,NA
+bslib,a4dc734c44e1ccf8e00387b15f6bdc3f,Optimized for better performance the internal functions that compile Sass to call the `color-contrast()` algorithm. (#1140),NA,NA,NA,NA
+DT,5e635a0a143a63f8a737a7cbae302d37,"Added `lazyRender` parameter to `DT::datatable()`, which gives the option for the table to be rendered immediately rather than waiting for it to become visible (thanks, @​Mosk915, #1156).",NA,NA,NA,NA

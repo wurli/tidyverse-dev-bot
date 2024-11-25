@@ -14,6 +14,11 @@
     #1112)
 
     !end-bullet!
+-   !begin-bullet!
+    Optimized for better performance the internal functions that compile
+    Sass to call the `color-contrast()` algorithm. (#1140)
+
+    !end-bullet!
 
 !end-bullets-1!
 
