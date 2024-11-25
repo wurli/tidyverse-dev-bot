@@ -1,40 +1,57 @@
 ```{=html}
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 ```
-# blob 1.2.4.9009 (2024-11-22)
+# blob 1.2.4.9010 (2024-11-25)
 
 ## Continuous integration
 
 !begin-bullets-1!
 
 -   !begin-bullet!
-    Correctly detect branch protection (#35).
+    Need to install R on Ubuntu 24.04 (#38).
+
+    !end-bullet!
+-   !begin-bullet!
+    Use Ubuntu 24.04 and styler PR (#36).
+
     !end-bullet!
 
 !end-bullets-1!
 
-# blob 1.2.4.9008 (2024-11-18)
+# blob 1.2.4.9009 (2024-11-22)
 
 ## Continuous integration
 
 !begin-bullets-2!
 
 -   !begin-bullet!
-    Use stable pak (#34).
+    Correctly detect branch protection (#35).
     !end-bullet!
 
 !end-bullets-2!
 
-# blob 1.2.4.9007 (2024-11-11)
+# blob 1.2.4.9008 (2024-11-18)
 
 ## Continuous integration
 
 !begin-bullets-3!
 
 -   !begin-bullet!
+    Use stable pak (#34).
+    !end-bullet!
+
+!end-bullets-3!
+
+# blob 1.2.4.9007 (2024-11-11)
+
+## Continuous integration
+
+!begin-bullets-4!
+
+-   !begin-bullet!
     Trigger run (#33).
 
-    !begin-bullets-4!
+    !begin-bullets-5!
     -   !begin-bullet!
         ci: Trigger run
 
@@ -44,16 +61,16 @@
 
         !end-bullet!
 
-    !end-bullets-4!
+    !end-bullets-5!
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 # blob 1.2.4.9006 (2024-10-28)
 
 ## Continuous integration
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     Trigger run (#32).
@@ -62,7 +79,7 @@
 -   !begin-bullet!
     Use pkgdown branch (#31).
 
-    !begin-bullets-6!
+    !begin-bullets-7!
     -   !begin-bullet!
         ci: Use pkgdown branch
 
@@ -72,21 +89,21 @@
 
         !end-bullet!
 
-    !end-bullets-6!
+    !end-bullets-7!
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # blob 1.2.4.9005 (2024-09-15)
 
 ## Continuous integration
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     Install via R CMD INSTALL ., not pak (#30).
 
-    !begin-bullets-8!
+    !begin-bullets-9!
     -   !begin-bullet!
         ci: Install via R CMD INSTALL ., not pak
 
@@ -96,16 +113,16 @@
 
         !end-bullet!
 
-    !end-bullets-8!
+    !end-bullets-9!
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 # blob 1.2.4.9004 (2024-08-31)
 
 ## Chore
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     Auto-update from GitHub Actions.
@@ -132,11 +149,11 @@
 
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 ## Continuous integration
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     Install local package for pkgdown builds.
@@ -187,86 +204,86 @@
 
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 # blob 1.2.4.9003 (2023-10-09)
 
-!begin-bullets-11!
+!begin-bullets-12!
 
 -   !begin-bullet!
     Internal changes only.
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-12!
 
 # blob 1.2.4.9002 (2023-03-24)
 
-!begin-bullets-12!
+!begin-bullets-13!
 
 -   !begin-bullet!
     Merged cran-1.2.4 into main.
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
 
 # blob 1.2.4.9001 (2023-03-23)
 
-!begin-bullets-13!
+!begin-bullets-14!
 
 -   !begin-bullet!
     Internal changes only.
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-14!
 
 # blob 1.2.4.9000 (2023-03-17)
 
 ## Bug fixes
 
-!begin-bullets-14!
+!begin-bullets-15!
 
 -   !begin-bullet!
     Fix argument consistency between S3 generics and methods.
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-15!
 
 ## Chore
 
-!begin-bullets-15!
+!begin-bullets-16!
 
 -   !begin-bullet!
     Change maintainer e-mail.
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-16!
 
 # blob 1.2.4 (2023-03-17)
 
 ## Bug fixes
 
-!begin-bullets-16!
+!begin-bullets-17!
 
 -   !begin-bullet!
     Fix argument consistency between S3 generics and methods.
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-17!
 
 # blob 1.2.3 (2022-04-10)
 
-!begin-bullets-17!
+!begin-bullets-18!
 
 -   !begin-bullet!
     `as_blob(NA_character_)` returns a missing `blob` instead of
     `as_blob("NA")` (#26, @michaelchirico).
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-18!
 
 # blob 1.2.2 (2021-07-23)
 
-!begin-bullets-18!
+!begin-bullets-19!
 
 -   !begin-bullet!
     Moved to "stable" lifecycle stage.
@@ -275,11 +292,11 @@
     Remove `is_vector_s3()` (#19).
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-19!
 
 # blob 1.2.1
 
-!begin-bullets-19!
+!begin-bullets-20!
 
 -   !begin-bullet!
     Inline prettyunits.
@@ -289,13 +306,13 @@
     compatibility with vctrs 0.2.1.
     !end-bullet!
 
-!end-bullets-19!
+!end-bullets-20!
 
 # blob 1.2.0
 
 ## Breaking changes
 
-!begin-bullets-20!
+!begin-bullets-21!
 
 -   !begin-bullet!
     The `blob` class is now based on `list_of(raw())` from the vctrs
@@ -318,11 +335,11 @@
 
     !end-bullet!
 
-!end-bullets-20!
+!end-bullets-21!
 
 # blob 1.1.1 (2018-03-24)
 
-!begin-bullets-21!
+!begin-bullets-22!
 
 -   !begin-bullet!
     Now suggesting *pillar* instead of importing *tibble*, and using
@@ -339,11 +356,11 @@
 
     !end-bullet!
 
-!end-bullets-21!
+!end-bullets-22!
 
 # blob 1.1.0 (2017-06-17)
 
-!begin-bullets-22!
+!begin-bullets-23!
 
 -   !begin-bullet!
     New maintainer: Kirill Müller.
@@ -358,14 +375,14 @@
 
     !end-bullet!
 
-!end-bullets-22!
+!end-bullets-23!
 
 # blob 1.0.0
 
-!begin-bullets-23!
+!begin-bullets-24!
 
 -   !begin-bullet!
     Initial release.
     !end-bullet!
 
-!end-bullets-23!
+!end-bullets-24!

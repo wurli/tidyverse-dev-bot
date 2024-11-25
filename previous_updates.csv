@@ -18232,3 +18232,9 @@ pillar,b81b184a465b7e9525eae468b54fd90c,Fix vignette building if tibble is missi
 pillar,7791956e87857d9c719c755e1404381d,Refactorings to improve duckplyr support (#682).,NA,NA,NA,NA
 pillar,8fda3aad38b818d6608f87d3dd644849,Use styler from PR.,NA,NA,NA,NA
 pillar,5f490344e4568edf02796d86ea1307a5,Correctly detect branch protection (#678).,NA,NA,NA,NA
+blob,f93f571e199d1efdddf168edcf727dba,Need to install R on Ubuntu 24.04 (#38).,NA,NA,NA,NA
+blob,5fa255fc57ffc61141957b0e53a7d64a,Use Ubuntu 24.04 and styler PR (#36).,NA,NA,NA,NA
+pillar,a31da533fe7eee0f86496270afec45f9,Need to install R on Ubuntu 24.04 (#689).,NA,NA,NA,NA
+pillar,f009a16ae34d05fa5d6bea5bd84ed1aa,Use Ubuntu 24.04 and styler PR (#687).,NA,NA,NA,NA
+tibble,f628bf0985dd71169daebbae01c95d42,Need to install R on Ubuntu 24.04 (#1612).,NA,NA,NA,NA
+tibble,88392639d097b672ce7e81b4607eb848,Use Ubuntu 24.04 and styler PR (#1610).,NA,NA,NA,NA
