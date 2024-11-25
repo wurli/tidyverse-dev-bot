@@ -18239,3 +18239,6 @@ pillar,f009a16ae34d05fa5d6bea5bd84ed1aa,Use Ubuntu 24.04 and styler PR (#687).,N
 tibble,f628bf0985dd71169daebbae01c95d42,Need to install R on Ubuntu 24.04 (#1612).,NA,NA,NA,NA
 tibble,88392639d097b672ce7e81b4607eb848,Use Ubuntu 24.04 and styler PR (#1610).,NA,NA,NA,NA
 usethis,4d2fb3673c0b0492b143b706b0d91316,"`use_vignette()` and `use_article()` now support Quarto. The `name` of the new vignette or article can optionally include a file extension to signal whether `.Rmd` or `.qmd` is desired, with `.Rmd` remaining the default for now. Thanks to @​olivroy for getting the ball rolling (#1997).",NA,NA,NA,NA
+usethis,4568808b40ec6804ca80f2d636736300,"`use_data()` defaults to serialization version 3 (@​laurabrianna, #2044).",NA,NA,NA,NA
+usethis,4cd925ea697fe3a75a16c5b826c8f8d0,"`use_package()` can lower a minimum version requirement (@​jplecavalier, #1957).",NA,NA,NA,NA
+usethis,b311f466488dacaed28ff489e59a9a9f,"`use_release_issue()` only suggests doing reverse dependency checks if there are, in fact, reverse dependencies (#1817, @​seankross).",NA,NA,NA,NA
