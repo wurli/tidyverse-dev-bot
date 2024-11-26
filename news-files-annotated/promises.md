@@ -1,16 +1,27 @@
-# promises 1.3.0
+# promises 1.3.1
 
 !begin-bullets-1!
+
+-   !begin-bullet!
+    Fixed bug where promise domains were forgotten when handlers were
+    registered from within other handlers. (#110)
+    !end-bullet!
+
+!end-bullets-1!
+
+# promises 1.3.0
+
+!begin-bullets-2!
 
 -   !begin-bullet!
     `is.promising` is now an S3 method. (#104)
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # promises 1.2.1
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     `future_promise()` received a speed improvement when submitting many
@@ -35,11 +46,11 @@
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 # promises 1.2.0.1
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     Added `future_promise()` which returns a `promise` that executes the
@@ -60,22 +71,22 @@
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 # promises 1.1.1
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     Fix handling of FutureErrors during `future::resolved()` and
     `future::value()` by discarding the corrupt future. (#37)
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 # promises 1.1.0
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     Fixed #49: `promise_all()` previously did not handle `NULL` values
@@ -95,14 +106,14 @@
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # promises 1.0.1
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     Initial CRAN release
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!

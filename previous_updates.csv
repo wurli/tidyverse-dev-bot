@@ -18249,3 +18249,4 @@ blob,213c6be938a781167d09bd977b69b6f9,Use styler from main branch (#39).,NA,NA,N
 pillar,6adf5d6086a34b5d496c3447d643c5a1,Use styler from main branch (#691).,NA,NA,NA,NA
 tibble,518f3995661132c3a56b64aec3b48bda,Use styler from main branch (#1613).,NA,NA,NA,NA
 ggplot2,af3ff13dbd12c7c7d2b7795c5b0f80a0,"The following methods have been deprecated: `fortify.lm()`, `fortify.glht()`, `fortify.confint.glht()`, `fortify.summary.glht()` and `fortify.cld()`. It is recommend to use `broom::augment()` and `broom::tidy()` instead (@​teunbrand, #3816).",NA,NA,NA,NA
+promises,04152f95da3a94d8cb8c4ec659a5df78,Fixed bug where promise domains were forgotten when handlers were registered from within other handlers. (#110),NA,NA,NA,NA
