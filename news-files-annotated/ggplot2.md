@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    In non-orthogonal coordinate systems (`coord_sf()`, `coord_polar()`
+    and `coord_radial()`), using 'AsIs' variables escape transformation
+    when both `x` and `y` is an 'AsIs' variable (@teunbrand, #6205).
+
+    !end-bullet!
+-   !begin-bullet!
     The following methods have been deprecated: `fortify.lm()`,
     `fortify.glht()`, `fortify.confint.glht()`, `fortify.summary.glht()`
     and `fortify.cld()`. It is recommend to use `broom::augment()` and

@@ -18254,3 +18254,4 @@ pkgdown,4632db68ee167a20684f8cbb26f7bf3f,Links to favicons in page headers were 
 blob,858209e51183c2770b27886e11a89fc2,Explicit permissions (#40).,NA,NA,NA,NA
 pillar,ce18a03bb723a16e86151cbe95141672,Explicit permissions (#693).,NA,NA,NA,NA
 tibble,543a53853c37fccb74f88ac04493ea1a,Explicit permissions (#1614).,NA,NA,NA,NA
+ggplot2,8e2795f3b58939ae9610b3dda24f1627,"In non-orthogonal coordinate systems (`coord_sf()`, `coord_polar()` and `coord_radial()`), using 'AsIs' variables escape transformation when both `x` and `y` is an 'AsIs' variable (@​teunbrand, #6205).",NA,NA,NA,NA
