@@ -18255,3 +18255,4 @@ blob,858209e51183c2770b27886e11a89fc2,Explicit permissions (#40).,NA,NA,NA,NA
 pillar,ce18a03bb723a16e86151cbe95141672,Explicit permissions (#693).,NA,NA,NA,NA
 tibble,543a53853c37fccb74f88ac04493ea1a,Explicit permissions (#1614).,NA,NA,NA,NA
 ggplot2,8e2795f3b58939ae9610b3dda24f1627,"In non-orthogonal coordinate systems (`coord_sf()`, `coord_polar()` and `coord_radial()`), using 'AsIs' variables escape transformation when both `x` and `y` is an 'AsIs' variable (@​teunbrand, #6205).",NA,NA,NA,NA
+promises,d69028d40d0979d4029ee3cd87c4b12e,"Fixed bug introduced in 1.3.1, where promise domains that are active at promise resolution time stay active during handler callback, even if they weren't active when the handler was registered. This was causing stack overflow for long promise chains with many active promise domains. (#115)",NA,NA,NA,NA
