@@ -1,4 +1,6 @@
-# promises (under development)
+# promises (development version)
+
+# promises 1.3.2
 
 !begin-bullets-1!
 
