@@ -18259,3 +18259,4 @@ promises,d69028d40d0979d4029ee3cd87c4b12e,"Fixed bug introduced in 1.3.1, where 
 blob,3133c5c66a78199f1b80da3f2db87b34,Ignore errors when removing pkg-config on macOS (#41).,NA,NA,NA,NA
 pillar,6e982d51fdb6e161a56e900a0812020e,Ignore errors when removing pkg-config on macOS (#695).,NA,NA,NA,NA
 tibble,7523e05357e7eaf808a49877c42addfb,Ignore errors when removing pkg-config on macOS (#1615).,NA,NA,NA,NA
+pkgdown,a15b541d725ac850039e02e444d62bcf,New `clean_site(force = TRUE)` for cleaning of `docs/` regardless of whether it was built by pkgdown (#2827).,NA,NA,NA,NA
