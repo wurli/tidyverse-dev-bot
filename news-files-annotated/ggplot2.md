@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    New argument `labs(dictionary)` to label based on variable name
+    rather than based on aesthetic (@teunbrand, #5178)
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed bug in out-of-bounds binned breaks (@teunbrand, #6054)
 
     !end-bullet!

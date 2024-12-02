@@ -6,6 +6,12 @@
     Added `lazyRender` parameter to `DT::datatable()`, which gives the
     option for the table to be rendered immediately rather than waiting
     for it to become visible (thanks, @Mosk915, #1156).
+
+    !end-bullet!
+-   !begin-bullet!
+    Moved **httpuv** from `Imports` to `Suggests` in `DESCRIPTION`
+    (thanks, @MichaelChirico, #1159).
+
     !end-bullet!
 
 !end-bullets-1!

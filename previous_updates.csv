@@ -18267,3 +18267,5 @@ ggplot2,1f220f82d6ab1ba434fa3c9372a3392a,(internal) `Scale$get_labels()` format 
 ggplot2,3ec9ecefb3844ec3ced4312e6f3bf434,"New theme elements `palette.{aes}.discrete` and `palette.{aes}.continuous`. Theme palettes replace palettes in scales where `palette = NULL`, which is the new default in many scales (@​teunbrand, #4696).",NA,NA,NA,NA
 ggplot2,e647f9a7778fffb05d40113e73afb535,"Fixed bug in out-of-bounds binned breaks (@​teunbrand, #6054)",NA,NA,NA,NA
 ggplot2,e0cf4ee4d8914c1d407cb117fabfa0d0,"`guide_axis()` no longer reserves space for blank ticks (@​teunbrand, #4722, #6069).",NA,NA,NA,NA
+ggplot2,76b09aa7fe183fc14e5967aebd49b5b2,"New argument `labs(dictionary)` to label based on variable name rather than based on aesthetic (@​teunbrand, #5178)",NA,NA,NA,NA
+DT,9e6f85334bb145d177c21615f15ee5ee,"Moved **httpuv** from `Imports` to `Suggests` in `DESCRIPTION` (thanks, @​MichaelChirico, #1159).",NA,NA,NA,NA
