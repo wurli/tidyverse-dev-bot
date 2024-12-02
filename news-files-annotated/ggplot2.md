@@ -3,6 +3,14 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Binned guides now accept expressions as labels (@teunbrand, #6005)
+
+    !end-bullet!
+-   !begin-bullet!
+    (internal) `Scale$get_labels()` format expressions as lists.
+
+    !end-bullet!
+-   !begin-bullet!
     In non-orthogonal coordinate systems (`coord_sf()`, `coord_polar()`
     and `coord_radial()`), using 'AsIs' variables escape transformation
     when both `x` and `y` is an 'AsIs' variable (@teunbrand, #6205).
@@ -558,6 +566,13 @@
     !end-bullet!
 -   !begin-bullet!
     Added `theme_transparent()` with transparent backgrounds (@topepo).
+
+    !end-bullet!
+-   !begin-bullet!
+    New theme elements `palette.{aes}.discrete` and
+    `palette.{aes}.continuous`. Theme palettes replace palettes in
+    scales where `palette = NULL`, which is the new default in many
+    scales (@teunbrand, #4696).
 
     !end-bullet!
 

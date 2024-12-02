@@ -18262,3 +18262,6 @@ tibble,7523e05357e7eaf808a49877c42addfb,Ignore errors when removing pkg-config o
 pkgdown,a15b541d725ac850039e02e444d62bcf,New `clean_site(force = TRUE)` for cleaning of `docs/` regardless of whether it was built by pkgdown (#2827).,NA,NA,NA,NA
 lubridate,e0a497317ad5f86ac5f07193e3ccb57b,Don't use CET and EST as timezones to accomodate the upgrade of tzdata in the R-devel,NA,NA,NA,NA
 ggplot2,6d8a76acb2a8275f951a78c5ebfc519d,Added `theme_transparent()` with transparent backgrounds (@​topepo).,NA,NA,NA,NA
+ggplot2,ca680dad6f1f0ed25ce645145ac5feca,"Binned guides now accept expressions as labels (@​teunbrand, #6005)",NA,NA,NA,NA
+ggplot2,1f220f82d6ab1ba434fa3c9372a3392a,(internal) `Scale$get_labels()` format expressions as lists.,NA,NA,NA,NA
+ggplot2,3ec9ecefb3844ec3ced4312e6f3bf434,"New theme elements `palette.{aes}.discrete` and `palette.{aes}.continuous`. Theme palettes replace palettes in scales where `palette = NULL`, which is the new default in many scales (@​teunbrand, #4696).",NA,NA,NA,NA
