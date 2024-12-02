@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed bug in out-of-bounds binned breaks (@teunbrand, #6054)
+
+    !end-bullet!
+-   !begin-bullet!
     Binned guides now accept expressions as labels (@teunbrand, #6005)
 
     !end-bullet!
@@ -573,6 +577,11 @@
     `palette.{aes}.continuous`. Theme palettes replace palettes in
     scales where `palette = NULL`, which is the new default in many
     scales (@teunbrand, #4696).
+
+    !end-bullet!
+-   !begin-bullet!
+    `guide_axis()` no longer reserves space for blank ticks (@teunbrand,
+    #4722, #6069).
 
     !end-bullet!
 
