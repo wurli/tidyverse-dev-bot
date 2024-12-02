@@ -556,6 +556,10 @@
     (@teunbrand, #6052)
 
     !end-bullet!
+-   !begin-bullet!
+    Added `theme_transparent()` with transparent backgrounds (@topepo).
+
+    !end-bullet!
 
 !end-bullets-1!
 
