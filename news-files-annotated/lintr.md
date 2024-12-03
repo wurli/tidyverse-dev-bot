@@ -435,6 +435,13 @@
     version; we've simply made that dependency explicit and up-front
     (#2569, @MichaelChirico).
     !end-bullet!
+-   !begin-bullet!
+    Some code with parameters accepting regular expressions is less
+    strict about whether there are capture groups (#2678,
+    @MichaelChirico). In particular, this affects
+    `unreachable_code_linter(allow_comment_regex=)` and
+    `expect_lint(checks=)`.
+    !end-bullet!
 
 !end-bullets-10!
 
