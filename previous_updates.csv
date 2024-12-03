@@ -18278,3 +18278,5 @@ ggplot2,90e03f46bbc94dc1d3356b2aa28591a5,"Theme margins can have NA-units to inh
 ggplot2,3ad5e8b70fe80dc3c1650da5e00e4778,New `margin_auto()` specification for theme margins.,NA,NA,NA,NA
 ggplot2,28911ffc0b09255c76218ee68afc223d,"(internal) removed barriers for using 2D structures as aesthetics (@​teunbrand, #4189).",NA,NA,NA,NA
 ggplot2,eebde2a03c755b51b9808e37ca83c88a,"`geom_abline()` clips to the panel range in the vertical direction too (@​teunbrand, #6086).",NA,NA,NA,NA
+ggplot2,5987453006d781fce4e05e1d1f696017,"New stat: `stat_manual()` for arbitrary computations (@​teunbrand, #3501)",NA,NA,NA,NA
+ggplot2,dde5a35c7e7831b84cead30c1ec8a7a5,"Added `panel.widths` and `panel.heights` to `theme()` (#5338, @​teunbrand).",NA,NA,NA,NA

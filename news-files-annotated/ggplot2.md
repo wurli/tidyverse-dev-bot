@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    New stat: `stat_manual()` for arbitrary computations (@teunbrand,
+    #3501)
+
+    !end-bullet!
+-   !begin-bullet!
     Reversal of a dimension, typically 'x' or 'y', is now controlled by
     the `reverse` argument in `coord_cartesian()`, `coord_fixed()`,
     `coord_radial()` and `coord_sf()`. In `coord_radial()`, this
@@ -623,6 +628,11 @@
 -   !begin-bullet!
     `geom_abline()` clips to the panel range in the vertical direction
     too (@teunbrand, #6086).
+
+    !end-bullet!
+-   !begin-bullet!
+    Added `panel.widths` and `panel.heights` to `theme()` (#5338,
+    @teunbrand).
 
     !end-bullet!
 
