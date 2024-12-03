@@ -3,6 +3,32 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Reversal of a dimension, typically 'x' or 'y', is now controlled by
+    the `reverse` argument in `coord_cartesian()`, `coord_fixed()`,
+    `coord_radial()` and `coord_sf()`. In `coord_radial()`, this
+    replaces the older `direction` argument (#4021, @teunbrand).
+
+    !end-bullet!
+-   !begin-bullet!
+    `coord_radial()` displays minor gridlines now (@teunbrand).
+
+    !end-bullet!
+-   !begin-bullet!
+    (internal) `continuous_scale()` and `binned_scale()` sort the
+    `limits` argument internally (@teunbrand).
+
+    !end-bullet!
+-   !begin-bullet!
+    Theme margins can have NA-units to inherit from parent elements. The
+    new function `margin_part()` has NA-units as default (@teunbrand,
+    #6115)
+
+    !end-bullet!
+-   !begin-bullet!
+    New `margin_auto()` specification for theme margins.
+
+    !end-bullet!
+-   !begin-bullet!
     New argument `labs(dictionary)` to label based on variable name
     rather than based on aesthetic (@teunbrand, #5178)
 
@@ -569,6 +595,11 @@
 
     !end-bullet!
 -   !begin-bullet!
+    (internal) removed barriers for using 2D structures as aesthetics
+    (@teunbrand, #4189).
+
+    !end-bullet!
+-   !begin-bullet!
     `coord_sf()` no longer errors when dealing with empty graticules
     (@teunbrand, #6052)
 
@@ -587,6 +618,11 @@
 -   !begin-bullet!
     `guide_axis()` no longer reserves space for blank ticks (@teunbrand,
     #4722, #6069).
+
+    !end-bullet!
+-   !begin-bullet!
+    `geom_abline()` clips to the panel range in the vertical direction
+    too (@teunbrand, #6086).
 
     !end-bullet!
 

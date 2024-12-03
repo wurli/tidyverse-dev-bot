@@ -421,6 +421,12 @@
 !begin-bullets-10!
 
 -   !begin-bullet!
+    All user-facing messages (including progress bars) are now prepared
+    using the `{cli}` package (#2418 and #2641, @IndrajeetPatil). All
+    messages have been reviewed and updated to be more informative and
+    consistent.
+    !end-bullet!
+-   !begin-bullet!
     All user-facing messages are now prepared using the `{cli}` package
     (#2418, @IndrajeetPatil). All messages have been reviewed and
     updated to be more informative and consistent.

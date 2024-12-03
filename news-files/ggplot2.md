@@ -1,5 +1,15 @@
 # ggplot2 (development version)
 
+* Reversal of a dimension, typically 'x' or 'y', is now controlled by the 
+  `reverse` argument in `coord_cartesian()`, `coord_fixed()`, `coord_radial()`
+  and `coord_sf()`. In `coord_radial()`, this replaces the older `direction` 
+  argument (#4021, @teunbrand).
+* `coord_radial()` displays minor gridlines now (@teunbrand).
+* (internal) `continuous_scale()` and `binned_scale()` sort the `limits` 
+  argument internally (@teunbrand).
+* Theme margins can have NA-units to inherit from parent elements. The new
+  function `margin_part()` has NA-units as default (@teunbrand, #6115)
+* New `margin_auto()` specification for theme margins.
 * New argument `labs(dictionary)` to label based on variable name rather than 
   based on aesthetic (@teunbrand, #5178)
 * Fixed bug in out-of-bounds binned breaks (@teunbrand, #6054)
@@ -216,6 +226,8 @@
   `labs()` and several guides (@teunbrand, #3196).
 * `stat_summary_bin()` no longer ignores `width` parameter (@teunbrand, #4647).
 * Added `keep.zeroes` argument to `stat_bin()` (@teunbrand, #3449)
+* (internal) removed barriers for using 2D structures as aesthetics 
+  (@teunbrand, #4189).
 * `coord_sf()` no longer errors when dealing with empty graticules (@teunbrand, #6052)
 * Added `theme_transparent()` with transparent backgrounds (@topepo).
 * New theme elements `palette.{aes}.discrete` and `palette.{aes}.continuous`. 
@@ -223,6 +235,8 @@
   the new default in many scales (@teunbrand, #4696).
 * `guide_axis()` no longer reserves space for blank ticks 
   (@teunbrand, #4722, #6069).
+* `geom_abline()` clips to the panel range in the vertical direction too
+  (@teunbrand, #6086).
 
 # ggplot2 3.5.1
 
