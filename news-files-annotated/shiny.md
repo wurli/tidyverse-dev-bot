@@ -48,6 +48,14 @@
     excluded from URL bookmarking. (#3762)
 
     !end-bullet!
+-   !begin-bullet!
+    Fixed a bug with stack trace capturing that caused reactives with
+    very long async promise chains (hundreds/thousands of steps) to
+    become extremely slow. Chains this long are unlikely to be written
+    by hand, but {coro} async generators and {elmer} async streaming
+    were easily creating problematically long chains. (#4155)
+
+    !end-bullet!
 
 !end-bullets-2!
 
