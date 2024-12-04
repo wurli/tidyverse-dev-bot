@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed an issue where ignore rules of the form `!*.*` were not parsed
+    and handled correctly during dependency discovery. (#2052)
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed an issue where `renv` erroneously reported that installed
     packages were cached when the cache was not writable. (#2041).
 

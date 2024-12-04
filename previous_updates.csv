@@ -18282,3 +18282,4 @@ ggplot2,5987453006d781fce4e05e1d1f696017,"New stat: `stat_manual()` for arbitrar
 ggplot2,dde5a35c7e7831b84cead30c1ec8a7a5,"Added `panel.widths` and `panel.heights` to `theme()` (#5338, @​teunbrand).",NA,NA,NA,NA
 shiny,0590a59dd07312458074bbb519c70fe5,"Fixed a bug with stack trace capturing that caused reactives with very long async promise chains (hundreds/thousands of steps) to become extremely slow. Chains this long are unlikely to be written by hand, but {coro} async generators and {elmer} async streaming were easily creating problematically long chains. (#4155)",NA,NA,NA,NA
 lubridate,c8b1004670625964316b13bfa6109688,"#1170 Fix `as_datetime` to parse partial timestamps (ex. ""2009-01-01 20:30"") just as as.POSIXct does.",NA,NA,NA,NA
+renv,ca10c6f1bad45238b15f16878fad1e2e,Fixed an issue where ignore rules of the form `!*.*` were not parsed and handled correctly during dependency discovery. (#2052),NA,NA,NA,NA
