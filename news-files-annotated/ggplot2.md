@@ -3,6 +3,14 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `guide_*()` can now accept two inside legend theme elements:
+    `legend.position.inside` and `legend.justification.inside`, allowing
+    inside legends to be placed at different positions. Only inside
+    legends with the same position and justification will be merged
+    (@Yunuuuu, #6210).
+
+    !end-bullet!
+-   !begin-bullet!
     New stat: `stat_manual()` for arbitrary computations (@teunbrand,
     #3501)
 
