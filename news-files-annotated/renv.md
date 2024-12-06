@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed an issue where `renv::init()` could fail when using named
+    remotes in a DESCRIPTION file's `Remotes:` field. (#2055)
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed an issue where ignore rules of the form `!*.*` were not parsed
     and handled correctly during dependency discovery. (#2052)
 

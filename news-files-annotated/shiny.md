@@ -16,6 +16,15 @@
     if no other spinners are present in the app. (#4137)
 
     !end-bullet!
+-   !begin-bullet!
+    Improve collection of deep stack traces (stack traces that are
+    tracked across steps in an async promise chain) with `coro` async
+    generators such as `elmer` chat streams. Previously, Shiny treated
+    each iteration of an async generator as a distinct deep stack,
+    leading to pathologically long stack traces; now, Shiny only
+    keeps/prints unique deep stack trace, discarding duplicates. (#4156)
+
+    !end-bullet!
 
 !end-bullets-1!
 
