@@ -70,6 +70,13 @@
     were easily creating problematically long chains. (#4155)
 
     !end-bullet!
+-   !begin-bullet!
+    Updating the choices of a `selectizeInput()` via
+    `updateSelectizeInput()` with `server = TRUE` no longer retains the
+    selected choice as a deselected option if the current value is not
+    part of the new choices. (@dvg-p4 #4142)
+
+    !end-bullet!
 
 !end-bullets-2!
 
