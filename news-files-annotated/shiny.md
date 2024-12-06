@@ -25,6 +25,11 @@
     keeps/prints unique deep stack trace, discarding duplicates. (#4156)
 
     !end-bullet!
+-   !begin-bullet!
+    Added an example to the `ExtendedTask` documentation. (@daattali
+    #4087)
+
+    !end-bullet!
 
 !end-bullets-1!
 
