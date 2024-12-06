@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `renv::use()` no longer re-installs packages which are already
+    installed and compatible with the requested packages. (#2044)
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed an issue where `renv::init()` could fail when using named
     remotes in a DESCRIPTION file's `Remotes:` field. (#2055)
 

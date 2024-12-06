@@ -71,6 +71,16 @@
 
     !end-bullet!
 -   !begin-bullet!
+    Duplicate input and output IDs -- e.g. using `"debug"` for two
+    inputs or two outputs -- or shared IDs -- e.g. using `"debug"` as
+    the `inputID` for an input and an output -- now result in a console
+    warning message, but not an error. When `devmode()` is enabled, an
+    informative message is shown in the Shiny Client Console. We
+    recommend all Shiny devs enable `devmode()` when developing Shiny
+    apps locally. (#4101)
+
+    !end-bullet!
+-   !begin-bullet!
     Updating the choices of a `selectizeInput()` via
     `updateSelectizeInput()` with `server = TRUE` no longer retains the
     selected choice as a deselected option if the current value is not
