@@ -5,7 +5,7 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
-    Don't use CET and EST as timezones to accomodate the upgrade of
+    Don't use CET and EST as timezones to accommodate the upgrade of
     tzdata in the R-devel
     !end-bullet!
 
@@ -196,7 +196,7 @@
     format
     !end-bullet!
 -   !begin-bullet!
-    #1074 Fix concatination of named Period, Interval and Duration
+    #1074 Fix concatenation of named Period, Interval and Duration
     vectors.
     !end-bullet!
 -   !begin-bullet!
@@ -731,7 +731,7 @@
     other day accessors.
     !end-bullet!
 -   !begin-bullet!
-    #566 Comparing durations and periods no-longer infloops.
+    #566 Comparing durations and periods no-longer inf-loops.
     !end-bullet!
 -   !begin-bullet!
     #556 Fix incorrect scoring of `y` format when it's the last in
@@ -789,7 +789,7 @@
     errors (input with all NAs are silent)
     !end-bullet!
 -   !begin-bullet!
-    #534 Fix arithmetics with large numbers
+    #534 Fix arithmetic with large numbers
     !end-bullet!
 -   !begin-bullet!
     #554 Fix tests when running in non-English locales
@@ -881,7 +881,7 @@
     !end-bullet!
 -   !begin-bullet!
     #445 No more warning on occasional imprecise period length
-    conversions. Imprecise arithmetics with periods is extensively
+    conversions. Imprecise arithmetic with periods is extensively
     documented.
     !end-bullet!
 -   !begin-bullet!
@@ -948,8 +948,8 @@
     `decimal_date`.
     !end-bullet!
 -   !begin-bullet!
-    #420 `as.numeric` correctly converts periods to (aproximate) numeric
-    time lengths.
+    #420 `as.numeric` correctly converts periods to (approximate)
+    numeric time lengths.
     !end-bullet!
 
 !end-bullets-36!
@@ -1087,11 +1087,11 @@
 -   !begin-bullet!
     Time span constructors were re-factored; `new_interval`,
     `new_period`, `new_duration`, `new_difftime` were deprecated in
-    favour of the more powerful `interval`, `period`, `duration` and
+    favor of the more powerful `interval`, `period`, `duration` and
     `make_difftime` functions.
     !end-bullet!
 -   !begin-bullet!
-    `eseconds`, `eminutes` etc. were deprecated in favour of `dsecons`,
+    `eseconds`, `eminutes` etc. were deprecated in favor of `dsecons`,
     `dminutes` etc.
     !end-bullet!
 -   !begin-bullet!
@@ -1107,7 +1107,7 @@
     !end-bullet!
 -   !begin-bullet!
     #325 `Lubridate`'s `trunc`, `ceiling` and `floor` functions have
-    been optimised and now are relying on R's `trunc.POSIXct` whenever
+    been optimized and now are relying on R's `trunc.POSIXct` whenever
     possible.
     !end-bullet!
 -   !begin-bullet!
@@ -1168,7 +1168,7 @@
     #306 When needed double guess with `preproc_wday=T`.
     !end-bullet!
 -   !begin-bullet!
-    #308 Document sparce format guessing in `parse_date_time`.
+    #308 Document sparse format guessing in `parse_date_time`.
     !end-bullet!
 -   !begin-bullet!
     #313 Fixed and optimized `fit_to_timeline` function.
@@ -1361,7 +1361,7 @@
     objects that throw useful errors.
     !end-bullet!
 -   !begin-bullet!
-    `olson_time_zones` retreives a character vector is Olson-style time
+    `olson_time_zones` retrieves a character vector is Olson-style time
     zone names to use in lubridate
     !end-bullet!
 -   !begin-bullet!
@@ -1391,15 +1391,15 @@
     !end-bullet!
 -   !begin-bullet!
     parse functions, `as.interval`, `as.period` and `as.duration` now
-    handlevectors of NA's without returning errors.
+    handle vectors of NA's without returning errors.
     !end-bullet!
 -   !begin-bullet!
     parsers better handle vectors of input that have more than 100
     elements and many NAs
     !end-bullet!
 -   !begin-bullet!
-    data frames that contain timespan objects with NAs in thme no longer
-    fail toprint
+    data frames that contain timespan objects containing NAs no longer
+    fail to print
     !end-bullet!
 -   !begin-bullet!
     `round_date`, `ceiling_date` and `update` now correctly handle input
@@ -1646,7 +1646,7 @@
 
 !end-bullets-56!
 
-Users can still acheive a numerical result by using as.numeric() on
+Users can still achieve a numerical result by using as.numeric() on
 input before performing modulo.
 
 !begin-bullets-57!
@@ -1704,7 +1704,7 @@ input before performing modulo.
 !begin-bullets-59!
 
 -   !begin-bullet!
-    added ymdThms() for parsing ISO 8061 formatted combned dates and
+    added ymdThms() for parsing ISO 8061 formatted combined dates and
     times
     !end-bullet!
 
@@ -1912,7 +1912,7 @@ input before performing modulo.
 
     !end-bullet!
 -   !begin-bullet!
-    edited make_diff() to display in days when approporiate, not weeks
+    edited make_diff() to display in days when appropriate, not weeks
 
     !end-bullet!
 
