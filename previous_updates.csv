@@ -18290,3 +18290,15 @@ shiny,51c35ddd3cdf51e5cfcd13717adcf691,Added an example to the `ExtendedTask` do
 shiny,de28d4bec3e3d6917b55fe95dafe9cc7,Updating the choices of a `selectizeInput()` via `updateSelectizeInput()` with `server = TRUE` no longer retains the selected choice as a deselected option if the current value is not part of the new choices. (@​dvg-p4 #4142),NA,NA,NA,NA
 renv,36e37ebd06b85a9e0ad16d84cd4e89e5,`renv::use()` no longer re-installs packages which are already installed and compatible with the requested packages. (#2044),NA,NA,NA,NA
 shiny,2772f432e44419e94480fa610ecb3d95,"Duplicate input and output IDs -- e.g. using `""debug""` for two inputs or two outputs -- or shared IDs -- e.g. using `""debug""` as the `inputID` for an input and an output -- now result in a console warning message, but not an error. When `devmode()` is enabled, an informative message is shown in the Shiny Client Console. We recommend all Shiny devs enable `devmode()` when developing Shiny apps locally. (#4101)",NA,NA,NA,NA
+blob,6d72502b639ceacd38517a47f3131e6a,Use larger retry count for lock-threads workflow (#42).,NA,NA,NA,NA
+hms,103e91a8dde1b45d6ff3e1faa92edda1,"Sub-second value parsing accurately (@​eitsupi, #127, #128).",NA,NA,NA,NA
+hms,d61ebd7df6a4a6c4719b1a164141bc2b,Use larger retry count for lock-threads workflow (#152).,NA,NA,NA,NA
+hms,e79d659c6bf8c614ae9bd9a1ebe43806,Ignore errors when removing pkg-config on macOS (#142).,NA,NA,NA,NA
+hms,61fc798a11b41569c2396ea7ef134e1e,Explicit permissions (#140).,NA,NA,NA,NA
+hms,f7f4b3c0aae4c98fe30225116ec1be85,Use styler from main branch (#138).,NA,NA,NA,NA
+hms,a1f643ca16dbbf8094c17290664e6631,Need to install R on Ubuntu 24.04 (#136).,NA,NA,NA,NA
+hms,f3e9a798bf4ba593c463e4ee04914173,Use Ubuntu 24.04 and styler PR (#134).,NA,NA,NA,NA
+hms,b628a18f886a7a3685f0afab88f17571,Correctly detect branch protection (#130).,NA,NA,NA,NA
+hms,594039a2ec6f7cc7fbd03e93ca390ccf,PLACEHOLDER https://github.com/tidyverse/hms/pull/16 (#16).,NA,NA,NA,NA
+pillar,c04b0e4f601ff8fde28f2771779d2cc7,Use larger retry count for lock-threads workflow (#701).,NA,NA,NA,NA
+tibble,93071940224ffe3261eafe00016e55d3,Use larger retry count for lock-threads workflow (#1616).,NA,NA,NA,NA
