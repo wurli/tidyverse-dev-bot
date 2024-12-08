@@ -19,10 +19,6 @@
         `linter=` argument of `Lint()`.
         !end-bullet!
     -   !begin-bullet!
-        Linters `closed_curly_linter()`, `open_curly_linter()`,
-        `paren_brace_linter()`, and `semicolon_terminator_linter()`..
-        !end-bullet!
-    -   !begin-bullet!
         `with_defaults()`.
         !end-bullet!
     -   !begin-bullet!
@@ -425,11 +421,6 @@
     using the `{cli}` package (#2418 and #2641, @IndrajeetPatil). All
     messages have been reviewed and updated to be more informative and
     consistent.
-    !end-bullet!
--   !begin-bullet!
-    All user-facing messages are now prepared using the `{cli}` package
-    (#2418, @IndrajeetPatil). All messages have been reviewed and
-    updated to be more informative and consistent.
     !end-bullet!
 -   !begin-bullet!
     File locations in lints and error messages contain clickable
