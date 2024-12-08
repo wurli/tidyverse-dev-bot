@@ -18302,3 +18302,7 @@ hms,b628a18f886a7a3685f0afab88f17571,Correctly detect branch protection (#130).,
 hms,594039a2ec6f7cc7fbd03e93ca390ccf,PLACEHOLDER https://github.com/tidyverse/hms/pull/16 (#16).,NA,NA,NA,NA
 pillar,c04b0e4f601ff8fde28f2771779d2cc7,Use larger retry count for lock-threads workflow (#701).,NA,NA,NA,NA
 tibble,93071940224ffe3261eafe00016e55d3,Use larger retry count for lock-threads workflow (#1616).,NA,NA,NA,NA
+blob,0c3f063480edcf7759a109d0b95f3f19,Fetch tags for fledge workflow to avoid unnecessary NEWS entries (#43).,NA,NA,NA,NA
+hms,d6ea5dfb6312d4260ba6061b9cf64d11,Fetch tags for fledge workflow to avoid unnecessary NEWS entries (#154).,NA,NA,NA,NA
+pillar,85730dc93fd038c71aabe36854107ac7,Fetch tags for fledge workflow to avoid unnecessary NEWS entries (#703).,NA,NA,NA,NA
+tibble,e85c8bfc03dc97981c65ff26f306301e,Fetch tags for fledge workflow to avoid unnecessary NEWS entries (#1617).,NA,NA,NA,NA
