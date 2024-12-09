@@ -1,11 +1,377 @@
 ```{=html}
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 ```
+# duckplyr 0.4.1.9004 (2024-12-09)
+
+## Bug fixes
+
+!begin-bullets-1!
+
+-   !begin-bullet!
+    `check_duplicate_names()` (#317).
+
+    !end-bullet!
+-   !begin-bullet!
+    Check perfect roundtrip for constants again (#307).
+
+    !end-bullet!
+-   !begin-bullet!
+    Correctly handle missing values in `if_else()`.
+
+    !end-bullet!
+-   !begin-bullet!
+    Use relational operators from the rfuns extension as aliases, not as
+    macros (#291).
+
+    !end-bullet!
+-   !begin-bullet!
+    Compute ptype only for join columns in a safe way without
+    materialization, not for the entire data frame (#289).
+
+    !end-bullet!
+-   !begin-bullet!
+    Edge case for `count()` (#282).
+
+    !end-bullet!
+-   !begin-bullet!
+    Attaching duckplyr via `library()` overwrites all dplyr methods
+    again (#217, #276).
+
+    !end-bullet!
+-   !begin-bullet!
+    `expr_scrub()` can handle function-definitions (@toppyy, #268,
+    #271).
+
+    !end-bullet!
+
+!end-bullets-1!
+
+## Features
+
+!begin-bullets-2!
+
+-   !begin-bullet!
+    `mutate()` constructs intermediate data frames for each new variable
+    (#332).
+
+    !end-bullet!
+-   !begin-bullet!
+    Harden telemetry code against invalid arguments (#321).
+
+    !end-bullet!
+-   !begin-bullet!
+    `across()` tweaks (#318).
+
+    !end-bullet!
+-   !begin-bullet!
+    Fall back to dplyr when passing `multiple` with joins (#323).
+
+    !end-bullet!
+-   !begin-bullet!
+    Limit number of items that can be handled with `%in%` (#319).
+
+    !end-bullet!
+-   !begin-bullet!
+    Use Ubuntu noble for touchstone (#314).
+
+    !end-bullet!
+-   !begin-bullet!
+    Enable touchstone (#313).
+
+    !end-bullet!
+-   !begin-bullet!
+    Use touchstone for continuous benchmarking (#311).
+
+    !end-bullet!
+-   !begin-bullet!
+    More complete `across()` (#306).
+
+    !end-bullet!
+-   !begin-bullet!
+    Add more tests from dplyr (#305).
+
+    !end-bullet!
+-   !begin-bullet!
+    Partial support for `across()` in `mutate()` and `summarise()`
+    (#296).
+
+    !end-bullet!
+-   !begin-bullet!
+    Rely on duckdb to check const feasibility (#293).
+
+    !end-bullet!
+-   !begin-bullet!
+    Allow R 4.0 (#285).
+
+    !end-bullet!
+-   !begin-bullet!
+    Avoid resetting expression depth, now in duckdb (#280).
+
+    !end-bullet!
+-   !begin-bullet!
+    Record and replay functionality now includes the top-level function
+    being called (#273).
+
+    !end-bullet!
+-   !begin-bullet!
+    Set the `duckdb.materialize_message` option on load only if not
+    previously specified (@stefanlinner, #220).
+
+    !end-bullet!
+
+!end-bullets-2!
+
+## Chore
+
+!begin-bullets-3!
+
+-   !begin-bullet!
+    Configure IDE.
+
+    !end-bullet!
+-   !begin-bullet!
+    Add lifecycle badges (#350, #353).
+
+    !end-bullet!
+-   !begin-bullet!
+    Comment design choice.
+
+    !end-bullet!
+-   !begin-bullet!
+    `explain()` returns the input, invisibly (#331).
+
+    !end-bullet!
+-   !begin-bullet!
+    Sync (#329).
+
+    !end-bullet!
+-   !begin-bullet!
+    Nicer fallback error when function cannot be translated (#324).
+
+    !end-bullet!
+-   !begin-bullet!
+    Fix glue syntax.
+
+    !end-bullet!
+-   !begin-bullet!
+    Tweak workflow (#316).
+
+    !end-bullet!
+-   !begin-bullet!
+    Test touchstone (#315).
+
+    !end-bullet!
+-   !begin-bullet!
+    Avoid copying copy.
+
+    !end-bullet!
+-   !begin-bullet!
+    Sync tests with dplyr dev version (#304).
+
+    !end-bullet!
+-   !begin-bullet!
+    Update snapshots.
+
+    !end-bullet!
+-   !begin-bullet!
+    Fix sync (#290).
+
+    !end-bullet!
+-   !begin-bullet!
+    Apply styler (#281).
+
+    !end-bullet!
+-   !begin-bullet!
+    Sync patches (#277).
+
+    !end-bullet!
+-   !begin-bullet!
+    Fix typo.
+
+    !end-bullet!
+-   !begin-bullet!
+    Sync docs.
+
+    !end-bullet!
+-   !begin-bullet!
+    Sync docs branch (#266).
+
+    !end-bullet!
+
+!end-bullets-3!
+
+## Continuous integration
+
+!begin-bullets-4!
+
+-   !begin-bullet!
+    Avoid failure in fledge workflow if no changes (#368).
+
+    !end-bullet!
+-   !begin-bullet!
+    Fetch tags for fledge workflow to avoid unnecessary NEWS entries
+    (#366).
+
+    !end-bullet!
+-   !begin-bullet!
+    Use styler PR (#362).
+
+    !end-bullet!
+-   !begin-bullet!
+    Run in Ubuntu Noble to support r-universe binaries (#352).
+
+    !end-bullet!
+-   !begin-bullet!
+    Correctly detect branch protection (#345).
+
+    !end-bullet!
+-   !begin-bullet!
+    Use stable pak (#344).
+
+    !end-bullet!
+-   !begin-bullet!
+    Latest changes (#328).
+
+    !end-bullet!
+-   !begin-bullet!
+    Revert to status workflow (#326).
+
+    !end-bullet!
+-   !begin-bullet!
+    Trigger run (#288).
+
+    !end-bullet!
+-   !begin-bullet!
+    Trigger run (#287).
+
+    !end-bullet!
+-   !begin-bullet!
+    Updates from duckdb (#286).
+
+    !end-bullet!
+-   !begin-bullet!
+    Install local package for pkgdown builds (#258).
+
+    !end-bullet!
+-   !begin-bullet!
+    Fix condition for fledge workflow (#248).
+
+    !end-bullet!
+-   !begin-bullet!
+    Use curl.
+
+    !end-bullet!
+-   !begin-bullet!
+    Use gh to download artifact.
+
+    !end-bullet!
+-   !begin-bullet!
+    Don't need to unzip artifact.
+
+    !end-bullet!
+-   !begin-bullet!
+    Restrict commit again to own PRs.
+
+    !end-bullet!
+
+!end-bullets-4!
+
+## Documentation
+
+!begin-bullets-5!
+
+-   !begin-bullet!
+    Avoid `\code{}` (#340, #354).
+
+    !end-bullet!
+-   !begin-bullet!
+    Include section on code generation in contributing guide (#24,
+    #348).
+
+    !end-bullet!
+-   !begin-bullet!
+    Update README.
+
+    !end-bullet!
+-   !begin-bullet!
+    Sync.
+
+    !end-bullet!
+-   !begin-bullet!
+    Sync.
+
+    !end-bullet!
+-   !begin-bullet!
+    Sync.
+
+    !end-bullet!
+-   !begin-bullet!
+    Move logo.
+
+    !end-bullet!
+-   !begin-bullet!
+    Need file, not link, for logo on GitHub.
+
+    !end-bullet!
+-   !begin-bullet!
+    Fix logo on GitHub.
+
+    !end-bullet!
+-   !begin-bullet!
+    Use downlit only for GitHub README (#262).
+
+    !end-bullet!
+-   !begin-bullet!
+    Add logo to README (@luisDVA, #259).
+
+    !end-bullet!
+-   !begin-bullet!
+    Fix cut-and-paste typo (@joakimlinde, #240).
+
+    !end-bullet!
+-   !begin-bullet!
+    Enable plausible (#250, #251).
+
+    !end-bullet!
+-   !begin-bullet!
+    Use new URL for pkgdown (#247).
+
+    !end-bullet!
+
+!end-bullets-5!
+
+## Testing
+
+!begin-bullets-6!
+
+-   !begin-bullet!
+    Snapshot updates for rcc-smoke (null) (#356).
+
+    !end-bullet!
+-   !begin-bullet!
+    Add snapshot instead of output (#346).
+
+    !end-bullet!
+-   !begin-bullet!
+    Snapshot updates for rcc-smoke (null) (#302).
+
+    !end-bullet!
+-   !begin-bullet!
+    Test telemetry code (#275).
+
+    !end-bullet!
+-   !begin-bullet!
+    Adapt tests to duckdb release candidate (#261).
+
+    !end-bullet!
+
+!end-bullets-6!
+
 # duckplyr 0.4.1.9003 (2024-08-20)
 
 ## Features
 
-!begin-bullets-1!
+!begin-bullets-7!
 
 -   !begin-bullet!
     Detect functions from the duckplyr package (#246).
@@ -22,11 +388,11 @@
 
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-7!
 
 ## Continuous integration
 
-!begin-bullets-2!
+!begin-bullets-8!
 
 -   !begin-bullet!
     Avoid failures if artifact is missing.
@@ -101,45 +467,45 @@
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-8!
 
 # duckplyr 0.4.1.9002 (2024-08-16)
 
 ## Documentation
 
-!begin-bullets-3!
+!begin-bullets-9!
 
 -   !begin-bullet!
     Move to tidyverse (#225).
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-9!
 
 # duckplyr 0.4.1.9001 (2024-07-13)
 
-!begin-bullets-4!
+!begin-bullets-10!
 
 -   !begin-bullet!
     Merge branch 'cran-0.4.1'.
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-10!
 
 # duckplyr 0.4.1.9000 (2024-07-12)
 
-!begin-bullets-5!
+!begin-bullets-11!
 
 -   !begin-bullet!
     Merge branch 'cran-0.4.1'.
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-11!
 
 # duckplyr 0.4.1 (2024-07-11)
 
 ## Features
 
-!begin-bullets-6!
+!begin-bullets-12!
 
 -   !begin-bullet!
     `df_from_file()` and related functions support multiple files (#194,
@@ -165,11 +531,11 @@
     analysis scripts for GitHub activity data (#179).
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-12!
 
 ## Documentation
 
-!begin-bullets-7!
+!begin-bullets-13!
 
 -   !begin-bullet!
     Add contributing guide (#179).
@@ -190,13 +556,13 @@
     Add analysis scripts for GitHub activity data (#179).
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-13!
 
 # duckplyr 0.4.0 (2024-05-21)
 
 ## Features
 
-!begin-bullets-8!
+!begin-bullets-14!
 
 -   !begin-bullet!
     Use built-in rfuns extension to implement equality and inequality
@@ -219,11 +585,11 @@
     Reduce default memory limit to 1 GB.
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-14!
 
 ## Bug fixes
 
-!begin-bullets-9!
+!begin-bullets-15!
 
 -   !begin-bullet!
     Stricter type checks in the set operations `intersect()`,
@@ -270,11 +636,11 @@
     (@TimTaylor, #141).
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-15!
 
 ## Chore
 
-!begin-bullets-10!
+!begin-bullets-16!
 
 -   !begin-bullet!
     Remove styler dependency (#137, #138).
@@ -283,22 +649,22 @@
     Avoid error from stats collection.
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-16!
 
 ## Documentation
 
-!begin-bullets-11!
+!begin-bullets-17!
 
 -   !begin-bullet!
     Mention wildcards to read multiple files in `?df_from_file`
     (@andreranza, #133, #134).
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-17!
 
 ## Testing
 
-!begin-bullets-12!
+!begin-bullets-18!
 
 -   !begin-bullet!
     Reenable tests that now run successfully (#166).
@@ -317,24 +683,24 @@
     differences between doubles and integers.
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-18!
 
 # duckplyr 0.3.2 (2024-03-17)
 
 ## Bug fixes
 
-!begin-bullets-13!
+!begin-bullets-19!
 
 -   !begin-bullet!
     Run autoupload in function so that it will be checked by static
     analysis (#122).
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-19!
 
 ## Features
 
-!begin-bullets-14!
+!begin-bullets-20!
 
 -   !begin-bullet!
     New `df_to_parquet()` to write to Parquet, new convenience functions
@@ -342,13 +708,13 @@
     `duckdb_df_from_parquet()` (#87, #89, #96, #128).
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-20!
 
 # duckplyr 0.3.1 (2024-03-08)
 
 ## Bug fixes
 
-!begin-bullets-15!
+!begin-bullets-21!
 
 -   !begin-bullet!
     Forbid reuse of new columns created in `summarise()` (#72, #106).
@@ -363,11 +729,11 @@
     Fix division by zero for positive and negative numbers.
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-21!
 
 ## Features
 
-!begin-bullets-16!
+!begin-bullets-22!
 
 -   !begin-bullet!
     New `fallback_sitrep()` and related functionality for collecting
@@ -401,11 +767,11 @@
     `TRUE`, loading duckplyr automatically calls `methods_overwrite()`.
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-22!
 
 ## Internal
 
-!begin-bullets-17!
+!begin-bullets-23!
 
 -   !begin-bullet!
     Better duckdb tests.
@@ -414,33 +780,33 @@
     Use standalone purrr for dplyr compatibility.
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-23!
 
 ## Testing
 
-!begin-bullets-18!
+!begin-bullets-24!
 
 -   !begin-bullet!
     Add tests for correct base of `log()` and `log10()`.
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-24!
 
 ## Documentation
 
-!begin-bullets-19!
+!begin-bullets-25!
 
 -   !begin-bullet!
     `methods_overwrite()` and `methods_restore()` show a message.
     !end-bullet!
 
-!end-bullets-19!
+!end-bullets-25!
 
 # duckplyr 0.3.0 (2023-12-10)
 
 ## Bug fixes
 
-!begin-bullets-20!
+!begin-bullets-26!
 
 -   !begin-bullet!
     `grepl(x = NA)` gives correct results.
@@ -458,11 +824,11 @@
     Consistent computation of `log(0)` and `log(-1)` (#75, #76).
     !end-bullet!
 
-!end-bullets-20!
+!end-bullets-26!
 
 ## Features
 
-!begin-bullets-21!
+!begin-bullets-27!
 
 -   !begin-bullet!
     Only allow constants in `mutate()` that are actually representable
@@ -472,31 +838,31 @@
     Avoid translating `ifelse()`, support `if_else()` (#79).
     !end-bullet!
 
-!end-bullets-21!
+!end-bullets-27!
 
 ## Documentation
 
-!begin-bullets-22!
+!begin-bullets-28!
 
 -   !begin-bullet!
     Separate and explain the new relational examples (@wibeasley, #84).
     !end-bullet!
 
-!end-bullets-22!
+!end-bullets-28!
 
 ## Testing
 
-!begin-bullets-23!
+!begin-bullets-29!
 
 -   !begin-bullet!
     Add test that TPC-H queries can be processed.
     !end-bullet!
 
-!end-bullets-23!
+!end-bullets-29!
 
 ## Chore
 
-!begin-bullets-24!
+!begin-bullets-30!
 
 -   !begin-bullet!
     Sync with dplyr 1.1.4 (#82).
@@ -527,36 +893,36 @@
     Sync generated files (#71).
     !end-bullet!
 
-!end-bullets-24!
+!end-bullets-30!
 
 # duckplyr 0.2.3 (2023-11-08)
 
 ## Performance
 
-!begin-bullets-25!
+!begin-bullets-31!
 
 -   !begin-bullet!
     Join using `IS NOT DISTINCT FROM` for faster execution
     (duckdb/duckdb-r#41, #68).
     !end-bullet!
 
-!end-bullets-25!
+!end-bullets-31!
 
 ## Documentation
 
-!begin-bullets-26!
+!begin-bullets-32!
 
 -   !begin-bullet!
     Add stability to README output (@maelle, #62, #65).
     !end-bullet!
 
-!end-bullets-26!
+!end-bullets-32!
 
 # duckplyr 0.2.2 (2023-10-16)
 
 ## Bug fixes
 
-!begin-bullets-27!
+!begin-bullets-33!
 
 -   !begin-bullet!
     `summarise()` keeps `"duckplyr_df"` class (#63, #64).
@@ -567,11 +933,11 @@
 
     !end-bullet!
 
-!end-bullets-27!
+!end-bullets-33!
 
 ## Chore
 
-!begin-bullets-28!
+!begin-bullets-34!
 
 -   !begin-bullet!
     Skip tests that give different output on dev tidyselect.
@@ -582,11 +948,11 @@
 
     !end-bullet!
 
-!end-bullets-28!
+!end-bullets-34!
 
 ## Documentation
 
-!begin-bullets-29!
+!begin-bullets-35!
 
 -   !begin-bullet!
     Small README improvements (@maelle, #34, #57).
@@ -597,11 +963,11 @@
 
     !end-bullet!
 
-!end-bullets-29!
+!end-bullets-35!
 
 # duckplyr 0.2.1 (2023-09-16)
 
-!begin-bullets-30!
+!begin-bullets-36!
 
 -   !begin-bullet!
     Improve documentation.
@@ -625,33 +991,33 @@
 
     !end-bullet!
 
-!end-bullets-30!
+!end-bullets-36!
 
 # duckplyr 0.2.0 (2023-09-10)
 
-!begin-bullets-31!
+!begin-bullets-37!
 
 -   !begin-bullet!
     Implement relational API for DuckDB.
     !end-bullet!
 
-!end-bullets-31!
+!end-bullets-37!
 
 # duckplyr 0.1.0 (2023-07-03)
 
 ## Bug fixes
 
-!begin-bullets-32!
+!begin-bullets-38!
 
 -   !begin-bullet!
     Fix examples.
     !end-bullet!
 
-!end-bullets-32!
+!end-bullets-38!
 
 ## Chore
 
-!begin-bullets-33!
+!begin-bullets-39!
 
 -   !begin-bullet!
     Add CRAN install instructions.
@@ -669,17 +1035,17 @@
     Remove `relexpr_window()` for now.
     !end-bullet!
 
-!end-bullets-33!
+!end-bullets-39!
 
 ## Documentation
 
-!begin-bullets-34!
+!begin-bullets-40!
 
 -   !begin-bullet!
     Clean up reference.
     !end-bullet!
 
-!end-bullets-34!
+!end-bullets-40!
 
 ## Uncategorized
 

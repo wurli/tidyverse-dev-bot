@@ -18306,3 +18306,85 @@ blob,0c3f063480edcf7759a109d0b95f3f19,Fetch tags for fledge workflow to avoid un
 hms,d6ea5dfb6312d4260ba6061b9cf64d11,Fetch tags for fledge workflow to avoid unnecessary NEWS entries (#154).,NA,NA,NA,NA
 pillar,85730dc93fd038c71aabe36854107ac7,Fetch tags for fledge workflow to avoid unnecessary NEWS entries (#703).,NA,NA,NA,NA
 tibble,e85c8bfc03dc97981c65ff26f306301e,Fetch tags for fledge workflow to avoid unnecessary NEWS entries (#1617).,NA,NA,NA,NA
+blob,cf7675f3f4500ea0ce1b222e5c3b6374,Avoid failure in fledge workflow if no changes (#44).,NA,NA,NA,NA
+duckplyr,ca68724d4ea09b73d046724c97c568f0,`check_duplicate_names()` (#317).,NA,NA,NA,NA
+duckplyr,f8e64f567e695778f690bb2e3d0486a8,Check perfect roundtrip for constants again (#307).,NA,NA,NA,NA
+duckplyr,e5f233fb7eb8f63ae58e5c606d8f0edb,Correctly handle missing values in `if_else()`.,NA,NA,NA,NA
+duckplyr,cbac94cd33a2085dcc468a268ba82e4f,"Use relational operators from the rfuns extension as aliases, not as macros (#291).",NA,NA,NA,NA
+duckplyr,62dd37a3329b932777d48b0678845ae4,"Compute ptype only for join columns in a safe way without materialization, not for the entire data frame (#289).",NA,NA,NA,NA
+duckplyr,1f746f1812aa9915ffbd4e846bb81658,Edge case for `count()` (#282).,NA,NA,NA,NA
+duckplyr,64a52f61409d352e2228ed20b6802b78,"Attaching duckplyr via `library()` overwrites all dplyr methods again (#217, #276).",NA,NA,NA,NA
+duckplyr,10a0701f17bbca6ee71e37344ac850cc,"`expr_scrub()` can handle function-definitions (@​toppyy, #268, #271).",NA,NA,NA,NA
+duckplyr,ab2521d29bac695023a0d7f3d19c1d8f,`mutate()` constructs intermediate data frames for each new variable (#332).,NA,NA,NA,NA
+duckplyr,0a17f9a9a2df5187aeac11b22f7d9563,Harden telemetry code against invalid arguments (#321).,NA,NA,NA,NA
+duckplyr,0c20d7c12e9944fcf9edf923a3c50bb5,`across()` tweaks (#318).,NA,NA,NA,NA
+duckplyr,457400549c47da57b514563a57965930,Fall back to dplyr when passing `multiple` with joins (#323).,NA,NA,NA,NA
+duckplyr,8da5278c4899150baac87db8e99df5c6,Limit number of items that can be handled with `%in%` (#319).,NA,NA,NA,NA
+duckplyr,2aafdaef7a480bda5e70c2b1ef122f0c,Use Ubuntu noble for touchstone (#314).,NA,NA,NA,NA
+duckplyr,112bb52a23008146b6cf2423668f6cba,Enable touchstone (#313).,NA,NA,NA,NA
+duckplyr,6234f772f4eda45cd60cca699b63bfab,Use touchstone for continuous benchmarking (#311).,NA,NA,NA,NA
+duckplyr,d6e83e09faa6d03e743607b26d1acab6,More complete `across()` (#306).,NA,NA,NA,NA
+duckplyr,b70fd62a63ac95526196a2b6c547b23e,Add more tests from dplyr (#305).,NA,NA,NA,NA
+duckplyr,ecfda7084fb6758db71af57fa44fc143,Partial support for `across()` in `mutate()` and `summarise()` (#296).,NA,NA,NA,NA
+duckplyr,b992432dfc7e11f0fb510e88d07fb581,Rely on duckdb to check const feasibility (#293).,NA,NA,NA,NA
+duckplyr,e991ded3f3b54272a9657a2d88b1a1ba,Allow R 4.0 (#285).,NA,NA,NA,NA
+duckplyr,aff28b289bd90f03996e4c681099acec,"Avoid resetting expression depth, now in duckdb (#280).",NA,NA,NA,NA
+duckplyr,887e8311c667825698e6f1de6775ae05,Record and replay functionality now includes the top-level function being called (#273).,NA,NA,NA,NA
+duckplyr,6bf6a627f1fd041516e49ebbd4e67bdf,"Set the `duckdb.materialize_message` option on load only if not previously specified (@​stefanlinner, #220).",NA,NA,NA,NA
+duckplyr,c33371156cbbf6a07908b55268246b89,Configure IDE.,NA,NA,NA,NA
+duckplyr,9e42052c533b4b1b570050f0b55857fe,"Add lifecycle badges (#350, #353).",NA,NA,NA,NA
+duckplyr,de6c6ec7d8787fa940bc3774efb7056a,Comment design choice.,NA,NA,NA,NA
+duckplyr,58671b98a3ef471f06063bbc84cee35b,"`explain()` returns the input, invisibly (#331).",NA,NA,NA,NA
+duckplyr,b480653b1c4e7789b610c35abe03e1b7,Sync (#329).,NA,NA,NA,NA
+duckplyr,c1c8d38007dc21ddc83fefe0e5b6dc67,Nicer fallback error when function cannot be translated (#324).,NA,NA,NA,NA
+duckplyr,4edee5a9cf74a05d1545006e2347e572,Fix glue syntax.,NA,NA,NA,NA
+duckplyr,34ba4d7c5cd8ba7181c0b742bae6e8f6,Tweak workflow (#316).,NA,NA,NA,NA
+duckplyr,d2003d7737910caa3cdf83bf436d8313,Test touchstone (#315).,NA,NA,NA,NA
+duckplyr,2d1604465af2a81906dd3df4b5ba16e4,Avoid copying copy.,NA,NA,NA,NA
+duckplyr,187cb75747ca526d5dd7d8bee2859ddd,Sync tests with dplyr dev version (#304).,NA,NA,NA,NA
+duckplyr,d08660ff1ea1bcb635b0a77d94844d1f,Update snapshots.,NA,NA,NA,NA
+duckplyr,05d9aab7088c630baf82d59df0c29cad,Fix sync (#290).,NA,NA,NA,NA
+duckplyr,34e738f7601767e73ed32766a6335be7,Apply styler (#281).,NA,NA,NA,NA
+duckplyr,b2a1ef274eceb4c4fa9dfd98709f05f2,Sync patches (#277).,NA,NA,NA,NA
+duckplyr,8a588517ab20707daed24667544538ef,Fix typo.,NA,NA,NA,NA
+duckplyr,3ef042d169ec1efb3db68248b628e8db,Sync docs.,NA,NA,NA,NA
+duckplyr,bbf05120b66006e7128a541b06e19325,Sync docs branch (#266).,NA,NA,NA,NA
+duckplyr,adfdc83582c9f4ba129d91afd8ba670f,Avoid failure in fledge workflow if no changes (#368).,NA,NA,NA,NA
+duckplyr,72c75f2b12bf58b3a7f5c825013199ec,Fetch tags for fledge workflow to avoid unnecessary NEWS entries (#366).,NA,NA,NA,NA
+duckplyr,1db397a409319dff301dab2c5d774450,Use styler PR (#362).,NA,NA,NA,NA
+duckplyr,a45bcd7f1bde7133db8e13b25a78fe94,Run in Ubuntu Noble to support r-universe binaries (#352).,NA,NA,NA,NA
+duckplyr,25a1b2fa41170887df2e9044e23787eb,Correctly detect branch protection (#345).,NA,NA,NA,NA
+duckplyr,48a63770459db9e57a348fee842b9830,Use stable pak (#344).,NA,NA,NA,NA
+duckplyr,c98d1e79a9ed04d6da1de8bf15a12650,Latest changes (#328).,NA,NA,NA,NA
+duckplyr,e7349c09cf2b7090662f21dc7ebf14ba,Revert to status workflow (#326).,NA,NA,NA,NA
+duckplyr,3d88e5e18d0969cdb990c47f653d7754,Trigger run (#288).,NA,NA,NA,NA
+duckplyr,d53ed9166375e0d93ec37c78bbc067ce,Trigger run (#287).,NA,NA,NA,NA
+duckplyr,2e5cf8b43ae40db0cdd223783cd16fd3,Updates from duckdb (#286).,NA,NA,NA,NA
+duckplyr,204788937b8f265e8312db7419e99c33,Install local package for pkgdown builds (#258).,NA,NA,NA,NA
+duckplyr,1dbcb0c5de4face72cce011c1165ccaa,Fix condition for fledge workflow (#248).,NA,NA,NA,NA
+duckplyr,e03605ecd955ba1434e7f254ec09422d,Use curl.,NA,NA,NA,NA
+duckplyr,b2078ae75a62c6f544a771f3b1f5835a,Use gh to download artifact.,NA,NA,NA,NA
+duckplyr,009013632ffb71659351fffe4ecb7e85,Don't need to unzip artifact.,NA,NA,NA,NA
+duckplyr,9054847d7dfd2eb9a174779c679f2b4d,Restrict commit again to own PRs.,NA,NA,NA,NA
+duckplyr,5b1dd00ac2070575d842e84ac24bff9a,"Avoid `\code{}` (#340, #354).",NA,NA,NA,NA
+duckplyr,3081ab81888df85d9859c8c16f66c7e5,"Include section on code generation in contributing guide (#24, #348).",NA,NA,NA,NA
+duckplyr,1c16b8f606c2415d1927a5dfb985dfc0,Update README.,NA,NA,NA,NA
+duckplyr,39054c09e7a0d087afdded8bc9d1f73e,Sync.,NA,NA,NA,NA
+duckplyr,b0beda5690914b69cf272355d4e653b4,Sync.,NA,NA,NA,NA
+duckplyr,32f0e411bb087a99849f6f77d013a5f0,Sync.,NA,NA,NA,NA
+duckplyr,e701c212b82704d1dce32b5a41ebd3ca,Move logo.,NA,NA,NA,NA
+duckplyr,40e7c6424426be836a38b8ab75f5fc45,"Need file, not link, for logo on GitHub.",NA,NA,NA,NA
+duckplyr,04a74c7b93e1eee2c376231ae27db53d,Fix logo on GitHub.,NA,NA,NA,NA
+duckplyr,9b52753d4fadb84309ca0f0fe677d10b,Use downlit only for GitHub README (#262).,NA,NA,NA,NA
+duckplyr,74d1eadcf878297cc4309f6d889b60eb,"Add logo to README (@​luisDVA, #259).",NA,NA,NA,NA
+duckplyr,a03a9132fd577b2f0a5dba8d4e7917da,"Fix cut-and-paste typo (@​joakimlinde, #240).",NA,NA,NA,NA
+duckplyr,d83c3b4c28d212d48d20d2224cb6be47,"Enable plausible (#250, #251).",NA,NA,NA,NA
+duckplyr,24ae130cdd736f2d2309c7c6462fbca8,Use new URL for pkgdown (#247).,NA,NA,NA,NA
+duckplyr,709ef62deeac1d886ef603e1d5673fc7,Snapshot updates for rcc-smoke (null) (#356).,NA,NA,NA,NA
+duckplyr,6b6a246d52c146eccf0e346a62d45174,Add snapshot instead of output (#346).,NA,NA,NA,NA
+duckplyr,b4929c12c74cab59ce11b0653ef1d574,Snapshot updates for rcc-smoke (null) (#302).,NA,NA,NA,NA
+duckplyr,8dc7365e2ae7dc7c11029f8b3419a9b7,Test telemetry code (#275).,NA,NA,NA,NA
+duckplyr,37f4ec856b3ce06de59bfa8afcee9bfe,Adapt tests to duckdb release candidate (#261).,NA,NA,NA,NA
+hms,687f0666f1f916cbc8ae7ec70fd26a47,Avoid failure in fledge workflow if no changes (#156).,NA,NA,NA,NA
+pillar,fd0f7b70b76d792f59a5203ebb917213,Avoid failure in fledge workflow if no changes (#705).,NA,NA,NA,NA
+tibble,f95c9cf67ee11665e90df4ef209b05f9,Avoid failure in fledge workflow if no changes (#1618).,NA,NA,NA,NA
