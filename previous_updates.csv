@@ -18388,3 +18388,4 @@ duckplyr,37f4ec856b3ce06de59bfa8afcee9bfe,Adapt tests to duckdb release candidat
 hms,687f0666f1f916cbc8ae7ec70fd26a47,Avoid failure in fledge workflow if no changes (#156).,NA,NA,NA,NA
 pillar,fd0f7b70b76d792f59a5203ebb917213,Avoid failure in fledge workflow if no changes (#705).,NA,NA,NA,NA
 tibble,f95c9cf67ee11665e90df4ef209b05f9,Avoid failure in fledge workflow if no changes (#1618).,NA,NA,NA,NA
+gt,6ce2bec31981c41a0953beee15fbfa17,"Improved width calculations in `as_gtable()` (@​teunbrand, #1923)",NA,NA,NA,NA

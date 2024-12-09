@@ -20,6 +20,10 @@
     #1909)
 
     !end-bullet!
+-   !begin-bullet!
+    Improved width calculations in `as_gtable()` (@teunbrand, #1923)
+
+    !end-bullet!
 
 !end-bullets-1!
 
