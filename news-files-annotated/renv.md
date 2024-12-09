@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed an issue where `renv` could fail to check for updates for
+    packages installed using `pak` without an explicit branch specified.
+    (#2040)
+
+    !end-bullet!
+-   !begin-bullet!
     `renv::use()` no longer re-installs packages which are already
     installed and compatible with the requested packages. (#2044)
 
