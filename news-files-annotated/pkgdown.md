@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Articles (i.e., vignettes in `vignettes/articles`, created by
+    `usethis::use_article()` and available on pkgdown sites but not
+    included in a built package) have improved test cases (thanks to
+    @venpopov and @ethanbass).
+    !end-bullet!
+-   !begin-bullet!
     New `clean_site(force = TRUE)` for cleaning of `docs/` regardless of
     whether it was built by pkgdown (#2827).
     !end-bullet!

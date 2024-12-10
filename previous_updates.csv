@@ -18391,3 +18391,4 @@ tibble,f95c9cf67ee11665e90df4ef209b05f9,Avoid failure in fledge workflow if no c
 gt,6ce2bec31981c41a0953beee15fbfa17,"Improved width calculations in `as_gtable()` (@​teunbrand, #1923)",NA,NA,NA,NA
 renv,ac5288962c82aadeab827acdb3cc7a30,Fixed an issue where `renv` could fail to check for updates for packages installed using `pak` without an explicit branch specified. (#2040),NA,NA,NA,NA
 shiny,4de761e90d0ff7f9e4a5a0774f2509cb,Fixed a bug where stack traces from `observeEvent` were being stripped of stack frames too aggressively.,NA,NA,NA,NA
+pkgdown,cd7c80aced81dee9f3c5933422202206,"Articles (i.e., vignettes in `vignettes/articles`, created by `usethis::use_article()` and available on pkgdown sites but not included in a built package) have improved test cases (thanks to @​venpopov and @​ethanbass).",NA,NA,NA,NA
