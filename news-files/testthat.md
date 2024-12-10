@@ -1,5 +1,7 @@
 # testthat (development version)
 
+# testthat 3.2.2
+
 ## New expectations
 
 * `expect_s7_class()` tests if an object is an S7 class (#1580).
