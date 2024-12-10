@@ -87,6 +87,11 @@
     part of the new choices. (@dvg-p4 #4142)
 
     !end-bullet!
+-   !begin-bullet!
+    Fixed a bug where stack traces from `observeEvent` were being
+    stripped of stack frames too aggressively.
+
+    !end-bullet!
 
 !end-bullets-2!
 
