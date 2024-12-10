@@ -1,11 +1,9 @@
-Version 1.9.3.9000 (development)
-==============================
+Version 1.9.4
+=============
 
 ### Changes
 * Don't use CET and EST as timezones to accommodate the upgrade of tzdata in the R-devel
 
-### BUG FIXES
-* [#1170](https://github.com/tidyverse/lubridate/issues/1170) Fix `as_datetime` to parse partial timestamps (ex. "2009-01-01 20:30") just as as.POSIXct does.
 
 Version 1.9.3
 =============
