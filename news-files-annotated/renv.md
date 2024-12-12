@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed an issue where the repositories provided to `renv::init()`
+    were ignored when also initializing `renv` with a specific version
+    of Bioconductor.
+
+    !end-bullet!
+-   !begin-bullet!
     `renv::install()` gains the `include` parameter, which can be useful
     when you'd like to install a subset of dependencies within a project
     while also respecting any declared remotes in that project's
