@@ -1,10 +1,19 @@
 # pins (development version)
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    Support new `preview_data` parameter for pin previews on Posit
+    Connect (#850).
+    !end-bullet!
+
+!end-bullets-1!
+
 # pins 1.4.0
 
 ## Lifecycle changes
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     Changed the function signature of `pin_upload()` to be consistent
@@ -18,11 +27,11 @@
 
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 ## Other improvements
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     Added example Python code to pin previews for Posit Connect (#806).
@@ -54,24 +63,24 @@
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 # pins 1.3.0
 
 ## Breaking changes
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     Changed the function signature of `pin_write()` so arguments like
     `type` and `title` must be passed by name and not position (#792).
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 ## Other improvements
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     Removed content and user caches for Connect altogether. Now, we look
@@ -83,11 +92,11 @@
 
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 # pins 1.2.2
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     Fixed how dots are checked in `pin_write()` to make user-facing
@@ -109,11 +118,11 @@
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # pins 1.2.1
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     New environment variable `PINS_CACHE_DIR` controls the location of
@@ -129,13 +138,13 @@
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 # pins 1.2.0
 
 ## Breaking changes
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     `pin_write()` no longer writes identical pin contents by default,
@@ -143,11 +152,11 @@
     the pin contents are identical to the last version (#735).
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 ## Other improvements
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     The `print` method for boards no longer calls `pin_list()`
@@ -186,13 +195,13 @@
 
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 # pins 1.1.0
 
 ## Breaking changes
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     Change the function `board_rsconnect()` to `board_connect()`,
@@ -201,7 +210,7 @@
     !end-bullet!
 -   !begin-bullet!
     Changed `type = "csv"` to use R's default value for
-    `stringsAsFactors` i.e.  `FALSE` (#664).
+    `stringsAsFactors` i.e. `FALSE` (#664).
 
     !end-bullet!
 -   !begin-bullet!
@@ -215,11 +224,11 @@
 
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 ## Other improvements
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     Added vignettes describing how to manage custom formats and
@@ -262,11 +271,11 @@
 
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 # pins 1.0.3
 
-!begin-bullets-11!
+!begin-bullets-12!
 
 -   !begin-bullet!
     The `arrow` package is now suggested, rather than imported (#644,
@@ -290,11 +299,11 @@
 
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-12!
 
 # pins 1.0.2
 
-!begin-bullets-12!
+!begin-bullets-13!
 
 -   !begin-bullet!
     `board_rsconnect()` now correctly finds the created date for pins
@@ -311,11 +320,11 @@
 
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
 
 # pins 1.0.1
 
-!begin-bullets-13!
+!begin-bullets-14!
 
 -   !begin-bullet!
     `board_azure()` now allows you to set a `path` so that multiple
@@ -349,7 +358,7 @@
 
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-14!
 
 # pins 1.0.0
 
@@ -376,7 +385,7 @@ possible. Learn more in `vignette("pins-update")`.
 
 ## Modern pin functions
 
-!begin-bullets-14!
+!begin-bullets-15!
 
 -   !begin-bullet!
     `pin_read()` and `pin_write()` replace most uses of `pin_get()` and
@@ -438,13 +447,13 @@ possible. Learn more in `vignette("pins-update")`.
 
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-15!
 
 ## Modern boards
 
 This version includes the following modern boards:
 
-!begin-bullets-15!
+!begin-bullets-16!
 
 -   !begin-bullet!
     `board_azure()` stores data in Azure's blob storage. It is built on
@@ -494,7 +503,7 @@ This version includes the following modern boards:
 
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-16!
 
 The legacy boards will continue to work with the legacy pins API; we
 will implement modern versions of the remaining legacy boards based on
@@ -502,7 +511,7 @@ user feedback.
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-16!
+!begin-bullets-17!
 
 -   !begin-bullet!
     All board objects now have class beginning with `pins_board_` and
@@ -559,13 +568,13 @@ user feedback.
 
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-17!
 
 # pins 0.4.5
 
 ## Pins
 
-!begin-bullets-17!
+!begin-bullets-18!
 
 -   !begin-bullet!
     Support downloading remote files when service returns incompatible
@@ -581,32 +590,32 @@ user feedback.
 
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-18!
 
 ## Boards
 
-!begin-bullets-18!
+!begin-bullets-19!
 
 -   !begin-bullet!
     Silenced 'no encoding supplied' warning (#330).
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-19!
 
 ## Local
 
-!begin-bullets-19!
+!begin-bullets-20!
 
 -   !begin-bullet!
     `pin_find()` no longer searches text with an undocumented regular
     expression syntax (#270).
     !end-bullet!
 
-!end-bullets-19!
+!end-bullets-20!
 
 ## S3
 
-!begin-bullets-20!
+!begin-bullets-21!
 
 -   !begin-bullet!
     Default to using HTTPS in S3 boards (#304).
@@ -618,11 +627,11 @@ user feedback.
 
     !end-bullet!
 
-!end-bullets-20!
+!end-bullets-21!
 
 ## Cloud
 
-!begin-bullets-21!
+!begin-bullets-22!
 
 -   !begin-bullet!
     Support for `path` to register a board under a subpath for Azure,
@@ -635,11 +644,11 @@ user feedback.
 
     !end-bullet!
 
-!end-bullets-21!
+!end-bullets-22!
 
 ## GitHub
 
-!begin-bullets-22!
+!begin-bullets-23!
 
 -   !begin-bullet!
     Properly store relative paths when `path` parameter is specified in
@@ -660,11 +669,11 @@ user feedback.
 
     !end-bullet!
 
-!end-bullets-22!
+!end-bullets-23!
 
 ## RStudio Connect
 
-!begin-bullets-23!
+!begin-bullets-24!
 
 -   !begin-bullet!
     Invalid 'account' or 'server' parameters show proper errors (#296).
@@ -703,13 +712,13 @@ user feedback.
 
     !end-bullet!
 
-!end-bullets-23!
+!end-bullets-24!
 
 # pins 0.4.4
 
 ## Pins
 
-!begin-bullets-24!
+!begin-bullets-25!
 
 -   !begin-bullet!
     For files bigger than 100MB `pin()` creates symlinks to speed up
@@ -722,44 +731,44 @@ user feedback.
 
     !end-bullet!
 
-!end-bullets-24!
+!end-bullets-25!
 
 ## Google Cloud
 
-!begin-bullets-25!
+!begin-bullets-26!
 
 -   !begin-bullet!
     Disable caching on `data.txt` to support creating multiple pins at
     once (#275).
     !end-bullet!
 
-!end-bullets-25!
+!end-bullets-26!
 
 ## RStudio
 
-!begin-bullets-26!
+!begin-bullets-27!
 
 -   !begin-bullet!
     Prevent connections pane from hanging when multiple pins are updated
     at once (#280).
     !end-bullet!
 
-!end-bullets-26!
+!end-bullets-27!
 
 ## Website
 
-!begin-bullets-27!
+!begin-bullets-28!
 
 -   !begin-bullet!
     Support for `pin_get(download = FALSE)` to avoid checking for
     updates.
     !end-bullet!
 
-!end-bullets-27!
+!end-bullets-28!
 
 ## RStudio Connect
 
-!begin-bullets-28!
+!begin-bullets-29!
 
 -   !begin-bullet!
     Support for servers with mismatched `http` vs `https` protocols.
@@ -771,37 +780,37 @@ user feedback.
 
     !end-bullet!
 
-!end-bullets-28!
+!end-bullets-29!
 
 # pins 0.4.3
 
 ## Boards
 
-!begin-bullets-29!
+!begin-bullets-30!
 
 -   !begin-bullet!
     Properly export `board_pin_versions` to allow custom boards
     extending versions (#265).
     !end-bullet!
 
-!end-bullets-29!
+!end-bullets-30!
 
 ## Website
 
-!begin-bullets-30!
+!begin-bullets-31!
 
 -   !begin-bullet!
     Fix regression creating pins when using a brand new cloud board
     (#268).
     !end-bullet!
 
-!end-bullets-30!
+!end-bullets-31!
 
 # pins 0.4.2
 
 ## Website
 
-!begin-bullets-31!
+!begin-bullets-32!
 
 -   !begin-bullet!
     Fix issue removing pins with custom domain names from cloud boards
@@ -818,11 +827,11 @@ user feedback.
 
     !end-bullet!
 
-!end-bullets-31!
+!end-bullets-32!
 
 ## RStudio Connect
 
-!begin-bullets-32!
+!begin-bullets-33!
 
 -   !begin-bullet!
     Support for `versions = FALSE` in `board_register()` to avoid using
@@ -845,13 +854,13 @@ user feedback.
 
     !end-bullet!
 
-!end-bullets-32!
+!end-bullets-33!
 
 # pins 0.4.1
 
 ## Pin
 
-!begin-bullets-33!
+!begin-bullets-34!
 
 -   !begin-bullet!
     When running in production environments (which usually set the
@@ -888,11 +897,11 @@ user feedback.
 
     !end-bullet!
 
-!end-bullets-33!
+!end-bullets-34!
 
 ## RStudio Connect
 
-!begin-bullets-34!
+!begin-bullets-35!
 
 -   !begin-bullet!
     Fix when overriding pin with corrupt metadata.
@@ -908,21 +917,21 @@ user feedback.
 
     !end-bullet!
 
-!end-bullets-34!
+!end-bullets-35!
 
 ## Kaggle
 
-!begin-bullets-35!
+!begin-bullets-36!
 
 -   !begin-bullet!
     Support to find and download competition datasets.
     !end-bullet!
 
-!end-bullets-35!
+!end-bullets-36!
 
 # pins 0.4.0
 
-!begin-bullets-36!
+!begin-bullets-37!
 
 -   !begin-bullet!
     Support for versioning in all boards.
@@ -933,11 +942,11 @@ user feedback.
 
     !end-bullet!
 
-!end-bullets-36!
+!end-bullets-37!
 
 ## Pin
 
-!begin-bullets-37!
+!begin-bullets-38!
 
 -   !begin-bullet!
     Finding pins with `pin_find()` sort results by default (#201).
@@ -965,11 +974,11 @@ user feedback.
 
     !end-bullet!
 
-!end-bullets-37!
+!end-bullets-38!
 
 ## RStudio
 
-!begin-bullets-38!
+!begin-bullets-39!
 
 -   !begin-bullet!
     Support `access_type` parameter for RStudio Connect.
@@ -984,11 +993,11 @@ user feedback.
 
     !end-bullet!
 
-!end-bullets-38!
+!end-bullets-39!
 
 ## RStudio Connect
 
-!begin-bullets-39!
+!begin-bullets-40!
 
 -   !begin-bullet!
     Support for `code` parameter in `pin()` to customize R code used in
@@ -1008,11 +1017,11 @@ user feedback.
 
     !end-bullet!
 
-!end-bullets-39!
+!end-bullets-40!
 
 ## GitHub
 
-!begin-bullets-40!
+!begin-bullets-41!
 
 -   !begin-bullet!
     Support for `versions = FALSE` in `board_register()` to also delete
@@ -1034,11 +1043,11 @@ user feedback.
 
     !end-bullet!
 
-!end-bullets-40!
+!end-bullets-41!
 
 ## Websites
 
-!begin-bullets-41!
+!begin-bullets-42!
 
 -   !begin-bullet!
     Using `pin()` now searches for `data.txt` files in URLs when the URL
@@ -1046,47 +1055,47 @@ user feedback.
     `pins.search.datatxt` option.
     !end-bullet!
 
-!end-bullets-41!
+!end-bullets-42!
 
 # pins 0.3.2
 
 ## Pins
 
-!begin-bullets-42!
+!begin-bullets-43!
 
 -   !begin-bullet!
     `pin_info()` adds support for `metadata` parameter to avoid
     retrieving pin contents.
     !end-bullet!
 
-!end-bullets-42!
+!end-bullets-43!
 
 ## S3
 
-!begin-bullets-43!
+!begin-bullets-44!
 
 -   !begin-bullet!
     Added support for `host` parameter to configure "s3.amazonaws.com"
     to custom locations.
     !end-bullet!
 
-!end-bullets-43!
+!end-bullets-44!
 
 ## GitHub
 
-!begin-bullets-44!
+!begin-bullets-45!
 
 -   !begin-bullet!
     Fix regression uploading large datasets as release files.
     !end-bullet!
 
-!end-bullets-44!
+!end-bullets-45!
 
 # pins 0.3.1
 
 ## Pins
 
-!begin-bullets-45!
+!begin-bullets-46!
 
 -   !begin-bullet!
     `pin_info()` prints long character strings in their own line.
@@ -1103,21 +1112,21 @@ user feedback.
 
     !end-bullet!
 
-!end-bullets-45!
+!end-bullets-46!
 
 ## Azure
 
-!begin-bullets-46!
+!begin-bullets-47!
 
 -   !begin-bullet!
     Added missing `key` parameter in `board_register_azure()`.
     !end-bullet!
 
-!end-bullets-46!
+!end-bullets-47!
 
 ## RStudio
 
-!begin-bullets-47!
+!begin-bullets-48!
 
 -   !begin-bullet!
     Fixed connection suggested code when caused by `pin_find()` (#137).
@@ -1128,11 +1137,11 @@ user feedback.
 
     !end-bullet!
 
-!end-bullets-47!
+!end-bullets-48!
 
 ## RStudio Connect
 
-!begin-bullets-48!
+!begin-bullets-49!
 
 -   !begin-bullet!
     Fix issue uploading large pins causing
@@ -1154,11 +1163,11 @@ user feedback.
 
     !end-bullet!
 
-!end-bullets-48!
+!end-bullets-49!
 
 # pins 0.3.0
 
-!begin-bullets-49!
+!begin-bullets-50!
 
 -   !begin-bullet!
     Support for Azure board.
@@ -1173,11 +1182,11 @@ user feedback.
 
     !end-bullet!
 
-!end-bullets-49!
+!end-bullets-50!
 
 ## Pins
 
-!begin-bullets-50!
+!begin-bullets-51!
 
 -   !begin-bullet!
     `pin()` extracts URLs that end in `.gz` and `zip`, which can be
@@ -1227,22 +1236,22 @@ user feedback.
 
     !end-bullet!
 
-!end-bullets-50!
+!end-bullets-51!
 
 ## Boards
 
-!begin-bullets-51!
+!begin-bullets-52!
 
 -   !begin-bullet!
     Avoid "cannot create dir" warning in systems with an empty cache
     folder.
     !end-bullet!
 
-!end-bullets-51!
+!end-bullets-52!
 
 ## RStudio
 
-!begin-bullets-52!
+!begin-bullets-53!
 
 -   !begin-bullet!
     Gracefully handle errors when a pin's preview can't be created.
@@ -1262,11 +1271,11 @@ user feedback.
 
     !end-bullet!
 
-!end-bullets-52!
+!end-bullets-53!
 
 ## RStudio Connect
 
-!begin-bullets-53!
+!begin-bullets-54!
 
 -   !begin-bullet!
     Fix issue where `pin_find()` would not show all available pins.
@@ -1302,21 +1311,21 @@ user feedback.
 
     !end-bullet!
 
-!end-bullets-53!
+!end-bullets-54!
 
 ## Python
 
-!begin-bullets-54!
+!begin-bullets-55!
 
 -   !begin-bullet!
     Support for Python 3.
     !end-bullet!
 
-!end-bullets-54!
+!end-bullets-55!
 
 ## Websites
 
-!begin-bullets-55!
+!begin-bullets-56!
 
 -   !begin-bullet!
     The `name` parameter in `board_register_datatxt()` is now optional.
@@ -1327,24 +1336,24 @@ user feedback.
 
     !end-bullet!
 
-!end-bullets-55!
+!end-bullets-56!
 
 ## GitHub
 
-!begin-bullets-56!
+!begin-bullets-57!
 
 -   !begin-bullet!
     Various fixes for GitHub boards using the `path` parameter when
     registering the board (#121).
     !end-bullet!
 
-!end-bullets-56!
+!end-bullets-57!
 
 # pins 0.2.0
 
 ## RStudio Connect
 
-!begin-bullets-57!
+!begin-bullets-58!
 
 -   !begin-bullet!
     Support for retrieving pins shared by others in RStudio Connect
@@ -1377,11 +1386,11 @@ user feedback.
 
     !end-bullet!
 
-!end-bullets-57!
+!end-bullets-58!
 
 ## GitHub
 
-!begin-bullets-58!
+!begin-bullets-59!
 
 -   !begin-bullet!
     `board_register_github()` now checks for the repo to exist (#63).
@@ -1400,11 +1409,11 @@ user feedback.
 
     !end-bullet!
 
-!end-bullets-58!
+!end-bullets-59!
 
 ## Boards
 
-!begin-bullets-59!
+!begin-bullets-60!
 
 -   !begin-bullet!
     Using a board will attempt to automatically register, such that
@@ -1425,33 +1434,33 @@ user feedback.
 
     !end-bullet!
 
-!end-bullets-59!
+!end-bullets-60!
 
 ## Websites
 
-!begin-bullets-60!
+!begin-bullets-61!
 
 -   !begin-bullet!
     Fix for data.txt boards created from GitHub boards using large
     files.
     !end-bullet!
 
-!end-bullets-60!
+!end-bullets-61!
 
 # pins 0.1.2
 
-!begin-bullets-61!
+!begin-bullets-62!
 
 -   !begin-bullet!
     Support to upload files larger than 50mb in GitHub boards as release
     files.
     !end-bullet!
 
-!end-bullets-61!
+!end-bullets-62!
 
 # pins 0.1.1
 
-!begin-bullets-62!
+!begin-bullets-63!
 
 -   !begin-bullet!
     Fix CRAN request to explicitly opt-in to use local home path as
@@ -1467,11 +1476,11 @@ user feedback.
 
     !end-bullet!
 
-!end-bullets-62!
+!end-bullets-63!
 
 # pins 0.1.0
 
-!begin-bullets-63!
+!begin-bullets-64!
 
 -   !begin-bullet!
     Support for local board.
@@ -1498,4 +1507,4 @@ user feedback.
 
     !end-bullet!
 
-!end-bullets-63!
+!end-bullets-64!
