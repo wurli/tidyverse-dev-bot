@@ -18397,3 +18397,4 @@ renv,5fc7fbc71b0d45a4da33639c42fa8cea,Fixed an issue where the repositories prov
 pins,3360a1f5eb4775fa08352b76c7310467,Support new `preview_data` parameter for pin previews on Posit Connect (#850).,NA,NA,NA,NA
 testthat,ebaf8be194085267bc4193fa5a7f2c47,"Fixed an issue where calling `skip()` outside of an active test could cause an unexpected error (2, #2039).",NA,NA,NA,NA
 httr2,10fa16ee8b77a9ffc7aa5067a3cc40ef,"Errors thrown during the parsing of an OAuth response now have a dedicated `httr2_oauth_parse` error class that includes the original response object (@​atheriel, #596).",NA,NA,NA,NA
+pkgdown,00421d73fd56f5d5006c69639b778b9a,"Reinstate Rd macro loading, which was accidentally disabled in v2.1.1 (#2782).",NA,NA,NA,NA

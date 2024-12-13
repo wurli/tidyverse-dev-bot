@@ -19,6 +19,10 @@
     and then running `pkgdown::build_favicons()`.
     !end-bullet!
 -   !begin-bullet!
+    Reinstate Rd macro loading, which was accidentally disabled in
+    v2.1.1 (#2782).
+    !end-bullet!
+-   !begin-bullet!
     The language of the site is set from the first `Language:` in the
     `DESCRIPTION` if it is available and no other language is specified
     (@jonthegeek, #2808).
