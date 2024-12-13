@@ -5,6 +5,11 @@
 -   !begin-bullet!
     Support new `preview_data` parameter for pin previews on Posit
     Connect (#850).
+
+    !end-bullet!
+-   !begin-bullet!
+    Fixed a bug in how `pin_upload()` handles pin names (#852).
+
     !end-bullet!
 
 !end-bullets-1!
