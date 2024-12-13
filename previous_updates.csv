@@ -18399,3 +18399,4 @@ testthat,ebaf8be194085267bc4193fa5a7f2c47,"Fixed an issue where calling `skip()`
 httr2,10fa16ee8b77a9ffc7aa5067a3cc40ef,"Errors thrown during the parsing of an OAuth response now have a dedicated `httr2_oauth_parse` error class that includes the original response object (@​atheriel, #596).",NA,NA,NA,NA
 pkgdown,00421d73fd56f5d5006c69639b778b9a,"Reinstate Rd macro loading, which was accidentally disabled in v2.1.1 (#2782).",NA,NA,NA,NA
 pins,c84ee89cded385234cc04d70cb56327d,Fixed a bug in how `pin_upload()` handles pin names (#852).,NA,NA,NA,NA
+pins,478f09798dba637d70ea6f977beb0806,Improved documentation for S3-compatible object storage (#853).,NA,NA,NA,NA

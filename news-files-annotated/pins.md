@@ -11,6 +11,10 @@
     Fixed a bug in how `pin_upload()` handles pin names (#852).
 
     !end-bullet!
+-   !begin-bullet!
+    Improved documentation for S3-compatible object storage (#853).
+
+    !end-bullet!
 
 !end-bullets-1!
 
