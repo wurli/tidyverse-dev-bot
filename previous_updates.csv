@@ -18400,3 +18400,6 @@ httr2,10fa16ee8b77a9ffc7aa5067a3cc40ef,"Errors thrown during the parsing of an O
 pkgdown,00421d73fd56f5d5006c69639b778b9a,"Reinstate Rd macro loading, which was accidentally disabled in v2.1.1 (#2782).",NA,NA,NA,NA
 pins,c84ee89cded385234cc04d70cb56327d,Fixed a bug in how `pin_upload()` handles pin names (#852).,NA,NA,NA,NA
 pins,478f09798dba637d70ea6f977beb0806,Improved documentation for S3-compatible object storage (#853).,NA,NA,NA,NA
+duckplyr,1e0346e3d24c651905f36ec51a464c2a,Bump duckdb dependency.,NA,NA,NA,NA
+duckplyr,e66c6be62973aaeede03f3d290e28ff8,Tweak method and behavior (#373).,NA,NA,NA,NA
+duckplyr,7bf04ff72d80005479f67de50f7545c8,"Add manual pages for dplyr methods (@​maelle, #214, #359).",NA,NA,NA,NA
