@@ -18403,3 +18403,5 @@ pins,478f09798dba637d70ea6f977beb0806,Improved documentation for S3-compatible o
 duckplyr,1e0346e3d24c651905f36ec51a464c2a,Bump duckdb dependency.,NA,NA,NA,NA
 duckplyr,e66c6be62973aaeede03f3d290e28ff8,Tweak method and behavior (#373).,NA,NA,NA,NA
 duckplyr,7bf04ff72d80005479f67de50f7545c8,"Add manual pages for dplyr methods (@​maelle, #214, #359).",NA,NA,NA,NA
+pillar,92d8c255b918247624fee70c877e3770,"`tbl_format_setup()` gains a `setup` argument that supports printing the header before the data for the body is available, e.g., for remote backends such as databases (#686).",NA,NA,NA,NA
+pillar,7482071d7c1cae3b0a759b975cec5fc2,"Update `_pkgdown.yml` to bring back search bar (@​olivroy, #667).",NA,NA,NA,NA
