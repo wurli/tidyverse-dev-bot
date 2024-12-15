@@ -18405,3 +18405,18 @@ duckplyr,e66c6be62973aaeede03f3d290e28ff8,Tweak method and behavior (#373).,NA,N
 duckplyr,7bf04ff72d80005479f67de50f7545c8,"Add manual pages for dplyr methods (@​maelle, #214, #359).",NA,NA,NA,NA
 pillar,92d8c255b918247624fee70c877e3770,"`tbl_format_setup()` gains a `setup` argument that supports printing the header before the data for the body is available, e.g., for remote backends such as databases (#686).",NA,NA,NA,NA
 pillar,7482071d7c1cae3b0a759b975cec5fc2,"Update `_pkgdown.yml` to bring back search bar (@​olivroy, #667).",NA,NA,NA,NA
+duckplyr,0796adc2e250c2eec11287dc9438d39a,"New `last_rel()` to retrieve the last relation object used in materialization (#209, #375).",NA,NA,NA,NA
+duckplyr,0c91b938b60a7261437637e777340688,"Improve `as_duckplyr_df()` error message for invalid `.data` (@​maelle, #339).",NA,NA,NA,NA
+duckplyr,3a1ab59f232a17e152eaed56a1c1db2c,Add read-only markers for overwrite + restore.,NA,NA,NA,NA
+duckplyr,3b6d551a35cf4e5bc10ec71042a0b57f,Cleanup (#377).,NA,NA,NA,NA
+duckplyr,b9a8e286cdc3cf6946e1abab5048c867,"Avoid `""duckdb.materialize_message""` option (#376).",NA,NA,NA,NA
+duckplyr,be4b317350bdd4e3b2da8a6eb403dd2f,Update TPCH outputs to account for data changes in duckdb 0.8.0 (#294).,NA,NA,NA,NA
+duckplyr,b84c2855132d9898cdeee38ff23a86d8,Fix rendering in vanilla session.,NA,NA,NA,NA
+duckplyr,0c8bad8a4998e1222f17fe5e7d04d0c2,"Add vignette about missing parts (@​maelle, #218, #371).",NA,NA,NA,NA
+duckplyr,a09913e88f99ba13022828c771d10780,"Refactor README (@​maelle, #208, #334, #370).",NA,NA,NA,NA
+duckplyr,ed3f0571164ae5696ae46d586a23549b,"Comparison expressions are translated in a way that allows them to be pushed down to Parquet (@​toppyy, #270).",NA,NA,NA,NA
+duckplyr,8dd8f688b51fd094b02f0323a857ae49,Add snapshot test for conversion error in `as_duckplyr_df()`.,NA,NA,NA,NA
+pillar,b13e63bf99ddb8535c0fc71724743016,"Fix printing of infinite times (#645, #710).",NA,NA,NA,NA
+pillar,d6572a0084f518e178c7efe0d1453e84,"Fix tibble tests (#665, #709).",NA,NA,NA,NA
+pillar,4a1788db1c897c93a4e3f06ded50bd58,Add `index.md`.,NA,NA,NA,NA
+pillar,f58b61e1b8538ff346e75643efcf782d,"Describe `getOption(""width"")` (#671, #708).",NA,NA,NA,NA
