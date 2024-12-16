@@ -18420,3 +18420,4 @@ pillar,b13e63bf99ddb8535c0fc71724743016,"Fix printing of infinite times (#645, #
 pillar,d6572a0084f518e178c7efe0d1453e84,"Fix tibble tests (#665, #709).",NA,NA,NA,NA
 pillar,4a1788db1c897c93a4e3f06ded50bd58,Add `index.md`.,NA,NA,NA,NA
 pillar,f58b61e1b8538ff346e75643efcf782d,"Describe `getOption(""width"")` (#671, #708).",NA,NA,NA,NA
+xml2,aec90c864b24045f630e74eeb9fec876,Windows: use libxml2 from Rtools if found,NA,NA,NA,NA
