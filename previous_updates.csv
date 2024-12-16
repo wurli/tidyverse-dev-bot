@@ -18421,3 +18421,19 @@ pillar,d6572a0084f518e178c7efe0d1453e84,"Fix tibble tests (#665, #709).",NA,NA,N
 pillar,4a1788db1c897c93a4e3f06ded50bd58,Add `index.md`.,NA,NA,NA,NA
 pillar,f58b61e1b8538ff346e75643efcf782d,"Describe `getOption(""width"")` (#671, #708).",NA,NA,NA,NA
 xml2,aec90c864b24045f630e74eeb9fec876,Windows: use libxml2 from Rtools if found,NA,NA,NA,NA
+duckplyr,67dd5d6d4d15759c6f0afe2a04855404,Use `as_duckplyr_df_impl()` in verbs (#386).,NA,NA,NA,NA
+duckplyr,08734ced8956562f8137f2acf2a14b39,Use `as_ducktbl()` in touchstone script (#385).,NA,NA,NA,NA
+duckplyr,f82f3ffc3eb98b9ffdfe7d5acdcd1abf,"New `as_ducktbl()`, replaces `as_duckplyr_tibble()` and `as_duckplyr_df()` (#383).",NA,NA,NA,NA
+duckplyr,8925006cdec16a62fca1c93fde9c6aca,New `ducktbl()` (#382).,NA,NA,NA,NA
+duckplyr,fa55196d0336baa656cb77da0aff8423,Fix comment in touchstone script (#387).,NA,NA,NA,NA
+duckplyr,e652a9252f2b97d69c8955d991325d03,Use `as_duckplyr_df_impl()` in generated code (#384).,NA,NA,NA,NA
+duckplyr,982d942536e77eb15fce4de365f9e22e,Legacy duckdb script.,NA,NA,NA,NA
+duckplyr,adc0c8d9ed07a801f8212e8210db4ca6,"Printing a duckplyr frame no longer materializes (#255, #378).",NA,NA,NA,NA
+duckplyr,eb48a83b6868ae1aaa6d54c8e9635623,Use `ducktbl()` in tests (#388).,NA,NA,NA,NA
+duckplyr,85e766ffcab54e2bf2866183be8dd5fd,Avoid `as_duckplyr_df()` (#389).,NA,NA,NA,NA
+duckplyr,f686550e0d2f686eaf8be29b52cfb920,Skip test that requires dplyr \> 1.1.4.,NA,NA,NA,NA
+pillar,f5da54a3a2159b898370455f04acd999,"Breaking change: Hard-deprecate ellipsis for printing and formatting (#585, #637).",NA,NA,NA,NA
+pillar,0d74ba91fcab9d5997305dd858128a01,"Snapshot updates for R-CMD-check-dev ({""package"":""ggplot2""}) (#670).",NA,NA,NA,NA
+pillar,4fea8c209513ae48e19524477b904719,Fix tests for older R versions.,NA,NA,NA,NA
+pillar,0a49969fde6d0b4b266614c783863440,"Breaking change: Hard-deprecate ellipsis for printing and formatting (#585, #637).",NA,NA,NA,NA
+tibble,5707a3a8a1fcc52289323ed37b6bd13b,Document that `...` must be empty in `print.tbl_df()`.,NA,NA,NA,NA
