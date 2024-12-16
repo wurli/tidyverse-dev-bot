@@ -18444,3 +18444,8 @@ duckplyr,f30ffefc4c48743be4ed2bd58ae86879,New `is_ducktbl()` (#391).,NA,NA,NA,NA
 duckplyr,7ea524719cce83ea94fba4c7d4bf58fe,"Add `""lazy_duckplyr_df""` class that requires `collect()` (#381, #390).",NA,NA,NA,NA
 duckplyr,e329bb0adbde156fc42c54c78d082c14,Tweak `as_ducktbl()` for dbplyr lazy tables (#395).,NA,NA,NA,NA
 duckplyr,3a1da3208e4f7ff597b53319fd661d51,"Add link to DuckDB configuration (#174, #398).",NA,NA,NA,NA
+shiny,5aa095f9ff11162eded4272191a573ad,"When busy indicators are enabled (i.e., `useBusyIndicators()` is in the UI), Shiny now:",NA,NA,NA,NA
+shiny,5aa095f9ff11162eded4272191a573ad,• Shows the pulse indicator when dynamic UI elements are recalculating and no other spinners are visible in the app. (#4137),NA,NA,NA,NA
+shiny,5aa095f9ff11162eded4272191a573ad,• Makes the pulse indicator slightly smaller by default and improves its appearance to better blend with any background. (#4122),NA,NA,NA,NA
+shiny,82ee0c589a412deb639ba7129801e8d4,"Improve collection of deep stack traces (stack traces that are tracked across steps in an async promise chain) with `{coro}` async generators such as `{elmer}` chat streams. Previously, Shiny treated each iteration of an async generator as a distinct deep stack, leading to pathologically long stack traces; now, Shiny only keeps/prints unique deep stack trace, discarding duplicates. (#4156)",NA,NA,NA,NA
+shiny,730b0a5f84d2280096ea5cb3f5b7c14e,Fixed a bug where stack traces from `observeEvent()` were being stripped of stack frames too aggressively. (#4163),NA,NA,NA,NA
