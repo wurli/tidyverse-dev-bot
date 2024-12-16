@@ -18437,3 +18437,10 @@ pillar,0d74ba91fcab9d5997305dd858128a01,"Snapshot updates for R-CMD-check-dev ({
 pillar,4fea8c209513ae48e19524477b904719,Fix tests for older R versions.,NA,NA,NA,NA
 pillar,0a49969fde6d0b4b266614c783863440,"Breaking change: Hard-deprecate ellipsis for printing and formatting (#585, #637).",NA,NA,NA,NA
 tibble,5707a3a8a1fcc52289323ed37b6bd13b,Document that `...` must be empty in `print.tbl_df()`.,NA,NA,NA,NA
+duckplyr,be47a96363d4eff9cca5a9bb1366955e,"New `ducksql()` (duckdb/duckdb-r#32, #397).",NA,NA,NA,NA
+duckplyr,afc8c6d9811951c93ea36623cdfed3ea,"New `duckparquet()`, `duckcsv()`, `duckjson()` and `duckfile()`, deprecating `duckplyr_df_from_*()` and `df_from_*()` functions (#210, #396).",NA,NA,NA,NA
+duckplyr,b61749f9fe50cb9cfce1715db6a94e73,Deprecate `is_duckplyr_df()` (#392).,NA,NA,NA,NA
+duckplyr,f30ffefc4c48743be4ed2bd58ae86879,New `is_ducktbl()` (#391).,NA,NA,NA,NA
+duckplyr,7ea524719cce83ea94fba4c7d4bf58fe,"Add `""lazy_duckplyr_df""` class that requires `collect()` (#381, #390).",NA,NA,NA,NA
+duckplyr,e329bb0adbde156fc42c54c78d082c14,Tweak `as_ducktbl()` for dbplyr lazy tables (#395).,NA,NA,NA,NA
+duckplyr,3a1da3208e4f7ff597b53319fd661d51,"Add link to DuckDB configuration (#174, #398).",NA,NA,NA,NA
