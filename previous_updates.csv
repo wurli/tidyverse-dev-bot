@@ -18451,3 +18451,4 @@ shiny,82ee0c589a412deb639ba7129801e8d4,"Improve collection of deep stack traces 
 shiny,730b0a5f84d2280096ea5cb3f5b7c14e,Fixed a bug where stack traces from `observeEvent()` were being stripped of stack frames too aggressively. (#4163),NA,NA,NA,NA
 duckplyr,75b1014973db4ec2d1118e043005885d,"Add item in checklist when adding a new translation (@​maelle, #399).",NA,NA,NA,NA
 pak,f8f14560d66fd6171456b06a2bb93a23,"pak now uses the `use_bioconductor` configuration option in `meta_*()` and `repo_*()` functions (#295, #726, @​meztez).",NA,NA,NA,NA
+ggplot2,80c7535517fe55b8e44f14ee33d33af1,"`geom_ribbon()` now appropriately warns about, and removes, missing values (@​teunbrand, #6243).",NA,NA,NA,NA

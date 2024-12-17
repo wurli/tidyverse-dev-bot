@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `geom_ribbon()` now appropriately warns about, and removes, missing
+    values (@teunbrand, #6243).
+
+    !end-bullet!
+-   !begin-bullet!
     `guide_*()` can now accept two inside legend theme elements:
     `legend.position.inside` and `legend.justification.inside`, allowing
     inside legends to be placed at different positions. Only inside
