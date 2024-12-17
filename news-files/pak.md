@@ -1,5 +1,8 @@
 # pak (development version)
 
+* pak now uses the `use_bioconductor` configuration option in `meta_*()` and
+  `repo_*()` functions (#295, #726, @meztez).
+
 # pak 0.8.0
 
 * `pkg_deps()` now accepts a vector of package names.
