@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed an issue where packages installed from r-universe via an
+    explicit URL remote could not be restored. (#2060)
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed an issue where the repositories provided to `renv::init()`
     were ignored when also initializing `renv` with a specific version
     of Bioconductor.
