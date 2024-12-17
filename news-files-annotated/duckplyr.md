@@ -8,7 +8,7 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
-    New `ducksql()` (duckdb/duckdb-r#32, #397).
+    New `duck_sql()` (duckdb/duckdb-r#32, #397).
 
     !end-bullet!
 -   !begin-bullet!
@@ -65,7 +65,7 @@
 !begin-bullets-4!
 
 -   !begin-bullet!
-    New `ducksql()` (duckdb/duckdb-r#32, #397).
+    New `duck_sql()` (duckdb/duckdb-r#32, #397).
 
     !end-bullet!
 -   !begin-bullet!
