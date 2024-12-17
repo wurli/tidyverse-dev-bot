@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `renv` now detects dependencies from usages of `utils::citation()`.
+    (#2047)
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed an issue where packages installed from r-universe via an
     explicit URL remote could not be restored. (#2060)
 

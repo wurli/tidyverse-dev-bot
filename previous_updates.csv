@@ -18453,3 +18453,4 @@ duckplyr,75b1014973db4ec2d1118e043005885d,"Add item in checklist when adding a n
 pak,f8f14560d66fd6171456b06a2bb93a23,"pak now uses the `use_bioconductor` configuration option in `meta_*()` and `repo_*()` functions (#295, #726, @​meztez).",NA,NA,NA,NA
 ggplot2,80c7535517fe55b8e44f14ee33d33af1,"`geom_ribbon()` now appropriately warns about, and removes, missing values (@​teunbrand, #6243).",NA,NA,NA,NA
 renv,0dd5ba8325e49975912bce42a0c86a41,Fixed an issue where packages installed from r-universe via an explicit URL remote could not be restored. (#2060),NA,NA,NA,NA
+renv,bc9a902d96e59b9a70d4b699c47c3b37,`renv` now detects dependencies from usages of `utils::citation()`. (#2047),NA,NA,NA,NA
