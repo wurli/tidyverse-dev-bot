@@ -18457,3 +18457,4 @@ renv,bc9a902d96e59b9a70d4b699c47c3b37,`renv` now detects dependencies from usage
 pillar,9eded65bd555074473d3ffd46b8c9377,New `tbl_nrow()` generic to support lazy data frames (#679).,NA,NA,NA,NA
 duckplyr,e6b97ab082f942d8aed16bfccc2d207a,"New `duck_exec()`, replaces `duckplyr_execute()` (#404).",NA,NA,NA,NA
 duckplyr,32ac0ddb90119a7288ee01b068f5e6ce,IDE.,NA,NA,NA,NA
+duckplyr,e6d31099a3b33f5deaed97fb1d84e2ba,`duck_tbl()` and similar (#402).,NA,NA,NA,NA

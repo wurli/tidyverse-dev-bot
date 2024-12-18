@@ -9,6 +9,11 @@
 
 -   !begin-bullet!
     New `duck_exec()`, replaces `duckplyr_execute()` (#404).
+
+    !end-bullet!
+-   !begin-bullet!
+    `duck_tbl()` and similar (#402).
+
     !end-bullet!
 
 !end-bullets-1!
