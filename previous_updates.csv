@@ -18458,3 +18458,8 @@ pillar,9eded65bd555074473d3ffd46b8c9377,New `tbl_nrow()` generic to support lazy
 duckplyr,e6b97ab082f942d8aed16bfccc2d207a,"New `duck_exec()`, replaces `duckplyr_execute()` (#404).",NA,NA,NA,NA
 duckplyr,32ac0ddb90119a7288ee01b068f5e6ce,IDE.,NA,NA,NA,NA
 duckplyr,e6d31099a3b33f5deaed97fb1d84e2ba,`duck_tbl()` and similar (#402).,NA,NA,NA,NA
+duckplyr,88de6b0ea9a46e515d63c9fcbd4696eb,Depend on dplyr instead of reexporting all generics (#405).,NA,NA,NA,NA
+duckplyr,1eaa928a89ea1e1176f8d81d6dbd3cb9,NEWS.,NA,NA,NA,NA
+duckplyr,621343360c9a57bcf373fa71ad6b65bd,Clarify usage by reducing duplication (#400).,NA,NA,NA,NA
+duckplyr,d8e6eafabd44e7a4ff1d827db4d89157,Tweak developer vignette.,NA,NA,NA,NA
+duckplyr,7eabf2bfdedcd4eaf7bc3e10ec4d615f,New `flights_df()` used instead of `palmerpenguins::penguins` (#408).,NA,NA,NA,NA
