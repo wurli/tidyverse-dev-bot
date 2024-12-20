@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `url_parse()` now uses `curl::curl_parse_url()` which is much faster
+    and more correct (#577).
+
+    !end-bullet!
+-   !begin-bullet!
     `req_retry()` now defaults to `max_tries = 2` with a message. Set to
     `max_tries = 1` to disable retries.
 
