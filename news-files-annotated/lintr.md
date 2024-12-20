@@ -296,6 +296,11 @@
     `lint()` and friends emit a message if no lints are found (#2643,
     @IndrajeetPatil).
     !end-bullet!
+-   !begin-bullet!
+    `{lintr}` now has a hex sticker
+    (https://github.com/rstudio/hex-stickers/pull/110). Thank you,
+    @gregswinehart!
+    !end-bullet!
 
 !end-bullets-5!
 
