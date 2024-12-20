@@ -3,9 +3,15 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `req_retry()` now defaults to `max_tries = 2` with a message. Set to
+    `max_tries = 1` to disable retries.
+
+    !end-bullet!
+-   !begin-bullet!
     Errors thrown during the parsing of an OAuth response now have a
     dedicated `httr2_oauth_parse` error class that includes the original
     response object (@atheriel, #596).
+
     !end-bullet!
 
 !end-bullets-1!

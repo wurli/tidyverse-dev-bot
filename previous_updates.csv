@@ -18465,3 +18465,4 @@ duckplyr,d8e6eafabd44e7a4ff1d827db4d89157,Tweak developer vignette.,NA,NA,NA,NA
 duckplyr,7eabf2bfdedcd4eaf7bc3e10ec4d615f,New `flights_df()` used instead of `palmerpenguins::penguins` (#408).,NA,NA,NA,NA
 duckplyr,eeeb21bed65f6443b8e3ca24c3c5aa40,Disable vignette evaluation for R \< 4.1.,NA,NA,NA,NA
 lintr,ed4bc7d09681cf13edcca5b466c2f574,"`{lintr}` now has a hex sticker (https://github.com/rstudio/hex-stickers/pull/110). Thank you, @​gregswinehart!",NA,NA,NA,NA
+httr2,0840738bc4d82a101af84850be4b939f,`req_retry()` now defaults to `max_tries = 2` with a message. Set to `max_tries = 1` to disable retries.,NA,NA,NA,NA
