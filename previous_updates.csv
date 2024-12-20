@@ -18463,3 +18463,4 @@ duckplyr,1eaa928a89ea1e1176f8d81d6dbd3cb9,NEWS.,NA,NA,NA,NA
 duckplyr,621343360c9a57bcf373fa71ad6b65bd,Clarify usage by reducing duplication (#400).,NA,NA,NA,NA
 duckplyr,d8e6eafabd44e7a4ff1d827db4d89157,Tweak developer vignette.,NA,NA,NA,NA
 duckplyr,7eabf2bfdedcd4eaf7bc3e10ec4d615f,New `flights_df()` used instead of `palmerpenguins::penguins` (#408).,NA,NA,NA,NA
+duckplyr,eeeb21bed65f6443b8e3ca24c3c5aa40,Disable vignette evaluation for R \< 4.1.,NA,NA,NA,NA
