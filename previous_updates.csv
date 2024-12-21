@@ -18467,3 +18467,6 @@ duckplyr,eeeb21bed65f6443b8e3ca24c3c5aa40,Disable vignette evaluation for R \< 4
 lintr,ed4bc7d09681cf13edcca5b466c2f574,"`{lintr}` now has a hex sticker (https://github.com/rstudio/hex-stickers/pull/110). Thank you, @​gregswinehart!",NA,NA,NA,NA
 httr2,0840738bc4d82a101af84850be4b939f,`req_retry()` now defaults to `max_tries = 2` with a message. Set to `max_tries = 1` to disable retries.,NA,NA,NA,NA
 httr2,10b0582a69cd4f57d4f4a28c1ce7b5ad,`url_parse()` now uses `curl::curl_parse_url()` which is much faster and more correct (#577).,NA,NA,NA,NA
+duckplyr,9a099702b0c8516947ed67fb302b0fc1,"Avoid workaround for R \< 4.3 (#417, #418).",NA,NA,NA,NA
+duckplyr,66afb717b54a17c79b55140d726a0a27,Update patches.,NA,NA,NA,NA
+duckplyr,917c5595a8e14a975defe320817745fc,"Add example for working with remote data (#260, #411).",NA,NA,NA,NA
