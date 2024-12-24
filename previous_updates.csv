@@ -18471,3 +18471,6 @@ duckplyr,9a099702b0c8516947ed67fb302b0fc1,"Avoid workaround for R \< 4.3 (#417, 
 duckplyr,66afb717b54a17c79b55140d726a0a27,Update patches.,NA,NA,NA,NA
 duckplyr,917c5595a8e14a975defe320817745fc,"Add example for working with remote data (#260, #411).",NA,NA,NA,NA
 pillar,f07efe2ae4d40c5bc9a4696fb67e7e4c,"Define `type_sum.accel()` only in help page to avoid silent errors when loading (#720, #721).",NA,NA,NA,NA
+httr2,54c789c4765a2ca1a9002587e069b363,New `url_modify()` makes it easier to modify an existing url (#464).,NA,NA,NA,NA
+httr2,d57948e9dfe319dd2b838cd240771eed,New `req_url_relative()` for constructing relative urls (#449).,NA,NA,NA,NA
+httr2,4ccc59eb011675140b85b3555249d74d,`url_parse()` gains `base_url` argument so you can also use it to parse relative URLs (#449).,NA,NA,NA,NA

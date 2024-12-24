@@ -3,6 +3,19 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    New `url_modify()` makes it easier to modify an existing url (#464).
+
+    !end-bullet!
+-   !begin-bullet!
+    New `req_url_relative()` for constructing relative urls (#449).
+
+    !end-bullet!
+-   !begin-bullet!
+    `url_parse()` gains `base_url` argument so you can also use it to
+    parse relative URLs (#449).
+
+    !end-bullet!
+-   !begin-bullet!
     `url_parse()` now uses `curl::curl_parse_url()` which is much faster
     and more correct (#577).
 
