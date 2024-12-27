@@ -18475,3 +18475,4 @@ httr2,54c789c4765a2ca1a9002587e069b363,New `url_modify()` makes it easier to mod
 httr2,d57948e9dfe319dd2b838cd240771eed,New `req_url_relative()` for constructing relative urls (#449).,NA,NA,NA,NA
 httr2,4ccc59eb011675140b85b3555249d74d,`url_parse()` gains `base_url` argument so you can also use it to parse relative URLs (#449).,NA,NA,NA,NA
 pillar,d85d57761eafccbdf86d1d8daee52bff,Switching to development version.,NA,NA,NA,NA
+duckplyr,7dfe721cfccea5daaa9bad42e195ac7e,"Add support for `sub()` and `gsub()` (@​toppyy, #420).",NA,NA,NA,NA
