@@ -18477,3 +18477,5 @@ httr2,4ccc59eb011675140b85b3555249d74d,`url_parse()` gains `base_url` argument s
 pillar,d85d57761eafccbdf86d1d8daee52bff,Switching to development version.,NA,NA,NA,NA
 duckplyr,7dfe721cfccea5daaa9bad42e195ac7e,"Add support for `sub()` and `gsub()` (@​toppyy, #420).",NA,NA,NA,NA
 duckplyr,10a98412cebc7a1b83ea8e727fd92901,"Fallback logging is now on by default, can be disabled with configuration (#422).",NA,NA,NA,NA
+duckplyr,8dcbd5362358464c5a0ee48a9fc3ddc2,Prefer `DUCKPLYR_FALLBACK_INFO` over `DUCKPLYR_FALLBACK_VERBOSE` (#425).,NA,NA,NA,NA
+duckplyr,a5577e665f2552525bd08341b40b2ed9,Adapt README and tests for telemetry (#424).,NA,NA,NA,NA
