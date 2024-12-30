@@ -18479,3 +18479,13 @@ duckplyr,7dfe721cfccea5daaa9bad42e195ac7e,"Add support for `sub()` and `gsub()` 
 duckplyr,10a98412cebc7a1b83ea8e727fd92901,"Fallback logging is now on by default, can be disabled with configuration (#422).",NA,NA,NA,NA
 duckplyr,8dcbd5362358464c5a0ee48a9fc3ddc2,Prefer `DUCKPLYR_FALLBACK_INFO` over `DUCKPLYR_FALLBACK_VERBOSE` (#425).,NA,NA,NA,NA
 duckplyr,a5577e665f2552525bd08341b40b2ed9,Adapt README and tests for telemetry (#424).,NA,NA,NA,NA
+duckplyr,56bc01e6fac5a97fe7dc915949a11d71,"New `fallback_config()` to create a configuration file for the settings that do not affect behavior (#216, #426).",NA,NA,NA,NA
+duckplyr,e5e390f715c7379312c51bca45bfc481,Pass secret.,NA,NA,NA,NA
+duckplyr,ec9dbc3f7237bdff98dedec887d8235a,Copy codecov configuration from r-lib/actions.,NA,NA,NA,NA
+duckplyr,0780c4beccaec98f545e20b08566c4e5,Install covr if needed.,NA,NA,NA,NA
+duckplyr,2e721ae14272a09e05c1f7724c4665c4,Pass correct covr config.,NA,NA,NA,NA
+duckplyr,891aa894e22b8159535ac778593ef10b,Logic.,NA,NA,NA,NA
+duckplyr,7ffaf27f10e07109c586f75f673218bc,Fix codecov.,NA,NA,NA,NA
+duckplyr,b51ff305d0288d1704827f785f79538b,Add codecov badge.,NA,NA,NA,NA
+duckplyr,a94bc1f5f13e493c05daa6182ce9e38f,Sync README.,NA,NA,NA,NA
+duckplyr,24e05ef24820fb87b2d6f3ff7e151494,Add tests for fallback configuration (#428).,NA,NA,NA,NA
