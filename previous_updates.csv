@@ -18490,3 +18490,4 @@ duckplyr,b51ff305d0288d1704827f785f79538b,Add codecov badge.,NA,NA,NA,NA
 duckplyr,a94bc1f5f13e493c05daa6182ce9e38f,Sync README.,NA,NA,NA,NA
 duckplyr,24e05ef24820fb87b2d6f3ff7e151494,Add tests for fallback configuration (#428).,NA,NA,NA,NA
 duckplyr,db728339f57925ad409fec4f99b22ecc,Adapt to codecov/codecov-action@​v5.,NA,NA,NA,NA
+shiny,2d56b827d589e1673b2ee2daaaa39589,Fixed a bug with modals where calling `removeModal()` too quickly after `showModal()` would fail to remove the modal if the remove modal message was received while the modal was in the process of being revealed. (#4173),NA,NA,NA,NA
