@@ -3,6 +3,15 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    New `url_modify()`, `url_modify_query()`, and
+    `url_modify_relative()` make it easier to modify an existing url
+    (#464).
+    !end-bullet!
+-   !begin-bullet!
+    New `url_query_parse()` and `url_query_build()` allow you to parse
+    and build a query string (#425).
+    !end-bullet!
+-   !begin-bullet!
     `req_url_query()` gains the ability to control how spaces are
     encoded (#432).
     !end-bullet!
@@ -20,9 +29,6 @@
 -   !begin-bullet!
     `resp_link_url()` now works if there are multiple `Link` headers
     (#587).
-    !end-bullet!
--   !begin-bullet!
-    New `url_modify()` makes it easier to modify an existing url (#464).
     !end-bullet!
 -   !begin-bullet!
     New `req_url_relative()` for constructing relative urls (#449).

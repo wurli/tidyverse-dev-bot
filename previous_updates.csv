@@ -18503,3 +18503,5 @@ quarto,07fbe0b473d2360bfd71bdd7a5d12251,"`quarto_path()` now correctly return `N
 quarto,223374e93c1229c81b692746d6f53540,"New `quarto_create_project()` calls `quarto create project <type> <name>` (thanks, @​maelle, #87). DESC",NA,NA,NA,NA
 httr2,bfdbf8a5d0c15474c0cb129513f7b183,`req_url_query()` gains the ability to control how spaces are encoded (#432).,NA,NA,NA,NA
 httr2,0eae49e1374ba799d3f89fb6f47a1d5c,New `resp_request()` aids debugging by returning the request associated with a response (#604).,NA,NA,NA,NA
+httr2,6bccb57b95cdaa3d744f78083b6b325e,"New `url_modify()`, `url_modify_query()`, and `url_modify_relative()` make it easier to modify an existing url (#464).",NA,NA,NA,NA
+httr2,6d40568ab86e4b48d36b4fa5dc54d244,New `url_query_parse()` and `url_query_build()` allow you to parse and build a query string (#425).,NA,NA,NA,NA
