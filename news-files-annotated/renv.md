@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed an issue where `renv` failed to restore packages installed
+    from r-universe when the associated lockfile record had no
+    `RemoteRef` field. (#2068)
+
+    !end-bullet!
+-   !begin-bullet!
     `renv` now detects dependencies from usages of `utils::citation()`.
     (#2047)
 
