@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `curl_transform()` will now use `req_body_json_modify()` for JSON
+    data (#258).
+    !end-bullet!
+-   !begin-bullet!
     `resp_stream_is_complete()` tells you if there is still data
     remaining to be streamed (#559).
     !end-bullet!
