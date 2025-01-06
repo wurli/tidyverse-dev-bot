@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `resp_stream_is_complete()` tells you if there is still data
+    remaining to be streamed (#559).
+    !end-bullet!
+-   !begin-bullet!
     New `url_modify()`, `url_modify_query()`, and
     `url_modify_relative()` make it easier to modify an existing url
     (#464).
