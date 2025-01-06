@@ -18501,3 +18501,5 @@ httr2,ea89b74ce576f74ab11328d7f457ab1b,New `req_headers_redacted()` provides a u
 httr2,e14538c0a5a607502ccd9fe877fb47b9,`resp_link_url()` now works if there are multiple `Link` headers (#587).,NA,NA,NA,NA
 quarto,07fbe0b473d2360bfd71bdd7a5d12251,"`quarto_path()` now correctly return `NULL` when no quarto is found in the PATH (thanks, @​jeroen, #220, #221).",NA,NA,NA,NA
 quarto,223374e93c1229c81b692746d6f53540,"New `quarto_create_project()` calls `quarto create project <type> <name>` (thanks, @​maelle, #87). DESC",NA,NA,NA,NA
+httr2,bfdbf8a5d0c15474c0cb129513f7b183,`req_url_query()` gains the ability to control how spaces are encoded (#432).,NA,NA,NA,NA
+httr2,0eae49e1374ba799d3f89fb6f47a1d5c,New `resp_request()` aids debugging by returning the request associated with a response (#604).,NA,NA,NA,NA

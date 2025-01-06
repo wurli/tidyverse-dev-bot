@@ -3,47 +3,46 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `req_url_query()` gains the ability to control how spaces are
+    encoded (#432).
+    !end-bullet!
+-   !begin-bullet!
+    New `resp_request()` aids debugging by returning the request
+    associated with a response (#604).
+    !end-bullet!
+-   !begin-bullet!
     `print.request()` now correctly escapes `{}` in headers (#586).
-
     !end-bullet!
 -   !begin-bullet!
     New `req_headers_redacted()` provides a user-friendlier way to set
     redacted headers (#561).
-
     !end-bullet!
 -   !begin-bullet!
     `resp_link_url()` now works if there are multiple `Link` headers
     (#587).
-
     !end-bullet!
 -   !begin-bullet!
     New `url_modify()` makes it easier to modify an existing url (#464).
-
     !end-bullet!
 -   !begin-bullet!
     New `req_url_relative()` for constructing relative urls (#449).
-
     !end-bullet!
 -   !begin-bullet!
     `url_parse()` gains `base_url` argument so you can also use it to
     parse relative URLs (#449).
-
     !end-bullet!
 -   !begin-bullet!
     `url_parse()` now uses `curl::curl_parse_url()` which is much faster
     and more correct (#577).
-
     !end-bullet!
 -   !begin-bullet!
     `req_retry()` now defaults to `max_tries = 2` with a message. Set to
     `max_tries = 1` to disable retries.
-
     !end-bullet!
 -   !begin-bullet!
     Errors thrown during the parsing of an OAuth response now have a
     dedicated `httr2_oauth_parse` error class that includes the original
     response object (@atheriel, #596).
-
     !end-bullet!
 
 !end-bullets-1!
