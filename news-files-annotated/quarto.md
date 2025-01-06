@@ -21,6 +21,11 @@
     @wjschne, #212).
 
     !end-bullet!
+-   !begin-bullet!
+    `quarto_path()` now correctly return `NULL` when no quarto is found
+    in the PATH (thanks, @jeroen, #220, #221).
+
+    !end-bullet!
 
 !end-bullets-1!
 
@@ -81,7 +86,7 @@
     !end-bullet!
 -   !begin-bullet!
     New `quarto_create_project()` calls
-    `quarto create project <type> <name>` (thanks, @maelle, #87).
+    `quarto create project <type> <name>` (thanks, @maelle, #87). DESC
 
     !end-bullet!
 -   !begin-bullet!

@@ -18496,3 +18496,8 @@ duckplyr,74add93657dab071e858aea82d08361a,Remove unneeded cast that breaks the m
 duckplyr,a0c3b2e9f5aa61fa8a84e13feaeed470,Remove generated code from coverage analysis (#435).,NA,NA,NA,NA
 duckplyr,919b63b612e33023b55273ad10a58946,Switch to comma-separated list of files.,NA,NA,NA,NA
 duckplyr,8c056fb7af346b76bb1b0fbe1db95afb,Rename help topic (#443).,NA,NA,NA,NA
+httr2,d7f738c229ddb2ce3f4e4c0a738b3254,`print.request()` now correctly escapes `{}` in headers (#586).,NA,NA,NA,NA
+httr2,ea89b74ce576f74ab11328d7f457ab1b,New `req_headers_redacted()` provides a user-friendlier way to set redacted headers (#561).,NA,NA,NA,NA
+httr2,e14538c0a5a607502ccd9fe877fb47b9,`resp_link_url()` now works if there are multiple `Link` headers (#587).,NA,NA,NA,NA
+quarto,07fbe0b473d2360bfd71bdd7a5d12251,"`quarto_path()` now correctly return `NULL` when no quarto is found in the PATH (thanks, @​jeroen, #220, #221).",NA,NA,NA,NA
+quarto,223374e93c1229c81b692746d6f53540,"New `quarto_create_project()` calls `quarto create project <type> <name>` (thanks, @​maelle, #87). DESC",NA,NA,NA,NA

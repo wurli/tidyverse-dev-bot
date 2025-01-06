@@ -3,6 +3,20 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `print.request()` now correctly escapes `{}` in headers (#586).
+
+    !end-bullet!
+-   !begin-bullet!
+    New `req_headers_redacted()` provides a user-friendlier way to set
+    redacted headers (#561).
+
+    !end-bullet!
+-   !begin-bullet!
+    `resp_link_url()` now works if there are multiple `Link` headers
+    (#587).
+
+    !end-bullet!
+-   !begin-bullet!
     New `url_modify()` makes it easier to modify an existing url (#464).
 
     !end-bullet!
