@@ -86,7 +86,7 @@
     !end-bullet!
 -   !begin-bullet!
     New `quarto_create_project()` calls
-    `quarto create project <type> <name>` (thanks, @maelle, #87). DESC
+    `quarto create project <type> <name>` (thanks, @maelle, #87).
 
     !end-bullet!
 -   !begin-bullet!
