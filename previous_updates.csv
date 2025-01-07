@@ -18508,3 +18508,5 @@ httr2,6d40568ab86e4b48d36b4fa5dc54d244,New `url_query_parse()` and `url_query_bu
 httr2,75c50d8686bc86f8619cb6391c31ac60,`resp_stream_is_complete()` tells you if there is still data remaining to be streamed (#559).,NA,NA,NA,NA
 httr2,0117d023dcaf8022abb2db9d3bfe0d08,`curl_transform()` will now use `req_body_json_modify()` for JSON data (#258).,NA,NA,NA,NA
 renv,66003bf654dcd6767a0d787186f94bfe,Fixed an issue where `renv` failed to restore packages installed from r-universe when the associated lockfile record had no `RemoteRef` field. (#2068),NA,NA,NA,NA
+httr2,6adf086cc15a5d6790b155b7af048f7d,Export `is_online()` as thin wrapper around `curl::has_internet()` (#512).,NA,NA,NA,NA
+httr2,1c511923c5f80a40f991755253df4ad6,`curl_translate()` now translates cookie headers to `req_cookies_set()` (#431).,NA,NA,NA,NA

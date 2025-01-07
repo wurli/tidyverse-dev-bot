@@ -3,6 +3,14 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Export `is_online()` as thin wrapper around `curl::has_internet()`
+    (#512).
+    !end-bullet!
+-   !begin-bullet!
+    `curl_translate()` now translates cookie headers to
+    `req_cookies_set()` (#431).
+    !end-bullet!
+-   !begin-bullet!
     `curl_transform()` will now use `req_body_json_modify()` for JSON
     data (#258).
     !end-bullet!
