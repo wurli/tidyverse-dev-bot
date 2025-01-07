@@ -18549,3 +18549,4 @@ keras,e79d3aa9867131c615bd237261b83dce,Added support for Intel XPU devices in Py
 httr2,6cad2308c216b5b4111b9d0318147b32,"`req_retry()` now optionally implements ""circuit breaking"" so that if requests to the same server fail many times (i.e. because the server is down), you can choose to immediately error rather than waiting (#370).",NA,NA,NA,NA
 bslib,058cc6608f3b1af5c75dd6d9ed4a7dd9,"bslib now supports unified theming with brand.yml. brand.yml lets you theme your Shiny apps, Quarto documents and more with a single, portable YAML file. Learn more in the new Unified theming with brand.yml article. (#1148)",NA,NA,NA,NA
 renv,3bf78effb542942a8a09f5ca77d0da62,Fixed an issue where `RENV_CONFIG_EXTERNAL_LIBRARIES` was incorrectly split when using Windows paths. (#2069),NA,NA,NA,NA
+httr2,8a8211f4b67983d38250cce75cc8019b,`req_perform_stream()` is superseded and likely on track for deprecation; `req_perform_connection()` is no longer experimental (#625),NA,NA,NA,NA

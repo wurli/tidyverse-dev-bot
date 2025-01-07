@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `req_perform_stream()` is superseded and likely on track for
+    deprecation; `req_perform_connection()` is no longer experimental
+    (#625)
+    !end-bullet!
+-   !begin-bullet!
     `req_retry()` now optionally implements "circuit breaking" so that
     if requests to the same server fail many times (i.e. because the
     server is down), you can choose to immediately error rather than
