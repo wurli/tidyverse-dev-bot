@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `req_retry()` now optionally implements "circuit breaking" so that
+    if requests to the same server fail many times (i.e. because the
+    server is down), you can choose to immediately error rather than
+    waiting (#370).
+    !end-bullet!
+-   !begin-bullet!
     Export `is_online()` as thin wrapper around `curl::has_internet()`
     (#512).
     !end-bullet!

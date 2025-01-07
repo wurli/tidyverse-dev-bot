@@ -18546,3 +18546,4 @@ keras,2ed3f7c343e3236e4516dbbe5866a88e,Added native Flash Attention support for 
 keras,2db47c459b927e7bf93b043ec1e58bcd,Added opt-in native Flash Attention support for GPU in PyTorch backend,NA,NA,NA,NA
 keras,8606799db081d5ac5bb3b4313787a8ec,Enabled additional kernel fusion via bias_add in TensorFlow backend,NA,NA,NA,NA
 keras,e79d3aa9867131c615bd237261b83dce,Added support for Intel XPU devices in PyTorch backend,NA,NA,NA,NA
+httr2,6cad2308c216b5b4111b9d0318147b32,"`req_retry()` now optionally implements ""circuit breaking"" so that if requests to the same server fail many times (i.e. because the server is down), you can choose to immediately error rather than waiting (#370).",NA,NA,NA,NA
