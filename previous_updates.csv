@@ -18510,3 +18510,39 @@ httr2,0117d023dcaf8022abb2db9d3bfe0d08,`curl_transform()` will now use `req_body
 renv,66003bf654dcd6767a0d787186f94bfe,Fixed an issue where `renv` failed to restore packages installed from r-universe when the associated lockfile record had no `RemoteRef` field. (#2068),NA,NA,NA,NA
 httr2,6adf086cc15a5d6790b155b7af048f7d,Export `is_online()` as thin wrapper around `curl::has_internet()` (#512).,NA,NA,NA,NA
 httr2,1c511923c5f80a40f991755253df4ad6,`curl_translate()` now translates cookie headers to `req_cookies_set()` (#431).,NA,NA,NA,NA
+keras,4059c9f9559abb09cda0eea3c3a0242f,`activation_celu()`,NA,NA,NA,NA
+keras,8ce81161bb8bc867db7669aa373c4e6b,`activation_glu()`,NA,NA,NA,NA
+keras,0bc1f6b27c0246403e81ac7d2cfa7814,`activation_hard_shrink()`,NA,NA,NA,NA
+keras,c6caf77107857766236ec8bbd4fd2b4a,`activation_hard_tanh()`,NA,NA,NA,NA
+keras,e932d4f48a0b0a74d152b0e7f9f8aebf,`activation_log_sigmoid()`,NA,NA,NA,NA
+keras,41672e104c13a214ada4516df1430fee,`activation_soft_shrink()`,NA,NA,NA,NA
+keras,b8feeaae234468453436607bcd26da35,`activation_squareplus()`,NA,NA,NA,NA
+keras,97f1c2e9d0c5cf3b8d1634164f368f84,`activation_tanh_shrink()`,NA,NA,NA,NA
+keras,8f17fca1fb394d8ca6312e41c33ad528,`config_disable_flash_attention()`,NA,NA,NA,NA
+keras,4785e3ea66059b70d57dff5b9d137f21,`config_enable_flash_attention()`,NA,NA,NA,NA
+keras,ef9b62a401cfb7676d40f04bb0cb524b,`config_is_flash_attention_enabled()`,NA,NA,NA,NA
+keras,74593a75312fe9a6742d15dea372c33b,`initializer_stft()`,NA,NA,NA,NA
+keras,b210472e2fe102dcedbf7a22aaaca38c,`layer_max_num_bounding_boxes()`,NA,NA,NA,NA
+keras,bae7433d09d59054175b570c0a22828c,`layer_stft_spectrogram()`,NA,NA,NA,NA
+keras,6d2673b119928e4ab61cadfbd40746d9,`loss_circle()`,NA,NA,NA,NA
+keras,d1b47e66a7e56ea11e4b538c05585810,`metric_concordance_correlation()`,NA,NA,NA,NA
+keras,339c2c1a12e596dec0dd81a3ba56d3be,`metric_pearson_correlation()`,NA,NA,NA,NA
+keras,7a3ee2c0cfeba27aadf56bdce26f5ae4,`op_celu()`,NA,NA,NA,NA
+keras,585f306b1cb1dd63da71ed70ae5f7f2e,`op_exp2()`,NA,NA,NA,NA
+keras,8c6ddbaaf03078275f4a3ecb7e5e3879,`op_glu()`,NA,NA,NA,NA
+keras,d58ade4e021df7741fdace3d9ecd703c,`op_hard_shrink()`,NA,NA,NA,NA
+keras,1ec3b91f9b869bfd4a2a13e547f0fedc,`op_hard_tanh()`,NA,NA,NA,NA
+keras,2a63a25cb25be4fbf0b2f1ec45f13eda,`op_ifft2()`,NA,NA,NA,NA
+keras,8e275faa46492190e03dbc51712572cc,`op_inner()`,NA,NA,NA,NA
+keras,082ff244cae2913c1d3775eb5601903b,`op_soft_shrink()`,NA,NA,NA,NA
+keras,a149d0ba22837e4444fb9e5a9340afe0,`op_squareplus()`,NA,NA,NA,NA
+keras,2dd4e26ea0df1eaf88ae8319f66606d9,`op_tanh_shrink()`,NA,NA,NA,NA
+keras,af39aa6a9c0e8dc2c06e509dda3a18bf,`callback_backup_and_restore()`: Added `double_checkpoint` argument to save a fallback checkpoint,NA,NA,NA,NA
+keras,821b2003d31d77682f5ab900817e7f20,`callback_tensorboard()`: Added support for `profile_batch` argument,NA,NA,NA,NA
+keras,623b47a765700faa185974768eb691c7,`layer_group_query_attention()`: Added `flash_attention` and `seed` arguments,NA,NA,NA,NA
+keras,b8505e95c6d88fcddac076b422f505b2,`layer_multi_head_attention()`: Added `flash_attention` argument,NA,NA,NA,NA
+keras,f1ee893ead3f3b9d7d1d273b0eb9307b,`metric_sparse_top_k_categorical_accuracy()`: Added `from_sorted_ids` argument,NA,NA,NA,NA
+keras,2ed3f7c343e3236e4516dbbe5866a88e,Added native Flash Attention support for GPU (via cuDNN) and TPU (via Pallas kernel) in JAX backend,NA,NA,NA,NA
+keras,2db47c459b927e7bf93b043ec1e58bcd,Added opt-in native Flash Attention support for GPU in PyTorch backend,NA,NA,NA,NA
+keras,8606799db081d5ac5bb3b4313787a8ec,Enabled additional kernel fusion via bias_add in TensorFlow backend,NA,NA,NA,NA
+keras,e79d3aa9867131c615bd237261b83dce,Added support for Intel XPU devices in PyTorch backend,NA,NA,NA,NA
