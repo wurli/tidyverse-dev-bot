@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed an issue where `RENV_CONFIG_EXTERNAL_LIBRARIES` was
+    incorrectly split when using Windows paths. (#2069)
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed an issue where `renv` failed to restore packages installed
     from r-universe when the associated lockfile record had no
     `RemoteRef` field. (#2068)
