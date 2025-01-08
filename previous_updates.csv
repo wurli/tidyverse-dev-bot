@@ -18550,3 +18550,4 @@ httr2,6cad2308c216b5b4111b9d0318147b32,"`req_retry()` now optionally implements 
 bslib,058cc6608f3b1af5c75dd6d9ed4a7dd9,"bslib now supports unified theming with brand.yml. brand.yml lets you theme your Shiny apps, Quarto documents and more with a single, portable YAML file. Learn more in the new Unified theming with brand.yml article. (#1148)",NA,NA,NA,NA
 renv,3bf78effb542942a8a09f5ca77d0da62,Fixed an issue where `RENV_CONFIG_EXTERNAL_LIBRARIES` was incorrectly split when using Windows paths. (#2069),NA,NA,NA,NA
 httr2,8a8211f4b67983d38250cce75cc8019b,`req_perform_stream()` is superseded and likely on track for deprecation; `req_perform_connection()` is no longer experimental (#625),NA,NA,NA,NA
+testthat,230b6771399a7701b9e02b085f3fa7a6,Fixed an issue where `expect_no_error(1)` was failing (#2037).,NA,NA,NA,NA

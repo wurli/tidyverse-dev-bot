@@ -3,8 +3,13 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed an issue where `expect_no_error(1)` was failing (#2037).
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed an issue where calling `skip()` outside of an active test
     could cause an unexpected error (2, #2039).
+
     !end-bullet!
 
 !end-bullets-1!
