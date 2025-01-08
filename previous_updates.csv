@@ -18552,3 +18552,19 @@ renv,3bf78effb542942a8a09f5ca77d0da62,Fixed an issue where `RENV_CONFIG_EXTERNAL
 httr2,8a8211f4b67983d38250cce75cc8019b,`req_perform_stream()` is superseded and likely on track for deprecation; `req_perform_connection()` is no longer experimental (#625),NA,NA,NA,NA
 testthat,230b6771399a7701b9e02b085f3fa7a6,Fixed an issue where `expect_no_error(1)` was failing (#2037).,NA,NA,NA,NA
 httr2,3bf0b29e6e29b7a3a214e51caf247d9e,`req_auth_aws_v4()` correctly formats the Authorization header (#627).,NA,NA,NA,NA
+httr2,4168732b219fbaf74d99be38a8b98f7e,"`req_perform_stream()` is superseded in favor of `req_perform_connection()`, which is no longer experimental (#625).",NA,NA,NA,NA
+httr2,2790dc08656c00b599179d23fe0a5151,`with_mock()` and `local_mock()` are defunct and will be removed in the next release.,NA,NA,NA,NA
+httr2,b3d7298e0ca306ef72d2dd757ca945f3,"`is_online()` wraps `curl::has_internet()`, making it easy to tell if you're currently online (#512).",NA,NA,NA,NA
+httr2,8325bb13029366bcb4eaf6f4feaeca94,`req_headers_redacted()` makes it easier to redact sensitive headers (#561).,NA,NA,NA,NA
+httr2,c6d91af54fe8aa85fc85c36235cfe3a6,`req_url_relative()` navigates to a relative URL (#449).,NA,NA,NA,NA
+httr2,84b5ac448ee8cb5782e3f0430c0f853b,`resp_request()` returns the request associated with a response; this can be useful when debugging (#604).,NA,NA,NA,NA
+httr2,37dde16ecacdf7e9e03c290e1478a62e,`resp_stream_is_complete()` checks if data remains in the stream (#559).,NA,NA,NA,NA
+httr2,e417b099958fff483ea9b48154a74184,"`url_modify()`, `url_modify_query()`, and `url_modify_relative()` modify URLs (#464); `url_query_parse()` and `url_query_build()` parse and build query strings (#425).",NA,NA,NA,NA
+httr2,2d6106801afe09d4616dac55d27b13f6,"OAuth response parsing errors now have a dedicated `httr2_oauth_parse` error class that includes the original response object (@​atheriel, #596).",NA,NA,NA,NA
+httr2,5f46ca6beb1e734012c84f6b1a7f5323,`curl_translate()` converts cookie headers to `req_cookies_set()` (#431) and JSON data to `req_body_json_modify()` calls (#258).,NA,NA,NA,NA
+httr2,230d2496568cdbf26e325abbdecccf57,`print.request()` escapes `{}` in headers (#586).,NA,NA,NA,NA
+httr2,a8ab676c9c8c743512b1515a0c575456,`req_auth_aws_v4()` formats the AWS Authorization header correctly (#627).,NA,NA,NA,NA
+httr2,08461ec53defe11e5294c42f5d49f183,"`req_retry()` defaults to `max_tries = 2` when nethier `max_tries` nor `max_seconds` is set. If you want to disable retries, set `max_tries = 1`.",NA,NA,NA,NA
+httr2,0a5c82b0f173afb802bb6d1f9ee3100d,`req_url_query()` can control how spaces are encoded with `.space` (#432).,NA,NA,NA,NA
+httr2,32ab45f1a6052673bddcb52075517441,`resp_link_url()` handles multiple `Link` headers (#587).,NA,NA,NA,NA
+httr2,a254d1e22f1d2bd2da9f5e3474255546,`url_parse()` parses relative URLs with new `base_url` argument (#449) and the uses faster and more correct `curl::curl_parse_url()` (#577).,NA,NA,NA,NA
