@@ -3,9 +3,9 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
-    The format of the URI part of "run", "help" and "vignette"
+    The URI generated for `.file`, `.run`, `.help` and `.vignette`
     hyperlinks can now be configured via options and env vars (@jennybc,
-    #739).
+    #739, #744).
 
     !end-bullet!
 -   !begin-bullet!
