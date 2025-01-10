@@ -91,12 +91,22 @@
 
     !end-bullet!
 -   !begin-bullet!
+    `req_perform_connection()` gains a `verbosity` argument, which is
+    useful for understanding exactly how data is streamed back to you
+    (#599).
+
+    !end-bullet!
+-   !begin-bullet!
     `req_url_query()` can control how spaces are encoded with `.space`
     (#432).
 
     !end-bullet!
 -   !begin-bullet!
     `resp_link_url()` handles multiple `Link` headers (#587).
+
+    !end-bullet!
+-   !begin-bullet!
+    `resp_stream_sse()` will warn if it recieves a partial event.
 
     !end-bullet!
 -   !begin-bullet!

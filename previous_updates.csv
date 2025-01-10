@@ -18570,3 +18570,5 @@ httr2,32ab45f1a6052673bddcb52075517441,`resp_link_url()` handles multiple `Link`
 httr2,a254d1e22f1d2bd2da9f5e3474255546,`url_parse()` parses relative URLs with new `base_url` argument (#449) and the uses faster and more correct `curl::curl_parse_url()` (#577).,NA,NA,NA,NA
 renv,9eee6991eacd42db9991917798477186,"Fixed an issue where R package installation could fail if the project depended on a package whose current version available from the configured package repositories required on a newer version of R than what was currently installed, even if that package need not be updated. (#2071)",NA,NA,NA,NA
 cli,cae78a756633b5a78c2b16a0e1b86396,"The URI generated for `.file`, `.run`, `.help` and `.vignette` hyperlinks can now be configured via options and env vars (@​jennybc, #739, #744).",NA,NA,NA,NA
+httr2,7c16396ad877757651ab0827e505c083,"`req_perform_connection()` gains a `verbosity` argument, which is useful for understanding exactly how data is streamed back to you (#599).",NA,NA,NA,NA
+httr2,3e1a60e80cf962d3a27b58348e79fa64,`resp_stream_sse()` will warn if it recieves a partial event.,NA,NA,NA,NA
