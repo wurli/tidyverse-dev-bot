@@ -18568,3 +18568,4 @@ httr2,08461ec53defe11e5294c42f5d49f183,"`req_retry()` defaults to `max_tries = 2
 httr2,0a5c82b0f173afb802bb6d1f9ee3100d,`req_url_query()` can control how spaces are encoded with `.space` (#432).,NA,NA,NA,NA
 httr2,32ab45f1a6052673bddcb52075517441,`resp_link_url()` handles multiple `Link` headers (#587).,NA,NA,NA,NA
 httr2,a254d1e22f1d2bd2da9f5e3474255546,`url_parse()` parses relative URLs with new `base_url` argument (#449) and the uses faster and more correct `curl::curl_parse_url()` (#577).,NA,NA,NA,NA
+renv,9eee6991eacd42db9991917798477186,"Fixed an issue where R package installation could fail if the project depended on a package whose current version available from the configured package repositories required on a newer version of R than what was currently installed, even if that package need not be updated. (#2071)",NA,NA,NA,NA

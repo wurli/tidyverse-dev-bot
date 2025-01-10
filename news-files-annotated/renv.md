@@ -3,6 +3,14 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed an issue where R package installation could fail if the
+    project depended on a package whose current version available from
+    the configured package repositories required on a newer version of R
+    than what was currently installed, even if that package need not be
+    updated. (#2071)
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed an issue where `RENV_CONFIG_EXTERNAL_LIBRARIES` was
     incorrectly split when using Windows paths. (#2069)
 
