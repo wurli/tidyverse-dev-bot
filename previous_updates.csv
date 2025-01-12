@@ -18576,3 +18576,12 @@ renv,9bcccbed37cf12b36315e47af1f25706,"`renv` now includes additional package DE
 renv,0a667f8a5ca9bf4be1270293b6491185,Fixed an issue where `renv::snapshot()` could fail if invoked within a project containing empty or invalid `.ipynb` files. (#2073),NA,NA,NA,NA
 duckplyr,603625d239e84f0a0b64ee79d2824437,"`collect()` returns a tibble (#438, #447).",NA,NA,NA,NA
 duckplyr,fcf44d5115ccb597f6880281d96f0b81,Sync tests (#446).,NA,NA,NA,NA
+duckplyr,69f4e7882781416809c07057e9e5f278,"Rename `duck_exec()` to `db_exec()` and `duck_*()` to `read_*_duckdb()` (#210, #459).",NA,NA,NA,NA
+duckplyr,94b5f3bea062d88b717e0dec9ea21d66,"Rename `duck_tbl()` to `duckdb_tibble()`, and `as_duck_tbl()` to `as_duckdb_tibble()` (#457).",NA,NA,NA,NA
+duckplyr,c5025d250a3a9835799fa88d0f4044d6,"Improve error message with lazy data frame by explicitly materializing before falling back to dplyr (#432, #456).",NA,NA,NA,NA
+duckplyr,5889c114e4e8eee614fa2213cb21528c,"The default DuckDB connection is now based on a file, the location can be controlled with the `DUCKPLYR_TEMP_DIR` environment variable (#439, #448).",NA,NA,NA,NA
+duckplyr,bd012f71f96dcc9372640b008808ddd8,Capture and return `rel_try()` error (#454).,NA,NA,NA,NA
+duckplyr,de1763b67242ffe742d06248f74b0a78,Sync patch (#453).,NA,NA,NA,NA
+duckplyr,fdd6516349da05a567f5ad0baf74e5ea,Remove noise from patch files (#451).,NA,NA,NA,NA
+duckplyr,5adad8a915f59cc63dcf9b41d5b24493,"Add ""Eager and lazy"" section to `?duck_tbl`, document `collect()` (#455).",NA,NA,NA,NA
+duckplyr,f8b6aed5d197cf9950ddd282cf46833e,Review `rel_try()` reasons and docs (#452).,NA,NA,NA,NA
