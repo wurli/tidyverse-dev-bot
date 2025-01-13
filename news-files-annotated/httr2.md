@@ -93,7 +93,7 @@
 -   !begin-bullet!
     `req_perform_connection()` gains a `verbosity` argument, which is
     useful for understanding exactly how data is streamed back to you
-    (#599).
+    (#599). `req_perform_promise()` also gains a `verbosity` argument.
 
     !end-bullet!
 -   !begin-bullet!
