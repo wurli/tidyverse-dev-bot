@@ -3,8 +3,17 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixes #956, allowing a port to be specified as an environment
+    variable. User-provided ports must be between 1024 and 49151
+    (following IANA guidelines) and may not be a known unsafe port.
+    plumber will now throw an error if an invalid port is requested.
+    (@shikokuchuo @gadenbuie #963)
+
+    !end-bullet!
+-   !begin-bullet!
     Added support for graphic devices provided by ragg and svglite
     (@thomasp85 #964)
+
     !end-bullet!
 
 !end-bullets-1!
