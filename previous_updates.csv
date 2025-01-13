@@ -18585,3 +18585,4 @@ duckplyr,de1763b67242ffe742d06248f74b0a78,Sync patch (#453).,NA,NA,NA,NA
 duckplyr,fdd6516349da05a567f5ad0baf74e5ea,Remove noise from patch files (#451).,NA,NA,NA,NA
 duckplyr,5adad8a915f59cc63dcf9b41d5b24493,"Add ""Eager and lazy"" section to `?duck_tbl`, document `collect()` (#455).",NA,NA,NA,NA
 duckplyr,f8b6aed5d197cf9950ddd282cf46833e,Review `rel_try()` reasons and docs (#452).,NA,NA,NA,NA
+duckplyr,41703d58a0271d6d6e48e8fb664e9824,"Clean up documentation (#444, #460).",NA,NA,NA,NA
