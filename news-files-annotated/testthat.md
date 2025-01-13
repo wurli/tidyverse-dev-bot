@@ -1,4 +1,4 @@
-# testthat (development version)
+# testthat 3.2.3
 
 !begin-bullets-1!
 
