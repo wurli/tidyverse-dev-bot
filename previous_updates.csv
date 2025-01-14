@@ -18587,3 +18587,4 @@ duckplyr,5adad8a915f59cc63dcf9b41d5b24493,"Add ""Eager and lazy"" section to `?d
 duckplyr,f8b6aed5d197cf9950ddd282cf46833e,Review `rel_try()` reasons and docs (#452).,NA,NA,NA,NA
 duckplyr,41703d58a0271d6d6e48e8fb664e9824,"Clean up documentation (#444, #460).",NA,NA,NA,NA
 plumber,f50f6ecdc0856184093462249e00c5ed,"Fixes #956, allowing a port to be specified as an environment variable. User-provided ports must be between 1024 and 49151 (following IANA guidelines) and may not be a known unsafe port. plumber will now throw an error if an invalid port is requested. (@​shikokuchuo @​gadenbuie #963)",NA,NA,NA,NA
+bslib,e0e7cf8dfa2f9ae731f21b6e230afac2,`input_switch()` and `input_dark_mode()` can be included in Shiny's bookmarking feature. (#1166),NA,NA,NA,NA

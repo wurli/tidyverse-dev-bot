@@ -53,6 +53,11 @@
     Sass to call the `color-contrast()` algorithm. (#1140)
 
     !end-bullet!
+-   !begin-bullet!
+    `input_switch()` and `input_dark_mode()` can be included in Shiny's
+    bookmarking feature. (#1166)
+
+    !end-bullet!
 
 !end-bullets-3!
 
