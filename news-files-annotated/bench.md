@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    The `.grid` argument of `press()` now subsets data.frames and
+    tibbles consistently (#142).
+
+    !end-bullet!
+-   !begin-bullet!
     `press()` gains a new `.quiet` argument to silence progress messages
     (#145).
 

@@ -18592,3 +18592,4 @@ bench,7bfc2ecda764827753c7f47752a66bdb,"Fixed an issue in `bench_time_trans()` a
 bench,01150debae6ec9914b1b6f4db04827d0,"R \>=4.0.0 is now required, which is aligned with tidyverse standards.",NA,NA,NA,NA
 bench,21257810e64cf252670ce41286783219,"Switched to modern ggplot2 conventions internally (#141, @​olivroy).",NA,NA,NA,NA
 bench,9be5b3ce77619606d9b1a4cdeff6c537,`press()` gains a new `.quiet` argument to silence progress messages (#145).,NA,NA,NA,NA
+bench,87f4d74d5cfe3b458fe58bc533ded8ba,The `.grid` argument of `press()` now subsets data.frames and tibbles consistently (#142).,NA,NA,NA,NA
