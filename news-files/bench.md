@@ -1,5 +1,12 @@
 # bench (development version)
 
+* Fixed an issue in `bench_time_trans()` and `bench_bytes_trans()` where pretty
+  breaks were not being applied correctly (#140, @plietar, @simonpcouch).
+
+* R >=4.0.0 is now required, which is aligned with tidyverse standards.
+
+* Switched to modern ggplot2 conventions internally (#141, @olivroy).
+
 # bench 1.1.3
 
 * Long unnamed `bench_expr` expressions are now truncated correctly when used as
@@ -79,7 +86,7 @@
 * `summary.bench_mark()` gains a `time_unit` argument, so you can report all
   times in a consistent scale if desired (#18, #26).
 
-* `bench_mark()` now checks for user interrupts, to allow you to stop benchmarking 
+* `bench_mark()` now checks for user interrupts, to allow you to stop benchmarking
   if it takes longer than you were expecting (#49).
 
 * New `bench_memory()` to capture just the memory allocated by an expression.

@@ -18588,3 +18588,6 @@ duckplyr,f8b6aed5d197cf9950ddd282cf46833e,Review `rel_try()` reasons and docs (#
 duckplyr,41703d58a0271d6d6e48e8fb664e9824,"Clean up documentation (#444, #460).",NA,NA,NA,NA
 plumber,f50f6ecdc0856184093462249e00c5ed,"Fixes #956, allowing a port to be specified as an environment variable. User-provided ports must be between 1024 and 49151 (following IANA guidelines) and may not be a known unsafe port. plumber will now throw an error if an invalid port is requested. (@​shikokuchuo @​gadenbuie #963)",NA,NA,NA,NA
 bslib,e0e7cf8dfa2f9ae731f21b6e230afac2,`input_switch()` and `input_dark_mode()` can be included in Shiny's bookmarking feature. (#1166),NA,NA,NA,NA
+bench,7bfc2ecda764827753c7f47752a66bdb,"Fixed an issue in `bench_time_trans()` and `bench_bytes_trans()` where pretty breaks were not being applied correctly (#140, @​plietar, @​simonpcouch).",NA,NA,NA,NA
+bench,01150debae6ec9914b1b6f4db04827d0,"R \>=4.0.0 is now required, which is aligned with tidyverse standards.",NA,NA,NA,NA
+bench,21257810e64cf252670ce41286783219,"Switched to modern ggplot2 conventions internally (#141, @​olivroy).",NA,NA,NA,NA

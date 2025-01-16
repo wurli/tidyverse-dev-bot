@@ -1,8 +1,28 @@
 # bench (development version)
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    Fixed an issue in `bench_time_trans()` and `bench_bytes_trans()`
+    where pretty breaks were not being applied correctly (#140,
+    @plietar, @simonpcouch).
+
+    !end-bullet!
+-   !begin-bullet!
+    R \>=4.0.0 is now required, which is aligned with tidyverse
+    standards.
+
+    !end-bullet!
+-   !begin-bullet!
+    Switched to modern ggplot2 conventions internally (#141, @olivroy).
+
+    !end-bullet!
+
+!end-bullets-1!
+
 # bench 1.1.3
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     Long unnamed `bench_expr` expressions are now truncated correctly
@@ -36,11 +56,11 @@
 
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # bench 1.1.2
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     Davis Vaughan is now the maintainer.
@@ -62,24 +82,24 @@
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 # bench 1.1.1
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     `mark()` columns memory, result and mem_alloc columns are now always
     included, even if they are unused.
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 # bench 1.1.0
 
 ## New features
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     New `bench_process_memory()` function, to return the current and
@@ -102,11 +122,11 @@
 
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 ## Minor improvements and fixes
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     `mark()` now permits empty arguments, e.g. accidental trailing
@@ -133,11 +153,11 @@
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # bench 1.0.4
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     `bench_memory()` examples no longer fail if they are run with R that
@@ -152,11 +172,11 @@
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 # bench 1.0.3
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     `summary.bench_mark()` gains a `time_unit` argument, so you can
@@ -188,11 +208,11 @@
 
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 # bench 1.0.2
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     `workout()` a new function which makes timing multiple expressions
@@ -221,11 +241,11 @@
 
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 # bench 1.0.1
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     Add support for macOS versions prior to 10.12
@@ -234,14 +254,14 @@
     Disable load sensitive tests on CRAN, to avoid failures
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 # bench 1.0.0
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     Added a `NEWS.md` file to track changes to the package.
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
