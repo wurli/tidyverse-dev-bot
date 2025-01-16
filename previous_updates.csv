@@ -18593,3 +18593,7 @@ bench,01150debae6ec9914b1b6f4db04827d0,"R \>=4.0.0 is now required, which is ali
 bench,21257810e64cf252670ce41286783219,"Switched to modern ggplot2 conventions internally (#141, @​olivroy).",NA,NA,NA,NA
 bench,9be5b3ce77619606d9b1a4cdeff6c537,`press()` gains a new `.quiet` argument to silence progress messages (#145).,NA,NA,NA,NA
 bench,87f4d74d5cfe3b458fe58bc533ded8ba,The `.grid` argument of `press()` now subsets data.frames and tibbles consistently (#142).,NA,NA,NA,NA
+chromote,f6d694ac10b77437c3ab01dcc65bf646,"Chrome v132 and later no longer support old headless mode. As such, `chromote` no longer defaults to using `--headless=old` and now uses `--headless` when running Chrome. You can still use the `chromote.headless` option or `CHROMOTE_HEADLESS` environment variable to configure the `--headless` flag if you're using an older version of Chrome. (#187)",NA,NA,NA,NA
+webshot2,b9c19e29a8ee2268e38ad31427dc964a,Updated the documentation for `webshot()` to clarify that `expand` only applies to the clipping rectangle determined by `selector`. (#68),NA,NA,NA,NA
+webshot2,8d05b31446c1cd52f90156295030e44e,"`webshot()` now rounds `vwidth` and `vheight` to the nearest integer to match Chrome's expectations. If this behavior is somehow problematic, you can use `vwidth = I(my_width)` to avoid the conversion. (#70)",NA,NA,NA,NA
+webshot2,552fe8dfb1a3c96a8fad316e1c060f0f,`webshot()` now surfaces errors that occur when working with the lower-level screenshot API provided by Chrome via `{chromote}`. (#69),NA,NA,NA,NA
