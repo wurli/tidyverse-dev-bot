@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `press()` gains a new `.quiet` argument to silence progress messages
+    (#145).
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed an issue in `bench_time_trans()` and `bench_bytes_trans()`
     where pretty breaks were not being applied correctly (#140,
     @plietar, @simonpcouch).
