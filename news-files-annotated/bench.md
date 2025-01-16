@@ -1,21 +1,22 @@
 # bench (development version)
 
+# bench 1.1.4
+
 !begin-bullets-1!
 
--   !begin-bullet!
-    The `.grid` argument of `press()` now subsets data.frames and
-    tibbles consistently (#142).
-
-    !end-bullet!
 -   !begin-bullet!
     `press()` gains a new `.quiet` argument to silence progress messages
     (#145).
 
     !end-bullet!
 -   !begin-bullet!
-    Fixed an issue in `bench_time_trans()` and `bench_bytes_trans()`
-    where pretty breaks were not being applied correctly (#140,
-    @plietar, @simonpcouch).
+    The `.grid` argument of `press()` now subsets data.frames and
+    tibbles consistently (#142).
+
+    !end-bullet!
+-   !begin-bullet!
+    `bench_time_trans()` and `bench_bytes_trans()` once again apply
+    pretty breaks correctly (#140, @plietar, @simonpcouch).
 
     !end-bullet!
 -   !begin-bullet!

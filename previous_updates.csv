@@ -18597,3 +18597,4 @@ chromote,f6d694ac10b77437c3ab01dcc65bf646,"Chrome v132 and later no longer suppo
 webshot2,b9c19e29a8ee2268e38ad31427dc964a,Updated the documentation for `webshot()` to clarify that `expand` only applies to the clipping rectangle determined by `selector`. (#68),NA,NA,NA,NA
 webshot2,8d05b31446c1cd52f90156295030e44e,"`webshot()` now rounds `vwidth` and `vheight` to the nearest integer to match Chrome's expectations. If this behavior is somehow problematic, you can use `vwidth = I(my_width)` to avoid the conversion. (#70)",NA,NA,NA,NA
 webshot2,552fe8dfb1a3c96a8fad316e1c060f0f,`webshot()` now surfaces errors that occur when working with the lower-level screenshot API provided by Chrome via `{chromote}`. (#69),NA,NA,NA,NA
+bench,adae8950d3330fd589ee161160561aff,"`bench_time_trans()` and `bench_bytes_trans()` once again apply pretty breaks correctly (#140, @​plietar, @​simonpcouch).",NA,NA,NA,NA
