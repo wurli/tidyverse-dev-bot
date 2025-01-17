@@ -9,6 +9,13 @@
     `chromote.headless` option or `CHROMOTE_HEADLESS` environment
     variable to configure the `--headless` flag if you're using an older
     version of Chrome. (#187)
+
+    !end-bullet!
+-   !begin-bullet!
+    Added `chromote_info()`, a new utility function to print out key
+    information about chromote and Chrome. Useful when debugging
+    chromote or reporting an issue. (#190)
+
     !end-bullet!
 
 !end-bullets-1!
