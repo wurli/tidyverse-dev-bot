@@ -58,6 +58,12 @@
     bookmarking feature. (#1166)
 
     !end-bullet!
+-   !begin-bullet!
+    Fixed an issue with the Shiny preset (`bs_theme(5, "shiny")`) that
+    caused a floating underling to appear when a `nav_panel_hidden()`
+    was used and active. (#1170)
+
+    !end-bullet!
 
 !end-bullets-3!
 
