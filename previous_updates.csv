@@ -18600,3 +18600,10 @@ webshot2,552fe8dfb1a3c96a8fad316e1c060f0f,`webshot()` now surfaces errors that o
 bench,adae8950d3330fd589ee161160561aff,"`bench_time_trans()` and `bench_bytes_trans()` once again apply pretty breaks correctly (#140, @​plietar, @​simonpcouch).",NA,NA,NA,NA
 chromote,dafaffc6770fef15df2a902965fa9431,"Added `chromote_info()`, a new utility function to print out key information about chromote and Chrome. Useful when debugging chromote or reporting an issue. (#190)",NA,NA,NA,NA
 bslib,dc202cb3d23c813f7aecfb8846992e15,"Fixed an issue with the Shiny preset (`bs_theme(5, ""shiny"")`) that caused a floating underling to appear when a `nav_panel_hidden()` was used and active. (#1170)",NA,NA,NA,NA
+duckplyr,4f1025d351b4fadef49f484add7209d3,"Avoid base pipe for compatibility with R 4.0.0 (#463, #466).",NA,NA,NA,NA
+duckplyr,018233f3050589e9d06cb32d63350f08,"Point to the native CSV reader if encountering data frames read with readr (#127, #469).",NA,NA,NA,NA
+duckplyr,e9fdd60455e06816fe2574cce95ddb2e,Extract function to reset connection (#471).,NA,NA,NA,NA
+duckplyr,f87b6be787b97b518df884f10bc8d8ac,Clean up source in error (#468).,NA,NA,NA,NA
+duckplyr,fd3f118381e14344c92619c77a264910,Improve markup for error message (#467).,NA,NA,NA,NA
+duckplyr,51e186cfb279ec2275c3f90c1e9eed1b,"Tweak reference index (#465, #474).",NA,NA,NA,NA
+duckplyr,8e5d57f2580e411e473d8b55f535e01d,Move dplyr tests (#470).,NA,NA,NA,NA
