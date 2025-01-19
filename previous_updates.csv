@@ -18607,3 +18607,5 @@ duckplyr,f87b6be787b97b518df884f10bc8d8ac,Clean up source in error (#468).,NA,NA
 duckplyr,fd3f118381e14344c92619c77a264910,Improve markup for error message (#467).,NA,NA,NA,NA
 duckplyr,51e186cfb279ec2275c3f90c1e9eed1b,"Tweak reference index (#465, #474).",NA,NA,NA,NA
 duckplyr,8e5d57f2580e411e473d8b55f535e01d,Move dplyr tests (#470).,NA,NA,NA,NA
+duckplyr,328f8b7b505e200eb1bf17c13ba55645,"Tweak examples and titles (#363, #475).",NA,NA,NA,NA
+duckplyr,52aea885181444a647e2ec8bc6928980,"Fix logo (#476, #478).",NA,NA,NA,NA
