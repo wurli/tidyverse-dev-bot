@@ -1,6 +1,8 @@
 # httr2 (development version)
 
-# Lifecycle changes
+# httr2 1.1.0
+
+## Lifecycle changes
 
 !begin-bullets-1!
 
@@ -17,7 +19,7 @@
 
 !end-bullets-1!
 
-# New features
+## New features
 
 !begin-bullets-2!
 
@@ -60,7 +62,7 @@
 
 !end-bullets-2!
 
-# Bug fixes and minor improvements
+## Bug fixes and minor improvements
 
 !begin-bullets-3!
 
