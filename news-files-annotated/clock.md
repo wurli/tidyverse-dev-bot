@@ -1,8 +1,17 @@
 # clock (development version)
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    Added a `diff()` method for time points and calendars to ensure that
+    durations are always returned, even in the empty result case (#364).
+    !end-bullet!
+
+!end-bullets-1!
+
 # clock 0.7.1
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     Removed usage of non-API `STRING_PTR()` in favor of
@@ -15,13 +24,13 @@
 
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # clock 0.7.0
 
 ## New features
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     New `year_week_day()` calendar for specifying a date using the year,
@@ -57,11 +66,11 @@
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 ## Breaking changes
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     The storage mechanism for the duration, sys-time, naive-time, and
@@ -80,22 +89,22 @@
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 ## Lifecycle changes
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     `date_zone()` and `date_set_zone()` have been soft-deprecated in
     favor of `date_time_zone()` and `date_time_set_zone()` (#326).
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 ## Minor changes and bug fixes
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     clock now compiles significantly faster (on a 2018 Intel Mac, it
@@ -174,11 +183,11 @@
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # clock 0.6.1
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     `date_seq()` and the `seq()` methods for the calendar, time point,
@@ -228,11 +237,11 @@
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 # clock 0.6.0
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     New `date_count_between()`, `calendar_count_between()`, and
@@ -259,11 +268,11 @@
 
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 # clock 0.5.0
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     New `date_time_parse_RFC_3339()` and `sys_time_parse_RFC_3339()` for
@@ -281,11 +290,11 @@
     formats used in many of the date formatting and parsing functions
     have been slightly altered. The following changes have been made:
 
-    !begin-bullets-9!
+    !begin-bullets-10!
     -   !begin-bullet!
         Date-times (POSIXct):
 
-        !begin-bullets-10!
+        !begin-bullets-11!
         -   !begin-bullet!
             `date_format()` now prints a `T` between the date and time.
 
@@ -296,12 +305,12 @@
 
             !end-bullet!
 
-        !end-bullets-10!
+        !end-bullets-11!
         !end-bullet!
     -   !begin-bullet!
         Sys-times:
 
-        !begin-bullets-11!
+        !begin-bullets-12!
         -   !begin-bullet!
             `format()` and `as.character()` now print a `T` between the
             date and time.
@@ -313,12 +322,12 @@
 
             !end-bullet!
 
-        !end-bullets-11!
+        !end-bullets-12!
         !end-bullet!
     -   !begin-bullet!
         Naive-times:
 
-        !begin-bullets-12!
+        !begin-bullets-13!
         -   !begin-bullet!
             `format()` and `as.character()` now print a `T` between the
             date and time.
@@ -330,12 +339,12 @@
 
             !end-bullet!
 
-        !end-bullets-12!
+        !end-bullets-13!
         !end-bullet!
     -   !begin-bullet!
         Zoned-times:
 
-        !begin-bullets-13!
+        !begin-bullets-14!
         -   !begin-bullet!
             `format()` and `as.character()` now print a `T` between the
             date and time.
@@ -347,12 +356,12 @@
 
             !end-bullet!
 
-        !end-bullets-13!
+        !end-bullets-14!
         !end-bullet!
     -   !begin-bullet!
         Calendars:
 
-        !begin-bullets-14!
+        !begin-bullets-15!
         -   !begin-bullet!
             `format()` and `as.character()` now print a `T` between the
             date and time.
@@ -364,10 +373,10 @@
 
             !end-bullet!
 
-        !end-bullets-14!
+        !end-bullets-15!
         !end-bullet!
 
-    !end-bullets-9!
+    !end-bullets-10!
     !end-bullet!
 -   !begin-bullet!
     Further improved documentation of undefined behavior resulting from
@@ -382,21 +391,21 @@
 
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 # clock 0.4.1
 
-!begin-bullets-15!
+!begin-bullets-16!
 
 -   !begin-bullet!
     Updated a test related to upcoming changes in testthat.
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-16!
 
 # clock 0.4.0
 
-!begin-bullets-16!
+!begin-bullets-17!
 
 -   !begin-bullet!
     New `date_start()` and `date_end()` for computing the date at the
@@ -425,11 +434,11 @@
 
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-17!
 
 # clock 0.3.1
 
-!begin-bullets-17!
+!begin-bullets-18!
 
 -   !begin-bullet!
     Parsing into a date-time type that is coarser than the original
@@ -468,11 +477,11 @@
 
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-18!
 
 # clock 0.3.0
 
-!begin-bullets-18!
+!begin-bullets-19!
 
 -   !begin-bullet!
     New `date_seq()` for generating date and date-time sequences (#218).
@@ -491,11 +500,11 @@
 
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-19!
 
 # clock 0.2.0
 
-!begin-bullets-19!
+!begin-bullets-20!
 
 -   !begin-bullet!
     clock now interprets R's Date class as *naive-time* rather than
@@ -504,7 +513,7 @@
     how users think Date should work. This resulted in the following
     changes:
 
-    !begin-bullets-20!
+    !begin-bullets-21!
     -   !begin-bullet!
         `date_zone()` now errors with Date input, as naive-times do not
         have a specified time zone.
@@ -540,7 +549,7 @@
 
         !end-bullet!
 
-    !end-bullets-20!
+    !end-bullets-21!
     !end-bullet!
 -   !begin-bullet!
     New `as_date()` and `as_date_time()` for converting to Date and
@@ -554,7 +563,7 @@
 -   !begin-bullet!
     Added two new convenient helpers (#197):
 
-    !begin-bullets-21!
+    !begin-bullets-22!
     -   !begin-bullet!
         `date_today()` for getting the current date (Date)
 
@@ -564,7 +573,7 @@
 
         !end-bullet!
 
-    !end-bullets-21!
+    !end-bullets-22!
     !end-bullet!
 -   !begin-bullet!
     Fixed a bug where converting from a time point to a Date or POSIXct
@@ -598,14 +607,14 @@
 
     !end-bullet!
 
-!end-bullets-19!
+!end-bullets-20!
 
 # clock 0.1.0
 
-!begin-bullets-22!
+!begin-bullets-23!
 
 -   !begin-bullet!
     Added a `NEWS.md` file to track changes to the package.
     !end-bullet!
 
-!end-bullets-22!
+!end-bullets-23!
