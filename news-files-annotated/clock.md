@@ -3,8 +3,14 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed a test that failed due to `seq.Date()` now returning integer
+    storage in some cases in the development version of R.
+
+    !end-bullet!
+-   !begin-bullet!
     Added a `diff()` method for time points and calendars to ensure that
     durations are always returned, even in the empty result case (#364).
+
     !end-bullet!
 
 !end-bullets-1!
