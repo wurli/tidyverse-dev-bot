@@ -18614,3 +18614,4 @@ clock,0ed8eea99f42bc877d58969f5634729e,Fixed a test that failed due to `seq.Date
 ggplot2,53152f8031a200f7de0ae0ee8e322e54,"`scale_{x/y}_discrete(continuous.limits)` is a new argument to control the display range of discrete scales (@​teunbrand, #4174, #6259).",NA,NA,NA,NA
 chromote,b329394f88b71fbaf4073732dfbc04cc,"chromote now uses a consistent prefix for logs, e.g `{tempdir}/chrome-{id}-stdout.log` and `{tempdir}/chrome-{id}-stderr.log`. chromote also now uses `--crash-dumps-dir` to set a session-specific temp directory. (#194)",NA,NA,NA,NA
 shiny,93906393cda5adafa7b0b1618b2766ca,Shiny now uses `{cli}` instead of `{crayon}` for rich log messages. (@​olivroy #4170),NA,NA,NA,NA
+clock,0adebf048d6b23f6de14fb58cd9218d0,Fixed an issue where clock would not compile on Centos 7 using gcc-5.4.0 due to a `constexpr` issue (#357).,NA,NA,NA,NA
