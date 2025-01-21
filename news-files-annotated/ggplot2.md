@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `scale_{x/y}_discrete(continuous.limits)` is a new argument to
+    control the display range of discrete scales (@teunbrand, #4174,
+    #6259).
+
+    !end-bullet!
+-   !begin-bullet!
     `geom_ribbon()` now appropriately warns about, and removes, missing
     values (@teunbrand, #6243).
 

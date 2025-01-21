@@ -18611,3 +18611,4 @@ duckplyr,328f8b7b505e200eb1bf17c13ba55645,"Tweak examples and titles (#363, #475
 duckplyr,52aea885181444a647e2ec8bc6928980,"Fix logo (#476, #478).",NA,NA,NA,NA
 clock,17876809125aba1d5877a621d1a6e5f9,"Added a `diff()` method for time points and calendars to ensure that durations are always returned, even in the empty result case (#364).",NA,NA,NA,NA
 clock,0ed8eea99f42bc877d58969f5634729e,Fixed a test that failed due to `seq.Date()` now returning integer storage in some cases in the development version of R.,NA,NA,NA,NA
+ggplot2,53152f8031a200f7de0ae0ee8e322e54,"`scale_{x/y}_discrete(continuous.limits)` is a new argument to control the display range of discrete scales (@​teunbrand, #4174, #6259).",NA,NA,NA,NA
