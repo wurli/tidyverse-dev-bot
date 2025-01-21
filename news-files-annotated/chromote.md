@@ -17,6 +17,13 @@
     chromote or reporting an issue. (#190)
 
     !end-bullet!
+-   !begin-bullet!
+    chromote now uses a consistent prefix for logs, e.g
+    `{tempdir}/chrome-{id}-stdout.log` and
+    `{tempdir}/chrome-{id}-stderr.log`. chromote also now uses
+    `--crash-dumps-dir` to set a session-specific temp directory. (#194)
+
+    !end-bullet!
 
 !end-bullets-1!
 
