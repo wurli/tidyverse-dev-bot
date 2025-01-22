@@ -1,5 +1,7 @@
 # rsconnect (development version)
 
+# rsconnect 1.3.4
+
 * Use base64 encoded test data. Addresses CRAN test failures when run with
   newer libssl. (#1130)
 
