@@ -18627,3 +18627,28 @@ shiny,9f503fd10ffe4809bb323be86e211278,• Places a minimum height on recalculat
 duckplyr,8521d9a6286249fc1af8a3197d02f3ee,Deprecate old I/O functions (#481).,NA,NA,NA,NA
 duckplyr,12749112097ee6da63a1089596cf0660,Convert bullets to info items (#483).,NA,NA,NA,NA
 plumber,2527454f534f7ac3dbcb62bb8f149b3b,"`parse_rds()`, `parse_feather()`, and `parse_parquet()` no longer writes data to disk during parsing (@​thomasp85, #942)",NA,NA,NA,NA
+keras,689c95d3ebea1a12b94b701438af33b5,New symbols:,NA,NA,NA,NA
+keras,689c95d3ebea1a12b94b701438af33b5,• `activation_sparse_plus()`,NA,NA,NA,NA
+keras,689c95d3ebea1a12b94b701438af33b5,• `activation_sparsemax()`,NA,NA,NA,NA
+keras,689c95d3ebea1a12b94b701438af33b5,• `activation_threshold()`,NA,NA,NA,NA
+keras,689c95d3ebea1a12b94b701438af33b5,• `layer_equalization()`,NA,NA,NA,NA
+keras,689c95d3ebea1a12b94b701438af33b5,• `layer_mix_up()`,NA,NA,NA,NA
+keras,689c95d3ebea1a12b94b701438af33b5,• `layer_rand_augment()`,NA,NA,NA,NA
+keras,689c95d3ebea1a12b94b701438af33b5,• `layer_random_color_degeneration()`,NA,NA,NA,NA
+keras,689c95d3ebea1a12b94b701438af33b5,• `layer_random_color_jitter()`,NA,NA,NA,NA
+keras,689c95d3ebea1a12b94b701438af33b5,• `layer_random_grayscale()`,NA,NA,NA,NA
+keras,689c95d3ebea1a12b94b701438af33b5,• `layer_random_hue()`,NA,NA,NA,NA
+keras,689c95d3ebea1a12b94b701438af33b5,• `layer_random_posterization()`,NA,NA,NA,NA
+keras,689c95d3ebea1a12b94b701438af33b5,• `layer_random_saturation()`,NA,NA,NA,NA
+keras,689c95d3ebea1a12b94b701438af33b5,• `layer_random_sharpness()`,NA,NA,NA,NA
+keras,689c95d3ebea1a12b94b701438af33b5,• `layer_random_shear()`,NA,NA,NA,NA
+keras,689c95d3ebea1a12b94b701438af33b5,• `op_diagflat()`,NA,NA,NA,NA
+keras,689c95d3ebea1a12b94b701438af33b5,• `op_sparse_plus()`,NA,NA,NA,NA
+keras,689c95d3ebea1a12b94b701438af33b5,• `op_sparsemax()`,NA,NA,NA,NA
+keras,689c95d3ebea1a12b94b701438af33b5,• `op_threshold()`,NA,NA,NA,NA
+keras,689c95d3ebea1a12b94b701438af33b5,• `op_unravel_index()`,NA,NA,NA,NA
+keras,0d5d336c3ec8b992e0172e4650add91a,Add argument axis to tversky loss,NA,NA,NA,NA
+keras,960b918e123b129aef66e80c5229c75b,New: ONNX model export with `export_savedmodel()`,NA,NA,NA,NA
+keras,9a5e99a003f347316d02a4a3f978b8e9,Doc improvements and bug fixes.,NA,NA,NA,NA
+keras,11c49f20bdb1d5f9ec5dddc03e8175d1,JAX specific changes: Add support for JAX named scope,NA,NA,NA,NA
+keras,944b659bcb9983518f2c280ee6c6a9b4,TensorFlow specific changes: Make `random_shuffle()` XLA compilable,NA,NA,NA,NA
