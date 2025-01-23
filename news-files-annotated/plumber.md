@@ -15,6 +15,11 @@
     (@thomasp85 #964)
 
     !end-bullet!
+-   !begin-bullet!
+    `parse_rds()`, `parse_feather()`, and `parse_parquet()` no longer
+    writes data to disk during parsing (@thomasp85, #942)
+
+    !end-bullet!
 
 !end-bullets-1!
 

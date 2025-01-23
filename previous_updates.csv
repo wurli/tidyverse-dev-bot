@@ -18626,3 +18626,4 @@ shiny,9f503fd10ffe4809bb323be86e211278,• Shows a spinner on `tableOutput()`. (
 shiny,9f503fd10ffe4809bb323be86e211278,• Places a minimum height on recalculating outputs so that the spinner is always visible. (#4172),NA,NA,NA,NA
 duckplyr,8521d9a6286249fc1af8a3197d02f3ee,Deprecate old I/O functions (#481).,NA,NA,NA,NA
 duckplyr,12749112097ee6da63a1089596cf0660,Convert bullets to info items (#483).,NA,NA,NA,NA
+plumber,2527454f534f7ac3dbcb62bb8f149b3b,"`parse_rds()`, `parse_feather()`, and `parse_parquet()` no longer writes data to disk during parsing (@​thomasp85, #942)",NA,NA,NA,NA
