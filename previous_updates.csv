@@ -18652,3 +18652,4 @@ keras,960b918e123b129aef66e80c5229c75b,New: ONNX model export with `export_saved
 keras,9a5e99a003f347316d02a4a3f978b8e9,Doc improvements and bug fixes.,NA,NA,NA,NA
 keras,11c49f20bdb1d5f9ec5dddc03e8175d1,JAX specific changes: Add support for JAX named scope,NA,NA,NA,NA
 keras,944b659bcb9983518f2c280ee6c6a9b4,TensorFlow specific changes: Make `random_shuffle()` XLA compilable,NA,NA,NA,NA
+httr2,66ee8b4e030eeabc6c0dec884d346511,"`aws_v4_signature()` now works if url contains query parameters (@​ jeffreyzuber, #645).",NA,NA,NA,NA
