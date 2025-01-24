@@ -18658,3 +18658,4 @@ pointblank,c316f1032472b8f48414e8ad8f003451,The `brief` argument of validation f
 pointblank,c0e0b28a62b7ce136b5d9c93a01800d2,Validation step `brief`s correctly recycle to match expanded steps (#564),NA,NA,NA,NA
 httr2,8ec76561621cc45b1aa8ef4f2c374fb3,`resp_stream_sse()` now automatically retrieves the next event if the current event contains no data. The data is now returned as a single string (#650).,NA,NA,NA,NA
 pointblank,d7e05db4d972f0567a8a0ac957842c34,Data extracts for `rows_distinct()` preserves columns other than the ones tested (#588),NA,NA,NA,NA
+pointblank,de39aab65a1edf7e23c6f211c77947f2,`info_columns()` warn more informatively when no columns are selected (#589).,NA,NA,NA,NA

@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `info_columns()` warn more informatively when no columns are
+    selected (#589).
+
+    !end-bullet!
+-   !begin-bullet!
     Data extracts for `rows_distinct()` preserves columns other than the
     ones tested (#588)
 
