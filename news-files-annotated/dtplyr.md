@@ -55,6 +55,11 @@
     `max_footer_lines` args (#464)
 
     !end-bullet!
+-   !begin-bullet!
+    `transmute()` preserves row count and avoids unnecessary copies
+    (#470)
+
+    !end-bullet!
 
 !end-bullets-2!
 

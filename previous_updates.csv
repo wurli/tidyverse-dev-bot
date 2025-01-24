@@ -18653,3 +18653,6 @@ keras,9a5e99a003f347316d02a4a3f978b8e9,Doc improvements and bug fixes.,NA,NA,NA,
 keras,11c49f20bdb1d5f9ec5dddc03e8175d1,JAX specific changes: Add support for JAX named scope,NA,NA,NA,NA
 keras,944b659bcb9983518f2c280ee6c6a9b4,TensorFlow specific changes: Make `random_shuffle()` XLA compilable,NA,NA,NA,NA
 httr2,66ee8b4e030eeabc6c0dec884d346511,"`aws_v4_signature()` now works if url contains query parameters (@​ jeffreyzuber, #645).",NA,NA,NA,NA
+dtplyr,22cc9aa2323dffc58eeaaafd879fa3e1,`transmute()` preserves row count and avoids unnecessary copies (#470),NA,NA,NA,NA
+pointblank,c316f1032472b8f48414e8ad8f003451,The `brief` argument of validation functions now also supports `{glue}` syntax (#587),NA,NA,NA,NA
+pointblank,c0e0b28a62b7ce136b5d9c93a01800d2,Validation step `brief`s correctly recycle to match expanded steps (#564),NA,NA,NA,NA
