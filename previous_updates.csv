@@ -18656,3 +18656,4 @@ httr2,66ee8b4e030eeabc6c0dec884d346511,"`aws_v4_signature()` now works if url co
 dtplyr,22cc9aa2323dffc58eeaaafd879fa3e1,`transmute()` preserves row count and avoids unnecessary copies (#470),NA,NA,NA,NA
 pointblank,c316f1032472b8f48414e8ad8f003451,The `brief` argument of validation functions now also supports `{glue}` syntax (#587),NA,NA,NA,NA
 pointblank,c0e0b28a62b7ce136b5d9c93a01800d2,Validation step `brief`s correctly recycle to match expanded steps (#564),NA,NA,NA,NA
+httr2,8ec76561621cc45b1aa8ef4f2c374fb3,`resp_stream_sse()` now automatically retrieves the next event if the current event contains no data. The data is now returned as a single string (#650).,NA,NA,NA,NA
