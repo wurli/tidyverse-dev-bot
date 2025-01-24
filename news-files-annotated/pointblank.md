@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Data extracts for `rows_distinct()` preserves columns other than the
+    ones tested (#588)
+
+    !end-bullet!
+-   !begin-bullet!
     The `brief` argument of validation functions now also supports
     `{glue}` syntax (#587)
 
