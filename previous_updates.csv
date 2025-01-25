@@ -18659,3 +18659,8 @@ pointblank,c0e0b28a62b7ce136b5d9c93a01800d2,Validation step `brief`s correctly r
 httr2,8ec76561621cc45b1aa8ef4f2c374fb3,`resp_stream_sse()` now automatically retrieves the next event if the current event contains no data. The data is now returned as a single string (#650).,NA,NA,NA,NA
 pointblank,d7e05db4d972f0567a8a0ac957842c34,Data extracts for `rows_distinct()` preserves columns other than the ones tested (#588),NA,NA,NA,NA
 pointblank,de39aab65a1edf7e23c6f211c77947f2,`info_columns()` warn more informatively when no columns are selected (#589).,NA,NA,NA,NA
+duckplyr,a89cfea6cca6bdb926228de68895e773,Support partial funneling (#487).,NA,NA,NA,NA
+duckplyr,2dd2e08e07fe12b3fd216c8caabd81eb,Bump.,NA,NA,NA,NA
+duckplyr,24e558ff263a4926ecc78fe01792e4e0,Fix remote.,NA,NA,NA,NA
+duckplyr,c2f915bb750c7579c81cbf3a2579ac1f,Run fledge before RCC.,NA,NA,NA,NA
+duckplyr,09c370d235a586b49b437fc84b11525c,"Make flights data workaround explicit thus less scary (@​maelle, #488, #490).",NA,NA,NA,NA
