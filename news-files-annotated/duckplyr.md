@@ -1,14 +1,14 @@
 ```{=html}
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 ```
-# duckplyr 0.99.99.9920 (2025-01-25)
+# duckplyr 0.99.99.9921 (2025-01-26)
 
-## Features
+## Bug fixes
 
 !begin-bullets-1!
 
 -   !begin-bullet!
-    Support partial funneling (#487).
+    Remove startup message after second `load_all()` (#480, #492).
     !end-bullet!
 
 !end-bullets-1!
@@ -16,6 +16,39 @@
 ## Chore
 
 !begin-bullets-2!
+
+-   !begin-bullet!
+    Install duckdb from CRAN (#495).
+    !end-bullet!
+
+!end-bullets-2!
+
+## Documentation
+
+!begin-bullets-3!
+
+-   !begin-bullet!
+    Introduce concept of funneling alongside eagerness and lazyness
+    (#473, #496).
+    !end-bullet!
+
+!end-bullets-3!
+
+# duckplyr 0.99.99.9920 (2025-01-25)
+
+## Features
+
+!begin-bullets-4!
+
+-   !begin-bullet!
+    Support partial funneling (#487).
+    !end-bullet!
+
+!end-bullets-4!
+
+## Chore
+
+!begin-bullets-5!
 
 -   !begin-bullet!
     Bump.
@@ -30,44 +63,44 @@
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-5!
 
 ## Continuous integration
 
-!begin-bullets-3!
+!begin-bullets-6!
 
 -   !begin-bullet!
     Run fledge before RCC.
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-6!
 
 ## Documentation
 
-!begin-bullets-4!
+!begin-bullets-7!
 
 -   !begin-bullet!
     Make flights data workaround explicit thus less scary (@maelle,
     #488, #490).
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-7!
 
 # duckplyr 0.99.99.9919 (2025-01-23)
 
 ## Chore
 
-!begin-bullets-5!
+!begin-bullets-8!
 
 -   !begin-bullet!
     Deprecate old I/O functions (#481).
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-8!
 
 ## Documentation
 
-!begin-bullets-6!
+!begin-bullets-9!
 
 -   !begin-bullet!
     Convert bullets to info items (#483).
@@ -78,13 +111,13 @@
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-9!
 
 # duckplyr 0.99.99.9918 (2025-01-19)
 
 ## Documentation
 
-!begin-bullets-7!
+!begin-bullets-10!
 
 -   !begin-bullet!
     Tweak examples and titles (#363, #475).
@@ -95,34 +128,34 @@
 
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-10!
 
 # duckplyr 0.99.99.9917 (2025-01-18)
 
 ## Bug fixes
 
-!begin-bullets-8!
+!begin-bullets-11!
 
 -   !begin-bullet!
     Avoid base pipe for compatibility with R 4.0.0 (#463, #466).
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-11!
 
 ## Features
 
-!begin-bullets-9!
+!begin-bullets-12!
 
 -   !begin-bullet!
     Point to the native CSV reader if encountering data frames read with
     readr (#127, #469).
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-12!
 
 ## Chore
 
-!begin-bullets-10!
+!begin-bullets-13!
 
 -   !begin-bullet!
     Extract function to reset connection (#471).
@@ -137,45 +170,45 @@
 
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-13!
 
 ## Documentation
 
-!begin-bullets-11!
+!begin-bullets-14!
 
 -   !begin-bullet!
     Tweak reference index (#465, #474).
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-14!
 
 ## Testing
 
-!begin-bullets-12!
+!begin-bullets-15!
 
 -   !begin-bullet!
     Move dplyr tests (#470).
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-15!
 
 # duckplyr 0.99.99.9916 (2025-01-13)
 
 ## Documentation
 
-!begin-bullets-13!
+!begin-bullets-16!
 
 -   !begin-bullet!
     Clean up documentation (#444, #460).
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-16!
 
 # duckplyr 0.99.99.9915 (2025-01-12)
 
 ## Features
 
-!begin-bullets-14!
+!begin-bullets-17!
 
 -   !begin-bullet!
     Rename `duck_exec()` to `db_exec()` and `duck_*()` to
@@ -199,11 +232,11 @@
 
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-17!
 
 ## Chore
 
-!begin-bullets-15!
+!begin-bullets-18!
 
 -   !begin-bullet!
     Capture and return `rel_try()` error (#454).
@@ -218,11 +251,11 @@
 
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-18!
 
 ## Documentation
 
-!begin-bullets-16!
+!begin-bullets-19!
 
 -   !begin-bullet!
     Add "Eager and lazy" section to `?duck_tbl`, document `collect()`
@@ -234,57 +267,57 @@
 
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-19!
 
 # duckplyr 0.99.99.9914 (2025-01-11)
 
 ## Features
 
-!begin-bullets-17!
+!begin-bullets-20!
 
 -   !begin-bullet!
     `collect()` returns a tibble (#438, #447).
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-20!
 
 ## Chore
 
-!begin-bullets-18!
+!begin-bullets-21!
 
 -   !begin-bullet!
     Sync tests (#446).
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-21!
 
 # duckplyr 0.99.99.9913 (2025-01-05)
 
 ## Documentation
 
-!begin-bullets-19!
+!begin-bullets-22!
 
 -   !begin-bullet!
     Rename help topic (#443).
     !end-bullet!
 
-!end-bullets-19!
+!end-bullets-22!
 
 # duckplyr 0.99.99.9912 (2025-01-02)
 
 ## Bug fixes
 
-!begin-bullets-20!
+!begin-bullets-23!
 
 -   !begin-bullet!
     Remove unneeded cast that breaks the meta functionality (#436).
     !end-bullet!
 
-!end-bullets-20!
+!end-bullets-23!
 
 ## Continuous integration
 
-!begin-bullets-21!
+!begin-bullets-24!
 
 -   !begin-bullet!
     Remove generated code from coverage analysis (#435).
@@ -295,49 +328,49 @@
 
     !end-bullet!
 
-!end-bullets-21!
+!end-bullets-24!
 
 # duckplyr 0.99.99.9911 (2025-01-01)
 
 ## Features
 
-!begin-bullets-22!
+!begin-bullets-25!
 
 -   !begin-bullet!
     New `compute_parquet()` and `compute_csv()`, implement
     `compute.duckplyr_df()` (#409, #430).
     !end-bullet!
 
-!end-bullets-22!
+!end-bullets-25!
 
 # duckplyr 0.99.99.9910 (2024-12-31)
 
 ## Continuous integration
 
-!begin-bullets-23!
+!begin-bullets-26!
 
 -   !begin-bullet!
     Adapt to codecov/codecov-action@v5.
     !end-bullet!
 
-!end-bullets-23!
+!end-bullets-26!
 
 # duckplyr 0.99.99.9909 (2024-12-30)
 
 ## Features
 
-!begin-bullets-24!
+!begin-bullets-27!
 
 -   !begin-bullet!
     New `fallback_config()` to create a configuration file for the
     settings that do not affect behavior (#216, #426).
     !end-bullet!
 
-!end-bullets-24!
+!end-bullets-27!
 
 ## Continuous integration
 
-!begin-bullets-25!
+!begin-bullets-28!
 
 -   !begin-bullet!
     Pass secret.
@@ -364,11 +397,11 @@
 
     !end-bullet!
 
-!end-bullets-25!
+!end-bullets-28!
 
 ## Documentation
 
-!begin-bullets-26!
+!begin-bullets-29!
 
 -   !begin-bullet!
     Add codecov badge.
@@ -379,23 +412,23 @@
 
     !end-bullet!
 
-!end-bullets-26!
+!end-bullets-29!
 
 ## Testing
 
-!begin-bullets-27!
+!begin-bullets-30!
 
 -   !begin-bullet!
     Add tests for fallback configuration (#428).
     !end-bullet!
 
-!end-bullets-27!
+!end-bullets-30!
 
 # duckplyr 0.99.99.9908 (2024-12-29)
 
 ## Documentation
 
-!begin-bullets-28!
+!begin-bullets-31!
 
 -   !begin-bullet!
     Prefer `DUCKPLYR_FALLBACK_INFO` over `DUCKPLYR_FALLBACK_VERBOSE`
@@ -407,102 +440,102 @@
 
     !end-bullet!
 
-!end-bullets-28!
+!end-bullets-31!
 
 # duckplyr 0.99.99.9907 (2024-12-28)
 
 ## Features
 
-!begin-bullets-29!
+!begin-bullets-32!
 
 -   !begin-bullet!
     Fallback logging is now on by default, can be disabled with
     configuration (#422).
     !end-bullet!
 
-!end-bullets-29!
+!end-bullets-32!
 
 # duckplyr 0.99.99.9906 (2024-12-27)
 
 ## Features
 
-!begin-bullets-30!
+!begin-bullets-33!
 
 -   !begin-bullet!
     Add support for `sub()` and `gsub()` (@toppyy, #420).
     !end-bullet!
 
-!end-bullets-30!
+!end-bullets-33!
 
 # duckplyr 0.99.99.9905 (2024-12-21)
 
 ## Bug fixes
 
-!begin-bullets-31!
+!begin-bullets-34!
 
 -   !begin-bullet!
     Avoid workaround for R \< 4.3 (#417, #418).
     !end-bullet!
 
-!end-bullets-31!
+!end-bullets-34!
 
 ## Chore
 
-!begin-bullets-32!
+!begin-bullets-35!
 
 -   !begin-bullet!
     Update patches.
     !end-bullet!
 
-!end-bullets-32!
+!end-bullets-35!
 
 ## Documentation
 
-!begin-bullets-33!
+!begin-bullets-36!
 
 -   !begin-bullet!
     Add example for working with remote data (#260, #411).
     !end-bullet!
 
-!end-bullets-33!
+!end-bullets-36!
 
 # duckplyr 0.99.99.9904 (2024-12-20)
 
 ## Continuous integration
 
-!begin-bullets-34!
+!begin-bullets-37!
 
 -   !begin-bullet!
     Disable vignette evaluation for R \< 4.1.
     !end-bullet!
 
-!end-bullets-34!
+!end-bullets-37!
 
 # duckplyr 0.99.99.9903 (2024-12-19)
 
 ## Features
 
-!begin-bullets-35!
+!begin-bullets-38!
 
 -   !begin-bullet!
     Depend on dplyr instead of reexporting all generics (#405).
     !end-bullet!
 
-!end-bullets-35!
+!end-bullets-38!
 
 ## Chore
 
-!begin-bullets-36!
+!begin-bullets-39!
 
 -   !begin-bullet!
     NEWS.
     !end-bullet!
 
-!end-bullets-36!
+!end-bullets-39!
 
 ## Documentation
 
-!begin-bullets-37!
+!begin-bullets-40!
 
 -   !begin-bullet!
     Clarify usage by reducing duplication (#400).
@@ -518,13 +551,13 @@
 
     !end-bullet!
 
-!end-bullets-37!
+!end-bullets-40!
 
 # duckplyr 0.99.99.9902 (2024-12-18)
 
 ## Features
 
-!begin-bullets-38!
+!begin-bullets-41!
 
 -   !begin-bullet!
     New `duck_exec()`, replaces `duckplyr_execute()` (#404).
@@ -535,76 +568,19 @@
 
     !end-bullet!
 
-!end-bullets-38!
+!end-bullets-41!
 
 ## Chore
 
-!begin-bullets-39!
+!begin-bullets-42!
 
 -   !begin-bullet!
     IDE.
     !end-bullet!
 
-!end-bullets-39!
-
-# duckplyr 0.99.99.9901 (2024-12-17)
-
-## Features
-
-!begin-bullets-40!
-
--   !begin-bullet!
-    New `duck_sql()` (duckdb/duckdb-r#32, #397).
-
-    !end-bullet!
--   !begin-bullet!
-    New `duckparquet()`, `duckcsv()`, `duckjson()` and `duckfile()`,
-    deprecating `duckplyr_df_from_*()` and `df_from_*()` functions
-    (#210, #396).
-
-    !end-bullet!
--   !begin-bullet!
-    Deprecate `is_duckplyr_df()` (#392).
-
-    !end-bullet!
--   !begin-bullet!
-    New `is_ducktbl()` (#391).
-
-    !end-bullet!
--   !begin-bullet!
-    Add `"lazy_duckplyr_df"` class that requires `collect()` (#381,
-    #390).
-
-    !end-bullet!
-
-!end-bullets-40!
-
-## Chore
-
-!begin-bullets-41!
-
--   !begin-bullet!
-    Tweak `as_ducktbl()` for dbplyr lazy tables (#395).
-    !end-bullet!
-
-!end-bullets-41!
-
-## Documentation
-
-!begin-bullets-42!
-
--   !begin-bullet!
-    Add item in checklist when adding a new translation (@maelle, #399).
-
-    !end-bullet!
--   !begin-bullet!
-    Add link to DuckDB configuration (#174, #398).
-
-    !end-bullet!
-
 !end-bullets-42!
 
-# duckplyr 0.99.99.9900 (2024-12-16)
+# duckplyr 0.99.99.9901 (2024-12-17)
 
 ## Features
 
@@ -633,6 +609,63 @@
     #390).
 
     !end-bullet!
+
+!end-bullets-43!
+
+## Chore
+
+!begin-bullets-44!
+
+-   !begin-bullet!
+    Tweak `as_ducktbl()` for dbplyr lazy tables (#395).
+    !end-bullet!
+
+!end-bullets-44!
+
+## Documentation
+
+!begin-bullets-45!
+
+-   !begin-bullet!
+    Add item in checklist when adding a new translation (@maelle, #399).
+
+    !end-bullet!
+-   !begin-bullet!
+    Add link to DuckDB configuration (#174, #398).
+
+    !end-bullet!
+
+!end-bullets-45!
+
+# duckplyr 0.99.99.9900 (2024-12-16)
+
+## Features
+
+!begin-bullets-46!
+
+-   !begin-bullet!
+    New `duck_sql()` (duckdb/duckdb-r#32, #397).
+
+    !end-bullet!
+-   !begin-bullet!
+    New `duckparquet()`, `duckcsv()`, `duckjson()` and `duckfile()`,
+    deprecating `duckplyr_df_from_*()` and `df_from_*()` functions
+    (#210, #396).
+
+    !end-bullet!
+-   !begin-bullet!
+    Deprecate `is_duckplyr_df()` (#392).
+
+    !end-bullet!
+-   !begin-bullet!
+    New `is_ducktbl()` (#391).
+
+    !end-bullet!
+-   !begin-bullet!
+    Add `"lazy_duckplyr_df"` class that requires `collect()` (#381,
+    #390).
+
+    !end-bullet!
 -   !begin-bullet!
     Use `as_duckplyr_df_impl()` in verbs (#386).
 
@@ -661,11 +694,11 @@
 
     !end-bullet!
 
-!end-bullets-43!
+!end-bullets-46!
 
 ## Chore
 
-!begin-bullets-44!
+!begin-bullets-47!
 
 -   !begin-bullet!
     Tweak `as_ducktbl()` for dbplyr lazy tables (#395).
@@ -709,21 +742,21 @@
 
     !end-bullet!
 
-!end-bullets-44!
+!end-bullets-47!
 
 ## Continuous integration
 
-!begin-bullets-45!
+!begin-bullets-48!
 
 -   !begin-bullet!
     Avoid failure in fledge workflow if no changes (#368).
     !end-bullet!
 
-!end-bullets-45!
+!end-bullets-48!
 
 ## Documentation
 
-!begin-bullets-46!
+!begin-bullets-49!
 
 -   !begin-bullet!
     Add link to DuckDB configuration (#174, #398).
@@ -750,11 +783,11 @@
 
     !end-bullet!
 
-!end-bullets-46!
+!end-bullets-49!
 
 ## Performance
 
-!begin-bullets-47!
+!begin-bullets-50!
 
 -   !begin-bullet!
     Printing a duckplyr frame no longer materializes (#255, #378).
@@ -766,11 +799,11 @@
 
     !end-bullet!
 
-!end-bullets-47!
+!end-bullets-50!
 
 ## Testing
 
-!begin-bullets-48!
+!begin-bullets-51!
 
 -   !begin-bullet!
     Use `ducktbl()` in tests (#388).
@@ -789,13 +822,13 @@
 
     !end-bullet!
 
-!end-bullets-48!
+!end-bullets-51!
 
 # duckplyr 0.4.1.9007 (2024-12-16)
 
 ## Features
 
-!begin-bullets-49!
+!begin-bullets-52!
 
 -   !begin-bullet!
     Use `as_duckplyr_df_impl()` in verbs (#386).
@@ -815,11 +848,11 @@
 
     !end-bullet!
 
-!end-bullets-49!
+!end-bullets-52!
 
 ## Chore
 
-!begin-bullets-50!
+!begin-bullets-53!
 
 -   !begin-bullet!
     Fix comment in touchstone script (#387).
@@ -834,21 +867,21 @@
 
     !end-bullet!
 
-!end-bullets-50!
+!end-bullets-53!
 
 ## Performance
 
-!begin-bullets-51!
+!begin-bullets-54!
 
 -   !begin-bullet!
     Printing a duckplyr frame no longer materializes (#255, #378).
     !end-bullet!
 
-!end-bullets-51!
+!end-bullets-54!
 
 ## Testing
 
-!begin-bullets-52!
+!begin-bullets-55!
 
 -   !begin-bullet!
     Use `ducktbl()` in tests (#388).
@@ -863,13 +896,13 @@
 
     !end-bullet!
 
-!end-bullets-52!
+!end-bullets-55!
 
 # duckplyr 0.4.1.9006 (2024-12-15)
 
 ## Features
 
-!begin-bullets-53!
+!begin-bullets-56!
 
 -   !begin-bullet!
     New `last_rel()` to retrieve the last relation object used in
@@ -882,11 +915,11 @@
 
     !end-bullet!
 
-!end-bullets-53!
+!end-bullets-56!
 
 ## Chore
 
-!begin-bullets-54!
+!begin-bullets-57!
 
 -   !begin-bullet!
     Add read-only markers for overwrite + restore.
@@ -910,11 +943,11 @@
 
     !end-bullet!
 
-!end-bullets-54!
+!end-bullets-57!
 
 ## Documentation
 
-!begin-bullets-55!
+!begin-bullets-58!
 
 -   !begin-bullet!
     Fix rendering in vanilla session.
@@ -929,44 +962,44 @@
 
     !end-bullet!
 
-!end-bullets-55!
+!end-bullets-58!
 
 ## Performance
 
-!begin-bullets-56!
+!begin-bullets-59!
 
 -   !begin-bullet!
     Comparison expressions are translated in a way that allows them to
     be pushed down to Parquet (@toppyy, #270).
     !end-bullet!
 
-!end-bullets-56!
+!end-bullets-59!
 
 ## Testing
 
-!begin-bullets-57!
+!begin-bullets-60!
 
 -   !begin-bullet!
     Add snapshot test for conversion error in `as_duckplyr_df()`.
     !end-bullet!
 
-!end-bullets-57!
+!end-bullets-60!
 
 # duckplyr 0.4.1.9005 (2024-12-14)
 
 ## Chore
 
-!begin-bullets-58!
+!begin-bullets-61!
 
 -   !begin-bullet!
     Bump duckdb dependency.
     !end-bullet!
 
-!end-bullets-58!
+!end-bullets-61!
 
 ## Documentation
 
-!begin-bullets-59!
+!begin-bullets-62!
 
 -   !begin-bullet!
     Tweak method and behavior (#373).
@@ -977,13 +1010,13 @@
 
     !end-bullet!
 
-!end-bullets-59!
+!end-bullets-62!
 
 # duckplyr 0.4.1.9004 (2024-12-09)
 
 ## Bug fixes
 
-!begin-bullets-60!
+!begin-bullets-63!
 
 -   !begin-bullet!
     `check_duplicate_names()` (#317).
@@ -1022,11 +1055,11 @@
 
     !end-bullet!
 
-!end-bullets-60!
+!end-bullets-63!
 
 ## Features
 
-!begin-bullets-61!
+!begin-bullets-64!
 
 -   !begin-bullet!
     `mutate()` constructs intermediate data frames for each new variable
@@ -1097,11 +1130,11 @@
 
     !end-bullet!
 
-!end-bullets-61!
+!end-bullets-64!
 
 ## Chore
 
-!begin-bullets-62!
+!begin-bullets-65!
 
 -   !begin-bullet!
     Configure IDE.
@@ -1176,11 +1209,11 @@
 
     !end-bullet!
 
-!end-bullets-62!
+!end-bullets-65!
 
 ## Continuous integration
 
-!begin-bullets-63!
+!begin-bullets-66!
 
 -   !begin-bullet!
     Avoid failure in fledge workflow if no changes (#368).
@@ -1252,11 +1285,11 @@
 
     !end-bullet!
 
-!end-bullets-63!
+!end-bullets-66!
 
 ## Documentation
 
-!begin-bullets-64!
+!begin-bullets-67!
 
 -   !begin-bullet!
     Avoid `\code{}` (#340, #354).
@@ -1316,11 +1349,11 @@
 
     !end-bullet!
 
-!end-bullets-64!
+!end-bullets-67!
 
 ## Testing
 
-!begin-bullets-65!
+!begin-bullets-68!
 
 -   !begin-bullet!
     Snapshot updates for rcc-smoke (null) (#356).
@@ -1343,13 +1376,13 @@
 
     !end-bullet!
 
-!end-bullets-65!
+!end-bullets-68!
 
 # duckplyr 0.4.1.9003 (2024-08-20)
 
 ## Features
 
-!begin-bullets-66!
+!begin-bullets-69!
 
 -   !begin-bullet!
     Detect functions from the duckplyr package (#246).
@@ -1366,11 +1399,11 @@
 
     !end-bullet!
 
-!end-bullets-66!
+!end-bullets-69!
 
 ## Continuous integration
 
-!begin-bullets-67!
+!begin-bullets-70!
 
 -   !begin-bullet!
     Avoid failures if artifact is missing.
@@ -1445,45 +1478,45 @@
 
     !end-bullet!
 
-!end-bullets-67!
+!end-bullets-70!
 
 # duckplyr 0.4.1.9002 (2024-08-16)
 
 ## Documentation
 
-!begin-bullets-68!
+!begin-bullets-71!
 
 -   !begin-bullet!
     Move to tidyverse (#225).
     !end-bullet!
 
-!end-bullets-68!
+!end-bullets-71!
 
 # duckplyr 0.4.1.9001 (2024-07-13)
 
-!begin-bullets-69!
+!begin-bullets-72!
 
 -   !begin-bullet!
     Merge branch 'cran-0.4.1'.
     !end-bullet!
 
-!end-bullets-69!
+!end-bullets-72!
 
 # duckplyr 0.4.1.9000 (2024-07-12)
 
-!begin-bullets-70!
+!begin-bullets-73!
 
 -   !begin-bullet!
     Merge branch 'cran-0.4.1'.
     !end-bullet!
 
-!end-bullets-70!
+!end-bullets-73!
 
 # duckplyr 0.4.1 (2024-07-11)
 
 ## Features
 
-!begin-bullets-71!
+!begin-bullets-74!
 
 -   !begin-bullet!
     `df_from_file()` and related functions support multiple files (#194,
@@ -1509,11 +1542,11 @@
     analysis scripts for GitHub activity data (#179).
     !end-bullet!
 
-!end-bullets-71!
+!end-bullets-74!
 
 ## Documentation
 
-!begin-bullets-72!
+!begin-bullets-75!
 
 -   !begin-bullet!
     Add contributing guide (#179).
@@ -1534,13 +1567,13 @@
     Add analysis scripts for GitHub activity data (#179).
     !end-bullet!
 
-!end-bullets-72!
+!end-bullets-75!
 
 # duckplyr 0.4.0 (2024-05-21)
 
 ## Features
 
-!begin-bullets-73!
+!begin-bullets-76!
 
 -   !begin-bullet!
     Use built-in rfuns extension to implement equality and inequality
@@ -1563,11 +1596,11 @@
     Reduce default memory limit to 1 GB.
     !end-bullet!
 
-!end-bullets-73!
+!end-bullets-76!
 
 ## Bug fixes
 
-!begin-bullets-74!
+!begin-bullets-77!
 
 -   !begin-bullet!
     Stricter type checks in the set operations `intersect()`,
@@ -1614,11 +1647,11 @@
     (@TimTaylor, #141).
     !end-bullet!
 
-!end-bullets-74!
+!end-bullets-77!
 
 ## Chore
 
-!begin-bullets-75!
+!begin-bullets-78!
 
 -   !begin-bullet!
     Remove styler dependency (#137, #138).
@@ -1627,22 +1660,22 @@
     Avoid error from stats collection.
     !end-bullet!
 
-!end-bullets-75!
+!end-bullets-78!
 
 ## Documentation
 
-!begin-bullets-76!
+!begin-bullets-79!
 
 -   !begin-bullet!
     Mention wildcards to read multiple files in `?df_from_file`
     (@andreranza, #133, #134).
     !end-bullet!
 
-!end-bullets-76!
+!end-bullets-79!
 
 ## Testing
 
-!begin-bullets-77!
+!begin-bullets-80!
 
 -   !begin-bullet!
     Reenable tests that now run successfully (#166).
@@ -1661,24 +1694,24 @@
     differences between doubles and integers.
     !end-bullet!
 
-!end-bullets-77!
+!end-bullets-80!
 
 # duckplyr 0.3.2 (2024-03-17)
 
 ## Bug fixes
 
-!begin-bullets-78!
+!begin-bullets-81!
 
 -   !begin-bullet!
     Run autoupload in function so that it will be checked by static
     analysis (#122).
     !end-bullet!
 
-!end-bullets-78!
+!end-bullets-81!
 
 ## Features
 
-!begin-bullets-79!
+!begin-bullets-82!
 
 -   !begin-bullet!
     New `df_to_parquet()` to write to Parquet, new convenience functions
@@ -1686,13 +1719,13 @@
     `duckdb_df_from_parquet()` (#87, #89, #96, #128).
     !end-bullet!
 
-!end-bullets-79!
+!end-bullets-82!
 
 # duckplyr 0.3.1 (2024-03-08)
 
 ## Bug fixes
 
-!begin-bullets-80!
+!begin-bullets-83!
 
 -   !begin-bullet!
     Forbid reuse of new columns created in `summarise()` (#72, #106).
@@ -1707,11 +1740,11 @@
     Fix division by zero for positive and negative numbers.
     !end-bullet!
 
-!end-bullets-80!
+!end-bullets-83!
 
 ## Features
 
-!begin-bullets-81!
+!begin-bullets-84!
 
 -   !begin-bullet!
     New `fallback_sitrep()` and related functionality for collecting
@@ -1745,11 +1778,11 @@
     `TRUE`, loading duckplyr automatically calls `methods_overwrite()`.
     !end-bullet!
 
-!end-bullets-81!
+!end-bullets-84!
 
 ## Internal
 
-!begin-bullets-82!
+!begin-bullets-85!
 
 -   !begin-bullet!
     Better duckdb tests.
@@ -1758,33 +1791,33 @@
     Use standalone purrr for dplyr compatibility.
     !end-bullet!
 
-!end-bullets-82!
+!end-bullets-85!
 
 ## Testing
 
-!begin-bullets-83!
+!begin-bullets-86!
 
 -   !begin-bullet!
     Add tests for correct base of `log()` and `log10()`.
     !end-bullet!
 
-!end-bullets-83!
+!end-bullets-86!
 
 ## Documentation
 
-!begin-bullets-84!
+!begin-bullets-87!
 
 -   !begin-bullet!
     `methods_overwrite()` and `methods_restore()` show a message.
     !end-bullet!
 
-!end-bullets-84!
+!end-bullets-87!
 
 # duckplyr 0.3.0 (2023-12-10)
 
 ## Bug fixes
 
-!begin-bullets-85!
+!begin-bullets-88!
 
 -   !begin-bullet!
     `grepl(x = NA)` gives correct results.
@@ -1802,11 +1835,11 @@
     Consistent computation of `log(0)` and `log(-1)` (#75, #76).
     !end-bullet!
 
-!end-bullets-85!
+!end-bullets-88!
 
 ## Features
 
-!begin-bullets-86!
+!begin-bullets-89!
 
 -   !begin-bullet!
     Only allow constants in `mutate()` that are actually representable
@@ -1816,31 +1849,31 @@
     Avoid translating `ifelse()`, support `if_else()` (#79).
     !end-bullet!
 
-!end-bullets-86!
+!end-bullets-89!
 
 ## Documentation
 
-!begin-bullets-87!
+!begin-bullets-90!
 
 -   !begin-bullet!
     Separate and explain the new relational examples (@wibeasley, #84).
     !end-bullet!
 
-!end-bullets-87!
+!end-bullets-90!
 
 ## Testing
 
-!begin-bullets-88!
+!begin-bullets-91!
 
 -   !begin-bullet!
     Add test that TPC-H queries can be processed.
     !end-bullet!
 
-!end-bullets-88!
+!end-bullets-91!
 
 ## Chore
 
-!begin-bullets-89!
+!begin-bullets-92!
 
 -   !begin-bullet!
     Sync with dplyr 1.1.4 (#82).
@@ -1871,36 +1904,36 @@
     Sync generated files (#71).
     !end-bullet!
 
-!end-bullets-89!
+!end-bullets-92!
 
 # duckplyr 0.2.3 (2023-11-08)
 
 ## Performance
 
-!begin-bullets-90!
+!begin-bullets-93!
 
 -   !begin-bullet!
     Join using `IS NOT DISTINCT FROM` for faster execution
     (duckdb/duckdb-r#41, #68).
     !end-bullet!
 
-!end-bullets-90!
+!end-bullets-93!
 
 ## Documentation
 
-!begin-bullets-91!
+!begin-bullets-94!
 
 -   !begin-bullet!
     Add stability to README output (@maelle, #62, #65).
     !end-bullet!
 
-!end-bullets-91!
+!end-bullets-94!
 
 # duckplyr 0.2.2 (2023-10-16)
 
 ## Bug fixes
 
-!begin-bullets-92!
+!begin-bullets-95!
 
 -   !begin-bullet!
     `summarise()` keeps `"duckplyr_df"` class (#63, #64).
@@ -1911,11 +1944,11 @@
 
     !end-bullet!
 
-!end-bullets-92!
+!end-bullets-95!
 
 ## Chore
 
-!begin-bullets-93!
+!begin-bullets-96!
 
 -   !begin-bullet!
     Skip tests that give different output on dev tidyselect.
@@ -1926,11 +1959,11 @@
 
     !end-bullet!
 
-!end-bullets-93!
+!end-bullets-96!
 
 ## Documentation
 
-!begin-bullets-94!
+!begin-bullets-97!
 
 -   !begin-bullet!
     Small README improvements (@maelle, #34, #57).
@@ -1941,11 +1974,11 @@
 
     !end-bullet!
 
-!end-bullets-94!
+!end-bullets-97!
 
 # duckplyr 0.2.1 (2023-09-16)
 
-!begin-bullets-95!
+!begin-bullets-98!
 
 -   !begin-bullet!
     Improve documentation.
@@ -1969,33 +2002,33 @@
 
     !end-bullet!
 
-!end-bullets-95!
+!end-bullets-98!
 
 # duckplyr 0.2.0 (2023-09-10)
 
-!begin-bullets-96!
+!begin-bullets-99!
 
 -   !begin-bullet!
     Implement relational API for DuckDB.
     !end-bullet!
 
-!end-bullets-96!
+!end-bullets-99!
 
 # duckplyr 0.1.0 (2023-07-03)
 
 ## Bug fixes
 
-!begin-bullets-97!
+!begin-bullets-100!
 
 -   !begin-bullet!
     Fix examples.
     !end-bullet!
 
-!end-bullets-97!
+!end-bullets-100!
 
 ## Chore
 
-!begin-bullets-98!
+!begin-bullets-101!
 
 -   !begin-bullet!
     Add CRAN install instructions.
@@ -2013,17 +2046,17 @@
     Remove `relexpr_window()` for now.
     !end-bullet!
 
-!end-bullets-98!
+!end-bullets-101!
 
 ## Documentation
 
-!begin-bullets-99!
+!begin-bullets-102!
 
 -   !begin-bullet!
     Clean up reference.
     !end-bullet!
 
-!end-bullets-99!
+!end-bullets-102!
 
 ## Uncategorized
 

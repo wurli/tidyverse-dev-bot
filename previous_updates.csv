@@ -18664,3 +18664,6 @@ duckplyr,2dd2e08e07fe12b3fd216c8caabd81eb,Bump.,NA,NA,NA,NA
 duckplyr,24e558ff263a4926ecc78fe01792e4e0,Fix remote.,NA,NA,NA,NA
 duckplyr,c2f915bb750c7579c81cbf3a2579ac1f,Run fledge before RCC.,NA,NA,NA,NA
 duckplyr,09c370d235a586b49b437fc84b11525c,"Make flights data workaround explicit thus less scary (@​maelle, #488, #490).",NA,NA,NA,NA
+duckplyr,b67d6b75b26be1f1c13243c38224c9e9,"Remove startup message after second `load_all()` (#480, #492).",NA,NA,NA,NA
+duckplyr,0e8cc3fbed21ee9465ad20bcfa13e222,Install duckdb from CRAN (#495).,NA,NA,NA,NA
+duckplyr,89deaff0ea7e474e8a656c63d11096c3,"Introduce concept of funneling alongside eagerness and lazyness (#473, #496).",NA,NA,NA,NA
