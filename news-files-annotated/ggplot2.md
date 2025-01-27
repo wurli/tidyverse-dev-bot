@@ -3,6 +3,15 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    More stability for vctrs-based palettes (@teunbrand, #6117).
+
+    !end-bullet!
+-   !begin-bullet!
+    Fixed regression in `guide_bins(reverse = TRUE)` (@teunbrand,
+    #6183).
+
+    !end-bullet!
+-   !begin-bullet!
     New function family for setting parts of a theme. For example, you
     can now use `theme_sub_axis(line, text, ticks, ticks.length, line)`
     as a substitute for
@@ -680,6 +689,11 @@
 -   !begin-bullet!
     Standardised the calculation of `width`, which are now implemented
     as aesthetics (@teunbrand, #2800).
+
+    !end-bullet!
+-   !begin-bullet!
+    Stricter check on `register_theme_elements(element_tree)`
+    (@teunbrand, #6162)
 
     !end-bullet!
 

@@ -18679,3 +18679,6 @@ ggplot2,b2da7c9d1685e4acb45fa397b8cb5a5b,"New function family for setting parts 
 ggplot2,c47dea9c224879aaec17af1a4df2f898,"Standardised the calculation of `width`, which are now implemented as aesthetics (@​teunbrand, #2800).",NA,NA,NA,NA
 ggplot2,99e18fd0591c8be701f8daec3662658f,"`geom_violin()` gains additional arguments to style the colour, linetype and linewidths of the quantiles, which replace the now-deprecated `draw_quantiles` argument (#5912).",NA,NA,NA,NA
 ggplot2,e3b1ba0b766a58d47a63d73b581396c3,"(breaking) `geom_violin(quantiles)` now has actual quantiles based on the data, rather than inferred quantiles based on the computed density. The `quantiles` parameter that replaces `draw_quantiles` now belongs to `stat_ydensity()` instead of `geom_violin()` (@​teunbrand, #4120).",NA,NA,NA,NA
+ggplot2,035995bf4bdb91279caa9e8768fe40c3,"More stability for vctrs-based palettes (@​teunbrand, #6117).",NA,NA,NA,NA
+ggplot2,48ac30bfeb416e14d7d2ff1d53c9c8cb,"Fixed regression in `guide_bins(reverse = TRUE)` (@​teunbrand, #6183).",NA,NA,NA,NA
+ggplot2,8b32e0fd4c81577bec8282e708f452bb,"Stricter check on `register_theme_elements(element_tree)` (@​teunbrand, #6162)",NA,NA,NA,NA
