@@ -3,6 +3,15 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    New function family for setting parts of a theme. For example, you
+    can now use `theme_sub_axis(line, text, ticks, ticks.length, line)`
+    as a substitute for
+    `theme(axis.line, axis.text, axis.ticks, axis.ticks.length, axis.line)`.
+    This should allow slightly terser and more organised theme
+    declarations (@teunbrand, #5301).
+
+    !end-bullet!
+-   !begin-bullet!
     `scale_{x/y}_discrete(continuous.limits)` is a new argument to
     control the display range of discrete scales (@teunbrand, #4174,
     #6259).
@@ -652,6 +661,11 @@
 -   !begin-bullet!
     Added `panel.widths` and `panel.heights` to `theme()` (#5338,
     @teunbrand).
+
+    !end-bullet!
+-   !begin-bullet!
+    Standardised the calculation of `width`, which are now implemented
+    as aesthetics (@teunbrand, #2800).
 
     !end-bullet!
 
