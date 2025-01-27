@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Code repositories hosted on Codeberg are now supported in the
+    `BugReports` and `URL` fields (@nfrerebeau, #2843).
+    !end-bullet!
+-   !begin-bullet!
     Articles (i.e., vignettes in `vignettes/articles`, created by
     `usethis::use_article()` and available on pkgdown sites but not
     included in a built package) have improved test cases (thanks to
