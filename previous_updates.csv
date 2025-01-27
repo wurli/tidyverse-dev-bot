@@ -18694,3 +18694,4 @@ ggplot2,f6041685a7f4dd90ffaf40728228c6d2,"Reintroduced `drop` argument to `stat_
 ggplot2,baf72124395b75e2b608a4869b3666a0,"All binning stats now use the `boundary`/`center` parametrisation rather than `origin`, following in `stat_bin()`'s footsteps (@​teunbrand).",NA,NA,NA,NA
 ggplot2,2f691c20b208b4ba11980ec860c95d8c,"`stat_summary_2d()` and `stat_bin_2d()` now deal with zero-range data more elegantly (@​teunbrand, #6207).",NA,NA,NA,NA
 pkgdown,ddf5dd3a3e0002bd3dbf2aacc92c6026,"Code repositories hosted on Codeberg are now supported in the `BugReports` and `URL` fields (@​nfrerebeau, #2843).",NA,NA,NA,NA
+ggplot2,ebdbdc6513ed8cbfa86455c6f2a8e083,"Munching in `coord_polar()` and `coord_radial()` now adds more detail, particularly for data-points with a low radius near the center (@​teunbrand, #5023).",NA,NA,NA,NA

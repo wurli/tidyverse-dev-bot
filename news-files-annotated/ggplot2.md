@@ -741,6 +741,12 @@
     data more elegantly (@teunbrand, #6207).
 
     !end-bullet!
+-   !begin-bullet!
+    Munching in `coord_polar()` and `coord_radial()` now adds more
+    detail, particularly for data-points with a low radius near the
+    center (@teunbrand, #5023).
+
+    !end-bullet!
 
 !end-bullets-1!
 
