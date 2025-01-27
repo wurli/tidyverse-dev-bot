@@ -20,6 +20,12 @@
     writes data to disk during parsing (@thomasp85, #942)
 
     !end-bullet!
+-   !begin-bullet!
+    Returning error messages are now turned off by default rather than
+    being turned on if running interactively and turned off if not
+    (@thomasp85, #962)
+
+    !end-bullet!
 
 !end-bullets-1!
 
