@@ -18686,3 +18686,6 @@ ggplot2,87bcd86e1d38fe3c091239fc079eb773,Position adjustments can now have auxil
 ggplot2,87bcd86e1d38fe3c091239fc079eb773,"• `position_nudge()` gains `nudge_x` and `nudge_y` aesthetics (#3026, #5445).",NA,NA,NA,NA
 ggplot2,87bcd86e1d38fe3c091239fc079eb773,"• `position_dodge()` gains `order` aesthetic (#3022, #3345)",NA,NA,NA,NA
 ggplot2,7a662a86c567e2ad68ffca01f8d01883,"Added `weight` aesthetic for `stat_ellipse()` (@​teunbrand, #5272)",NA,NA,NA,NA
+ggplot2,956535250b7957bd4205af8a2807df9c,"New default `geom_qq_line(geom = ""abline"")` for better clipping in the vertical direction. In addition, `slope` and `intercept` are new computed variables in `stat_qq_line()` (@​teunbrand, #6087).",NA,NA,NA,NA
+ggplot2,b1135cf562d2db03ab44d33478d44d3e,"Fixed a bug where the `guide_custom(order)` wasn't working (@​teunbrand, #6195)",NA,NA,NA,NA
+pointblank,5bc5c55977b4e8ffe639a1eab8610c50,"Data extracts for `rows_distinct()`/`rows_complete()` preserves all columns, not just the ones tested (#588, #591)",NA,NA,NA,NA

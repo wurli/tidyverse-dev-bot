@@ -8,8 +8,8 @@
 
     !end-bullet!
 -   !begin-bullet!
-    Data extracts for `rows_distinct()` preserves columns other than the
-    ones tested (#588)
+    Data extracts for `rows_distinct()`/`rows_complete()` preserves all
+    columns, not just the ones tested (#588, #591)
 
     !end-bullet!
 -   !begin-bullet!

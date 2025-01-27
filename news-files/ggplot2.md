@@ -1,5 +1,8 @@
 # ggplot2 (development version)
 
+* New default `geom_qq_line(geom = "abline")` for better clipping in the 
+  vertical direction. In addition, `slope` and `intercept` are new computed
+  variables in `stat_qq_line()` (@teunbrand, #6087).
 * Position adjustments can now have auxiliary aesthetics (@teunbrand).
     * `position_nudge()` gains `nudge_x` and `nudge_y` aesthetics (#3026, #5445).
     * `position_dodge()` gains `order` aesthetic (#3022, #3345)
@@ -268,6 +271,7 @@
   aesthetics (@teunbrand, #2800).
 * Stricter check on `register_theme_elements(element_tree)` (@teunbrand, #6162)
 * Added `weight` aesthetic for `stat_ellipse()` (@teunbrand, #5272)
+* Fixed a bug where the `guide_custom(order)` wasn't working (@teunbrand, #6195)
 
 # ggplot2 3.5.1
 

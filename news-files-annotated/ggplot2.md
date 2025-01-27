@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    New default `geom_qq_line(geom = "abline")` for better clipping in
+    the vertical direction. In addition, `slope` and `intercept` are new
+    computed variables in `stat_qq_line()` (@teunbrand, #6087).
+
+    !end-bullet!
+-   !begin-bullet!
     Position adjustments can now have auxiliary aesthetics (@teunbrand).
 
     !begin-bullets-2!
@@ -712,6 +718,11 @@
     !end-bullet!
 -   !begin-bullet!
     Added `weight` aesthetic for `stat_ellipse()` (@teunbrand, #5272)
+
+    !end-bullet!
+-   !begin-bullet!
+    Fixed a bug where the `guide_custom(order)` wasn't working
+    (@teunbrand, #6195)
 
     !end-bullet!
 
