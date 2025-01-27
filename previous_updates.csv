@@ -18682,3 +18682,7 @@ ggplot2,e3b1ba0b766a58d47a63d73b581396c3,"(breaking) `geom_violin(quantiles)` no
 ggplot2,035995bf4bdb91279caa9e8768fe40c3,"More stability for vctrs-based palettes (@​teunbrand, #6117).",NA,NA,NA,NA
 ggplot2,48ac30bfeb416e14d7d2ff1d53c9c8cb,"Fixed regression in `guide_bins(reverse = TRUE)` (@​teunbrand, #6183).",NA,NA,NA,NA
 ggplot2,8b32e0fd4c81577bec8282e708f452bb,"Stricter check on `register_theme_elements(element_tree)` (@​teunbrand, #6162)",NA,NA,NA,NA
+ggplot2,87bcd86e1d38fe3c091239fc079eb773,Position adjustments can now have auxiliary aesthetics (@​teunbrand).,NA,NA,NA,NA
+ggplot2,87bcd86e1d38fe3c091239fc079eb773,"• `position_nudge()` gains `nudge_x` and `nudge_y` aesthetics (#3026, #5445).",NA,NA,NA,NA
+ggplot2,87bcd86e1d38fe3c091239fc079eb773,"• `position_dodge()` gains `order` aesthetic (#3022, #3345)",NA,NA,NA,NA
+ggplot2,7a662a86c567e2ad68ffca01f8d01883,"Added `weight` aesthetic for `stat_ellipse()` (@​teunbrand, #5272)",NA,NA,NA,NA
