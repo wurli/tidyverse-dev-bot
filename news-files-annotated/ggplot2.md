@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Binned scales with zero-width data expand the default limits by 0.1
+    (@teunbrand, #5066)
+
+    !end-bullet!
+-   !begin-bullet!
     New default `geom_qq_line(geom = "abline")` for better clipping in
     the vertical direction. In addition, `slope` and `intercept` are new
     computed variables in `stat_qq_line()` (@teunbrand, #6087).
@@ -667,7 +672,7 @@
 
     !end-bullet!
 -   !begin-bullet!
-    Added `keep.zeroes` argument to `stat_bin()` (@teunbrand, #3449)
+    Reintroduced `drop` argument to `stat_bin()` (@teunbrand, #3449)
 
     !end-bullet!
 -   !begin-bullet!
@@ -723,6 +728,17 @@
 -   !begin-bullet!
     Fixed a bug where the `guide_custom(order)` wasn't working
     (@teunbrand, #6195)
+
+    !end-bullet!
+-   !begin-bullet!
+    All binning stats now use the `boundary`/`center` parametrisation
+    rather than `origin`, following in `stat_bin()`'s footsteps
+    (@teunbrand).
+
+    !end-bullet!
+-   !begin-bullet!
+    `stat_summary_2d()` and `stat_bin_2d()` now deal with zero-range
+    data more elegantly (@teunbrand, #6207).
 
     !end-bullet!
 

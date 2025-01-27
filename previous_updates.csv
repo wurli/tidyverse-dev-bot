@@ -18689,3 +18689,7 @@ ggplot2,7a662a86c567e2ad68ffca01f8d01883,"Added `weight` aesthetic for `stat_ell
 ggplot2,956535250b7957bd4205af8a2807df9c,"New default `geom_qq_line(geom = ""abline"")` for better clipping in the vertical direction. In addition, `slope` and `intercept` are new computed variables in `stat_qq_line()` (@​teunbrand, #6087).",NA,NA,NA,NA
 ggplot2,b1135cf562d2db03ab44d33478d44d3e,"Fixed a bug where the `guide_custom(order)` wasn't working (@​teunbrand, #6195)",NA,NA,NA,NA
 pointblank,5bc5c55977b4e8ffe639a1eab8610c50,"Data extracts for `rows_distinct()`/`rows_complete()` preserves all columns, not just the ones tested (#588, #591)",NA,NA,NA,NA
+ggplot2,09730a3b632cb43cb51f22f223b5cc54,"Binned scales with zero-width data expand the default limits by 0.1 (@​teunbrand, #5066)",NA,NA,NA,NA
+ggplot2,f6041685a7f4dd90ffaf40728228c6d2,"Reintroduced `drop` argument to `stat_bin()` (@​teunbrand, #3449)",NA,NA,NA,NA
+ggplot2,baf72124395b75e2b608a4869b3666a0,"All binning stats now use the `boundary`/`center` parametrisation rather than `origin`, following in `stat_bin()`'s footsteps (@​teunbrand).",NA,NA,NA,NA
+ggplot2,2f691c20b208b4ba11980ec860c95d8c,"`stat_summary_2d()` and `stat_bin_2d()` now deal with zero-range data more elegantly (@​teunbrand, #6207).",NA,NA,NA,NA
