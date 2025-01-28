@@ -1,5 +1,9 @@
 # ggplot2 (development version)
 
+* Turned off fallback for `size` to `linewidth` translation in 
+  `geom_bar()`/`geom_col()` (#4848).
+* `coord_radial()` now displays no axis instead of throwing an error when
+  a scale has no breaks (@teunbrand, #6271).
 * The `fatten` argument has been deprecated in `geom_boxplot()`, 
   `geom_crossbar()` and `geom_pointrange()` (@teunbrand, #4881).
 * Axis labels are now preserved better when using `coord_sf(expand = TRUE)` and
@@ -290,6 +294,10 @@
   particularly for data-points with a low radius near the center 
   (@teunbrand, #5023).
 * All scales now expose the `aesthetics` parameter (@teunbrand, #5841)
+* New `theme(legend.key.justification)` to control the alignment of legend keys 
+  (@teunbrand, #3669). 
+* Added `scale_{x/y}_time(date_breaks, date_minor_breaks, date_labels)` 
+  (@teunbrand, #4335).
 
 # ggplot2 3.5.1
 

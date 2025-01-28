@@ -18704,3 +18704,7 @@ ggplot2,ba71c3926e25dad772c8b17aff12fecb,"The `fatten` argument has been depreca
 ggplot2,5426c56c565688702b3b721cc9d89ce5,"Axis labels are now preserved better when using `coord_sf(expand = TRUE)` and graticule lines are straight but do not meet the edge (@​teunbrand, #2985).",NA,NA,NA,NA
 ggplot2,53071e4bad65e84052778dba167e836c,"Attempt to boost detail in `coord_polar()` and `coord_radial()` near the center (@​teunbrand, #5023)",NA,NA,NA,NA
 ggplot2,de6b7b18b0823d5a2e182120c317ce3f,"All scales now expose the `aesthetics` parameter (@​teunbrand, #5841)",NA,NA,NA,NA
+ggplot2,0304dad9c56cc79592064371a43f5220,Turned off fallback for `size` to `linewidth` translation in `geom_bar()`/`geom_col()` (#4848).,NA,NA,NA,NA
+ggplot2,24bcec5a3b6cf367bf50f50bc60e26c0,"`coord_radial()` now displays no axis instead of throwing an error when a scale has no breaks (@​teunbrand, #6271).",NA,NA,NA,NA
+ggplot2,a90d198fe7baaf81885a7461406c85db,"New `theme(legend.key.justification)` to control the alignment of legend keys (@​teunbrand, #3669).",NA,NA,NA,NA
+ggplot2,66cf379e5ec203c1acc824dc6bd015f9,"Added `scale_{x/y}_time(date_breaks, date_minor_breaks, date_labels)` (@​teunbrand, #4335).",NA,NA,NA,NA

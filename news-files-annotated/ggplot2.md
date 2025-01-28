@@ -3,6 +3,16 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Turned off fallback for `size` to `linewidth` translation in
+    `geom_bar()`/`geom_col()` (#4848).
+
+    !end-bullet!
+-   !begin-bullet!
+    `coord_radial()` now displays no axis instead of throwing an error
+    when a scale has no breaks (@teunbrand, #6271).
+
+    !end-bullet!
+-   !begin-bullet!
     The `fatten` argument has been deprecated in `geom_boxplot()`,
     `geom_crossbar()` and `geom_pointrange()` (@teunbrand, #4881).
 
@@ -770,6 +780,17 @@
     !end-bullet!
 -   !begin-bullet!
     All scales now expose the `aesthetics` parameter (@teunbrand, #5841)
+
+    !end-bullet!
+-   !begin-bullet!
+    New `theme(legend.key.justification)` to control the alignment of
+    legend keys (@teunbrand, #3669).
+
+    !end-bullet!
+-   !begin-bullet!
+    Added
+    `scale_{x/y}_time(date_breaks, date_minor_breaks, date_labels)`
+    (@teunbrand, #4335).
 
     !end-bullet!
 
