@@ -18709,3 +18709,11 @@ ggplot2,24bcec5a3b6cf367bf50f50bc60e26c0,"`coord_radial()` now displays no axis 
 ggplot2,a90d198fe7baaf81885a7461406c85db,"New `theme(legend.key.justification)` to control the alignment of legend keys (@​teunbrand, #3669).",NA,NA,NA,NA
 ggplot2,66cf379e5ec203c1acc824dc6bd015f9,"Added `scale_{x/y}_time(date_breaks, date_minor_breaks, date_labels)` (@​teunbrand, #4335).",NA,NA,NA,NA
 ggplot2,119eb03df9f215b82cc017015947a96e,"New `element_point()` and `element_polygon()` that can be given to `theme(point, polygon)` as an extension point (@​teunbrand, #6248).",NA,NA,NA,NA
+ggplot2,dcda2ed73412b6a86912bc16903b0d03,"New parameters for `geom_label()` (@​teunbrand and @​steveharoz, #5365):",NA,NA,NA,NA
+ggplot2,dcda2ed73412b6a86912bc16903b0d03,• The `linewidth` aesthetic is now applied and replaces the `label.size` argument.,NA,NA,NA,NA
+ggplot2,dcda2ed73412b6a86912bc16903b0d03,• The `linetype` aesthetic is now applied.,NA,NA,NA,NA
+ggplot2,dcda2ed73412b6a86912bc16903b0d03,• New `border.colour` argument to set the colour of borders.,NA,NA,NA,NA
+ggplot2,dcda2ed73412b6a86912bc16903b0d03,• New `text.colour` argument to set the colour of text.,NA,NA,NA,NA
+purrr,089e7c11fb47088cfdbacbb582c08dc5,"Varies fixed to bring purrr back into compliance with R CMD check (@​shikokuchuo, @​jayhesselberth).",NA,NA,NA,NA
+purrr,4dcd0741c9438bb1627969b4bc23ba5b,Added missing `imap_vec()` (#1084),NA,NA,NA,NA
+purrr,d98579ad0f3f1ba8021abcb358dce70b,"`list_transpose()` now asserts that it does not work on data frames (@​KimLopezGuell, #1141, #1149), and inspects all elements to determine the correct template if not provided by the user (#1128, @​krlmlr).",NA,NA,NA,NA
