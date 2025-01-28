@@ -26,6 +26,12 @@
 !begin-bullets-2!
 
 -   !begin-bullet!
+    Fixed an issue where `renv::restore()` did not respect the named
+    repository within the lockfile when installing packages from the
+    archives of the configured package repositories. (#2081)
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed an issue where `renv::snapshot()` could fail if invoked within
     a project containing empty or invalid `.ipynb` files. (#2073)
 
