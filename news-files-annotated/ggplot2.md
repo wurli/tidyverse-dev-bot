@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Scale names, guide titles and aesthetic labels can now accept
+    functions (@teunbrand, #4313)
+
+    !end-bullet!
+-   !begin-bullet!
     Binned scales with zero-width data expand the default limits by 0.1
     (@teunbrand, #5066)
 

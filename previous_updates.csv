@@ -18699,3 +18699,4 @@ plumber,958f271c7e676acb134b8e67255bf43e,"Returning error messages are now turne
 shiny,06ec2d4272cb5a34bc1f2609384bd12b,The Shiny Client Console (enabled with `shiny::devmode()`) no longer displays duplicate warning or error message. (#4177),NA,NA,NA,NA
 shiny,ff45a86905dba6f8a1d6fd0d858dca7f,Updated the JavaScript used when inserting a tab to avoid rendering dynamic UI elements twice when adding the new tab via `insertTab()` or `bslib::nav_insert()`. (#4179),NA,NA,NA,NA
 duckplyr,2194d2d69ac37e72d9522dd083999aea,"Move content from README to vignettes (#207, #504).",NA,NA,NA,NA
+ggplot2,2485cf7df775a4ea3b00c8e50ecec0f4,"Scale names, guide titles and aesthetic labels can now accept functions (@​teunbrand, #4313)",NA,NA,NA,NA
