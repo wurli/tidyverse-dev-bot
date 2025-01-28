@@ -1,5 +1,11 @@
 # ggplot2 (development version)
 
+* The `fatten` argument has been deprecated in `geom_boxplot()`, 
+  `geom_crossbar()` and `geom_pointrange()` (@teunbrand, #4881).
+* Axis labels are now preserved better when using `coord_sf(expand = TRUE)` and
+  graticule lines are straight but do not meet the edge (@teunbrand, #2985).
+* Attempt to boost detail in `coord_polar()` and `coord_radial()` near the 
+  center (@teunbrand, #5023)
 * Scale names, guide titles and aesthetic labels can now accept functions 
   (@teunbrand, #4313)
 * Binned scales with zero-width data expand the default limits by 0.1 
@@ -283,6 +289,7 @@
 * Munching in `coord_polar()` and `coord_radial()` now adds more detail, 
   particularly for data-points with a low radius near the center 
   (@teunbrand, #5023).
+* All scales now expose the `aesthetics` parameter (@teunbrand, #5841)
 
 # ggplot2 3.5.1
 

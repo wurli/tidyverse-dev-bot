@@ -18700,3 +18700,7 @@ shiny,06ec2d4272cb5a34bc1f2609384bd12b,The Shiny Client Console (enabled with `s
 shiny,ff45a86905dba6f8a1d6fd0d858dca7f,Updated the JavaScript used when inserting a tab to avoid rendering dynamic UI elements twice when adding the new tab via `insertTab()` or `bslib::nav_insert()`. (#4179),NA,NA,NA,NA
 duckplyr,2194d2d69ac37e72d9522dd083999aea,"Move content from README to vignettes (#207, #504).",NA,NA,NA,NA
 ggplot2,2485cf7df775a4ea3b00c8e50ecec0f4,"Scale names, guide titles and aesthetic labels can now accept functions (@​teunbrand, #4313)",NA,NA,NA,NA
+ggplot2,ba71c3926e25dad772c8b17aff12fecb,"The `fatten` argument has been deprecated in `geom_boxplot()`, `geom_crossbar()` and `geom_pointrange()` (@​teunbrand, #4881).",NA,NA,NA,NA
+ggplot2,5426c56c565688702b3b721cc9d89ce5,"Axis labels are now preserved better when using `coord_sf(expand = TRUE)` and graticule lines are straight but do not meet the edge (@​teunbrand, #2985).",NA,NA,NA,NA
+ggplot2,53071e4bad65e84052778dba167e836c,"Attempt to boost detail in `coord_polar()` and `coord_radial()` near the center (@​teunbrand, #5023)",NA,NA,NA,NA
+ggplot2,de6b7b18b0823d5a2e182120c317ce3f,"All scales now expose the `aesthetics` parameter (@​teunbrand, #5841)",NA,NA,NA,NA

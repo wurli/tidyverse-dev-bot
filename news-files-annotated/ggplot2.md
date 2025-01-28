@@ -3,6 +3,22 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    The `fatten` argument has been deprecated in `geom_boxplot()`,
+    `geom_crossbar()` and `geom_pointrange()` (@teunbrand, #4881).
+
+    !end-bullet!
+-   !begin-bullet!
+    Axis labels are now preserved better when using
+    `coord_sf(expand = TRUE)` and graticule lines are straight but do
+    not meet the edge (@teunbrand, #2985).
+
+    !end-bullet!
+-   !begin-bullet!
+    Attempt to boost detail in `coord_polar()` and `coord_radial()` near
+    the center (@teunbrand, #5023)
+
+    !end-bullet!
+-   !begin-bullet!
     Scale names, guide titles and aesthetic labels can now accept
     functions (@teunbrand, #4313)
 
@@ -750,6 +766,10 @@
     Munching in `coord_polar()` and `coord_radial()` now adds more
     detail, particularly for data-points with a low radius near the
     center (@teunbrand, #5023).
+
+    !end-bullet!
+-   !begin-bullet!
+    All scales now expose the `aesthetics` parameter (@teunbrand, #5841)
 
     !end-bullet!
 
