@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    New `element_point()` and `element_polygon()` that can be given to
+    `theme(point, polygon)` as an extension point (@teunbrand, #6248).
+
+    !end-bullet!
+-   !begin-bullet!
     Turned off fallback for `size` to `linewidth` translation in
     `geom_bar()`/`geom_col()` (#4848).
 

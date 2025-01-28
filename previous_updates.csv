@@ -18708,3 +18708,4 @@ ggplot2,0304dad9c56cc79592064371a43f5220,Turned off fallback for `size` to `line
 ggplot2,24bcec5a3b6cf367bf50f50bc60e26c0,"`coord_radial()` now displays no axis instead of throwing an error when a scale has no breaks (@​teunbrand, #6271).",NA,NA,NA,NA
 ggplot2,a90d198fe7baaf81885a7461406c85db,"New `theme(legend.key.justification)` to control the alignment of legend keys (@​teunbrand, #3669).",NA,NA,NA,NA
 ggplot2,66cf379e5ec203c1acc824dc6bd015f9,"Added `scale_{x/y}_time(date_breaks, date_minor_breaks, date_labels)` (@​teunbrand, #4335).",NA,NA,NA,NA
+ggplot2,119eb03df9f215b82cc017015947a96e,"New `element_point()` and `element_polygon()` that can be given to `theme(point, polygon)` as an extension point (@​teunbrand, #6248).",NA,NA,NA,NA
