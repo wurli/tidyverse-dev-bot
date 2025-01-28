@@ -18718,3 +18718,4 @@ purrr,089e7c11fb47088cfdbacbb582c08dc5,"Varies fixed to bring purrr back into co
 purrr,4dcd0741c9438bb1627969b4bc23ba5b,Added missing `imap_vec()` (#1084),NA,NA,NA,NA
 purrr,d98579ad0f3f1ba8021abcb358dce70b,"`list_transpose()` now asserts that it does not work on data frames (@​KimLopezGuell, #1141, #1149), and inspects all elements to determine the correct template if not provided by the user (#1128, @​krlmlr).",NA,NA,NA,NA
 renv,00913fc2f0ff6898046c23435d058ff2,Fixed an issue where `renv::restore()` did not respect the named repository within the lockfile when installing packages from the archives of the configured package repositories. (#2081),NA,NA,NA,NA
+renv,8b83e8f7b2d7fbb7d852fd510f850426,The `renv` sandbox is now unlocked on exit after a call to `renv::use()`. This should alleviate issues seen where R's attempts to clean up the temporary directory could fail due to inadequate permissions on the sandbox directory. (#2076),NA,NA,NA,NA

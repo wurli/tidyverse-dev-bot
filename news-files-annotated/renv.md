@@ -26,6 +26,13 @@
 !begin-bullets-2!
 
 -   !begin-bullet!
+    The `renv` sandbox is now unlocked on exit after a call to
+    `renv::use()`. This should alleviate issues seen where R's attempts
+    to clean up the temporary directory could fail due to inadequate
+    permissions on the sandbox directory. (#2076)
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed an issue where `renv::restore()` did not respect the named
     repository within the lockfile when installing packages from the
     archives of the configured package repositories. (#2081)
