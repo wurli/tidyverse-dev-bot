@@ -1,5 +1,7 @@
 
-# renv 1.1.0  (UNRELEASED)
+# renv 1.2.0  (UNRELEASED)
+
+# renv 1.1.0
 
 ## Major Changes
 
