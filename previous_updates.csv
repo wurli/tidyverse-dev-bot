@@ -18719,3 +18719,9 @@ purrr,4dcd0741c9438bb1627969b4bc23ba5b,Added missing `imap_vec()` (#1084),NA,NA,
 purrr,d98579ad0f3f1ba8021abcb358dce70b,"`list_transpose()` now asserts that it does not work on data frames (@​KimLopezGuell, #1141, #1149), and inspects all elements to determine the correct template if not provided by the user (#1128, @​krlmlr).",NA,NA,NA,NA
 renv,00913fc2f0ff6898046c23435d058ff2,Fixed an issue where `renv::restore()` did not respect the named repository within the lockfile when installing packages from the archives of the configured package repositories. (#2081),NA,NA,NA,NA
 renv,8b83e8f7b2d7fbb7d852fd510f850426,The `renv` sandbox is now unlocked on exit after a call to `renv::use()`. This should alleviate issues seen where R's attempts to clean up the temporary directory could fail due to inadequate permissions on the sandbox directory. (#2076),NA,NA,NA,NA
+duckplyr,d00d6fb6b61f2d667abb306316195b22,Remove space at EOL in limits (#521).,NA,NA,NA,NA
+duckplyr,0f94aff253d06b827ecef0b16f6cbe41,Remove space at EOL in large (#520).,NA,NA,NA,NA
+duckplyr,f29a481ee745af5090e096f068d61937,Avoid autoupload.,NA,NA,NA,NA
+duckplyr,0f8855a2537afeffbc4fcf661e7fd373,"Remove use of word bottleneck (#517, #519).",NA,NA,NA,NA
+duckplyr,b5022f2462d4d2f3fda4f621f220c2b6,Document `.funnel`/`funnel` argument (#513).,NA,NA,NA,NA
+duckplyr,439d7e92a79daf31d2d4927d7e9236bd,Rename lazy.R to funnel.R (#509).,NA,NA,NA,NA
