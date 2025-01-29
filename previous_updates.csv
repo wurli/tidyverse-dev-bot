@@ -18725,3 +18725,7 @@ duckplyr,f29a481ee745af5090e096f068d61937,Avoid autoupload.,NA,NA,NA,NA
 duckplyr,0f8855a2537afeffbc4fcf661e7fd373,"Remove use of word bottleneck (#517, #519).",NA,NA,NA,NA
 duckplyr,b5022f2462d4d2f3fda4f621f220c2b6,Document `.funnel`/`funnel` argument (#513).,NA,NA,NA,NA
 duckplyr,439d7e92a79daf31d2d4927d7e9236bd,Rename lazy.R to funnel.R (#509).,NA,NA,NA,NA
+plumber,27e3c388e162867eaf14c5806b342ef8,New serializers,NA,NA,NA,NA
+plumber,27e3c388e162867eaf14c5806b342ef8,"• `serializer_excel()`: Return an object serialized by `writexl::write_xlsx` (@​r2evans, #973).",NA,NA,NA,NA
+plumber,f31dd9c2641903ed0cc1e61df8602053,New request body parsers,NA,NA,NA,NA
+plumber,f31dd9c2641903ed0cc1e61df8602053,"• `parser_excel()`: Parse request body as an excel workbook using `readxl::read_excel` (@​r2evans, #973). This defaults to loading in the first worksheet only, you can use `@​parse excel list(sheet=NA)` to import all worksheets. This always returns a list of frames, even if just one worksheet.",NA,NA,NA,NA
