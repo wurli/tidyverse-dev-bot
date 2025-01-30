@@ -18731,3 +18731,7 @@ plumber,f31dd9c2641903ed0cc1e61df8602053,New request body parsers,NA,NA,NA,NA
 plumber,f31dd9c2641903ed0cc1e61df8602053,"• `parser_excel()`: Parse request body as an excel workbook using `readxl::read_excel` (@​r2evans, #973). This defaults to loading in the first worksheet only, you can use `@​parse excel list(sheet=NA)` to import all worksheets. This always returns a list of frames, even if just one worksheet.",NA,NA,NA,NA
 pkgdown,7bb12be279a07214c8d59d3662468c1c,"pkgdown now uses the same Sass variables as bslib to set the navbar background color: `$navbar-bg` for the background color in light and dark mode, or `$navbar-light-bg` and `$navbar-dark-bg` for individually controlling light and dark mode background colors. `pkgdown-navbar-bg` and `$pkgdown-navbar-bg-dark` both still provide pkgdown-specific overrides (@​gadenbuie, #2847).",NA,NA,NA,NA
 keras,15b0316352d27165d98e11b91e93e80b,"The progress bar in `fit()`, `evaluate()` and `predict()` now defaults to not presenting during testthat tests.",NA,NA,NA,NA
+duckplyr,b61635ba940e16ff817538e143b19dac,Use magrittr pipe in tests.,NA,NA,NA,NA
+duckplyr,9e4da6061ed0135cf025c23a449d98b9,"Change `funnel` values to `""open""` and `""closed""` instead of a logical value (#526).",NA,NA,NA,NA
+duckplyr,692f3fe10b812e654a4dd9fe25d12835,"Fix erroneous argument (@​TimTaylor, #524).",NA,NA,NA,NA
+duckplyr,064b01cb1201ecb343005ce4c440d0a9,Review (#516).,NA,NA,NA,NA
