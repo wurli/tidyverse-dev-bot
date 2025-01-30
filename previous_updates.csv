@@ -18735,3 +18735,4 @@ duckplyr,b61635ba940e16ff817538e143b19dac,Use magrittr pipe in tests.,NA,NA,NA,N
 duckplyr,9e4da6061ed0135cf025c23a449d98b9,"Change `funnel` values to `""open""` and `""closed""` instead of a logical value (#526).",NA,NA,NA,NA
 duckplyr,692f3fe10b812e654a4dd9fe25d12835,"Fix erroneous argument (@​TimTaylor, #524).",NA,NA,NA,NA
 duckplyr,064b01cb1201ecb343005ce4c440d0a9,Review (#516).,NA,NA,NA,NA
+gt,11fdc8ed7c0d32f68999888f3c5f95e5,"Fixed an issue where cross-references would fail in bookdown::html_document2 (@​olivroy, #1948)",NA,NA,NA,NA
