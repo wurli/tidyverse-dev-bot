@@ -3,8 +3,20 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Keras now uses `reticulate::py_require()` to resolve Python
+    dependencies. Calling `install_keras()` is no longer required (but
+    is still supported).
+
+    !end-bullet!
+-   !begin-bullet!
+    `use_backend()` gains a `gpu` argument, to specify if a GPU-capable
+    set of dependencies should be resolved by `py_require()`.
+
+    !end-bullet!
+-   !begin-bullet!
     The progress bar in `fit()`, `evaluate()` and `predict()` now
     defaults to not presenting during testthat tests.
+
     !end-bullet!
 
 !end-bullets-1!
