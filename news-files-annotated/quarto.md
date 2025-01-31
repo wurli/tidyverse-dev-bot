@@ -1,6 +1,20 @@
 # quarto (development version)
 
+## BREAKING CHANGES
+
 !begin-bullets-1!
+
+-   !begin-bullet!
+    In `quarto_inspect()`, JSON array xith JSON object are not coerced
+    to data.frame anymore. This ensure list is returned for all elements
+    of `fileInformation` object.
+    !end-bullet!
+
+!end-bullets-1!
+
+## NEW FEATURES
+
+!begin-bullets-2!
 
 -   !begin-bullet!
     Add `quarto.quiet` options to allow more verbose error message when
@@ -8,8 +22,14 @@
     inside **pkgdown** for building Quarto vignettes. **pkgdown** sets
     `quiet = TRUE` internally for its call to `quarto_render()`, and
     setting `options(quarto.quiet = TRUE)` allows to overwrite this.
-
     !end-bullet!
+
+!end-bullets-2!
+
+## MINOR CHANGES
+
+!begin-bullets-3!
+
 -   !begin-bullet!
     `quarto_path()` now returns a normalized path with potential symlink
     resolved, for less confusion with `quarto_binary_sitrep()` (thanks,
@@ -27,11 +47,11 @@
 
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-3!
 
 # quarto 1.4.4
 
-!begin-bullets-2!
+!begin-bullets-4!
 
 -   !begin-bullet!
     `quarto_preview()` now looks at `quarto preview` log to browse to
@@ -56,11 +76,11 @@
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-4!
 
 # quarto 1.4
 
-!begin-bullets-3!
+!begin-bullets-5!
 
 -   !begin-bullet!
     This version is now adapted to Quarto 1.4 latest stable release.
@@ -147,4 +167,4 @@
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-5!
