@@ -1,5 +1,7 @@
 # bslib (development version)
 
+# bslib 0.9.0
+
 ## Breaking changes
 
 !begin-bullets-1!
@@ -79,6 +81,14 @@
     or `navbar-inverse` classes on the `<nav>` element, for backwards
     compatibility, but in apps that use Bootstrap 5 these classes have
     no styles. (#1146)
+
+    !end-bullet!
+-   !begin-bullet!
+    The following functions are no longer marked "experimental":
+    `accordion()`, `breakpoints()`, `card()`, `input_dark_mode()`,
+    `input_switch()`, `layout_columns()`, `layout_column_wrap()`,
+    `page_fillable()`, `page_sidebar()`, `layout_sidebar()`,
+    `sidebar()`, `popover()`, `tooltip()` and `value_box()`.
 
     !end-bullet!
 
