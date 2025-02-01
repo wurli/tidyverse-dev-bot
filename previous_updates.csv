@@ -18760,3 +18760,4 @@ duckplyr,c8e12516eed25f053bafa2cd77643468,"Document limiting memory usage (#472,
 duckplyr,1a45a5a72b572841a02a3b555444d79b,Tweak funneling (#545).,NA,NA,NA,NA
 duckplyr,22ae46664d004af4101b1e51a114650d,Snapshot updates (@​1741643+krlmlr).,NA,NA,NA,NA
 pins,79840d4ce0f5fd4b95c507974012e8d5,Prepends 'https://' to Databricks host if missing (#855).,NA,NA,NA,NA
+keras,6c80e6bc14290e4799998fd2da617837,`dotty::.` is now reexported.,NA,NA,NA,NA

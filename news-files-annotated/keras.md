@@ -18,6 +18,10 @@
     defaults to not presenting during testthat tests.
 
     !end-bullet!
+-   !begin-bullet!
+    `dotty::.` is now reexported.
+
+    !end-bullet!
 
 !end-bullets-1!
 
