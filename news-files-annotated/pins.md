@@ -15,6 +15,10 @@
     Improved documentation for S3-compatible object storage (#853).
 
     !end-bullet!
+-   !begin-bullet!
+    Prepends 'https://' to Databricks host if missing (#855).
+
+    !end-bullet!
 
 !end-bullets-1!
 
