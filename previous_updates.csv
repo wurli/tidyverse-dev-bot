@@ -18771,3 +18771,20 @@ duckplyr,58d9af8b63cf4a62fc9d953f7f59e5ef,Mention fallback in README (#562).,NA,
 duckplyr,6e45589653e47848776a19fed82fdfba,"Show error source for translation errors (#512, #560).",NA,NA,NA,NA
 duckplyr,828968f7eafd8e9fffb779731ff5641e,"Wrap up documentation on prudence (#497, #559).",NA,NA,NA,NA
 duckplyr,32baf24844fdd464776c233aed6748b2,Ensure TPC-H tests are run by DuckDB (#555).,NA,NA,NA,NA
+duckplyr,3652cbbdda4d7eba331175f67351de4c,"Remove support for edge case in `sum()`, `any()` and `all()` for performance (#573).",NA,NA,NA,NA
+duckplyr,25a85abf76bb5e1ceffe0088004a9b7b,Giving up.,NA,NA,NA,NA
+duckplyr,50cb9c63d3102af32435d0f2269c1b5c,Clean cache.,NA,NA,NA,NA
+duckplyr,c53701955b575e205d2b906031fe8343,Final tweaks.,NA,NA,NA,NA
+duckplyr,ca1f727ee96787fd03cb0a741d93d2c4,Try fork.,NA,NA,NA,NA
+duckplyr,d376c0f93b1766c27d537e01a20b5ef4,Fix width for articles.,NA,NA,NA,NA
+duckplyr,1bf71379820e7acadebf3ecb050734a8,Ideal width for Firefox.,NA,NA,NA,NA
+duckplyr,6022c1d06b3bb245e16306a340873b5a,Review prudence vignette (#577).,NA,NA,NA,NA
+duckplyr,9bb43be147e1b0a335d07804afe36835,Review large vignette (#576).,NA,NA,NA,NA
+duckplyr,31cdfc13b75f54276258bf8542c43ee1,Dev vignette (#574).,NA,NA,NA,NA
+duckplyr,8de23d21a04f199c1ec389fd23ecfc11,Review limits vignette (#582).,NA,NA,NA,NA
+duckplyr,68a8fce67e67758a588824767466329e,Review fallback vignette (#575).,NA,NA,NA,NA
+duckplyr,aea9411016a8c6d05e86e077d1632bbf,Stable.,NA,NA,NA,NA
+duckplyr,1d72ee1d0c5d28af74325f83346db365,Final tweaks.,NA,NA,NA,NA
+duckplyr,0137a735732dc3b69938119a271e9089,Change wording for fallback in method help pages (#535).,NA,NA,NA,NA
+duckplyr,899cfeb059b179e81bdfc101737b5cc3,Add footnote on prudence.,NA,NA,NA,NA
+duckplyr,928e6d733e13fcc3475416e5b8231085,Add one-paragraph intro (#549).,NA,NA,NA,NA
