@@ -18788,3 +18788,24 @@ duckplyr,1d72ee1d0c5d28af74325f83346db365,Final tweaks.,NA,NA,NA,NA
 duckplyr,0137a735732dc3b69938119a271e9089,Change wording for fallback in method help pages (#535).,NA,NA,NA,NA
 duckplyr,899cfeb059b179e81bdfc101737b5cc3,Add footnote on prudence.,NA,NA,NA,NA
 duckplyr,928e6d733e13fcc3475416e5b8231085,Add one-paragraph intro (#549).,NA,NA,NA,NA
+duckplyr,3e563e812ca86cb2867156e76dc0035d,"Improved support for handling large data from files and S3: ingestion with `read_parquet_duckdb()` and others, and materialization with `as_duckdb_tibble()`, `compute.duckplyr_df()` and `compute_file()`. See `vignette(""large"")` for details.",NA,NA,NA,NA
+duckplyr,49d6741af890e627e6ad4fd7f9e4d6ff,"Control automatic materialization of duckplyr frames with the new `prudence` argument to `as_duckdb_tibble()`, `duckdb_tibble()`, `compute.duckplyr_df()` and `compute_file()`. See `vignette(""prudence"")` for details.",NA,NA,NA,NA
+duckplyr,5cc1cb477276214bf5301db300ec18ac,"`read_csv_duckdb()` and others, deprecating `duckplyr_df_from_csv()` and `df_from_csv()` (#210, #396, #459).",NA,NA,NA,NA
+duckplyr,7a1a2db1cbcece809d4286708acd7980,"`read_sql_duckdb()` (experimental) to run SQL queries against the default DuckDB connection and return the result as a duckplyr frame (duckdb/duckdb-r#32, #397).",NA,NA,NA,NA
+duckplyr,5f7b77447dc91b2045b0b9da7d9c7ac0,"`db_exec()` to execute configuration queries against the default duckdb connection (#39, #165, #227, #404, #459).",NA,NA,NA,NA
+duckplyr,1eb4c4136a788f5e1c4a216d2c67896a,"`duckdb_tibble()` (#382, #457).",NA,NA,NA,NA
+duckplyr,14e5b1140ac10da7bc7fb298361eb750,"`as_duckdb_tibble()`, replaces `as_duckplyr_tibble()` and `as_duckplyr_df()` (#383, #457) and supports dbplyr connections to a duckdb database (#86, #211, #226).",NA,NA,NA,NA
+duckplyr,9316ca4287ad2c8a15f3f36c1b3d1ead,"`compute_parquet()` and `compute_csv()`, implement `compute.duckplyr_df()` (#409, #430).",NA,NA,NA,NA
+duckplyr,ed0842694e990a21da40a0df743c8b8b,"`fallback_config()` to create a configuration file for the settings that do not affect behavior (#216, #426).",NA,NA,NA,NA
+duckplyr,bb5da3c9350dccbcd403fe94f7388cb9,"`is_duckdb_tibble()`, deprecates `is_duckplyr_df()` (#391, #392).",NA,NA,NA,NA
+duckplyr,883dc7921dfe8c29bbe2b1b9d4228bc6,"`last_rel()` to retrieve the last relation object used in materialization (#209, #375).",NA,NA,NA,NA
+duckplyr,97273c4a2b95d40e93f61680839b80b6,"Add `""prudent_duckplyr_df""` class that stops automatic materialization and requires `collect()` (#381, #390).",NA,NA,NA,NA
+duckplyr,1ad6df5372394f369e18ffe7bdeea7f8,"Partial support for `across()` in `mutate()` and `summarise()` (#296, #306, #318, @​lionel-, @​DavisVaughan).",NA,NA,NA,NA
+duckplyr,64f239ed4dba966dc2d68d6ee0b9b015,"Improve fallback error message by explicitly materializing (#432, #456).",NA,NA,NA,NA
+duckplyr,b8a3c8d79a9ea8a72d6af1861e07208a,"Improve `as_duckdb_tibble()` error message for invalid `x` (@​maelle, #339).",NA,NA,NA,NA
+duckplyr,f1478d99e73fe7971ede90ed7db9432e,"Depend on dplyr instead of reexporting all generics (#405). Nothing changes for users in scripts. When using duckplyr in a package, you now also need to import dplyr.",NA,NA,NA,NA
+duckplyr,539ca85ed7eaf6425e9fbce82daacf14,"The default DuckDB connection is now based on a file, the location defaults to a subdirectory of `tempdir()` and can be controlled with the `DUCKPLYR_TEMP_DIR` environment variable (#439, #448, #561).",NA,NA,NA,NA
+duckplyr,4470e1244b536a11cecd530a5cb7a7de,"Internal `expr_scrub()` (used for telemetry) can handle function-definitions (@​toppyy, #268, #271).",NA,NA,NA,NA
+duckplyr,ee8c1b54c181bcd8c3cd36f03430d22a,"New articles: `vignette(""large"")`, `vignette(""prudence"")`, `vignette(""fallback"")`, `vignette(""limits"")`, `vignette(""developers"")`, `vignette(""telemetry"")` (#207, #504).",NA,NA,NA,NA
+duckplyr,8ca0d1aaa4af9840cce705a82e932eb1,"Move to the tidyverse GitHub organization, new repository URL https://github.com/tidyverse/duckplyr/ (#225).",NA,NA,NA,NA
+duckplyr,c5c4dce3cd64df62eb518110c13f6b5e,"Avoid base pipe in examples for compatibility with R 4.0.0 (#463, #466).",NA,NA,NA,NA
