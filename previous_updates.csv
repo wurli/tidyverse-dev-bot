@@ -18761,3 +18761,13 @@ duckplyr,1a45a5a72b572841a02a3b555444d79b,Tweak funneling (#545).,NA,NA,NA,NA
 duckplyr,22ae46664d004af4101b1e51a114650d,Snapshot updates (@​1741643+krlmlr).,NA,NA,NA,NA
 pins,79840d4ce0f5fd4b95c507974012e8d5,Prepends 'https://' to Databricks host if missing (#855).,NA,NA,NA,NA
 keras,6c80e6bc14290e4799998fd2da617837,`dotty::.` is now reexported.,NA,NA,NA,NA
+duckplyr,ce36b289cf64a508c6b1711d87b12121,Only translate what's actually supported (#569).,NA,NA,NA,NA
+duckplyr,e2473054f9cd2ca36def3a50f84c2707,"Implement `na.rm` handling for `sum()`, `min()`, `max()`, `any()` and `all()`, with fallback for window functions (#205, #566).",NA,NA,NA,NA
+duckplyr,e5560291294f847ff37d7ba294d55a2b,Create database in a subdirectory of `tempdir()` by default (#561).,NA,NA,NA,NA
+duckplyr,ec4bf21af5fa6356d769962ad0002258,Consistency.,NA,NA,NA,NA
+duckplyr,4116db85905e65e64fb8b3d1ac0e8bd0,Document `prudence` argument (#568).,NA,NA,NA,NA
+duckplyr,e626d85502f05575b75d932eba667ccd,"New `vignette(""fallback"")` (#563).",NA,NA,NA,NA
+duckplyr,58d9af8b63cf4a62fc9d953f7f59e5ef,Mention fallback in README (#562).,NA,NA,NA,NA
+duckplyr,6e45589653e47848776a19fed82fdfba,"Show error source for translation errors (#512, #560).",NA,NA,NA,NA
+duckplyr,828968f7eafd8e9fffb779731ff5641e,"Wrap up documentation on prudence (#497, #559).",NA,NA,NA,NA
+duckplyr,32baf24844fdd464776c233aed6748b2,Ensure TPC-H tests are run by DuckDB (#555).,NA,NA,NA,NA
