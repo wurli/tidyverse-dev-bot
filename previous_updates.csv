@@ -18810,3 +18810,4 @@ duckplyr,ee8c1b54c181bcd8c3cd36f03430d22a,"New articles: `vignette(""large"")`, 
 duckplyr,8ca0d1aaa4af9840cce705a82e932eb1,"Move to the tidyverse GitHub organization, new repository URL https://github.com/tidyverse/duckplyr/ (#225).",NA,NA,NA,NA
 duckplyr,c5c4dce3cd64df62eb518110c13f6b5e,"Avoid base pipe in examples for compatibility with R 4.0.0 (#463, #466).",NA,NA,NA,NA
 duckplyr,1ca8c44fdcad23d6ab12e2774762d5c4,Switching to development version.,NA,NA,NA,NA
+gh,7ed9b392efed17e37cbb99246147779f,"`gh_token()` can now pick up on the viewer's GitHub credentials (if any) when running on Posit Connect (@​atheriel, #217).",NA,NA,NA,NA
