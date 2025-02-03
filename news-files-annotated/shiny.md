@@ -7,6 +7,7 @@
 -   !begin-bullet!
     When busy indicators are enabled (i.e., `useBusyIndicators()`),
     Shiny now:
+
     !begin-bullets-2!
     -   !begin-bullet!
         Shows a spinner on recalculating htmlwidgets that have
@@ -26,6 +27,12 @@
 -   !begin-bullet!
     Shiny now uses `{cli}` instead of `{crayon}` for rich log messages.
     (@olivroy #4170)
+
+    !end-bullet!
+-   !begin-bullet!
+    Shiny's Typescript assets are now compiled to ES2021 instead of ES5.
+    (#4066)
+
     !end-bullet!
 
 !end-bullets-1!
