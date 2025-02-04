@@ -18812,3 +18812,4 @@ duckplyr,c5c4dce3cd64df62eb518110c13f6b5e,"Avoid base pipe in examples for compa
 duckplyr,1ca8c44fdcad23d6ab12e2774762d5c4,Switching to development version.,NA,NA,NA,NA
 gh,7ed9b392efed17e37cbb99246147779f,"`gh_token()` can now pick up on the viewer's GitHub credentials (if any) when running on Posit Connect (@​atheriel, #217).",NA,NA,NA,NA
 shiny,e9980db7568b299270d0ef5ef1322146,Shiny's Typescript assets are now compiled to ES2021 instead of ES5. (#4066),NA,NA,NA,NA
+ggplot2,1ea7ca0a4d41c274b256ff2b03a07c67,"Staged expressions are handled more gracefully if legends cannot resolve them (@​teunbrand, #6264).",NA,NA,NA,NA

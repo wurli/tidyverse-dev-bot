@@ -809,6 +809,11 @@
 
     !end-bullet!
 -   !begin-bullet!
+    Staged expressions are handled more gracefully if legends cannot
+    resolve them (@teunbrand, #6264).
+
+    !end-bullet!
+-   !begin-bullet!
     New `theme(legend.key.justification)` to control the alignment of
     legend keys (@teunbrand, #3669).
 
