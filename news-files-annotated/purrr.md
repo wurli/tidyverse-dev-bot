@@ -1,5 +1,9 @@
 # purrr (development version)
 
+# purrr 1.0.4
+
+# purrr 1.0.3
+
 !begin-bullets-1!
 
 -   !begin-bullet!
