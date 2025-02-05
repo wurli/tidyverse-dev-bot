@@ -1,5 +1,7 @@
 # sessioninfo (development version)
 
+# sessioninfo 1.2.3
+
 !begin-bullets-1!
 
 -   !begin-bullet!
