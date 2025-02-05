@@ -8,7 +8,7 @@
 
     !end-bullet!
 -   !begin-bullet!
-    Update pkgdown url to sessioninfo.r-lib.org
+    Update pkgdown url to sessioninfo.r-lib.org.
 
     !end-bullet!
 -   !begin-bullet!
@@ -19,6 +19,17 @@
 -   !begin-bullet!
     `session_info()` output now includes an explanation for symbol
     highlighting packages attached to the search path (@IndrajeetPatil).
+
+    !end-bullet!
+-   !begin-bullet!
+    `session_info()` and `platform_info()` now print the host name if
+    the `sessioninfo.include_hostname` global option is set to `TRUE`
+    (@certara-jcraig, #99).
+
+    !end-bullet!
+-   !begin-bullet!
+    sessioninfo now does not leave behind detritus in the temporary
+    directory.
 
     !end-bullet!
 

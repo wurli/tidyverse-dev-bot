@@ -1,15 +1,23 @@
 
 # sessioninfo (development version)
 
-* `session_info()` no longer produces an error when `info` has length > 1 (@nash-delcamp-slp, #96).
+* `session_info()` no longer produces an error when `info` has length > 1
+  (@nash-delcamp-slp, #96).
 
-* Update pkgdown url to sessioninfo.r-lib.org
+* Update pkgdown url to sessioninfo.r-lib.org.
 
-* `session_diff()` now accepts the URL to a GitHub Actions log as the source for
-  `new` and/or `old` (@jennybc, #68).
+* `session_diff()` now accepts the URL to a GitHub Actions log as the
+  source for `new` and/or `old` (@jennybc, #68).
 
-* `session_info()` output now includes an explanation for symbol highlighting packages
-  attached to the search path (@IndrajeetPatil).
+* `session_info()` output now includes an explanation for symbol
+  highlighting packages attached to the search path (@IndrajeetPatil).
+
+* `session_info()` and `platform_info()` now print the host name if the
+  `sessioninfo.include_hostname` global option is set to `TRUE`
+  (@certara-jcraig, #99).
+
+* sessioninfo now does not leave behind detritus in the temporary
+  directory.
 
 # sessioninfo 1.2.2
 
@@ -82,7 +90,7 @@
 
 # sessioninfo 1.1.1
 
-* `package_info()` and `session_info()` now detect locally installed packages 
+* `package_info()` and `session_info()` now detect locally installed packages
   correctly if they have an empty `biocViews` field in `DESCRIPTION (@llrs, #25)
 
 * `package_info()` and `session_info()` now handle the case when a loaded
