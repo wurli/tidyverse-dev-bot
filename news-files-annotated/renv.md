@@ -3,8 +3,14 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed an issue where very long lockfiles could be truncated on
+    write. (#2089)
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed an issue where `renv` inadvertently made web requests in tests
     during `R CMD check`.
+
     !end-bullet!
 
 !end-bullets-1!

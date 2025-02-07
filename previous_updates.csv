@@ -18824,3 +18824,4 @@ httr2,74ebe1164c68b235f28cd3ccd860237b,"`oauth_client()` and `oauth_token()` gai
 httr2,78aefd91ec83380544bf78823b9f1792,"`resp_link_url()` once again ignores the case of headers (@​DavidRLovell, #655)",NA,NA,NA,NA
 httr2,bb67ecba8663b710fcb6e96e8a5fbac4,"`req_dry_run()` and `req_verbose()` now do a better job of displaying compressed bodies (#91, #656).",NA,NA,NA,NA
 renv,bd2556292c6acd526b39036536c56075,Fixed an issue where `renv` inadvertently made web requests in tests during `R CMD check`.,NA,NA,NA,NA
+renv,25c142463f8b7f796b38a38784b88b7a,Fixed an issue where very long lockfiles could be truncated on write. (#2089),NA,NA,NA,NA
