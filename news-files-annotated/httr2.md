@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `req_dry_run()` and `req_verbose()` now do a better job of
+    displaying compressed bodies (#91, #656).
+    !end-bullet!
+-   !begin-bullet!
     `resp_link_url()` once again ignores the case of headers
     (@DavidRLovell, #655)
     !end-bullet!
