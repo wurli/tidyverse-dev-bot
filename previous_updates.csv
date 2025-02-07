@@ -18818,3 +18818,5 @@ desc,4e66ba3ca2e620de20cf21b6c55af2e0,"All functions and methods managing possib
 sessioninfo,2fc1c77c55a32f1eef946d7356782515,"`session_info()` and `platform_info()` now print the host name if the `sessioninfo.include_hostname` global option is set to `TRUE` (@​certara-jcraig, #99).",NA,NA,NA,NA
 sessioninfo,e44aa791b93a00fc37343fffc80f3eba,sessioninfo now does not leave behind detritus in the temporary directory.,NA,NA,NA,NA
 purrr,711df6e16cab2f28fd4b8c121d2153b6,"purrr gains the capacity for parallel and distributed map, powered by the mirai package. The argument `.parallel` has been added to `map()`, `map2()`, `pmap()` and variants to enable this. See `?parallelization` for more details (@​shikokuchuo, #1163).",NA,NA,NA,NA
+httr2,40f271221440db70b90017e1beeddd97,`req_headers()` always redacts `Authorization` (#649).,NA,NA,NA,NA
+httr2,fa53aa5fb1ce596059eebb7381fe43f9,`req_headers_redacted()` supports dynamic dots (#647),NA,NA,NA,NA
