@@ -18820,3 +18820,4 @@ sessioninfo,e44aa791b93a00fc37343fffc80f3eba,sessioninfo now does not leave behi
 purrr,711df6e16cab2f28fd4b8c121d2153b6,"purrr gains the capacity for parallel and distributed map, powered by the mirai package. The argument `.parallel` has been added to `map()`, `map2()`, `pmap()` and variants to enable this. See `?parallelization` for more details (@​shikokuchuo, #1163).",NA,NA,NA,NA
 httr2,40f271221440db70b90017e1beeddd97,`req_headers()` always redacts `Authorization` (#649).,NA,NA,NA,NA
 httr2,fa53aa5fb1ce596059eebb7381fe43f9,`req_headers_redacted()` supports dynamic dots (#647),NA,NA,NA,NA
+httr2,74ebe1164c68b235f28cd3ccd860237b,"`oauth_client()` and `oauth_token()` gain refreshed print methods that use bulleted lists, like other httr2 objects. Additionally, print a `oauth_client()` with a custom `auth` function no longer errors (#648).",NA,NA,NA,NA

@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `oauth_client()` and `oauth_token()` gain refreshed print methods
+    that use bulleted lists, like other httr2 objects. Additionally,
+    print a `oauth_client()` with a custom `auth` function no longer
+    errors (#648).
+    !end-bullet!
+-   !begin-bullet!
     `req_headers()` always redacts `Authorization` (#649).
     !end-bullet!
 -   !begin-bullet!
