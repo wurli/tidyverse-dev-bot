@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `resp_link_url()` once again ignores the case of headers
+    (@DavidRLovell, #655)
+    !end-bullet!
+-   !begin-bullet!
     `oauth_client()` and `oauth_token()` gain refreshed print methods
     that use bulleted lists, like other httr2 objects. Additionally,
     print a `oauth_client()` with a custom `auth` function no longer

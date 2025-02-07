@@ -18821,3 +18821,4 @@ purrr,711df6e16cab2f28fd4b8c121d2153b6,"purrr gains the capacity for parallel an
 httr2,40f271221440db70b90017e1beeddd97,`req_headers()` always redacts `Authorization` (#649).,NA,NA,NA,NA
 httr2,fa53aa5fb1ce596059eebb7381fe43f9,`req_headers_redacted()` supports dynamic dots (#647),NA,NA,NA,NA
 httr2,74ebe1164c68b235f28cd3ccd860237b,"`oauth_client()` and `oauth_token()` gain refreshed print methods that use bulleted lists, like other httr2 objects. Additionally, print a `oauth_client()` with a custom `auth` function no longer errors (#648).",NA,NA,NA,NA
+httr2,78aefd91ec83380544bf78823b9f1792,"`resp_link_url()` once again ignores the case of headers (@​DavidRLovell, #655)",NA,NA,NA,NA
