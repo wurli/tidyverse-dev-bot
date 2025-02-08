@@ -31,6 +31,10 @@
     `aws_v4_signature()` now works if url contains query parameters
     (@jeffreyzuber, #645).
     !end-bullet!
+-   !begin-bullet!
+    `req_oauth_auth_code()` no longer adds trailing "/" characters to
+    well-formed `redirect_uri` values (@jonthegeek, #646).
+    !end-bullet!
 
 !end-bullets-1!
 
