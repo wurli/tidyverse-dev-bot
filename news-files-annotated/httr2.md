@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `req_throttle()` now uses a "token bucket" which preserves the
+    average rate limit, but allows bursts of higher requests.
+    !end-bullet!
+-   !begin-bullet!
     `req_dry_run()` and `req_verbose()` now do a better job of
     displaying compressed bodies (#91, #656).
     !end-bullet!
