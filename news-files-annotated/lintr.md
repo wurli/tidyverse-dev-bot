@@ -91,6 +91,14 @@
     need to adjust your config to keep linting your code against them.
     We did not find any such users on GitHub.
     !end-bullet!
+-   !begin-bullet!
+    Arguments `allow_cascading_assign=`, `allow_right_assign=`, and
+    `allow_pipe_assign=` to `assignment_linter()` are all deprecated in
+    favor of the new `operator=` argument. Usage of a positional first
+    argument like `assignment_linter(TRUE)`, of which we found 0 cases
+    on GitHub, is totally deprecated to allow `operator=` to be
+    positionally first. See below about the new argument.
+    !end-bullet!
 
 !end-bullets-1!
 
@@ -300,6 +308,22 @@
     `{lintr}` now has a hex sticker
     (https://github.com/rstudio/hex-stickers/pull/110). Thank you,
     @gregswinehart!
+    !end-bullet!
+-   !begin-bullet!
+    `assignment_linter()` can be fully customized with the new
+    `operator=` argument to specify an exact vector of assignment
+    operators to allow (#2441, @MichaelChirico and @J-Moravec). The
+    default is `<-` and `<<-`; authors wishing to use `=` (only) for
+    assignment in their codebase can use `operator = "="`. This
+    supersedes several old arguments: to accomplish
+    `allow_cascading_assign=TRUE`, add `"<<-"` (and/or `"->>"`) to
+    `operator=`; for `allow_right_assign=TRUE`, add `"->"` (and/or
+    `"->>"`) to `operator=`; for `allow_pipe_assign=TRUE`, add `"%<>%"`
+    to `operator=`. Use `operator = "any"` to denote "ignore all
+    assignment operators"; in this case, only the value of
+    `allow_trailing=` matters. Implicit assignments with `<-` are always
+    ignored by `assignment_linter()`; use `implicit_assignment_linter()`
+    to handle linting these.
     !end-bullet!
 
 !end-bullets-5!
