@@ -18832,3 +18832,6 @@ lintr,fc5c498433144ea4ab852047dc28df43,"`assignment_linter()` can be fully custo
 httr2,6551cefff9d54daa2c8edf56921adefd,"`req_throttle()` now uses a ""token bucket"" which preserves the average rate limit, but allows bursts of higher requests.",NA,NA,NA,NA
 cli,949912ef0178bd3355ecf38dd4eb412b,"Pluralization now handles edge cases (`NA`, `NaN`, `Inf` and `-Inf`) better (@​rundel, #716).",NA,NA,NA,NA
 cli,3f4e2bc281bc0f826925856775245486,"`cli_progress_bar()` now accepts `total` = Inf or -Inf which mimics the behavior of when `total` is NA (@​LouisMPenrod, #630).",NA,NA,NA,NA
+reticulate,43f107bc67dbf9044924e7e8a0473605,New `py_require()` function for declaring Python requirements for the current R session.,NA,NA,NA,NA
+reticulate,cd9f44ce45600e828f65cd60f553a2a8,New `uv_run_tool()` function for running command line tools distributed via Python packages.,NA,NA,NA,NA
+shinytest2,92ffc45ecb53b8872287ec8768130353,"`{shinytest2}` now imports `{cli}` and no longer imports `{crayon}` (@​olivroy, #399).",NA,NA,NA,NA

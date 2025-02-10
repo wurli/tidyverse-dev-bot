@@ -14,6 +14,11 @@
     (@LouisLeNezet, #394).
 
     !end-bullet!
+-   !begin-bullet!
+    `{shinytest2}` now imports `{cli}` and no longer imports `{crayon}`
+    (@olivroy, #399).
+
+    !end-bullet!
 
 !end-bullets-1!
 

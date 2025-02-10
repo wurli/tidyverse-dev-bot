@@ -3,6 +3,16 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    New `py_require()` function for declaring Python requirements for
+    the current R session.
+
+    !end-bullet!
+-   !begin-bullet!
+    New `uv_run_tool()` function for running command line tools
+    distributed via Python packages.
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed an issue with using Python 3.12 on Linux (#1712, #1714).
 
     !end-bullet!
