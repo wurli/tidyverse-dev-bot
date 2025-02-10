@@ -18835,3 +18835,6 @@ cli,3f4e2bc281bc0f826925856775245486,"`cli_progress_bar()` now accepts `total` =
 reticulate,43f107bc67dbf9044924e7e8a0473605,New `py_require()` function for declaring Python requirements for the current R session.,NA,NA,NA,NA
 reticulate,cd9f44ce45600e828f65cd60f553a2a8,New `uv_run_tool()` function for running command line tools distributed via Python packages.,NA,NA,NA,NA
 shinytest2,92ffc45ecb53b8872287ec8768130353,"`{shinytest2}` now imports `{cli}` and no longer imports `{crayon}` (@​olivroy, #399).",NA,NA,NA,NA
+httr2,9a6e0eefacb514a992a8f4141cabf404,`req_perform_connection()` gives a better error if request fails at networking level.,NA,NA,NA,NA
+shinytest2,1de4cd946b668ee2d69be97de3a1cc5d,Add support for `$click()`ing `{bslib}`'s `input_task_button()` (#389).,NA,NA,NA,NA
+shinytest2,760d0fbfba1d86614f8d2c98764c435c,The `threshold` and `kernel_size` default values of the `AppDriver$expect_screenshot()` method are now configurable via two new global options: `shinytest2.compare_screenshot.threshold` and `shinytest2.compare_screenshot.kernel_size` (#401),NA,NA,NA,NA

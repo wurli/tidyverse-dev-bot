@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `req_perform_connection()` gives a better error if request fails at
+    networking level.
+    !end-bullet!
+-   !begin-bullet!
     `req_throttle()` now uses a "token bucket" which preserves the
     average rate limit, but allows bursts of higher requests.
     !end-bullet!
