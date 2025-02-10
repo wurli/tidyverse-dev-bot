@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Pluralization now handles edge cases (`NA`, `NaN`, `Inf` and `-Inf`)
+    better (@rundel, #716).
+
+    !end-bullet!
+-   !begin-bullet!
     The URI generated for `.file`, `.run`, `.help` and `.vignette`
     hyperlinks can now be configured via options and env vars (@jennybc,
     #739, #744).
@@ -10,7 +15,7 @@
     !end-bullet!
 -   !begin-bullet!
     `cli_progress_bar()` now accepts `total` = Inf or -Inf which mimics
-    the behavior of when `total` is NA.
+    the behavior of when `total` is NA (@LouisMPenrod, #630).
 
     !end-bullet!
 -   !begin-bullet!
