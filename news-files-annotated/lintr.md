@@ -9,6 +9,10 @@
     now removed from the package:
     !begin-bullets-2!
     -   !begin-bullet!
+        Linters `closed_curly_linter()`, `open_curly_linter()`,
+        `paren_brace_linter()`, and `semicolon_terminator_linter()`.
+        !end-bullet!
+    -   !begin-bullet!
         `linter=` argument of `Lint()`.
         !end-bullet!
 

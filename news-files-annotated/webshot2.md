@@ -21,6 +21,12 @@
     (#69)
 
     !end-bullet!
+-   !begin-bullet!
+    `webshot()` works harder to set the size of the virtual viewport
+    when `vwidth` and `vheight` are used. This change improves
+    compatibility with recent versions of Chrome (\>= v132). (#72)
+
+    !end-bullet!
 
 !end-bullets-1!
 
