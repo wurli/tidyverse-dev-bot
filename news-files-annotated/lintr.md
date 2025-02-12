@@ -1,5 +1,7 @@
 # lintr (development version)
 
+# lintr 3.2.0
+
 ## Deprecations & breaking changes
 
 !begin-bullets-1!
@@ -7,7 +9,7 @@
 -   !begin-bullet!
     Various things marked deprecated since {lintr} 3.0.0 have been fully
     deprecated. They will be completely removed in the subsequent
-    release.
+    release. See previous NEWS for advice on how to replace them.
     !begin-bullets-2!
     -   !begin-bullet!
         `source_file=` argument to `ids_with_token()` and `with_id()`.
@@ -39,9 +41,9 @@
     searching GitHub.
     !end-bullet!
 -   !begin-bullet!
-    Adjusted various lint messages for consistency in readability
+    Adjusted various lint messages for consistency and readability
     (#1330, @MichaelChirico). In general, we favor lint messages to be
-    phrased like "Action, reason" to but the "what" piece of the message
+    phrased like "Action, reason" to put the "what" piece of the message
     front-and-center. This may be a breaking change for code that tests
     the specific phrasing of lints.
     !end-bullet!
@@ -49,32 +51,34 @@
     `extraction_operator_linter()` is deprecated. Although switching
     from `$` to `[[` has some robustness benefits for package code, it
     can lead to non-idiomatic code in many contexts (e.g. R6 classes,
-    Shiny applications, etc.) (#2409, @IndrajeetPatil). To enable the
-    detection of the `$` operator for extraction through partial
-    matching, use `options(warnPartialMatchDollar = TRUE)`.
+    Shiny applications, etc.) (#2409, @IndrajeetPatil). One reason to
+    avoid `$` is that it allows partial matching where `[[` does not.
+    Use `options(warnPartialMatchDollar = TRUE)` to disable this feature
+    and restore some parity to using `$` vs. `[[`.
     !end-bullet!
 -   !begin-bullet!
     `unnecessary_nested_if_linter()` is deprecated and subsumed into the
     new/more general `unnecessary_nesting_linter()`.
     !end-bullet!
 -   !begin-bullet!
-    Drop support for posting GitHub comments from inside GitHub comment
-    bot, Travis, Wercker, and Jenkins CI tools (spurred by #2148,
-    @MichaelChirico). We rely on GitHub Actions for linting in CI, and
-    don't see any active users relying on these alternatives. We welcome
-    and encourage community contributions to get support for different
-    CI system going again.
+    Dropped support for posting GitHub comments from inside GitHub
+    comment bot, Travis, Wercker, and Jenkins CI tools (spurred by
+    #2148, @MichaelChirico). We rely on GitHub Actions for linting in
+    CI, and don't see any active users relying on these alternatives. We
+    welcome and encourage community contributions to get support for
+    different CI systems going again.
     !end-bullet!
 -   !begin-bullet!
     `cyclocomp_linter()` is no longer part of the default linters
     (#2555, @IndrajeetPatil) because the tidyverse style guide doesn't
     contain any guidelines on meeting certain complexity requirements.
-    Note that users with `cyclocomp_linter()` in their configs may now
-    need to install {cyclocomp} intentionally, in particular in CI/CD
-    pipelines.
+    With this, we also downgrade {cyclocomp} from `Imports:` to
+    `Suggests:`. Note that users with `cyclocomp_linter()` in their
+    configs may now need to install {cyclocomp} intentionally, in
+    particular in CI/CD pipelines.
     !end-bullet!
 -   !begin-bullet!
-    `scalar_in_linter` is now configurable to allow other `%in%` like
+    `scalar_in_linter()` is now configurable to allow other `%in%`-like
     operators to be linted. The data.table operator `%chin%` is no
     longer linted by default; use `in_operators = "%chin%"` to continue
     linting it. (@F-Noelle)
@@ -95,8 +99,8 @@
     Arguments `allow_cascading_assign=`, `allow_right_assign=`, and
     `allow_pipe_assign=` to `assignment_linter()` are all deprecated in
     favor of the new `operator=` argument. Usage of a positional first
-    argument like `assignment_linter(TRUE)`, of which we found 0 cases
-    on GitHub, is totally deprecated to allow `operator=` to be
+    argument like `assignment_linter(TRUE)`, of which we found zero
+    cases on GitHub, is totally deprecated to allow `operator=` to be
     positionally first. See below about the new argument.
     !end-bullet!
 
@@ -130,17 +134,13 @@
     @MichaelChirico).
     !end-bullet!
 -   !begin-bullet!
-    `indentation_linter()` returns `ranges[1L]==1L` when the offending
-    line has 0 spaces (#2550, @MichaelChirico).
+    `indentation_linter()` returns lints with `ranges[1L]==1L` when the
+    offending line has 0 spaces (#2550, @MichaelChirico).
     !end-bullet!
 -   !begin-bullet!
-    `literal_coercion_linter()` doesn't surface a warning about NAs
+    `literal_coercion_linter()` doesn't surface a warning about `NA`s
     during coercion for code like `as.integer("a")` (#2566,
     @MichaelChirico).
-    !end-bullet!
--   !begin-bullet!
-    `commented_code_linter()` can detect commented code that ends with a
-    pipe (#2671, @jcken95)
     !end-bullet!
 
 !end-bullets-3!
@@ -162,11 +162,82 @@
 !begin-bullets-5!
 
 -   !begin-bullet!
+    New function node caching for big efficiency gains to most linters
+    (e.g. overall `lint_package()` improvement of 14-27% and core
+    linting improvement up to 30%; #2357, @AshesITR). Most linters are
+    written around function usage, and XPath performance searching for
+    many functions is poor. The new `xml_find_function_calls()` entry in
+    the `get_source_expressions()` output caches all function call nodes
+    instead. See the vignette on creating linters for more details on
+    how to use it.
+    !end-bullet!
+-   !begin-bullet!
+    `Linter()` has a new argument `linter_level=` (default `NA`). This
+    is used by `lint()` to more efficiently check for expression levels
+    than the idiom `if (!is_lint_level(...)) { return(list()) }` (#2351,
+    @AshesITR).
+    !end-bullet!
+-   !begin-bullet!
+    New `return_linter()` also has arguments for fine-tuning which
+    functions get linted:
+    !begin-bullets-6!
+    -   !begin-bullet!
+        `return_style=` (`"implicit"` by default) which checks that all
+        functions confirm to the specified return style of `"implicit"`
+        or `"explicit"` (#2271 and part of #884, @MichaelChirico,
+        @AshesITR and @MEO265).
+        !end-bullet!
+    -   !begin-bullet!
+        `allow_implicit_else=` (default `TRUE`) which, when `FALSE`,
+        checks that all terminal `if` statements are paired with a
+        corresponding `else` statement (part of #884, @MichaelChirico).
+        !end-bullet!
+    -   !begin-bullet!
+        `return_functions=` to customize which functions are equivalent
+        to `return()` as "exit" clauses, e.g. `rlang::abort()` can be
+        considered in addition to the default functions like `stop()`
+        and `q()` from base (#2271 and part of #884, @MichaelChirico and
+        @MEO265).
+        !end-bullet!
+    -   !begin-bullet!
+        `except=` to customize which functions are ignored entirely
+        (i.e., whether they have a return of the specified style is not
+        checked; #2271 and part of #884, @MichaelChirico and @MEO265).
+        Namespace hooks like `.onAttach()` and `.onLoad()` are always
+        ignored.
+        !end-bullet!
+    -   !begin-bullet!
+        `except_regex=`, the same purpose as `except=`, but filters
+        functions by pattern. This is motivated by {RUnit}, where test
+        suites are based on unit test functions matched by pattern,
+        e.g. `^Test`, and where explicit return may be awkward (#2335,
+        @MichaelChirico).
+        !end-bullet!
+
+    !end-bullets-6!
+    !end-bullet!
+-   !begin-bullet!
+    `assignment_linter()` can be fully customized with the new
+    `operator=` argument to specify an exact vector of assignment
+    operators to allow (#2441, @MichaelChirico and @J-Moravec). The
+    default is `<-` and `<<-`; authors wishing to use `=` (only) for
+    assignment in their codebase can use `operator = "="`. This
+    supersedes several old arguments: to accomplish
+    `allow_cascading_assign=TRUE`, add `"<<-"` (and/or `"->>"`) to
+    `operator=`; for `allow_right_assign=TRUE`, add `"->"` (and/or
+    `"->>"`) to `operator=`; for `allow_pipe_assign=TRUE`, add `"%<>%"`
+    to `operator=`. Use `operator = "any"` to denote "ignore all
+    assignment operators"; in this case, only the value of
+    `allow_trailing=` matters. Implicit assignments with `<-` are always
+    ignored by `assignment_linter()`; use `implicit_assignment_linter()`
+    to handle linting these.
+    !end-bullet!
+-   !begin-bullet!
     More helpful errors for invalid configs (#2253, @MichaelChirico).
     !end-bullet!
 -   !begin-bullet!
     `library_call_linter()` is extended
-    !begin-bullets-6!
+    !begin-bullets-7!
     -   !begin-bullet!
         to encourage all packages to be attached with `library(symbol)`,
         not `library("symbol", character.only = TRUE)` or "vectorized"
@@ -179,52 +250,13 @@
         @MichaelChirico).
         !end-bullet!
 
-    !end-bullets-6!
-    !end-bullet!
--   !begin-bullet!
-    `return_linter()` also has arguments for fine-tuning which functions
-    get linted:
-    !begin-bullets-7!
-    -   !begin-bullet!
-        `return_style` (`"implicit"` by default) which checks that all
-        functions confirm to the specified return style of `"implicit"`
-        or `"explicit"` (#2271 and part of #884, @MichaelChirico,
-        @AshesITR and @MEO265).
-        !end-bullet!
-    -   !begin-bullet!
-        `allow_implicit_else` (default `TRUE`) which, when `FALSE`,
-        checks that all terminal `if` statements are paired with a
-        corresponding `else` statement (part of #884, @MichaelChirico).
-        !end-bullet!
-    -   !begin-bullet!
-        `return_functions` to customize which functions are equivalent
-        to `return()` as "exit" clauses, e.g. `rlang::abort()` can be
-        considered in addition to the default functions like `stop()`
-        and `q()` from base (#2271 and part of #884, @MichaelChirico and
-        @MEO265).
-        !end-bullet!
-    -   !begin-bullet!
-        `except` to customize which functions are ignored entirely
-        (i.e., whether they have a return of the specified style is not
-        checked; #2271 and part of #884, @MichaelChirico and @MEO265).
-        Namespace hooks like `.onAttach()` and `.onLoad()` are always
-        ignored.
-        !end-bullet!
-    -   !begin-bullet!
-        `except_regex`, the same purpose as `except=`, but filters
-        functions by pattern. This is motivated by {RUnit}, where test
-        suites are based on unit test functions matched by pattern,
-        e.g. `^Test`, and where explicit return may be awkward (#2335,
-        @MichaelChirico).
-        !end-bullet!
-
     !end-bullets-7!
     !end-bullet!
 -   !begin-bullet!
-    `unnecessary_lambda_linter` is extended to encourage vectorized
+    `unnecessary_lambda_linter()` is extended to encourage vectorized
     comparisons where possible, e.g. `sapply(x, sum) > 0` instead of
     `sapply(x, function(x) sum(x) > 0)` (part of #884, @MichaelChirico).
-    Toggle this behavior with argument `allow_comparison`.
+    Toggle this behavior with argument `allow_comparison=`.
     !end-bullet!
 -   !begin-bullet!
     `backport_linter()` is slightly faster by moving expensive
@@ -232,25 +264,19 @@
     and @MichaelChirico).
     !end-bullet!
 -   !begin-bullet!
-    `Linter()` has a new argument `linter_level` (default `NA`). This is
-    used by `lint()` to more efficiently check for expression levels
-    than the idiom `if (!is_lint_level(...)) { return(list()) }` (#2351,
-    @AshesITR).
-    !end-bullet!
--   !begin-bullet!
     `string_boundary_linter()` recognizes regular expression calls like
     `grepl("^abc$", x)` that can be replaced by using `==` instead
     (#1613, @MichaelChirico).
     !end-bullet!
 -   !begin-bullet!
-    `unreachable_code_linter()` has an argument `allow_comment_regex`
+    `unreachable_code_linter()` has an argument `allow_comment_regex=`
     for customizing which "terminal" comments to exclude (#2327,
-    @MichaelChirico). `# nolint end` comments are always excluded, as
-    are {covr} exclusions (e.g. `# nocov end`) by default.
+    @MichaelChirico). Exclusion comments from {lintr} and {covr}
+    (e.g. `# nocov end`) are always excluded.
     !end-bullet!
 -   !begin-bullet!
     `format()` and `print()` methods for `lint` and `lints` classes get
-    a new option `width` to control the printing width of lint messages
+    a new option `width=` to control the printing width of lint messages
     (#1884, @MichaelChirico). The default is controlled by a new option
     `lintr.format_width`; if unset, no wrapping occurs (matching earlier
     behavior).
@@ -261,17 +287,7 @@
     call to `print()` for clarity (#2257, @MichaelChirico).
     !end-bullet!
 -   !begin-bullet!
-    New function node caching for big efficiency gains to most linters
-    (e.g. overall `lint_package()` improvement of 14-27% and core
-    linting improvement up to 30%; #2357, @AshesITR). Most linters are
-    written around function usage, and XPath performance searching for
-    many functions is poor. The new `xml_find_function_calls()` entry in
-    the `get_source_expressions()` output caches all function call nodes
-    instead. See the vignette on creating linters for more details on
-    how to use it.
-    !end-bullet!
--   !begin-bullet!
-    `todo_comment_linter()` has a new argument `except_regex` for
+    `todo_comment_linter()` has a new argument `except_regex=` for
     setting *valid* TODO comments, e.g. for forcing TODO comments to be
     linked to GitHub issues like `TODO(#154)` (#2047, @MichaelChirico).
     !end-bullet!
@@ -285,7 +301,7 @@
     `NA %in% x` (#2113, @MichaelChirico).
     !end-bullet!
 -   !begin-bullet!
-    `make_linter_from_xpath()` errors up front when `lint_message` is
+    `make_linter_from_xpath()` errors up front when `lint_message=` is
     missing (instead of delaying this error until the linter is used,
     #2541, @MichaelChirico).
     !end-bullet!
@@ -305,25 +321,8 @@
     @IndrajeetPatil).
     !end-bullet!
 -   !begin-bullet!
-    `{lintr}` now has a hex sticker
-    (https://github.com/rstudio/hex-stickers/pull/110). Thank you,
-    @gregswinehart!
-    !end-bullet!
--   !begin-bullet!
-    `assignment_linter()` can be fully customized with the new
-    `operator=` argument to specify an exact vector of assignment
-    operators to allow (#2441, @MichaelChirico and @J-Moravec). The
-    default is `<-` and `<<-`; authors wishing to use `=` (only) for
-    assignment in their codebase can use `operator = "="`. This
-    supersedes several old arguments: to accomplish
-    `allow_cascading_assign=TRUE`, add `"<<-"` (and/or `"->>"`) to
-    `operator=`; for `allow_right_assign=TRUE`, add `"->"` (and/or
-    `"->>"`) to `operator=`; for `allow_pipe_assign=TRUE`, add `"%<>%"`
-    to `operator=`. Use `operator = "any"` to denote "ignore all
-    assignment operators"; in this case, only the value of
-    `allow_trailing=` matters. Implicit assignments with `<-` are always
-    ignored by `assignment_linter()`; use `implicit_assignment_linter()`
-    to handle linting these.
+    `commented_code_linter()` can detect commented code that ends with a
+    pipe (#2671, @jcken95)
     !end-bullet!
 
 !end-bullets-5!
@@ -343,8 +342,8 @@
     !end-bullet!
 -   !begin-bullet!
     `stopifnot_all_linter()` discourages tests with `all()` like
-    `stopifnot(all(x > 0))`; `stopifnot()` runs `all()` itself, and uses
-    a better error message (part of #884, @MichaelChirico).
+    `stopifnot(all(x > 0))`; `stopifnot()` runs `all()` itself, and
+    signals a better error message (part of #884, @MichaelChirico).
     !end-bullet!
 -   !begin-bullet!
     `comparison_negation_linter()` for discouraging negated comparisons
@@ -366,6 +365,8 @@
 -   !begin-bullet!
     `rep_len_linter()` for encouraging use of `rep_len()` directly
     instead of `rep(x, length.out = n)` (part of #884, @MichaelChirico).
+    Note that in older versions of R (e.g. pre-4.0), `rep_len()` may not
+    copy attributes as expected.
     !end-bullet!
 -   !begin-bullet!
     `which_grepl_linter()` for discouraging `which(grepl(ptn, x))` in
@@ -384,7 +385,7 @@
     !end-bullet!
 -   !begin-bullet!
     `unnecessary_nesting_linter()` for discouraging overly-nested code
-    where an early return or eliminated sub-expression (inside '{') is
+    where an early return or eliminated sub-expression (inside `{`) is
     preferable (#2317, #2334 and part of #884, @MichaelChirico).
     !end-bullet!
 -   !begin-bullet!
@@ -446,10 +447,15 @@
 !begin-bullets-10!
 
 -   !begin-bullet!
+    `{lintr}` now has a hex sticker
+    (https://github.com/rstudio/hex-stickers/pull/110). Thank you,
+    @gregswinehart!
+    !end-bullet!
+-   !begin-bullet!
     All user-facing messages (including progress bars) are now prepared
-    using the `{cli}` package (#2418 and #2641, @IndrajeetPatil). All
-    messages have been reviewed and updated to be more informative and
-    consistent.
+    using the `{cli}` package (#2418 and #2641, @IndrajeetPatil). As
+    noted above, all messages have been reviewed and updated to be more
+    informative and consistent.
     !end-bullet!
 -   !begin-bullet!
     File locations in lints and error messages contain clickable

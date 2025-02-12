@@ -18841,3 +18841,13 @@ shinytest2,760d0fbfba1d86614f8d2c98764c435c,The `threshold` and `kernel_size` de
 duckplyr,0ad4cc8876e5bfd1a94c1473e2cb4a53,"Fix link in documentation (#600, #601).",NA,NA,NA,NA
 httr2,1e55c4ec854681b8ee64a0bcda3f47ff,"`req_dry_run()` drops headers that otherwise will vary in tests, and gains the ability to prettify JSON output.",NA,NA,NA,NA
 httr2,85d6cf3081374378cc8244d6b00847fa,`req_verbose()` automatically prettifies JSON responses (#668). You can disable this by setting `httr2_pretty_json`.,NA,NA,NA,NA
+lintr,7dffe41aab8417b65b01bf750ea8373c,Various things marked deprecated since {lintr} 3.0.0 have been fully deprecated. They will be completely removed in the subsequent release. See previous NEWS for advice on how to replace them.,NA,NA,NA,NA
+lintr,7dffe41aab8417b65b01bf750ea8373c,• `source_file=` argument to `ids_with_token()` and `with_id()`.,NA,NA,NA,NA
+lintr,7dffe41aab8417b65b01bf750ea8373c,"• Passing linters by name or as non-`""linter""`-classed functions.",NA,NA,NA,NA
+lintr,7dffe41aab8417b65b01bf750ea8373c,• `linter=` argument of `Lint()`.,NA,NA,NA,NA
+lintr,7dffe41aab8417b65b01bf750ea8373c,• `with_defaults()`.,NA,NA,NA,NA
+lintr,7dffe41aab8417b65b01bf750ea8373c,"• Linters `closed_curly_linter()`, `open_curly_linter()`, `paren_brace_linter()`, and `semicolon_terminator_linter()`.",NA,NA,NA,NA
+lintr,7dffe41aab8417b65b01bf750ea8373c,• Helper `with_defaults()`.,NA,NA,NA,NA
+lintr,e3667daa2f1c74ef2b0c7fbe70900cb8,"`cyclocomp_linter()` is no longer part of the default linters (#2555, @​IndrajeetPatil) because the tidyverse style guide doesn't contain any guidelines on meeting certain complexity requirements. With this, we also downgrade {cyclocomp} from `Imports:` to `Suggests:`. Note that users with `cyclocomp_linter()` in their configs may now need to install {cyclocomp} intentionally, in particular in CI/CD pipelines.",NA,NA,NA,NA
+lintr,d89ac19446d57be6efad487d991d69ce,"Arguments `allow_cascading_assign=`, `allow_right_assign=`, and `allow_pipe_assign=` to `assignment_linter()` are all deprecated in favor of the new `operator=` argument. Usage of a positional first argument like `assignment_linter(TRUE)`, of which we found zero cases on GitHub, is totally deprecated to allow `operator=` to be positionally first. See below about the new argument.",NA,NA,NA,NA
+lintr,ab69334887c37d52f0a308cfc1900558,"`rep_len_linter()` for encouraging use of `rep_len()` directly instead of `rep(x, length.out = n)` (part of #884, @​MichaelChirico). Note that in older versions of R (e.g. pre-4.0), `rep_len()` may not copy attributes as expected.",NA,NA,NA,NA
