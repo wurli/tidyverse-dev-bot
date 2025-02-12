@@ -1,8 +1,24 @@
 # renv (development version)
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    `renv::snapshot()` no longer fails to generate a new lockfile if the
+    project contains a lockfile which could not be read or parsed.
+
+    !end-bullet!
+-   !begin-bullet!
+    Fixed an issue where lockfiles containing unicode characters were
+    not correctly written or read with versions of R (\< 4.2.0) on
+    Windows. (#2091)
+
+    !end-bullet!
+
+!end-bullets-1!
+
 # renv 1.1.1
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     Fixed an issue where very long lockfiles could be truncated on
@@ -15,13 +31,13 @@
 
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # renv 1.1.0
 
 ## Major Changes
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     `renv` now includes additional package DESCRIPTION fields in the
@@ -38,11 +54,11 @@
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 ## Other Fixes
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     The `renv` sandbox is now unlocked on exit after a call to
@@ -161,11 +177,11 @@
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 # renv 1.0.11
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     Fixed an issue where headers were not properly passed to
@@ -197,11 +213,11 @@
 
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 # renv 1.0.10
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     Fixed a performance regression in `renv::dependencies()`. (#1999)
@@ -219,11 +235,11 @@
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # renv 1.0.9
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     Fixed an issue where repository URLs were inappropriately
@@ -237,11 +253,11 @@
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 # renv 1.0.8
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     `renv` now infers a dependency on the `ragg` package when the
@@ -392,22 +408,22 @@
 
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 # renv 1.0.7
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     Fixed an issue where `renv`'s activate script failed to report
     version conflict errors when starting up. (#1874)
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 # renv 1.0.6
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     Fixed an issue where downloads could fail with curl \>= 8.7.1.
@@ -458,11 +474,11 @@
 
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 # renv 1.0.5
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     `renv` now only writes a `.renvignore` file into the cache directory
@@ -480,11 +496,11 @@
 
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 # renv 1.0.4
 
-!begin-bullets-11!
+!begin-bullets-12!
 
 -   !begin-bullet!
     `renv::install()` gains the `lock` argument. When `TRUE`, the
@@ -626,11 +642,11 @@
 
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-12!
 
 # renv 1.0.3
 
-!begin-bullets-12!
+!begin-bullets-13!
 
 -   !begin-bullet!
     Fixed an issue where `renv` could warn the project appeared to be
@@ -672,11 +688,11 @@
 
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
 
 # renv 1.0.2
 
-!begin-bullets-13!
+!begin-bullets-14!
 
 -   !begin-bullet!
     renv now parses package `NAMESPACE` files for imported dependencies.
@@ -694,11 +710,11 @@
 
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-14!
 
 # renv 1.0.1
 
-!begin-bullets-14!
+!begin-bullets-15!
 
 -   !begin-bullet!
     Fixed an issue where authentication headers could be duplicated when
@@ -812,13 +828,13 @@
 
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-15!
 
 # renv 1.0.0
 
 ## New features
 
-!begin-bullets-15!
+!begin-bullets-16!
 
 -   !begin-bullet!
     New `renv::checkout()` installings the latest-available packages
@@ -868,11 +884,11 @@
 
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-16!
 
 ## Bug fixes and minor improvements
 
-!begin-bullets-16!
+!begin-bullets-17!
 
 -   !begin-bullet!
     Development versions of renv are now tracked using the Git SHA of
@@ -1045,11 +1061,11 @@
 
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-17!
 
 # renv 0.17.3
 
-!begin-bullets-17!
+!begin-bullets-18!
 
 -   !begin-bullet!
     Fixed an issue where `renv::install("bioc::<package>")` could fail
@@ -1103,11 +1119,11 @@
 
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-18!
 
 # renv 0.17.2
 
-!begin-bullets-18!
+!begin-bullets-19!
 
 -   !begin-bullet!
     Fixed a regression that caused package hashes to be computed
@@ -1115,11 +1131,11 @@
     release. (#1168)
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-19!
 
 # renv 0.17.1
 
-!begin-bullets-19!
+!begin-bullets-20!
 
 -   !begin-bullet!
     renv gains the configuration option `install.remotes`, which can be
@@ -1182,11 +1198,11 @@
 
     !end-bullet!
 
-!end-bullets-19!
+!end-bullets-20!
 
 # renv 0.17.0
 
-!begin-bullets-20!
+!begin-bullets-21!
 
 -   !begin-bullet!
     The performance of `renv::snapshot()` has improved.
@@ -1333,11 +1349,11 @@
 
     !end-bullet!
 
-!end-bullets-20!
+!end-bullets-21!
 
 # renv 0.16.0
 
-!begin-bullets-21!
+!begin-bullets-22!
 
 -   !begin-bullet!
     renv now supports installation of packages with remotes of the form
@@ -1475,11 +1491,11 @@
 
     !end-bullet!
 
-!end-bullets-21!
+!end-bullets-22!
 
 # renv 0.15.5
 
-!begin-bullets-22!
+!begin-bullets-23!
 
 -   !begin-bullet!
     Fixed an issue where indexing of packages in the package cellar
@@ -1571,11 +1587,11 @@
 
     !end-bullet!
 
-!end-bullets-22!
+!end-bullets-23!
 
 # renv 0.15.4
 
-!begin-bullets-23!
+!begin-bullets-24!
 
 -   !begin-bullet!
     Fixed an issue where package installation could fail when
@@ -1583,11 +1599,11 @@
     e.g. `~/.local/share/renv`. (#953)
     !end-bullet!
 
-!end-bullets-23!
+!end-bullets-24!
 
 # renv 0.15.3
 
-!begin-bullets-24!
+!begin-bullets-25!
 
 -   !begin-bullet!
     A variety of fixes for R CMD check.
@@ -1643,21 +1659,21 @@
 
     !end-bullet!
 
-!end-bullets-24!
+!end-bullets-25!
 
 # renv 0.15.2
 
-!begin-bullets-25!
+!begin-bullets-26!
 
 -   !begin-bullet!
     Fixed issues encountered in R CMD check.
     !end-bullet!
 
-!end-bullets-25!
+!end-bullets-26!
 
 # renv 0.15.1
 
-!begin-bullets-26!
+!begin-bullets-27!
 
 -   !begin-bullet!
     Fixed an issue where renv inadvertently inserted extra newlines into
@@ -1696,11 +1712,11 @@
 
     !end-bullet!
 
-!end-bullets-26!
+!end-bullets-27!
 
 # renv 0.15.0
 
-!begin-bullets-27!
+!begin-bullets-28!
 
 -   !begin-bullet!
     The development branch for renv has moved from master to main.
@@ -1920,11 +1936,11 @@
 
     !end-bullet!
 
-!end-bullets-27!
+!end-bullets-28!
 
 # renv 0.14.0
 
-!begin-bullets-28!
+!begin-bullets-29!
 
 -   !begin-bullet!
     renv now uses `tools::R_user_dir()` to resolve the default path to
@@ -2108,11 +2124,11 @@
 
     !end-bullet!
 
-!end-bullets-28!
+!end-bullets-29!
 
 # renv 0.13.2
 
-!begin-bullets-29!
+!begin-bullets-30!
 
 -   !begin-bullet!
     `renv::install("user/repo/subdir with spaces")` now works as
@@ -2149,11 +2165,11 @@
 
     !end-bullet!
 
-!end-bullets-29!
+!end-bullets-30!
 
 # renv 0.13.1
 
-!begin-bullets-30!
+!begin-bullets-31!
 
 -   !begin-bullet!
     `renv::clean()` gains the `actions` argument, allowing the caller to
@@ -2199,11 +2215,11 @@
 
     !end-bullet!
 
-!end-bullets-30!
+!end-bullets-31!
 
 # renv 0.13.0
 
-!begin-bullets-31!
+!begin-bullets-32!
 
 -   !begin-bullet!
     `renv::snapshot()` no longer creates an `renv/activate.R` file in
@@ -2352,21 +2368,21 @@
 
     !end-bullet!
 
-!end-bullets-31!
+!end-bullets-32!
 
 # renv 0.12.5
 
-!begin-bullets-32!
+!begin-bullets-33!
 
 -   !begin-bullet!
     Fixed an issue where renv would fail to bootstrap. (#608)
     !end-bullet!
 
-!end-bullets-32!
+!end-bullets-33!
 
 # renv 0.12.4
 
-!begin-bullets-33!
+!begin-bullets-34!
 
 -   !begin-bullet!
     renv now invalidates the available packages cache if the
@@ -2445,11 +2461,11 @@
 
     !end-bullet!
 
-!end-bullets-33!
+!end-bullets-34!
 
 # renv 0.12.3
 
-!begin-bullets-34!
+!begin-bullets-35!
 
 -   !begin-bullet!
     Fixed an issue where `renv::dependencies()` could give an error if
@@ -2513,22 +2529,22 @@
 
     !end-bullet!
 
-!end-bullets-34!
+!end-bullets-35!
 
 # renv 0.12.2
 
-!begin-bullets-35!
+!begin-bullets-36!
 
 -   !begin-bullet!
     renv no longer errs when running tests with
     `_R_CHECK_SUGGESTS_ONLY_=false`.
     !end-bullet!
 
-!end-bullets-35!
+!end-bullets-36!
 
 # renv 0.12.1
 
-!begin-bullets-36!
+!begin-bullets-37!
 
 -   !begin-bullet!
     renv now ensures all of its dependencies are loaded eagerly when
@@ -2616,11 +2632,11 @@
 
     !end-bullet!
 
-!end-bullets-36!
+!end-bullets-37!
 
 # renv 0.12.0
 
-!begin-bullets-37!
+!begin-bullets-38!
 
 -   !begin-bullet!
     renv now uses R's internal tar implementation by default on Windows.
@@ -2677,11 +2693,11 @@
 
     !end-bullet!
 
-!end-bullets-37!
+!end-bullets-38!
 
 # renv 0.11.0
 
-!begin-bullets-38!
+!begin-bullets-39!
 
 -   !begin-bullet!
     Fixed an issue where `renv::install(..., type = "binary")` would
@@ -2775,11 +2791,11 @@
 
     !end-bullet!
 
-!end-bullets-38!
+!end-bullets-39!
 
 # renv 0.10.0
 
-!begin-bullets-39!
+!begin-bullets-40!
 
 -   !begin-bullet!
     `renv::install()` gains the `type` argument, used to control whether
@@ -2959,11 +2975,11 @@
 
     !end-bullet!
 
-!end-bullets-39!
+!end-bullets-40!
 
 # renv 0.9.3
 
-!begin-bullets-40!
+!begin-bullets-41!
 
 -   !begin-bullet!
     Fixed an issue where attempts to specify `RENV_PATHS_RTOOLS` would
@@ -3069,31 +3085,31 @@
 
     !end-bullet!
 
-!end-bullets-40!
+!end-bullets-41!
 
 # renv 0.9.2
 
-!begin-bullets-41!
+!begin-bullets-42!
 
 -   !begin-bullet!
     Fixed an issue in invoking `find` on Solaris.
     !end-bullet!
 
-!end-bullets-41!
+!end-bullets-42!
 
 # renv 0.9.1
 
-!begin-bullets-42!
+!begin-bullets-43!
 
 -   !begin-bullet!
     Fixed an issue in invoking `cp` on Solaris.
     !end-bullet!
 
-!end-bullets-42!
+!end-bullets-43!
 
 # renv 0.9.0
 
-!begin-bullets-43!
+!begin-bullets-44!
 
 -   !begin-bullet!
     renv gains a new function `renv::record()`, for recording new
@@ -3214,11 +3230,11 @@
 
     !end-bullet!
 
-!end-bullets-43!
+!end-bullets-44!
 
 # renv 0.8.3
 
-!begin-bullets-44!
+!begin-bullets-45!
 
 -   !begin-bullet!
     `renv::dependencies()` gains a new argument `dev`, indicating
@@ -3292,34 +3308,34 @@
 
     !end-bullet!
 
-!end-bullets-44!
+!end-bullets-45!
 
 # renv 0.8.2
 
-!begin-bullets-45!
+!begin-bullets-46!
 
 -   !begin-bullet!
     Further fixes for checks run on CRAN.
     !end-bullet!
 
-!end-bullets-45!
+!end-bullets-46!
 
 # renv 0.8.1
 
-!begin-bullets-46!
+!begin-bullets-47!
 
 -   !begin-bullet!
     Fixes for checks run on CRAN.
     !end-bullet!
 
-!end-bullets-46!
+!end-bullets-47!
 
 # renv 0.8.0
 
-!begin-bullets-47!
+!begin-bullets-48!
 
 -   !begin-bullet!
     Initial CRAN release.
     !end-bullet!
 
-!end-bullets-47!
+!end-bullets-48!
