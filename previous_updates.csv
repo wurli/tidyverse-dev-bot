@@ -18853,3 +18853,5 @@ lintr,d89ac19446d57be6efad487d991d69ce,"Arguments `allow_cascading_assign=`, `al
 lintr,ab69334887c37d52f0a308cfc1900558,"`rep_len_linter()` for encouraging use of `rep_len()` directly instead of `rep(x, length.out = n)` (part of #884, @​MichaelChirico). Note that in older versions of R (e.g. pre-4.0), `rep_len()` may not copy attributes as expected.",NA,NA,NA,NA
 renv,21fee6999cdf66515db5593e1e2073a9,`renv::snapshot()` no longer fails to generate a new lockfile if the project contains a lockfile which could not be read or parsed.,NA,NA,NA,NA
 renv,b7c706b46a015c830b75da710a49129d,Fixed an issue where lockfiles containing unicode characters were not correctly written or read with versions of R (\< 4.2.0) on Windows. (#2091),NA,NA,NA,NA
+lintr,aa8c6f9e6d8646560c8db02bacf94aca,"As previously announced, the following fully-deprecated items are now removed from the package:",NA,NA,NA,NA
+lintr,aa8c6f9e6d8646560c8db02bacf94aca,• `linter=` argument of `Lint()`.,NA,NA,NA,NA
