@@ -9,6 +9,9 @@
     now removed from the package:
     !begin-bullets-2!
     -   !begin-bullet!
+        Passing linters by name or as non-`"linter"`-classed functions.
+        !end-bullet!
+    -   !begin-bullet!
         Linters `closed_curly_linter()`, `open_curly_linter()`,
         `paren_brace_linter()`, and `semicolon_terminator_linter()`.
         !end-bullet!
@@ -3202,7 +3205,7 @@ since the last major release (1.0.0) in 2016-04-16.
     Now trims long comments (#55, reported by @paulstaab)
     !end-bullet!
 -   !begin-bullet!
-    Automatic commenting of Github commits and pull requests when
+    Automatic commenting of GitHub commits and pull requests when
     linting on Travis-CI
     !end-bullet!
 -   !begin-bullet!
