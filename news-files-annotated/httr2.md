@@ -3,6 +3,14 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `req_dry_run()` drops headers that otherwise will vary in tests, and
+    gains the ability to prettify JSON output.
+    !end-bullet!
+-   !begin-bullet!
+    `req_verbose()` automatically prettifies JSON responses (#668). You
+    can disable this by setting `httr2_pretty_json`.
+    !end-bullet!
+-   !begin-bullet!
     `req_perform_connection()` gives a better error if request fails at
     networking level.
     !end-bullet!
