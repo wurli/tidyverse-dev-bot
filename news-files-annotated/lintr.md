@@ -5,6 +5,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Arguments `allow_cascading_assign=`, `allow_right_assign=`, and
+    `allow_pipe_assign=` to `assignment_linter()` are now defunct.
+    !end-bullet!
+-   !begin-bullet!
     Two linters marked as deprecated with warning in the previous
     release are now fully deprecated: `extraction_operator_linter()` and
     `unnecessary_nested_if_linter()`. They will be removed in the next

@@ -18866,3 +18866,4 @@ lintr,7cc1c1ef8cfffe4b5e15b616ff15fd32,• `linter=` argument of `Lint()`.,NA,NA
 lintr,7cabe010d03528775f383e9e4435ada7,Two linters marked as deprecated with warning in the previous release are now fully deprecated: `extraction_operator_linter()` and `unnecessary_nested_if_linter()`. They will be removed in the next release.,NA,NA,NA,NA
 httr2,05cf0d17ab4c1f64e6069fe34040d171,"`req_user_agent()` now memoises the default user agent, since it's relatively slow (300 µs) to compute because it requires looking up version numbers.",NA,NA,NA,NA
 renv,70134481b3c29295626a056fae3efd2b,Fixed an issue where `renv` could stall when loading a project and validating that the configured version of Bioconductor is compatible with the version of R currently in use.,NA,NA,NA,NA
+lintr,53a07a488e6d78c827b11965c9cad88b,"Arguments `allow_cascading_assign=`, `allow_right_assign=`, and `allow_pipe_assign=` to `assignment_linter()` are now defunct.",NA,NA,NA,NA
