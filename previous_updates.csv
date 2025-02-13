@@ -18864,3 +18864,4 @@ lintr,7cc1c1ef8cfffe4b5e15b616ff15fd32,"• Passing linters by name or as non-`"
 lintr,7cc1c1ef8cfffe4b5e15b616ff15fd32,"• Linters `closed_curly_linter()`, `open_curly_linter()`, `paren_brace_linter()`, and `semicolon_terminator_linter()`.",NA,NA,NA,NA
 lintr,7cc1c1ef8cfffe4b5e15b616ff15fd32,• `linter=` argument of `Lint()`.,NA,NA,NA,NA
 lintr,7cabe010d03528775f383e9e4435ada7,Two linters marked as deprecated with warning in the previous release are now fully deprecated: `extraction_operator_linter()` and `unnecessary_nested_if_linter()`. They will be removed in the next release.,NA,NA,NA,NA
+httr2,05cf0d17ab4c1f64e6069fe34040d171,"`req_user_agent()` now memoises the default user agent, since it's relatively slow (300 µs) to compute because it requires looking up version numbers.",NA,NA,NA,NA

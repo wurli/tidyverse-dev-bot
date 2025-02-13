@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `req_user_agent()` now memoises the default user agent, since it's
+    relatively slow (300 µs) to compute because it requires looking up
+    version numbers.
+    !end-bullet!
+-   !begin-bullet!
     `req_dry_run()` drops headers that otherwise will vary in tests, and
     gains the ability to prettify JSON output.
     !end-bullet!
