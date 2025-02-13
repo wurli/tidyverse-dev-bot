@@ -5,6 +5,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Two linters marked as deprecated with warning in the previous
+    release are now fully deprecated: `extraction_operator_linter()` and
+    `unnecessary_nested_if_linter()`. They will be removed in the next
+    release.
+    !end-bullet!
+-   !begin-bullet!
     As previously announced, the following fully-deprecated items are
     now removed from the package:
     !begin-bullets-2!
