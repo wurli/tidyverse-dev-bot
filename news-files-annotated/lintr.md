@@ -9,6 +9,9 @@
     now removed from the package:
     !begin-bullets-2!
     -   !begin-bullet!
+        `with_defaults()`.
+        !end-bullet!
+    -   !begin-bullet!
         Passing linters by name or as non-`"linter"`-classed functions.
         !end-bullet!
     -   !begin-bullet!
