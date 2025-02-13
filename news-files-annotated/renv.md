@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed an issue where `renv` could stall when loading a project and
+    validating that the configured version of Bioconductor is compatible
+    with the version of R currently in use.
+
+    !end-bullet!
+-   !begin-bullet!
     `renv::snapshot()` no longer fails to generate a new lockfile if the
     project contains a lockfile which could not be read or parsed.
 
