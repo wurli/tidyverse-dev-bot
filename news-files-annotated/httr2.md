@@ -3,6 +3,13 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    New `local_verbosity()` (#687).
+    !end-bullet!
+-   !begin-bullet!
+    Can now use `HTTR2_VERBOSITY` env var to control default verbosity
+    (#687).
+    !end-bullet!
+-   !begin-bullet!
     `req_perform_parallel(pool)` has been deprecated in favour of a new
     `max_active` argument (#681).
     !end-bullet!
