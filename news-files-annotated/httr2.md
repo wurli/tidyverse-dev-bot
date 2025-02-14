@@ -3,6 +3,17 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `req_perform_parallel(pool)` has been deprecated in favour of a new
+    `max_active` argument (#681).
+    !end-bullet!
+-   !begin-bullet!
+    Most of the limitations of `req_perform_parallel()` have been
+    lifted. It can now refresh OAuth tokens and look at the cache for
+    each individual requests. It also supports a simple version of
+    `req_throttle()` and `req_retry()`, where it assumes that all
+    requests have the same throttling and rate limits (#681).
+    !end-bullet!
+-   !begin-bullet!
     `req_user_agent()` now memoises the default user agent, since it's
     relatively slow (300 µs) to compute because it requires looking up
     version numbers.
