@@ -61,6 +61,10 @@
     shorthand lambda (`\()`) the same as normal function bodies (#2748,
     @MichaelChirico).
     !end-bullet!
+-   !begin-bullet!
+    `implicit_integer_linter(allow_colon = TRUE)` is OK with negative
+    literals, e.g. `-1:1` or `1:-1` (#2673, @MichaelChirico).
+    !end-bullet!
 
 !end-bullets-4!
 
