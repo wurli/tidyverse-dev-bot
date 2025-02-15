@@ -3,6 +3,13 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `str()` correctly redacts redacted headers (#682).
+    !end-bullet!
+-   !begin-bullet!
+    `req_headers()` replaces existing headers with different case
+    (#682).
+    !end-bullet!
+-   !begin-bullet!
     New `local_verbosity()` (#687).
     !end-bullet!
 -   !begin-bullet!
