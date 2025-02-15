@@ -18874,3 +18874,4 @@ lintr,7b8383c806ec4d69468f21d533b5122e,"`unnecessary_nesting_linter()` treats fu
 R6,621150813765499bdbbb668c5d2fc951,"Closed #298: In `.DollarNames.R6()`, avoid use of `NextMethod()`. This is to work around a compatibility issue with RStudio IDE. (#299)",NA,NA,NA,NA
 httr2,d76c8bb27b7bbe73cbe3d993714ff226,New `local_verbosity()` (#687).,NA,NA,NA,NA
 httr2,a82461f76c6b5ed829767ffd5bb12018,Can now use `HTTR2_VERBOSITY` env var to control default verbosity (#687).,NA,NA,NA,NA
+duckplyr,2c0b6d1d25abae0d9cbf9994d453a1d1,Show source of error if data frame cannot be converted to duck frame (#614).,NA,NA,NA,NA
