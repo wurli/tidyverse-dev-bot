@@ -19,17 +19,20 @@
     now removed from the package:
     !begin-bullets-2!
     -   !begin-bullet!
-        `with_defaults()`.
+        `source_file=` argument to `ids_with_token()` and `with_id()`.
         !end-bullet!
     -   !begin-bullet!
         Passing linters by name or as non-`"linter"`-classed functions.
         !end-bullet!
     -   !begin-bullet!
-        Linters `closed_curly_linter()`, `open_curly_linter()`,
-        `paren_brace_linter()`, and `semicolon_terminator_linter()`.
+        `linter=` argument of `Lint()`.
         !end-bullet!
     -   !begin-bullet!
-        `linter=` argument of `Lint()`.
+        `with_defaults()`.
+        !end-bullet!
+    -   !begin-bullet!
+        Linters `closed_curly_linter()`, `open_curly_linter()`,
+        `paren_brace_linter()`, and `semicolon_terminator_linter()`.
         !end-bullet!
 
     !end-bullets-2!
