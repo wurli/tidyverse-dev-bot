@@ -8,6 +8,11 @@
 
     !end-bullet!
 -   !begin-bullet!
+    `write_yaml()` errors more informatively when `tbl` value is
+    incompatible for yaml-writing (#597)
+
+    !end-bullet!
+-   !begin-bullet!
     Data extracts for `rows_distinct()`/`rows_complete()` preserves all
     columns, not just the ones tested (#588, #591)
 

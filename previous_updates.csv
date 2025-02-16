@@ -18878,3 +18878,4 @@ duckplyr,2c0b6d1d25abae0d9cbf9994d453a1d1,Show source of error if data frame can
 lintr,0ecf79d44eba04fa3e9d0fcdc05afd25,"`implicit_integer_linter(allow_colon = TRUE)` is OK with negative literals, e.g. `-1:1` or `1:-1` (#2673, @​MichaelChirico).",NA,NA,NA,NA
 httr2,7df2f814cecaf6a6b4e9216f48e5c54e,`str()` correctly redacts redacted headers (#682).,NA,NA,NA,NA
 httr2,c33f1daccfcf907953bdc32768e5bcb8,`req_headers()` replaces existing headers with different case (#682).,NA,NA,NA,NA
+pointblank,19ff46169cb683294ac0cc14a21246a9,`write_yaml()` errors more informatively when `tbl` value is incompatible for yaml-writing (#597),NA,NA,NA,NA
