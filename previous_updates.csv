@@ -18879,3 +18879,6 @@ lintr,0ecf79d44eba04fa3e9d0fcdc05afd25,"`implicit_integer_linter(allow_colon = T
 httr2,7df2f814cecaf6a6b4e9216f48e5c54e,`str()` correctly redacts redacted headers (#682).,NA,NA,NA,NA
 httr2,c33f1daccfcf907953bdc32768e5bcb8,`req_headers()` replaces existing headers with different case (#682).,NA,NA,NA,NA
 pointblank,19ff46169cb683294ac0cc14a21246a9,`write_yaml()` errors more informatively when `tbl` value is incompatible for yaml-writing (#597),NA,NA,NA,NA
+lintr,b6f1e874b3954174df6c8576ae1e4ad1,"`Lint()`, and thus all linters, ensures that the returned object's `message` attribute is consistently a simple character string (and not, for example, an object of class `""glue""`; #2740, @​MichaelChirico).",NA,NA,NA,NA
+lintr,e47dabe0ee085651614d844b284525fe,"`string_boundary_linter()` omits lints of patterns like `\\^` which have an anchor but are not regular expressions (#2636, @​MichaelChirico).",NA,NA,NA,NA
+lintr,e7b7792c7475ca25755aee3f76d11c9a,"`missing_argument_linter()` allows empty calls like `foo()` even if there are comments between `(` and `)` (#2741, @​MichaelChirico).",NA,NA,NA,NA
