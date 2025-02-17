@@ -13,6 +13,16 @@
 
     !end-bullet!
 -   !begin-bullet!
+    Raw R arrays now convert to NumPy arrays with dtype "V1" ("void8")
+    (#1734).
+
+    !end-bullet!
+-   !begin-bullet!
+    NumPy arrays with dtype "V1" ("void8") now convert to R raw arrays
+    (#1734).
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed an issue with using Python 3.12 on Linux (#1712, #1714).
 
     !end-bullet!
