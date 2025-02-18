@@ -18888,3 +18888,4 @@ lintr,426b5fcfe9149e6246c474385688ec30,"• Treats `=` assignment the same as `<
 reticulate,9eca3e6d3dcb75b6b55409c51cedb523,"Raw R arrays now convert to NumPy arrays with dtype ""V1"" (""void8"") (#1734).",NA,NA,NA,NA
 reticulate,a7e1e47f8ac1ee990955acb1c57e3946,"NumPy arrays with dtype ""V1"" (""void8"") now convert to R raw arrays (#1734).",NA,NA,NA,NA
 lintr,d922ae53471fa5a49dcaea53e18e6597,"Six linters marked as deprecated with warning in the previous release are now fully deprecated: `consecutive_stopifnot_linter()`, `extraction_operator_linter()`, `no_tab_linter()`, `single_quotes_linter()`, `unnecessary_nested_if_linter()`, and `unneeded_concatenation_linter()`. They will be removed in the next release.",NA,NA,NA,NA
+pointblank,6906b531b6579b18af2f2df68274e915,Bugfix agents not searching the formula environment when materializing `~ tbl` (#599),NA,NA,NA,NA

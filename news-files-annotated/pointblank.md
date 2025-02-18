@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Bugfix agents not searching the formula environment when
+    materializing `~ tbl` (#599)
+
+    !end-bullet!
+-   !begin-bullet!
     `info_columns()` warn more informatively when no columns are
     selected (#589).
 
