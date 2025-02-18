@@ -51,6 +51,11 @@
 
     !end-bullets-3!
     !end-bullet!
+-   !begin-bullet!
+    bug: Mounts now use a `req$PATH_INFO` instead of a pre-computed
+    value. (#888)
+
+    !end-bullet!
 
 !end-bullets-1!
 
