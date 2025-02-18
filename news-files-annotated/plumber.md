@@ -56,6 +56,17 @@
     value. (#888)
 
     !end-bullet!
+-   !begin-bullet!
+    `validate_api_spec()` now uses `@redocly/cli` to validate the API
+    spec. (#986)
+
+    !end-bullet!
+-   !begin-bullet!
+    Added `operationId` to each operation within the auto-generated
+    OpenAPI output. The value is similar to the `PATH-VERB`,
+    e.g. `/users/create-POST`. (#986)
+
+    !end-bullet!
 
 !end-bullets-1!
 

@@ -1,6 +1,42 @@
-# lifecycle 1.0.4
+# lifecycle (development version)
 
 !begin-bullets-1!
+
+-   !begin-bullet!
+    Improvements to `lint_lifecycle()` and `lint_tidyverse_lifecycle()`
+    (@AshesITR):
+    !begin-bullets-2!
+    -   !begin-bullet!
+        Updated to support lintr \>= 3.0.0 (#178).
+        !end-bullet!
+    -   !begin-bullet!
+        Fixed default `pattern=` argument to only find R files (#165).
+        !end-bullet!
+    -   !begin-bullet!
+        Fixed `lint_tidyverse_lifecycle()` ignoring the `pattern=`
+        argument (#179).
+        !end-bullet!
+    -   !begin-bullet!
+        Added support for Quarto qmd files to the default `pattern=`
+        argument (#155).
+        !end-bullet!
+    -   !begin-bullet!
+        Added support for Rnw, Rhtml, Rrst, Rtex and Rtxt files to the
+        default `pattern=` argument.
+        !end-bullet!
+    -   !begin-bullet!
+        Exported `lifecycle_linter()` to allow including the linter in
+        `.lintr` configurations when using `lintr` (#122).
+        !end-bullet!
+
+    !end-bullets-2!
+    !end-bullet!
+
+!end-bullets-1!
+
+# lifecycle 1.0.4
+
+!begin-bullets-3!
 
 -   !begin-bullet!
     Repeated calls to `deprecate_soft()` and `deprecate_warn()` are
@@ -14,11 +50,11 @@
 
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-3!
 
 # lifecycle 1.0.3
 
-!begin-bullets-2!
+!begin-bullets-4!
 
 -   !begin-bullet!
     The `with` line is now an info bullet. The `details` lines are info
@@ -49,11 +85,11 @@
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-4!
 
 # lifecycle 1.0.2
 
-!begin-bullets-3!
+!begin-bullets-5!
 
 -   !begin-bullet!
     You can now generate arbitrary text in a deprecation message by
@@ -71,11 +107,11 @@
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-5!
 
 # lifecycle 1.0.1
 
-!begin-bullets-4!
+!begin-bullets-6!
 
 -   !begin-bullet!
     `deprecate_soft()` now follows the verbosity option when called from
@@ -90,16 +126,16 @@
 
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-6!
 
 # lifecycle 1.0.0
 
-!begin-bullets-5!
+!begin-bullets-7!
 
 -   !begin-bullet!
     New vignettes:
 
-    !begin-bullets-6!
+    !begin-bullets-8!
     -   !begin-bullet!
         `vignette("stages")` describes the lifecycle stages
         !end-bullet!
@@ -112,12 +148,12 @@
         functions that you *write*.
         !end-bullet!
 
-    !end-bullets-6!
+    !end-bullets-8!
     !end-bullet!
 -   !begin-bullet!
     In `deprecate_soft()`, `deprecate_warn()`, and `deprecate_stop()`:
 
-    !begin-bullets-7!
+    !begin-bullets-9!
     -   !begin-bullet!
         You can deprecate an argument with `foo(arg)` instead of
         `foo(arg =)` (#78). This syntax is similar in spirit to the
@@ -143,7 +179,7 @@
 
         !end-bullet!
 
-    !end-bullets-7!
+    !end-bullets-9!
     !end-bullet!
 -   !begin-bullet!
     Experimental `signal_stage()` can be used to signal that a function
@@ -158,11 +194,11 @@
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-7!
 
 # lifecycle 0.2.0
 
-!begin-bullets-8!
+!begin-bullets-10!
 
 -   !begin-bullet!
     Lifecycle warnings are now displayed once every 8 hours.
@@ -199,11 +235,11 @@
 
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-10!
 
 # lifecycle 0.1.0
 
-!begin-bullets-9!
+!begin-bullets-11!
 
 -   !begin-bullet!
     Deprecated functions under the control of the developer now warn
@@ -220,7 +256,7 @@
 -   !begin-bullet!
     The naming scheme of signaller functions has been simplified:
 
-    !begin-bullets-10!
+    !begin-bullets-12!
     -   !begin-bullet!
         `signal_soft_deprecated()` is now `deprecate_soft()`.
         !end-bullet!
@@ -231,7 +267,7 @@
         `stop_defunct()` is now `deprecate_stop()`.
         !end-bullet!
 
-    !end-bullets-10!
+    !end-bullets-12!
     !end-bullet!
 -   !begin-bullet!
     The signaller functions now take a version and two descriptors for
@@ -247,4 +283,4 @@
 
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-11!

@@ -18891,3 +18891,12 @@ lintr,d922ae53471fa5a49dcaea53e18e6597,"Six linters marked as deprecated with wa
 pointblank,6906b531b6579b18af2f2df68274e915,Bugfix agents not searching the formula environment when materializing `~ tbl` (#599),NA,NA,NA,NA
 bslib,322110d5180180759a91cf78d18f690a,`bs_theme_dependencies()` now avoids unecessarily copying internal package files to R's temporary directory more than once when preparing precompiled theme dependencies (e.g. for a standard `bs_theme()` theme). (#1184),NA,NA,NA,NA
 plumber,a54863567121a838053b91623959aed6,bug: Mounts now use a `req$PATH_INFO` instead of a pre-computed value. (#888),NA,NA,NA,NA
+lifecycle,aa20df5532258d5ed7af14952c19b938,Improvements to `lint_lifecycle()` and `lint_tidyverse_lifecycle()` (@​AshesITR):,NA,NA,NA,NA
+lifecycle,aa20df5532258d5ed7af14952c19b938,• Updated to support lintr \>= 3.0.0 (#178).,NA,NA,NA,NA
+lifecycle,aa20df5532258d5ed7af14952c19b938,• Fixed default `pattern=` argument to only find R files (#165).,NA,NA,NA,NA
+lifecycle,aa20df5532258d5ed7af14952c19b938,• Fixed `lint_tidyverse_lifecycle()` ignoring the `pattern=` argument (#179).,NA,NA,NA,NA
+lifecycle,aa20df5532258d5ed7af14952c19b938,• Added support for Quarto qmd files to the default `pattern=` argument (#155).,NA,NA,NA,NA
+lifecycle,aa20df5532258d5ed7af14952c19b938,"• Added support for Rnw, Rhtml, Rrst, Rtex and Rtxt files to the default `pattern=` argument.",NA,NA,NA,NA
+lifecycle,aa20df5532258d5ed7af14952c19b938,• Exported `lifecycle_linter()` to allow including the linter in `.lintr` configurations when using `lintr` (#122).,NA,NA,NA,NA
+plumber,b42561c09dbbafddfd8592b7c7febe5f,`validate_api_spec()` now uses `@​redocly/cli` to validate the API spec. (#986),NA,NA,NA,NA
+plumber,a5d3bd55ef4dbdf9a26ebffb8d36cf27,"Added `operationId` to each operation within the auto-generated OpenAPI output. The value is similar to the `PATH-VERB`, e.g. `/users/create-POST`. (#986)",NA,NA,NA,NA
