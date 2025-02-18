@@ -18900,3 +18900,4 @@ lifecycle,aa20df5532258d5ed7af14952c19b938,"• Added support for Rnw, Rhtml, Rr
 lifecycle,aa20df5532258d5ed7af14952c19b938,• Exported `lifecycle_linter()` to allow including the linter in `.lintr` configurations when using `lintr` (#122).,NA,NA,NA,NA
 plumber,b42561c09dbbafddfd8592b7c7febe5f,`validate_api_spec()` now uses `@​redocly/cli` to validate the API spec. (#986),NA,NA,NA,NA
 plumber,a5d3bd55ef4dbdf9a26ebffb8d36cf27,"Added `operationId` to each operation within the auto-generated OpenAPI output. The value is similar to the `PATH-VERB`, e.g. `/users/create-POST`. (#986)",NA,NA,NA,NA
+lintr,62a01468dcc3e7e0bb7856f12133f190,"`seq_linter()` recommends using `seq_along(x)` instead of `seq_len(length(x))` (#2577, @​MichaelChirico).",NA,NA,NA,NA

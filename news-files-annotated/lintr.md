@@ -67,6 +67,10 @@
     lines), `"not_inline"` (only require curly braces when a function
     body starts on a new line) and `"never"` (#1807, #2240, @salim-b).
     !end-bullet!
+-   !begin-bullet!
+    `seq_linter()` recommends using `seq_along(x)` instead of
+    `seq_len(length(x))` (#2577, @MichaelChirico).
+    !end-bullet!
 
 !end-bullets-4!
 
