@@ -18901,3 +18901,6 @@ lifecycle,aa20df5532258d5ed7af14952c19b938,• Exported `lifecycle_linter()` to 
 plumber,b42561c09dbbafddfd8592b7c7febe5f,`validate_api_spec()` now uses `@​redocly/cli` to validate the API spec. (#986),NA,NA,NA,NA
 plumber,a5d3bd55ef4dbdf9a26ebffb8d36cf27,"Added `operationId` to each operation within the auto-generated OpenAPI output. The value is similar to the `PATH-VERB`, e.g. `/users/create-POST`. (#986)",NA,NA,NA,NA
 lintr,62a01468dcc3e7e0bb7856f12133f190,"`seq_linter()` recommends using `seq_along(x)` instead of `seq_len(length(x))` (#2577, @​MichaelChirico).",NA,NA,NA,NA
+plumber,c1dd36768269aef1044e04b2038e86cf,The port many now be specified as an environment variable. User-provided ports must be between 1024 and 49151 (following IANA guidelines) and may not be a known unsafe port. plumber will now throw an error if an invalid port is requested. (@​shikokuchuo @​gadenbuie #963),NA,NA,NA,NA
+plumber,d54d0d568b5409d7f6feafbad98cf061,Added support for graphic devices provided by {ragg} and {svglite} (@​thomasp85 #964).,NA,NA,NA,NA
+plumber,b893dacf5da50ed995153d36b4a221ae,Mounts now have a dynamic `req$PATH_INFO` instead of a pre-computed value. (#888),NA,NA,NA,NA

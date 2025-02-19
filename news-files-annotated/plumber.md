@@ -1,33 +1,35 @@
 # plumber (development version)
 
+# plumber 1.3.0
+
 !begin-bullets-1!
 
 -   !begin-bullet!
-    Fixes #956, allowing a port to be specified as an environment
-    variable. User-provided ports must be between 1024 and 49151
-    (following IANA guidelines) and may not be a known unsafe port.
-    plumber will now throw an error if an invalid port is requested.
-    (@shikokuchuo @gadenbuie #963)
+    The port many now be specified as an environment variable.
+    User-provided ports must be between 1024 and 49151 (following IANA
+    guidelines) and may not be a known unsafe port. plumber will now
+    throw an error if an invalid port is requested. (@shikokuchuo
+    @gadenbuie #963)
 
     !end-bullet!
 -   !begin-bullet!
-    Added support for graphic devices provided by ragg and svglite
-    (@thomasp85 #964)
+    Added support for graphic devices provided by {ragg} and {svglite}
+    (@thomasp85 #964).
 
     !end-bullet!
 -   !begin-bullet!
     `parse_rds()`, `parse_feather()`, and `parse_parquet()` no longer
-    writes data to disk during parsing (@thomasp85, #942)
+    writes data to disk during parsing (@thomasp85, #942).
 
     !end-bullet!
 -   !begin-bullet!
     Returning error messages are now turned off by default rather than
     being turned on if running interactively and turned off if not
-    (@thomasp85, #962)
+    (@thomasp85, #962).
 
     !end-bullet!
 -   !begin-bullet!
-    New serializers
+    New serializers:
 
     !begin-bullets-2!
     -   !begin-bullet!
@@ -38,7 +40,7 @@
     !end-bullets-2!
     !end-bullet!
 -   !begin-bullet!
-    New request body parsers
+    New request body parsers:
 
     !begin-bullets-3!
     -   !begin-bullet!
@@ -46,13 +48,14 @@
         `readxl::read_excel` (@r2evans, #973). This defaults to loading
         in the first worksheet only, you can use
         `@parse excel list(sheet=NA)` to import all worksheets. This
-        always returns a list of frames, even if just one worksheet.
+        always returns a list of frames, even if there is just one
+        worksheet.
         !end-bullet!
 
     !end-bullets-3!
     !end-bullet!
 -   !begin-bullet!
-    bug: Mounts now use a `req$PATH_INFO` instead of a pre-computed
+    Mounts now have a dynamic `req$PATH_INFO` instead of a pre-computed
     value. (#888)
 
     !end-bullet!
