@@ -18912,3 +18912,4 @@ chromote,3582f177751916caea1c5b2fa853bd16,• Or use `chrome_versions_add()` and
 reticulate,7aeb7779f9c05e6d183e5bf453076aeb,"Raw R arrays now convert to NumPy arrays with dtype ""V1"" (""void8"") (#1734). Use `r_to_py(as.array(x))` to efficiently convert raw vectors to numpy arrays.",NA,NA,NA,NA
 reticulate,555d0669bf2d925c35572b0d38dde40a,"NumPy arrays with dtype ""V1"" (""void8"") now convert to R raw arrays (#1734). Use `py_to_r(array$view(""V1""))` to efficiently convert numpy arrays to raw vectors.",NA,NA,NA,NA
 lintr,d11e9d423cb8e70b730f33fca26bece1,"`undesirable_operator_linter()` lints operators in prefix form, e.g. `` `%%`(x, 2) `` (#1910, @​MichaelChirico). Disable this by setting `call_is_undesirable=FALSE`.",NA,NA,NA,NA
+gt,0844bec80b542288ad37c1b1362b760b,"The default table position in LaTeX is now ""t"" instead of ""!t"" (@​AaronGullickson, #1935).",NA,NA,NA,NA

@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    The default table position in LaTeX is now "t" instead of "!t"
+    (@AaronGullickson, #1935).
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed an issue where cross-references would fail in
     bookdown::html_document2 (@olivroy, #1948)
 
