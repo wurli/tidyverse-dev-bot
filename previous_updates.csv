@@ -18909,3 +18909,5 @@ chromote,3582f177751916caea1c5b2fa853bd16,"chromote now includes experimental fe
 chromote,3582f177751916caea1c5b2fa853bd16,• Use `with_chrome_version()` or `local_chrome_version()` to temporarily switch to a specific version of Chrome. The appropriate binary will be downloaded automatically if not yet available locally.,NA,NA,NA,NA
 chromote,3582f177751916caea1c5b2fa853bd16,• Use `chrome_versions_list()` to list installed or available versions of Chrome.,NA,NA,NA,NA
 chromote,3582f177751916caea1c5b2fa853bd16,• Or use `chrome_versions_add()` and `chrome_versions_remove()` to manually add or remove a specific version of Chrome from chromote's cache.,NA,NA,NA,NA
+reticulate,7aeb7779f9c05e6d183e5bf453076aeb,"Raw R arrays now convert to NumPy arrays with dtype ""V1"" (""void8"") (#1734). Use `r_to_py(as.array(x))` to efficiently convert raw vectors to numpy arrays.",NA,NA,NA,NA
+reticulate,555d0669bf2d925c35572b0d38dde40a,"NumPy arrays with dtype ""V1"" (""void8"") now convert to R raw arrays (#1734). Use `py_to_r(array$view(""V1""))` to efficiently convert numpy arrays to raw vectors.",NA,NA,NA,NA
