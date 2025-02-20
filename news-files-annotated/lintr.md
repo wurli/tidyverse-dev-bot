@@ -71,6 +71,11 @@
     `seq_linter()` recommends using `seq_along(x)` instead of
     `seq_len(length(x))` (#2577, @MichaelChirico).
     !end-bullet!
+-   !begin-bullet!
+    `undesirable_operator_linter()` lints operators in prefix form,
+    e.g. `` `%%`(x, 2) `` (#1910, @MichaelChirico). Disable this by
+    setting `call_is_undesirable=FALSE`.
+    !end-bullet!
 
 !end-bullets-4!
 
