@@ -1,31 +1,28 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
-# duckplyr 1.0.0.9003 (2025-02-21)
-
-## Documentation
-
-- Fix typo in `filter(.by = ...)` error message (#611).
-
-
-# duckplyr 1.0.0.9002 (2025-02-15)
+# duckplyr 1.0.1 (2025-02-21)
 
 ## Bug fixes
+
+- Check if extensions can be loaded before running examples and vignettes (#620).
 
 - Show source of error if data frame cannot be converted to duck frame (#614).
 
+## Chore
 
-# duckplyr 1.0.0.9001 (2025-02-12)
+- Require duckdb \>= 1.2.0 (#619).
 
-## Bug fixes
-
-- Fix link in documentation (#600, #601).
-
-
-# duckplyr 1.0.0.9000 (2025-02-08)
+- Break this version with duckdb 2.0.0 (#623).
 
 ## Documentation
 
-- Use stingy instead of frugal (#594).
+- Separate `?compute_parquet` and `?compute_csv` (#610, #622).
+
+- Italicize book title in README (@wibeasley, #607).
+
+- Fix typo in `filter(.by = ...)` error message (@maelle, #611).
+
+- Fix link in documentation (#600, #601).
 
 
 # duckplyr 1.0.0 (2025-02-02)

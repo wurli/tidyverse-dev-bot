@@ -18914,3 +18914,9 @@ reticulate,555d0669bf2d925c35572b0d38dde40a,"NumPy arrays with dtype ""V1"" (""v
 lintr,d11e9d423cb8e70b730f33fca26bece1,"`undesirable_operator_linter()` lints operators in prefix form, e.g. `` `%%`(x, 2) `` (#1910, @​MichaelChirico). Disable this by setting `call_is_undesirable=FALSE`.",NA,NA,NA,NA
 gt,0844bec80b542288ad37c1b1362b760b,"The default table position in LaTeX is now ""t"" instead of ""!t"" (@​AaronGullickson, #1935).",NA,NA,NA,NA
 duckplyr,933ca5f6eed192266a21d840c30cc858,Fix typo in `filter(.by = ...)` error message (#611).,NA,NA,NA,NA
+duckplyr,7e394f9473aa2c585c2f3c189711970a,Check if extensions can be loaded before running examples and vignettes (#620).,NA,NA,NA,NA
+duckplyr,20a02d7e673eca70cdabf3bbb6288235,Require duckdb \>= 1.2.0 (#619).,NA,NA,NA,NA
+duckplyr,5515640306c63fa324542587c6fd4026,Break this version with duckdb 2.0.0 (#623).,NA,NA,NA,NA
+duckplyr,63e9c40cefec635a17a3a88dc8f9d92f,"Separate `?compute_parquet` and `?compute_csv` (#610, #622).",NA,NA,NA,NA
+duckplyr,c8fa6c6676b0dfc12c19dac03e60b810,"Italicize book title in README (@​wibeasley, #607).",NA,NA,NA,NA
+duckplyr,7a4679f559371d3820f17c4d15e7c048,"Fix typo in `filter(.by = ...)` error message (@​maelle, #611).",NA,NA,NA,NA
