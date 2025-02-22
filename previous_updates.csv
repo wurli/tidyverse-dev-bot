@@ -18921,3 +18921,5 @@ duckplyr,63e9c40cefec635a17a3a88dc8f9d92f,"Separate `?compute_parquet` and `?com
 duckplyr,c8fa6c6676b0dfc12c19dac03e60b810,"Italicize book title in README (@​wibeasley, #607).",NA,NA,NA,NA
 duckplyr,7a4679f559371d3820f17c4d15e7c048,"Fix typo in `filter(.by = ...)` error message (@​maelle, #611).",NA,NA,NA,NA
 duckplyr,d32311818656bb4b495a72bfdff6e7e9,Correct formatting for controlled fallbacks with `Sys.setenv(DUCKPLYR_FALLBACK_INFO = TRUE)`,NA,NA,NA,NA
+lintr,c1e1f64c1a89c0e1c4dcbd3aaa4f0dab,"`indentation_linter()` handles `for` un-braced for loops correctly (#2564, @​MichaelChirico).",NA,NA,NA,NA
+lintr,399586b9639eb8980cae15af2a722327,"The description in `?paste_linter` of `allow_file_path=` has been corrected (#2675, @​MichaelChirico). In particular, `allow_file_path=""never""` is the most strict form, `allow_file_path=""always""` is the most lax form.",NA,NA,NA,NA

@@ -76,6 +76,10 @@
     e.g. `` `%%`(x, 2) `` (#1910, @MichaelChirico). Disable this by
     setting `call_is_undesirable=FALSE`.
     !end-bullet!
+-   !begin-bullet!
+    `indentation_linter()` handles `for` un-braced for loops correctly
+    (#2564, @MichaelChirico).
+    !end-bullet!
 
 !end-bullets-4!
 
@@ -130,6 +134,12 @@
     `unnecessary_nesting_linter()` gives a more specific lint message,
     identifying the unmatched "exit call" that prompts the
     recommendation to reduce nesting (#2316, @MichaelChirico).
+    !end-bullet!
+-   !begin-bullet!
+    The description in `?paste_linter` of `allow_file_path=` has been
+    corrected (#2675, @MichaelChirico). In particular,
+    `allow_file_path="never"` is the most strict form,
+    `allow_file_path="always"` is the most lax form.
     !end-bullet!
 
 !end-bullets-7!
