@@ -18923,3 +18923,6 @@ duckplyr,7a4679f559371d3820f17c4d15e7c048,"Fix typo in `filter(.by = ...)` error
 duckplyr,d32311818656bb4b495a72bfdff6e7e9,Correct formatting for controlled fallbacks with `Sys.setenv(DUCKPLYR_FALLBACK_INFO = TRUE)`,NA,NA,NA,NA
 lintr,c1e1f64c1a89c0e1c4dcbd3aaa4f0dab,"`indentation_linter()` handles `for` un-braced for loops correctly (#2564, @​MichaelChirico).",NA,NA,NA,NA
 lintr,399586b9639eb8980cae15af2a722327,"The description in `?paste_linter` of `allow_file_path=` has been corrected (#2675, @​MichaelChirico). In particular, `allow_file_path=""never""` is the most strict form, `allow_file_path=""always""` is the most lax form.",NA,NA,NA,NA
+lintr,07fea1a6e67047ff83e5cecc9bffcf37,`unnecessary_nesting_linter()` gives a more specific lint message identifying:,NA,NA,NA,NA
+lintr,07fea1a6e67047ff83e5cecc9bffcf37,"• the unmatched ""exit call"" that prompts the recommendation to reduce nesting (#2316, @​MichaelChirico).",NA,NA,NA,NA
+lintr,07fea1a6e67047ff83e5cecc9bffcf37,"• the specific `if()` statement that can be combined with the linted one (#1891, @​MichaelChirico).",NA,NA,NA,NA
