@@ -18920,3 +18920,4 @@ duckplyr,5515640306c63fa324542587c6fd4026,Break this version with duckdb 2.0.0 (
 duckplyr,63e9c40cefec635a17a3a88dc8f9d92f,"Separate `?compute_parquet` and `?compute_csv` (#610, #622).",NA,NA,NA,NA
 duckplyr,c8fa6c6676b0dfc12c19dac03e60b810,"Italicize book title in README (@​wibeasley, #607).",NA,NA,NA,NA
 duckplyr,7a4679f559371d3820f17c4d15e7c048,"Fix typo in `filter(.by = ...)` error message (@​maelle, #611).",NA,NA,NA,NA
+duckplyr,d32311818656bb4b495a72bfdff6e7e9,Correct formatting for controlled fallbacks with `Sys.setenv(DUCKPLYR_FALLBACK_INFO = TRUE)`,NA,NA,NA,NA

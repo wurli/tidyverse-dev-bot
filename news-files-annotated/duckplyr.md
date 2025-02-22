@@ -17,6 +17,11 @@
     (#614).
 
     !end-bullet!
+-   !begin-bullet!
+    Correct formatting for controlled fallbacks with
+    `Sys.setenv(DUCKPLYR_FALLBACK_INFO = TRUE)`
+
+    !end-bullet!
 
 !end-bullets-1!
 
