@@ -80,6 +80,10 @@
     `indentation_linter()` handles `for` un-braced for loops correctly
     (#2564, @MichaelChirico).
     !end-bullet!
+-   !begin-bullet!
+    Setting `exclusions` supports globs like `knitr*` to exclude
+    files/directories with a pattern (#1554, @MichaelChirico).
+    !end-bullet!
 
 !end-bullets-4!
 
@@ -118,6 +122,10 @@
 -   !begin-bullet!
     `missing_argument_linter()` allows empty calls like `foo()` even if
     there are comments between `(` and `)` (#2741, @MichaelChirico).
+    !end-bullet!
+-   !begin-bullet!
+    `return_linter()` works on functions that happen to use braced
+    expressions in their formals (#2616, @MichaelChirico).
     !end-bullet!
 
 !end-bullets-5!

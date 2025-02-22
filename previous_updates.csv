@@ -18926,3 +18926,5 @@ lintr,399586b9639eb8980cae15af2a722327,"The description in `?paste_linter` of `a
 lintr,07fea1a6e67047ff83e5cecc9bffcf37,`unnecessary_nesting_linter()` gives a more specific lint message identifying:,NA,NA,NA,NA
 lintr,07fea1a6e67047ff83e5cecc9bffcf37,"• the unmatched ""exit call"" that prompts the recommendation to reduce nesting (#2316, @​MichaelChirico).",NA,NA,NA,NA
 lintr,07fea1a6e67047ff83e5cecc9bffcf37,"• the specific `if()` statement that can be combined with the linted one (#1891, @​MichaelChirico).",NA,NA,NA,NA
+lintr,f390a67320dfa34a32a8037507cdd604,"Setting `exclusions` supports globs like `knitr*` to exclude files/directories with a pattern (#1554, @​MichaelChirico).",NA,NA,NA,NA
+lintr,15bb42f4f78cf09d8ddc21d1668ce886,"`return_linter()` works on functions that happen to use braced expressions in their formals (#2616, @​MichaelChirico).",NA,NA,NA,NA
