@@ -18928,3 +18928,8 @@ lintr,07fea1a6e67047ff83e5cecc9bffcf37,"• the unmatched ""exit call"" that pro
 lintr,07fea1a6e67047ff83e5cecc9bffcf37,"• the specific `if()` statement that can be combined with the linted one (#1891, @​MichaelChirico).",NA,NA,NA,NA
 lintr,f390a67320dfa34a32a8037507cdd604,"Setting `exclusions` supports globs like `knitr*` to exclude files/directories with a pattern (#1554, @​MichaelChirico).",NA,NA,NA,NA
 lintr,15bb42f4f78cf09d8ddc21d1668ce886,"`return_linter()` works on functions that happen to use braced expressions in their formals (#2616, @​MichaelChirico).",NA,NA,NA,NA
+reticulate,c02edc398df9237faeeff0df5e984a08,"New `py_require()` function for declaring Python requirements for the current R session. For details, see updated vignettes and help:",NA,NA,NA,NA
+reticulate,c02edc398df9237faeeff0df5e984a08,• Installing Python Packages: https://rstudio.github.io/reticulate/dev/articles/python_packages.html,NA,NA,NA,NA
+reticulate,c02edc398df9237faeeff0df5e984a08,• Using reticulate in an R Package: https://rstudio.github.io/reticulate/dev/articles/package.html,NA,NA,NA,NA
+reticulate,c02edc398df9237faeeff0df5e984a08,• `py_require()` help: https://rstudio.github.io/reticulate/dev/reference/py_require.html,NA,NA,NA,NA
+reticulate,f4eb1908815467a190009e293b8a90f9,"Raw R arrays and NumPy arrays with dtype ""V1"" (""void8"") now convert between each other. Use `r_to_py(as.array(x))` to efficiently convert raw vectors to NumPy arrays, and `py_to_r(array$view(""V1""))` to efficiently convert NumPy arrays to raw vectors. (#1734)",NA,NA,NA,NA
