@@ -3,6 +3,14 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Updates for reticulate 1.41. The tensorflow R package now calls
+    `reticuate::py_require()` when it is loaded. Calling
+    `install_tensorflow()` in most circumstances is no longer necessary.
+    !end-bullet!
+-   !begin-bullet!
+    GPU usage on M-series Macs is once again enabled by default.
+    !end-bullet!
+-   !begin-bullet!
     `install_tensorflow()` installs TensorFlow v2.18 by default.
     !end-bullet!
 -   !begin-bullet!

@@ -18935,3 +18935,5 @@ reticulate,c02edc398df9237faeeff0df5e984a08,• `py_require()` help: https://rst
 reticulate,f4eb1908815467a190009e293b8a90f9,"Raw R arrays and NumPy arrays with dtype ""V1"" (""void8"") now convert between each other. Use `r_to_py(as.array(x))` to efficiently convert raw vectors to NumPy arrays, and `py_to_r(array$view(""V1""))` to efficiently convert NumPy arrays to raw vectors. (#1734)",NA,NA,NA,NA
 lintr,8b6e3e5b53bd8c24bdee0ea864988637,`comment_token` is removed from settings. This was a vestige of the now-defunct support for posting GitHub comments.,NA,NA,NA,NA
 gt,e08367cef86557833f2135d17aad5d30,"Fixed an issue where `fmt_markdown()` could create strange output in Quarto (html and Typst formats) (@​olivroy, #1957, quarto-dev/quarto-cli#11932, quarto-dev/quarto-cli#11610).",NA,NA,NA,NA
+tensorflow,ff4f7b040477f7062685068337513e9f,Updates for reticulate 1.41. The tensorflow R package now calls `reticuate::py_require()` when it is loaded. Calling `install_tensorflow()` in most circumstances is no longer necessary.,NA,NA,NA,NA
+tensorflow,67309d3c033dadec70fb92adb7973008,GPU usage on M-series Macs is once again enabled by default.,NA,NA,NA,NA
