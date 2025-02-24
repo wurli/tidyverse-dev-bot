@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed an issue where `fmt_markdown()` could create strange output in
+    Quarto (html and Typst formats) (@olivroy, #1957,
+    quarto-dev/quarto-cli#11932, quarto-dev/quarto-cli#11610).
+
+    !end-bullet!
+-   !begin-bullet!
     The default table position in LaTeX is now "t" instead of "!t"
     (@AaronGullickson, #1935).
 

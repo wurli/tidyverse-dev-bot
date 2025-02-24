@@ -159,6 +159,10 @@
     `allow_file_path="never"` is the most strict form,
     `allow_file_path="always"` is the most lax form.
     !end-bullet!
+-   !begin-bullet!
+    `comment_token` is removed from settings. This was a vestige of the
+    now-defunct support for posting GitHub comments.
+    !end-bullet!
 
 !end-bullets-7!
 
