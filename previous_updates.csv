@@ -18939,3 +18939,4 @@ tensorflow,ff4f7b040477f7062685068337513e9f,Updates for reticulate 1.41. The ten
 tensorflow,67309d3c033dadec70fb92adb7973008,GPU usage on M-series Macs is once again enabled by default.,NA,NA,NA,NA
 tensorflow,dbbd1102402d6857562ed3e044590976,Fixes for R-devel (4.5),NA,NA,NA,NA
 gt,5098361bd45043a32d7b948e4c099ab8,"Fixed an issue in `fmt_number()` where `drop_trailing_dec_mark` would be ignored if `use_seps = FALSE` (@​olivroy, #1961).",NA,NA,NA,NA
+reticulate,8e5fc1cdb67544436dd77e1d8a9cf71d,Internal fixes to prevent reticulate-managed `uv` from writing outside reticulates cache directory (#1745).,NA,NA,NA,NA
