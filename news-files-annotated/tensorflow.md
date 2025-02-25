@@ -8,9 +8,6 @@
     `install_tensorflow()` in most circumstances is no longer necessary.
     !end-bullet!
 -   !begin-bullet!
-    GPU usage on M-series Macs is once again enabled by default.
-    !end-bullet!
--   !begin-bullet!
     `install_tensorflow()` installs TensorFlow v2.18 by default.
     !end-bullet!
 -   !begin-bullet!
@@ -19,6 +16,9 @@
     !end-bullet!
 -   !begin-bullet!
     Fixes for NumPy 2.0 (#601)
+    !end-bullet!
+-   !begin-bullet!
+    Fixes for R-devel (4.5)
     !end-bullet!
 
 !end-bullets-1!
