@@ -18941,3 +18941,4 @@ tensorflow,dbbd1102402d6857562ed3e044590976,Fixes for R-devel (4.5),NA,NA,NA,NA
 gt,5098361bd45043a32d7b948e4c099ab8,"Fixed an issue in `fmt_number()` where `drop_trailing_dec_mark` would be ignored if `use_seps = FALSE` (@​olivroy, #1961).",NA,NA,NA,NA
 reticulate,8e5fc1cdb67544436dd77e1d8a9cf71d,Internal fixes to prevent reticulate-managed `uv` from writing outside reticulates cache directory (#1745).,NA,NA,NA,NA
 renv,47e9fd6c7ea3e31a0c93898faf15f7dd,Fixed an issue where `renv` could fail to retrieve credentials registered for 'github.com' when querying URLs at 'api.github.com'.,NA,NA,NA,NA
+rsconnect,e037e76f99e26278562b52caa4f66950,Content directories with a period in their name are no longer treated as a document path when computing the location for deployment records. (#1138),NA,NA,NA,NA
