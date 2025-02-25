@@ -84,6 +84,11 @@
     Setting `exclusions` supports globs like `knitr*` to exclude
     files/directories with a pattern (#1554, @MichaelChirico).
     !end-bullet!
+-   !begin-bullet!
+    `object_name_linter()` and `object_length_linter()` apply to objects
+    assigned with `assign()` or generics created with `setGeneric()`
+    (#1665, @MichaelChirico).
+    !end-bullet!
 
 !end-bullets-4!
 
