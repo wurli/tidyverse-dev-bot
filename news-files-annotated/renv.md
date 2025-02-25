@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed an issue where `renv` could fail to retrieve credentials
+    registered for 'github.com' when querying URLs at 'api.github.com'.
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed an issue where `renv` could stall when loading a project and
     validating that the configured version of Bioconductor is compatible
     with the version of R currently in use.
