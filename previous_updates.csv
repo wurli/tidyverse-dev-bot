@@ -18943,3 +18943,5 @@ reticulate,8e5fc1cdb67544436dd77e1d8a9cf71d,Internal fixes to prevent reticulate
 renv,47e9fd6c7ea3e31a0c93898faf15f7dd,Fixed an issue where `renv` could fail to retrieve credentials registered for 'github.com' when querying URLs at 'api.github.com'.,NA,NA,NA,NA
 rsconnect,e037e76f99e26278562b52caa4f66950,Content directories with a period in their name are no longer treated as a document path when computing the location for deployment records. (#1138),NA,NA,NA,NA
 lintr,7ee29e9b1a2b989463ffa29a282b1c10,"`object_name_linter()` and `object_length_linter()` apply to objects assigned with `assign()` or generics created with `setGeneric()` (#1665, @​MichaelChirico).",NA,NA,NA,NA
+readxl,9a95333aa9a10e16a74207f9971ce75f,"readxl embeds libxls v1.6.3, with release notes at https://github.com/libxls/libxls/releases/tag/v1.6.3. This version of libxls fixes several vulnerabilities.",NA,NA,NA,NA
+readxl,8d451ede57903c6f784efde3ed99dbe1,"Other small internal changes have been made to comply with CRAN requests, such as avoiding the use of `Rf_StringTrue()`.",NA,NA,NA,NA
