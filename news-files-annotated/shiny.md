@@ -34,6 +34,13 @@
     (#4066)
 
     !end-bullet!
+-   !begin-bullet!
+    When `textInput()` is called with `updateOn="blur"`, instead of
+    updating as the user types, the input value will update only when
+    the text input loses focus or when the user presses Enter (or
+    Cmd/Ctrl + Enter for `textAreaInput()`). (#4183)
+
+    !end-bullet!
 
 !end-bullets-1!
 
