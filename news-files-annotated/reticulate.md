@@ -3,8 +3,17 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `uv_run_tool()` gains an `exclude_newer` argument (#1748).
+
+    !end-bullet!
+-   !begin-bullet!
+    Internal changes to support R-devel (4.5) (#1747).
+
+    !end-bullet!
+-   !begin-bullet!
     Internal fixes to prevent reticulate-managed `uv` from writing
     outside reticulates cache directory (#1745).
+
     !end-bullet!
 
 !end-bullets-1!

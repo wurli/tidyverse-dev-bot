@@ -18945,3 +18945,5 @@ rsconnect,e037e76f99e26278562b52caa4f66950,Content directories with a period in 
 lintr,7ee29e9b1a2b989463ffa29a282b1c10,"`object_name_linter()` and `object_length_linter()` apply to objects assigned with `assign()` or generics created with `setGeneric()` (#1665, @​MichaelChirico).",NA,NA,NA,NA
 readxl,9a95333aa9a10e16a74207f9971ce75f,"readxl embeds libxls v1.6.3, with release notes at https://github.com/libxls/libxls/releases/tag/v1.6.3. This version of libxls fixes several vulnerabilities.",NA,NA,NA,NA
 readxl,8d451ede57903c6f784efde3ed99dbe1,"Other small internal changes have been made to comply with CRAN requests, such as avoiding the use of `Rf_StringTrue()`.",NA,NA,NA,NA
+reticulate,7781681bac9de9e965c4ae3658185982,`uv_run_tool()` gains an `exclude_newer` argument (#1748).,NA,NA,NA,NA
+reticulate,84140136195e16f75db45838e078dcec,Internal changes to support R-devel (4.5) (#1747).,NA,NA,NA,NA
