@@ -4,6 +4,15 @@
 
 -   !begin-bullet!
     Windows: use libxml2 from Rtools if found
+
+    !end-bullet!
+-   !begin-bullet!
+    Update maintainer
+
+    !end-bullet!
+-   !begin-bullet!
+    Minor cleanups
+
     !end-bullet!
 
 !end-bullets-1!
