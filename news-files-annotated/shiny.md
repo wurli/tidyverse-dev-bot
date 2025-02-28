@@ -35,10 +35,13 @@
 
     !end-bullet!
 -   !begin-bullet!
-    When `textInput()` is called with `updateOn="blur"`, instead of
-    updating as the user types, the input value will update only when
-    the text input loses focus or when the user presses Enter (or
-    Cmd/Ctrl + Enter for `textAreaInput()`). (#4183)
+    `textInput()`, `textAreaInput()`, `numericInput()` and
+    `passwordInput()` all gain an `updateOn` option.
+    `updateOn = "change"` is the default and previous behavior, where
+    the input value updates immediately whenever the value changes. With
+    `updateOn = "blur"`, the input value will update only when the text
+    input loses focus or when the user presses Enter (or Cmd/Ctrl +
+    Enter for `textAreaInput()`). (#4183)
 
     !end-bullet!
 

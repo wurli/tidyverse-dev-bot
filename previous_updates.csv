@@ -18951,3 +18951,4 @@ shiny,c726d38b85d06257254542254f7a10e1,"When `textInput()` is called with `updat
 xml2,38cbe3994851a328098d8659738efeba,Update maintainer,NA,NA,NA,NA
 xml2,036be50c18aee67073d89e00ad64e755,Minor cleanups,NA,NA,NA,NA
 duckplyr,1530f8f42584e11bc462e51bf6d83dbf,CRAN release v1.0.1 (#624).,NA,NA,NA,NA
+pkgdown,4823c12f2a03cfc71df16269d733fe07,"pkgdown now transforms ROR IDs in `DESCRIPTION` into icons, like it already did for ORCID IDs. (#2850)",NA,NA,NA,NA
