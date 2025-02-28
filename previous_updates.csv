@@ -18952,3 +18952,7 @@ xml2,38cbe3994851a328098d8659738efeba,Update maintainer,NA,NA,NA,NA
 xml2,036be50c18aee67073d89e00ad64e755,Minor cleanups,NA,NA,NA,NA
 duckplyr,1530f8f42584e11bc462e51bf6d83dbf,CRAN release v1.0.1 (#624).,NA,NA,NA,NA
 pkgdown,4823c12f2a03cfc71df16269d733fe07,"pkgdown now transforms ROR IDs in `DESCRIPTION` into icons, like it already did for ORCID IDs. (#2850)",NA,NA,NA,NA
+pak,589ef8ae9ab6b1d333f2258feee5a0b0,pak now supports HTTP basic authentication for CRAN-like repositories. See 'Authenticated repositories' in the reference manual.,NA,NA,NA,NA
+pkgdown,f54c25b9493a3fba063c3d311d4321cd,"ROR IDs in `DESCRIPTION` are transformed into icons, similar to ORCID IDs. (#2850)",NA,NA,NA,NA
+pkgdown,1d5d66a79eade37f47f093c1df110d60,"Articles (i.e., Rmd/qmd files in `vignettes/articles`, created by `usethis::use_article()` and available on pkgdown sites but not included in a built package) have improved test cases (thanks to @​venpopov and @​ethanbass).",NA,NA,NA,NA
+reticulate,d28ebc1531f242031a46150062ce5baf,"Reticulate-managed `uv` can now resolve system-installed Pythons, supporting platforms where pre-built binaries are unavailable, such as musl-based Alpine Linux (#1751, #1752).",NA,NA,NA,NA

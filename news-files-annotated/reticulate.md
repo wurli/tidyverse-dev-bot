@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Reticulate-managed `uv` can now resolve system-installed Pythons,
+    supporting platforms where pre-built binaries are unavailable, such
+    as musl-based Alpine Linux (#1751, #1752).
+
+    !end-bullet!
+-   !begin-bullet!
     `uv_run_tool()` gains an `exclude_newer` argument (#1748).
 
     !end-bullet!

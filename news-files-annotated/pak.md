@@ -5,6 +5,13 @@
 -   !begin-bullet!
     pak now uses the `use_bioconductor` configuration option in
     `meta_*()` and `repo_*()` functions (#295, #726, @meztez).
+
+    !end-bullet!
+-   !begin-bullet!
+    pak now supports HTTP basic authentication for CRAN-like
+    repositories. See 'Authenticated repositories' in the reference
+    manual.
+
     !end-bullet!
 
 !end-bullets-1!
