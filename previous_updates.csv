@@ -18950,3 +18950,4 @@ reticulate,84140136195e16f75db45838e078dcec,Internal changes to support R-devel 
 shiny,c726d38b85d06257254542254f7a10e1,"When `textInput()` is called with `updateOn=""blur""`, instead of updating as the user types, the input value will update only when the text input loses focus or when the user presses Enter (or Cmd/Ctrl + Enter for `textAreaInput()`). (#4183)",NA,NA,NA,NA
 xml2,38cbe3994851a328098d8659738efeba,Update maintainer,NA,NA,NA,NA
 xml2,036be50c18aee67073d89e00ad64e755,Minor cleanups,NA,NA,NA,NA
+duckplyr,1530f8f42584e11bc462e51bf6d83dbf,CRAN release v1.0.1 (#624).,NA,NA,NA,NA
