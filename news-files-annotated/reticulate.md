@@ -13,6 +13,12 @@
 
     !end-bullet!
 -   !begin-bullet!
+    `py_register_load_hook()` is now exported to enable usage described
+    in the "Using reticulate in an R package vignette" (#1754).
+    https://rstudio.github.io/reticulate/articles/package.html
+
+    !end-bullet!
+-   !begin-bullet!
     Internal changes to support R-devel (4.5) (#1747).
 
     !end-bullet!
