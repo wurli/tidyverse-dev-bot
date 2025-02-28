@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed an issue in RStudio on Windows where interrupts were ignored
+    while Python code was executing (#1753).
+
+    !end-bullet!
+-   !begin-bullet!
     Reticulate-managed `uv` can now resolve system-installed Pythons,
     supporting platforms where pre-built binaries are unavailable, such
     as musl-based Alpine Linux (#1751, #1752).

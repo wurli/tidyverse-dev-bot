@@ -18958,3 +18958,4 @@ pkgdown,1d5d66a79eade37f47f093c1df110d60,"Articles (i.e., Rmd/qmd files in `vign
 reticulate,d28ebc1531f242031a46150062ce5baf,"Reticulate-managed `uv` can now resolve system-installed Pythons, supporting platforms where pre-built binaries are unavailable, such as musl-based Alpine Linux (#1751, #1752).",NA,NA,NA,NA
 gt,c1c702a5e30a6e6bcee4220723adcde9,"`gt(row_group_as_column = TRUE)` now works if multiple groups are supplied (@​olivroy, #1552).",NA,NA,NA,NA
 reticulate,c48d035625f086be28e85251a46061a0,"`py_register_load_hook()` is now exported to enable usage described in the ""Using reticulate in an R package vignette"" (#1754). https://rstudio.github.io/reticulate/articles/package.html",NA,NA,NA,NA
+reticulate,dcad9f43c9c214017b13ce52f4aac959,Fixed an issue in RStudio on Windows where interrupts were ignored while Python code was executing (#1753).,NA,NA,NA,NA
