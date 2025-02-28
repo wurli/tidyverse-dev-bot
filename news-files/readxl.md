@@ -1,5 +1,7 @@
 # readxl (development version)
 
+# readxl 1.4.4
+
 This release contains no user-facing changes.
 
 * readxl embeds libxls v1.6.3, with release notes at
