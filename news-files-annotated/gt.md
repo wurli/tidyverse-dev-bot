@@ -45,6 +45,11 @@
     Improved width calculations in `as_gtable()` (@teunbrand, #1923)
 
     !end-bullet!
+-   !begin-bullet!
+    `gt(row_group_as_column = TRUE)` now works if multiple groups are
+    supplied (@olivroy, #1552).
+
+    !end-bullet!
 
 !end-bullets-1!
 
