@@ -132,6 +132,11 @@
     `return_linter()` works on functions that happen to use braced
     expressions in their formals (#2616, @MichaelChirico).
     !end-bullet!
+-   !begin-bullet!
+    `object_name_linter()` and `object_length_linter()` account for S3
+    class correctly when the generic is assigned with `=` (#2507,
+    @MichaelChirico).
+    !end-bullet!
 
 !end-bullets-5!
 
