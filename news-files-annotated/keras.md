@@ -22,6 +22,11 @@
     `dotty::.` is now reexported.
 
     !end-bullet!
+-   !begin-bullet!
+    `%*%` now dispatches to `op_matmul()` for tensorflow tensors, which
+    has relaxed shape constraints compared to `tf$matmul()`.
+
+    !end-bullet!
 
 !end-bullets-1!
 
