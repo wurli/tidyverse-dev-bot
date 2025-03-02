@@ -3,14 +3,20 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
-    ROR IDs in `DESCRIPTION` are transformed into icons, similar to
-    ORCID IDs. (#2850)
+    Support for math rendering using katex and mathjax was improved and
+    now includes necessary components using CDN (#2704).
     !end-bullet!
 -   !begin-bullet!
-    Sass variables from bslib are now used to set the navbar background
-    color: `$navbar-bg` for the background color in light and dark mode,
-    or `$navbar-light-bg` and `$navbar-dark-bg` for individually
-    controlling light and dark mode background colors.
+    Articles (i.e., Rmarkdown/Quarto documents in `vignettes/articles`,
+    created by `usethis::use_article()` and available on pkgdown sites
+    but not included in a built package) have improved test cases
+    (thanks to @venpopov and @ethanbass).
+    !end-bullet!
+-   !begin-bullet!
+    pkgdown now uses the same Sass variables as bslib to set the navbar
+    background color: `$navbar-bg` for the background color in light and
+    dark mode, or `$navbar-light-bg` and `$navbar-dark-bg` for
+    individually controlling light and dark mode background colors.
     `pkgdown-navbar-bg` and `$pkgdown-navbar-bg-dark` both still provide
     pkgdown-specific overrides (@gadenbuie, #2847).
     !end-bullet!

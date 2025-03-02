@@ -18965,3 +18965,5 @@ xml2,2ea4560c920981a799f086ea2428c830,"Replace new ""non-api"" call IS_S4_OBJECT
 xml2,9f0f6885e4a881cdba68d7faf7f4e311,Windows: update fallback libs (for R \< 4.3) to libxml2 2.11.5,NA,NA,NA,NA
 reticulate,3b7b0b026f98f4f656cd6f3a9d582207,Updates for Positron to fix issues with `repl_python()` and Variables Pane (#1755).,NA,NA,NA,NA
 lintr,f5556f360328da3f8551ccb4007d0e63,"`assignment_linter()` with `operator = ""=""` does a better job of skipping implicit assignments, which are intended to be governed by `implicit_assignment_linter()` (#2765, @​MichaelChirico).",NA,NA,NA,NA
+pkgdown,96edbde3d9f5309c7eec7acb865effe3,Support for math rendering using katex and mathjax was improved and now includes necessary components using CDN (#2704).,NA,NA,NA,NA
+pkgdown,252162098ce8f367a790b2cd1759a770,"Articles (i.e., Rmarkdown/Quarto documents in `vignettes/articles`, created by `usethis::use_article()` and available on pkgdown sites but not included in a built package) have improved test cases (thanks to @​venpopov and @​ethanbass).",NA,NA,NA,NA
