@@ -137,6 +137,11 @@
     class correctly when the generic is assigned with `=` (#2507,
     @MichaelChirico).
     !end-bullet!
+-   !begin-bullet!
+    `assignment_linter()` with `operator = "="` does a better job of
+    skipping implicit assignments, which are intended to be governed by
+    `implicit_assignment_linter()` (#2765, @MichaelChirico).
+    !end-bullet!
 
 !end-bullets-5!
 

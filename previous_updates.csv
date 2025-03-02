@@ -18964,3 +18964,4 @@ keras,d7aaa279c4c64ebb7a58557f18bd7654,"`%*%` now dispatches to `op_matmul()` fo
 xml2,2ea4560c920981a799f086ea2428c830,"Replace new ""non-api"" call IS_S4_OBJECT with Rf_isS4",NA,NA,NA,NA
 xml2,9f0f6885e4a881cdba68d7faf7f4e311,Windows: update fallback libs (for R \< 4.3) to libxml2 2.11.5,NA,NA,NA,NA
 reticulate,3b7b0b026f98f4f656cd6f3a9d582207,Updates for Positron to fix issues with `repl_python()` and Variables Pane (#1755).,NA,NA,NA,NA
+lintr,f5556f360328da3f8551ccb4007d0e63,"`assignment_linter()` with `operator = ""=""` does a better job of skipping implicit assignments, which are intended to be governed by `implicit_assignment_linter()` (#2765, @​MichaelChirico).",NA,NA,NA,NA
