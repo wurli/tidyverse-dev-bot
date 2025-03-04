@@ -58,6 +58,10 @@
     not, for example, an object of class `"glue"`; #2740,
     @MichaelChirico).
     !end-bullet!
+-   !begin-bullet!
+    Files with encoding inferred from settings read more robustly under
+    `lint(parse_settings = TRUE)` (#2803, @MichaelChirico).
+    !end-bullet!
 
 !end-bullets-3!
 
@@ -89,6 +93,11 @@
 -   !begin-bullet!
     Setting `exclusions` supports globs like `knitr*` to exclude
     files/directories with a pattern (#1554, @MichaelChirico).
+    !end-bullet!
+-   !begin-bullet!
+    `get_source_expression()` captures warnings emitted by the R parser
+    (currently always for mis-specified literal integers like `1.1L`)
+    and `lint()` returns them as lints (#2065, @MichaelChirico).
     !end-bullet!
 -   !begin-bullet!
     `object_name_linter()` and `object_length_linter()` apply to objects
