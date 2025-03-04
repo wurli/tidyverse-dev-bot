@@ -9,6 +9,15 @@
 
     !end-bullet!
 -   !begin-bullet!
+    The `breweries91`, `atlStorms2005`, and `gadmCHE` datasets are now
+    `{sf}` objects (@olivroy, #944).
+
+    !end-bullet!
+-   !begin-bullet!
+    `{leaflet}` now requires R 3.5 and above (@olivroy, #944).
+
+    !end-bullet!
+-   !begin-bullet!
     Color palette improvements. All color palette functions now support
     all `{viridisLite}` palettes ("magma", "inferno", "plasma",
     "viridis", "cividis", "rocket", "mako", and "turbo") (@jack-davison,
