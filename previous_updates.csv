@@ -18981,3 +18981,6 @@ lintr,a07d1d9e6bee3826a9cfc9ffc3dcd7b2,"`todo_comment_linter()` finds comments i
 lintr,e7a1fbde6ae39d164075530dc6f462ba,"Files with encoding inferred from settings read more robustly under `lint(parse_settings = TRUE)` (#2803, @​MichaelChirico).",NA,NA,NA,NA
 lintr,c2843a4af936f9883e494405efe557a7,"`get_source_expression()` captures warnings emitted by the R parser (currently always for mis-specified literal integers like `1.1L`) and `lint()` returns them as lints (#2065, @​MichaelChirico).",NA,NA,NA,NA
 reticulate,80ab74ae333928c82688b690cb7f30e4,Fixed an issue with pointing reticulate at a pyenv shim python (#1758),NA,NA,NA,NA
+lintr,063a268f3a767544ca86ecb27a97fd15,`seq_linter()`:,NA,NA,NA,NA
+lintr,063a268f3a767544ca86ecb27a97fd15,"• recommends using `seq_along(x)` instead of `seq_len(length(x))` (#2577, @​MichaelChirico).",NA,NA,NA,NA
+lintr,063a268f3a767544ca86ecb27a97fd15,"• recommends using `sequence()` instead of `unlist(lapply(ints, seq))` (#2618, @​Bisaloo)",NA,NA,NA,NA
