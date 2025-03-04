@@ -37,6 +37,11 @@
     outside reticulates cache directory (#1745).
 
     !end-bullet!
+-   !begin-bullet!
+    Fixed an issue with pointing reticulate at a pyenv shim python
+    (#1758)
+
+    !end-bullet!
 
 !end-bullets-1!
 

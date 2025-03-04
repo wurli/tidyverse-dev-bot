@@ -18980,3 +18980,4 @@ lintr,37ba6c45fd4981914742599ae12f7acb,"`T_and_F_symbol_linter()` ignores `T` an
 lintr,a07d1d9e6bee3826a9cfc9ffc3dcd7b2,"`todo_comment_linter()` finds comments inside {roxygen2} markup comments (#2447, @​MichaelChirico).",NA,NA,NA,NA
 lintr,e7a1fbde6ae39d164075530dc6f462ba,"Files with encoding inferred from settings read more robustly under `lint(parse_settings = TRUE)` (#2803, @​MichaelChirico).",NA,NA,NA,NA
 lintr,c2843a4af936f9883e494405efe557a7,"`get_source_expression()` captures warnings emitted by the R parser (currently always for mis-specified literal integers like `1.1L`) and `lint()` returns them as lints (#2065, @​MichaelChirico).",NA,NA,NA,NA
+reticulate,80ab74ae333928c82688b690cb7f30e4,Fixed an issue with pointing reticulate at a pyenv shim python (#1758),NA,NA,NA,NA
