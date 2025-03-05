@@ -18985,3 +18985,4 @@ lintr,063a268f3a767544ca86ecb27a97fd15,`seq_linter()`:,NA,NA,NA,NA
 lintr,063a268f3a767544ca86ecb27a97fd15,"• recommends using `seq_along(x)` instead of `seq_len(length(x))` (#2577, @​MichaelChirico).",NA,NA,NA,NA
 lintr,063a268f3a767544ca86ecb27a97fd15,"• recommends using `sequence()` instead of `unlist(lapply(ints, seq))` (#2618, @​Bisaloo)",NA,NA,NA,NA
 lintr,298a4085de54651b44ea40f9ec321dd5,"`boolean_arithmetic_linter()` finds many more cases like `sum(x | y) == 0` where the total of a known-logical vector is compared to 0 (#1580, @​MichaelChirico).",NA,NA,NA,NA
+usethis,eb4d9ec1ca6480ae1960a9fef677d1e0,"`use_air()` is a new function to configure a project to use Air, an extremely fast R code formatter.",NA,NA,NA,NA
