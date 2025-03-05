@@ -123,6 +123,11 @@
     `.env$key`, where `key` was previously missed as being a used
     variable.
     !end-bullet!
+-   !begin-bullet!
+    `boolean_arithmetic_linter()` finds many more cases like
+    `sum(x | y) == 0` where the total of a known-logical vector is
+    compared to 0 (#1580, @MichaelChirico).
+    !end-bullet!
 
 !end-bullets-4!
 
