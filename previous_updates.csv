@@ -18986,3 +18986,18 @@ lintr,063a268f3a767544ca86ecb27a97fd15,"• recommends using `seq_along(x)` inst
 lintr,063a268f3a767544ca86ecb27a97fd15,"• recommends using `sequence()` instead of `unlist(lapply(ints, seq))` (#2618, @​Bisaloo)",NA,NA,NA,NA
 lintr,298a4085de54651b44ea40f9ec321dd5,"`boolean_arithmetic_linter()` finds many more cases like `sum(x | y) == 0` where the total of a known-logical vector is compared to 0 (#1580, @​MichaelChirico).",NA,NA,NA,NA
 usethis,eb4d9ec1ca6480ae1960a9fef677d1e0,"`use_air()` is a new function to configure a project to use Air, an extremely fast R code formatter.",NA,NA,NA,NA
+httr2,131f022c8d9392f7866bae879cf1ba31,"`req_perform_parallel()` lifts many of the previous restrictions. It supports simplified versions of `req_throttle()` and `req_retry()`, can refresh OAuth tokens, and checks the cache before/after each request. (#681).",NA,NA,NA,NA
+httr2,94eb48c5414bd5ca797e718c0bb28368,Default verbosity can be controlled by the `HTTR2_VERBOSITY` environment variable (#687).,NA,NA,NA,NA
+httr2,aa2bb84672e6c64ed31852a478328473,`local_verbosity()` matches the existing `with_verbosity()` and allows for local control of verbosity (#687).,NA,NA,NA,NA
+httr2,95852ed5d0caa1be3ba5f7bc7de30c51,"`req_dry_run()` and `req_verbose()` display compressed correctly (#91, #656) and automatically prettify JSON bodies (#668). You can suppress prettification with `options(httr2_pretty_json = FALSE)` (#668).",NA,NA,NA,NA
+httr2,a68339fe690fe1fa98e50701ef83a833,"`aws_v4_signature()` correctly processes URLs containing query parameters (@​jeffreyzuber, #645).",NA,NA,NA,NA
+httr2,ba74adfb221c851ec127070770393c6d,"`oauth_client()` and `oauth_token()` implement improved print methods with bulleted lists, similar to other httr2 objects, and `oauth_client()` with custom `auth` functions no longer produces errors (#648).",NA,NA,NA,NA
+httr2,fa9edec4d878d8807dc5a971c6103ac2,`req_dry_run()` omits headers that would vary in tests and can prettify JSON output.,NA,NA,NA,NA
+httr2,b1cedc1d85b34df09684da5bfe6bf89a,`req_headers()` automatically redacts `Authorization` headers (#649) and correctly implements case-insensitive modification of existing headers (#682).,NA,NA,NA,NA
+httr2,6fd031d1411a939c8f607f353d67d1e1,`req_headers_redacted()` now supports dynamic dots (#647).,NA,NA,NA,NA
+httr2,6967ad05c2eeafa9377b21ce6e396520,"`req_oauth_auth_code()` no longer adds trailing ""/"" characters to properly formed `redirect_uri` values (@​jonthegeek, #646).",NA,NA,NA,NA
+httr2,479b8554599e3faad0354a55ab3b8001,`req_perform_connection()` produces more helpful error messages when requests fail at the networking level.,NA,NA,NA,NA
+httr2,6ee729024703b11792e765986885f4f4,`req_perform_parallel(pool)` now is deprecated in favour of a new `max_active` argument (#681).,NA,NA,NA,NA
+httr2,1161c728eb8eff9c570badf89b6dbe29,"`req_user_agent()` memoizes the default user agent to improve performance, as computing version numbers is relatively slow (300 µs).",NA,NA,NA,NA
+httr2,0a3aa4396a669fbfa0ffdb4b404e796e,"`resp_link_url()` once again respects the case insensitivity for header names (@​DavidRLovell, #655).",NA,NA,NA,NA
+httr2,27837f936fd6f795244903607d742a58,"`resp_stream_sse()` automatically retrieves the next event when the current event contains no data, and returns data as a single string (#650).",NA,NA,NA,NA

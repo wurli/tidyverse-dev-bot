@@ -1,94 +1,100 @@
 # httr2 (development version)
 
+## New features
+
 !begin-bullets-1!
 
 -   !begin-bullet!
-    `str()` correctly redacts redacted headers (#682).
+    `req_perform_parallel()` lifts many of the previous restrictions. It
+    supports simplified versions of `req_throttle()` and `req_retry()`,
+    can refresh OAuth tokens, and checks the cache before/after each
+    request. (#681).
     !end-bullet!
 -   !begin-bullet!
-    `req_headers()` replaces existing headers with different case
-    (#682).
+    Default verbosity can be controlled by the `HTTR2_VERBOSITY`
+    environment variable (#687).
     !end-bullet!
 -   !begin-bullet!
-    New `local_verbosity()` (#687).
+    `local_verbosity()` matches the existing `with_verbosity()` and
+    allows for local control of verbosity (#687).
     !end-bullet!
 -   !begin-bullet!
-    Can now use `HTTR2_VERBOSITY` env var to control default verbosity
-    (#687).
+    `req_dry_run()` and `req_verbose()` display compressed correctly
+    (#91, #656) and automatically prettify JSON bodies (#668). You can
+    suppress prettification with `options(httr2_pretty_json = FALSE)`
+    (#668).
     !end-bullet!
 -   !begin-bullet!
-    `req_perform_parallel(pool)` has been deprecated in favour of a new
-    `max_active` argument (#681).
-    !end-bullet!
--   !begin-bullet!
-    Most of the limitations of `req_perform_parallel()` have been
-    lifted. It can now refresh OAuth tokens and look at the cache for
-    each individual requests. It also supports a simple version of
-    `req_throttle()` and `req_retry()`, where it assumes that all
-    requests have the same throttling and rate limits (#681).
-    !end-bullet!
--   !begin-bullet!
-    `req_user_agent()` now memoises the default user agent, since it's
-    relatively slow (300 µs) to compute because it requires looking up
-    version numbers.
-    !end-bullet!
--   !begin-bullet!
-    `req_dry_run()` drops headers that otherwise will vary in tests, and
-    gains the ability to prettify JSON output.
-    !end-bullet!
--   !begin-bullet!
-    `req_verbose()` automatically prettifies JSON requests and responses
-    (#668). You can disable this by setting `httr2_pretty_json`.
-    !end-bullet!
--   !begin-bullet!
-    `req_perform_connection()` gives a better error if request fails at
-    networking level.
-    !end-bullet!
--   !begin-bullet!
-    `req_throttle()` now uses a "token bucket" which preserves the
-    average rate limit, but allows bursts of higher requests.
-    !end-bullet!
--   !begin-bullet!
-    `req_dry_run()` and `req_verbose()` now do a better job of
-    displaying compressed bodies (#91, #656).
-    !end-bullet!
--   !begin-bullet!
-    `resp_link_url()` once again ignores the case of headers
-    (@DavidRLovell, #655)
-    !end-bullet!
--   !begin-bullet!
-    `oauth_client()` and `oauth_token()` gain refreshed print methods
-    that use bulleted lists, like other httr2 objects. Additionally,
-    print a `oauth_client()` with a custom `auth` function no longer
-    errors (#648).
-    !end-bullet!
--   !begin-bullet!
-    `req_headers()` always redacts `Authorization` (#649).
-    !end-bullet!
--   !begin-bullet!
-    `req_headers_redacted()` supports dynamic dots (#647)
-    !end-bullet!
--   !begin-bullet!
-    `resp_stream_sse()` now automatically retrieves the next event if
-    the current event contains no data. The data is now returned as a
-    single string (#650).
-    !end-bullet!
--   !begin-bullet!
-    `aws_v4_signature()` now works if url contains query parameters
-    (@jeffreyzuber, #645).
-    !end-bullet!
--   !begin-bullet!
-    `req_oauth_auth_code()` no longer adds trailing "/" characters to
-    well-formed `redirect_uri` values (@jonthegeek, #646).
+    `req_throttle()` implements a new "token bucket" algorithm that
+    maintains average rate limits while allowing bursts of higher
+    request rates.
     !end-bullet!
 
 !end-bullets-1!
+
+## Minor improvements and bug fixes
+
+!begin-bullets-2!
+
+-   !begin-bullet!
+    `aws_v4_signature()` correctly processes URLs containing query
+    parameters (@jeffreyzuber, #645).
+    !end-bullet!
+-   !begin-bullet!
+    `oauth_client()` and `oauth_token()` implement improved print
+    methods with bulleted lists, similar to other httr2 objects, and
+    `oauth_client()` with custom `auth` functions no longer produces
+    errors (#648).
+    !end-bullet!
+-   !begin-bullet!
+    `req_dry_run()` omits headers that would vary in tests and can
+    prettify JSON output.
+    !end-bullet!
+-   !begin-bullet!
+    `req_headers()` automatically redacts `Authorization` headers (#649)
+    and correctly implements case-insensitive modification of existing
+    headers (#682).
+    !end-bullet!
+-   !begin-bullet!
+    `req_headers_redacted()` now supports dynamic dots (#647).
+    !end-bullet!
+-   !begin-bullet!
+    `req_oauth_auth_code()` no longer adds trailing "/" characters to
+    properly formed `redirect_uri` values (@jonthegeek, #646).
+    !end-bullet!
+-   !begin-bullet!
+    `req_perform_connection()` produces more helpful error messages when
+    requests fail at the networking level.
+    !end-bullet!
+-   !begin-bullet!
+    `req_perform_parallel(pool)` now is deprecated in favour of a new
+    `max_active` argument (#681).
+    !end-bullet!
+-   !begin-bullet!
+    `req_user_agent()` memoizes the default user agent to improve
+    performance, as computing version numbers is relatively slow (300
+    µs).
+    !end-bullet!
+-   !begin-bullet!
+    `resp_link_url()` once again respects the case insensitivity for
+    header names (@DavidRLovell, #655).
+    !end-bullet!
+-   !begin-bullet!
+    `resp_stream_sse()` automatically retrieves the next event when the
+    current event contains no data, and returns data as a single string
+    (#650).
+    !end-bullet!
+-   !begin-bullet!
+    `str()` correctly redacts redacted headers (#682).
+    !end-bullet!
+
+!end-bullets-2!
 
 # httr2 1.1.0
 
 ## Lifecycle changes
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     `req_perform_stream()` is superseded in favor of
@@ -101,11 +107,11 @@
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 ## New features
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     `is_online()` wraps `curl::has_internet()`, making it easy to tell
@@ -144,11 +150,11 @@
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 ## Bug fixes and minor improvements
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     OAuth response parsing errors now have a dedicated
@@ -202,11 +208,11 @@
 
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 # httr2 1.0.7
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     `req_perform_promise()` upgraded to use event-driven async based on
@@ -218,11 +224,11 @@
     (@atheriel, #460).
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # httr2 1.0.6
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     Fix stochastic test failure, particularly on CRAN (#572)
@@ -245,22 +251,22 @@
     for a simple reference implementation.
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 # httr2 1.0.5
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     `req_perform_parallel()` and `req_perform_promise()` now correctly
     set up the method and body (#549).
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 # httr2 1.0.4
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     `req_body_file()` now works with files \>64kb once more (#524) and
@@ -309,11 +315,11 @@
     (#519).
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 # httr2 1.0.3
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     `jwt_encode_hmac()` now calls correct underlying function
@@ -339,11 +345,11 @@
 
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 # httr2 1.0.2
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     `req_body_file()` now only opens a connection when the request
@@ -373,11 +379,11 @@
     multi-value parameters (#404).
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 # httr2 1.0.1
 
-!begin-bullets-11!
+!begin-bullets-12!
 
 -   !begin-bullet!
     `req_perform_stream()` gains a `round = c("byte", "line")` argument
@@ -406,13 +412,13 @@
 
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-12!
 
 # httr2 1.0.0
 
 ## Function lifecycle
 
-!begin-bullets-12!
+!begin-bullets-13!
 
 -   !begin-bullet!
     `local_mock()` and `with_mock()` have been deprecated in favour of
@@ -446,11 +452,11 @@
 
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
 
 ## Multiple requests
 
-!begin-bullets-13!
+!begin-bullets-14!
 
 -   !begin-bullet!
     New `req_perform_sequential()` performs a known set of requests
@@ -491,11 +497,11 @@
 
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-14!
 
 ## OAuth features
 
-!begin-bullets-14!
+!begin-bullets-15!
 
 -   !begin-bullet!
     A new `vignette("oauth")` gives many more details about how OAuth
@@ -537,11 +543,11 @@
 
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-15!
 
 ## Other new features
 
-!begin-bullets-15!
+!begin-bullets-16!
 
 -   !begin-bullet!
     @mgirlich is now a httr2 contributor in recognition of his many
@@ -600,11 +606,11 @@
 
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-16!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-16!
+!begin-bullets-17!
 
 -   !begin-bullet!
     The httr2 examples now only run on R 4.2 and later so that we can
@@ -690,11 +696,11 @@
 
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-17!
 
 # httr2 0.2.3
 
-!begin-bullets-17!
+!begin-bullets-18!
 
 -   !begin-bullet!
     New `example_url()` to launch a local server, making tests and
@@ -729,11 +735,11 @@
 
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-18!
 
 # httr2 0.2.2
 
-!begin-bullets-18!
+!begin-bullets-19!
 
 -   !begin-bullet!
     `curl_translate()` can now handle curl copied from Chrome developer
@@ -771,11 +777,11 @@
 
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-19!
 
 # httr2 0.2.1
 
-!begin-bullets-19!
+!begin-bullets-20!
 
 -   !begin-bullet!
     "Wrapping APIs" is now an article, not a vignette.
@@ -787,13 +793,13 @@
 
     !end-bullet!
 
-!end-bullets-19!
+!end-bullets-20!
 
 # httr2 0.2.0
 
 ## New features
 
-!begin-bullets-20!
+!begin-bullets-21!
 
 -   !begin-bullet!
     `req_body_form()`, `req_body_multipart()`, and `req_url_query()` now
@@ -817,11 +823,11 @@
 
     !end-bullet!
 
-!end-bullets-20!
+!end-bullets-21!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-21!
+!begin-bullets-22!
 
 -   !begin-bullet!
     `httr_path` class renamed to `httr2_path` to correctly match package
@@ -866,11 +872,11 @@
 
     !end-bullet!
 
-!end-bullets-21!
+!end-bullets-22!
 
 # httr2 0.1.1
 
-!begin-bullets-22!
+!begin-bullets-23!
 
 -   !begin-bullet!
     Fix R CMD check failures on CRAN
@@ -881,4 +887,4 @@
 
     !end-bullet!
 
-!end-bullets-22!
+!end-bullets-23!
