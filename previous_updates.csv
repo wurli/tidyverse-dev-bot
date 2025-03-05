@@ -19001,3 +19001,5 @@ httr2,6ee729024703b11792e765986885f4f4,`req_perform_parallel(pool)` now is depre
 httr2,1161c728eb8eff9c570badf89b6dbe29,"`req_user_agent()` memoizes the default user agent to improve performance, as computing version numbers is relatively slow (300 µs).",NA,NA,NA,NA
 httr2,0a3aa4396a669fbfa0ffdb4b404e796e,"`resp_link_url()` once again respects the case insensitivity for header names (@​DavidRLovell, #655).",NA,NA,NA,NA
 httr2,27837f936fd6f795244903607d742a58,"`resp_stream_sse()` automatically retrieves the next event when the current event contains no data, and returns data as a single string (#650).",NA,NA,NA,NA
+bslib,7a8e8bb53aa7b4f5bbc3cec9c134df37,Fixed an issue where the `<main>` areas of `page_sidebar()` and `page_navbar()` (with a `sidebar`) were made to be a fillable containers even when `fillable = FALSE`. (#1188),NA,NA,NA,NA
+renv,601c1d9488b1789714f240314e55e545,"`renv::install()` gains the `transactional` argument, for parity with `renv::restore()`. (#1109)",NA,NA,NA,NA

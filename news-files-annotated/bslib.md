@@ -9,6 +9,13 @@
     package files to R's temporary directory more than once when
     preparing precompiled theme dependencies (e.g. for a standard
     `bs_theme()` theme). (#1184)
+
+    !end-bullet!
+-   !begin-bullet!
+    Fixed an issue where the `<main>` areas of `page_sidebar()` and
+    `page_navbar()` (with a `sidebar`) were made to be a fillable
+    containers even when `fillable = FALSE`. (#1188)
+
     !end-bullet!
 
 !end-bullets-1!
