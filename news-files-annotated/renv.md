@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed an issue where package installation could fail on Arch Linux
+    with the error message "don't know how to check sysreqs on this
+    system". (#2107)
+
+    !end-bullet!
+-   !begin-bullet!
     `renv` now supports profile-specific comments within `.gitignore`
     and `.renvignore` files. These are comments of the form `#| <code>`,
     where `<code>` is R code which should indicate if the `.renvignore`
