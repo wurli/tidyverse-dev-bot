@@ -7,6 +7,7 @@
     binaries of Chrome and `chrome-headless-shell` for Mac (x64 or
     arm64), Windows (32- or 64-bit) or Linux (x86-64) from the Chrome
     for Testing service. (#198)
+
     !begin-bullets-2!
     -   !begin-bullet!
         Use `with_chrome_version()` or `local_chrome_version()` to
@@ -25,6 +26,20 @@
         !end-bullet!
 
     !end-bullets-2!
+    !end-bullet!
+-   !begin-bullet!
+    `ChromoteSession$new()` gains a `mobile` argument that can be used
+    to set the device emulation in that session to emulate a mobile
+    browser. The default is `mobile = FALSE`, which matches previous
+    behavior. (#205)
+
+    !end-bullet!
+-   !begin-bullet!
+    `ChromoteSession$new()` now sets `width` and `height` using
+    Emulation.setDeviceMetricsOverride, which works for all Chrome
+    binaries and versions. This fixes an issue with `width` and `height`
+    being ignored for Chrome versions 128-133. (#205)
+
     !end-bullet!
 
 !end-bullets-1!
