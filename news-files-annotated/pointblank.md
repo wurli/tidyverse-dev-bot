@@ -32,6 +32,10 @@
     (#564)
 
     !end-bullet!
+-   !begin-bullet!
+    A new Get Started vignette (#605).
+
+    !end-bullet!
 
 !end-bullets-1!
 
