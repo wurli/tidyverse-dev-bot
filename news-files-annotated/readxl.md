@@ -1,5 +1,8 @@
 # readxl (development version)
 
+This release contains no user-facing changes. It eliminates a warning
+seen with gcc UBSAN.
+
 # readxl 1.4.4
 
 This release contains no user-facing changes.
