@@ -1,5 +1,7 @@
 # httr2 (development version)
 
+# httr2 1.1.1
+
 ## New features
 
 * `req_perform_parallel()` lifts many of the previous restrictions. It supports simplified versions of `req_throttle()` and `req_retry()`, can refresh OAuth tokens, and checks the cache before/after each request. (#681).
