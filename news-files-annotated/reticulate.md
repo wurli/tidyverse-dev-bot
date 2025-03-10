@@ -13,6 +13,12 @@
 
     !end-bullet!
 -   !begin-bullet!
+    Fixed an issue where `[` received Python objects as slice arguments.
+    e.g., `x[start:end]` when `start` or `end` were Python objects
+    (#1731).
+
+    !end-bullet!
+-   !begin-bullet!
     Reticulate-managed `uv` can now resolve system-installed Pythons,
     supporting platforms where pre-built binaries are unavailable, such
     as musl-based Alpine Linux (#1751, #1752).

@@ -19015,3 +19015,4 @@ duckplyr,476e5a2926b9af7c9362eccaee934060,Joins no longer materialize the input 
 duckplyr,bd08d5dfbbe05ccbf6356c389dbf2ccb,"`compute()` does not have a fallback, failures are reported to the client (#637).",NA,NA,NA,NA
 duckplyr,0624fa748ebbbe9c9be434a1eabab416,Implement `slice_head()` (#640).,NA,NA,NA,NA
 duckplyr,5ec90b9037c20a99980152d50ae26a0b,Fix sync scripts and add reproducible code (#639).,NA,NA,NA,NA
+reticulate,7a1a37ae01495166b86af68399e96ac5,"Fixed an issue where `[` received Python objects as slice arguments. e.g., `x[start:end]` when `start` or `end` were Python objects (#1731).",NA,NA,NA,NA
