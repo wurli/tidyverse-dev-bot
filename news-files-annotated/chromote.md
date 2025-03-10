@@ -41,6 +41,17 @@
     being ignored for Chrome versions 128-133. (#205)
 
     !end-bullet!
+-   !begin-bullet!
+    `ChromoteSession` gains two new helper methods:
+    `$set_viewport_size()` and `$get_viewport_size()`. These methods
+    allow you to change the viewport size -- effectively the virtual
+    window size for a page -- or to get the current viewport size. If
+    you previously relied on `$Emulation$setVisibleSize()` (now a
+    deprecated method in the Chrome DevTools Protocol),
+    `$set_viewport_size()` is a good replacement as it uses
+    Emulation.setDeviceMetricsOverride instead. (#206)
+
+    !end-bullet!
 
 !end-bullets-1!
 
