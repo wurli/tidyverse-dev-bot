@@ -19020,3 +19020,4 @@ chromote,323080b7d592fb4d24646d31be7852ec,"`ChromoteSession` gains two new helpe
 duckplyr,b2fd7e5a91bedf3f6985111523e47c4d,Internal `rel_to_df()` needs `prudence` argument (#644).,NA,NA,NA,NA
 ragg,f69b014267deac4dfb9e402a6a05fb61,Added `agg_record()` for optimised plot recording,NA,NA,NA,NA
 chromote,a078e6d5eaec04177b0bfcfb97aeaf52,Fixed a bug in `chromote_info()` on Windows with Powershell when no version info is returned. (#207),NA,NA,NA,NA
+plumber,db86e308b9a6afaa1e2bfbb6fdbbf3ed,Added support for Arrow IPC Streams (@​josiahparry #968),NA,NA,NA,NA
