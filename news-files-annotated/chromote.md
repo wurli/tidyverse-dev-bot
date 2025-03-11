@@ -52,6 +52,11 @@
     Emulation.setDeviceMetricsOverride instead. (#206)
 
     !end-bullet!
+-   !begin-bullet!
+    Fixed a bug in `chromote_info()` on Windows with Powershell when no
+    version info is returned. (#207)
+
+    !end-bullet!
 
 !end-bullets-1!
 
