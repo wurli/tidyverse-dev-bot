@@ -19021,3 +19021,4 @@ duckplyr,b2fd7e5a91bedf3f6985111523e47c4d,Internal `rel_to_df()` needs `prudence
 ragg,f69b014267deac4dfb9e402a6a05fb61,Added `agg_record()` for optimised plot recording,NA,NA,NA,NA
 chromote,a078e6d5eaec04177b0bfcfb97aeaf52,Fixed a bug in `chromote_info()` on Windows with Powershell when no version info is returned. (#207),NA,NA,NA,NA
 plumber,db86e308b9a6afaa1e2bfbb6fdbbf3ed,Added support for Arrow IPC Streams (@​josiahparry #968),NA,NA,NA,NA
+renv,0cdb01cbb7e8630dc6b8d348b9386cc5,Fixed an issue where `renv::hydrate()` could fail to install packages discovered in the user library during `renv::init()`. (#2109),NA,NA,NA,NA

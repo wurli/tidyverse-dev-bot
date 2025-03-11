@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed an issue where `renv::hydrate()` could fail to install
+    packages discovered in the user library during `renv::init()`.
+    (#2109)
+
+    !end-bullet!
+-   !begin-bullet!
     `renv::update()` now only updates the packages installed in the
     project library by default. `renv::update(all = TRUE)` can be used
     to also check if packages installed in the default library are
