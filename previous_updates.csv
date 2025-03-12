@@ -19036,3 +19036,4 @@ reticulate::import(""tensorflow"")$experimental$numpy$
 keras,7f7282155ed64db33ebd91488c53d40e,• new `op_convert_to_array()` to convert a tensor to an R array.,NA,NA,NA,NA
 keras,7f7282155ed64db33ebd91488c53d40e,• Fixed an issue where `op_shape()` would sometimes return a TensorFlow `TensorShape`,NA,NA,NA,NA
 keras,7f7282155ed64db33ebd91488c53d40e,"• Fixes for `metric_iou()`, `op_top_k()`, and `op_eye()` being called with R atomic doubles",NA,NA,NA,NA
+R6,913ae8566383d46e22011288b3816668,"In `.DollarNames.R6()`, add a default value for `pattern = """"`.",NA,NA,NA,NA
