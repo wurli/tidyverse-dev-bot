@@ -1,6 +1,52 @@
-# keras3 1.3.0
+# keras3 (development version)
 
 !begin-bullets-1!
+
+-   !begin-bullet!
+    `KERAS_HOME` is now set to `tools::R_user_dir("keras3", "cache")` if
+    `~/.keras` does not exist and `KERAS_HOME` is unset.
+
+    !end-bullet!
+-   !begin-bullet!
+    `tf.experimental_enable_numpy_behavior()` is no longer automatically
+    called, due to errors with `keras-hub`. This change makes dtype
+    promotion behavior more strict. To reenable, it's recommended to use
+    "safe" mode:
+
+    !begin-codeblock!
+    ``` r
+    reticulate::import("tensorflow")$experimental$numpy$
+      experimental_enable_numpy_behavior(
+        prefer_float32 = TRUE,
+        dtype_conversion_mode = "safe"
+      )
+    ```
+
+    !end-codeblock!
+    !begin-bullets-2!
+    -   !begin-bullet!
+        new `op_convert_to_array()` to convert a tensor to an R array.
+
+        !end-bullet!
+    -   !begin-bullet!
+        Fixed an issue where `op_shape()` would sometimes return a
+        TensorFlow `TensorShape`
+
+        !end-bullet!
+    -   !begin-bullet!
+        Fixes for `metric_iou()`, `op_top_k()`, and `op_eye()` being
+        called with R atomic doubles
+
+        !end-bullet!
+
+    !end-bullets-2!
+    !end-bullet!
+
+!end-bullets-1!
+
+# keras3 1.3.0
+
+!begin-bullets-3!
 
 -   !begin-bullet!
     Keras now uses `reticulate::py_require()` to resolve Python
@@ -33,15 +79,15 @@
 
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-3!
 
 ## Added compatibility with Keras v3.8.0. User-facing changes:
 
-!begin-bullets-2!
+!begin-bullets-4!
 
 -   !begin-bullet!
     New symbols:
-    !begin-bullets-3!
+    !begin-bullets-5!
     -   !begin-bullet!
         `activation_sparse_plus()`
         !end-bullet!
@@ -100,7 +146,7 @@
         `op_unravel_index()`
         !end-bullet!
 
-    !end-bullets-3!
+    !end-bullets-5!
     !end-bullet!
 -   !begin-bullet!
     Add argument axis to tversky loss
@@ -118,7 +164,7 @@
     TensorFlow specific changes: Make `random_shuffle()` XLA compilable
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-4!
 
 ## Added compatibility with Keras v3.7.0. User-facing changes:
 
@@ -126,7 +172,7 @@
 
 #### Activations
 
-!begin-bullets-4!
+!begin-bullets-6!
 
 -   !begin-bullet!
     `activation_celu()`
@@ -153,11 +199,11 @@
     `activation_tanh_shrink()`
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-6!
 
 #### Configuration
 
-!begin-bullets-5!
+!begin-bullets-7!
 
 -   !begin-bullet!
     `config_disable_flash_attention()`
@@ -169,11 +215,11 @@
     `config_is_flash_attention_enabled()`
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-7!
 
 #### Layers and Initializers
 
-!begin-bullets-6!
+!begin-bullets-8!
 
 -   !begin-bullet!
     `initializer_stft()`
@@ -185,11 +231,11 @@
     `layer_stft_spectrogram()`
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-8!
 
 #### Losses and Metrics
 
-!begin-bullets-7!
+!begin-bullets-9!
 
 -   !begin-bullet!
     `loss_circle()`
@@ -201,11 +247,11 @@
     `metric_pearson_correlation()`
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-9!
 
 #### Operations
 
-!begin-bullets-8!
+!begin-bullets-10!
 
 -   !begin-bullet!
     `op_celu()`
@@ -238,11 +284,11 @@
     `op_tanh_shrink()`
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-10!
 
 #### New arguments
 
-!begin-bullets-9!
+!begin-bullets-11!
 
 -   !begin-bullet!
     `callback_backup_and_restore()`: Added `double_checkpoint` argument
@@ -263,11 +309,11 @@
     `from_sorted_ids` argument
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-11!
 
 ### Performance improvements
 
-!begin-bullets-10!
+!begin-bullets-12!
 
 -   !begin-bullet!
     Added native Flash Attention support for GPU (via cuDNN) and TPU
@@ -294,13 +340,13 @@
 
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-12!
 
 ## Added compatibility with Keras v3.6.0. User-facing changes:
 
 #### Breaking changes:
 
-!begin-bullets-11!
+!begin-bullets-13!
 
 -   !begin-bullet!
     When using `get_file()` with `extract = TRUE` or `untar = TRUE`, the
@@ -308,18 +354,18 @@
     the path of the archive.
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-13!
 
 #### Other changes and additions:
 
-!begin-bullets-12!
+!begin-bullets-14!
 
 -   !begin-bullet!
     Logging is now asynchronous in `fit()`, `evaluate()`, and
     `predict()`. This enables 100% compact stacking of `train_step`
     calls on accelerators (e.g. when running small models on TPU).
 
-    !begin-bullets-13!
+    !begin-bullets-15!
     -   !begin-bullet!
         If you are using custom callbacks that rely on `on_batch_end`,
         this will disable async logging. You can re-enable it by adding
@@ -328,12 +374,12 @@
         Default callbacks like the progress bar are async-safe.
         !end-bullet!
 
-    !end-bullets-13!
+    !end-bullets-15!
     !end-bullet!
 -   !begin-bullet!
     New bitwise operations:
 
-    !begin-bullets-14!
+    !begin-bullets-16!
     -   !begin-bullet!
         `op_bitwise_and()`
         !end-bullet!
@@ -356,12 +402,12 @@
         `op_bitwise_xor()`
         !end-bullet!
 
-    !end-bullets-14!
+    !end-bullets-16!
     !end-bullet!
 -   !begin-bullet!
     New math operations:
 
-    !begin-bullets-15!
+    !begin-bullets-17!
     -   !begin-bullet!
         `op_logdet()`
         !end-bullet!
@@ -372,7 +418,7 @@
         `op_histogram()`
         !end-bullet!
 
-    !end-bullets-15!
+    !end-bullets-17!
     !end-bullet!
 -   !begin-bullet!
     New neural network operation: `op_dot_product_attention()`
@@ -381,7 +427,7 @@
 -   !begin-bullet!
     New image preprocessing layers:
 
-    !begin-bullets-16!
+    !begin-bullets-18!
     -   !begin-bullet!
         `layer_auto_contrast()`
         !end-bullet!
@@ -389,7 +435,7 @@
         `layer_solarization()`
         !end-bullet!
 
-    !end-bullets-16!
+    !end-bullets-18!
     !end-bullet!
 -   !begin-bullet!
     New Model functions `get_state_tree()` and `set_state_tree()`, for
@@ -403,7 +449,7 @@
     `keras_model_sequential()`, `layer_pipeline()` has a few key
     differences:
 
-    !begin-bullets-17!
+    !begin-bullets-19!
     -   !begin-bullet!
         It's not a Model, just a plain layer.
         !end-bullet!
@@ -413,7 +459,7 @@
         of the backend you use.
         !end-bullet!
 
-    !end-bullets-17!
+    !end-bullets-19!
     !end-bullet!
 -   !begin-bullet!
     New argument: `export_savedmodel(verbose = )`
@@ -428,19 +474,19 @@
 
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-14!
 
 # keras3 1.2.0
 
-!begin-bullets-18!
+!begin-bullets-20!
 
 -   !begin-bullet!
     Added compatibility with Keras v3.5.0. User facing changes:
 
-    !begin-bullets-19!
+    !begin-bullets-21!
     -   !begin-bullet!
         New functions:
-        !begin-bullets-20!
+        !begin-bullets-22!
         -   !begin-bullet!
             `op_associative_scan()`
             !end-bullet!
@@ -451,7 +497,7 @@
             `optimizer_lamb()`
             !end-bullet!
 
-        !end-bullets-20!
+        !end-bullets-22!
         !end-bullet!
     -   !begin-bullet!
         `keras$DTypePolicy` instances can now be supplied to `dtype`
@@ -482,14 +528,14 @@
         Bug fixes and performance improvements.
         !end-bullet!
 
-    !end-bullets-19!
+    !end-bullets-21!
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-20!
 
 # keras3 1.1.0
 
-!begin-bullets-21!
+!begin-bullets-23!
 
 -   !begin-bullet!
     Fixed issue where GPUs would not be found when running on Windows
@@ -513,10 +559,10 @@
 -   !begin-bullet!
     Added compatibility with Keras v3.4.0. User facing changes:
 
-    !begin-bullets-22!
+    !begin-bullets-24!
     -   !begin-bullet!
         New functions:
-        !begin-bullets-23!
+        !begin-bullets-25!
         -   !begin-bullet!
             `op_argpartition()`
             !end-bullet!
@@ -542,11 +588,11 @@
             `op_image_rgb_to_hsv()`
             !end-bullet!
 
-        !end-bullets-23!
+        !end-bullets-25!
         !end-bullet!
     -   !begin-bullet!
         Changes:
-        !begin-bullets-24!
+        !begin-bullets-26!
         -   !begin-bullet!
             Added support for arbitrary, deeply nested input/output
             structures in Functional models (e.g. lists of lists of
@@ -554,7 +600,7 @@
             !end-bullet!
         -   !begin-bullet!
             Add support for `optional` Functional inputs.
-            !begin-bullets-25!
+            !begin-bullets-27!
             -   !begin-bullet!
                 `keras_input()` gains an `optional` argument.
                 !end-bullet!
@@ -563,7 +609,7 @@
                 argument.
                 !end-bullet!
 
-            !end-bullets-25!
+            !end-bullets-27!
             !end-bullet!
         -   !begin-bullet!
             Add support for `float8` inference for `Dense` and
@@ -625,17 +671,17 @@
             Bugs fixes and performance improvements.
             !end-bullet!
 
-        !end-bullets-24!
+        !end-bullets-26!
         !end-bullet!
 
-    !end-bullets-22!
+    !end-bullets-24!
     !end-bullet!
 
-!end-bullets-21!
+!end-bullets-23!
 
 # keras3 1.0.0
 
-!begin-bullets-26!
+!begin-bullets-28!
 
 -   !begin-bullet!
     Chains of `layer_*` calls with `|>` now instantiate layers in the
@@ -648,11 +694,11 @@
 
     !end-bullet!
 
-!end-bullets-26!
+!end-bullets-28!
 
 User facing changes with upstream Keras v3.3.3:
 
-!begin-bullets-27!
+!begin-bullets-29!
 
 -   !begin-bullet!
     new functions: `op_slogdet()`, `op_psnr()`
@@ -673,11 +719,11 @@ User facing changes with upstream Keras v3.3.3:
 
     !end-bullet!
 
-!end-bullets-27!
+!end-bullets-29!
 
 User facing changes with upstream Keras v3.3.2:
 
-!begin-bullets-28!
+!begin-bullets-30!
 
 -   !begin-bullet!
     new function: `op_ctc_decode()`
@@ -763,13 +809,13 @@ User facing changes with upstream Keras v3.3.2:
 
     !end-bullet!
 
-!end-bullets-28!
+!end-bullets-30!
 
 # keras3 0.2.0
 
 New functions:
 
-!begin-bullets-29!
+!begin-bullets-31!
 
 -   !begin-bullet!
     `quantize_weights()`: quantize model or layer weights in-place.
@@ -818,7 +864,7 @@ New functions:
 -   !begin-bullet!
     New Ops
 
-    !begin-bullets-30!
+    !begin-bullets-32!
     -   !begin-bullet!
         `op_custom_gradient()`
         !end-bullet!
@@ -841,12 +887,12 @@ New functions:
         \`
         !end-bullet!
 
-    !end-bullets-30!
+    !end-bullets-32!
     !end-bullet!
 -   !begin-bullet!
     New family of linear algebra ops
 
-    !begin-bullets-31!
+    !begin-bullets-33!
     -   !begin-bullet!
         `op_cholesky()`
         !end-bullet!
@@ -875,7 +921,7 @@ New functions:
         `op_svd()`
         !end-bullet!
 
-    !end-bullets-31!
+    !end-bullets-33!
     !end-bullet!
 -   !begin-bullet!
     `audio_dataset_from_directory()`, `image_dataset_from_directory()`
@@ -939,11 +985,11 @@ New functions:
 
     !end-bullet!
 
-!end-bullets-29!
+!end-bullets-31!
 
 # keras3 0.1.0
 
-!begin-bullets-32!
+!begin-bullets-34!
 
 -   !begin-bullet!
     The package has been rebuilt for Keras 3.0. Refer to
@@ -952,11 +998,11 @@ New functions:
     documentation.
     !end-bullet!
 
-!end-bullets-32!
+!end-bullets-34!
 
 # keras 2.13.0
 
-!begin-bullets-33!
+!begin-bullets-35!
 
 -   !begin-bullet!
     Default TF version installed by `install_keras()` is now 2.13.
@@ -965,7 +1011,7 @@ New functions:
 -   !begin-bullet!
     Updated layers:
 
-    !begin-bullets-34!
+    !begin-bullets-36!
     -   !begin-bullet!
         `layer_batch_normalization()` updated signature, with changes to
         options for distributed training.
@@ -974,7 +1020,7 @@ New functions:
         `layer_embedding()` gains a `sparse` argument.
         !end-bullet!
 
-    !end-bullets-34!
+    !end-bullets-36!
     !end-bullet!
 -   !begin-bullet!
     Fixed deadlock when an R generator was passed to `fit()`,
@@ -988,11 +1034,11 @@ New functions:
 
     !end-bullet!
 
-!end-bullets-33!
+!end-bullets-35!
 
 # keras 2.11.1
 
-!begin-bullets-35!
+!begin-bullets-37!
 
 -   !begin-bullet!
     Update S3 method formals per new CRAN requirement
@@ -1005,11 +1051,11 @@ New functions:
 
     !end-bullet!
 
-!end-bullets-35!
+!end-bullets-37!
 
 # keras 2.11.0
 
-!begin-bullets-36!
+!begin-bullets-38!
 
 -   !begin-bullet!
     Default TensorFlow version installed by `install_keras()` is now
@@ -1032,7 +1078,7 @@ New functions:
 -   !begin-bullet!
     updates to layers:
 
-    !begin-bullets-37!
+    !begin-bullets-39!
     -   !begin-bullet!
         `layer_attention()` gains `score_mode` and `dropout` arguments.
         !end-bullet!
@@ -1058,7 +1104,7 @@ New functions:
         `layer_string_lookup()` gains an `idf_weights` argument.
         !end-bullet!
 
-    !end-bullets-37!
+    !end-bullets-39!
     !end-bullet!
 -   !begin-bullet!
     Fixed issue where `input_shape` supplied to custom layers defined
@@ -1098,16 +1144,16 @@ New functions:
 
     !end-bullet!
 
-!end-bullets-36!
+!end-bullets-38!
 
 # keras 2.9.0
 
-!begin-bullets-38!
+!begin-bullets-40!
 
 -   !begin-bullet!
     New functions for constructing custom keras subclasses:
 
-    !begin-bullets-39!
+    !begin-bullets-41!
     -   !begin-bullet!
         `new_model_class()`
         !end-bullet!
@@ -1127,7 +1173,7 @@ New functions:
         `new_learning_rate_schedule_class()`.
         !end-bullet!
 
-    !end-bullets-39!
+    !end-bullets-41!
     Also provided is `mark_active()`, a decorator for indicating a class
     method should be an active binding (i.e., decorated with Python's
     `@property`). `mark_active()` can be used in the `new_*_class`
@@ -1144,7 +1190,7 @@ New functions:
     New family of functions for controlling optimizer learning rates
     during training:
 
-    !begin-bullets-40!
+    !begin-bullets-42!
     -   !begin-bullet!
         `learning_rate_schedule_cosine_decay()`
         !end-bullet!
@@ -1164,7 +1210,7 @@ New functions:
         `learning_rate_schedule_polynomial_decay()`
         !end-bullet!
 
-    !end-bullets-40!
+    !end-bullets-42!
     Also, a function for constructing custom learning rate schedules:
     `new_learning_rate_schedule_class()`.
 
@@ -1204,7 +1250,7 @@ New functions:
     `format()` method for keras models (and derivative methods
     `print()`, `summary()`, `str()`, and `py_str()`):
 
-    !begin-bullets-41!
+    !begin-bullets-43!
     -   !begin-bullet!
         gain a new arg `compact`. If `TRUE` (the default) white-space
         only lines are stripped out of `model.summary()`.
@@ -1215,12 +1261,12 @@ New functions:
         is frozen.
         !end-bullet!
 
-    !end-bullets-41!
+    !end-bullets-43!
     !end-bullet!
 -   !begin-bullet!
     `freeze_weights()` and `unfreeze_weights()`:
 
-    !begin-bullets-42!
+    !begin-bullets-44!
     -   !begin-bullet!
         gain a flexible `which` argument that can accept layer names (as
         character strings), an integer vector, a boolean vector, or a
@@ -1233,7 +1279,7 @@ New functions:
         list.
         !end-bullet!
 
-    !end-bullets-42!
+    !end-bullets-44!
     !end-bullet!
 -   !begin-bullet!
     `get_weights()` gains a `trainable` argument that can accept `TRUE`
@@ -1244,7 +1290,7 @@ New functions:
 -   !begin-bullet!
     `timeseries_dataset_from_array()`:
 
-    !begin-bullets-43!
+    !begin-bullets-45!
     -   !begin-bullet!
         R arrays are now cast to the floatx dtype ("float32" by default)
         !end-bullet!
@@ -1252,7 +1298,7 @@ New functions:
         `start_index` and `end_index` now are 1-based.
         !end-bullet!
 
-    !end-bullets-43!
+    !end-bullets-45!
     !end-bullet!
 -   !begin-bullet!
     `image_dataset_from_directory()` gains a `crop_to_aspect_ratio`
@@ -1289,7 +1335,7 @@ New functions:
 -   !begin-bullet!
     Backend functions:
 
-    !begin-bullets-44!
+    !begin-bullets-46!
     -   !begin-bullet!
         k_clip() `min_value` and `max_value` gain default values of
         `NULL`, can be omitted. `NULL` is taken as -Inf or Inf,
@@ -1306,7 +1352,7 @@ New functions:
         New function `k_unstack()`.
         !end-bullet!
 
-    !end-bullets-44!
+    !end-bullets-46!
     !end-bullet!
 -   !begin-bullet!
     KerasTensor objects (e.g, returned by `layer_input()`) now inherit
@@ -1337,11 +1383,11 @@ New functions:
 
     !end-bullet!
 
-!end-bullets-38!
+!end-bullets-40!
 
 # keras 2.8.0
 
-!begin-bullets-45!
+!begin-bullets-47!
 
 -   !begin-bullet!
     Breaking change: The semantics of passing a named list to
@@ -1362,7 +1408,7 @@ New functions:
 
     If `inputs` is a named list:
 
-    !begin-bullets-46!
+    !begin-bullets-48!
     -   !begin-bullet!
         `call()`, `fit()`, `evaluate()`, and `predict()` methods can
         also accept a named list for `x`, with names matching to the
@@ -1370,17 +1416,17 @@ New functions:
         matching of `x` is still also supported (requires python 3.7+).
         !end-bullet!
 
-    !end-bullets-46!
+    !end-bullets-48!
     If `outputs` is a named list:
 
-    !begin-bullets-47!
+    !begin-bullets-49!
     -   !begin-bullet!
         `fit()` and `evaluate()` methods can *only* accept a named list
         for `y`, with names matching to the names of `outputs` when the
         model was constructed.
         !end-bullet!
 
-    !end-bullets-47!
+    !end-bullets-49!
     !end-bullet!
 -   !begin-bullet!
     New layer `layer_depthwise_conv_1d()`.
@@ -1436,11 +1482,11 @@ New functions:
 
     !end-bullet!
 
-!end-bullets-45!
+!end-bullets-47!
 
 # keras 2.7.0
 
-!begin-bullets-48!
+!begin-bullets-50!
 
 -   !begin-bullet!
     Default Tensorflow + Keras version is now 2.7.
@@ -1454,7 +1500,7 @@ New functions:
     a custom "cell", a Keras layer that processes one step of a
     sequence. New symbols:
 
-    !begin-bullets-49!
+    !begin-bullets-51!
     -   !begin-bullet!
         `layer_rnn()`, which can compose with builtin cells:
         !end-bullet!
@@ -1472,12 +1518,12 @@ New functions:
         custom cell layer, see the new vignette: "Working with RNNs".
         !end-bullet!
 
-    !end-bullets-49!
+    !end-bullets-51!
     !end-bullet!
 -   !begin-bullet!
     New dataset functions:
 
-    !begin-bullets-50!
+    !begin-bullets-52!
     -   !begin-bullet!
         `text_dataset_from_directory()`
         !end-bullet!
@@ -1485,12 +1531,12 @@ New functions:
         `timeseries_dataset_from_array()`
         !end-bullet!
 
-    !end-bullets-50!
+    !end-bullets-52!
     !end-bullet!
 -   !begin-bullet!
     New layers:
 
-    !begin-bullets-51!
+    !begin-bullets-53!
     -   !begin-bullet!
         `layer_additive_attention()`
         !end-bullet!
@@ -1501,7 +1547,7 @@ New functions:
         `layer_conv_lstm_3d()`
         !end-bullet!
 
-    !end-bullets-51!
+    !end-bullets-53!
     !end-bullet!
 -   !begin-bullet!
     `layer_cudnn_gru()` and `layer_cudnn_lstm()` are deprecated.
@@ -1526,7 +1572,7 @@ New functions:
 -   !begin-bullet!
     New applications:
 
-    !begin-bullets-52!
+    !begin-bullets-54!
     -   !begin-bullet!
         MobileNet V3: `application_mobilenet_v3_large()`,
         `application_mobilenet_v3_small()`
@@ -1544,7 +1590,7 @@ New functions:
         EfficientNet: `application_efficientnet_b{0,1,2,3,4,5,6,7}()`
         !end-bullet!
 
-    !end-bullets-52!
+    !end-bullets-54!
     !end-bullet!
 -   !begin-bullet!
     Many existing `application_*()`'s gain argument
@@ -1604,11 +1650,11 @@ New functions:
 
     !end-bullet!
 
-!end-bullets-48!
+!end-bullets-50!
 
 # keras 2.6.1
 
-!begin-bullets-53!
+!begin-bullets-55!
 
 -   !begin-bullet!
     New family of *preprocessing* layers. These are the spiritual
@@ -1618,7 +1664,7 @@ New functions:
 
     Image preprocessing:
 
-    !begin-bullets-54!
+    !begin-bullets-56!
     -   !begin-bullet!
         `layer_resizing()`
         !end-bullet!
@@ -1629,10 +1675,10 @@ New functions:
         `layer_center_crop()`
         !end-bullet!
 
-    !end-bullets-54!
+    !end-bullets-56!
     Image augmentation:
 
-    !begin-bullets-55!
+    !begin-bullets-57!
     -   !begin-bullet!
         `layer_random_crop()`
         !end-bullet!
@@ -1658,10 +1704,10 @@ New functions:
         `layer_random_width()`
         !end-bullet!
 
-    !end-bullets-55!
+    !end-bullets-57!
     Categorical features preprocessing:
 
-    !begin-bullets-56!
+    !begin-bullets-58!
     -   !begin-bullet!
         `layer_category_encoding()`
         !end-bullet!
@@ -1675,10 +1721,10 @@ New functions:
         `layer_string_lookup()`
         !end-bullet!
 
-    !end-bullets-56!
+    !end-bullets-58!
     Numerical features preprocessing:
 
-    !begin-bullets-57!
+    !begin-bullets-59!
     -   !begin-bullet!
         `layer_normalization()`
         !end-bullet!
@@ -1686,11 +1732,11 @@ New functions:
         `layer_discretization()`
         !end-bullet!
 
-    !end-bullets-57!
+    !end-bullets-59!
     These join the previous set of text preprocessing functions, each of
     which have some minor changes:
 
-    !begin-bullets-58!
+    !begin-bullets-60!
     -   !begin-bullet!
         `layer_text_vectorization()` (changed arguments)
         !end-bullet!
@@ -1704,12 +1750,12 @@ New functions:
         `adapt()`
         !end-bullet!
 
-    !end-bullets-58!
+    !end-bullets-60!
     !end-bullet!
 -   !begin-bullet!
     `adapt()` changes:
 
-    !begin-bullets-59!
+    !begin-bullets-61!
     -   !begin-bullet!
         Now accepts all *features preprocessing* layers, previously only
         `layer_text_vectorization()` instances were valid.
@@ -1726,7 +1772,7 @@ New functions:
         `%>%` (previously returned `NULL`)
         !end-bullet!
 
-    !end-bullets-59!
+    !end-bullets-61!
     !end-bullet!
 -   !begin-bullet!
     `get_vocabulary()` gains a `include_special_tokens` argument.
@@ -1735,7 +1781,7 @@ New functions:
 -   !begin-bullet!
     `set_vocabulary()`:
 
-    !begin-bullets-60!
+    !begin-bullets-62!
     -   !begin-bullet!
         Now returns the adapted layer invisibly for composability with
         `%>%` (previously returned `NULL`)
@@ -1745,12 +1791,12 @@ New functions:
         `oov_df_value`) are now subsumed in `...`.
         !end-bullet!
 
-    !end-bullets-60!
+    !end-bullets-62!
     !end-bullet!
 -   !begin-bullet!
     `layer_text_vectorization()`:
 
-    !begin-bullets-61!
+    !begin-bullets-63!
     -   !begin-bullet!
         valid values for argument `output_mode` change: `"binary"` is
         renamed to `"multi_hot"` and `"tf-idf"` is renamed to `"tf_idf"`
@@ -1761,7 +1807,7 @@ New functions:
         incorrectly return a ragged tensor output shape.
         !end-bullet!
 
-    !end-bullets-61!
+    !end-bullets-63!
     !end-bullet!
 -   !begin-bullet!
     Existing layer instances gain the ability to be added to sequential
@@ -1815,7 +1861,7 @@ New functions:
 
     !end-bullet!
 
-!end-bullets-53!
+!end-bullets-55!
 
 # keras 2.6.0
 
@@ -1826,7 +1872,7 @@ Tensorflow/Keras. You can upgrade the R package and still preserve the
 previous behavior by installing a specific version of Tensorflow:
 `keras3::install_keras(tensorflow="2.4.0")`
 
-!begin-bullets-62!
+!begin-bullets-64!
 
 -   !begin-bullet!
     `predict_proba()` and `predict_classes()` were removed.
@@ -1842,11 +1888,11 @@ previous behavior by installing a specific version of Tensorflow:
     removed. They are replaced by the new argument `idf_weights`.
     !end-bullet!
 
-!end-bullets-62!
+!end-bullets-64!
 
 New Features:
 
-!begin-bullets-63!
+!begin-bullets-65!
 
 -   !begin-bullet!
     Default Tensorflow/Keras version is now 2.6
@@ -1860,7 +1906,7 @@ New Features:
 -   !begin-bullet!
     New vignettes:
 
-    !begin-bullets-64!
+    !begin-bullets-66!
     -   !begin-bullet!
         Subclassing Python classes: How to use `%py_class%`.
         !end-bullet!
@@ -1875,7 +1921,7 @@ New Features:
         Writing your own callbacks.
         !end-bullet!
 
-    !end-bullets-64!
+    !end-bullets-66!
     !end-bullet!
 -   !begin-bullet!
     The `keras` Python module is exported
@@ -1884,7 +1930,7 @@ New Features:
 -   !begin-bullet!
     Major changes to the underlying handling of custom R6 layer classes.
 
-    !begin-bullets-65!
+    !begin-bullets-67!
     -   !begin-bullet!
         A new `r_to_py()` method is provided for `R6ClassGenerator`
         objects.
@@ -1916,7 +1962,7 @@ New Features:
         !end-bullet!
     -   !begin-bullet!
         Methods of `super` can be accessed in the 3 common ways:
-        !begin-bullets-66!
+        !begin-bullets-68!
         -   !begin-bullet!
             (Python 3 style): `super()$"__init__"()`
             !end-bullet!
@@ -1927,7 +1973,7 @@ New Features:
             (R6 style): `super$initialize()`
             !end-bullet!
 
-        !end-bullets-66!
+        !end-bullets-68!
         !end-bullet!
     -   !begin-bullet!
         User defined custom classes that inherit from a Python type are
@@ -1936,7 +1982,7 @@ New Features:
         !end-bullet!
     -   !begin-bullet!
         Custom layers can now properly handle masks (#1225)
-        !begin-bullets-67!
+        !begin-bullets-69!
         -   !begin-bullet!
             `supports_masking = TRUE` attribute is now supported
             !end-bullet!
@@ -1944,14 +1990,14 @@ New Features:
             `compute_mask()` user defined method is now supported
             !end-bullet!
 
-        !end-bullets-67!
+        !end-bullets-69!
         !end-bullet!
     -   !begin-bullet!
         `call()` methods now support a `training` argument, as well as
         any additional arbitrary user-defined arguments
         !end-bullet!
 
-    !end-bullets-65!
+    !end-bullets-67!
     !end-bullet!
 -   !begin-bullet!
     `Layer()` custom layer constructor is now lazy about initializing
@@ -1970,7 +2016,7 @@ New Features:
     reliable for more users now. If you encounter installation issues,
     please file an issue: https://github.com/rstudio/keras/issues/new
 
-    !begin-bullets-68!
+    !begin-bullets-70!
     -   !begin-bullet!
         Potentially breaking change: numeric versions supplied without a
         patchlevel now automatically pull the latest patch release.
@@ -1989,12 +2035,12 @@ New Features:
 
         !end-bullet!
 
-    !end-bullets-68!
+    !end-bullets-70!
     !end-bullet!
 -   !begin-bullet!
     Loss functions:
 
-    !begin-bullets-69!
+    !begin-bullets-71!
     -   !begin-bullet!
         All the loss functions gain the ability to return a callable (a
         `keras$losses$Loss` instance) if `y_true` and `y_pred` arguments
@@ -2004,7 +2050,7 @@ New Features:
     -   !begin-bullet!
         New builtin loss functions:
 
-        !begin-bullets-70!
+        !begin-bullets-72!
         -   !begin-bullet!
             `loss_huber()`
             !end-bullet!
@@ -2012,15 +2058,15 @@ New Features:
             `loss_kl_divergence()`
             !end-bullet!
 
-        !end-bullets-70!
+        !end-bullets-72!
         !end-bullet!
 
-    !end-bullets-69!
+    !end-bullets-71!
     !end-bullet!
 -   !begin-bullet!
     Metric functions:
 
-    !begin-bullets-71!
+    !begin-bullets-73!
     -   !begin-bullet!
         All the metric functions gain the ability to return a
         `keras$metrics$Metric` instance if called without `y_true` and
@@ -2035,7 +2081,7 @@ New Features:
     -   !begin-bullet!
         New built-in metrics:
 
-        !begin-bullets-72!
+        !begin-bullets-74!
         -   !begin-bullet!
             `metric_true_negatives()`
             !end-bullet!
@@ -2106,10 +2152,10 @@ New Features:
             `metric_auc()`
             !end-bullet!
 
-        !end-bullets-72!
+        !end-bullets-74!
         !end-bullet!
 
-    !end-bullets-71!
+    !end-bullets-73!
     !end-bullet!
 -   !begin-bullet!
     `keras_model_sequential()` gains the ability to accept arguments
@@ -2140,7 +2186,7 @@ New Features:
 -   !begin-bullet!
     The `compile()` method for keras models has been updated:
 
-    !begin-bullets-73!
+    !begin-bullets-75!
     -   !begin-bullet!
         `optimizer` is now an optional argument. It defaults to
         `"rmsprop"` for regular keras models. Custom models can specify
@@ -2157,7 +2203,7 @@ New Features:
         as named arguments.
         !end-bullet!
 
-    !end-bullets-73!
+    !end-bullets-75!
     !end-bullet!
 -   !begin-bullet!
     Added activation functions swish and gelu. (#1226)
@@ -2186,11 +2232,11 @@ New Features:
 
     !end-bullet!
 
-!end-bullets-63!
+!end-bullets-65!
 
 # keras 2.4.0
 
-!begin-bullets-74!
+!begin-bullets-76!
 
 -   !begin-bullet!
     Use compat module when using `set_session` and `get_session`.
@@ -2288,11 +2334,11 @@ New Features:
     (#1197)
     !end-bullet!
 
-!end-bullets-74!
+!end-bullets-76!
 
 # Keras 2.2.3.0 (CRAN)
 
-!begin-bullets-75!
+!begin-bullets-77!
 
 -   !begin-bullet!
     Added `layer_attention` (#1000) by @atroiano.
@@ -2301,11 +2347,11 @@ New Features:
     Fixed issue regarding the KerasMetricsCallback with TF v2.2 (#1020)
     !end-bullet!
 
-!end-bullets-75!
+!end-bullets-77!
 
 # Keras 2.2.5.0 (CRAN)
 
-!begin-bullets-76!
+!begin-bullets-78!
 
 -   !begin-bullet!
     Added `layer_dense_features`.
@@ -2369,11 +2415,11 @@ New Features:
 
     !end-bullet!
 
-!end-bullets-76!
+!end-bullets-78!
 
 ## Keras 2.2.4.1 (CRAN)
 
-!begin-bullets-77!
+!begin-bullets-79!
 
 -   !begin-bullet!
     Use `tf.keras` as default implementation module.
@@ -2397,11 +2443,11 @@ New Features:
 
     !end-bullet!
 
-!end-bullets-77!
+!end-bullets-79!
 
 # Keras 2.2.4 (CRAN)
 
-!begin-bullets-78!
+!begin-bullets-80!
 
 -   !begin-bullet!
     Improve handling of `timeseries_generator()` in calls to
@@ -2481,11 +2527,11 @@ New Features:
 
     !end-bullet!
 
-!end-bullets-78!
+!end-bullets-80!
 
 # Keras 2.2.0
 
-!begin-bullets-79!
+!begin-bullets-81!
 
 -   !begin-bullet!
     Fix issue with serializing models that have constraint arguments
@@ -2596,11 +2642,11 @@ New Features:
 
     !end-bullet!
 
-!end-bullets-79!
+!end-bullets-81!
 
 ## Keras 2.1.6
 
-!begin-bullets-80!
+!begin-bullets-82!
 
 -   !begin-bullet!
     Fix issue with single-element vectors passed to text preprocessing
@@ -2650,11 +2696,11 @@ New Features:
 
     !end-bullet!
 
-!end-bullets-80!
+!end-bullets-82!
 
 ## Keras 2.1.5
 
-!begin-bullets-81!
+!begin-bullets-83!
 
 -   !begin-bullet!
     Support for custom constraints from R
@@ -2674,11 +2720,11 @@ New Features:
 
     !end-bullet!
 
-!end-bullets-81!
+!end-bullets-83!
 
 ## Keras 2.1.4
 
-!begin-bullets-82!
+!begin-bullets-84!
 
 -   !begin-bullet!
     Added support for `remove_learning_phase` in `export_savedmodel()`
@@ -2713,11 +2759,11 @@ New Features:
 
     !end-bullet!
 
-!end-bullets-82!
+!end-bullets-84!
 
 ## Keras 2.1.3
 
-!begin-bullets-83!
+!begin-bullets-85!
 
 -   !begin-bullet!
     Models saved via `export_savedmodel()` that make use of learning
@@ -2744,11 +2790,11 @@ New Features:
 
     !end-bullet!
 
-!end-bullets-83!
+!end-bullets-85!
 
 # Keras 2.1.2
 
-!begin-bullets-84!
+!begin-bullets-86!
 
 -   !begin-bullet!
     Added `theme_bw` option to plot method for training history
@@ -2799,11 +2845,11 @@ New Features:
 
     !end-bullet!
 
-!end-bullets-84!
+!end-bullets-86!
 
 # keras 2.0.9
 
-!begin-bullets-85!
+!begin-bullets-87!
 
 -   !begin-bullet!
     Added `multi_gpu_model()` function.
@@ -2923,11 +2969,11 @@ New Features:
 
     !end-bullet!
 
-!end-bullets-85!
+!end-bullets-87!
 
 # keras 2.0.8
 
-!begin-bullets-86!
+!begin-bullets-88!
 
 -   !begin-bullet!
     Add `use_session_with_seed()` function that establishes a random
@@ -2993,11 +3039,11 @@ New Features:
 
     !end-bullet!
 
-!end-bullets-86!
+!end-bullets-88!
 
 ## keras 2.0.6
 
-!begin-bullets-87!
+!begin-bullets-89!
 
 -   !begin-bullet!
     `install_keras()` function which installs both TensorFlow and Keras
@@ -3073,14 +3119,14 @@ New Features:
 
     !end-bullet!
 
-!end-bullets-87!
+!end-bullets-89!
 
 # keras 2.0.5
 
-!begin-bullets-88!
+!begin-bullets-90!
 
 -   !begin-bullet!
     Initial CRAN release
     !end-bullet!
 
-!end-bullets-88!
+!end-bullets-90!

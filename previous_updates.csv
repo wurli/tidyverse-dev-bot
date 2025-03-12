@@ -19024,3 +19024,15 @@ plumber,db86e308b9a6afaa1e2bfbb6fdbbf3ed,Added support for Arrow IPC Streams (@�
 renv,0cdb01cbb7e8630dc6b8d348b9386cc5,Fixed an issue where `renv::hydrate()` could fail to install packages discovered in the user library during `renv::init()`. (#2109),NA,NA,NA,NA
 duckplyr,028bf2b2a683784539b2fbb51051643b,Translate `dplyr::coalesce()`.,NA,NA,NA,NA
 duckplyr,1d983d307e0a2d72d23281f3350e31a5,"Bring tools and patch up to date (@​joakimlinde, #647).",NA,NA,NA,NA
+keras,87ed90eb91ea1cd3cc3b9661ec20edb9,"`KERAS_HOME` is now set to `tools::R_user_dir(""keras3"", ""cache"")` if `~/.keras` does not exist and `KERAS_HOME` is unset.",NA,NA,NA,NA
+keras,7f7282155ed64db33ebd91488c53d40e,"`tf.experimental_enable_numpy_behavior()` is no longer automatically called, due to errors with `keras-hub`. This change makes dtype promotion behavior more strict. To reenable, it's recommended to use ""safe"" mode:",NA,NA,NA,NA
+keras,7f7282155ed64db33ebd91488c53d40e,"```
+reticulate::import(""tensorflow"")$experimental$numpy$
+  experimental_enable_numpy_behavior(
+    prefer_float32 = TRUE,
+    dtype_conversion_mode = ""safe""
+  )
+```",NA,NA,NA,NA
+keras,7f7282155ed64db33ebd91488c53d40e,• new `op_convert_to_array()` to convert a tensor to an R array.,NA,NA,NA,NA
+keras,7f7282155ed64db33ebd91488c53d40e,• Fixed an issue where `op_shape()` would sometimes return a TensorFlow `TensorShape`,NA,NA,NA,NA
+keras,7f7282155ed64db33ebd91488c53d40e,"• Fixes for `metric_iou()`, `op_top_k()`, and `op_eye()` being called with R atomic doubles",NA,NA,NA,NA
