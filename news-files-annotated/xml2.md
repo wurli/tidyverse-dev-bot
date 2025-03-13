@@ -11,7 +11,7 @@
 
     !end-bullet!
 -   !begin-bullet!
-    Compile with C_VISIBILITY and CXX_VISIBILITY on supporte platforms
+    Compile with C_VISIBILITY and CXX_VISIBILITY on supported platforms
 
     !end-bullet!
 

@@ -4,7 +4,7 @@
 
 * Windows: update fallback libs (for R < 4.3) to libxml2 2.11.5
 
-* Compile with C_VISIBILITY and CXX_VISIBILITY on supporte platforms
+* Compile with C_VISIBILITY and CXX_VISIBILITY on supported platforms
 
 # xml2 1.3.7
 
