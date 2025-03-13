@@ -19037,3 +19037,9 @@ keras,7f7282155ed64db33ebd91488c53d40e,• new `op_convert_to_array()` to conver
 keras,7f7282155ed64db33ebd91488c53d40e,• Fixed an issue where `op_shape()` would sometimes return a TensorFlow `TensorShape`,NA,NA,NA,NA
 keras,7f7282155ed64db33ebd91488c53d40e,"• Fixes for `metric_iou()`, `op_top_k()`, and `op_eye()` being called with R atomic doubles",NA,NA,NA,NA
 R6,913ae8566383d46e22011288b3816668,"In `.DollarNames.R6()`, add a default value for `pattern = """"`.",NA,NA,NA,NA
+pillar,d0821544606c78ede70cb71afd633fda,"Show up to 20 rows by default for lazy tables again, regression introduced in pillar 1.10.0 (#727).",NA,NA,NA,NA
+pillar,ebfb575235deea87f7a2e9c2481a9092,Must be on one line.,NA,NA,NA,NA
+pillar,fdc1fd954a2acf9e09955dedd2f909da,Fix package name for R \< 4.3.,NA,NA,NA,NA
+pillar,44f8f0c6191cfaf4cd3ffad3ead9bdc6,Hard ignore.,NA,NA,NA,NA
+pillar,bb8a33dd08d1e82d19bba6e7a226764a,Ignore udunits2 for R \< 4.3.0.,NA,NA,NA,NA
+pillar,a0d4cbd6199f5f7e2f189467c607c97b,Add tests for regression.,NA,NA,NA,NA
