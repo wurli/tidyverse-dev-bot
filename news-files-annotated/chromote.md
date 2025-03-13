@@ -64,6 +64,13 @@
     a domain, e.g. `Fetch.enable`. (#208)
 
     !end-bullet!
+-   !begin-bullet!
+    The `$view()` method of a `ChromoteSession` will now detect when
+    `chrome-headless-shell` is being used and will use the system
+    browser (via `utils::browseURL()`) rather than the Chrome instance
+    attached to chromote. (#214)
+
+    !end-bullet!
 
 !end-bullets-1!
 
