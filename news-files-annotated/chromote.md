@@ -57,6 +57,13 @@
     version info is returned. (#207)
 
     !end-bullet!
+-   !begin-bullet!
+    `Chromote` and `ChromoteSesssion` gain an
+    `$auto_events_enable_args()` method that sets that arguments used by
+    chromote's auto-events feature when calling the `enable` command for
+    a domain, e.g. `Fetch.enable`. (#208)
+
+    !end-bullet!
 
 !end-bullets-1!
 

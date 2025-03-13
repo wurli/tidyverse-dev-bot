@@ -19043,3 +19043,4 @@ pillar,fdc1fd954a2acf9e09955dedd2f909da,Fix package name for R \< 4.3.,NA,NA,NA,
 pillar,44f8f0c6191cfaf4cd3ffad3ead9bdc6,Hard ignore.,NA,NA,NA,NA
 pillar,bb8a33dd08d1e82d19bba6e7a226764a,Ignore udunits2 for R \< 4.3.0.,NA,NA,NA,NA
 pillar,a0d4cbd6199f5f7e2f189467c607c97b,Add tests for regression.,NA,NA,NA,NA
+chromote,5d5fe809515f0bea8ce13fc9ae9dac0a,"`Chromote` and `ChromoteSesssion` gain an `$auto_events_enable_args()` method that sets that arguments used by chromote's auto-events feature when calling the `enable` command for a domain, e.g. `Fetch.enable`. (#208)",NA,NA,NA,NA
