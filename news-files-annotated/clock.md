@@ -23,6 +23,11 @@
     @MichaelChirico).
 
     !end-bullet!
+-   !begin-bullet!
+    R \>=4.0.0 is now required. This is consistent with the standards of
+    the tidyverse.
+
+    !end-bullet!
 
 !end-bullets-1!
 
