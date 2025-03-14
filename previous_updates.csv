@@ -19046,3 +19046,4 @@ pillar,a0d4cbd6199f5f7e2f189467c607c97b,Add tests for regression.,NA,NA,NA,NA
 chromote,5d5fe809515f0bea8ce13fc9ae9dac0a,"`Chromote` and `ChromoteSesssion` gain an `$auto_events_enable_args()` method that sets that arguments used by chromote's auto-events feature when calling the `enable` command for a domain, e.g. `Fetch.enable`. (#208)",NA,NA,NA,NA
 xml2,a3477ff89da4692fa523301e8c9069fd,Compile with C_VISIBILITY and CXX_VISIBILITY on supporte platforms,NA,NA,NA,NA
 chromote,d33fd47d25aa0d65610c88f0cad3df7a,The `$view()` method of a `ChromoteSession` will now detect when `chrome-headless-shell` is being used and will use the system browser (via `utils::browseURL()`) rather than the Chrome instance attached to chromote. (#214),NA,NA,NA,NA
+clock,9ee1dd14a69c70773d60f31973bd1adc,"Fixed `-Wdeprecated-literal-operator` reported by clang (#386, @​MichaelChirico).",NA,NA,NA,NA
