@@ -19,6 +19,11 @@
 
     !end-bullet!
 -   !begin-bullet!
+    The `[` method will now translate symbol `..` to a Python Ellipsis
+    `...`. (#1763)
+
+    !end-bullet!
+-   !begin-bullet!
     Reticulate-managed `uv` can now resolve system-installed Pythons,
     supporting platforms where pre-built binaries are unavailable, such
     as musl-based Alpine Linux (#1751, #1752).
