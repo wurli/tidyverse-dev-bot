@@ -71,6 +71,17 @@
     attached to chromote. (#214)
 
     !end-bullet!
+-   !begin-bullet!
+    `Chromote` and `ChromoteSession` once again corrrectly handles
+    connections to remote Chrome browsers via `ChromeRemote`. Calling
+    `$close()` on a `Chromote` object connected to a remote browser no
+    longer attempts to close the browser, and will now simply close the
+    websocket connection to the browser. For local process, the
+    `Chromote$close()` gains a `wait` argument that sets the number of
+    seconds to wait for Chrome to gracefully shut down before chromote
+    closes the process. (#212)
+
+    !end-bullet!
 
 !end-bullets-1!
 
