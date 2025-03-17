@@ -19050,3 +19050,17 @@ clock,9ee1dd14a69c70773d60f31973bd1adc,"Fixed `-Wdeprecated-literal-operator` re
 clock,8afd7028d8d67891adc8dacc3aadb25d,"`%Y`, `%F`, `%G`, and `%c` now parse up to 4 *characters* by default, rather than 4 *digits*. This is more in line with the C++20 specification and was a change made in the upstream `<date.h>` parser. Practically, this means that negative years such as `-1000-01-01` will no longer parse with `%Y-%m-%d`, and instead requires `%5Y-%m-%d` to capture the leading `-` (#387).",NA,NA,NA,NA
 clock,58c9cf1a7d7c0ae0e8903f4ddfcffa76,"tzdb \>=0.5.0 is required. Note that older versions of clock are not compatible with tzdb 0.5.0 and above, so if you are having issues (particularly with parsing) please make sure that both clock and tzdb are fully updated (#387).",NA,NA,NA,NA
 reticulate,f597fdd8ec4d52269f7e4c84afb2469c,The `[` method will now translate symbol `..` to a Python Ellipsis `...`. (#1763),NA,NA,NA,NA
+keras,510b1b8271b02d0d4306b95fae339eeb,New `op_subset()` and `x@​r[...]` methods enable tensor subsetting using R's `[` semantics and idioms.,NA,NA,NA,NA
+keras,e3954d0453cbcd612d3742ed94c425b4,"New subset assignment methods implemented for tensors: `op_subset(x, ...) <- value` and `x@​r[...] <- value`",NA,NA,NA,NA
+keras,a2997215c7c2bcc187e5ffb2df75d189,"Breaking changes: All operations prefixed with `op_` now return 1-based indices by default. The following functions that return or consume indices have changed: `op_argmax()`, `op_argmin()`, `op_top_k()`, `op_argpartition()`, `op_searchsorted()`, `op_argsort()`, `op_digitize()`, `op_nonzero()`, `op_split()`, `op_trace()`, `op_swapaxes()`, `op_ctc_decode()`, `op_ctc_loss()`, `op_one_hot()`, `op_arange()`",NA,NA,NA,NA
+keras,9549a263b1623d56631bccc2a17fec6b,"`op_arange()` now matches the semantics of `base::seq()`. By default it starts, includes the end value, and automatically infers step direction.",NA,NA,NA,NA
+keras,1d970739cb9b3dfcbf5cf7019d09f88d,`op_one_hot()` now infers `num_classes` if supplied a factor.,NA,NA,NA,NA
+keras,a277afa2a2f650d53a35f3fac642d2e0,`op_hstack()` and `op_vstack()` now accept arguments passed via `...`.,NA,NA,NA,NA
+keras,519f6b821b389c677253d1f9247c3287,`application_decode_predictions()` now returns a processed data frame by default or a decoder function if predictions are missing.,NA,NA,NA,NA
+keras,55d619d2942d85118e2be6328dd4faf9,`application_preprocess_inputs()` returns a preprocessor function if inputs are missing.,NA,NA,NA,NA
+keras,d048be760cae01d535729cd6168e462a,"Various new examples added to documentation, including `op_scatter()`, `op_switch()`, and `op_nonzero()`.",NA,NA,NA,NA
+keras,b18f4e20ea907a799db3f042f96c26e9,New `x@​py[...]` accessor introduced for Python-style 0-based indexing of tensors.,NA,NA,NA,NA
+keras,11234d46325290d422a88699c82aba56,"New `Summary` group generic method for `keras_shape`, enabling usage like `prod(shape(3, 4))`",NA,NA,NA,NA
+keras,52f5c254e99535ef644eefec5023ebb3,new `op_convert_to_array()` to convert a tensor to an R array.,NA,NA,NA,NA
+keras,ea70893b0c778d41a6c6efd2b432461b,Fixed an issue where `op_shape()` would sometimes return a TensorFlow `TensorShape`,NA,NA,NA,NA
+keras,d7b2749adf6f4e1fe2ec0a7a677b4560,"Fixes for `metric_iou()`, `op_top_k()`, and `op_eye()` being called with R atomic doubles",NA,NA,NA,NA
