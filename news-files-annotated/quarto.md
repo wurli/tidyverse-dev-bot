@@ -26,6 +26,14 @@
     in the PATH (thanks, @jeroen, #220, #221).
 
     !end-bullet!
+-   !begin-bullet!
+    `QUARTO_R_QUIET` environment variable can be used to set
+    `quarto.quiet` option, which overrides any `quiet = TRUE` argument
+    passed to `quarto_*` functions. This can be useful to debug Quarto
+    rendering inside other packages, like **pkgdown**. Overrides will
+    also now happens for GHA debug logging.
+
+    !end-bullet!
 
 !end-bullets-1!
 
