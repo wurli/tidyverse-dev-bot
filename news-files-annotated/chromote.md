@@ -82,6 +82,11 @@
     closes the process. (#212)
 
     !end-bullet!
+-   !begin-bullet!
+    chromote now has a hex sticker! Thank you to @davidrsch for the
+    inspiration. (#216)
+
+    !end-bullet!
 
 !end-bullets-1!
 
