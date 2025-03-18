@@ -19068,3 +19068,4 @@ chromote,5cda4283119062cc54b9cd247b0bacf2,"`Chromote` and `ChromoteSession` once
 quarto,72777431c445dcec497baeacccb8ce0e,"`QUARTO_R_QUIET` environment variable can be used to set `quarto.quiet` option, which overrides any `quiet = TRUE` argument passed to `quarto_*` functions. This can be useful to debug Quarto rendering inside other packages, like **pkgdown**. Overrides will also now happens for GHA debug logging.",NA,NA,NA,NA
 chromote,c6a214e05eb11fdd23e33980a86aa5f1,chromote now has a hex sticker! Thank you to @​davidrsch for the inspiration. (#216),NA,NA,NA,NA
 ragg,c0e9149d74c65246846e9b6985284cc8,"Added support for hold and flushing, mainly in service of Positron",NA,NA,NA,NA
+reticulate,f6132025b99630b4970943eae363706c,The `[` method can now accept index values greater than 2\^31 (#1769),NA,NA,NA,NA
