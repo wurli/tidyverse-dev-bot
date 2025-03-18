@@ -19069,3 +19069,4 @@ quarto,72777431c445dcec497baeacccb8ce0e,"`QUARTO_R_QUIET` environment variable c
 chromote,c6a214e05eb11fdd23e33980a86aa5f1,chromote now has a hex sticker! Thank you to @​davidrsch for the inspiration. (#216),NA,NA,NA,NA
 ragg,c0e9149d74c65246846e9b6985284cc8,"Added support for hold and flushing, mainly in service of Positron",NA,NA,NA,NA
 reticulate,f6132025b99630b4970943eae363706c,The `[` method can now accept index values greater than 2\^31 (#1769),NA,NA,NA,NA
+renv,2ba4df462a3158dd0a917cdb75985fd4,Fixed an issue where `renv::dependencies()` could fail with an unhelpful error message if the scanned document contained a malformed YAML header. (#2117),NA,NA,NA,NA
