@@ -5,6 +5,9 @@
 -   !begin-bullet!
     Added `agg_record()` for optimised plot recording
     !end-bullet!
+-   !begin-bullet!
+    Added support for hold and flushing, mainly in service of Positron
+    !end-bullet!
 
 !end-bullets-1!
 
