@@ -19070,3 +19070,4 @@ chromote,c6a214e05eb11fdd23e33980a86aa5f1,chromote now has a hex sticker! Thank 
 ragg,c0e9149d74c65246846e9b6985284cc8,"Added support for hold and flushing, mainly in service of Positron",NA,NA,NA,NA
 reticulate,f6132025b99630b4970943eae363706c,The `[` method can now accept index values greater than 2\^31 (#1769),NA,NA,NA,NA
 renv,2ba4df462a3158dd0a917cdb75985fd4,Fixed an issue where `renv::dependencies()` could fail with an unhelpful error message if the scanned document contained a malformed YAML header. (#2117),NA,NA,NA,NA
+tibble,4e6abcf79056c70130abf43dfc9fc6a4,IDE.,NA,NA,NA,NA
