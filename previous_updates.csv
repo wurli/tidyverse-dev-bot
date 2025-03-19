@@ -19072,3 +19072,4 @@ reticulate,f6132025b99630b4970943eae363706c,The `[` method can now accept index 
 renv,2ba4df462a3158dd0a917cdb75985fd4,Fixed an issue where `renv::dependencies()` could fail with an unhelpful error message if the scanned document contained a malformed YAML header. (#2117),NA,NA,NA,NA
 tibble,4e6abcf79056c70130abf43dfc9fc6a4,IDE.,NA,NA,NA,NA
 renv,56c515851c9d43c56929e107e0feaff2,`renv` now only checks for archived packages during installation when `options(renv.install.allowArchivedPackages = TRUE)` is set.,NA,NA,NA,NA
+renv,0ea1e522d773afc5d97142e3a4b0ce91,Fixed an issue where `renv` could erroneously record packages installed from Posit Package Manager snapshots as being installed from CRAN. (#2104),NA,NA,NA,NA

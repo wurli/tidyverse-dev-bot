@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed an issue where `renv` could erroneously record packages
+    installed from Posit Package Manager snapshots as being installed
+    from CRAN. (#2104)
+
+    !end-bullet!
+-   !begin-bullet!
     `renv` now only checks for archived packages during installation
     when `options(renv.install.allowArchivedPackages = TRUE)` is set.
 
