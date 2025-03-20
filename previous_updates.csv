@@ -19073,3 +19073,9 @@ renv,2ba4df462a3158dd0a917cdb75985fd4,Fixed an issue where `renv::dependencies()
 tibble,4e6abcf79056c70130abf43dfc9fc6a4,IDE.,NA,NA,NA,NA
 renv,56c515851c9d43c56929e107e0feaff2,`renv` now only checks for archived packages during installation when `options(renv.install.allowArchivedPackages = TRUE)` is set.,NA,NA,NA,NA
 renv,0ea1e522d773afc5d97142e3a4b0ce91,Fixed an issue where `renv` could erroneously record packages installed from Posit Package Manager snapshots as being installed from CRAN. (#2104),NA,NA,NA,NA
+tibble,fb459e376f332178dace368bf566381f,Create `index.md` for pkgdown.,NA,NA,NA,NA
+tibble,7571ab820d19c212279cd1895f395e73,Ignore files.,NA,NA,NA,NA
+tibble,ad89ee6bacea2c95146c7d845564e81f,Fix `R CMD check` errors on R-devel.,NA,NA,NA,NA
+tibble,0451dfaeb7a5d17ce161e6af8400382b,"Keep a copy of the vignettes inside the tests (#1576, #1586).",NA,NA,NA,NA
+tibble,e9ace6ea7f9042e3f8ebf83e3cf9f14d,"Update comparison between tibble and data.frame (@​olivroy, #1567).",NA,NA,NA,NA
+tibble,b34bd8b1bcb90a66e707015d46c41848,"Use pak for installing dev version in README (@​luisDVA, #1600).",NA,NA,NA,NA
