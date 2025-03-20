@@ -11,12 +11,15 @@
 -   !begin-bullet!
     `renv` now only checks for archived packages during installation
     when `options(renv.install.allowArchivedPackages = TRUE)` is set.
+    This fixes an issue where `renv` could erroneously discover that
+    Rcpp 1.3 was available when using the Posit Package Manager
+    repository.
 
     !end-bullet!
 -   !begin-bullet!
     Fixed an issue where `renv::dependencies()` could fail with an
-    unhelpful error message if the scanned document contained a
-    malformed YAML header. (#2117)
+    unhelpful error message if the scanned document contained a YAML
+    header whose contents was not a map. (#2117)
 
     !end-bullet!
 
