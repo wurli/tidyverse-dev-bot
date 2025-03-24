@@ -3,6 +3,9 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `req_headers()` more carefully checks its input types (#707).
+    !end-bullet!
+-   !begin-bullet!
     Fix AWS request signing due to `argument 'cache' is missing` error
     (#706, @jcheng5).
     !end-bullet!
