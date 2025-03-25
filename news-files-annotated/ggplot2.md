@@ -3,6 +3,16 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `position_fill()` avoids stacking observations of zero (@teunbrand,
+    #6338)
+
+    !end-bullet!
+-   !begin-bullet!
+    New `layer(layout)` argument to interact with facets (@teunbrand,
+    #3062)
+
+    !end-bullet!
+-   !begin-bullet!
     New `stat_connect()` to connect points via steps or other shapes
     (@teunbrand, #6228)
 
@@ -868,6 +878,12 @@
 
     !end-bullet!
 -   !begin-bullet!
+    (internal) `legend.key.width` and `legend.key.height` calculations
+    are no longer precomputed before guides are drawn (@teunbrand,
+    #6339)
+
+    !end-bullet!
+-   !begin-bullet!
     `ggsave()` can write a multi-page pdf file when provided with a list
     of plots (@teunbrand, #5093).
 
@@ -886,6 +902,11 @@
 -   !begin-bullet!
     Improved consistency of curve direction in `geom_curve()`
     (@teunbrand, #5069)
+
+    !end-bullet!
+-   !begin-bullet!
+    `linetype = NA` is now interpreted to mean 'no line' instead of
+    raising errors (@teunbrand, #6269).
 
     !end-bullet!
 

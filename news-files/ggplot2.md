@@ -1,5 +1,7 @@
 # ggplot2 (development version)
 
+* `position_fill()` avoids stacking observations of zero (@teunbrand, #6338)
+* New `layer(layout)` argument to interact with facets (@teunbrand, #3062)
 * New `stat_connect()` to connect points via steps or other shapes 
   (@teunbrand, #6228)
 * Fixed regression with incorrectly drawn gridlines when using `coord_flip()` 
@@ -323,6 +325,8 @@
   (@teunbrand, #3669). 
 * Added `scale_{x/y}_time(date_breaks, date_minor_breaks, date_labels)` 
   (@teunbrand, #4335).
+* (internal) `legend.key.width` and `legend.key.height` calculations are no
+  longer precomputed before guides are drawn (@teunbrand, #6339)
 * `ggsave()` can write a multi-page pdf file when provided with a list of plots 
   (@teunbrand, #5093).
 * (internal) When `validate_subclass()` fails to find a class directly, it tries 
@@ -330,6 +334,8 @@
 * (internal) The ViewScale class has a `make_fixed_copy()` method to permit 
   copying trained position scales (#3441).
 * Improved consistency of curve direction in `geom_curve()` (@teunbrand, #5069)
+* `linetype = NA` is now interpreted to mean 'no line' instead of raising errors
+  (@teunbrand, #6269).
 
 # ggplot2 3.5.1
 

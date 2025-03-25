@@ -19098,3 +19098,7 @@ ggplot2,3f605cd596f2e5651ac8978c6e876560,(internal) The ViewScale class has a `m
 ggplot2,ccf6f235f1af2ee9ea0ffd424d7fa552,"New `stat_connect()` to connect points via steps or other shapes (@​teunbrand, #6228)",NA,NA,NA,NA
 ggplot2,9ec1bd78dffa893563ffa51b11b5f6fc,"`geom_tile()` and `position_jitter()` computes default widths and heights per panel instead of per layer (@​teunbrand, #5740, #3722).",NA,NA,NA,NA
 ggplot2,7ab2310aaf8304189268df4524287cc6,"Improved consistency of curve direction in `geom_curve()` (@​teunbrand, #5069)",NA,NA,NA,NA
+ggplot2,6fa58d153c1c69264df06a24a1c483a6,"`position_fill()` avoids stacking observations of zero (@​teunbrand, #6338)",NA,NA,NA,NA
+ggplot2,129d5bb9d9a8dd11cc8b362d18edd9b1,"New `layer(layout)` argument to interact with facets (@​teunbrand, #3062)",NA,NA,NA,NA
+ggplot2,3935dfd12213a20ed5994188818530bc,"(internal) `legend.key.width` and `legend.key.height` calculations are no longer precomputed before guides are drawn (@​teunbrand, #6339)",NA,NA,NA,NA
+ggplot2,7e092504a56bbc0dbb6e087853212f8f,"`linetype = NA` is now interpreted to mean 'no line' instead of raising errors (@​teunbrand, #6269).",NA,NA,NA,NA
