@@ -19102,3 +19102,5 @@ ggplot2,6fa58d153c1c69264df06a24a1c483a6,"`position_fill()` avoids stacking obse
 ggplot2,129d5bb9d9a8dd11cc8b362d18edd9b1,"New `layer(layout)` argument to interact with facets (@​teunbrand, #3062)",NA,NA,NA,NA
 ggplot2,3935dfd12213a20ed5994188818530bc,"(internal) `legend.key.width` and `legend.key.height` calculations are no longer precomputed before guides are drawn (@​teunbrand, #6339)",NA,NA,NA,NA
 ggplot2,7e092504a56bbc0dbb6e087853212f8f,"`linetype = NA` is now interpreted to mean 'no line' instead of raising errors (@​teunbrand, #6269).",NA,NA,NA,NA
+ggplot2,995072fd52710a0fda4397ac5d8dae23,"The default colour and fill scales have a new `palette` argument (@​teunbrand, #6064).",NA,NA,NA,NA
+reticulate,f3aa1571bbf31e271625c85bdc74182b,"Internal changes to support R-devel (4.5) and R API updates (#1747, #1774).",NA,NA,NA,NA

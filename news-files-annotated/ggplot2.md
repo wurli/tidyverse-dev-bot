@@ -909,6 +909,11 @@
     raising errors (@teunbrand, #6269).
 
     !end-bullet!
+-   !begin-bullet!
+    The default colour and fill scales have a new `palette` argument
+    (@teunbrand, #6064).
+
+    !end-bullet!
 
 !end-bullets-1!
 

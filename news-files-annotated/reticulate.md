@@ -45,7 +45,8 @@
 
     !end-bullet!
 -   !begin-bullet!
-    Internal changes to support R-devel (4.5) (#1747).
+    Internal changes to support R-devel (4.5) and R API updates (#1747,
+    #1774).
 
     !end-bullet!
 -   !begin-bullet!
