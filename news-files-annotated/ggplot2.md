@@ -900,6 +900,12 @@
 
     !end-bullet!
 -   !begin-bullet!
+    `draw_key_rect()` replaces a `NA` fill by the `colour` aesthetic and
+    `draw_key_polygon()` has 0 linewidth as internal default
+    (@teunbrand, #5385).
+
+    !end-bullet!
+-   !begin-bullet!
     Improved consistency of curve direction in `geom_curve()`
     (@teunbrand, #5069)
 
