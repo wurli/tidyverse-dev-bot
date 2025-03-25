@@ -19086,3 +19086,6 @@ httr2,a17c5fddcd1c41ee5087244c5b0854ed,`req_headers()` more carefully checks its
 ggplot2,fcb1071cde8b807304796a693c8b9077,"Date scales silently coerce `<POSIXct>`{=html} to `<Date>`{=html} and datetime scales silently coerce `<Date>`{=html} to `<POSIXct>`{=html} (@​laurabrianna, #3533)",NA,NA,NA,NA
 ggplot2,5d3c87427088bdd712b7ac820e5b6b35,"(internal) layer data can be attenuated with parameter attributes (@​teunbrand, #3175).",NA,NA,NA,NA
 ggplot2,fe96886fe9edd179132e2271bbb9fa5d,"`ggsave()` can write a multi-page pdf file when provided with a list of plots (@​teunbrand, #5093).",NA,NA,NA,NA
+ggplot2,462012082aeb2c79d98c75ea317d3777,Deprecated functions and arguments prior to ggplot2 3.0.0 throw errors instead of warnings.,NA,NA,NA,NA
+ggplot2,b1c83b644771e03446cd5e95eb6858b8,Functions and arguments that were soft-deprecated up to ggplot2 3.4.0 now throw warnings.,NA,NA,NA,NA
+ggplot2,eab717c1a2de57d023fd0eaead30d475,"(internal) When `validate_subclass()` fails to find a class directly, it tries to retrieve the class via constructor functions (@​teunbrand).",NA,NA,NA,NA

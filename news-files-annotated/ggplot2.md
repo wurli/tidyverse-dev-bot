@@ -3,6 +3,16 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Deprecated functions and arguments prior to ggplot2 3.0.0 throw
+    errors instead of warnings.
+
+    !end-bullet!
+-   !begin-bullet!
+    Functions and arguments that were soft-deprecated up to ggplot2
+    3.4.0 now throw warnings.
+
+    !end-bullet!
+-   !begin-bullet!
     (internal) layer data can be attenuated with parameter attributes
     (@teunbrand, #3175).
 
@@ -838,6 +848,12 @@
 -   !begin-bullet!
     `ggsave()` can write a multi-page pdf file when provided with a list
     of plots (@teunbrand, #5093).
+
+    !end-bullet!
+-   !begin-bullet!
+    (internal) When `validate_subclass()` fails to find a class
+    directly, it tries to retrieve the class via constructor functions
+    (@teunbrand).
 
     !end-bullet!
 
