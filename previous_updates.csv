@@ -19089,3 +19089,9 @@ ggplot2,fe96886fe9edd179132e2271bbb9fa5d,"`ggsave()` can write a multi-page pdf 
 ggplot2,462012082aeb2c79d98c75ea317d3777,Deprecated functions and arguments prior to ggplot2 3.0.0 throw errors instead of warnings.,NA,NA,NA,NA
 ggplot2,b1c83b644771e03446cd5e95eb6858b8,Functions and arguments that were soft-deprecated up to ggplot2 3.4.0 now throw warnings.,NA,NA,NA,NA
 ggplot2,eab717c1a2de57d023fd0eaead30d475,"(internal) When `validate_subclass()` fails to find a class directly, it tries to retrieve the class via constructor functions (@​teunbrand).",NA,NA,NA,NA
+ggplot2,af7eb570347fb11b35ce5f8f85bce940,"Fixed regression with incorrectly drawn gridlines when using `coord_flip()` (@​teunbrand, #6293).",NA,NA,NA,NA
+ggplot2,1a6585e63468e8620e417644bfab0bb4,"`theme_classic()` has the following changes (@​teunbrand, #5978 & #6320):",NA,NA,NA,NA
+ggplot2,1a6585e63468e8620e417644bfab0bb4,• Axis ticks are now black (`ink`-coloured) instead of dark gray.,NA,NA,NA,NA
+ggplot2,1a6585e63468e8620e417644bfab0bb4,"• Axis line ends are now `""square""`.",NA,NA,NA,NA
+ggplot2,1a6585e63468e8620e417644bfab0bb4,• The panel grid is now blank at the `panel.grid` hierarchy level instead of the `panel.grid.major` and `panel.grid.minor` levels.,NA,NA,NA,NA
+ggplot2,3f605cd596f2e5651ac8978c6e876560,(internal) The ViewScale class has a `make_fixed_copy()` method to permit copying trained position scales (#3441).,NA,NA,NA,NA

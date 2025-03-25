@@ -1,5 +1,7 @@
 # ggplot2 (development version)
 
+* Fixed regression with incorrectly drawn gridlines when using `coord_flip()` 
+  (@teunbrand, #6293).
 * Deprecated functions and arguments prior to ggplot2 3.0.0 throw errors instead 
   of warnings. 
 * Functions and arguments that were soft-deprecated up to ggplot2 3.4.0 now 
@@ -278,8 +280,11 @@
   is setup once in total instead of once per group (@teunbrand, #5971)
 * `facet_grid(space = "free")` can now be combined with `coord_fixed()` 
   (@teunbrand, #4584).
-* `theme_classic()` now has black ticks and text instead of dark gray. In 
-  addition, `theme_classic()`'s axis line end is `"square"` (@teunbrand, #5978).
+* `theme_classic()` has the following changes (@teunbrand, #5978 & #6320):
+    * Axis ticks are now black (`ink`-coloured) instead of dark gray.
+    * Axis line ends are now `"square"`.
+    * The panel grid is now blank at the `panel.grid` hierarchy level instead of 
+    the `panel.grid.major` and `panel.grid.minor` levels.
 * {tibble} is now suggested instead of imported (@teunbrand, #5986)
 * The ellipsis argument is now checked in `fortify()`, `get_alt_text()`, 
   `labs()` and several guides (@teunbrand, #3196).
@@ -320,6 +325,8 @@
   (@teunbrand, #5093).
 * (internal) When `validate_subclass()` fails to find a class directly, it tries 
   to retrieve the class via constructor functions (@teunbrand).
+* (internal) The ViewScale class has a `make_fixed_copy()` method to permit 
+  copying trained position scales (#3441).
 
 # ggplot2 3.5.1
 
