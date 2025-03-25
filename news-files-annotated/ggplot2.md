@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Date scales silently coerce `<POSIXct>`{=html} to `<Date>`{=html}
+    and datetime scales silently coerce `<Date>`{=html} to
+    `<POSIXct>`{=html} (@laurabrianna, #3533)
+
+    !end-bullet!
+-   !begin-bullet!
     New parameters for `geom_label()` (@teunbrand and @steveharoz,
     #5365):
 

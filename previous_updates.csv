@@ -19083,3 +19083,4 @@ renv,9a0a5a50fcbecf03945532dde24c4930,`renv` now only checks for archived packag
 renv,54ce8e9b77e58c14de79d651021ea7fd,Fixed an issue where multimode R documents containing chunk headers which did not parse to an R list could cause dependency inference to fail. (#2110),NA,NA,NA,NA
 httr2,592edce8ff6b3f772784c9817addc591,"Fix AWS request signing due to `argument 'cache' is missing` error (#706, @​jcheng5).",NA,NA,NA,NA
 httr2,a17c5fddcd1c41ee5087244c5b0854ed,`req_headers()` more carefully checks its input types (#707).,NA,NA,NA,NA
+ggplot2,fcb1071cde8b807304796a693c8b9077,"Date scales silently coerce `<POSIXct>`{=html} to `<Date>`{=html} and datetime scales silently coerce `<Date>`{=html} to `<POSIXct>`{=html} (@​laurabrianna, #3533)",NA,NA,NA,NA
