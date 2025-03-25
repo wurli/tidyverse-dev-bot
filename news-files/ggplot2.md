@@ -1,5 +1,7 @@
 # ggplot2 (development version)
 
+* (internal) layer data can be attenuated with parameter attributes 
+  (@teunbrand, #3175).
 * Date scales silently coerce <POSIXct> to <Date> and datetime scales silently
   coerce <Date> to <POSIXct> (@laurabrianna, #3533)
 * New parameters for `geom_label()` (@teunbrand and @steveharoz, #5365):
@@ -310,6 +312,8 @@
   (@teunbrand, #3669). 
 * Added `scale_{x/y}_time(date_breaks, date_minor_breaks, date_labels)` 
   (@teunbrand, #4335).
+* `ggsave()` can write a multi-page pdf file when provided with a list of plots 
+  (@teunbrand, #5093).
 
 # ggplot2 3.5.1
 

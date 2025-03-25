@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    (internal) layer data can be attenuated with parameter attributes
+    (@teunbrand, #3175).
+
+    !end-bullet!
+-   !begin-bullet!
     Date scales silently coerce `<POSIXct>`{=html} to `<Date>`{=html}
     and datetime scales silently coerce `<Date>`{=html} to
     `<POSIXct>`{=html} (@laurabrianna, #3533)
@@ -828,6 +833,11 @@
     Added
     `scale_{x/y}_time(date_breaks, date_minor_breaks, date_labels)`
     (@teunbrand, #4335).
+
+    !end-bullet!
+-   !begin-bullet!
+    `ggsave()` can write a multi-page pdf file when provided with a list
+    of plots (@teunbrand, #5093).
 
     !end-bullet!
 
