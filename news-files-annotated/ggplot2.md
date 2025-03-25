@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    New `stat_connect()` to connect points via steps or other shapes
+    (@teunbrand, #6228)
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed regression with incorrectly drawn gridlines when using
     `coord_flip()` (@teunbrand, #6293).
 
@@ -653,8 +658,8 @@
 
     !end-bullet!
 -   !begin-bullet!
-    `geom_tile()` computes default widths and heights per panel instead
-    of per layer (@teunbrand, #5740).
+    `geom_tile()` and `position_jitter()` computes default widths and
+    heights per panel instead of per layer (@teunbrand, #5740, #3722).
 
     !end-bullet!
 -   !begin-bullet!
@@ -876,6 +881,11 @@
 -   !begin-bullet!
     (internal) The ViewScale class has a `make_fixed_copy()` method to
     permit copying trained position scales (#3441).
+
+    !end-bullet!
+-   !begin-bullet!
+    Improved consistency of curve direction in `geom_curve()`
+    (@teunbrand, #5069)
 
     !end-bullet!
 

@@ -1,5 +1,7 @@
 # ggplot2 (development version)
 
+* New `stat_connect()` to connect points via steps or other shapes 
+  (@teunbrand, #6228)
 * Fixed regression with incorrectly drawn gridlines when using `coord_flip()` 
   (@teunbrand, #6293).
 * Deprecated functions and arguments prior to ggplot2 3.0.0 throw errors instead 
@@ -249,8 +251,8 @@
   and (non-text) margins inherit from (@teunbrand, #5622).
 * `geom_ribbon()` can have varying `fill` or `alpha` in linear coordinate
   systems (@teunbrand, #4690).
-* `geom_tile()` computes default widths and heights per panel instead of
-  per layer (@teunbrand, #5740).
+* `geom_tile()` and `position_jitter()` computes default widths and heights 
+  per panel instead of per layer (@teunbrand, #5740, #3722).
 * The `fill` of the `panel.border` theme setting is ignored and forced to be
   transparent (#5782).
 * `stat_align()` skips computation when there is only 1 group and therefore
@@ -327,6 +329,7 @@
   to retrieve the class via constructor functions (@teunbrand).
 * (internal) The ViewScale class has a `make_fixed_copy()` method to permit 
   copying trained position scales (#3441).
+* Improved consistency of curve direction in `geom_curve()` (@teunbrand, #5069)
 
 # ggplot2 3.5.1
 
