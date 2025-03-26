@@ -1,17 +1,29 @@
 # chromote (development version)
 
+## New features
+
+!begin-bullets-1!
+
+-   !begin-bullet!
+    `ChromoteSession` gets a new helper method, `$go_to()`. This is an
+    easier way of reliably waiting for a page load, instead of using
+    `Page$loadEventFired()` and `Page$navigate()` together. (#221)
+    !end-bullet!
+
+!end-bullets-1!
+
 # chromote 0.5.0
 
 ## New features
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     chromote now includes experimental features to download versioned
     binaries of Chrome and `chrome-headless-shell` for Mac (x64 or
     arm64), Windows (32- or 64-bit) or Linux (x86-64) from the Chrome
     for Testing service. (#198)
-    !begin-bullets-2!
+    !begin-bullets-3!
     -   !begin-bullet!
         Use `with_chrome_version()` or `local_chrome_version()` to
         temporarily switch to a specific version of Chrome. The
@@ -28,7 +40,7 @@
         chromote's cache.
         !end-bullet!
 
-    !end-bullets-2!
+    !end-bullets-3!
     !end-bullet!
 -   !begin-bullet!
     `ChromoteSession` gains two new helper methods:
@@ -41,11 +53,11 @@
     Emulation.setDeviceMetricsOverride instead. (#206)
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 ## Improvements
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     `ChromoteSession$new()` gains a `mobile` argument that can be used
@@ -74,11 +86,11 @@
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 ## Bug fixes
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     `ChromoteSession$new()` now sets `width` and `height` using
@@ -104,11 +116,11 @@
 
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 # chromote 0.4.0
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     Chrome v132 and later no longer support old headless mode. As such,
@@ -133,21 +145,21 @@
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # chromote 0.3.1
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     Fixed a typo that caused `launch_chrome()` to throw an error. (#175)
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 # chromote 0.3.0
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     The headless mode used by Chrome can now be selected with the
@@ -170,13 +182,13 @@
 
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 # chromote 0.2.0
 
 ## Breaking changes
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     Breaking change: `Chromote$is_active()` method now reports if there
@@ -184,11 +196,11 @@
     than whether or not that instance is alive (#94).
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 ## Improvements and bug fixes
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     `Chromote` and `ChromoteSession` gain print methods to give you a
@@ -227,11 +239,11 @@
 
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 # chromote 0.1.2
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     Fixed #109: An error would occur when a `Chromote` object's
@@ -258,24 +270,24 @@
 
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 # chromote 0.1.1
 
-!begin-bullets-11!
+!begin-bullets-12!
 
 -   !begin-bullet!
     Update docs for CRAN (#93)
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-12!
 
 # chromote 0.1.0
 
-!begin-bullets-12!
+!begin-bullets-13!
 
 -   !begin-bullet!
     Initial package release
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
