@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Bugfix agents auto-generating a table label that was too long. They
+    now get truncated (#614)
+
+    !end-bullet!
+-   !begin-bullet!
     Bugfix agents not searching the formula environment when
     materializing `~ tbl` (#599)
 

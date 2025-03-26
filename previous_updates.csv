@@ -19105,3 +19105,5 @@ ggplot2,7e092504a56bbc0dbb6e087853212f8f,"`linetype = NA` is now interpreted to 
 ggplot2,995072fd52710a0fda4397ac5d8dae23,"The default colour and fill scales have a new `palette` argument (@​teunbrand, #6064).",NA,NA,NA,NA
 reticulate,f3aa1571bbf31e271625c85bdc74182b,"Internal changes to support R-devel (4.5) and R API updates (#1747, #1774).",NA,NA,NA,NA
 ggplot2,62b58dfc2eb8a469277537d6439a1f9e,"`draw_key_rect()` replaces a `NA` fill by the `colour` aesthetic and `draw_key_polygon()` has 0 linewidth as internal default (@​teunbrand, #5385).",NA,NA,NA,NA
+pointblank,071313aa1e6c341bec2aa7bcc67e70c0,Bugfix agents auto-generating a table label that was too long. They now get truncated (#614),NA,NA,NA,NA
+renv,4289a8943995d82329a3e3b48af95172,Fixed an issue where `renv::sysreqs(distro = <...>)` could fail when passed an alternate distribution without a version specifier. (#2105),NA,NA,NA,NA

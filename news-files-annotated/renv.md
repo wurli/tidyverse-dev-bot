@@ -3,9 +3,16 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed an issue where `renv::sysreqs(distro = <...>)` could fail when
+    passed an alternate distribution without a version specifier.
+    (#2105)
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed an issue where multimode R documents containing chunk headers
     which did not parse to an R list could cause dependency inference to
     fail. (#2110)
+
     !end-bullet!
 
 !end-bullets-1!
