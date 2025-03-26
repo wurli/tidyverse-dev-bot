@@ -1,5 +1,7 @@
 # httr2 (development version)
 
+# httr2 1.1.2
+
 !begin-bullets-1!
 
 -   !begin-bullet!
