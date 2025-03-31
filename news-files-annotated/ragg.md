@@ -8,6 +8,9 @@
 -   !begin-bullet!
     Added support for hold and flushing, mainly in service of Positron
     !end-bullet!
+-   !begin-bullet!
+    Added support for `saturate` composition operator
+    !end-bullet!
 
 !end-bullets-1!
 

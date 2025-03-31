@@ -19114,3 +19114,4 @@ duckplyr,0aa6bd16f18229546e6d57bf26ce83e6,"Use roxyglobals from CRAN rather than
 duckplyr,4742febbb728371072f28ef59716acce,Space at EOL.,NA,NA,NA,NA
 duckplyr,4ac1be7e269940492f17b1aba4a2ca8c,Recommend `pak::pak()`.,NA,NA,NA,NA
 tibble,d24daeec41a9176b5345f4f6a5e34459,Add permissions to update.,NA,NA,NA,NA
+ragg,4e04d714c3c76277fe08560e79ee9be7,Added support for `saturate` composition operator,NA,NA,NA,NA
