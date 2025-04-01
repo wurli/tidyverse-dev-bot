@@ -22,11 +22,21 @@ Bug fixes:
 
 !end-bullets-2!
 
+Other:
+
+!begin-bullets-3!
+
+-   !begin-bullet!
+    New package logo
+    !end-bullet!
+
+!end-bullets-3!
+
 # config 0.3.2
 
 New features:
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     Better handling of R expressions in the `config.yml`. In particular,
@@ -48,11 +58,11 @@ New features:
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 Documentation:
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     New vignettes, in particular using `config` with Posit Connect.
@@ -62,11 +72,11 @@ Documentation:
     `config::get()` instead.
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 # config 0.3.1 (2020-12-15)
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     Bug fix: evaluate expressions only for the active config (not all
@@ -76,11 +86,11 @@ Documentation:
     is selected, and only then are the expressions evaluated. Fixes #20
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # config 0.3.0 (2018-03-27)
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     Improved handling of expressions
@@ -91,17 +101,17 @@ Documentation:
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 # config 0.2.0 (2016-08-02)
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     Add `merge` function to merge one configuration into another.
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 # config 0.1.0 (2016-06-08)
 
