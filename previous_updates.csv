@@ -19115,3 +19115,5 @@ duckplyr,4742febbb728371072f28ef59716acce,Space at EOL.,NA,NA,NA,NA
 duckplyr,4ac1be7e269940492f17b1aba4a2ca8c,Recommend `pak::pak()`.,NA,NA,NA,NA
 tibble,d24daeec41a9176b5345f4f6a5e34459,Add permissions to update.,NA,NA,NA,NA
 ragg,4e04d714c3c76277fe08560e79ee9be7,Added support for `saturate` composition operator,NA,NA,NA,NA
+tibble,9c8d0a8f0f6efb7297c4d5b5baa409a9,Auto-update from GitHub Actions. Run: https://github.com/tidyverse/tibble/actions/runs/14178874040,NA,NA,NA,NA
+tibble,e40625b789d12eae5efa159751d1028d,Only block direct updates for pull requests.,NA,NA,NA,NA
