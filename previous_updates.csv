@@ -19119,3 +19119,4 @@ tibble,9c8d0a8f0f6efb7297c4d5b5baa409a9,Auto-update from GitHub Actions. Run: ht
 tibble,e40625b789d12eae5efa159751d1028d,Only block direct updates for pull requests.,NA,NA,NA,NA
 config,98d7a8aaef9654610998e4776df08ee3,New package logo,NA,NA,NA,NA
 duckplyr,4a1b08d330d8c126ba4f1fea8256ebcb,"Register Ark methods for Positron's Variables Pane (@​DavisVaughan, #661).",NA,NA,NA,NA
+rlang,9dd7b762b81808787ac69941f9da6396,The SEXP iterator of the rlang C library (used in r-lib/memtools) is now behind a feature flag because it requires private API accessors. Compile rlang with `-DRLANG_USE_PRIVATE_ACCESSORS` to enable it.,NA,NA,NA,NA
