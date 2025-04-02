@@ -19120,3 +19120,5 @@ tibble,e40625b789d12eae5efa159751d1028d,Only block direct updates for pull reque
 config,98d7a8aaef9654610998e4776df08ee3,New package logo,NA,NA,NA,NA
 duckplyr,4a1b08d330d8c126ba4f1fea8256ebcb,"Register Ark methods for Positron's Variables Pane (@​DavisVaughan, #661).",NA,NA,NA,NA
 rlang,9dd7b762b81808787ac69941f9da6396,The SEXP iterator of the rlang C library (used in r-lib/memtools) is now behind a feature flag because it requires private API accessors. Compile rlang with `-DRLANG_USE_PRIVATE_ACCESSORS` to enable it.,NA,NA,NA,NA
+devtools,e8d3ddf698adc65a7efde5a4a3ff721f,"On macOS, `install()` now generates `dSYM` sidecar files for native libraries by default.",NA,NA,NA,NA
+rsconnect,f7a987a93f9c0590b4a1e543022e129e,A `_server.yml` file indicates that the content is an API. (#1144),NA,NA,NA,NA

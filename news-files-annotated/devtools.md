@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    On macOS, `install()` now generates `dSYM` sidecar files for native
+    libraries by default.
+
+    !end-bullet!
+-   !begin-bullet!
     Functions that use httr now explicitly check that it is installed
     (@catalamarti, #2573).
 

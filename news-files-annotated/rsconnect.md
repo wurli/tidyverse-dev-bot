@@ -6,6 +6,11 @@
     Content directories with a period in their name are no longer
     treated as a document path when computing the location for
     deployment records. (#1138)
+
+    !end-bullet!
+-   !begin-bullet!
+    A `_server.yml` file indicates that the content is an API. (#1144)
+
     !end-bullet!
 
 !end-bullets-1!
