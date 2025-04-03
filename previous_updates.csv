@@ -19125,3 +19125,4 @@ rsconnect,f7a987a93f9c0590b4a1e543022e129e,A `_server.yml` file indicates that t
 blastula,f3e7caa10958eb0158f7a62c2a1144bf,"Fixed erroneous use of `sprintf()`. (#335, thanks @​pabecer!)",NA,NA,NA,NA
 blastula,7b0bad51dd4fcf50a1fc8b7adb05bc75,"Updated full product name of Connect. (#334, thanks @​aronatkins!)",NA,NA,NA,NA
 blastula,3bbc257948c5b90176a04de0bcdd341d,Updated several GHA workflows (#336). (#337),NA,NA,NA,NA
+lintr,8f69815e17799740d0099e7a8daca359,"`{lintr}` now has an associated paper at the Journal of Open Source Software that you can use to cite the package if you use it in a paper - see citation(""lintr"") for details.",NA,NA,NA,NA

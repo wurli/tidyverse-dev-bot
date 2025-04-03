@@ -219,6 +219,11 @@
 !begin-bullets-10!
 
 -   !begin-bullet!
+    `{lintr}` now has an associated paper at the Journal of Open Source
+    Software that you can use to cite the package if you use it in a
+    paper - see citation("lintr") for details.
+    !end-bullet!
+-   !begin-bullet!
     `expect_lint_free()` and other functions that rely on the {testthat}
     framework now have a consistent error message. (#2585, @F-Noelle).
     !end-bullet!
