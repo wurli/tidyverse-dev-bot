@@ -1,19 +1,38 @@
 # blastula (development version)
 
-# blastula 0.3.5
+# blastula 0.3.6
 
 !begin-bullets-1!
+
+-   !begin-bullet!
+    Fixed erroneous use of `sprintf()`. (#335, thanks @pabecer!)
+
+    !end-bullet!
+-   !begin-bullet!
+    Updated full product name of Connect. (#334, thanks @aronatkins!)
+
+    !end-bullet!
+-   !begin-bullet!
+    Updated several GHA workflows (#336). (#337)
+
+    !end-bullet!
+
+!end-bullets-1!
+
+# blastula 0.3.5
+
+!begin-bullets-2!
 
 -   !begin-bullet!
     Fixed Excel attachments which were broken due to faulty conversion
     into RFC2822. (#314)
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # blastula 0.3.4
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     Modified tests to remove specific cases that no longer work in newer
@@ -33,11 +52,11 @@
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 # blastula 0.3.3
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     Made a correction to a `format()` statement to comply with CRAN
@@ -50,11 +69,11 @@
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 # blastula 0.3.2
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     Email content width is now customizable in the `blastula_email()`
@@ -90,7 +109,7 @@
 
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 # blastula 0.3.1
 
@@ -108,7 +127,7 @@ bodies can be generated with *HTML Blocks*.
 
 ## Breaking Changes
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     `send_email_out()` has been removed; the `smtp_send()` function is
@@ -155,11 +174,11 @@ bodies can be generated with *HTML Blocks*.
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 ## New Features
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     Added functions useful for scheduled email sending in RStudio
@@ -197,11 +216,11 @@ bodies can be generated with *HTML Blocks*.
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 ## Notes
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     Functions from the `getPass` package are used internally to ask for
@@ -215,11 +234,11 @@ bodies can be generated with *HTML Blocks*.
 
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 # blastula 0.2.1
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     Moved local image URI data into list component, where references to
@@ -232,11 +251,11 @@ bodies can be generated with *HTML Blocks*.
 
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 # blastula 0.2.0
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     Removed dependencies on Java; reworked `send_email_out()` uses a
@@ -260,11 +279,11 @@ bodies can be generated with *HTML Blocks*.
 
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 # blastula 0.1
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     Added functions to compose (`compose_email()`), preview
@@ -283,4 +302,4 @@ bodies can be generated with *HTML Blocks*.
 
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!

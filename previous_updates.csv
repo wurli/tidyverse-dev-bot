@@ -19122,3 +19122,6 @@ duckplyr,4a1b08d330d8c126ba4f1fea8256ebcb,"Register Ark methods for Positron's V
 rlang,9dd7b762b81808787ac69941f9da6396,The SEXP iterator of the rlang C library (used in r-lib/memtools) is now behind a feature flag because it requires private API accessors. Compile rlang with `-DRLANG_USE_PRIVATE_ACCESSORS` to enable it.,NA,NA,NA,NA
 devtools,e8d3ddf698adc65a7efde5a4a3ff721f,"On macOS, `install()` now generates `dSYM` sidecar files for native libraries by default.",NA,NA,NA,NA
 rsconnect,f7a987a93f9c0590b4a1e543022e129e,A `_server.yml` file indicates that the content is an API. (#1144),NA,NA,NA,NA
+blastula,f3e7caa10958eb0158f7a62c2a1144bf,"Fixed erroneous use of `sprintf()`. (#335, thanks @​pabecer!)",NA,NA,NA,NA
+blastula,7b0bad51dd4fcf50a1fc8b7adb05bc75,"Updated full product name of Connect. (#334, thanks @​aronatkins!)",NA,NA,NA,NA
+blastula,3bbc257948c5b90176a04de0bcdd341d,Updated several GHA workflows (#336). (#337),NA,NA,NA,NA
