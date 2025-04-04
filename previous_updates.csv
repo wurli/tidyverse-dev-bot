@@ -19128,3 +19128,9 @@ blastula,3bbc257948c5b90176a04de0bcdd341d,Updated several GHA workflows (#336). 
 lintr,8f69815e17799740d0099e7a8daca359,"`{lintr}` now has an associated paper at the Journal of Open Source Software that you can use to cite the package if you use it in a paper - see citation(""lintr"") for details.",NA,NA,NA,NA
 rsconnect,7a93b7c19f0959f647870b39e31b136d,Quarto documents which specify a server must include executable code or an engine declaration. (#1145),NA,NA,NA,NA
 reticulate,7f69a5f62e831cf84cc3e138789b14cd,"Fixed usage of micromamba and mamba, next-generation conda environment management tools. reticulate now prefers to use micromamba, mamba, then conda when managing environments",NA,NA,NA,NA
+pillar,dff708b96178fdaf9c9a076bf4b3cb08,"`print()` and `format()` pass on `...` to `tbl_format_setup()` again, as documented (@​thothal, #726).",NA,NA,NA,NA
+pillar,1c0bca3645a7fa0504eeed74d564b61c,"Add color to commas for `tibble::glimpse()` (@​TSchiefer, #658, #734).",NA,NA,NA,NA
+pillar,d214fe8e5249b513a826130a5ffd8a41,"Compatibility with upcoming ggplot2 (@​teunbrand, tidyverse/ggplot2#6361, #729).",NA,NA,NA,NA
+pillar,44d9e13b068a5f4ab42d519b17ed14d9,"Fix introductory example in `vignette(""extending"")` (#732, #736).",NA,NA,NA,NA
+pillar,ac11b485aa18555b2cc0ce085e36d501,"Snapshot updates for R-CMD-check-dev ({""package"":""ggplot2""}) (#733).",NA,NA,NA,NA
+pillar,60a42bf0740467ec65d26b2a00f977da,"Snapshot updates for R-CMD-check-dev ({""package"":""ggplot2""}) (#730).",NA,NA,NA,NA
