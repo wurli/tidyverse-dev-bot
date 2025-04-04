@@ -19127,3 +19127,4 @@ blastula,7b0bad51dd4fcf50a1fc8b7adb05bc75,"Updated full product name of Connect.
 blastula,3bbc257948c5b90176a04de0bcdd341d,Updated several GHA workflows (#336). (#337),NA,NA,NA,NA
 lintr,8f69815e17799740d0099e7a8daca359,"`{lintr}` now has an associated paper at the Journal of Open Source Software that you can use to cite the package if you use it in a paper - see citation(""lintr"") for details.",NA,NA,NA,NA
 rsconnect,7a93b7c19f0959f647870b39e31b136d,Quarto documents which specify a server must include executable code or an engine declaration. (#1145),NA,NA,NA,NA
+reticulate,7f69a5f62e831cf84cc3e138789b14cd,"Fixed usage of micromamba and mamba, next-generation conda environment management tools. reticulate now prefers to use micromamba, mamba, then conda when managing environments",NA,NA,NA,NA
