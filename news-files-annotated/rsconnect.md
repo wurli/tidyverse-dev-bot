@@ -12,6 +12,11 @@
     A `_server.yml` file indicates that the content is an API. (#1144)
 
     !end-bullet!
+-   !begin-bullet!
+    Quarto documents which specify a server must include executable code
+    or an engine declaration. (#1145)
+
+    !end-bullet!
 
 !end-bullets-1!
 
