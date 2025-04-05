@@ -19134,3 +19134,4 @@ pillar,d214fe8e5249b513a826130a5ffd8a41,"Compatibility with upcoming ggplot2 (@â
 pillar,44d9e13b068a5f4ab42d519b17ed14d9,"Fix introductory example in `vignette(""extending"")` (#732, #736).",NA,NA,NA,NA
 pillar,ac11b485aa18555b2cc0ce085e36d501,"Snapshot updates for R-CMD-check-dev ({""package"":""ggplot2""}) (#733).",NA,NA,NA,NA
 pillar,60a42bf0740467ec65d26b2a00f977da,"Snapshot updates for R-CMD-check-dev ({""package"":""ggplot2""}) (#730).",NA,NA,NA,NA
+bslib,6fc4f94e06e48f3a2d7c74d2186290fb,Fixed some typos in the documentation,NA,NA,NA,NA

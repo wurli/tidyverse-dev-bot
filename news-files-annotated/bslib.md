@@ -17,6 +17,10 @@
     containers even when `fillable = FALSE`. (#1188)
 
     !end-bullet!
+-   !begin-bullet!
+    Fixed some typos in the documentation
+
+    !end-bullet!
 
 !end-bullets-1!
 
