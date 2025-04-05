@@ -1,15 +1,32 @@
 # gt (development version)
 
+# gt 1.0.0
+
+## Minor improvements and bug fixes
+
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Tables embedded in Shiny apps with `gt_output()` and `render_gt()`
+    with `ihtml.selection_mode` enabled also act as inputs, reporting
+    the row numbers that are selected (#354, #1368). (@jonthegeek,
+    #1909)
+
+    !end-bullet!
+-   !begin-bullet!
+    Significantly faster rendering of certain large tables, by
+    optimizing the internal `rownum_translation()` utility (#1924).
+    (@magnusdv, #1925)
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed an issue in `fmt_number()` where `drop_trailing_dec_mark`
-    would be ignored if `use_seps = FALSE` (@olivroy, #1961).
+    would be ignored if `use_seps = FALSE` (#1961). (@olivroy, #1962).
 
     !end-bullet!
 -   !begin-bullet!
     Fixed an issue where `fmt_markdown()` could create strange output in
-    Quarto (html and Typst formats) (@olivroy, #1957,
+    Quarto (html and Typst formats) (#1957). (@olivroy, #1958,
     quarto-dev/quarto-cli#11932, quarto-dev/quarto-cli#11610).
 
     !end-bullet!
@@ -24,30 +41,17 @@
 
     !end-bullet!
 -   !begin-bullet!
-    Significantly faster rendering of certain large tables, by
-    optimizing the internal `rownum_translation()` utility. (@magnusdv,
-    #1924)
-
-    !end-bullet!
--   !begin-bullet!
-    Interactive tables can support selection through the
-    `ihtml.selection_mode` option. (@jonthegeek, #1909)
-
-    !end-bullet!
--   !begin-bullet!
-    Tables embedded in Shiny apps with `gt_output()` and `render_gt()`
-    with `ihtml.selection_mode` enabled also act as inputs, reporting
-    the row numbers that are selected (#354, #1368). (@jonthegeek,
-    #1909)
-
-    !end-bullet!
--   !begin-bullet!
     Improved width calculations in `as_gtable()` (@teunbrand, #1923)
 
     !end-bullet!
 -   !begin-bullet!
     `gt(row_group_as_column = TRUE)` now works if multiple groups are
-    supplied (@olivroy, #1552).
+    supplied (#1552). (@olivroy, #1801).
+
+    !end-bullet!
+-   !begin-bullet!
+    Fixed many typos in the documentation. (#1910, thanks
+    @MichaelChirico!)
 
     !end-bullet!
 
