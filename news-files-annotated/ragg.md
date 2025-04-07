@@ -11,6 +11,9 @@
 -   !begin-bullet!
     Added support for `saturate` composition operator
     !end-bullet!
+-   !begin-bullet!
+    Sanitise file name before plotting (#176)
+    !end-bullet!
 
 !end-bullets-1!
 
