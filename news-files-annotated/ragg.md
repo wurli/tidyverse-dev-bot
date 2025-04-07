@@ -14,6 +14,9 @@
 -   !begin-bullet!
     Sanitise file name before plotting (#176)
     !end-bullet!
+-   !begin-bullet!
+    Tiff files can now include unicode characters on all platforms (#87)
+    !end-bullet!
 
 !end-bullets-1!
 

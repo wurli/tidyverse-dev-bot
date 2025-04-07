@@ -19138,3 +19138,4 @@ bslib,6fc4f94e06e48f3a2d7c74d2186290fb,Fixed some typos in the documentation,NA,
 gt,f72d213693b18e893ebac70670ddc57b,"`gt(row_group_as_column = TRUE)` now works if multiple groups are supplied (#1552). (@​olivroy, #1801).",NA,NA,NA,NA
 gt,69098c47cc77a16de909d54462653115,"Fixed many typos in the documentation. (#1910, thanks @​MichaelChirico!)",NA,NA,NA,NA
 ragg,35d68d67c4a68cbc7bb04137c6ff19c6,Sanitise file name before plotting (#176),NA,NA,NA,NA
+ragg,c54b319dbdacbb35c579994dac9eae07,Tiff files can now include unicode characters on all platforms (#87),NA,NA,NA,NA
