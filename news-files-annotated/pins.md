@@ -19,6 +19,10 @@
     Prepends 'https://' to Databricks host if missing (#855).
 
     !end-bullet!
+-   !begin-bullet!
+    Fixed handling of `rsconnect::accounts()` results (#861).
+
+    !end-bullet!
 
 !end-bullets-1!
 

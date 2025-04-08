@@ -19141,3 +19141,4 @@ ragg,35d68d67c4a68cbc7bb04137c6ff19c6,Sanitise file name before plotting (#176),
 ragg,c54b319dbdacbb35c579994dac9eae07,Tiff files can now include unicode characters on all platforms (#87),NA,NA,NA,NA
 pointblank,e47c7ea91719698b5651850f988521be,"Add `na_pass` to `col_vals_expr()` for finer control of `NA` values. Previously, `NA`s were ignored, but now they are caught as failures with the default `na_pass = FALSE`. As a safeguard, if an expression generates `NA` values while `na_pass` is not explicitly supplied, a warning is thrown. (#617)",NA,NA,NA,NA
 rlang,60fddcf1ac4338b0ecd0f4d16d834061,Progress towards making rlang conformant with the public C API of R.,NA,NA,NA,NA
+pins,b6f584b04980682c58bc278e15e0f22f,Fixed handling of `rsconnect::accounts()` results (#861).,NA,NA,NA,NA
