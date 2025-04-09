@@ -19142,3 +19142,6 @@ ragg,c54b319dbdacbb35c579994dac9eae07,Tiff files can now include unicode charact
 pointblank,e47c7ea91719698b5651850f988521be,"Add `na_pass` to `col_vals_expr()` for finer control of `NA` values. Previously, `NA`s were ignored, but now they are caught as failures with the default `na_pass = FALSE`. As a safeguard, if an expression generates `NA` values while `na_pass` is not explicitly supplied, a warning is thrown. (#617)",NA,NA,NA,NA
 rlang,60fddcf1ac4338b0ecd0f4d16d834061,Progress towards making rlang conformant with the public C API of R.,NA,NA,NA,NA
 pins,b6f584b04980682c58bc278e15e0f22f,Fixed handling of `rsconnect::accounts()` results (#861).,NA,NA,NA,NA
+ggplot2,e89f2c0deefbe1768c73e7b9b022a772,"Facet gains a new method `setup_panel_params` to interact with the panel_params setted by Coord object (@​Yunuuuu, #6397, #6380)",NA,NA,NA,NA
+bslib,77e51f88cd364003900719eeec7e8324,Fixed some typos in the documentation.,NA,NA,NA,NA
+bslib,d78a72ce2a549230aaaa504c6aaba2c6,When `bs_theme(brand = FALSE)` we now correctly do not apply brand theming when a `_brand.yml` file is present in the project. (#1196),NA,NA,NA,NA

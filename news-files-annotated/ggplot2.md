@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Facet gains a new method `setup_panel_params` to interact with the
+    panel_params setted by Coord object (@Yunuuuu, #6397, #6380)
+
+    !end-bullet!
+-   !begin-bullet!
     `position_fill()` avoids stacking observations of zero (@teunbrand,
     #6338)
 
