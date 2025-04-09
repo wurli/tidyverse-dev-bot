@@ -19147,3 +19147,4 @@ bslib,77e51f88cd364003900719eeec7e8324,Fixed some typos in the documentation.,NA
 bslib,d78a72ce2a549230aaaa504c6aaba2c6,When `bs_theme(brand = FALSE)` we now correctly do not apply brand theming when a `_brand.yml` file is present in the project. (#1196),NA,NA,NA,NA
 shinytest2,7b6faf69be1d241227430752d52c925b,Added `{testthat}`'s snapshot file `transform=` parameter support to `AppDriver$expect_download()` and `AppDriver$expect_values()`. This allows for text transformations of the snapshot files before they are compared. (#403),NA,NA,NA,NA
 lintr,2b612ce598ca470e6bcf5fe3df24d155,"`lint2df_linter()` encourages the use of the `list2DF()` function, or the `data.frame()` function when recycling is required, over the slower and less readable `do.call(cbind.data.frame, )` alternative (#2834, @​Bisaloo).",NA,NA,NA,NA
+reticulate,494e8dc2ec58fc6ddd12994ad03c4548,"Added `str()`, `dim()`, and `t()` S3 methods for NumPy Arrays.",NA,NA,NA,NA

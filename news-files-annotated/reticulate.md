@@ -6,6 +6,11 @@
     Fixed usage of micromamba and mamba, next-generation conda
     environment management tools. reticulate now prefers to use
     micromamba, mamba, then conda when managing environments
+
+    !end-bullet!
+-   !begin-bullet!
+    Added `str()`, `dim()`, and `t()` S3 methods for NumPy Arrays.
+
     !end-bullet!
 
 !end-bullets-1!
