@@ -136,6 +136,12 @@
 !begin-bullets-6!
 
 -   !begin-bullet!
+    `lint2df_linter()` encourages the use of the `list2DF()` function,
+    or the `data.frame()` function when recycling is required, over the
+    slower and less readable `do.call(cbind.data.frame, )` alternative
+    (#2834, @Bisaloo).
+    !end-bullet!
+-   !begin-bullet!
     `coalesce_linter()` encourages the use of the infix operator
     `x %||% y`, which is equivalent to `if (is.null(x)) y else x`
     (#2246, @MichaelChirico). While this has long been used in many
@@ -1964,10 +1970,9 @@
     !end-bullet!
 -   !begin-bullet!
     Parse error lints now appear with the linter name `"error"` instead
-    of `NA` (#1405, @AshesITR).\
-    Also, linting no longer runs if the `source_expressions` contain
-    invalid string data that would cause error messages in other
-    linters. in other linters.
+    of `NA` (#1405, @AshesITR). Also, linting no longer runs if the
+    `source_expressions` contain invalid string data that would cause
+    error messages in other linters. in other linters.
     !end-bullet!
 -   !begin-bullet!
     Prevent `lint()` from hanging on Rmd files with some syntax errors
@@ -1975,10 +1980,9 @@
     !end-bullet!
 -   !begin-bullet!
     `get_source_expressions()` no longer omits trailing non-code lines
-    from knitr files (#1400, #1415, @AshesITR).\
-    This fixes the location information for
-    `trailing_blank_lines_linter()` in RMarkdown documents without
-    terminal newlines.
+    from knitr files (#1400, #1415, @AshesITR). This fixes the location
+    information for `trailing_blank_lines_linter()` in RMarkdown
+    documents without terminal newlines.
     !end-bullet!
 -   !begin-bullet!
     The `vignette("lintr")` incorrectly cited `exclude` as the key for
