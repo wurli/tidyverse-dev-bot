@@ -50,6 +50,13 @@
     (@olivroy, #399).
 
     !end-bullet!
+-   !begin-bullet!
+    Added `{testthat}`'s snapshot file `transform=` parameter support to
+    `AppDriver$expect_download()` and `AppDriver$expect_values()`. This
+    allows for text transformations of the snapshot files before they
+    are compared. (#403)
+
+    !end-bullet!
 
 !end-bullets-2!
 

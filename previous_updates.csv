@@ -19145,3 +19145,4 @@ pins,b6f584b04980682c58bc278e15e0f22f,Fixed handling of `rsconnect::accounts()` 
 ggplot2,e89f2c0deefbe1768c73e7b9b022a772,"Facet gains a new method `setup_panel_params` to interact with the panel_params setted by Coord object (@​Yunuuuu, #6397, #6380)",NA,NA,NA,NA
 bslib,77e51f88cd364003900719eeec7e8324,Fixed some typos in the documentation.,NA,NA,NA,NA
 bslib,d78a72ce2a549230aaaa504c6aaba2c6,When `bs_theme(brand = FALSE)` we now correctly do not apply brand theming when a `_brand.yml` file is present in the project. (#1196),NA,NA,NA,NA
+shinytest2,7b6faf69be1d241227430752d52c925b,Added `{testthat}`'s snapshot file `transform=` parameter support to `AppDriver$expect_download()` and `AppDriver$expect_values()`. This allows for text transformations of the snapshot files before they are compared. (#403),NA,NA,NA,NA
