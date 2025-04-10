@@ -19148,3 +19148,5 @@ bslib,d78a72ce2a549230aaaa504c6aaba2c6,When `bs_theme(brand = FALSE)` we now cor
 shinytest2,7b6faf69be1d241227430752d52c925b,Added `{testthat}`'s snapshot file `transform=` parameter support to `AppDriver$expect_download()` and `AppDriver$expect_values()`. This allows for text transformations of the snapshot files before they are compared. (#403),NA,NA,NA,NA
 lintr,2b612ce598ca470e6bcf5fe3df24d155,"`lint2df_linter()` encourages the use of the `list2DF()` function, or the `data.frame()` function when recycling is required, over the slower and less readable `do.call(cbind.data.frame, )` alternative (#2834, @​Bisaloo).",NA,NA,NA,NA
 reticulate,494e8dc2ec58fc6ddd12994ad03c4548,"Added `str()`, `dim()`, and `t()` S3 methods for NumPy Arrays.",NA,NA,NA,NA
+duckplyr,0894d29a6834d331c4174530e8cbec99,"Typos + clarification edits to ""large"" vignette (@​mine-cetinkaya-rundel, #665).",NA,NA,NA,NA
+duckplyr,e84a957abbc897bf2e578046f7197a1e,Snapshot updates for rcc-smoke (null) (#675).,NA,NA,NA,NA
