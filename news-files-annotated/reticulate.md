@@ -12,6 +12,10 @@
     Added `str()`, `dim()`, and `t()` S3 methods for NumPy Arrays.
 
     !end-bullet!
+-   !begin-bullet!
+    Fixed a segfault observed on R session exit (#1785, #1786).
+
+    !end-bullet!
 
 !end-bullets-1!
 
