@@ -19154,3 +19154,4 @@ ggplot2,3097627f82143910cae8ba3d7b22d09a,"Standardised test functions for import
 ggplot2,95a89f81c041fe6794dbdad47885c780,New `get_geom_defaults()` for retrieving resolved default aesthetics.,NA,NA,NA,NA
 reticulate,df602013cd12ee8d18763a8558d858ca,"Fixed a segfault observed on R session exit (#1785, #1786).",NA,NA,NA,NA
 duckplyr,8dbb1fd222be89d3e4cd49546f592ce3,"Verbose `conflict_prefer()` (#667, #684).",NA,NA,NA,NA
+shinytest2,c8000ea179e677466e08a5f32f5f43d6,Fixed a bug where `AppDriver$expect_values(transform=)` default value caused error to be thrown. (#413),NA,NA,NA,NA
