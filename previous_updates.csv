@@ -19153,3 +19153,4 @@ duckplyr,e84a957abbc897bf2e578046f7197a1e,Snapshot updates for rcc-smoke (null) 
 ggplot2,3097627f82143910cae8ba3d7b22d09a,"Standardised test functions for important classes: `is_ggproto()`, `is_ggplot()`, `is_mapping()`, `is_layer()`, `is_geom()`, `is_stat()`, `is_position()`, `is_coord()`, `is_facet()`, `is_scale()`, `is_guide()`, `is_guides()`, `is_margin()`, `is_theme_element()` and `is_theme()`.",NA,NA,NA,NA
 ggplot2,95a89f81c041fe6794dbdad47885c780,New `get_geom_defaults()` for retrieving resolved default aesthetics.,NA,NA,NA,NA
 reticulate,df602013cd12ee8d18763a8558d858ca,"Fixed a segfault observed on R session exit (#1785, #1786).",NA,NA,NA,NA
+duckplyr,8dbb1fd222be89d3e4cd49546f592ce3,"Verbose `conflict_prefer()` (#667, #684).",NA,NA,NA,NA
