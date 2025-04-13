@@ -19155,3 +19155,9 @@ ggplot2,95a89f81c041fe6794dbdad47885c780,New `get_geom_defaults()` for retrievin
 reticulate,df602013cd12ee8d18763a8558d858ca,"Fixed a segfault observed on R session exit (#1785, #1786).",NA,NA,NA,NA
 duckplyr,8dbb1fd222be89d3e4cd49546f592ce3,"Verbose `conflict_prefer()` (#667, #684).",NA,NA,NA,NA
 shinytest2,c8000ea179e677466e08a5f32f5f43d6,Fixed a bug where `AppDriver$expect_values(transform=)` default value caused error to be thrown. (#413),NA,NA,NA,NA
+duckplyr,3fcdf590430e8655dc9ce66ff04af754,"Passthrough of functions prefixed with `dd$`, e.g., `dd$ROW()` will be translated as DuckDB's `ROW()` function (#658).",NA,NA,NA,NA
+duckplyr,ae1bc86c04aa8b7dbaa2e451f68441de,"New `as_tbl()` to convert to a dbplyr tbl object (#634, #685).",NA,NA,NA,NA
+duckplyr,e82c3bdbae55334f5f4d83fc679de750,Remove space at EOL.,NA,NA,NA,NA
+duckplyr,a6e112bcb5d5fa002c1131cdfb97b8ef,Bump required version of pillar.,NA,NA,NA,NA
+duckplyr,3b75f8d6ba13626998874c9eb5328e0f,"Add `vignette(""duckdb"")` (#690).",NA,NA,NA,NA
+duckplyr,82688f08232fb9463cae46a0afdc1b22,Add experimental badge.,NA,NA,NA,NA
