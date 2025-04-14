@@ -19161,3 +19161,4 @@ duckplyr,e82c3bdbae55334f5f4d83fc679de750,Remove space at EOL.,NA,NA,NA,NA
 duckplyr,a6e112bcb5d5fa002c1131cdfb97b8ef,Bump required version of pillar.,NA,NA,NA,NA
 duckplyr,3b75f8d6ba13626998874c9eb5328e0f,"Add `vignette(""duckdb"")` (#690).",NA,NA,NA,NA
 duckplyr,82688f08232fb9463cae46a0afdc1b22,Add experimental badge.,NA,NA,NA,NA
+pkgdown,5d36e022580236d2aae3307f0ca4ef2d,Option `pkgdown.internet` was removed because CDN file caching now requires an internet connection.,NA,NA,NA,NA

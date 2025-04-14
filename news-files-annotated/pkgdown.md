@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Option `pkgdown.internet` was removed because CDN file caching now
+    requires an internet connection.
+    !end-bullet!
+-   !begin-bullet!
     Support for math rendering using katex and mathjax was improved and
     now includes necessary components using CDN (#2704).
     !end-bullet!
