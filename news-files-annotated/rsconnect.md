@@ -17,6 +17,11 @@
     or an engine declaration. (#1145)
 
     !end-bullet!
+-   !begin-bullet!
+    Expand tilde when resolving the `rsconnect.ca.bundle` option.
+    (#1152)
+
+    !end-bullet!
 
 !end-bullets-1!
 
