@@ -19169,3 +19169,4 @@ duckplyr,b1d7bd24307e2f59fd9b43a6885b6884,Add Posit's ROR ID (#592).,NA,NA,NA,NA
 duckplyr,270a7127b5f8f3ab9574b93abdd3c71d,"Set functions like `union()` no longer trigger materialization (#654, #692).",NA,NA,NA,NA
 duckplyr,e5365d4cf76ec48e93f82a9adb4b5504,"Remove experimental flag (#682, #695).",NA,NA,NA,NA
 duckplyr,7d364b4e49b649bfc858064dd13fec84,Move package.,NA,NA,NA,NA
+promises,99027cb17044aac5da72d6bd27b2cb39,Changed the way we create future objects to stay compatible with new versions of `{future}`. Apparently the way we were doing it was never idiomatic and only worked by accident. (#121),NA,NA,NA,NA
