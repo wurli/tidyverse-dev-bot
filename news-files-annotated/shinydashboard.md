@@ -1,8 +1,21 @@
-# shinydashboard 0.7.2
+# shinydashboard (development version)
 
 ### Bug fixes
 
 !begin-bullets-1!
+
+-   !begin-bullet!
+    Fixed #397: `updateTabItems()` is now a run-time alias of
+    `shiny::updateTabsetPanel()`. (#398)
+    !end-bullet!
+
+!end-bullets-1!
+
+# shinydashboard 0.7.2
+
+### Bug fixes
+
+!begin-bullets-2!
 
 -   !begin-bullet!
     Fixed #369: `renderMenu()` did not work correctly when
@@ -10,7 +23,7 @@
     with shiny 1.7.0 (and higher). (#370)
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # shinydashboard 0.7.1
 
@@ -18,7 +31,7 @@
 
 ### New features
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     Shiny async support: render functions can now handle promises.
@@ -26,18 +39,18 @@
     promise that resolves to a `valueBox` (for example).
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 ### Bug fixes
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     Fixed #297: recent versions of Shiny caused the sidebar toggle icon
     to not render because FontAwesome was upgraded in Shiny. (#299)
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 # shinydashboard 0.7.0
 
@@ -45,18 +58,18 @@
 
 ### New features
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     Changed license from GPL-2 to GPL\>=2 (meaning GPL version 2 or
     later). (#258)
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 ### Bug fixes
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     Fixed shinytest/#167: shinydashboard did not work properly with
@@ -86,7 +99,7 @@
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # shinydashboard 0.6.1
 
@@ -95,7 +108,7 @@ cases that have surfaced since the last release.
 
 ## Full changelog
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     Fixed #214: make sure that the `data-value` attribute of
@@ -112,7 +125,7 @@ cases that have surfaced since the last release.
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 # shinydashboard 0.6.0
 
@@ -127,7 +140,7 @@ release's two biggest new features.
 
 ### New features
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     Address #179 support for bookmarking the expanded/collapsed state of
@@ -141,11 +154,11 @@ release's two biggest new features.
 
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 ### Minor new features and improvements
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     Addressed #165: added a new optional argument, called `headerText`
@@ -180,11 +193,11 @@ release's two biggest new features.
 
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 ### Bug fixes
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     Fixed #71 and #87: detect and enforce selected tab for dynamic
@@ -233,11 +246,11 @@ release's two biggest new features.
 
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 ### Library updates
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     Update documentation to newest version of roxygen. (commit #541d3c1)
@@ -253,11 +266,11 @@ release's two biggest new features.
 
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 # shinydashboard 0.5.3
 
-!begin-bullets-11!
+!begin-bullets-12!
 
 -   !begin-bullet!
     Fixed (#160: Using a dynamically-created `sidebarMenu` without an
@@ -265,11 +278,11 @@ release's two biggest new features.
     0.14.
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-12!
 
 # shinydashboard 0.5.2
 
-!begin-bullets-12!
+!begin-bullets-13!
 
 -   !begin-bullet!
     Added ability to bookmark and restore tabs, when used with Shiny
@@ -285,11 +298,11 @@ release's two biggest new features.
 
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
 
 # shinydashboard 0.5.1
 
-!begin-bullets-13!
+!begin-bullets-14!
 
 -   !begin-bullet!
     Logout panels from Shiny Server Pro were previously not visible, but
@@ -315,11 +328,11 @@ release's two biggest new features.
 
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-14!
 
 # shinydashboard 0.5.0
 
-!begin-bullets-14!
+!begin-bullets-15!
 
 -   !begin-bullet!
     Updated to AdminLTE 2.1.2 (406de4e). Please note that some CSS
@@ -354,4 +367,4 @@ release's two biggest new features.
 
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-15!
