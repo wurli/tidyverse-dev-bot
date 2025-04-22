@@ -7,63 +7,55 @@
     require a `range()` method that returns numeric values. Discrete
     classes require a `levels()` method (and optionally a `droplevels()`
     method) (#480).
-
     !end-bullet!
 -   !begin-bullet!
     New `label_glue()` labelling function for interpolated strings
     (#457).
-
     !end-bullet!
 -   !begin-bullet!
     `fullseq()` and by extension `breaks_width()` can now deal with
     unsorted ranges (#435).
-
     !end-bullet!
 -   !begin-bullet!
     New `label_date_short(leading)` argument to replace leading zeroes
     (#442)
-
     !end-bullet!
 -   !begin-bullet!
     `breaks_pretty()` will return the input limit when it has no range
     (#446)
-
     !end-bullet!
 -   !begin-bullet!
     `breaks_exp()` now provides more sensible breaks for the exponential
-    transform (@teunbrand, #405).
-
+    transform
+    !end-bullet!
+-   !begin-bullet!
+    `transform_exp()` now has more sensible breaks, available in
+    `breaks_exp()` (@teunbrand, #405).
     !end-bullet!
 -   !begin-bullet!
     The scales package now keeps track of known palettes. These can be
     retrieved using `get_palette()` or registered using `set_palette()`
     (#396).
-
     !end-bullet!
 -   !begin-bullet!
     `label_log()` has a `signed` argument for displaying negative
     numbers (@teunbrand, #421).
-
     !end-bullet!
 -   !begin-bullet!
     New `label_dictionary()` for named lookup of labels (#458).
-
     !end-bullet!
 -   !begin-bullet!
     New function `compose_label()` to chain together label formatting
     functions (#462)
-
     !end-bullet!
 -   !begin-bullet!
     Palette function now have classes, attributes and coercion methods
     (@teunbrand, #426).
-
     !end-bullet!
 -   !begin-bullet!
     Added colour manipulation functions: `col_shift()`,
     `col_saturate()`, `col_darker()`, `col_lighter()` and `col_mix()`
     (@teunbrand, #423)
-
     !end-bullet!
 
 !end-bullets-1!
@@ -663,8 +655,7 @@
     !end-bullet!
 -   !begin-bullet!
     `expand_range()` arguments `mul` and `add` now affect scales with a
-    range of 0\
-    (@dpseidel, ggplot2-2281).
+    range of 0 (@dpseidel, ggplot2-2281).
 
     !end-bullet!
 -   !begin-bullet!

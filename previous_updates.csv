@@ -19175,3 +19175,4 @@ duckplyr,817841a31c46d7d0b6623e0fd6bfd9e2,Remove superfluous check.,NA,NA,NA,NA
 duckplyr,f96835722e6b79342ea95dbc9f1f6c60,Fix lints.,NA,NA,NA,NA
 cli,43eb4d42ab1b4ee0532fdf84a6138dc5,`code_highlight()` supports long strings and symbols (#727 @​moodymudskipper),NA,NA,NA,NA
 scales,9e7e840fae3ae474383f370230f5d9e3,Range training now supports custom classes. Continuous classes require a `range()` method that returns numeric values. Discrete classes require a `levels()` method (and optionally a `droplevels()` method) (#480).,NA,NA,NA,NA
+scales,8221b85e27b9892bbf6c6da2673c4515,`breaks_exp()` now provides more sensible breaks for the exponential transform,NA,NA,NA,NA
