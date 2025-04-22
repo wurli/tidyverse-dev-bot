@@ -4,7 +4,7 @@
 
 -   !begin-bullet!
     `code_highlight()` supports long strings and symbols (#727
-    @moodymudskipper)
+    @moodymudskipper).
     !end-bullet!
 
 !end-bullets-1!

@@ -3,6 +3,13 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Range training now supports custom classes. Continuous classes
+    require a `range()` method that returns numeric values. Discrete
+    classes require a `levels()` method (and optionally a `droplevels()`
+    method) (#480).
+
+    !end-bullet!
+-   !begin-bullet!
     New `label_glue()` labelling function for interpolated strings
     (#457).
 
