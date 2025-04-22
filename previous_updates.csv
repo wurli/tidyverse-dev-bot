@@ -19173,3 +19173,4 @@ promises,99027cb17044aac5da72d6bd27b2cb39,Changed the way we create future objec
 shinydashboard,8e3a811011896e37324150f245e912f1,Fixed #397: `updateTabItems()` is now a run-time alias of `shiny::updateTabsetPanel()`. (#398),NA,NA,NA,NA
 duckplyr,817841a31c46d7d0b6623e0fd6bfd9e2,Remove superfluous check.,NA,NA,NA,NA
 duckplyr,f96835722e6b79342ea95dbc9f1f6c60,Fix lints.,NA,NA,NA,NA
+cli,43eb4d42ab1b4ee0532fdf84a6138dc5,`code_highlight()` supports long strings and symbols (#727 @​moodymudskipper),NA,NA,NA,NA
