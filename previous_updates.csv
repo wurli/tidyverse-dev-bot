@@ -19171,3 +19171,5 @@ duckplyr,e5365d4cf76ec48e93f82a9adb4b5504,"Remove experimental flag (#682, #695)
 duckplyr,7d364b4e49b649bfc858064dd13fec84,Move package.,NA,NA,NA,NA
 promises,99027cb17044aac5da72d6bd27b2cb39,Changed the way we create future objects to stay compatible with new versions of `{future}`. Apparently the way we were doing it was never idiomatic and only worked by accident. (#121),NA,NA,NA,NA
 shinydashboard,8e3a811011896e37324150f245e912f1,Fixed #397: `updateTabItems()` is now a run-time alias of `shiny::updateTabsetPanel()`. (#398),NA,NA,NA,NA
+duckplyr,817841a31c46d7d0b6623e0fd6bfd9e2,Remove superfluous check.,NA,NA,NA,NA
+duckplyr,f96835722e6b79342ea95dbc9f1f6c60,Fix lints.,NA,NA,NA,NA
