@@ -1,5 +1,7 @@
 # shinydashboard (development version)
 
+# shinydashboard 0.7.3
+
 ### Bug fixes
 
 !begin-bullets-1!
