@@ -19182,3 +19182,4 @@ desc,1f75f6697d7d74dff61ba0dde6a90bfa,`desc_coerce_authors_at_r()` now works cor
 fs,f1d923dc1249f357f6d3790571d2274d,"New `path_select_components()` function to select components of one or more paths (#326, @​Tazinho).",NA,NA,NA,NA
 rlang,766315e82d37da64e601426ef8ab64c0,C code no longer calls `memcpy()` and `memset()` on 0-length R object memory (#1797).,NA,NA,NA,NA
 gt,7bfeed77ecc47a32c3ff653726898195,"as_word() now handles ""`<br>`{=html}"" line breaks for md() and html(), and no longer automatically adds ""Table N"" ahead of the caption.",NA,NA,NA,NA
+gt,8e034b98efaae5beccc607ec1cdfea8f,"Fixed an issue with a warning in Quarto (@​olivroy, #1985)",NA,NA,NA,NA

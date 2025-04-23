@@ -5,9 +5,14 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed an issue with a warning in Quarto (@olivroy, #1985)
+
+    !end-bullet!
+-   !begin-bullet!
     as_word() now handles "`<br>`{=html}" line breaks for md() and
     html(), and no longer automatically adds "Table N" ahead of the
     caption.
+
     !end-bullet!
 
 !end-bullets-1!
