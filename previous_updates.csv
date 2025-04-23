@@ -19179,3 +19179,4 @@ scales,8221b85e27b9892bbf6c6da2673c4515,`breaks_exp()` now provides more sensibl
 roxygen2,e969efe3bc3ad915d529bfcf2904b5b9,"Package documentation now converts ROR IDs into a useful link (#1698, @​maelle).",NA,NA,NA,NA
 scales,f55dd15b02d92b7aa2bb859a7b2c09a3,`label_date_short()` gains `tz` and `locale` argument (#478),NA,NA,NA,NA
 desc,1f75f6697d7d74dff61ba0dde6a90bfa,`desc_coerce_authors_at_r()` now works correctly for authors with multiple given names.,NA,NA,NA,NA
+fs,f1d923dc1249f357f6d3790571d2274d,"New `path_select_components()` function to select components of one or more paths (#326, @​Tazinho).",NA,NA,NA,NA

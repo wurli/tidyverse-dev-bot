@@ -1,18 +1,27 @@
 # fs (development version)
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    New `path_select_components()` function to select components of one
+    or more paths (#326, @Tazinho).
+    !end-bullet!
+
+!end-bullets-1!
+
 # fs 1.6.6
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     No changes.
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # fs 1.6.5
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     `path_ext()` and `path_ext_remove()` return correct extension and
@@ -26,38 +35,38 @@
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 # fs 1.6.4
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     No changes.
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 # fs 1.6.3
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     No user visible changes.
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 # fs 1.6.2
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     `path_ext_set()` can now handle extensions that contain a `.`,
     e.g. `csv.gz` (@mgirlich, #415).
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # fs 1.6.1
 
@@ -65,7 +74,7 @@ No user visible changes.
 
 # fs 1.6.0
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     inputs to `path_real()` and `path_join()` are coerced to character
@@ -77,11 +86,11 @@ No user visible changes.
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 # fs 1.5.2
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     `file_create()` and `dir_create()` now return the correct path when
@@ -102,11 +111,11 @@ No user visible changes.
 
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 # fs 1.5.1
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     Gábor Csárdi is now the maintainer.
@@ -141,11 +150,11 @@ No user visible changes.
 
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 # fs 1.5.0
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     The libuv release used by fs was updated to 1.38.1
@@ -167,11 +176,11 @@ No user visible changes.
 
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 # fs 1.4.2
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     `file_info(..., follow = TRUE)`, `is_dir()`, and `is_file()` follow
@@ -196,21 +205,21 @@ No user visible changes.
 
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 # fs 1.4.1
 
-!begin-bullets-11!
+!begin-bullets-12!
 
 -   !begin-bullet!
     Fix compilation on Solaris.
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-12!
 
 # fs 1.4.0
 
-!begin-bullets-12!
+!begin-bullets-13!
 
 -   !begin-bullet!
     `[[.fs_path`, `[[.fs_bytes` and `[[.fs_perms` now preserve their
@@ -232,11 +241,11 @@ No user visible changes.
 
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
 
 # fs 1.3.2
 
-!begin-bullets-13!
+!begin-bullets-14!
 
 -   !begin-bullet!
     fs now passes along `CPPFLAGS` during compilation of libuv, fixing
@@ -288,11 +297,11 @@ No user visible changes.
 
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-14!
 
 # fs 1.3.1
 
-!begin-bullets-14!
+!begin-bullets-15!
 
 -   !begin-bullet!
     Fix missed test with UTF-8 characters, which now passes on a strict
@@ -304,13 +313,13 @@ No user visible changes.
 
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-15!
 
 # fs 1.3.0
 
 ## Breaking changes
 
-!begin-bullets-15!
+!begin-bullets-16!
 
 -   !begin-bullet!
     `dir_ls()`, `dir_map()`, `dir_walk()`, `dir_info()` and `dir_tree()`
@@ -319,22 +328,22 @@ No user visible changes.
     The previous argument `recursive` has been deprecated.
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-16!
 
 ## New features
 
-!begin-bullets-16!
+!begin-bullets-17!
 
 -   !begin-bullet!
     `dir_copy()` gains a `overwrite` argument, to overwrite a given
     directory (@pasipasi123, #193)
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-17!
 
 ## Minor improvements and fixes
 
-!begin-bullets-17!
+!begin-bullets-18!
 
 -   !begin-bullet!
     `dir_create()` now throws a more accurate error message when you try
@@ -361,13 +370,13 @@ No user visible changes.
 
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-18!
 
 # fs 1.2.7
 
 ## New features
 
-!begin-bullets-18!
+!begin-bullets-19!
 
 -   !begin-bullet!
     `file_size()` function added as a helper for
@@ -389,11 +398,11 @@ No user visible changes.
 
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-19!
 
 ## Minor improvements and fixes
 
-!begin-bullets-19!
+!begin-bullets-20!
 
 -   !begin-bullet!
     `path_ext_set()` and `file_temp()` now treat extensions with a
@@ -443,11 +452,11 @@ No user visible changes.
 
     !end-bullet!
 
-!end-bullets-19!
+!end-bullets-20!
 
 # fs 1.2.6
 
-!begin-bullets-20!
+!begin-bullets-21!
 
 -   !begin-bullet!
     This is a small bugfix only release.
@@ -464,24 +473,24 @@ No user visible changes.
 
     !end-bullet!
 
-!end-bullets-20!
+!end-bullets-21!
 
 # fs 1.2.5
 
-!begin-bullets-21!
+!begin-bullets-22!
 
 -   !begin-bullet!
     Patch release to fix tests which left files in the R session
     directory
     !end-bullet!
 
-!end-bullets-21!
+!end-bullets-22!
 
 # fs 1.2.4
 
 ## New Features
 
-!begin-bullets-22!
+!begin-bullets-23!
 
 -   !begin-bullet!
     New `path_wd()` generates paths from the current working directory
@@ -506,11 +515,11 @@ No user visible changes.
 
     !end-bullet!
 
-!end-bullets-22!
+!end-bullets-23!
 
 ## Minor improvements and fixes
 
-!begin-bullets-23!
+!begin-bullets-24!
 
 -   !begin-bullet!
     `path_tidy()` now always includes a trailing slash for the windows
@@ -532,13 +541,13 @@ No user visible changes.
 
     !end-bullet!
 
-!end-bullets-23!
+!end-bullets-24!
 
 # fs 1.2.3
 
 ## Features
 
-!begin-bullets-24!
+!begin-bullets-25!
 
 -   !begin-bullet!
     Experimental support for `/` and `+` methods for `fs_path` objects
@@ -551,11 +560,11 @@ No user visible changes.
 
     !end-bullet!
 
-!end-bullets-24!
+!end-bullets-25!
 
 ## Bugfixes
 
-!begin-bullets-25!
+!begin-bullets-26!
 
 -   !begin-bullet!
     `path_ext()`, `path_ext_set()` and `path_ext_remove()` now handle
@@ -569,24 +578,24 @@ No user visible changes.
 
     !end-bullet!
 
-!end-bullets-25!
+!end-bullets-26!
 
 # fs 1.2.2
 
 ## Features
 
-!begin-bullets-26!
+!begin-bullets-27!
 
 -   !begin-bullet!
     fs no longer needs a C++11 compiler, it now works with compilers
     which support only C++03 (#90).
     !end-bullet!
 
-!end-bullets-26!
+!end-bullets-27!
 
 ## Bugfixes
 
-!begin-bullets-27!
+!begin-bullets-28!
 
 -   !begin-bullet!
     `fs_path` `fs_bytes` and `fs_perm` objects now use
@@ -600,24 +609,24 @@ No user visible changes.
 
     !end-bullet!
 
-!end-bullets-27!
+!end-bullets-28!
 
 # fs 1.2.1
 
 ## Features
 
-!begin-bullets-28!
+!begin-bullets-29!
 
 -   !begin-bullet!
     `path_abs()` gains a `start` argument, to specify where the absolute
     path should be calculated from (#87).
     !end-bullet!
 
-!end-bullets-28!
+!end-bullets-29!
 
 ## Bugfixes
 
-!begin-bullets-29!
+!begin-bullets-30!
 
 -   !begin-bullet!
     `path_ext()` now returns `character()` if given 0 length inputs
@@ -629,13 +638,13 @@ No user visible changes.
 
     !end-bullet!
 
-!end-bullets-29!
+!end-bullets-30!
 
 # fs 1.2.0
 
 ## Breaking changes
 
-!begin-bullets-30!
+!begin-bullets-31!
 
 -   !begin-bullet!
     `path_expand()` and `path_home()` now use `USERPROFILE` or
@@ -662,11 +671,11 @@ No user visible changes.
 
     !end-bullet!
 
-!end-bullets-30!
+!end-bullets-31!
 
 ## Bugfixes
 
-!begin-bullets-31!
+!begin-bullets-32!
 
 -   !begin-bullet!
     Fix crash when a files user or group id did not exist in the
@@ -679,11 +688,11 @@ No user visible changes.
     Fix propagation of NA values in `path_norm()` (#63).
     !end-bullet!
 
-!end-bullets-31!
+!end-bullets-32!
 
 ## Features
 
-!begin-bullets-32!
+!begin-bullets-33!
 
 -   !begin-bullet!
     `file_chmod()` is now vectorized over both of its arguments (#71).
@@ -697,13 +706,13 @@ No user visible changes.
     which always fails if the package or file does not exist (#75)
     !end-bullet!
 
-!end-bullets-32!
+!end-bullets-33!
 
 # fs 1.1.0
 
 ## Breaking changes
 
-!begin-bullets-33!
+!begin-bullets-34!
 
 -   !begin-bullet!
     Tidy paths no longer expand `~`.
@@ -719,21 +728,21 @@ No user visible changes.
 
     !end-bullet!
 
-!end-bullets-33!
+!end-bullets-34!
 
 ## New features
 
-!begin-bullets-34!
+!begin-bullets-35!
 
 -   !begin-bullet!
     Removed the autotool system dependency on non-windows systems.
     !end-bullet!
 
-!end-bullets-34!
+!end-bullets-35!
 
 ## Bugfixes
 
-!begin-bullets-35!
+!begin-bullets-36!
 
 -   !begin-bullet!
     `dir_delete()` now correctly expands paths (#47).
@@ -765,11 +774,11 @@ No user visible changes.
 
     !end-bullet!
 
-!end-bullets-35!
+!end-bullets-36!
 
 # fs 1.0.0
 
-!begin-bullets-36!
+!begin-bullets-37!
 
 -   !begin-bullet!
     Removed the libbsd system dependency on linux
@@ -781,4 +790,4 @@ No user visible changes.
     Added a `NEWS.md` file to track changes to the package.
     !end-bullet!
 
-!end-bullets-36!
+!end-bullets-37!
