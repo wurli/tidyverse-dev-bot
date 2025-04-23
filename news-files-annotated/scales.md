@@ -57,6 +57,9 @@
     `col_saturate()`, `col_darker()`, `col_lighter()` and `col_mix()`
     (@teunbrand, #423)
     !end-bullet!
+-   !begin-bullet!
+    `label_date_short()` gains `tz` and `locale` argument (#478)
+    !end-bullet!
 
 !end-bullets-1!
 
