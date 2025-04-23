@@ -24,6 +24,11 @@
     (#148, @kevinushey)
 
     !end-bullet!
+-   !begin-bullet!
+    `desc_coerce_authors_at_r()` now works correctly for authors with
+    multiple given names.
+
+    !end-bullet!
 
 !end-bullets-1!
 
