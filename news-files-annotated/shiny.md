@@ -44,6 +44,16 @@
     Enter for `textAreaInput()`). (#4183)
 
     !end-bullet!
+-   !begin-bullet!
+    When auto-reload is enabled, Shiny now reloads the entire app when
+    support files, like Shiny modules, additional script files, or web
+    assets, change. To enable auto-reload, call `devmode(TRUE)` to
+    enable Shiny's developer mode, or set
+    `options(shiny.autoreload = TRUE)` to specifically enable
+    auto-reload. You can choose which files are watched for changes with
+    the `shiny.autoreload.pattern` option. (#4184)
+
+    !end-bullet!
 
 !end-bullets-1!
 
