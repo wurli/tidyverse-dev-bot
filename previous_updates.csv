@@ -19188,3 +19188,5 @@ tibble,6ba7b6737bb3ee3391cf2223035ae36a,Explain (#1630).,NA,NA,NA,NA
 tibble,837e7f998cfb3c112eb25ae6f97de7b7,"Add xml2 for covr, print testthat results (#1629).",NA,NA,NA,NA
 tibble,a267381aec46b09b966a0c9ddf98aea2,Fix (#1628).,NA,NA,NA,NA
 tibble,6a72bf450afedcc6a4746262ddaa0d7a,Sync (#1627).,NA,NA,NA,NA
+fs,3eed16b96788e0818aae2d5bd22cfaa7,`path_has_parent()` now expands `~` (#412).,NA,NA,NA,NA
+fs,fc06bae959d8829d90eea71e0995adcf,"`dir_exists()` follows relative symlinks in non-current directories (@​heavywatal, #395).",NA,NA,NA,NA

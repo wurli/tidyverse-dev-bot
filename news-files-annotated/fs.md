@@ -3,8 +3,18 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `path_has_parent()` now expands `~` (#412).
+
+    !end-bullet!
+-   !begin-bullet!
     New `path_select_components()` function to select components of one
     or more paths (#326, @Tazinho).
+
+    !end-bullet!
+-   !begin-bullet!
+    `dir_exists()` follows relative symlinks in non-current directories
+    (@heavywatal, #395).
+
     !end-bullet!
 
 !end-bullets-1!
