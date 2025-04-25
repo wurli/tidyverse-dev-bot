@@ -7,6 +7,12 @@
 -   !begin-bullet!
     `code_highlight()` supports long strings and symbols (#727
     @moodymudskipper).
+
+    !end-bullet!
+-   !begin-bullet!
+    New `{.num}` and `{.bytes}` inline styles to format numbers and
+    bytes (@m-muecke, #644, #588, #643).
+
     !end-bullet!
 
 !end-bullets-1!
