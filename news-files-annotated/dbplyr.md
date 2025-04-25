@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fix for failing snapshot tests (@edward-burn, #1567).
+
+    !end-bullet!
+-   !begin-bullet!
     Tightened argument checks for SQL translations. These changes should
     result in more informative errors in cases where code already
     failed, possibly silently; if you see errors with code that used to
