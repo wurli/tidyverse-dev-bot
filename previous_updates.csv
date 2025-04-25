@@ -19184,3 +19184,7 @@ rlang,766315e82d37da64e601426ef8ab64c0,C code no longer calls `memcpy()` and `me
 gt,7bfeed77ecc47a32c3ff653726898195,"as_word() now handles ""`<br>`{=html}"" line breaks for md() and html(), and no longer automatically adds ""Table N"" ahead of the caption.",NA,NA,NA,NA
 gt,8e034b98efaae5beccc607ec1cdfea8f,"Fixed an issue with a warning in Quarto (@​olivroy, #1985)",NA,NA,NA,NA
 shiny,02fe5663168c2c036cacee7d1b832903,"When auto-reload is enabled, Shiny now reloads the entire app when support files, like Shiny modules, additional script files, or web assets, change. To enable auto-reload, call `devmode(TRUE)` to enable Shiny's developer mode, or set `options(shiny.autoreload = TRUE)` to specifically enable auto-reload. You can choose which files are watched for changes with the `shiny.autoreload.pattern` option. (#4184)",NA,NA,NA,NA
+tibble,6ba7b6737bb3ee3391cf2223035ae36a,Explain (#1630).,NA,NA,NA,NA
+tibble,837e7f998cfb3c112eb25ae6f97de7b7,"Add xml2 for covr, print testthat results (#1629).",NA,NA,NA,NA
+tibble,a267381aec46b09b966a0c9ddf98aea2,Fix (#1628).,NA,NA,NA,NA
+tibble,6a72bf450afedcc6a4746262ddaa0d7a,Sync (#1627).,NA,NA,NA,NA
