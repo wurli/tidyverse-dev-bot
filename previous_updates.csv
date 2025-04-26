@@ -19195,3 +19195,4 @@ dbplyr,4aeb68537e2e033affebe59ff0178360,"Fix for failing snapshot tests (@​edw
 tibble,f929a759789e0641f542b8eb7f578ac6,Correct installation of xml2 (#1631).,NA,NA,NA,NA
 pkgdown,e4d4bae1a73ab50a5d423e3fe002c056,Math rendering using katex and mathjax was improved and now includes necessary components using CDN (#2704).,NA,NA,NA,NA
 pkgdown,ba86de6a13920f85dc227387424fff5f,Articles have improved test cases (thanks to @​venpopov and @​ethanbass).,NA,NA,NA,NA
+prettyunits,f0945d6b6bedb3fe22b1289d6b39c9cb,"Add `""q""`, `""r""`, `""R""`, `""Q""` prefix from BIPM to `pretty_num()` (#41, @​cregouby)",NA,NA,NA,NA

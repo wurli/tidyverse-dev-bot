@@ -1,8 +1,17 @@
 # prettyunits (development version)
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    Add `"q"`, `"r"`, `"R"`, `"Q"` prefix from BIPM to `pretty_num()`
+    (#41, @cregouby)
+    !end-bullet!
+
+!end-bullets-1!
+
 # prettyunits 1.2.0
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     New `pretty_num()` function with all the BIPM agreed unit prefix
@@ -26,22 +35,22 @@
 
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # prettyunits 1.1.1
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     Fix spurious zero fractions in `pretty_bytes()` when formatting
     vectors of sizes (#23).
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 # prettyunits 1.1.0
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     `pretty_dt()`, `pretty_ms()` and `pretty_sec()` now handle `NA`
@@ -51,8 +60,7 @@
     !end-bullet!
 -   !begin-bullet!
     `pretty_bytes()` now formats quantities just below the units better.
-    E.g. 1MB - 1B is formatted as `"1 MB"` instead of `""1000 kB"`
-    (#18).
+    E.g. 1MB - 1B is formatted as `"1 MB"` instead of `"1000 kB"` (#18).
 
     !end-bullet!
 -   !begin-bullet!
@@ -67,11 +75,11 @@
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 # prettyunits 1.0.2
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     `pretty_bytes()` always uses two fraction digits for non-integers.
@@ -79,19 +87,19 @@
     change so much.
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 # prettyunits 1.0.1
 
 First version with a NEWS file.
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     Get rid of `R CMD check` notes.
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # prettyunits 1.0.0
 
