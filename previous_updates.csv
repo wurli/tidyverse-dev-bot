@@ -19192,3 +19192,4 @@ fs,3eed16b96788e0818aae2d5bd22cfaa7,`path_has_parent()` now expands `~` (#412).,
 fs,fc06bae959d8829d90eea71e0995adcf,"`dir_exists()` follows relative symlinks in non-current directories (@​heavywatal, #395).",NA,NA,NA,NA
 cli,b2a7064ee77cf289e4b399824847536c,"New `{.num}` and `{.bytes}` inline styles to format numbers and bytes (@​m-muecke, #644, #588, #643).",NA,NA,NA,NA
 dbplyr,4aeb68537e2e033affebe59ff0178360,"Fix for failing snapshot tests (@​edward-burn, #1567).",NA,NA,NA,NA
+tibble,f929a759789e0641f542b8eb7f578ac6,Correct installation of xml2 (#1631).,NA,NA,NA,NA
