@@ -19193,3 +19193,5 @@ fs,fc06bae959d8829d90eea71e0995adcf,"`dir_exists()` follows relative symlinks in
 cli,b2a7064ee77cf289e4b399824847536c,"New `{.num}` and `{.bytes}` inline styles to format numbers and bytes (@​m-muecke, #644, #588, #643).",NA,NA,NA,NA
 dbplyr,4aeb68537e2e033affebe59ff0178360,"Fix for failing snapshot tests (@​edward-burn, #1567).",NA,NA,NA,NA
 tibble,f929a759789e0641f542b8eb7f578ac6,Correct installation of xml2 (#1631).,NA,NA,NA,NA
+pkgdown,e4d4bae1a73ab50a5d423e3fe002c056,Math rendering using katex and mathjax was improved and now includes necessary components using CDN (#2704).,NA,NA,NA,NA
+pkgdown,ba86de6a13920f85dc227387424fff5f,Articles have improved test cases (thanks to @​venpopov and @​ethanbass).,NA,NA,NA,NA
