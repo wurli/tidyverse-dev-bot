@@ -1,5 +1,7 @@
 # pkgdown (development version)
 
+# pkgdown 2.1.2
+
 ## New features
 
 * ROR IDs in `DESCRIPTION` are transformed into icons, similar to ORCID IDs. (#2850)
