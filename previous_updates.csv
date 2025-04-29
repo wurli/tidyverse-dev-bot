@@ -19199,3 +19199,4 @@ prettyunits,f0945d6b6bedb3fe22b1289d6b39c9cb,"Add `""q""`, `""r""`, `""R""`, `""
 tibble,f3483bd542dbf9238ccc84ebebbdca22,Only fail covr builds if token is given (#1633).,NA,NA,NA,NA
 tibble,455aa0d1aab925b732455fda09b604f1,Always use `_R_CHECK_FORCE_SUGGESTS_=false` (#1632).,NA,NA,NA,NA
 ggplot2,b661ffbcd008c0d62bcd75d610c22103,"(internal) New `Facet$draw_panel_content()` method for delegating panel assembly (@​Yunuuuu, #6406).",NA,NA,NA,NA
+rsconnect,4346e9f60bb75ad0ad98be5b33085411,Added support for interaction with Posit Connect deployments hosted in Snowpark Container Services.,NA,NA,NA,NA
