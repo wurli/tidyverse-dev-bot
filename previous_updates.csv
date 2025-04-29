@@ -19200,3 +19200,13 @@ tibble,f3483bd542dbf9238ccc84ebebbdca22,Only fail covr builds if token is given 
 tibble,455aa0d1aab925b732455fda09b604f1,Always use `_R_CHECK_FORCE_SUGGESTS_=false` (#1632).,NA,NA,NA,NA
 ggplot2,b661ffbcd008c0d62bcd75d610c22103,"(internal) New `Facet$draw_panel_content()` method for delegating panel assembly (@​Yunuuuu, #6406).",NA,NA,NA,NA
 rsconnect,4346e9f60bb75ad0ad98be5b33085411,Added support for interaction with Posit Connect deployments hosted in Snowpark Container Services.,NA,NA,NA,NA
+duckplyr,fc0fa861a45dea469944279dd6e846ee,Syntax in code generation.,NA,NA,NA,NA
+duckplyr,d6b73872d721632dd9a86d8717d2fe5f,Remove access of unknown variable.,NA,NA,NA,NA
+duckplyr,743fb22f5e56403b9efc0fcc3aa0cab5,"Permissions, better tests for missing suggests, lints (#710).",NA,NA,NA,NA
+duckplyr,de94cfac3bf75133cdf1ed09bd7a8abe,Only fail covr builds if token is given (#707).,NA,NA,NA,NA
+duckplyr,481de79f03d61057264613b6604616e3,Always use `_R_CHECK_FORCE_SUGGESTS_=false` (#706).,NA,NA,NA,NA
+duckplyr,b350a3b02bcbb7fe6d09b9c9d5e47d7e,Correct installation of xml2 (#703).,NA,NA,NA,NA
+duckplyr,edad4d59171d9f1487695c474257dde2,"Add xml2 for covr, print testthat results (#701).",NA,NA,NA,NA
+duckplyr,bb268eebbf72acf7ee1d647fd4952a9a,Sync (#700).,NA,NA,NA,NA
+duckplyr,f05ca18cf3a74af1d6a2baa6ba9c16e4,Document `slice_head()` as supported.,NA,NA,NA,NA
+duckplyr,a9cb84e04d717746e7d2aba1738bfeb1,Skip tests using `grep()` or `sub()` on CRAN.,NA,NA,NA,NA
