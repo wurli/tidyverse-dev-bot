@@ -100,7 +100,7 @@
 
     !end-bullet!
 -   !begin-bullet!
-    `ansi_collapse()` gains a `sep2` argument to specify a seperate
+    `ansi_collapse()` gains a `sep2` argument to specify a separate
     separator for length-two inputs. It defaults to `" and "` which, in
     conjunction with the other defaults, produces a collapsed string
     that fully adheres to the serial comma rules. (@salim-b, #569)
@@ -279,7 +279,7 @@
     !end-bullet!
 -   !begin-bullet!
     cli functions now keep trailing `\f` characters as newlines. They
-    also keep multiple consecutive `\f` as multiple newlinees (#491).
+    also keep multiple consecutive `\f` as multiple newlines (#491).
 
     !end-bullet!
 -   !begin-bullet!
