@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    (internal) New `Facet$draw_panel_content()` method for delegating
+    panel assembly (@Yunuuuu, #6406).
+
+    !end-bullet!
+-   !begin-bullet!
     Facet gains a new method `setup_panel_params` to interact with the
     panel_params setted by Coord object (@Yunuuuu, #6397, #6380)
 

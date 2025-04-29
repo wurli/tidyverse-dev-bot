@@ -19198,3 +19198,4 @@ pkgdown,ba86de6a13920f85dc227387424fff5f,Articles have improved test cases (than
 prettyunits,f0945d6b6bedb3fe22b1289d6b39c9cb,"Add `""q""`, `""r""`, `""R""`, `""Q""` prefix from BIPM to `pretty_num()` (#41, @​cregouby)",NA,NA,NA,NA
 tibble,f3483bd542dbf9238ccc84ebebbdca22,Only fail covr builds if token is given (#1633).,NA,NA,NA,NA
 tibble,455aa0d1aab925b732455fda09b604f1,Always use `_R_CHECK_FORCE_SUGGESTS_=false` (#1632).,NA,NA,NA,NA
+ggplot2,b661ffbcd008c0d62bcd75d610c22103,"(internal) New `Facet$draw_panel_content()` method for delegating panel assembly (@​Yunuuuu, #6406).",NA,NA,NA,NA
