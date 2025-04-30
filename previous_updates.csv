@@ -19210,3 +19210,4 @@ duckplyr,edad4d59171d9f1487695c474257dde2,"Add xml2 for covr, print testthat res
 duckplyr,bb268eebbf72acf7ee1d647fd4952a9a,Sync (#700).,NA,NA,NA,NA
 duckplyr,f05ca18cf3a74af1d6a2baa6ba9c16e4,Document `slice_head()` as supported.,NA,NA,NA,NA
 duckplyr,a9cb84e04d717746e7d2aba1738bfeb1,Skip tests using `grep()` or `sub()` on CRAN.,NA,NA,NA,NA
+tibble,ec668ab20cdcb55b1fce92d5f94e9c91,"Permissions, better tests for missing suggests, lints (#1634).",NA,NA,NA,NA
