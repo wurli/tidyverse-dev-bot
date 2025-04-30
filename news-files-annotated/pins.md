@@ -1,4 +1,4 @@
-# pins (development version)
+# pins 1.4.1
 
 !begin-bullets-1!
 
@@ -16,11 +16,16 @@
 
     !end-bullet!
 -   !begin-bullet!
-    Prepends 'https://' to Databricks host if missing (#855).
+    Prepend 'https://' to Databricks host if missing (#855).
 
     !end-bullet!
 -   !begin-bullet!
     Fixed handling of `rsconnect::accounts()` results (#861).
+
+    !end-bullet!
+-   !begin-bullet!
+    Escalated gradual deprecation process for legacy pins functions such
+    as `pin()` (#864).
 
     !end-bullet!
 
