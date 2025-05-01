@@ -99,8 +99,8 @@
 
     !end-bullet!
 -   !begin-bullet!
-    `expr_label()` now has back-compatility with respect to changes made
-    by R version 4.4 and `is.atomic(NULL)` (#1655)
+    `expr_label()` now has back-compatibility with respect to changes
+    made by R version 4.4 and `is.atomic(NULL)` (#1655)
 
     !end-bullet!
 -   !begin-bullet!
@@ -808,7 +808,7 @@ extensive changes to the display of error messages.
     We've added the function `is_call_simple()` to make it easier to
     work safely with `call_name()`. The invariant is that `call_name()`
     always returns a string when `is_call_simple()` returns `TRUE`.
-    Conversely it always returns `NULL` when `is_call_simple()` retuns
+    Conversely it always returns `NULL` when `is_call_simple()` returns
     `FALSE`.
 
     !end-bullet!
@@ -1418,7 +1418,7 @@ extensive changes to the display of error messages.
     !end-bullet!
 -   !begin-bullet!
     `compat-purrr.R` now longer includes `pluck*` helpers; these used a
-    defintion of pluck that predated purrr (#1159). `*_cpl()` has also
+    definition of pluck that predated purrr (#1159). `*_cpl()` has also
     been removed. The `map*` wrappers now call `as_function()` so that
     you can pass short anonymous functions that use `~` (#1157).
 
@@ -1686,7 +1686,7 @@ extensive changes to the display of error messages.
 
     !end-bullet!
 -   !begin-bullet!
-    `as_data_mask()` now intialises environments of the correct size to
+    `as_data_mask()` now initialises environments of the correct size to
     improve efficiency (#1048).
 
     !end-bullet!
@@ -1781,9 +1781,9 @@ extensive changes to the display of error messages.
     ancestry is displayed.
 
     This change simplifies the display (#851) and makes it possible to
-    rethow errors from a calling handler rather than an exiting handler,
-    which we now think is more appropriate because it allows users to
-    `recover()` into the error.
+    rethrow errors from a calling handler rather than an exiting
+    handler, which we now think is more appropriate because it allows
+    users to `recover()` into the error.
 
     !end-bullet!
 -   !begin-bullet!
@@ -2095,7 +2095,7 @@ extensive changes to the display of error messages.
 
 -   !begin-bullet!
     New experimental framework for creating bulleted error messages. See
-    `?cnd_message` for the motivation and an overwiew of the tools we
+    `?cnd_message` for the motivation and an overview of the tools we
     have created to support this approach. In particular, `abort()` now
     takes character vectors to assemble a bullet list. Elements named
     `x` are prefixed with a red cross, elements named `i` are prefixed
@@ -2369,7 +2369,7 @@ really a data frame.
     !end-bullet!
 -   !begin-bullet!
     `ns_env()` and `ns_env_name()` (experimental functions) now support
-    functions and environments consisently. They also require an
+    functions and environments consistently. They also require an
     argument from now on.
 
     !end-bullet!
@@ -3717,7 +3717,7 @@ deal with occasional backward incompatible updates.
 -   !begin-bullet!
     `exprs()` and `quos()` gain a `.unquote_names` arguments to switch
     off interpretation of `:=` as a name operator. This should be useful
-    for programming on the language targetting APIs such as data.table.
+    for programming on the language targeting APIs such as data.table.
 
     !end-bullet!
 -   !begin-bullet!
@@ -3850,8 +3850,8 @@ deal with occasional backward incompatible updates.
 !begin-bullets-70!
 
 -   !begin-bullet!
-    `env_get_list()` retrieves muliple bindings from an environment into
-    a named list.
+    `env_get_list()` retrieves multiple bindings from an environment
+    into a named list.
 
     !end-bullet!
 -   !begin-bullet!
@@ -4118,7 +4118,7 @@ lifecycle status of exported functions.
 -   !begin-bullet!
     `quo_expr()` is soft-deprecated in favour of `quo_squash()`.
     `quo_expr()` was a misnomer because it implied that it was a mere
-    expression acccessor for quosures whereas it was really a lossy
+    expression accessor for quosures whereas it was really a lossy
     operation that squashed all nested quosures.
 
     !end-bullet!
