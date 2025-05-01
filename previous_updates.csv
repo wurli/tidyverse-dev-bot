@@ -19212,3 +19212,4 @@ duckplyr,f05ca18cf3a74af1d6a2baa6ba9c16e4,Document `slice_head()` as supported.,
 duckplyr,a9cb84e04d717746e7d2aba1738bfeb1,Skip tests using `grep()` or `sub()` on CRAN.,NA,NA,NA,NA
 tibble,ec668ab20cdcb55b1fce92d5f94e9c91,"Permissions, better tests for missing suggests, lints (#1634).",NA,NA,NA,NA
 pins,f9a3c10448ee00b4b93bb4b72e157d25,Escalated gradual deprecation process for legacy pins functions such as `pin()` (#864).,NA,NA,NA,NA
+shiny,000144e983718b4701073e31a3823187,"`textAreaInput()` gains a `autoresize` option, which automatically resizes the text area to fit its content. (#4210)",NA,NA,NA,NA
