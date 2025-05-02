@@ -19214,3 +19214,4 @@ tibble,ec668ab20cdcb55b1fce92d5f94e9c91,"Permissions, better tests for missing s
 pins,f9a3c10448ee00b4b93bb4b72e157d25,Escalated gradual deprecation process for legacy pins functions such as `pin()` (#864).,NA,NA,NA,NA
 shiny,000144e983718b4701073e31a3823187,"`textAreaInput()` gains a `autoresize` option, which automatically resizes the text area to fit its content. (#4210)",NA,NA,NA,NA
 shiny,239749e0f1a015d0b72a0b8283301267,"Shiny no longer suspends input changes when *any* `<input type=""submit"">` or `<button type=""submit"">` is on the page. Instead, it now only suspends when a `submitButton()` is present. If you have reason for creating a submit button from custom HTML, add a CSS class of `shiny-submit-button` to the button. (#4209)",NA,NA,NA,NA
+tibble,5255e93372709ab60f795113b6c76e90,"Support new vctrs `.name_repair` options: `unique_quiet`, `universal_quiet` (@​andreranza, #1549, #1625).",NA,NA,NA,NA
