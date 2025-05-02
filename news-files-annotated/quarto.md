@@ -34,6 +34,11 @@
     also now happens for GHA debug logging.
 
     !end-bullet!
+-   !begin-bullet!
+    Correctly report Quarto CLI error when background process call to
+    `quarto` fails (thanks, @salim-b, #235)
+
+    !end-bullet!
 
 !end-bullets-1!
 

@@ -19236,3 +19236,4 @@ keras,344650309f89a6b5231191adfa79f116,"• `keras_input()`, `keras_model_sequen
 keras,344650309f89a6b5231191adfa79f116,• `layer$pop_layer()` gains a `rebuild` argument and now returns the removed layer.,NA,NA,NA,NA
 keras,344650309f89a6b5231191adfa79f116,• New `rematerialized_call()` method added to `Layer` objects.,NA,NA,NA,NA
 keras,344650309f89a6b5231191adfa79f116,• Documentation improvements and minor fixes.,NA,NA,NA,NA
+quarto,7f51f4824a7f7cc25463d1728d7c26ef,"Correctly report Quarto CLI error when background process call to `quarto` fails (thanks, @​salim-b, #235)",NA,NA,NA,NA
