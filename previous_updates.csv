@@ -19240,3 +19240,4 @@ quarto,7f51f4824a7f7cc25463d1728d7c26ef,"Correctly report Quarto CLI error when 
 duckplyr,4b165514ddd9935e0a5eb6cb92f0dc9c,Enhance permissions for workflow (#717).,NA,NA,NA,NA
 tibble,391d6b286f6bb9a6ae7d1306b3b8ddea,Enhance permissions for workflow (#1635).,NA,NA,NA,NA
 quarto,dfb132d60a1f05d9ca8c8c2e6de266e9,"Add some helpers function `theme_brand_*` and `theme_colors_*` to help theme with dark and light brand using some common graph and table packages (thanks, @​gordonwoodhull, #234).",NA,NA,NA,NA
+httr2,27dd24b3e5ad7701ad00b8ff98b0be3d,"`req_url_query()` now re-calculates n lengths when using `.multi = ""explode""` to avoid select/recycling issues (@​Kevanness, #719).",NA,NA,NA,NA
