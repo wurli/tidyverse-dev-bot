@@ -1,4 +1,4 @@
-# keras3 (development version)
+# keras3 1.4.0
 
 !begin-bullets-1!
 

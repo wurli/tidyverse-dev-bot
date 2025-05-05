@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Add some helpers function `theme_brand_*` and `theme_colors_*` to
+    help theme with dark and light brand using some common graph and
+    table packages (thanks, @gordonwoodhull, #234).
+
+    !end-bullet!
+-   !begin-bullet!
     Add `quarto.quiet` options to allow more verbose error message when
     `quarto_*` function are used inside other package. For example,
     inside **pkgdown** for building Quarto vignettes. **pkgdown** sets
