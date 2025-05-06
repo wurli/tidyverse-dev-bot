@@ -6,6 +6,13 @@
     Changed the way we create future objects to stay compatible with new
     versions of `{future}`. Apparently the way we were doing it was
     never idiomatic and only worked by accident. (#121)
+
+    !end-bullet!
+-   !begin-bullet!
+    Fixed #122: Use `future::future(..., lazy = TRUE)` to avoid manual
+    capturing of state within `future_promise` (Thank you,
+    @HenrikBengtsson! #123)
+
     !end-bullet!
 
 !end-bullets-1!
