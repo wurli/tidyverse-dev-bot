@@ -4,7 +4,7 @@
 
 -   !begin-bullet!
     `matches()` now uses `perl = TRUE` by default. This makes it more
-    consitent with regular expressions in stringr (#330).
+    consistent with regular expressions in stringr (#330).
 
     !end-bullet!
 -   !begin-bullet!
