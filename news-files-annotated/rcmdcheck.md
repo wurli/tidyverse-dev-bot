@@ -11,6 +11,10 @@
     Update pkgdown template and move url to https://rcmdcheck.r-lib.org.
 
     !end-bullet!
+-   !begin-bullet!
+    `cran_check_results()` works again.
+
+    !end-bullet!
 
 !end-bullets-1!
 

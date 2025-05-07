@@ -19243,3 +19243,5 @@ quarto,dfb132d60a1f05d9ca8c8c2e6de266e9,"Add some helpers function `theme_brand_
 httr2,27dd24b3e5ad7701ad00b8ff98b0be3d,"`req_url_query()` now re-calculates n lengths when using `.multi = ""explode""` to avoid select/recycling issues (@​Kevanness, #719).",NA,NA,NA,NA
 promises,3b1bbe761bed5eac83498b0eb256afd5,"Fixed #122: Use `future::future(..., lazy = TRUE)` to avoid manual capturing of state within `future_promise` (Thank you, @​HenrikBengtsson! #123)",NA,NA,NA,NA
 quarto,77218c6cc5089c6cbb9720fd256c3bae,"`quarto_preview()` gains a `quiet` argument to suppress any output from R or Quarto CLI (thanks, @​cwickham, #232.)",NA,NA,NA,NA
+rcmdcheck,d60b1d739d33c51388a6a9cf9462e0de,`cran_check_results()` works again.,NA,NA,NA,NA
+quarto,39da736a763ba87bcc1ea65f7e5038be,"`quarto_create_project()` offers better user experience now (thanks, @​jennybc, #206, #153).",NA,NA,NA,NA

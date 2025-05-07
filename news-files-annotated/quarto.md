@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `quarto_create_project()` offers better user experience now (thanks,
+    @jennybc, #206, #153).
+
+    !end-bullet!
+-   !begin-bullet!
     `quarto_preview()` gains a `quiet` argument to suppress any output
     from R or Quarto CLI (thanks, @cwickham, #232.)
 
