@@ -19247,3 +19247,5 @@ rcmdcheck,d60b1d739d33c51388a6a9cf9462e0de,`cran_check_results()` works again.,N
 quarto,39da736a763ba87bcc1ea65f7e5038be,"`quarto_create_project()` offers better user experience now (thanks, @​jennybc, #206, #153).",NA,NA,NA,NA
 duckplyr,96649a3d2b699d9a38cac2d719ac1d27,Move compatibility checks to duckdb (#699).,NA,NA,NA,NA
 lintr,cd72a00fbb85a7926fbf8ae175a7e495,"`expect_lint()` has a new argument `ignore_order` (default `FALSE`), which, if `TRUE`, allows the `checks=` to be provided in arbitary order vs. how `lint()` produces them (@​MichaelChirico).",NA,NA,NA,NA
+lintr,1787ed00882911924b08fed3d848e246,"The default for `pipe_consistency_linter()` is changed from `""auto""` (require one pipe style, either magrittr or native) to `""|>""` (R native pipe required) to coincide with the same change in the Tidyverse Style Guide (#2707, @​MichaelChirico).",NA,NA,NA,NA
+lintr,2013ba107abcaa2c4dbd6e8bb07df02e,"`pipe_consistency_linter()`, with its new default to enforce the native pipe `|>`, is now a default linter, since it corresponds directly to a rule in the Tidyverse Style Guide (#2707, @​MichaelChirico).",NA,NA,NA,NA
