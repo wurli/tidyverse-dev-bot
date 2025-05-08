@@ -19250,3 +19250,6 @@ lintr,cd72a00fbb85a7926fbf8ae175a7e495,"`expect_lint()` has a new argument `igno
 lintr,1787ed00882911924b08fed3d848e246,"The default for `pipe_consistency_linter()` is changed from `""auto""` (require one pipe style, either magrittr or native) to `""|>""` (R native pipe required) to coincide with the same change in the Tidyverse Style Guide (#2707, @​MichaelChirico).",NA,NA,NA,NA
 lintr,2013ba107abcaa2c4dbd6e8bb07df02e,"`pipe_consistency_linter()`, with its new default to enforce the native pipe `|>`, is now a default linter, since it corresponds directly to a rule in the Tidyverse Style Guide (#2707, @​MichaelChirico).",NA,NA,NA,NA
 duckplyr,4e471e4efa1705c93a3f4fedd8bffec6,Move compat checks back to duckplyr.,NA,NA,NA,NA
+duckplyr,d1cd88246b2d7584d19f2e2b1cf99987,"Register Ark methods for Positron's ""Variables"" pane (@​DavisVaughan, #661, #678). DuckDB tibbles are no longer displayed as data frames in the ""Variables"" pane due to a limitation in Positron. Use `collect()` to convert them to data frames if you rely on the viewer functionality.",NA,NA,NA,NA
+duckplyr,4f9d2b434ce63997cd702eb3b7d5a0f7,Translate `coalesce()`.,NA,NA,NA,NA
+duckplyr,5b090a87c56e4c3317e0ce03a8ea4c04,Bump duckdb and pillar dependencies.,NA,NA,NA,NA

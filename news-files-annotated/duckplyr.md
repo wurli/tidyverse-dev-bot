@@ -1,74 +1,57 @@
 ```{=html}
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 ```
-# duckplyr 1.0.99.9904 (2025-05-08)
+# duckplyr 1.1.0 (2025-05-08)
 
-## Chore
+This release improves compatibility with dbplyr and DuckDB. See
+`vignette("duckdb")` for details.
+
+## Features
 
 !begin-bullets-1!
 
 -   !begin-bullet!
-    Move compat checks back to duckplyr.
+    Pass functions prefixed with `dd$` directly to DuckDB, e.g.,
+    `dd$ROW()` will be translated as DuckDB's `ROW()` function (#658).
+
+    !end-bullet!
+-   !begin-bullet!
+    New `as_tbl()` to convert to a dbplyr tbl object (#634, #685).
+
+    !end-bullet!
+-   !begin-bullet!
+    Register Ark methods for Positron's "Variables" pane (@DavisVaughan,
+    #661, #678). DuckDB tibbles are no longer displayed as data frames
+    in the "Variables" pane due to a limitation in Positron. Use
+    `collect()` to convert them to data frames if you rely on the viewer
+    functionality.
+
+    !end-bullet!
+-   !begin-bullet!
+    Translate `n_distinct()` as macro with support for `na.rm = TRUE`
+    (@joakimlinde, #572, #655).
+
+    !end-bullet!
+-   !begin-bullet!
+    Translate `coalesce()`.
+
+    !end-bullet!
+-   !begin-bullet!
+    `compute()` does not have a fallback, failures are reported to the
+    client (#637).
+
+    !end-bullet!
+-   !begin-bullet!
+    Implement `slice_head()` (#640).
+
     !end-bullet!
 
 !end-bullets-1!
 
-# duckplyr 1.0.99.9903 (2025-05-08)
-
-## Chore
+## Bug fixes
 
 !begin-bullets-2!
 
--   !begin-bullet!
-    Move compatibility checks to duckdb (#699).
-    !end-bullet!
-
-!end-bullets-2!
-
-# duckplyr 1.0.99.9902 (2025-05-04)
-
-## Continuous integration
-
-!begin-bullets-3!
-
--   !begin-bullet!
-    Enhance permissions for workflow (#717).
-    !end-bullet!
-
-!end-bullets-3!
-
-# duckplyr 1.0.99.9901 (2025-05-02)
-
-## Chore
-
-!begin-bullets-4!
-
--   !begin-bullet!
-    Bump duckdb dependency.
-    !end-bullet!
-
-!end-bullets-4!
-
-# duckplyr 1.0.99.9900 (2025-04-29)
-
-## fledge
-
-!begin-bullets-5!
-
--   !begin-bullet!
-    CRAN release v1.0.1 (#624).
-    !end-bullet!
-
-!end-bullets-5!
-
-## Bug fixes
-
-!begin-bullets-6!
-
--   !begin-bullet!
-    Syntax in code generation.
-
-    !end-bullet!
 -   !begin-bullet!
     Set functions like `union()` no longer trigger materialization
     (#654, #692).
@@ -85,90 +68,18 @@
 
     !end-bullet!
 
-!end-bullets-6!
-
-## Features
-
-!begin-bullets-7!
-
--   !begin-bullet!
-    Remove experimental flag (#682, #695).
-
-    !end-bullet!
--   !begin-bullet!
-    Register `has_children` and `has_viewer` methods for Positron
-    (#678).
-
-    !end-bullet!
--   !begin-bullet!
-    Passthrough of functions prefixed with `dd$`, e.g., `dd$ROW()` will
-    be translated as DuckDB's `ROW()` function (#658).
-
-    !end-bullet!
--   !begin-bullet!
-    New `as_tbl()` to convert to a dbplyr tbl object (#634, #685).
-
-    !end-bullet!
--   !begin-bullet!
-    Register Ark methods for Positron's Variables Pane (@DavisVaughan,
-    #661).
-
-    !end-bullet!
--   !begin-bullet!
-    Implement `n_distinct()` as macro with support for `na.rm = TRUE`
-    (@joakimlinde, #572, #655).
-
-    !end-bullet!
--   !begin-bullet!
-    Translate `dplyr::coalesce()`.
-
-    !end-bullet!
--   !begin-bullet!
-    `compute()` does not have a fallback, failures are reported to the
-    client (#637).
-
-    !end-bullet!
--   !begin-bullet!
-    Implement `slice_head()` (#640).
-
-    !end-bullet!
-
-!end-bullets-7!
+!end-bullets-2!
 
 ## Chore
 
-!begin-bullets-8!
+!begin-bullets-3!
 
 -   !begin-bullet!
-    Remove access of unknown variable.
-
-    !end-bullet!
--   !begin-bullet!
-    Sync.
-
-    !end-bullet!
--   !begin-bullet!
-    Remove superfluous check.
-
-    !end-bullet!
--   !begin-bullet!
-    Fix lints.
-
-    !end-bullet!
--   !begin-bullet!
-    Remove space at EOL.
-
-    !end-bullet!
--   !begin-bullet!
-    Bump required version of pillar.
+    Bump duckdb and pillar dependencies.
 
     !end-bullet!
 -   !begin-bullet!
     Use roxyglobals from CRAN rather than GitHub (@andreranza, #659).
-
-    !end-bullet!
--   !begin-bullet!
-    Space at EOL.
 
     !end-bullet!
 -   !begin-bullet!
@@ -184,53 +95,18 @@
 
     !end-bullet!
 -   !begin-bullet!
-    Check loadability of extensino in test (#636).
+    Check loadability of extensions in test (#636).
 
     !end-bullet!
 
-!end-bullets-8!
-
-## Continuous integration
-
-!begin-bullets-9!
-
--   !begin-bullet!
-    Permissions, better tests for missing suggests, lints (#710).
-
-    !end-bullet!
--   !begin-bullet!
-    Only fail covr builds if token is given (#707).
-
-    !end-bullet!
--   !begin-bullet!
-    Always use `_R_CHECK_FORCE_SUGGESTS_=false` (#706).
-
-    !end-bullet!
--   !begin-bullet!
-    Correct installation of xml2 (#703).
-
-    !end-bullet!
--   !begin-bullet!
-    Add xml2 for covr, print testthat results (#701).
-
-    !end-bullet!
--   !begin-bullet!
-    Sync (#700).
-
-    !end-bullet!
-
-!end-bullets-9!
+!end-bullets-3!
 
 ## Documentation
 
-!begin-bullets-10!
+!begin-bullets-4!
 
 -   !begin-bullet!
     Document `slice_head()` as supported.
-
-    !end-bullet!
--   !begin-bullet!
-    Move package.
 
     !end-bullet!
 -   !begin-bullet!
@@ -254,33 +130,24 @@
     (@mine-cetinkaya-rundel, #665).
 
     !end-bullet!
--   !begin-bullet!
-    Recommend `pak::pak()`.
 
-    !end-bullet!
-
-!end-bullets-10!
+!end-bullets-4!
 
 ## Testing
 
-!begin-bullets-11!
+!begin-bullets-5!
 
 -   !begin-bullet!
     Skip tests using `grep()` or `sub()` on CRAN.
-
-    !end-bullet!
--   !begin-bullet!
-    Snapshot updates for rcc-smoke (null) (#675).
-
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-5!
 
 # duckplyr 1.0.1 (2025-02-21)
 
 ## Bug fixes
 
-!begin-bullets-12!
+!begin-bullets-6!
 
 -   !begin-bullet!
     Check if extensions can be loaded before running examples and
@@ -298,11 +165,11 @@
 
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-6!
 
 ## Chore
 
-!begin-bullets-13!
+!begin-bullets-7!
 
 -   !begin-bullet!
     Require duckdb \>= 1.2.0 (#619).
@@ -313,11 +180,11 @@
 
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-7!
 
 ## Documentation
 
-!begin-bullets-14!
+!begin-bullets-8!
 
 -   !begin-bullet!
     Separate `?compute_parquet` and `?compute_csv` (#610, #622).
@@ -336,7 +203,7 @@
 
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-8!
 
 # duckplyr 1.0.0 (2025-02-02)
 
@@ -344,7 +211,7 @@
 
 ### Large data
 
-!begin-bullets-15!
+!begin-bullets-9!
 
 -   !begin-bullet!
     Improved support for handling large data from files and S3:
@@ -361,11 +228,11 @@
 
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-9!
 
 ### New functions
 
-!begin-bullets-16!
+!begin-bullets-10!
 
 -   !begin-bullet!
     `read_csv_duckdb()` and others, deprecating `duckplyr_df_from_csv()`
@@ -418,11 +285,11 @@
 
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-10!
 
 ### Translations
 
-!begin-bullets-17!
+!begin-bullets-11!
 
 -   !begin-bullet!
     Partial support for `across()` in `mutate()` and `summarise()`
@@ -465,11 +332,11 @@
 
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-11!
 
 ### Error messages
 
-!begin-bullets-18!
+!begin-bullets-12!
 
 -   !begin-bullet!
     Improve fallback error message by explicitly materializing (#432,
@@ -487,11 +354,11 @@
 
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-12!
 
 ### Behavior
 
-!begin-bullets-19!
+!begin-bullets-13!
 
 -   !begin-bullet!
     Depend on dplyr instead of reexporting all generics (#405). Nothing
@@ -519,11 +386,11 @@
 
     !end-bullet!
 
-!end-bullets-19!
+!end-bullets-13!
 
 ## Bug fixes
 
-!begin-bullets-20!
+!begin-bullets-14!
 
 -   !begin-bullet!
     Compute ptype only for join columns in a safe way without
@@ -540,11 +407,11 @@
 
     !end-bullet!
 
-!end-bullets-20!
+!end-bullets-14!
 
 ## Documentation
 
-!begin-bullets-21!
+!begin-bullets-15!
 
 -   !begin-bullet!
     New articles: `vignette("large")`, `vignette("prudence")`,
@@ -568,11 +435,11 @@
 
     !end-bullet!
 
-!end-bullets-21!
+!end-bullets-15!
 
 ## Performance
 
-!begin-bullets-22!
+!begin-bullets-16!
 
 -   !begin-bullet!
     Comparison expressions are translated in a way that allows them to
@@ -588,13 +455,13 @@
 
     !end-bullet!
 
-!end-bullets-22!
+!end-bullets-16!
 
 # duckplyr 0.4.1 (2024-07-11)
 
 ## Features
 
-!begin-bullets-23!
+!begin-bullets-17!
 
 -   !begin-bullet!
     `df_from_file()` and related functions support multiple files (#194,
@@ -620,11 +487,11 @@
     analysis scripts for GitHub activity data (#179).
     !end-bullet!
 
-!end-bullets-23!
+!end-bullets-17!
 
 ## Documentation
 
-!begin-bullets-24!
+!begin-bullets-18!
 
 -   !begin-bullet!
     Add contributing guide (#179).
@@ -645,13 +512,13 @@
     Add analysis scripts for GitHub activity data (#179).
     !end-bullet!
 
-!end-bullets-24!
+!end-bullets-18!
 
 # duckplyr 0.4.0 (2024-05-21)
 
 ## Features
 
-!begin-bullets-25!
+!begin-bullets-19!
 
 -   !begin-bullet!
     Use built-in rfuns extension to implement equality and inequality
@@ -674,11 +541,11 @@
     Reduce default memory limit to 1 GB.
     !end-bullet!
 
-!end-bullets-25!
+!end-bullets-19!
 
 ## Bug fixes
 
-!begin-bullets-26!
+!begin-bullets-20!
 
 -   !begin-bullet!
     Stricter type checks in the set operations `intersect()`,
@@ -725,11 +592,11 @@
     (@TimTaylor, #141).
     !end-bullet!
 
-!end-bullets-26!
+!end-bullets-20!
 
 ## Chore
 
-!begin-bullets-27!
+!begin-bullets-21!
 
 -   !begin-bullet!
     Remove styler dependency (#137, #138).
@@ -738,22 +605,22 @@
     Avoid error from stats collection.
     !end-bullet!
 
-!end-bullets-27!
+!end-bullets-21!
 
 ## Documentation
 
-!begin-bullets-28!
+!begin-bullets-22!
 
 -   !begin-bullet!
     Mention wildcards to read multiple files in `?df_from_file`
     (@andreranza, #133, #134).
     !end-bullet!
 
-!end-bullets-28!
+!end-bullets-22!
 
 ## Testing
 
-!begin-bullets-29!
+!begin-bullets-23!
 
 -   !begin-bullet!
     Reenable tests that now run successfully (#166).
@@ -772,24 +639,24 @@
     differences between doubles and integers.
     !end-bullet!
 
-!end-bullets-29!
+!end-bullets-23!
 
 # duckplyr 0.3.2 (2024-03-17)
 
 ## Bug fixes
 
-!begin-bullets-30!
+!begin-bullets-24!
 
 -   !begin-bullet!
     Run autoupload in function so that it will be checked by static
     analysis (#122).
     !end-bullet!
 
-!end-bullets-30!
+!end-bullets-24!
 
 ## Features
 
-!begin-bullets-31!
+!begin-bullets-25!
 
 -   !begin-bullet!
     New `df_to_parquet()` to write to Parquet, new convenience functions
@@ -797,13 +664,13 @@
     `duckdb_df_from_parquet()` (#87, #89, #96, #128).
     !end-bullet!
 
-!end-bullets-31!
+!end-bullets-25!
 
 # duckplyr 0.3.1 (2024-03-08)
 
 ## Bug fixes
 
-!begin-bullets-32!
+!begin-bullets-26!
 
 -   !begin-bullet!
     Forbid reuse of new columns created in `summarise()` (#72, #106).
@@ -818,11 +685,11 @@
     Fix division by zero for positive and negative numbers.
     !end-bullet!
 
-!end-bullets-32!
+!end-bullets-26!
 
 ## Features
 
-!begin-bullets-33!
+!begin-bullets-27!
 
 -   !begin-bullet!
     New `fallback_sitrep()` and related functionality for collecting
@@ -856,11 +723,11 @@
     `TRUE`, loading duckplyr automatically calls `methods_overwrite()`.
     !end-bullet!
 
-!end-bullets-33!
+!end-bullets-27!
 
 ## Internal
 
-!begin-bullets-34!
+!begin-bullets-28!
 
 -   !begin-bullet!
     Better duckdb tests.
@@ -869,33 +736,33 @@
     Use standalone purrr for dplyr compatibility.
     !end-bullet!
 
-!end-bullets-34!
+!end-bullets-28!
 
 ## Testing
 
-!begin-bullets-35!
+!begin-bullets-29!
 
 -   !begin-bullet!
     Add tests for correct base of `log()` and `log10()`.
     !end-bullet!
 
-!end-bullets-35!
+!end-bullets-29!
 
 ## Documentation
 
-!begin-bullets-36!
+!begin-bullets-30!
 
 -   !begin-bullet!
     `methods_overwrite()` and `methods_restore()` show a message.
     !end-bullet!
 
-!end-bullets-36!
+!end-bullets-30!
 
 # duckplyr 0.3.0 (2023-12-10)
 
 ## Bug fixes
 
-!begin-bullets-37!
+!begin-bullets-31!
 
 -   !begin-bullet!
     `grepl(x = NA)` gives correct results.
@@ -913,11 +780,11 @@
     Consistent computation of `log(0)` and `log(-1)` (#75, #76).
     !end-bullet!
 
-!end-bullets-37!
+!end-bullets-31!
 
 ## Features
 
-!begin-bullets-38!
+!begin-bullets-32!
 
 -   !begin-bullet!
     Only allow constants in `mutate()` that are actually representable
@@ -927,31 +794,31 @@
     Avoid translating `ifelse()`, support `if_else()` (#79).
     !end-bullet!
 
-!end-bullets-38!
+!end-bullets-32!
 
 ## Documentation
 
-!begin-bullets-39!
+!begin-bullets-33!
 
 -   !begin-bullet!
     Separate and explain the new relational examples (@wibeasley, #84).
     !end-bullet!
 
-!end-bullets-39!
+!end-bullets-33!
 
 ## Testing
 
-!begin-bullets-40!
+!begin-bullets-34!
 
 -   !begin-bullet!
     Add test that TPC-H queries can be processed.
     !end-bullet!
 
-!end-bullets-40!
+!end-bullets-34!
 
 ## Chore
 
-!begin-bullets-41!
+!begin-bullets-35!
 
 -   !begin-bullet!
     Sync with dplyr 1.1.4 (#82).
@@ -982,36 +849,36 @@
     Sync generated files (#71).
     !end-bullet!
 
-!end-bullets-41!
+!end-bullets-35!
 
 # duckplyr 0.2.3 (2023-11-08)
 
 ## Performance
 
-!begin-bullets-42!
+!begin-bullets-36!
 
 -   !begin-bullet!
     Join using `IS NOT DISTINCT FROM` for faster execution
     (duckdb/duckdb-r#41, #68).
     !end-bullet!
 
-!end-bullets-42!
+!end-bullets-36!
 
 ## Documentation
 
-!begin-bullets-43!
+!begin-bullets-37!
 
 -   !begin-bullet!
     Add stability to README output (@maelle, #62, #65).
     !end-bullet!
 
-!end-bullets-43!
+!end-bullets-37!
 
 # duckplyr 0.2.2 (2023-10-16)
 
 ## Bug fixes
 
-!begin-bullets-44!
+!begin-bullets-38!
 
 -   !begin-bullet!
     `summarise()` keeps `"duckplyr_df"` class (#63, #64).
@@ -1022,11 +889,11 @@
 
     !end-bullet!
 
-!end-bullets-44!
+!end-bullets-38!
 
 ## Chore
 
-!begin-bullets-45!
+!begin-bullets-39!
 
 -   !begin-bullet!
     Skip tests that give different output on dev tidyselect.
@@ -1037,11 +904,11 @@
 
     !end-bullet!
 
-!end-bullets-45!
+!end-bullets-39!
 
 ## Documentation
 
-!begin-bullets-46!
+!begin-bullets-40!
 
 -   !begin-bullet!
     Small README improvements (@maelle, #34, #57).
@@ -1052,11 +919,11 @@
 
     !end-bullet!
 
-!end-bullets-46!
+!end-bullets-40!
 
 # duckplyr 0.2.1 (2023-09-16)
 
-!begin-bullets-47!
+!begin-bullets-41!
 
 -   !begin-bullet!
     Improve documentation.
@@ -1080,33 +947,33 @@
 
     !end-bullet!
 
-!end-bullets-47!
+!end-bullets-41!
 
 # duckplyr 0.2.0 (2023-09-10)
 
-!begin-bullets-48!
+!begin-bullets-42!
 
 -   !begin-bullet!
     Implement relational API for DuckDB.
     !end-bullet!
 
-!end-bullets-48!
+!end-bullets-42!
 
 # duckplyr 0.1.0 (2023-07-03)
 
 ## Bug fixes
 
-!begin-bullets-49!
+!begin-bullets-43!
 
 -   !begin-bullet!
     Fix examples.
     !end-bullet!
 
-!end-bullets-49!
+!end-bullets-43!
 
 ## Chore
 
-!begin-bullets-50!
+!begin-bullets-44!
 
 -   !begin-bullet!
     Add CRAN install instructions.
@@ -1124,17 +991,17 @@
     Remove `relexpr_window()` for now.
     !end-bullet!
 
-!end-bullets-50!
+!end-bullets-44!
 
 ## Documentation
 
-!begin-bullets-51!
+!begin-bullets-45!
 
 -   !begin-bullet!
     Clean up reference.
     !end-bullet!
 
-!end-bullets-51!
+!end-bullets-45!
 
 ## Uncategorized
 
