@@ -19246,3 +19246,4 @@ quarto,77218c6cc5089c6cbb9720fd256c3bae,"`quarto_preview()` gains a `quiet` argu
 rcmdcheck,d60b1d739d33c51388a6a9cf9462e0de,`cran_check_results()` works again.,NA,NA,NA,NA
 quarto,39da736a763ba87bcc1ea65f7e5038be,"`quarto_create_project()` offers better user experience now (thanks, @​jennybc, #206, #153).",NA,NA,NA,NA
 duckplyr,96649a3d2b699d9a38cac2d719ac1d27,Move compatibility checks to duckdb (#699).,NA,NA,NA,NA
+lintr,cd72a00fbb85a7926fbf8ae175a7e495,"`expect_lint()` has a new argument `ignore_order` (default `FALSE`), which, if `TRUE`, allows the `checks=` to be provided in arbitary order vs. how `lint()` produces them (@​MichaelChirico).",NA,NA,NA,NA

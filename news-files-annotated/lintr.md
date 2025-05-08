@@ -128,6 +128,11 @@
     `sum(x | y) == 0` where the total of a known-logical vector is
     compared to 0 (#1580, @MichaelChirico).
     !end-bullet!
+-   !begin-bullet!
+    `expect_lint()` has a new argument `ignore_order` (default `FALSE`),
+    which, if `TRUE`, allows the `checks=` to be provided in arbitary
+    order vs. how `lint()` produces them (@MichaelChirico).
+    !end-bullet!
 
 !end-bullets-4!
 
