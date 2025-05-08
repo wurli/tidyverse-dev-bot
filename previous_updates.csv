@@ -19253,3 +19253,7 @@ duckplyr,4e471e4efa1705c93a3f4fedd8bffec6,Move compat checks back to duckplyr.,N
 duckplyr,d1cd88246b2d7584d19f2e2b1cf99987,"Register Ark methods for Positron's ""Variables"" pane (@​DavisVaughan, #661, #678). DuckDB tibbles are no longer displayed as data frames in the ""Variables"" pane due to a limitation in Positron. Use `collect()` to convert them to data frames if you rely on the viewer functionality.",NA,NA,NA,NA
 duckplyr,4f9d2b434ce63997cd702eb3b7d5a0f7,Translate `coalesce()`.,NA,NA,NA,NA
 duckplyr,5b090a87c56e4c3317e0ce03a8ea4c04,Bump duckdb and pillar dependencies.,NA,NA,NA,NA
+lintr,4f2fd7a963f0f970f228d35dfffd1f56,`undesirable_operator_linter()`:,NA,NA,NA,NA
+lintr,4f2fd7a963f0f970f228d35dfffd1f56,"• Lints operators in prefix form, e.g. `` `%%`(x, 2) `` (#1910, @​MichaelChirico). Disable this by setting `call_is_undesirable=FALSE`.",NA,NA,NA,NA
+lintr,4f2fd7a963f0f970f228d35dfffd1f56,"• Accepts unnamed entries, treating them as undesirable operators, e.g. `undesirable_operator_linter(""%%"")` (#2536, @​MichaelChirico).",NA,NA,NA,NA
+lintr,2534b65e41ef258359f92548dedbf36d,"`undesirable_function_linter()` accepts unnamed entries, treating them as undesirable functions, e.g. `undesirable_function_linter(""sum"")` (#2536, @​MichaelChirico).",NA,NA,NA,NA
