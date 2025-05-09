@@ -19261,3 +19261,4 @@ quarto,4590bb6d5632d9c6a33ab4501fa3cc98,"Add several new wrapper function (thank
 quarto,4590bb6d5632d9c6a33ab4501fa3cc98,• `quarto_list_extensions()` to list installed extensions using `quarto list extensions`,NA,NA,NA,NA
 quarto,4590bb6d5632d9c6a33ab4501fa3cc98,• `quarto_remove_extension()` to remove an installed extension using `quarto remove extensions`,NA,NA,NA,NA
 quarto,4590bb6d5632d9c6a33ab4501fa3cc98,• `quarto_update_extension()` to update an installed extension using `quarto update extensions`,NA,NA,NA,NA
+reticulate,fddc43947c1de828989e991e546fa1ce,"Added check in `install_miniconda()` if existing files will be overwritten. (#1794, #1796)",NA,NA,NA,NA

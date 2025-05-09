@@ -16,6 +16,11 @@
     Fixed a segfault observed on R session exit (#1785, #1786).
 
     !end-bullet!
+-   !begin-bullet!
+    Added check in `install_miniconda()` if existing files will be
+    overwritten. (#1794, #1796)
+
+    !end-bullet!
 
 !end-bullets-1!
 
