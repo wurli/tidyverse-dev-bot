@@ -21,6 +21,12 @@
     overwritten. (#1794, #1796)
 
     !end-bullet!
+-   !begin-bullet!
+    Fixed error in `install_python()` under R 4.5 when the requested
+    Python version has a `":latest"` suffix, as it does by default.
+    (#1792, #1797)
+
+    !end-bullet!
 
 !end-bullets-1!
 
