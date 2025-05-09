@@ -19257,3 +19257,7 @@ lintr,4f2fd7a963f0f970f228d35dfffd1f56,`undesirable_operator_linter()`:,NA,NA,NA
 lintr,4f2fd7a963f0f970f228d35dfffd1f56,"• Lints operators in prefix form, e.g. `` `%%`(x, 2) `` (#1910, @​MichaelChirico). Disable this by setting `call_is_undesirable=FALSE`.",NA,NA,NA,NA
 lintr,4f2fd7a963f0f970f228d35dfffd1f56,"• Accepts unnamed entries, treating them as undesirable operators, e.g. `undesirable_operator_linter(""%%"")` (#2536, @​MichaelChirico).",NA,NA,NA,NA
 lintr,2534b65e41ef258359f92548dedbf36d,"`undesirable_function_linter()` accepts unnamed entries, treating them as undesirable functions, e.g. `undesirable_function_linter(""sum"")` (#2536, @​MichaelChirico).",NA,NA,NA,NA
+quarto,4590bb6d5632d9c6a33ab4501fa3cc98,"Add several new wrapper function (thanks, @​parmsam, #192):",NA,NA,NA,NA
+quarto,4590bb6d5632d9c6a33ab4501fa3cc98,• `quarto_list_extensions()` to list installed extensions using `quarto list extensions`,NA,NA,NA,NA
+quarto,4590bb6d5632d9c6a33ab4501fa3cc98,• `quarto_remove_extension()` to remove an installed extension using `quarto remove extensions`,NA,NA,NA,NA
+quarto,4590bb6d5632d9c6a33ab4501fa3cc98,• `quarto_update_extension()` to update an installed extension using `quarto update extensions`,NA,NA,NA,NA

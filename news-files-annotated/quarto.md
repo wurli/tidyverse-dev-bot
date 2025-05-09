@@ -3,6 +3,25 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Add several new wrapper function (thanks, @parmsam, #192):
+
+    !begin-bullets-2!
+    -   !begin-bullet!
+        `quarto_list_extensions()` to list installed extensions using
+        `quarto list extensions`
+        !end-bullet!
+    -   !begin-bullet!
+        `quarto_remove_extension()` to remove an installed extension
+        using `quarto remove extensions`
+        !end-bullet!
+    -   !begin-bullet!
+        `quarto_update_extension()` to update an installed extension
+        using `quarto update extensions`
+        !end-bullet!
+
+    !end-bullets-2!
+    !end-bullet!
+-   !begin-bullet!
     `quarto_create_project()` offers better user experience now (thanks,
     @jennybc, #206, #153).
 
@@ -60,7 +79,7 @@
 
 # quarto 1.4.4
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     `quarto_preview()` now looks at `quarto preview` log to browse to
@@ -85,11 +104,11 @@
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 # quarto 1.4
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     This version is now adapted to Quarto 1.4 latest stable release.
@@ -176,4 +195,4 @@
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
