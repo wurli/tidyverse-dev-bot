@@ -27,6 +27,19 @@
     (#1152)
 
     !end-bullet!
+-   !begin-bullet!
+    Introduced detection of required R interpreter version based on
+    `DESCRIPTION` file and `renv.lock` file. This setting is inserted
+    into the manifest as `environment.r.requires`.
+
+    !end-bullet!
+-   !begin-bullet!
+    Introduced detection of required Python interpreter version based on
+    project files `.python-version`, `pyproject.toml` and `setup.cfg`.
+    This setting is inserted into the manifest as
+    `environment.python.requires`.
+
+    !end-bullet!
 
 !end-bullets-1!
 

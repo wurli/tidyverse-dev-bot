@@ -19263,3 +19263,5 @@ quarto,4590bb6d5632d9c6a33ab4501fa3cc98,• `quarto_remove_extension()` to remov
 quarto,4590bb6d5632d9c6a33ab4501fa3cc98,• `quarto_update_extension()` to update an installed extension using `quarto update extensions`,NA,NA,NA,NA
 reticulate,fddc43947c1de828989e991e546fa1ce,"Added check in `install_miniconda()` if existing files will be overwritten. (#1794, #1796)",NA,NA,NA,NA
 reticulate,630befc13b319691cd02be767b63f479,"Fixed error in `install_python()` under R 4.5 when the requested Python version has a `"":latest""` suffix, as it does by default. (#1792, #1797)",NA,NA,NA,NA
+rsconnect,ae7133f2c7de57e06d5fcb0f2b4a8eb2,Introduced detection of required R interpreter version based on `DESCRIPTION` file and `renv.lock` file. This setting is inserted into the manifest as `environment.r.requires`.,NA,NA,NA,NA
+rsconnect,c0b89fba9d38710996fe3bc1cd7e2949,"Introduced detection of required Python interpreter version based on project files `.python-version`, `pyproject.toml` and `setup.cfg`. This setting is inserted into the manifest as `environment.python.requires`.",NA,NA,NA,NA
