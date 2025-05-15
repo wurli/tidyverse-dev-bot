@@ -12,6 +12,10 @@
 
     !end-bullet!
 -   !begin-bullet!
+    Fix usage of `libpath` argument (#195).
+
+    !end-bullet!
+-   !begin-bullet!
     `cran_check_results()` works again.
 
     !end-bullet!
