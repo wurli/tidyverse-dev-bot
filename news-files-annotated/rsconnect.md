@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed deployment errors for Quarto documents containing long chunks.
+    (#1114)
+
+    !end-bullet!
+-   !begin-bullet!
     Added support for interaction with Posit Connect deployments hosted
     in Snowpark Container Services.
 

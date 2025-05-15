@@ -19266,3 +19266,4 @@ reticulate,630befc13b319691cd02be767b63f479,"Fixed error in `install_python()` u
 rsconnect,ae7133f2c7de57e06d5fcb0f2b4a8eb2,Introduced detection of required R interpreter version based on `DESCRIPTION` file and `renv.lock` file. This setting is inserted into the manifest as `environment.r.requires`.,NA,NA,NA,NA
 rsconnect,c0b89fba9d38710996fe3bc1cd7e2949,"Introduced detection of required Python interpreter version based on project files `.python-version`, `pyproject.toml` and `setup.cfg`. This setting is inserted into the manifest as `environment.python.requires`.",NA,NA,NA,NA
 rcmdcheck,19b3b293d23ad30a36d79685e5250d3b,Fix usage of `libpath` argument (#195).,NA,NA,NA,NA
+rsconnect,fe7dbd7635988c4aaff8702add9c9f7e,Fixed deployment errors for Quarto documents containing long chunks. (#1114),NA,NA,NA,NA
