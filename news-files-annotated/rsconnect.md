@@ -3,23 +3,9 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
-    Fixed deployment errors for Quarto documents containing long chunks.
-    (#1114)
-
-    !end-bullet!
--   !begin-bullet!
-    Added support for interaction with Posit Connect deployments hosted
-    in Snowpark Container Services.
-
-    !end-bullet!
--   !begin-bullet!
     Content directories with a period in their name are no longer
     treated as a document path when computing the location for
     deployment records. (#1138)
-
-    !end-bullet!
--   !begin-bullet!
-    A `_server.yml` file indicates that the content is an API. (#1144)
 
     !end-bullet!
 -   !begin-bullet!
@@ -28,8 +14,22 @@
 
     !end-bullet!
 -   !begin-bullet!
+    Fixed errors when analyzing Quarto documents containing long chunks.
+    (#1114)
+
+    !end-bullet!
+-   !begin-bullet!
+    A `_server.yml` file indicates that the content is an API. (#1144)
+
+    !end-bullet!
+-   !begin-bullet!
     Expand tilde when resolving the `rsconnect.ca.bundle` option.
     (#1152)
+
+    !end-bullet!
+-   !begin-bullet!
+    Added support for interaction with Posit Connect deployments hosted
+    in Snowpark Container Services.
 
     !end-bullet!
 -   !begin-bullet!
