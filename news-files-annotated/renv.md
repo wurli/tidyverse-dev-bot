@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed an issue where `renv` could fail to parse remote references
+    containing an `@` character. (#2135)
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed an issue where `renv::sysreqs(distro = <...>)` could fail when
     passed an alternate distribution without a version specifier.
     (#2105)
