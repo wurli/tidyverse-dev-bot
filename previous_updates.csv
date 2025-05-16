@@ -19268,3 +19268,4 @@ rsconnect,c0b89fba9d38710996fe3bc1cd7e2949,"Introduced detection of required Pyt
 rcmdcheck,19b3b293d23ad30a36d79685e5250d3b,Fix usage of `libpath` argument (#195).,NA,NA,NA,NA
 rsconnect,fe7dbd7635988c4aaff8702add9c9f7e,Fixed deployment errors for Quarto documents containing long chunks. (#1114),NA,NA,NA,NA
 rsconnect,22687fe68e7a10267a308915ba42c1fb,Fixed errors when analyzing Quarto documents containing long chunks. (#1114),NA,NA,NA,NA
+pkgdown,b3e9033b33b0df6e6301a0a2c79672af,Menu items can now set `class` and `id`.,NA,NA,NA,NA
