@@ -19272,3 +19272,4 @@ pkgdown,b3e9033b33b0df6e6301a0a2c79672af,Menu items can now set `class` and `id`
 renv,40700be2a81db3945651521992692967,Fixed an issue where `renv` could fail to parse remote references containing an `@​` character. (#2135),NA,NA,NA,NA
 renv,61625f6229abc0d04eca5a782ce26bf7,`renv`'s dependency discovery now supports usages of `base::use()`. (#2130),NA,NA,NA,NA
 renv,6440a3f3e29cc9fc51e9d565185241f4,`renv` now supports dependency discovery for projects using `base::use()` to load packages. (#2130),NA,NA,NA,NA
+pins,27accf5c25a436973924ca49a380c4ca,"Added support of the `qs2` format (#865, @​atsyplenkov).",NA,NA,NA,NA
