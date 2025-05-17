@@ -8,11 +8,6 @@
 
     !end-bullet!
 -   !begin-bullet!
-    `renv` now supports dependency discovery for projects using
-    `base::use()` to load packages. (#2130)
-
-    !end-bullet!
--   !begin-bullet!
     Fixed an issue where `renv` could fail to parse remote references
     containing an `@` character. (#2135)
 
