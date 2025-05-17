@@ -19270,3 +19270,5 @@ rsconnect,fe7dbd7635988c4aaff8702add9c9f7e,Fixed deployment errors for Quarto do
 rsconnect,22687fe68e7a10267a308915ba42c1fb,Fixed errors when analyzing Quarto documents containing long chunks. (#1114),NA,NA,NA,NA
 pkgdown,b3e9033b33b0df6e6301a0a2c79672af,Menu items can now set `class` and `id`.,NA,NA,NA,NA
 renv,40700be2a81db3945651521992692967,Fixed an issue where `renv` could fail to parse remote references containing an `@​` character. (#2135),NA,NA,NA,NA
+renv,61625f6229abc0d04eca5a782ce26bf7,`renv`'s dependency discovery now supports usages of `base::use()`. (#2130),NA,NA,NA,NA
+renv,6440a3f3e29cc9fc51e9d565185241f4,`renv` now supports dependency discovery for projects using `base::use()` to load packages. (#2130),NA,NA,NA,NA
