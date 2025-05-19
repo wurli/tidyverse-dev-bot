@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    New roxygen tag `@aesthetics` that takes a Geom, Stat or Position
+    class and generates an 'Aesthetics' section.
+
+    !end-bullet!
+-   !begin-bullet!
     `annotation_borders()` replaces the now-deprecated `borders()`
     (@teunbrand, #6392)
 
