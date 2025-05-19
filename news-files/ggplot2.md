@@ -1,5 +1,9 @@
 # ggplot2 (development version)
 
+* `annotation_borders()` replaces the now-deprecated `borders()` 
+  (@teunbrand, #6392)
+* New `make_constructor()` function that builds a standard constructor for
+  Geom and Stat classes (@teunbrand, #6142).
 * In continuous scales, when `breaks` is a function and `n.breaks` is set, the 
   `n.breaks` will be passed to the `breaks` function. Previously, `n.breaks` 
   only applied to the default break calculation (@teunbrand, #5972)
@@ -92,7 +96,7 @@
   @yutannihilation's prior work, #3120)
 * When discrete breaks have names, they'll be used as labels by default
   (@teunbrand, #6147).
-* The helper function `is.waiver()` is now exported to help extensions to work
+* The helper function `is_waiver()` is now exported to help extensions to work
   with `waiver()` objects (@arcresu, #6173).
 * Date(time) scales now throw appropriate errors when `date_breaks`,
   `date_minor_breaks` or `date_labels` are not strings (@RodDalBen, #5880)

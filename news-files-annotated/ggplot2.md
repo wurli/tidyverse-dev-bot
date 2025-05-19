@@ -3,6 +3,16 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `annotation_borders()` replaces the now-deprecated `borders()`
+    (@teunbrand, #6392)
+
+    !end-bullet!
+-   !begin-bullet!
+    New `make_constructor()` function that builds a standard constructor
+    for Geom and Stat classes (@teunbrand, #6142).
+
+    !end-bullet!
+-   !begin-bullet!
     In continuous scales, when `breaks` is a function and `n.breaks` is
     set, the `n.breaks` will be passed to the `breaks` function.
     Previously, `n.breaks` only applied to the default break calculation
@@ -252,7 +262,7 @@
 
     !end-bullet!
 -   !begin-bullet!
-    The helper function `is.waiver()` is now exported to help extensions
+    The helper function `is_waiver()` is now exported to help extensions
     to work with `waiver()` objects (@arcresu, #6173).
 
     !end-bullet!
