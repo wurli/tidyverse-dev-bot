@@ -3,6 +3,13 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    In continuous scales, when `breaks` is a function and `n.breaks` is
+    set, the `n.breaks` will be passed to the `breaks` function.
+    Previously, `n.breaks` only applied to the default break calculation
+    (@teunbrand, #5972)
+
+    !end-bullet!
+-   !begin-bullet!
     (internal) New `Facet$draw_panel_content()` method for delegating
     panel assembly (@Yunuuuu, #6406).
 
@@ -736,6 +743,10 @@
 -   !begin-bullet!
     Fixed bug where empty discrete scales weren't recognised as such
     (@teunbrand, #5945).
+
+    !end-bullet!
+-   !begin-bullet!
+    `coord_trans()` renamed to `coord_transform()` (@nmercadeb, #5825).
 
     !end-bullet!
 -   !begin-bullet!

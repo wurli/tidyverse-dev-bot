@@ -19273,3 +19273,5 @@ renv,40700be2a81db3945651521992692967,Fixed an issue where `renv` could fail to 
 renv,61625f6229abc0d04eca5a782ce26bf7,`renv`'s dependency discovery now supports usages of `base::use()`. (#2130),NA,NA,NA,NA
 renv,6440a3f3e29cc9fc51e9d565185241f4,`renv` now supports dependency discovery for projects using `base::use()` to load packages. (#2130),NA,NA,NA,NA
 pins,27accf5c25a436973924ca49a380c4ca,"Added support of the `qs2` format (#865, @​atsyplenkov).",NA,NA,NA,NA
+ggplot2,b835ca4208da4bc81a0e882406e86641,"In continuous scales, when `breaks` is a function and `n.breaks` is set, the `n.breaks` will be passed to the `breaks` function. Previously, `n.breaks` only applied to the default break calculation (@​teunbrand, #5972)",NA,NA,NA,NA
+ggplot2,7c9bbc6d9ba85136e5def8f212f36029,"`coord_trans()` renamed to `coord_transform()` (@​nmercadeb, #5825).",NA,NA,NA,NA
