@@ -1,5 +1,11 @@
 # ggplot2 (development version)
 
+* New `coord_cartesian(ratio)` argument that absorbs the aspect ratio 
+  functionality from `coord_equal()` and `coord_fixed()`, which are now 
+  wrappers for `coord_cartesian()`.
+* Better handling of the `guide_axis_logticks(negative.small)` parameter when
+  scale limits have small maximum (@teunbrand, #6121).
+* Fixed bug where the `ggplot2::`-prefix did not work with `stage()` 
 * New roxygen tag `@aesthetics` that takes a Geom, Stat or Position class and
   generates an 'Aesthetics' section.
 * `annotation_borders()` replaces the now-deprecated `borders()` 
@@ -350,6 +356,8 @@
   (@teunbrand, #6269).
 * The default colour and fill scales have a new `palette` argument
   (@teunbrand, #6064).
+* The `theme(legend.spacing.{x/y})` setting now accepts `null`-units 
+  (@teunbrand, #6417).
 
 # ggplot2 3.5.2
 

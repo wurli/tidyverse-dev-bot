@@ -3,6 +3,21 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    New `coord_cartesian(ratio)` argument that absorbs the aspect ratio
+    functionality from `coord_equal()` and `coord_fixed()`, which are
+    now wrappers for `coord_cartesian()`.
+
+    !end-bullet!
+-   !begin-bullet!
+    Better handling of the `guide_axis_logticks(negative.small)`
+    parameter when scale limits have small maximum (@teunbrand, #6121).
+
+    !end-bullet!
+-   !begin-bullet!
+    Fixed bug where the `ggplot2::`-prefix did not work with `stage()`
+
+    !end-bullet!
+-   !begin-bullet!
     New roxygen tag `@aesthetics` that takes a Geom, Stat or Position
     class and generates an 'Aesthetics' section.
 
@@ -944,6 +959,11 @@
 -   !begin-bullet!
     The default colour and fill scales have a new `palette` argument
     (@teunbrand, #6064).
+
+    !end-bullet!
+-   !begin-bullet!
+    The `theme(legend.spacing.{x/y})` setting now accepts `null`-units
+    (@teunbrand, #6417).
 
     !end-bullet!
 

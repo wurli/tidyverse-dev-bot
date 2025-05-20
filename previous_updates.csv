@@ -19278,3 +19278,7 @@ ggplot2,7c9bbc6d9ba85136e5def8f212f36029,"`coord_trans()` renamed to `coord_tran
 ggplot2,e602fd1231f749bfef4e653da0a3f111,"`annotation_borders()` replaces the now-deprecated `borders()` (@​teunbrand, #6392)",NA,NA,NA,NA
 ggplot2,c5dcd6c073d25c9ac4a7357e39392635,"New `make_constructor()` function that builds a standard constructor for Geom and Stat classes (@​teunbrand, #6142).",NA,NA,NA,NA
 ggplot2,bf4bd23e7ad13045ef5303c20531eb5f,"New roxygen tag `@​aesthetics` that takes a Geom, Stat or Position class and generates an 'Aesthetics' section.",NA,NA,NA,NA
+ggplot2,414b17b94de9a3244a7dfa0bf8cb417c,"New `coord_cartesian(ratio)` argument that absorbs the aspect ratio functionality from `coord_equal()` and `coord_fixed()`, which are now wrappers for `coord_cartesian()`.",NA,NA,NA,NA
+ggplot2,98786cf8b70f2385b299d91289530e1c,"Better handling of the `guide_axis_logticks(negative.small)` parameter when scale limits have small maximum (@​teunbrand, #6121).",NA,NA,NA,NA
+ggplot2,8541166df631b9984193043c0a38a749,Fixed bug where the `ggplot2::`-prefix did not work with `stage()`,NA,NA,NA,NA
+ggplot2,5d503effad5faab91982f246d8b05bce,"The `theme(legend.spacing.{x/y})` setting now accepts `null`-units (@​teunbrand, #6417).",NA,NA,NA,NA
