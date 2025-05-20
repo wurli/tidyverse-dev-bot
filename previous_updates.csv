@@ -19282,3 +19282,4 @@ ggplot2,414b17b94de9a3244a7dfa0bf8cb417c,"New `coord_cartesian(ratio)` argument 
 ggplot2,98786cf8b70f2385b299d91289530e1c,"Better handling of the `guide_axis_logticks(negative.small)` parameter when scale limits have small maximum (@​teunbrand, #6121).",NA,NA,NA,NA
 ggplot2,8541166df631b9984193043c0a38a749,Fixed bug where the `ggplot2::`-prefix did not work with `stage()`,NA,NA,NA,NA
 ggplot2,5d503effad5faab91982f246d8b05bce,"The `theme(legend.spacing.{x/y})` setting now accepts `null`-units (@​teunbrand, #6417).",NA,NA,NA,NA
+rsconnect,83b610ae1317436197771f66fc250fa7,"When waiting for initial Connect account authorization, allow HTTP 401 responses. (#1167)",NA,NA,NA,NA
