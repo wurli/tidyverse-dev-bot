@@ -1,5 +1,8 @@
 # rsconnect (development version)
 
+* Fixed processing error during server validation, which prevented
+  registration of new Connect accounts. (#1166)
+
 * When waiting for initial Connect account authorization, allow HTTP 401
   responses. (#1167)
 

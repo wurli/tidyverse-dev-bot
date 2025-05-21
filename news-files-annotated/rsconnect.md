@@ -3,8 +3,14 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed processing error during server validation, which prevented
+    registration of new Connect accounts. (#1166)
+
+    !end-bullet!
+-   !begin-bullet!
     When waiting for initial Connect account authorization, allow HTTP
     401 responses. (#1167)
+
     !end-bullet!
 
 !end-bullets-1!

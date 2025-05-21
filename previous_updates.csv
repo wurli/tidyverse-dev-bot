@@ -19283,3 +19283,4 @@ ggplot2,98786cf8b70f2385b299d91289530e1c,"Better handling of the `guide_axis_log
 ggplot2,8541166df631b9984193043c0a38a749,Fixed bug where the `ggplot2::`-prefix did not work with `stage()`,NA,NA,NA,NA
 ggplot2,5d503effad5faab91982f246d8b05bce,"The `theme(legend.spacing.{x/y})` setting now accepts `null`-units (@​teunbrand, #6417).",NA,NA,NA,NA
 rsconnect,83b610ae1317436197771f66fc250fa7,"When waiting for initial Connect account authorization, allow HTTP 401 responses. (#1167)",NA,NA,NA,NA
+rsconnect,903a9d8b5191b04f80f5d807677b5430,"Fixed processing error during server validation, which prevented registration of new Connect accounts. (#1166)",NA,NA,NA,NA
