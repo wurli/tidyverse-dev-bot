@@ -1,5 +1,7 @@
 # rsconnect (development version)
 
+# rsconnect 1.4.1
+
 * Fixed processing error during server validation, which prevented
   registration of new Connect accounts. (#1166)
 
