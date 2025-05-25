@@ -19284,3 +19284,10 @@ ggplot2,8541166df631b9984193043c0a38a749,Fixed bug where the `ggplot2::`-prefix 
 ggplot2,5d503effad5faab91982f246d8b05bce,"The `theme(legend.spacing.{x/y})` setting now accepts `null`-units (@​teunbrand, #6417).",NA,NA,NA,NA
 rsconnect,83b610ae1317436197771f66fc250fa7,"When waiting for initial Connect account authorization, allow HTTP 401 responses. (#1167)",NA,NA,NA,NA
 rsconnect,903a9d8b5191b04f80f5d807677b5430,"Fixed processing error during server validation, which prevented registration of new Connect accounts. (#1166)",NA,NA,NA,NA
+pillar,143b1a92cc4b5567df510124b262cb3f,Always use `_R_CHECK_FORCE_SUGGESTS_=false` (#751).,NA,NA,NA,NA
+pillar,7ccc66c46e145d011936186a3be0dd8d,Correct installation of xml2 (#747).,NA,NA,NA,NA
+pillar,41a5e908a84a359fc85a90ce622b482d,"Import from actions-sync, check carefully (#745).",NA,NA,NA,NA
+pillar,52eaa8411584b660f0696b0e817445c7,Sync (#744).,NA,NA,NA,NA
+pillar,7084ba345968524d85717b512d7fa89a,Snapshot updates for R-CMD-check-base (null) (#742).,NA,NA,NA,NA
+pillar,04fe1d1549fb6b3b7c4551bbdb15457d,"Snapshot updates for R-CMD-check-dev ({""package"":""ggplot2""}) (#748).",NA,NA,NA,NA
+pillar,9c045c1bccb7d0c3691749d4c0ba6f91,Snapshot updates for rcc-smoke (null) (#743).,NA,NA,NA,NA
