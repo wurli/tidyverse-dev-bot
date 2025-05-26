@@ -19292,3 +19292,4 @@ pillar,7084ba345968524d85717b512d7fa89a,Snapshot updates for R-CMD-check-base (n
 pillar,04fe1d1549fb6b3b7c4551bbdb15457d,"Snapshot updates for R-CMD-check-dev ({""package"":""ggplot2""}) (#748).",NA,NA,NA,NA
 pillar,9c045c1bccb7d0c3691749d4c0ba6f91,Snapshot updates for rcc-smoke (null) (#743).,NA,NA,NA,NA
 pillar,e7413cb44453730a82d7e3f1ed7d713c,Fix dev ggplot2 compatibility.,NA,NA,NA,NA
+gh,a84754242bcfad186b6d7d198a8de752,Posit acknowledges that the response header may contain sensitive information. (#222) Thank you to @​foysal1197 for your thorough research and responsible disclosure.,NA,NA,NA,NA
