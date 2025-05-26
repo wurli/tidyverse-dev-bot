@@ -19293,3 +19293,44 @@ pillar,04fe1d1549fb6b3b7c4551bbdb15457d,"Snapshot updates for R-CMD-check-dev ({
 pillar,9c045c1bccb7d0c3691749d4c0ba6f91,Snapshot updates for rcc-smoke (null) (#743).,NA,NA,NA,NA
 pillar,e7413cb44453730a82d7e3f1ed7d713c,Fix dev ggplot2 compatibility.,NA,NA,NA,NA
 gh,a84754242bcfad186b6d7d198a8de752,Posit acknowledges that the response header may contain sensitive information. (#222) Thank you to @​foysal1197 for your thorough research and responsible disclosure.,NA,NA,NA,NA
+ggplot2,702030c324626bdebc1ce97358d2c361,"Moved the following packages in the description. If your package depended on ggplot2 to install these dependencies, you may need to list these in your own DESCRIPTION file now (#5986).",NA,NA,NA,NA
+ggplot2,702030c324626bdebc1ce97358d2c361,• Moved mgcv from Imports to Suggests,NA,NA,NA,NA
+ggplot2,702030c324626bdebc1ce97358d2c361,• Moved tibble from Imports to Suggests,NA,NA,NA,NA
+ggplot2,702030c324626bdebc1ce97358d2c361,• Removed glue dependency,NA,NA,NA,NA
+ggplot2,8dfbc2663a491d581be8910edeb2fedb,"Default labels are derived in `ggplot_build()` rather than in `ggplot_add.Layer()`. This may affect code that accessed the `plot$labels` field (@​teunbrand, #5894).",NA,NA,NA,NA
+ggplot2,8c1d3b7fde34702ef9889bf6bbef9863,"`facet_wrap()` has new options for the `dir` argument for additional control over panel directions. They absorb interactions with the now-deprecated `as.table` argument. Internally `dir = ""h""` or `dir = ""v""` is deprecated (@​teunbrand, #5212).",NA,NA,NA,NA
+ggplot2,c0b17aa892f5f346f70fb462cc87a656,The `theme()` function offers new arguments:,NA,NA,NA,NA
+ggplot2,c0b17aa892f5f346f70fb462cc87a656,• `geom` to set defaults for layer aesthetics (#2239).,NA,NA,NA,NA
+ggplot2,c0b17aa892f5f346f70fb462cc87a656,"• `spacing`/`margins` as root elements that are inherited by all other spacings and (non-text) margins (@​teunbrand, #5622).",NA,NA,NA,NA
+ggplot2,c0b17aa892f5f346f70fb462cc87a656,"• `palette.{aes}.discrete` and `palette.{aes}.continuous` which determine the palettes used when scales have `palette = NULL`. This is the new default for generic scales like `scale_colour_discrete()` or `scale_fill_continuous()`, see also the 'Scales' section (#4696).",NA,NA,NA,NA
+ggplot2,c0b17aa892f5f346f70fb462cc87a656,"• `panel.widths` and `panel.heights` to control the (absolute) size of the panels (#5338, @​teunbrand).",NA,NA,NA,NA
+ggplot2,c0b17aa892f5f346f70fb462cc87a656,"• `legend.key.justification` to control the alignment of legend keys (@​teunbrand, #3669)",NA,NA,NA,NA
+ggplot2,b985431f2d473807d30a1cfc757c26dc,Built-in `theme_*()` functions have new arguments:,NA,NA,NA,NA
+ggplot2,b985431f2d473807d30a1cfc757c26dc,"• `ink`/`paper`/`accent` to control foreground, background and highlight colours respectively of the whole plot (@​teunbrand, #6063, @​EvaMaeRey, #6438).",NA,NA,NA,NA
+ggplot2,b985431f2d473807d30a1cfc757c26dc,• `header_family` to easily set the font for headers and titles (#5886),NA,NA,NA,NA
+ggplot2,b985431f2d473807d30a1cfc757c26dc,"‣ To accommodate, `plot.subtitle`, `plot.caption` and `plot.tag` now inherit from the root `text` element instead of the `title` element.",NA,NA,NA,NA
+ggplot2,115b0cb548db4e58b0a865561ddb77c3,Adjustments to margins (#6115):,NA,NA,NA,NA
+ggplot2,115b0cb548db4e58b0a865561ddb77c3,"• They can have NA-units, which indicate that the value should be inherited from the parent element.",NA,NA,NA,NA
+ggplot2,115b0cb548db4e58b0a865561ddb77c3,"• New `margin_part()` function that comes pre-populated with NA-units, so you can change a single margin without worrying that the others look off.",NA,NA,NA,NA
+ggplot2,115b0cb548db4e58b0a865561ddb77c3,• New `margin_auto()` that recycles arguments in a CSS like fashion.,NA,NA,NA,NA
+ggplot2,618c4e406b7dc942deeaa210bc3dc551,"The default colour and fill scales have a new `palette` argument. The default, `palette = NULL` will retrieve palettes from the theme (see the Themes section). This replaces the old options-based `type` system, with some limited backward compatibility (@​teunbrand, #6064).",NA,NA,NA,NA
+ggplot2,92955062c076baae5fc65481b0b72981,Changes in discrete scales:,NA,NA,NA,NA
+ggplot2,92955062c076baae5fc65481b0b72981,"• Added `palette` argument, which can be used to customise spacings between levels (@​teunbrand, #5770)",NA,NA,NA,NA
+ggplot2,92955062c076baae5fc65481b0b72981,"• Added `continuous.limits` argument to control the display range (@​teunbrand, #4174, #6259).",NA,NA,NA,NA
+ggplot2,92955062c076baae5fc65481b0b72981,"• Added `minor_breaks` argument. This only makes sense in position scales, where it affects the placement of minor ticks and minor gridlines (#5434).",NA,NA,NA,NA
+ggplot2,92955062c076baae5fc65481b0b72981,"• Added `sec.axis` argument. Discrete scales don't support transformations so it is recommended to use `dup_axis()` to set custom breaks or labels. Secondary discrete axes work with the continuous analogues of discrete breaks (@​teunbrand, #3171)",NA,NA,NA,NA
+ggplot2,92955062c076baae5fc65481b0b72981,"• When `breaks` yields a named vector, the names will be used as `labels` by default (@​teunbrand, #6147).",NA,NA,NA,NA
+ggplot2,0f77f38eb2984fd234b49227167d3bc8,Changes in date/time scales:,NA,NA,NA,NA
+ggplot2,0f77f38eb2984fd234b49227167d3bc8,"• `<POSIXct>`{=html} is silently cast to `<Date>`{=html} in date scales. Vice versa, `<Date>`{=html} is cast to `<POSIXct>`{=html} in datetime scales (@​laurabrianna, #3533)",NA,NA,NA,NA
+ggplot2,0f77f38eb2984fd234b49227167d3bc8,• Bare numeric provided to date or datetime scales get inversely transformed (i.e. cast to `<Date>`{=html}/`<POSIXct>`{=html}) with a warning (@​teunbrand),NA,NA,NA,NA
+ggplot2,0f77f38eb2984fd234b49227167d3bc8,"• The `date_breaks`, `date_minor_breaks` and `date_labels` arguments have been copied over to `scale_{x/y}_time()` (@​teunbrand, #4335).",NA,NA,NA,NA
+ggplot2,e41ffc79b46ee7fc68946edc7ba657bc,"`geom_boxplot()` gains additional arguments to style the colour, linetype and linewidths of the box, whiskers, median line and staples (@​teunbrand, #5126).",NA,NA,NA,NA
+ggplot2,a7bc5a5454965fb6176abcb54161ce8c,"`stat_ellipse` now has an optional `weight` (@​teunbrand, #5272)",NA,NA,NA,NA
+ggplot2,5c9efbb8484f953ca82c654a98e4ad08,"`stat_density()` has the new computed variable: `wdensity`, which is calculated as the density times the sum of weights (@​teunbrand, #4176).",NA,NA,NA,NA
+ggplot2,5c9efbb8484f953ca82c654a98e4ad08,"• `linetype = NA` is now interpreted to mean 'no line' instead of raising errors (@​teunbrand, #6269).",NA,NA,NA,NA
+ggplot2,b91891da2d8ca32145f0f84f10088062,"Standardised the calculation of `width`, which are now implemented as aesthetics (@​teunbrand, #2800, #3142, #5740, #3722).",NA,NA,NA,NA
+ggplot2,ec3d2a80febd16f6adca55be59be843e,The size of the `draw_key_polygon()` glyph now reflects the `linewidth` aesthetic which internally defaults to 0 (#4852).,NA,NA,NA,NA
+ggplot2,fb31d5f1d5c92eb2616aacc393bdb1ae,"`draw_key_rect()` replaces a `NA` fill by the `colour` aesthetic (@​teunbrand, #5385, #5756).",NA,NA,NA,NA
+ggplot2,7819788483f5e571a3318c088e0a3a22,Rearranged the code of `Facet$draw_panels()` method (@​teunbrand).,NA,NA,NA,NA
+ggplot2,1376efd479d7c4b34b4b3322b1cac0d9,"Layer data can be attenuated with parameter attributes (@​teunbrand, #3175).",NA,NA,NA,NA
+ggplot2,9edd01ed7b22b39c2e1b1838c8694c17,"Removed barriers for using 2D structures as aesthetics (@​teunbrand, #4189).",NA,NA,NA,NA
