@@ -1,5 +1,7 @@
 # gh (development version)
 
+# gh 1.5.0
+
 ## BREAKING CHANGES
 
 ### Posit Security Advisory(PSA) - PSA-1649
