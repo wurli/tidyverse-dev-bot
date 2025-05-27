@@ -19334,3 +19334,6 @@ ggplot2,fb31d5f1d5c92eb2616aacc393bdb1ae,"`draw_key_rect()` replaces a `NA` fill
 ggplot2,7819788483f5e571a3318c088e0a3a22,Rearranged the code of `Facet$draw_panels()` method (@​teunbrand).,NA,NA,NA,NA
 ggplot2,1376efd479d7c4b34b4b3322b1cac0d9,"Layer data can be attenuated with parameter attributes (@​teunbrand, #3175).",NA,NA,NA,NA
 ggplot2,9edd01ed7b22b39c2e1b1838c8694c17,"Removed barriers for using 2D structures as aesthetics (@​teunbrand, #4189).",NA,NA,NA,NA
+pak,518542427273399147cba1b9bd8c372b,New function `scan_deps()` to auto-detect package dependencies from R code. `deps::.` automatically uses detected dependencies now if no `DESCRIPTION` file is found.,NA,NA,NA,NA
+pak,383c7981f59698620870d866760308f9,"The dependency solver now uses better heuristics, that works better (=faster) with multiple repositories with large overlaps (https://github.com/r-lib/pkgdepends/pull/392).",NA,NA,NA,NA
+pak,3c135e8e4e77d5cd2640a2bee72676b4,pak is now much better at detecting the correct Linux distribution when deciding about PPM and system requirements support.,NA,NA,NA,NA

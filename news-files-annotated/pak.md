@@ -3,18 +3,43 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
-    pak now uses the `use_bioconductor` configuration option in
-    `meta_*()` and `repo_*()` functions (#295, #726, @meztez).
-
-    !end-bullet!
--   !begin-bullet!
     pak now supports HTTP basic authentication for CRAN-like
     repositories. See 'Authenticated repositories' in the reference
     manual.
 
     !end-bullet!
+-   !begin-bullet!
+    New function `scan_deps()` to auto-detect package dependencies from
+    R code. `deps::.` automatically uses detected dependencies now if no
+    `DESCRIPTION` file is found.
+
+    !end-bullet!
+-   !begin-bullet!
+    The dependency solver now uses better heuristics, that works better
+    (=faster) with multiple repositories with large overlaps
+    (https://github.com/r-lib/pkgdepends/pull/392).
+
+    !end-bullet!
+-   !begin-bullet!
+    pak is now much better at detecting the correct Linux distribution
+    when deciding about PPM and system requirements support.
+
+    !end-bullet!
+-   !begin-bullet!
+    pak now uses the `use_bioconductor` configuration option in
+    `meta_*()` and `repo_*()` functions (#295, #726, @meztez).
+
+    !end-bullet!
 
 !end-bullets-1!
+
+# pak 0.8.0.2
+
+No changes.
+
+# pak 0.8.0.1
+
+No changes.
 
 # pak 0.8.0
 
