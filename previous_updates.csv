@@ -19337,3 +19337,4 @@ ggplot2,9edd01ed7b22b39c2e1b1838c8694c17,"Removed barriers for using 2D structur
 pak,518542427273399147cba1b9bd8c372b,New function `scan_deps()` to auto-detect package dependencies from R code. `deps::.` automatically uses detected dependencies now if no `DESCRIPTION` file is found.,NA,NA,NA,NA
 pak,383c7981f59698620870d866760308f9,"The dependency solver now uses better heuristics, that works better (=faster) with multiple repositories with large overlaps (https://github.com/r-lib/pkgdepends/pull/392).",NA,NA,NA,NA
 pak,3c135e8e4e77d5cd2640a2bee72676b4,pak is now much better at detecting the correct Linux distribution when deciding about PPM and system requirements support.,NA,NA,NA,NA
+ragg,0ba21891d79dc7c8e568a1caa4ca4361,Fix gradient rendering bug introduced by trying to fix #177 (#192),NA,NA,NA,NA
