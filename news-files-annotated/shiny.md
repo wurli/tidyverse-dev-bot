@@ -80,6 +80,14 @@
     (#4066)
 
     !end-bullet!
+-   !begin-bullet!
+    `ExtendedTask` now catches synchronous values and errors and returns
+    them via `$result()`. Previously, the extended task function was
+    required to always return a promise. This change makes it easier to
+    use `ExtendedTask` with a function that may return early or do some
+    synchronous work before returning a promise. (#4225)
+
+    !end-bullet!
 
 !end-bullets-3!
 
@@ -103,6 +111,11 @@
     Updated the JavaScript used when inserting a tab to avoid rendering
     dynamic UI elements twice when adding the new tab via `insertTab()`
     or `bslib::nav_insert()`. (#4179)
+
+    !end-bullet!
+-   !begin-bullet!
+    Fixed an issue with `ExtendedTask` where synchronous errors would
+    cause an error that would stop the current session. (#4225)
 
     !end-bullet!
 
