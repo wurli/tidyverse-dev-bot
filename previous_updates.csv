@@ -19340,3 +19340,4 @@ pak,3c135e8e4e77d5cd2640a2bee72676b4,pak is now much better at detecting the cor
 ragg,0ba21891d79dc7c8e568a1caa4ca4361,Fix gradient rendering bug introduced by trying to fix #177 (#192),NA,NA,NA,NA
 shiny,804ec618e75301477b4056d5d3a6a3e5,"`ExtendedTask` now catches synchronous values and errors and returns them via `$result()`. Previously, the extended task function was required to always return a promise. This change makes it easier to use `ExtendedTask` with a function that may return early or do some synchronous work before returning a promise. (#4225)",NA,NA,NA,NA
 shiny,a00c674171cbbfca322d3f19bb57250a,Fixed an issue with `ExtendedTask` where synchronous errors would cause an error that would stop the current session. (#4225),NA,NA,NA,NA
+haven,bcc22373ac354a580da269f9d9c5ace2,Updated ReadStat to fix stricter gcc diagnostics.,NA,NA,NA,NA
