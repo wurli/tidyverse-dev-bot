@@ -27,6 +27,12 @@
     (#1792, #1797)
 
     !end-bullet!
+-   !begin-bullet!
+    Fixed error in `get_python_conda_info()` when conda not found
+    through `conda-meta/history` and `NULL` is passed to `normalizePath`
+    (#1184)
+
+    !end-bullet!
 
 !end-bullets-1!
 
