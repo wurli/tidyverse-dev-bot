@@ -19342,3 +19342,4 @@ shiny,804ec618e75301477b4056d5d3a6a3e5,"`ExtendedTask` now catches synchronous v
 shiny,a00c674171cbbfca322d3f19bb57250a,Fixed an issue with `ExtendedTask` where synchronous errors would cause an error that would stop the current session. (#4225),NA,NA,NA,NA
 haven,bcc22373ac354a580da269f9d9c5ace2,Updated ReadStat to fix stricter gcc diagnostics.,NA,NA,NA,NA
 reticulate,7af98901164859102ca751de1512b997,Fixed error in `get_python_conda_info()` when conda not found through `conda-meta/history` and `NULL` is passed to `normalizePath` (#1184),NA,NA,NA,NA
+quarto,41647237e8213dba879aa3fb8df46a70,`quarto_render()` now correctly set `as_job` when not inside RStudio IDE and required **rstudioapi** functions are not available (#203).,NA,NA,NA,NA

@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `quarto_render()` now correctly set `as_job` when not inside RStudio
+    IDE and required **rstudioapi** functions are not available (#203).
+
+    !end-bullet!
+-   !begin-bullet!
     Add several new wrapper function (thanks, @parmsam, #192):
 
     !begin-bullets-2!
