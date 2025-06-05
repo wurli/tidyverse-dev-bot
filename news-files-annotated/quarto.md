@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Quarto CLI will now correctly use the same R version than the one
+    used to run functions in this package (#204).
+
+    !end-bullet!
+-   !begin-bullet!
     Add `quarto_available()` function to check if Quarto CLI is found
     (thanks, @hadley, #187).
 
