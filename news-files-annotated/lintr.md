@@ -168,6 +168,12 @@
     them as undesirable functions,
     e.g. `undesirable_function_linter("sum")` (#2536, @MichaelChirico).
     !end-bullet!
+-   !begin-bullet!
+    `any_duplicated_linter()` is extended to recognize some usages from
+    {dplyr} and {data.table} that could be replaced by
+    `anyDuplicated()`, e.g. `n_distinct(col) == n()` or
+    `uniqueN(col) == .N` (#2482, @MichaelChirico).
+    !end-bullet!
 
 !end-bullets-5!
 

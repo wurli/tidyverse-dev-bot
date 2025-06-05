@@ -19345,3 +19345,4 @@ reticulate,7af98901164859102ca751de1512b997,Fixed error in `get_python_conda_inf
 quarto,41647237e8213dba879aa3fb8df46a70,`quarto_render()` now correctly set `as_job` when not inside RStudio IDE and required **rstudioapi** functions are not available (#203).,NA,NA,NA,NA
 quarto,b3097dde13d94bc11df31099f928a1ec,"Add `quarto_available()` function to check if Quarto CLI is found (thanks, @​hadley, #187).",NA,NA,NA,NA
 pkgdown,729a5ce75d90877f6d02c58b4b862416,"`build_site()` gained a `quiet` argument, which is propagated to other functions (e.g., `build_articles()`) and is useful for debugging build errors on GH actions.",NA,NA,NA,NA
+lintr,37c7e1c40d06340c28b3762efeddffe3,"`any_duplicated_linter()` is extended to recognize some usages from {dplyr} and {data.table} that could be replaced by `anyDuplicated()`, e.g. `n_distinct(col) == n()` or `uniqueN(col) == .N` (#2482, @​MichaelChirico).",NA,NA,NA,NA
