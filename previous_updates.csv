@@ -19348,3 +19348,8 @@ pkgdown,729a5ce75d90877f6d02c58b4b862416,"`build_site()` gained a `quiet` argume
 lintr,37c7e1c40d06340c28b3762efeddffe3,"`any_duplicated_linter()` is extended to recognize some usages from {dplyr} and {data.table} that could be replaced by `anyDuplicated()`, e.g. `n_distinct(col) == n()` or `uniqueN(col) == .N` (#2482, @​MichaelChirico).",NA,NA,NA,NA
 quarto,0ca742894f109d1458750de04f0aed67,Quarto CLI will now correctly use the same R version than the one used to run functions in this package (#204).,NA,NA,NA,NA
 tibble,f233aeb7d957e200a503e473962ec4a3,"Subset tibble with `""0""` for row index (@​eitsupi, #1636, #1637).",NA,NA,NA,NA
+tibble,1ed61109c08a920eaddcd19fe36739a4,Auto-update from GitHub Actions. Run: https://github.com/tidyverse/tibble/actions/runs/15506522924,NA,NA,NA,NA
+tibble,03915b687502f40f51f01d3d72003a9b,Use Quarto-style formatting in vignettes.,NA,NA,NA,NA
+tibble,0928c71c55555acbe4e3f5a6d993929d,Auto-update from GitHub Actions. Run: https://github.com/tidyverse/tibble/actions/runs/15506365201,NA,NA,NA,NA
+tibble,d5c6e6f738ea8c4c6c0e794553233a3f,Upkeep (#1641).,NA,NA,NA,NA
+tibble,afb04e5369cefb76aeb105ed8088e572,Posit as copyright holder.,NA,NA,NA,NA
