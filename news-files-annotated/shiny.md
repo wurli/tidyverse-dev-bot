@@ -88,6 +88,10 @@
     synchronous work before returning a promise. (#4225)
 
     !end-bullet!
+-   !begin-bullet!
+    Updated a test for compatibility with ggplot2 4.0.0. (#4226)
+
+    !end-bullet!
 
 !end-bullets-3!
 
