@@ -14,6 +14,17 @@
     caption.
 
     !end-bullet!
+-   !begin-bullet!
+    Improvements to options for LaTeX including repeating Headers,
+    removing top and bottom lines, applying font sizes, and line breaks
+    (@thebioengineer, #1630, #1061, #1767)
+
+    !end-bullet!
+-   !begin-bullet!
+    Add `latex()` function to let users write the LaTeX they wish to see
+    in the table cell or text (@thebioengineer, #1912)
+
+    !end-bullet!
 
 !end-bullets-1!
 

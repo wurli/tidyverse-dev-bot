@@ -19353,3 +19353,5 @@ tibble,03915b687502f40f51f01d3d72003a9b,Use Quarto-style formatting in vignettes
 tibble,0928c71c55555acbe4e3f5a6d993929d,Auto-update from GitHub Actions. Run: https://github.com/tidyverse/tibble/actions/runs/15506365201,NA,NA,NA,NA
 tibble,d5c6e6f738ea8c4c6c0e794553233a3f,Upkeep (#1641).,NA,NA,NA,NA
 tibble,afb04e5369cefb76aeb105ed8088e572,Posit as copyright holder.,NA,NA,NA,NA
+gt,1b206aff0aec7317696600f3d77e8173,"Improvements to options for LaTeX including repeating Headers, removing top and bottom lines, applying font sizes, and line breaks (@​thebioengineer, #1630, #1061, #1767)",NA,NA,NA,NA
+gt,ffbb91865c4213efd74ca53ea66fa9ba,"Add `latex()` function to let users write the LaTeX they wish to see in the table cell or text (@​thebioengineer, #1912)",NA,NA,NA,NA
