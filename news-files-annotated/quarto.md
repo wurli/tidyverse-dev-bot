@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Make `quarto_render(as_job = TRUE)` wrapable (thanks, @salim-b,
+    #105).
+
+    !end-bullet!
+-   !begin-bullet!
     Quarto CLI will now correctly use the same R version than the one
     used to run functions in this package (#204).
 

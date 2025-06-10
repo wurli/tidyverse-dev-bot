@@ -19356,3 +19356,4 @@ tibble,afb04e5369cefb76aeb105ed8088e572,Posit as copyright holder.,NA,NA,NA,NA
 gt,1b206aff0aec7317696600f3d77e8173,"Improvements to options for LaTeX including repeating Headers, removing top and bottom lines, applying font sizes, and line breaks (@​thebioengineer, #1630, #1061, #1767)",NA,NA,NA,NA
 gt,ffbb91865c4213efd74ca53ea66fa9ba,"Add `latex()` function to let users write the LaTeX they wish to see in the table cell or text (@​thebioengineer, #1912)",NA,NA,NA,NA
 shiny,669050868a25cd24096ff5925e6a108f,Updated a test for compatibility with ggplot2 4.0.0. (#4226),NA,NA,NA,NA
+quarto,7c7085e6f02f4b55d37c46a213734ec9,"Make `quarto_render(as_job = TRUE)` wrapable (thanks, @​salim-b, #105).",NA,NA,NA,NA
