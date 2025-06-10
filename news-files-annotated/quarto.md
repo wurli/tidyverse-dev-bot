@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Added a `new_blog_post()` function (thanks, @topeto, #22).
+
+    !end-bullet!
+-   !begin-bullet!
     Make `quarto_render(as_job = TRUE)` wrapable (thanks, @salim-b,
     #105).
 
