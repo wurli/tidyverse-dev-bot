@@ -7,6 +7,9 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    The S3 parts of ggplot2 have been replaced with S7 bits (#6352).
+    !end-bullet!
+-   !begin-bullet!
     (breaking) `geom_violin(quantiles)` now has actual quantiles based
     on the data, rather than inferred quantiles based on the computed
     density. The `quantiles` parameter that replaces `draw_quantiles`
@@ -49,9 +52,10 @@
     !end-bullets-3!
     !end-bullet!
 -   !begin-bullet!
-    Default labels are derived in `ggplot_build()` rather than in
-    `ggplot_add.Layer()`. This may affect code that accessed the
-    `plot$labels` field (@teunbrand, #5894).
+    Default labels are derived in `build_ggplot()` (previously
+    `ggplot_build()`) rather than in the layer method of
+    `update_ggplot()` (previously `ggplot_add.Layer()`). This may affect
+    code that accessed the `plot$labels` property (@teunbrand, #5894).
     !end-bullet!
 
 !end-bullets-1!
