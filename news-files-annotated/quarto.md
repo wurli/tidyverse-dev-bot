@@ -3,6 +3,18 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Added debugging logic for quarto vignette engine to help diagnose
+    issues with Quarto vignettes in **pkgdown** and other context
+    (thanks, @hadley, #185). Set `quarto.log.debug = TRUE` to enable
+    debugging messages (or `R_QUARTO_LOG_DEBUG = TRUE` environment
+    variable). Set `quarto.log.file` to change the file path to write to
+    (or `R_QUARTO_LOG_FILE` environment variable). Default will be
+    `./quarto-r-debug.log` Debug mode will be on automatically when
+    debugging Github Actions workflows, or when Quarto CLI's environment
+    variable `QUARTO_LOG_LEVEL` is set to `DEBUG`.
+
+    !end-bullet!
+-   !begin-bullet!
     Added a `new_blog_post()` function (thanks, @topeto, #22).
 
     !end-bullet!
