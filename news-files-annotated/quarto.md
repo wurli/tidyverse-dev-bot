@@ -86,7 +86,7 @@
 
     !end-bullet!
 -   !begin-bullet!
-    `QUARTO_R_QUIET` environment variable can be used to set
+    `R_QUARTO_QUIET` environment variable can be used to set
     `quarto.quiet` option, which overrides any `quiet = TRUE` argument
     passed to `quarto_*` functions. This can be useful to debug Quarto
     rendering inside other packages, like **pkgdown**. Overrides will
