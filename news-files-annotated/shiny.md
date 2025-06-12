@@ -89,7 +89,8 @@
 
     !end-bullet!
 -   !begin-bullet!
-    Updated a test for compatibility with ggplot2 4.0.0. (#4226)
+    `renderPlot()` was updated to accomodate changes in ggplot2 v4.0.0.
+    (#4226)
 
     !end-bullet!
 
