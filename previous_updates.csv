@@ -19364,3 +19364,4 @@ keras,6336b49d7f0903706026b650ba34537c,"Added S3 methods for JAX array: `str`, `
 keras,2bb8cf717e594a3a9e6498b3188d60fe,Added `str` S3 method for Keras Variables.,NA,NA,NA,NA
 keras,825270086440abf366d86cb988787b7f,"Updated dependencies declared by `use_backend(""jax"", gpu=TRUE)` for compatability with `keras-hub`.",NA,NA,NA,NA
 shiny,0cc5ef34945b4b7d2ce3f6a3f7c1235c,`renderPlot()` was updated to accomodate changes in ggplot2 v4.0.0. (#4226),NA,NA,NA,NA
+thematic,4ba2cafc3fa1d493a7d8780aa5ece20c,Updates to accomodate new ggplot2 v4.0.0 release. (#156),NA,NA,NA,NA
