@@ -19360,3 +19360,6 @@ quarto,7c7085e6f02f4b55d37c46a213734ec9,"Make `quarto_render(as_job = TRUE)` wra
 quarto,4f19305ece8b85670a93445e8b1208f9,"Added a `new_blog_post()` function (thanks, @​topeto, #22).",NA,NA,NA,NA
 ggplot2,403fc3c6ca4586bde5a1914d30287eb3,The S3 parts of ggplot2 have been replaced with S7 bits (#6352).,NA,NA,NA,NA
 quarto,748d8bcc0f2d294757eb1d7f75fd7755,"Added debugging logic for quarto vignette engine to help diagnose issues with Quarto vignettes in **pkgdown** and other context (thanks, @​hadley, #185). Set `quarto.log.debug = TRUE` to enable debugging messages (or `R_QUARTO_LOG_DEBUG = TRUE` environment variable). Set `quarto.log.file` to change the file path to write to (or `R_QUARTO_LOG_FILE` environment variable). Default will be `./quarto-r-debug.log` Debug mode will be on automatically when debugging Github Actions workflows, or when Quarto CLI's environment variable `QUARTO_LOG_LEVEL` is set to `DEBUG`.",NA,NA,NA,NA
+keras,6336b49d7f0903706026b650ba34537c,"Added S3 methods for JAX array: `str`, `as.array`, `as.double`, `as.integer`, `as.numeric`.",NA,NA,NA,NA
+keras,2bb8cf717e594a3a9e6498b3188d60fe,Added `str` S3 method for Keras Variables.,NA,NA,NA,NA
+keras,825270086440abf366d86cb988787b7f,"Updated dependencies declared by `use_backend(""jax"", gpu=TRUE)` for compatability with `keras-hub`.",NA,NA,NA,NA
