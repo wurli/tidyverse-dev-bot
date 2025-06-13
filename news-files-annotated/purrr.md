@@ -4,9 +4,9 @@
 
 -   !begin-bullet!
     purrr gains the capacity for parallel and distributed map, powered
-    by the mirai package. The argument `.parallel` has been added to
-    `map()`, `map2()`, `pmap()` and variants to enable this. See
-    `?parallelization` for more details (@shikokuchuo, #1163).
+    by the mirai package. Newly-added `in_parallel()` wraps a function
+    provided to `map()` and all its variants to enable this. See
+    `?in_parallel` for more details (@shikokuchuo, #1163, #1185).
     !end-bullet!
 
 !end-bullets-1!

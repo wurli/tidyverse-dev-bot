@@ -12,6 +12,11 @@
 
     !end-bullet!
 -   !begin-bullet!
+    `layer_reshape()` can now accept `-1` as a sentinel for an
+    automatically calculated axis size.
+
+    !end-bullet!
+-   !begin-bullet!
     Updated dependencies declared by `use_backend("jax", gpu=TRUE)` for
     compatability with `keras-hub`.
 
