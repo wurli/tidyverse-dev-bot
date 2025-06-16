@@ -19,6 +19,12 @@
     resizes the text area to fit its content. (#4210)
 
     !end-bullet!
+-   !begin-bullet!
+    The family of `update*Input()` functions can now render HTML content
+    passed to the `label` argument (e.g.,
+    `updateInputText(label = tags$b("New label"))`). (#3996)
+
+    !end-bullet!
 
 !end-bullets-1!
 
@@ -101,6 +107,11 @@
 !begin-bullets-5!
 
 -   !begin-bullet!
+    `runExample("08_html")` now (correctly) requests to 'shiny.min.css',
+    eliminating a network request failure. (#4220)
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed a bug with modals where calling `removeModal()` too quickly
     after `showModal()` would fail to remove the modal if the remove
     modal message was received while the modal was in the process of
@@ -121,6 +132,11 @@
 -   !begin-bullet!
     Fixed an issue with `ExtendedTask` where synchronous errors would
     cause an error that would stop the current session. (#4225)
+
+    !end-bullet!
+-   !begin-bullet!
+    `shiny::shinyAppTemplate()` no longer errors without a call to
+    `library(shiny)`. (#3870)
 
     !end-bullet!
 

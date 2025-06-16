@@ -19367,3 +19367,6 @@ shiny,0cc5ef34945b4b7d2ce3f6a3f7c1235c,`renderPlot()` was updated to accomodate 
 thematic,4ba2cafc3fa1d493a7d8780aa5ece20c,Updates to accomodate new ggplot2 v4.0.0 release. (#156),NA,NA,NA,NA
 purrr,b565c18344eb3011421d6d68199c107a,"purrr gains the capacity for parallel and distributed map, powered by the mirai package. Newly-added `in_parallel()` wraps a function provided to `map()` and all its variants to enable this. See `?in_parallel` for more details (@​shikokuchuo, #1163, #1185).",NA,NA,NA,NA
 keras,ec1353b104c820d2d353f755f15149c6,`layer_reshape()` can now accept `-1` as a sentinel for an automatically calculated axis size.,NA,NA,NA,NA
+shiny,0cff53ac3b5bb703430493513751ca49,"The family of `update*Input()` functions can now render HTML content passed to the `label` argument (e.g., `updateInputText(label = tags$b(""New label""))`). (#3996)",NA,NA,NA,NA
+shiny,aa8c870f53d024098fed5b451fb75048,"`runExample(""08_html"")` now (correctly) requests to 'shiny.min.css', eliminating a network request failure. (#4220)",NA,NA,NA,NA
+shiny,fc0b213fb8b4121432238d6fc2d0954c,`shiny::shinyAppTemplate()` no longer errors without a call to `library(shiny)`. (#3870),NA,NA,NA,NA
