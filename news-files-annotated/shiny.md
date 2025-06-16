@@ -103,6 +103,10 @@
     Upgraded jQuery from 3.6.0 to 3.7.1. (#3969)
 
     !end-bullet!
+-   !begin-bullet!
+    Updated jQuery UI from 1.13.2 to 1.14.1. (#4175)
+
+    !end-bullet!
 
 !end-bullets-3!
 
