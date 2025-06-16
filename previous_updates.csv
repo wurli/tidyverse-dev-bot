@@ -19372,3 +19372,5 @@ shiny,aa8c870f53d024098fed5b451fb75048,"`runExample(""08_html"")` now (correctly
 shiny,fc0b213fb8b4121432238d6fc2d0954c,`shiny::shinyAppTemplate()` no longer errors without a call to `library(shiny)`. (#3870),NA,NA,NA,NA
 shiny,5edac3e1a0afb2834c44c18a4c76aef3,Upgraded jQuery from 3.6.0 to 3.7.1. (#3969),NA,NA,NA,NA
 shiny,1ecf0216f55f7d1bc94ea2a1504ae9cc,Updated jQuery UI from 1.13.2 to 1.14.1. (#4175),NA,NA,NA,NA
+httr2,84296968236cc9eeaa3de585260f8d34,`req_body_json_modify()` can now be used on a request with an empty body.,NA,NA,NA,NA
+httr2,98bc0b994c08fe4012d7a79c2789f970,"`resp_timing()` exposes timing information about the request measured by libcurl (@​arcresu, #725).",NA,NA,NA,NA
