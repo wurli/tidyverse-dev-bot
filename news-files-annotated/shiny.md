@@ -99,6 +99,10 @@
     (#4226)
 
     !end-bullet!
+-   !begin-bullet!
+    Upgraded jQuery from 3.6.0 to 3.7.1. (#3969)
+
+    !end-bullet!
 
 !end-bullets-3!
 

@@ -19370,3 +19370,4 @@ keras,ec1353b104c820d2d353f755f15149c6,`layer_reshape()` can now accept `-1` as 
 shiny,0cff53ac3b5bb703430493513751ca49,"The family of `update*Input()` functions can now render HTML content passed to the `label` argument (e.g., `updateInputText(label = tags$b(""New label""))`). (#3996)",NA,NA,NA,NA
 shiny,aa8c870f53d024098fed5b451fb75048,"`runExample(""08_html"")` now (correctly) requests to 'shiny.min.css', eliminating a network request failure. (#4220)",NA,NA,NA,NA
 shiny,fc0b213fb8b4121432238d6fc2d0954c,`shiny::shinyAppTemplate()` no longer errors without a call to `library(shiny)`. (#3870),NA,NA,NA,NA
+shiny,5edac3e1a0afb2834c44c18a4c76aef3,Upgraded jQuery from 3.6.0 to 3.7.1. (#3969),NA,NA,NA,NA
