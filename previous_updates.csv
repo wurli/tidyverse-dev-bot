@@ -19374,3 +19374,4 @@ shiny,5edac3e1a0afb2834c44c18a4c76aef3,Upgraded jQuery from 3.6.0 to 3.7.1. (#39
 shiny,1ecf0216f55f7d1bc94ea2a1504ae9cc,Updated jQuery UI from 1.13.2 to 1.14.1. (#4175),NA,NA,NA,NA
 httr2,84296968236cc9eeaa3de585260f8d34,`req_body_json_modify()` can now be used on a request with an empty body.,NA,NA,NA,NA
 httr2,98bc0b994c08fe4012d7a79c2789f970,"`resp_timing()` exposes timing information about the request measured by libcurl (@​arcresu, #725).",NA,NA,NA,NA
+rsconnect,b40108c6a5183b53bcfc4b0f6ded14a8,Address duplicate certificate errors on macOS with newer curl. (#1175),NA,NA,NA,NA
