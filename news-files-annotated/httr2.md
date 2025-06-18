@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    New `last_request_json()` and `last_response_json()` to conveniently
+    see JSON bodies (#734).
+    !end-bullet!
+-   !begin-bullet!
     `req_body_json_modify()` can now be used on a request with an empty
     body.
     !end-bullet!
