@@ -19377,3 +19377,4 @@ httr2,98bc0b994c08fe4012d7a79c2789f970,"`resp_timing()` exposes timing informati
 rsconnect,b40108c6a5183b53bcfc4b0f6ded14a8,Address duplicate certificate errors on macOS with newer curl. (#1175),NA,NA,NA,NA
 httr2,7a2222f3329d92b5e0e123d97b6ff7ad,New `last_request_json()` and `last_response_json()` to conveniently see JSON bodies (#734).,NA,NA,NA,NA
 httr2,9239019e2a11db8bb71b093723c6d37c,Functions that capture interrutps (like `req_perform_parallel()` and friends) are now easier to escape if they're called inside a loop: you can press Ctrl + C twice to guarantee an exit (#1810).,NA,NA,NA,NA
+tidyverse,a57a9e0b84940150420c67f3f24f0f37,tidyverse now requires R 4.1.0.,NA,NA,NA,NA
