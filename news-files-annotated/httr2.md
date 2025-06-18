@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Functions that capture interrutps (like `req_perform_parallel()` and
+    friends) are now easier to escape if they're called inside a loop:
+    you can press Ctrl + C twice to guarantee an exit (#1810).
+    !end-bullet!
+-   !begin-bullet!
     New `last_request_json()` and `last_response_json()` to conveniently
     see JSON bodies (#734).
     !end-bullet!
