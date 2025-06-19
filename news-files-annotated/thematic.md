@@ -1,5 +1,7 @@
 # thematic (development version)
 
+# thematic 0.1.7
+
 !begin-bullets-1!
 
 -   !begin-bullet!
