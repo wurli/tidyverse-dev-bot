@@ -25,6 +25,14 @@
     `updateInputText(label = tags$b("New label"))`). (#3996)
 
     !end-bullet!
+-   !begin-bullet!
+    The `callback` argument of Shiny.js' `InputBinding.subscribe()`
+    method gains support for a value of `"event"`. This makes it
+    possible for an input binding to use event priority when updating
+    the value (i.e., send immediately and always resend, even if the
+    value hasn't changed). (#4211)
+
+    !end-bullet!
 
 !end-bullets-1!
 
