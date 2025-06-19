@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    New `req_get_method()` and `req_get_body()` allow you to do some
+    limited prediction of what a request *will* do when it's performed
+    (#718).
+    !end-bullet!
+-   !begin-bullet!
     Functions that capture interrutps (like `req_perform_parallel()` and
     friends) are now easier to escape if they're called inside a loop:
     you can press Ctrl + C twice to guarantee an exit (#1810).

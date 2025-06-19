@@ -19378,3 +19378,4 @@ rsconnect,b40108c6a5183b53bcfc4b0f6ded14a8,Address duplicate certificate errors 
 httr2,7a2222f3329d92b5e0e123d97b6ff7ad,New `last_request_json()` and `last_response_json()` to conveniently see JSON bodies (#734).,NA,NA,NA,NA
 httr2,9239019e2a11db8bb71b093723c6d37c,Functions that capture interrutps (like `req_perform_parallel()` and friends) are now easier to escape if they're called inside a loop: you can press Ctrl + C twice to guarantee an exit (#1810).,NA,NA,NA,NA
 tidyverse,a57a9e0b84940150420c67f3f24f0f37,tidyverse now requires R 4.1.0.,NA,NA,NA,NA
+httr2,263e7ad7fe9f906e6a02635c8ff7732d,New `req_get_method()` and `req_get_body()` allow you to do some limited prediction of what a request *will* do when it's performed (#718).,NA,NA,NA,NA
