@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Redacted headers are no longer serialized to disk. This is important
+    since it makes it harder to accidentally leak secrets to files on
+    disk, but comes at a cost: you can longer perform such requests that
+    have been saved and reloaded (#721).
+    !end-bullet!
+-   !begin-bullet!
     New `req_get_method()` and `req_get_body()` allow you to do some
     limited prediction of what a request *will* do when it's performed
     (#718).
