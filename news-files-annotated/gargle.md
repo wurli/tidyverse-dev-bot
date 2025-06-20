@@ -1,8 +1,17 @@
 # gargle (development version)
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    Fixed a bug when displaying a request failure that includes a
+    localized message in the error details (#293).
+    !end-bullet!
+
+!end-bullets-1!
+
 # gargle 1.5.2
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     Fixed a bug in an internal helper that validates input specifying a
@@ -11,11 +20,11 @@
     service account (#270).
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # gargle 1.5.1
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     Completed some overlooked, unfinished work around the OAuth "app" to
@@ -27,11 +36,11 @@
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 # gargle 1.5.0
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     gargle's existing unexported `secret_*()` functions are deprecated,
@@ -40,7 +49,7 @@
     updated to reflect the new, recommended strategy for encrypting
     secrets.
 
-    !begin-bullets-4!
+    !begin-bullets-5!
     -   !begin-bullet!
         `secret_encrypt_json()` / `secret_decrypt_json()` are new
         gargle-specific functions.
@@ -61,7 +70,7 @@
         necessarily an R package.
         !end-bullet!
 
-    !end-bullets-4!
+    !end-bullets-5!
     !end-bullet!
 -   !begin-bullet!
     The transition from OAuth "app" to OAuth "client" is fully enacted
@@ -71,7 +80,7 @@
     some time. In this release, function, argument, and field names are
     all updated to the "client" terminology:
 
-    !begin-bullets-5!
+    !begin-bullets-6!
     -   !begin-bullet!
         `init_AuthState(client =)` instead of `init_AuthState(app =)`
         !end-bullet!
@@ -89,7 +98,7 @@
         `credentials_user_oauth2(app =)`
         !end-bullet!
 
-    !end-bullets-5!
+    !end-bullets-6!
     A new `vignette("oauth-client-not-app")` explains how a wrapper
     package should adapt.
 
@@ -122,13 +131,13 @@
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 # gargle 1.4.0
 
 ## Google Compute Engine
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     `credentials_gce(scopes = NULL)` is now equivalent to
@@ -167,11 +176,11 @@
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 ## Behaviour in a cloud/server context
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     gargle is better able to detect when it's running on Posit Workbench
@@ -197,11 +206,11 @@
 
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 ## Everything else
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     gargle now elicits user input via `readline()`, instead of via
@@ -215,7 +224,7 @@
     reflect gargle's pivot from OAuth "app" to "client". Changes of
     note:
 
-    !begin-bullets-9!
+    !begin-bullets-10!
     -   !begin-bullet!
         `PREFIX_auth_configure_description()` crosslinks to
         `PREFIX_oauth_client()` now, not `PREFIX_oauth_app()`. So this
@@ -238,7 +247,7 @@
         e.g. `gargle (>= 1.3.0)` (or higher).
         !end-bullet!
 
-    !end-bullets-9!
+    !end-bullets-10!
     !end-bullet!
 -   !begin-bullet!
     `credentials_byo_oauth2()` works now for (variations of) service
@@ -248,7 +257,7 @@
 
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 # gargle 1.3.0
 
@@ -264,7 +273,7 @@ just a temporary reprieve.
 
 The typical user who will (eventually) be impacted is:
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     Using R via RStudio Server, Posit Workbench, or Posit Cloud.
@@ -278,7 +287,7 @@ The typical user who will (eventually) be impacted is:
     associated with a GCP project that is in production mode.
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 The phased deprecation of OOB is nearly complete and we expect
 conventional OOB to stop working with the built-in tidyverse OAuth
@@ -302,7 +311,7 @@ Read the `vignette("auth-from-web")` for more.
 `gargle_oauth_client()` is a new constructor for an S3 class by the same
 name. There are two motivations:
 
-!begin-bullets-11!
+!begin-bullets-12!
 
 -   !begin-bullet!
     To adjust to Google's deprecation of conventional OOB and to support
@@ -318,7 +327,7 @@ name. There are two motivations:
     towards "client" and away from "app".
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-12!
 
 `oauth_app_from_json()` has therefore been (soft) deprecated, in favor
 of a new function `gargle_oauth_client_from_json()`, which is the
@@ -359,7 +368,7 @@ might actually want to suppress auth with the default service account
 and auth as a normal user instead. This is especially likely to come up
 with gmailr / the Gmail API.
 
-!begin-bullets-12!
+!begin-bullets-13!
 
 -   !begin-bullet!
     The credential-fetcher `credentials_byo_oauth2()` has been moved to
@@ -405,11 +414,11 @@ with gmailr / the Gmail API.
 
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
 
 # gargle 1.2.1
 
-!begin-bullets-13!
+!begin-bullets-14!
 
 -   !begin-bullet!
     Help files below `man/` have been re-generated, so that they give
@@ -435,11 +444,11 @@ with gmailr / the Gmail API.
 
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-14!
 
 ## Dependency changes
 
-!begin-bullets-14!
+!begin-bullets-15!
 
 -   !begin-bullet!
     The minimum versions of rlang and testthat have been bumped. The
@@ -447,7 +456,7 @@ with gmailr / the Gmail API.
     error messages.
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-15!
 
 # gargle 1.2.0
 
@@ -493,13 +502,13 @@ aws.ec2metadata and aws.signature are new in Suggests.
 
 Two changes affect stored user OAuth tokens:
 
-!begin-bullets-15!
+!begin-bullets-16!
 
 -   !begin-bullet!
     The default cache location has moved, to better align with general
     conventions around where to cache user data. Here's how that looks
     for a typical user:
-    !begin-bullets-16!
+    !begin-bullets-17!
     -   !begin-bullet!
         Typical before, macOS: `~/.R/gargle/gargle-oauth`
         !end-bullet!
@@ -514,14 +523,14 @@ Two changes affect stored user OAuth tokens:
         `C:/Users/jane/AppData/Local/gargle/gargle/Cache`
         !end-bullet!
 
-    !end-bullets-16!
+    !end-bullets-17!
     !end-bullet!
 -   !begin-bullet!
     Tokens created with one of the built-in OAuth apps provided by the
     tidyverse packages are checked for validity. Tokens made with an old
     app are deleted. Note that we introduced a new OAuth app in gargle
     v1.0.0 and the previous app could be disabled at any time.
-    !begin-bullets-17!
+    !begin-bullets-18!
     -   !begin-bullet!
         Nickname of previous tidyverse OAuth app: `tidyverse-calliope`
         !end-bullet!
@@ -530,10 +539,10 @@ Two changes affect stored user OAuth tokens:
         `tidyverse-clio`
         !end-bullet!
 
-    !end-bullets-17!
+    !end-bullets-18!
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-16!
 
 For users who accept all default behaviour around OAuth, these changes
 just mean you will see some messages about cleaning and moving the token
@@ -568,7 +577,7 @@ is still consulted, but the user is advised to update their usage.
 The new "gargle_verbosity" option is more expressive and has three
 levels:
 
-!begin-bullets-18!
+!begin-bullets-19!
 
 -   !begin-bullet!
     "debug", equivalent to the previous `gargle_quiet = FALSE`. Use for
@@ -585,7 +594,7 @@ levels:
     significance. But it can be used to suppress all gargle messages.
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-19!
 
 The helpers `with_gargle_verbosity()` and `local_gargle_verbosity()`
 make it easy to temporarily modify the verbosity level, in the spirit of
@@ -633,7 +642,7 @@ mockr is new in Suggests, since `testthat::use_mock()` is superseded.
 
 # gargle 1.0.0
 
-!begin-bullets-19!
+!begin-bullets-20!
 
 -   !begin-bullet!
     Better handling of `BadRequest` errors, i.e. more specifics are
@@ -660,11 +669,11 @@ mockr is new in Suggests, since `testthat::use_mock()` is superseded.
 
     !end-bullet!
 
-!end-bullets-19!
+!end-bullets-20!
 
 # gargle 0.5.0
 
-!begin-bullets-20!
+!begin-bullets-21!
 
 -   !begin-bullet!
     Troubleshooting gargle auth is a new vignette.
@@ -732,11 +741,11 @@ mockr is new in Suggests, since `testthat::use_mock()` is superseded.
 
     !end-bullet!
 
-!end-bullets-20!
+!end-bullets-21!
 
 # gargle 0.4.0
 
-!begin-bullets-21!
+!begin-bullets-22!
 
 -   !begin-bullet!
     Eliminated uninformative failure when OAuth tokens cached on R \<=
@@ -776,11 +785,11 @@ mockr is new in Suggests, since `testthat::use_mock()` is superseded.
 
     !end-bullet!
 
-!end-bullets-21!
+!end-bullets-22!
 
 # gargle 0.3.1
 
-!begin-bullets-22!
+!begin-bullets-23!
 
 -   !begin-bullet!
     Non-interactive auth is a new vignette that serves as a guide for
@@ -807,11 +816,11 @@ mockr is new in Suggests, since `testthat::use_mock()` is superseded.
 
     !end-bullet!
 
-!end-bullets-22!
+!end-bullets-23!
 
 # gargle 0.3.0
 
-!begin-bullets-23!
+!begin-bullets-24!
 
 -   !begin-bullet!
     The unexported functions available for generating standardized docs
@@ -836,11 +845,11 @@ mockr is new in Suggests, since `testthat::use_mock()` is superseded.
 
     !end-bullet!
 
-!end-bullets-23!
+!end-bullets-24!
 
 # gargle 0.2.0
 
-!begin-bullets-24!
+!begin-bullets-25!
 
 -   !begin-bullet!
     All built-in API credentials have been rotated and are stored
@@ -864,14 +873,14 @@ mockr is new in Suggests, since `testthat::use_mock()` is superseded.
 
     !end-bullet!
 
-!end-bullets-24!
+!end-bullets-25!
 
 # gargle 0.1.3
 
-!begin-bullets-25!
+!begin-bullets-26!
 
 -   !begin-bullet!
     Initial CRAN release
     !end-bullet!
 
-!end-bullets-25!
+!end-bullets-26!
