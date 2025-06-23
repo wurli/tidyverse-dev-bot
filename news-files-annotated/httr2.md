@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    URL construction is now powered by `curl::curl_modify_url()`, and
+    hence now (correctly) escapes the `path` component (#732). This
+    means that `req_url_path()` now can only affect the path component
+    of the URL, not the query params or fragment.
+    !end-bullet!
+-   !begin-bullet!
     Redacted headers are no longer serialized to disk. This is important
     since it makes it harder to accidentally leak secrets to files on
     disk, but comes at a cost: you can longer perform such requests that
