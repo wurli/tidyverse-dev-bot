@@ -3,6 +3,9 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `new_response()` is now exported (#751).
+    !end-bullet!
+-   !begin-bullet!
     URL construction is now powered by `curl::curl_modify_url()`, and
     hence now (correctly) escapes the `path` component (#732). This
     means that `req_url_path()` now can only affect the path component

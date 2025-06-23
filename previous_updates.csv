@@ -19385,3 +19385,4 @@ gargle,a30e796923f63856a732b1f827f10bbc,Fixed a bug when displaying a request fa
 rsconnect,6fa205d916bcc27abb638135347dccab,Functions for interacting with Posit Connect deployments in Snowpark Container Services are now provided by the snowflakeauth package.,NA,NA,NA,NA
 tibble,23c2515ef28d50dc2c6d55a71d850fa9,"Cynkra's Spring Cleaning (@​Layalchristine24, #1643, #1644).",NA,NA,NA,NA
 httr2,b30e79478b49ca1a25d3b1a79405475a,"URL construction is now powered by `curl::curl_modify_url()`, and hence now (correctly) escapes the `path` component (#732). This means that `req_url_path()` now can only affect the path component of the URL, not the query params or fragment.",NA,NA,NA,NA
+httr2,6e189f0d443aa3f2adf842cf7b8bf7fc,`new_response()` is now exported (#751).,NA,NA,NA,NA
