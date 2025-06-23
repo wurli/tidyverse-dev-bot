@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `req_perform_iterative()`, `req_perform_sequential()`,
+    `req_perform_parallel()`, and `req_perform_promise()` now support
+    mocking (#651).
+    !end-bullet!
+-   !begin-bullet!
     `new_response()` is now exported (#751).
     !end-bullet!
 -   !begin-bullet!
