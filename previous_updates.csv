@@ -19393,3 +19393,5 @@ httr2,84b6daea73452189768b8cedb3cc7fdd,`req_perform_stream()` has been soft depr
 httr2,36022103f49cd78e68c9a7059bda50fe,"Deprecated functions `mutli_req_perform()`, `req_stream()`, `with_mock()` and `local_mock()` hav been removed. Deprecated arguments `req_perform_parallel(pool)` and `req_oauth_auth_code(host_name, host_ip, port)`/ `oauth_flow_auth_code(host_name, host_ip, port)` have been removed.",NA,NA,NA,NA
 httr2,18082bde7d95d9ea1e0e78ea3683cca5,"`req_body_json()` and `req_body_form()` correctly unobfuscated inputs, as documented (#754).",NA,NA,NA,NA
 httr2,5a302ca8bf50e5ea56f7551226d7d1d7,`req_perform_parallel()` handles `progress` argument consistently with other functions (#726).,NA,NA,NA,NA
+lintr,2dc2883f2b0d48ca474005ce60920f91,"`brace_linter()` requires `test_that()`'s `code=` argument to have curly braces (#2292, @​MichaelChirico).",NA,NA,NA,NA
+lintr,a487433176cab552e6b48f2b2f93cec0,"`fixed_regex_linter()` recognizes usage of the new (R 4.5.0) `grepv()` wrapper of `grep()`; `regex_subset_linter()` also recommends `grepv()` alternatives (#2855, @​MichaelChirico).",NA,NA,NA,NA
