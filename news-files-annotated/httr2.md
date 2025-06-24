@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `req_perform_parallel()` handles `progress` argument consistently
+    with other functions (#726).
+    !end-bullet!
+-   !begin-bullet!
     `req_error()` errors with long bodies are now correctly wrapped
     (#727).
     !end-bullet!
