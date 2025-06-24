@@ -19388,3 +19388,7 @@ httr2,b30e79478b49ca1a25d3b1a79405475a,"URL construction is now powered by `curl
 httr2,6e189f0d443aa3f2adf842cf7b8bf7fc,`new_response()` is now exported (#751).,NA,NA,NA,NA
 httr2,017d3bedd3748a807b88be0fd4c21919,"`req_perform_iterative()`, `req_perform_sequential()`, `req_perform_parallel()`, and `req_perform_promise()` now support mocking (#651).",NA,NA,NA,NA
 quarto,759d420df487ae74adab6953e2032cbb,"Added `write_yaml_metadata_block()` function to dynamically set YAML metadata in Quarto documents from R code chunks. This addresses the limitation where Quarto metadata must be static and defined in the document header. The function enables conditional content and metadata-driven document behavior based on R computations (thanks, @​kmasiello, #137, #160).",NA,NA,NA,NA
+httr2,cf12f5d651a29c33959832f513dc38cc,`req_error()` errors with long bodies are now correctly wrapped (#727).,NA,NA,NA,NA
+httr2,84b6daea73452189768b8cedb3cc7fdd,`req_perform_stream()` has been soft deprecated.,NA,NA,NA,NA
+httr2,36022103f49cd78e68c9a7059bda50fe,"Deprecated functions `mutli_req_perform()`, `req_stream()`, `with_mock()` and `local_mock()` hav been removed. Deprecated arguments `req_perform_parallel(pool)` and `req_oauth_auth_code(host_name, host_ip, port)`/ `oauth_flow_auth_code(host_name, host_ip, port)` have been removed.",NA,NA,NA,NA
+httr2,18082bde7d95d9ea1e0e78ea3683cca5,"`req_body_json()` and `req_body_form()` correctly unobfuscated inputs, as documented (#754).",NA,NA,NA,NA

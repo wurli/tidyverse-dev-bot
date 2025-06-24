@@ -3,6 +3,24 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `req_error()` errors with long bodies are now correctly wrapped
+    (#727).
+    !end-bullet!
+-   !begin-bullet!
+    `req_perform_stream()` has been soft deprecated.
+    !end-bullet!
+-   !begin-bullet!
+    Deprecated functions `mutli_req_perform()`, `req_stream()`,
+    `with_mock()` and `local_mock()` hav been removed. Deprecated
+    arguments `req_perform_parallel(pool)` and
+    `req_oauth_auth_code(host_name, host_ip, port)`/
+    `oauth_flow_auth_code(host_name, host_ip, port)` have been removed.
+    !end-bullet!
+-   !begin-bullet!
+    `req_body_json()` and `req_body_form()` correctly unobfuscated
+    inputs, as documented (#754).
+    !end-bullet!
+-   !begin-bullet!
     `req_perform_iterative()`, `req_perform_sequential()`,
     `req_perform_parallel()`, and `req_perform_promise()` now support
     mocking (#651).
