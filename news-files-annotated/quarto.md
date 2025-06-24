@@ -3,6 +3,15 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Added `write_yaml_metadata_block()` function to dynamically set YAML
+    metadata in Quarto documents from R code chunks. This addresses the
+    limitation where Quarto metadata must be static and defined in the
+    document header. The function enables conditional content and
+    metadata-driven document behavior based on R computations (thanks,
+    @kmasiello, #137, #160).
+
+    !end-bullet!
+-   !begin-bullet!
     Added debugging logic for quarto vignette engine to help diagnose
     issues with Quarto vignettes in **pkgdown** and other context
     (thanks, @hadley, #185). Set `quarto.log.debug = TRUE` to enable
