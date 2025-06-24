@@ -45,9 +45,9 @@
     have been saved and reloaded (#721).
     !end-bullet!
 -   !begin-bullet!
-    New `req_get_method()` and `req_get_body()` allow you to do some
-    limited prediction of what a request *will* do when it's performed
-    (#718).
+    New `req_get_method()`, `req_get_headers()`, `req_get_body()` allow
+    you to do some limited prediction of what a request *will* do when
+    it's performed (#718).
     !end-bullet!
 -   !begin-bullet!
     Functions that capture interrutps (like `req_perform_parallel()` and
