@@ -1,8 +1,60 @@
-# shiny (development version)
+# shiny 1.11.0
+
+## Improvements
+
+!begin-bullets-1!
+
+-   !begin-bullet!
+    When auto-reload is enabled, Shiny now reloads the entire app when
+    support files, like Shiny modules, additional script files, or web
+    assets, change. To enable auto-reload, call `devmode(TRUE)` to
+    enable Shiny's developer mode, or set
+    `options(shiny.autoreload = TRUE)` to specifically enable
+    auto-reload. You can choose which files are watched for changes with
+    the `shiny.autoreload.pattern` option. (#4184)
+
+    !end-bullet!
+-   !begin-bullet!
+    When busy indicators are enabled (i.e., `useBusyIndicators()`),
+    Shiny now:
+
+    !begin-bullets-2!
+    -   !begin-bullet!
+        Shows a spinner on recalculating htmlwidgets that have
+        previously rendered an error (including `req()` and
+        `validate()`). (#4172)
+        !end-bullet!
+    -   !begin-bullet!
+        Shows a spinner on `tableOutput()`. (#4172)
+        !end-bullet!
+    -   !begin-bullet!
+        Places a minimum height on recalculating outputs so that the
+        spinner is always visible. (#4172)
+        !end-bullet!
+
+    !end-bullets-2!
+    !end-bullet!
+-   !begin-bullet!
+    Shiny now uses `{cli}` instead of `{crayon}` for rich log messages.
+    (thanks @olivroy, #4170)
+
+    !end-bullet!
+-   !begin-bullet!
+    `renderPlot()` was updated to accommodate changes in ggplot2 v4.0.0.
+    (#4226)
+
+    !end-bullet!
+-   !begin-bullet!
+    When adding the new tab via `insertTab()` or `bslib::nav_insert()`,
+    the underlying JavaScript no longer renders content twice. (#4179)
+
+    !end-bullet!
+
+!end-bullets-1!
 
 ## New features
 
-!begin-bullets-1!
+!begin-bullets-3!
 
 -   !begin-bullet!
     `textInput()`, `textAreaInput()`, `numericInput()` and
@@ -26,75 +78,6 @@
 
     !end-bullet!
 -   !begin-bullet!
-    The `callback` argument of Shiny.js' `InputBinding.subscribe()`
-    method gains support for a value of `"event"`. This makes it
-    possible for an input binding to use event priority when updating
-    the value (i.e., send immediately and always resend, even if the
-    value hasn't changed). (#4211)
-
-    !end-bullet!
-
-!end-bullets-1!
-
-## Changes
-
-!begin-bullets-2!
-
--   !begin-bullet!
-    Shiny no longer suspends input changes when *any*
-    `<input type="submit">` or `<button type="submit">` is on the page.
-    Instead, it now only suspends when a `submitButton()` is present. If
-    you have reason for creating a submit button from custom HTML, add a
-    CSS class of `shiny-submit-button` to the button. (#4209)
-    !end-bullet!
-
-!end-bullets-2!
-
-## Improvements
-
-!begin-bullets-3!
-
--   !begin-bullet!
-    When auto-reload is enabled, Shiny now reloads the entire app when
-    support files, like Shiny modules, additional script files, or web
-    assets, change. To enable auto-reload, call `devmode(TRUE)` to
-    enable Shiny's developer mode, or set
-    `options(shiny.autoreload = TRUE)` to specifically enable
-    auto-reload. You can choose which files are watched for changes with
-    the `shiny.autoreload.pattern` option. (#4184)
-
-    !end-bullet!
--   !begin-bullet!
-    When busy indicators are enabled (i.e., `useBusyIndicators()`),
-    Shiny now:
-
-    !begin-bullets-4!
-    -   !begin-bullet!
-        Shows a spinner on recalculating htmlwidgets that have
-        previously rendered an error (including `req()` and
-        `validate()`). (#4172)
-        !end-bullet!
-    -   !begin-bullet!
-        Shows a spinner on `tableOutput()`. (#4172)
-        !end-bullet!
-    -   !begin-bullet!
-        Places a minimum height on recalculating outputs so that the
-        spinner is always visible. (#4172)
-        !end-bullet!
-
-    !end-bullets-4!
-    !end-bullet!
--   !begin-bullet!
-    Shiny now uses `{cli}` instead of `{crayon}` for rich log messages.
-    (@olivroy #4170)
-
-    !end-bullet!
--   !begin-bullet!
-    Shiny's Typescript assets are now compiled to ES2021 instead of ES5.
-    (#4066)
-
-    !end-bullet!
--   !begin-bullet!
     `ExtendedTask` now catches synchronous values and errors and returns
     them via `$result()`. Previously, the extended task function was
     required to always return a promise. This change makes it easier to
@@ -103,8 +86,31 @@
 
     !end-bullet!
 -   !begin-bullet!
-    `renderPlot()` was updated to accomodate changes in ggplot2 v4.0.0.
-    (#4226)
+    The `callback` argument of Shiny.js' `InputBinding.subscribe()`
+    method gains support for a value of `"event"`. This makes it
+    possible for an input binding to use event priority when updating
+    the value (i.e., send immediately and always resend, even if the
+    value hasn't changed). (#4211)
+
+    !end-bullet!
+
+!end-bullets-3!
+
+## Changes
+
+!begin-bullets-4!
+
+-   !begin-bullet!
+    Shiny no longer suspends input changes when *any*
+    `<input type="submit">` or `<button type="submit">` is on the page.
+    Instead, it now only suspends when a `submitButton()` is present. If
+    you have reason for creating a submit button from custom HTML, add a
+    CSS class of `shiny-submit-button` to the button. (#4209)
+
+    !end-bullet!
+-   !begin-bullet!
+    Shiny's JavaScript assets are now compiled to ES2021 instead of ES5.
+    (#4066)
 
     !end-bullet!
 -   !begin-bullet!
@@ -116,38 +122,32 @@
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 ## Bug fixes
 
 !begin-bullets-5!
 
 -   !begin-bullet!
-    `runExample("08_html")` now (correctly) requests to 'shiny.min.css',
-    eliminating a network request failure. (#4220)
-
-    !end-bullet!
--   !begin-bullet!
-    Fixed a bug with modals where calling `removeModal()` too quickly
-    after `showModal()` would fail to remove the modal if the remove
-    modal message was received while the modal was in the process of
-    being revealed. (#4173)
-
-    !end-bullet!
--   !begin-bullet!
     The Shiny Client Console (enabled with `shiny::devmode()`) no longer
     displays duplicate warning or error message. (#4177)
 
     !end-bullet!
 -   !begin-bullet!
-    Updated the JavaScript used when inserting a tab to avoid rendering
-    dynamic UI elements twice when adding the new tab via `insertTab()`
-    or `bslib::nav_insert()`. (#4179)
+    Synchronous errors that occur inside a `ExtendedTask` no longer stop
+    the session. (#4225)
 
     !end-bullet!
 -   !begin-bullet!
-    Fixed an issue with `ExtendedTask` where synchronous errors would
-    cause an error that would stop the current session. (#4225)
+    Calling `removeModal()` immediately after `showModal()` no longer
+    fails to remove the modal (this would sometimes happen if the remove
+    message was received while the modal was in the process of being
+    revealed). (#4173)
+
+    !end-bullet!
+-   !begin-bullet!
+    `runExample("08_html")` now (correctly) requests to 'shiny.min.css',
+    eliminating a network request failure. (#4220)
 
     !end-bullet!
 -   !begin-bullet!

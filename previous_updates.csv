@@ -19397,3 +19397,8 @@ lintr,2dc2883f2b0d48ca474005ce60920f91,"`brace_linter()` requires `test_that()`'
 lintr,a487433176cab552e6b48f2b2f93cec0,"`fixed_regex_linter()` recognizes usage of the new (R 4.5.0) `grepv()` wrapper of `grep()`; `regex_subset_linter()` also recommends `grepv()` alternatives (#2855, @​MichaelChirico).",NA,NA,NA,NA
 httr2,3a1d016e761190a551bbcf96273f6305,"New `req_get_method()`, `req_get_headers()`, `req_body_get_type()`, `req_get_body()` allow you to introspect a request object (#718).",NA,NA,NA,NA
 lintr,6a1ef17b80ea150be993f536d561cddd,"New `gitlab_output()` function to output lints to GitLab format (#2858, @​lschneiderbauer)",NA,NA,NA,NA
+shiny,82652e019a820935ce59736fd012a93e,"Shiny now uses `{cli}` instead of `{crayon}` for rich log messages. (thanks @​olivroy, #4170)",NA,NA,NA,NA
+shiny,efe93ab1a787285cb4e0059e6fcbe20b,"When adding the new tab via `insertTab()` or `bslib::nav_insert()`, the underlying JavaScript no longer renders content twice. (#4179)",NA,NA,NA,NA
+shiny,fd473b15a313936bc23c63d57c037987,Shiny's JavaScript assets are now compiled to ES2021 instead of ES5. (#4066),NA,NA,NA,NA
+shiny,eec379a19038d58b75d00a12ac4fd0a5,Synchronous errors that occur inside a `ExtendedTask` no longer stop the session. (#4225),NA,NA,NA,NA
+shiny,7a6ebff8ef619d721a2ea5c13dbd2fd1,Calling `removeModal()` immediately after `showModal()` no longer fails to remove the modal (this would sometimes happen if the remove message was received while the modal was in the process of being revealed). (#4173),NA,NA,NA,NA
