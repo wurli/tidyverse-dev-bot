@@ -175,6 +175,10 @@
     `uniqueN(col) == .N` (#2482, @MichaelChirico).
     !end-bullet!
 -   !begin-bullet!
+    New `gitlab_output()` function to output lints to GitLab format
+    (#2858, @lschneiderbauer)
+    !end-bullet!
+-   !begin-bullet!
     `brace_linter()` requires `test_that()`'s `code=` argument to have
     curly braces (#2292, @MichaelChirico).
     !end-bullet!
