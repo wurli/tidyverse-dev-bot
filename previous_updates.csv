@@ -19405,3 +19405,7 @@ shiny,7a6ebff8ef619d721a2ea5c13dbd2fd1,Calling `removeModal()` immediately after
 httr2,923a8e6e241e1effb52742c1626f1d3a,"`req_oauth_device()` gains an `open_browser` argument that lets you take control of whether a browser is opened or the URL is printed (@​plietar, #763)",NA,NA,NA,NA
 promises,883ed1ce18426bfc04d6d03d13b1a01c,"Fixed #47: `promise_map()` can now properly handle `NULL` values being returned. (Thank you, @​RLesur! #138)",NA,NA,NA,NA
 shiny,a78d10cb67f6e5cf992fa7156a3e10c1,Fixed a regression in v1.11.0 where `InputBinding`'s that didn't pass a value to their `subscribe` callback where to no longer working. (#4243),NA,NA,NA,NA
+shiny,45b3b43e3de80eb82986d25b78b915fa,"The `icon` argument of `actionButton()`, `downloadButton()`, etc. now accepts values other than `shiny::icon()` (like `fontawesome::fa()` and `bsicons::bs_icon()`). (#4242)",NA,NA,NA,NA
+shiny,d8bf19e61809b04489c7a4b9f6851d09,Padding is now provided between the `icon` and `label` of an `actionButton()`. (#4242) \## Bug fixes,NA,NA,NA,NA
+shiny,b04a38b47eb685804334f26aec8f2d25,Fixed a regression in v1.11.0 where `InputBinding` implementations that don't pass a value to their `subscribe` callback were no longer notifying Shiny of input changes. (#4243),NA,NA,NA,NA
+shiny,9042b899f89971bbbb4f65d123754f13,`updateActionButton()` and `updateActionLink()` once again handle `label` updates correctly (which can now include HTML). (#4242),NA,NA,NA,NA
