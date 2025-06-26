@@ -1,8 +1,17 @@
 # promises (development version)
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    Fixed #47: `promise_map()` can now properly handle `NULL` values
+    being returned. (Thank you, @RLesur! #138)
+    !end-bullet!
+
+!end-bullets-1!
+
 # promises 1.3.3
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     Changed the way we create future objects to stay compatible with new
@@ -17,11 +26,11 @@
 
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # promises 1.3.2
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     Fixed bug introduced in 1.3.1, where promise domains that are active
@@ -31,32 +40,32 @@
     promise domains. (#115)
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 # promises 1.3.1
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     Fixed bug where promise domains were forgotten when handlers were
     registered from within other handlers. (#110)
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 # promises 1.3.0
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     `is.promising` is now an S3 method. (#104)
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 # promises 1.2.1
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     `future_promise()` received a speed improvement when submitting many
@@ -81,11 +90,11 @@
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # promises 1.2.0.1
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     Added `future_promise()` which returns a `promise` that executes the
@@ -106,22 +115,22 @@
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 # promises 1.1.1
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     Fix handling of FutureErrors during `future::resolved()` and
     `future::value()` by discarding the corrupt future. (#37)
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 # promises 1.1.0
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     Fixed #49: `promise_all()` previously did not handle `NULL` values
@@ -141,14 +150,14 @@
 
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 # promises 1.0.1
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     Initial CRAN release
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!

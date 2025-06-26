@@ -19402,3 +19402,5 @@ shiny,efe93ab1a787285cb4e0059e6fcbe20b,"When adding the new tab via `insertTab()
 shiny,fd473b15a313936bc23c63d57c037987,Shiny's JavaScript assets are now compiled to ES2021 instead of ES5. (#4066),NA,NA,NA,NA
 shiny,eec379a19038d58b75d00a12ac4fd0a5,Synchronous errors that occur inside a `ExtendedTask` no longer stop the session. (#4225),NA,NA,NA,NA
 shiny,7a6ebff8ef619d721a2ea5c13dbd2fd1,Calling `removeModal()` immediately after `showModal()` no longer fails to remove the modal (this would sometimes happen if the remove message was received while the modal was in the process of being revealed). (#4173),NA,NA,NA,NA
+httr2,923a8e6e241e1effb52742c1626f1d3a,"`req_oauth_device()` gains an `open_browser` argument that lets you take control of whether a browser is opened or the URL is printed (@​plietar, #763)",NA,NA,NA,NA
+promises,883ed1ce18426bfc04d6d03d13b1a01c,"Fixed #47: `promise_map()` can now properly handle `NULL` values being returned. (Thank you, @​RLesur! #138)",NA,NA,NA,NA

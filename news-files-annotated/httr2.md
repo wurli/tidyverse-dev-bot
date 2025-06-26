@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `req_oauth_device()` gains an `open_browser` argument that lets you
+    take control of whether a browser is opened or the URL is printed
+    (@plietar, #763)
+    !end-bullet!
+-   !begin-bullet!
     `req_perform_parallel()` handles `progress` argument consistently
     with other functions (#726).
     !end-bullet!
