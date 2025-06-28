@@ -261,6 +261,11 @@
     `implicit_assignment_linter()` (#2765, @MichaelChirico).
     !end-bullet!
 -   !begin-bullet!
+    `expect_true_false_linter()` is pipe-aware, so that
+    `42 |> expect_identical(x, ignore_attr = TRUE)` no longer lints
+    (#1520, @MichaelChirico).
+    !end-bullet!
+-   !begin-bullet!
     `T_and_F_symbol_linter()` ignores `T` and `F` used as symbols in
     formulas (`y ~ T + F`), which can represent variables in data not
     controlled by the author (#2637, @MichaelChirico).

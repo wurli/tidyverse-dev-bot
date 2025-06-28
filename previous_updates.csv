@@ -19409,3 +19409,4 @@ shiny,45b3b43e3de80eb82986d25b78b915fa,"The `icon` argument of `actionButton()`,
 shiny,d8bf19e61809b04489c7a4b9f6851d09,Padding is now provided between the `icon` and `label` of an `actionButton()`. (#4242) \## Bug fixes,NA,NA,NA,NA
 shiny,b04a38b47eb685804334f26aec8f2d25,Fixed a regression in v1.11.0 where `InputBinding` implementations that don't pass a value to their `subscribe` callback were no longer notifying Shiny of input changes. (#4243),NA,NA,NA,NA
 shiny,9042b899f89971bbbb4f65d123754f13,`updateActionButton()` and `updateActionLink()` once again handle `label` updates correctly (which can now include HTML). (#4242),NA,NA,NA,NA
+lintr,aaa5c398a246e66df1ca0dad79512e38,"`expect_true_false_linter()` is pipe-aware, so that `42 |> expect_identical(x, ignore_attr = TRUE)` no longer lints (#1520, @​MichaelChirico).",NA,NA,NA,NA
