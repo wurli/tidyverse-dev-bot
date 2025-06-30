@@ -3,6 +3,9 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Requires R \>= 4.1.
+    !end-bullet!
+-   !begin-bullet!
     purrr gains the capacity for parallel and distributed map, powered
     by the mirai package. Newly-added `in_parallel()` wraps a function
     provided to `map()` and all its variants to enable this. See

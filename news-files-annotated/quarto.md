@@ -3,6 +3,17 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Added `check_newer_version()` function to check if a newer version
+    of Quarto is available. The function compares the current Quarto
+    version against the latest stable and prerelease versions. It is
+    aimed for verbosity by default (`verbose = TRUE`), but
+    `verbose = FALSE` can also be set for just checking update
+    availability with TRUE or FALSE return values. Version information
+    is cached per session for up to 24 hours to minimize network
+    requests.
+
+    !end-bullet!
+-   !begin-bullet!
     Added `write_yaml_metadata_block()` function to dynamically set YAML
     metadata in Quarto documents from R code chunks. This addresses the
     limitation where Quarto metadata must be static and defined in the
