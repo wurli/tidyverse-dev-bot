@@ -3,13 +3,15 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
-    Requires R \>= 4.1.
+    purrr now requires R \>= 4.1, so we can rely on the base pipe and
+    lambda syntax (#1177).
+
     !end-bullet!
 -   !begin-bullet!
-    purrr gains the capacity for parallel and distributed map, powered
-    by the mirai package. Newly-added `in_parallel()` wraps a function
-    provided to `map()` and all its variants to enable this. See
-    `?in_parallel` for more details (@shikokuchuo, #1163, #1185).
+    purrr gains `in_parallel()` to support parallel and distributed
+    maps, powered by {mirai}. See `?in_parallel` for more details
+    (@shikokuchuo, #1163, #1185).
+
     !end-bullet!
 
 !end-bullets-1!

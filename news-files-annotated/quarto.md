@@ -3,6 +3,17 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `quarto_render(output_file = )` now sets the `output-file` Quarto
+    metadata instead of the `--output` CLI flag. This allows the output
+    file information to correctly be processed by Quarto, as if passed
+    in a YAML header. e.g. it allows to support multiple output formats
+    in the same render call.
+    `quarto_render(quarto_args = c('--output', 'dummy.html'))` can still
+    be used to set the `--output` CLI flag to enforce using the CLI flag
+    and not the metadata processed by Quarto (#251, #43).
+
+    !end-bullet!
+-   !begin-bullet!
     Added `check_newer_version()` function to check if a newer version
     of Quarto is available. The function compares the current Quarto
     version against the latest stable and prerelease versions. It is
