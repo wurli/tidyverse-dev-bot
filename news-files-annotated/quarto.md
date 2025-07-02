@@ -3,6 +3,15 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `quarto_create_project()` gains a `title` argument to set the
+    project title independently from the directory name. This allows
+    creating projects with custom titles, including when using
+    `name = "."` to create a project in the current directory (thanks,
+    @davidkane9, #148). This matches with `--title` addition for
+    `quarto create project` in Quarto CLI v1.5.15.
+
+    !end-bullet!
+-   !begin-bullet!
     `quarto_render(output_file = )` now sets the `output-file` Quarto
     metadata instead of the `--output` CLI flag. This allows the output
     file information to correctly be processed by Quarto, as if passed
