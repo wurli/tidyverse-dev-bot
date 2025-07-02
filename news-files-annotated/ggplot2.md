@@ -57,6 +57,11 @@
     `update_ggplot()` (previously `ggplot_add.Layer()`). This may affect
     code that accessed the `plot$labels` property (@teunbrand, #5894).
     !end-bullet!
+-   !begin-bullet!
+    In binning stats, the default `boundary` is now chosen to better
+    adhere to the `nbin` argument. This may affect plots that use
+    default binning (@teunbrand, #5882, #5036)
+    !end-bullet!
 
 !end-bullets-1!
 
@@ -503,10 +508,6 @@
     All binning stats now use the `boundary`/`center` parametrisation
     rather than `origin`, following in `stat_bin()`'s footsteps
     (@teunbrand).
-    !end-bullet!
--   !begin-bullet!
-    In `stat_bin()`, the default `boundary` is now chosen to better
-    adhere to the `nbin` argument (@teunbrand, #5882, #5036)
     !end-bullet!
 -   !begin-bullet!
     Reintroduced `drop` argument to `stat_bin()` (@teunbrand, #3449)
