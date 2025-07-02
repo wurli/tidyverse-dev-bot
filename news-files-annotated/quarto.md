@@ -12,6 +12,16 @@
 
     !end-bullet!
 -   !begin-bullet!
+    `quarto_use_template()` now supports using templates in another
+    empty directory via the `dir` argument. However, the function will
+    fail with a clear error message when used in non-empty directories,
+    as interactive prompting is required and handled by Quarto CLI
+    directly (requires Quarto 1.5.15+). Follow for
+    quarto-dev/quarto-cli#11127 for change with `--no-prompt` behavior
+    in future Quarto versions.
+
+    !end-bullet!
+-   !begin-bullet!
     `quarto_render(output_file = )` now sets the `output-file` Quarto
     metadata instead of the `--output` CLI flag. This allows the output
     file information to correctly be processed by Quarto, as if passed
