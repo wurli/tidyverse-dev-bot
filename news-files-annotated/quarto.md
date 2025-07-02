@@ -3,6 +3,14 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Added `add_spin_preamble()` function to add YAML preambles to R
+    scripts for use with Quarto Script rendering support. The function
+    automatically detects existing preambles and provides flexible
+    customization options through `title` and `preamble` parameters
+    (#164).
+
+    !end-bullet!
+-   !begin-bullet!
     `quarto_create_project()` gains a `title` argument to set the
     project title independently from the directory name. This allows
     creating projects with custom titles, including when using
