@@ -3,6 +3,13 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `req_perform_iterative()`, `req_perform_sequential()`,
+    `req_perform_parallel()`, `req_perform_promise()`,
+    `req_perform_connection()` now support mocking (#651). To mock a
+    streaming connection, create a response with a body that's a
+    `StreamingBody` instance.
+    !end-bullet!
+-   !begin-bullet!
     `req_oauth_device()` gains an `open_browser` argument that lets you
     take control of whether a browser is opened or the URL is printed
     (@plietar, #763)
