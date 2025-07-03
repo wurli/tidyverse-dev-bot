@@ -1,93 +1,124 @@
 # httr2 (development version)
 
+## Lifecycle changes
+
 !begin-bullets-1!
 
 -   !begin-bullet!
-    `req_perform_iterative()`, `req_perform_sequential()`,
-    `req_perform_parallel()`, `req_perform_promise()`,
-    `req_perform_connection()` now support mocking (#651). To mock a
-    streaming connection, create a response with a body that's a
-    `StreamingBody` instance.
-    !end-bullet!
--   !begin-bullet!
-    `req_oauth_device()` gains an `open_browser` argument that lets you
-    take control of whether a browser is opened or the URL is printed
-    (@plietar, #763)
-    !end-bullet!
--   !begin-bullet!
-    `req_perform_parallel()` handles `progress` argument consistently
-    with other functions (#726).
-    !end-bullet!
--   !begin-bullet!
-    `req_error()` errors with long bodies are now correctly wrapped
-    (#727).
-    !end-bullet!
--   !begin-bullet!
-    `req_perform_stream()` has been soft deprecated.
+    `req_perform_stream()` has been soft deprecated in favour of
+    `req_perform_connection()`.
+
     !end-bullet!
 -   !begin-bullet!
     Deprecated functions `mutli_req_perform()`, `req_stream()`,
-    `with_mock()` and `local_mock()` hav been removed. Deprecated
-    arguments `req_perform_parallel(pool)` and
-    `req_oauth_auth_code(host_name, host_ip, port)`/
+    `with_mock()` and `local_mock()` have been removed.
+
+    !end-bullet!
+-   !begin-bullet!
+    Deprecated arguments `req_perform_parallel(pool)`,
+    `req_oauth_auth_code(host_name, host_ip, port)`, and
     `oauth_flow_auth_code(host_name, host_ip, port)` have been removed.
+
     !end-bullet!
+
+!end-bullets-1!
+
+## New features
+
+!begin-bullets-2!
+
 -   !begin-bullet!
-    `req_body_json()` and `req_body_form()` correctly unobfuscated
-    inputs, as documented (#754).
-    !end-bullet!
--   !begin-bullet!
-    `req_perform_iterative()`, `req_perform_sequential()`,
-    `req_perform_parallel()`, and `req_perform_promise()` now support
-    mocking (#651).
-    !end-bullet!
--   !begin-bullet!
-    `new_response()` is now exported (#751).
+    Redacted headers are no longer serialized to disk. This is important
+    since it makes it harder to accidentally leak secrets to files on
+    disk, but comes at a cost: you can longer perform such requests that
+    have been saved and reloaded (#721).
+
     !end-bullet!
 -   !begin-bullet!
     URL construction is now powered by `curl::curl_modify_url()`, and
     hence now (correctly) escapes the `path` component (#732). This
     means that `req_url_path()` now can only affect the path component
     of the URL, not the query params or fragment.
-    !end-bullet!
--   !begin-bullet!
-    Redacted headers are no longer serialized to disk. This is important
-    since it makes it harder to accidentally leak secrets to files on
-    disk, but comes at a cost: you can longer perform such requests that
-    have been saved and reloaded (#721).
-    !end-bullet!
--   !begin-bullet!
-    New `req_get_method()`, `req_get_headers()`, `req_body_get_type()`,
-    `req_get_body()` allow you to introspect a request object (#718).
-    !end-bullet!
--   !begin-bullet!
-    Functions that capture interrutps (like `req_perform_parallel()` and
-    friends) are now easier to escape if they're called inside a loop:
-    you can press Ctrl + C twice to guarantee an exit (#1810).
+
     !end-bullet!
 -   !begin-bullet!
     New `last_request_json()` and `last_response_json()` to conveniently
     see JSON bodies (#734).
+
+    !end-bullet!
+-   !begin-bullet!
+    New `req_get_method()`, `req_get_headers()`, `req_body_get_type()`,
+    `req_get_body()` allow you to introspect a request object (#718).
+
+    !end-bullet!
+-   !begin-bullet!
+    New `resp_timing()` exposes timing information about the request
+    measured by libcurl (@arcresu, #725).
+
+    !end-bullet!
+
+!end-bullets-2!
+
+## Minor improvements bug fixues
+
+!begin-bullets-3!
+
+-   !begin-bullet!
+    Functions that capture interrutps (like `req_perform_parallel()` and
+    friends) are now easier to escape if they're called inside a loop:
+    you can press Ctrl + C twice to guarantee an exit (#1810).
+
+    !end-bullet!
+-   !begin-bullet!
+    `req_perform_iterative()`, `req_perform_sequential()`,
+    `req_perform_parallel()`, `req_perform_promise()`, and
+    `req_perform_connection()` now support mocking (#651). To mock the
+    response from `req_perform_connection()` create a response with the
+    new `StreamingBody` for a body.
+
+    !end-bullet!
+-   !begin-bullet!
+    `new_response()` is now exported (#751).
+
+    !end-bullet!
+-   !begin-bullet!
+    `req_body_json()` and `req_body_form()` correctly unobfuscated
+    inputs, as documented (#754).
+
     !end-bullet!
 -   !begin-bullet!
     `req_body_json_modify()` can now be used on a request with an empty
     body.
+
     !end-bullet!
 -   !begin-bullet!
-    `resp_timing()` exposes timing information about the request
-    measured by libcurl (@arcresu, #725).
+    `req_error()` errors with long bodies are now correctly wrapped
+    (#727).
+
+    !end-bullet!
+-   !begin-bullet!
+    `req_oauth_device()` gains an `open_browser` argument that lets you
+    take control of whether a browser is opened or the URL is printed
+    (@plietar, #763)
+
+    !end-bullet!
+-   !begin-bullet!
+    `req_perform_parallel()` handles `progress` argument consistently
+    with other functions (#726).
+
     !end-bullet!
 -   !begin-bullet!
     `req_url_query()` now re-calculates n lengths when using
     `.multi = "explode"` to avoid select/recycling issues (@Kevanness,
     #719).
+
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-3!
 
 # httr2 1.1.2
 
-!begin-bullets-2!
+!begin-bullets-4!
 
 -   !begin-bullet!
     `req_headers()` more carefully checks its input types (#707).
@@ -97,13 +128,13 @@
     (#706, @jcheng5).
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-4!
 
 # httr2 1.1.1
 
 ## New features
 
-!begin-bullets-3!
+!begin-bullets-5!
 
 -   !begin-bullet!
     `req_perform_parallel()` lifts many of the previous restrictions. It
@@ -131,11 +162,11 @@
     request rates.
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-5!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-4!
+!begin-bullets-6!
 
 -   !begin-bullet!
     `aws_v4_signature()` correctly processes URLs containing query
@@ -189,13 +220,13 @@
     `str()` correctly redacts redacted headers (#682).
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-6!
 
 # httr2 1.1.0
 
 ## Lifecycle changes
 
-!begin-bullets-5!
+!begin-bullets-7!
 
 -   !begin-bullet!
     `req_perform_stream()` is superseded in favor of
@@ -208,11 +239,11 @@
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-7!
 
 ## New features
 
-!begin-bullets-6!
+!begin-bullets-8!
 
 -   !begin-bullet!
     `is_online()` wraps `curl::has_internet()`, making it easy to tell
@@ -251,11 +282,11 @@
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-8!
 
 ## Bug fixes and minor improvements
 
-!begin-bullets-7!
+!begin-bullets-9!
 
 -   !begin-bullet!
     OAuth response parsing errors now have a dedicated
@@ -309,11 +340,11 @@
 
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-9!
 
 # httr2 1.0.7
 
-!begin-bullets-8!
+!begin-bullets-10!
 
 -   !begin-bullet!
     `req_perform_promise()` upgraded to use event-driven async based on
@@ -325,11 +356,11 @@
     (@atheriel, #460).
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-10!
 
 # httr2 1.0.6
 
-!begin-bullets-9!
+!begin-bullets-11!
 
 -   !begin-bullet!
     Fix stochastic test failure, particularly on CRAN (#572)
@@ -352,22 +383,22 @@
     for a simple reference implementation.
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-11!
 
 # httr2 1.0.5
 
-!begin-bullets-10!
+!begin-bullets-12!
 
 -   !begin-bullet!
     `req_perform_parallel()` and `req_perform_promise()` now correctly
     set up the method and body (#549).
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-12!
 
 # httr2 1.0.4
 
-!begin-bullets-11!
+!begin-bullets-13!
 
 -   !begin-bullet!
     `req_body_file()` now works with files \>64kb once more (#524) and
@@ -416,11 +447,11 @@
     (#519).
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-13!
 
 # httr2 1.0.3
 
-!begin-bullets-12!
+!begin-bullets-14!
 
 -   !begin-bullet!
     `jwt_encode_hmac()` now calls correct underlying function
@@ -446,11 +477,11 @@
 
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-14!
 
 # httr2 1.0.2
 
-!begin-bullets-13!
+!begin-bullets-15!
 
 -   !begin-bullet!
     `req_body_file()` now only opens a connection when the request
@@ -480,11 +511,11 @@
     multi-value parameters (#404).
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-15!
 
 # httr2 1.0.1
 
-!begin-bullets-14!
+!begin-bullets-16!
 
 -   !begin-bullet!
     `req_perform_stream()` gains a `round = c("byte", "line")` argument
@@ -513,13 +544,13 @@
 
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-16!
 
 # httr2 1.0.0
 
 ## Function lifecycle
 
-!begin-bullets-15!
+!begin-bullets-17!
 
 -   !begin-bullet!
     `local_mock()` and `with_mock()` have been deprecated in favour of
@@ -553,11 +584,11 @@
 
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-17!
 
 ## Multiple requests
 
-!begin-bullets-16!
+!begin-bullets-18!
 
 -   !begin-bullet!
     New `req_perform_sequential()` performs a known set of requests
@@ -598,11 +629,11 @@
 
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-18!
 
 ## OAuth features
 
-!begin-bullets-17!
+!begin-bullets-19!
 
 -   !begin-bullet!
     A new `vignette("oauth")` gives many more details about how OAuth
@@ -644,11 +675,11 @@
 
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-19!
 
 ## Other new features
 
-!begin-bullets-18!
+!begin-bullets-20!
 
 -   !begin-bullet!
     @mgirlich is now a httr2 contributor in recognition of his many
@@ -707,11 +738,11 @@
 
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-20!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-19!
+!begin-bullets-21!
 
 -   !begin-bullet!
     The httr2 examples now only run on R 4.2 and later so that we can
@@ -797,11 +828,11 @@
 
     !end-bullet!
 
-!end-bullets-19!
+!end-bullets-21!
 
 # httr2 0.2.3
 
-!begin-bullets-20!
+!begin-bullets-22!
 
 -   !begin-bullet!
     New `example_url()` to launch a local server, making tests and
@@ -836,11 +867,11 @@
 
     !end-bullet!
 
-!end-bullets-20!
+!end-bullets-22!
 
 # httr2 0.2.2
 
-!begin-bullets-21!
+!begin-bullets-23!
 
 -   !begin-bullet!
     `curl_translate()` can now handle curl copied from Chrome developer
@@ -878,11 +909,11 @@
 
     !end-bullet!
 
-!end-bullets-21!
+!end-bullets-23!
 
 # httr2 0.2.1
 
-!begin-bullets-22!
+!begin-bullets-24!
 
 -   !begin-bullet!
     "Wrapping APIs" is now an article, not a vignette.
@@ -894,13 +925,13 @@
 
     !end-bullet!
 
-!end-bullets-22!
+!end-bullets-24!
 
 # httr2 0.2.0
 
 ## New features
 
-!begin-bullets-23!
+!begin-bullets-25!
 
 -   !begin-bullet!
     `req_body_form()`, `req_body_multipart()`, and `req_url_query()` now
@@ -924,11 +955,11 @@
 
     !end-bullet!
 
-!end-bullets-23!
+!end-bullets-25!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-24!
+!begin-bullets-26!
 
 -   !begin-bullet!
     `httr_path` class renamed to `httr2_path` to correctly match package
@@ -973,11 +1004,11 @@
 
     !end-bullet!
 
-!end-bullets-24!
+!end-bullets-26!
 
 # httr2 0.1.1
 
-!begin-bullets-25!
+!begin-bullets-27!
 
 -   !begin-bullet!
     Fix R CMD check failures on CRAN
@@ -988,4 +1019,4 @@
 
     !end-bullet!
 
-!end-bullets-25!
+!end-bullets-27!
