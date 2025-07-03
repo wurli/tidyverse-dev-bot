@@ -19426,3 +19426,4 @@ httr2,0e4f569e6ee6e4b36ae0c3195816610c,`req_perform_stream()` has been soft depr
 httr2,fc53b9ef57566114c291dcbbe1aa93bb,"Deprecated functions `mutli_req_perform()`, `req_stream()`, `with_mock()` and `local_mock()` have been removed.",NA,NA,NA,NA
 httr2,e750e7bc49556179ab907c42f7905516,"Deprecated arguments `req_perform_parallel(pool)`, `req_oauth_auth_code(host_name, host_ip, port)`, and `oauth_flow_auth_code(host_name, host_ip, port)` have been removed.",NA,NA,NA,NA
 httr2,4a39db6a20e076a69943fda1df4cb6e0,"New `resp_timing()` exposes timing information about the request measured by libcurl (@​arcresu, #725).",NA,NA,NA,NA
+xml2,2e914bc7e486f0c43e5b1d2610721285,read_html() now allows huge elements by default (#455),NA,NA,NA,NA
