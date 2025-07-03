@@ -26,6 +26,12 @@
     theming when a `_brand.yml` file is present in the project. (#1196)
 
     !end-bullet!
+-   !begin-bullet!
+    Sidebars from `page_sidebar()` and `layout_sidebar()` are now
+    resizable on desktop-sized screen widths, allowing users to resize
+    the sidebar width as desired. (#1217)
+
+    !end-bullet!
 
 !end-bullets-1!
 

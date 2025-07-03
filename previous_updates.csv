@@ -19427,3 +19427,4 @@ httr2,fc53b9ef57566114c291dcbbe1aa93bb,"Deprecated functions `mutli_req_perform(
 httr2,e750e7bc49556179ab907c42f7905516,"Deprecated arguments `req_perform_parallel(pool)`, `req_oauth_auth_code(host_name, host_ip, port)`, and `oauth_flow_auth_code(host_name, host_ip, port)` have been removed.",NA,NA,NA,NA
 httr2,4a39db6a20e076a69943fda1df4cb6e0,"New `resp_timing()` exposes timing information about the request measured by libcurl (@​arcresu, #725).",NA,NA,NA,NA
 xml2,2e914bc7e486f0c43e5b1d2610721285,read_html() now allows huge elements by default (#455),NA,NA,NA,NA
+bslib,06721f2ea2d401f214442bae35724da7,"Sidebars from `page_sidebar()` and `layout_sidebar()` are now resizable on desktop-sized screen widths, allowing users to resize the sidebar width as desired. (#1217)",NA,NA,NA,NA
