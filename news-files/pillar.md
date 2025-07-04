@@ -1,36 +1,18 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
-# pillar 1.10.2.9002
+# pillar 1.10.99.9900
+
+## Bug fixes
+
+- Fix formatting of numbers of the form 9.99...995 (#785).
+
+## Chore
+
+- Refactor and comment formatting routine (#786).
 
 ## Testing
 
 - Fix dev ggplot2 compatibility.
-
-
-# pillar 1.10.2.9001
-
-## Continuous integration
-
-- Always use `_R_CHECK_FORCE_SUGGESTS_=false` (#751).
-
-- Correct installation of xml2 (#747).
-
-- Import from actions-sync, check carefully (#745).
-
-- Sync (#744).
-
-## Testing
-
-- Snapshot updates for R-CMD-check-base (null) (#742).
-
-- Snapshot updates for R-CMD-check-dev ({"package":"ggplot2"}) (#748).
-
-- Snapshot updates for rcc-smoke (null) (#743).
-
-
-# pillar 1.10.2.9000
-
-- Switching to development version.
 
 
 # pillar 1.10.2

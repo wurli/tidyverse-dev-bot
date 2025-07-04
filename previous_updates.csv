@@ -19428,3 +19428,5 @@ httr2,e750e7bc49556179ab907c42f7905516,"Deprecated arguments `req_perform_parall
 httr2,4a39db6a20e076a69943fda1df4cb6e0,"New `resp_timing()` exposes timing information about the request measured by libcurl (@​arcresu, #725).",NA,NA,NA,NA
 xml2,2e914bc7e486f0c43e5b1d2610721285,read_html() now allows huge elements by default (#455),NA,NA,NA,NA
 bslib,06721f2ea2d401f214442bae35724da7,"Sidebars from `page_sidebar()` and `layout_sidebar()` are now resizable on desktop-sized screen widths, allowing users to resize the sidebar width as desired. (#1217)",NA,NA,NA,NA
+pillar,3798962859ba8373ca990bf70b65f927,Fix formatting of numbers of the form 9.99...995 (#785).,NA,NA,NA,NA
+pillar,dcb5554ff5ecb2224c429a629a5eac8a,Refactor and comment formatting routine (#786).,NA,NA,NA,NA
