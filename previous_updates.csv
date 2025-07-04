@@ -19433,3 +19433,4 @@ pillar,dcb5554ff5ecb2224c429a629a5eac8a,Refactor and comment formatting routine 
 pillar,407a017cd546a4ca9b702577d9c6c70e,Checking `sigfig` argument to be 15 or less (#788).,NA,NA,NA,NA
 pillar,d76e6a7b78288ac65939010f8ffec703,Results and test.,NA,NA,NA,NA
 pillar,8b99d4b86a5d51bee955d67afe963530,CRAN pre-release v1.10.99.9900 (#787).,NA,NA,NA,NA
+pillar,812dc919bcb4e350c04aeb338cf42394,"Fix formatting of numbers of the form 9.99...995 (#785, tidyverse/tibble#1648).",NA,NA,NA,NA
