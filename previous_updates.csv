@@ -19434,3 +19434,5 @@ pillar,407a017cd546a4ca9b702577d9c6c70e,Checking `sigfig` argument to be 15 or l
 pillar,d76e6a7b78288ac65939010f8ffec703,Results and test.,NA,NA,NA,NA
 pillar,8b99d4b86a5d51bee955d67afe963530,CRAN pre-release v1.10.99.9900 (#787).,NA,NA,NA,NA
 pillar,812dc919bcb4e350c04aeb338cf42394,"Fix formatting of numbers of the form 9.99...995 (#785, tidyverse/tibble#1648).",NA,NA,NA,NA
+pillar,5ec1680961f14f7e638801d744b26bb5,Auto-update from GitHub Actions (#790).,NA,NA,NA,NA
+pillar,9c06bf70f524f89e824e4e3c4a6fbe82,CRAN release v1.11.0 (#789).,NA,NA,NA,NA
