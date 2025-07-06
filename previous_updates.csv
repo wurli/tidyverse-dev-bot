@@ -19436,3 +19436,6 @@ pillar,8b99d4b86a5d51bee955d67afe963530,CRAN pre-release v1.10.99.9900 (#787).,N
 pillar,812dc919bcb4e350c04aeb338cf42394,"Fix formatting of numbers of the form 9.99...995 (#785, tidyverse/tibble#1648).",NA,NA,NA,NA
 pillar,5ec1680961f14f7e638801d744b26bb5,Auto-update from GitHub Actions (#790).,NA,NA,NA,NA
 pillar,9c06bf70f524f89e824e4e3c4a6fbe82,CRAN release v1.11.0 (#789).,NA,NA,NA,NA
+pillar,aa947eeaf8f42e903fec20dcfcc2876a,Merge branch 'docs'.,NA,NA,NA,NA
+tibble,86c46dacc54d688bdb40db7c8175e797,"Suppress `message()` output in some as_tibble tests (@​MichaelChirico, #1647).",NA,NA,NA,NA
+tibble,6247e09aa77a090d56f6d30529e3f256,"Snapshot updates for rcc-full ({""os"":""ubuntu-22.04"",""r"":""devel"",""http-user-agent"":""release""}) (#1649).",NA,NA,NA,NA
