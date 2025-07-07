@@ -19439,3 +19439,6 @@ pillar,9c06bf70f524f89e824e4e3c4a6fbe82,CRAN release v1.11.0 (#789).,NA,NA,NA,NA
 pillar,aa947eeaf8f42e903fec20dcfcc2876a,Merge branch 'docs'.,NA,NA,NA,NA
 tibble,86c46dacc54d688bdb40db7c8175e797,"Suppress `message()` output in some as_tibble tests (@​MichaelChirico, #1647).",NA,NA,NA,NA
 tibble,6247e09aa77a090d56f6d30529e3f256,"Snapshot updates for rcc-full ({""os"":""ubuntu-22.04"",""r"":""devel"",""http-user-agent"":""release""}) (#1649).",NA,NA,NA,NA
+xml2,359f533b2c86ba0d23e568ac7bb1aff7,Workaround for xQuartz/Cocoa on MacOS hitting our global error handler.,NA,NA,NA,NA
+waldo,a327d93496fac4d7a1f4a665df892181,Read-only S7 properties are ignored (#219).,NA,NA,NA,NA
+waldo,137db677657a9ec79555a172db8527cf,Can now compare weakrefs,NA,NA,NA,NA

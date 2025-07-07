@@ -1,18 +1,29 @@
 # waldo (development version)
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    Read-only S7 properties are ignored (#219).
+    !end-bullet!
+-   !begin-bullet!
+    Can now compare weakrefs
+    !end-bullet!
+
+!end-bullets-1!
+
 # waldo 0.6.1
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     Only use special bit64 comparison if package is installed.
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # waldo 0.6.0
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     waldo no longer imports tibble and rematch2 (@olivroy, #196), and
@@ -42,31 +53,31 @@
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 # waldo 0.5.3
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     waldo no longer imports fansi (@olivroy, #192).
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 # waldo 0.5.2
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     Fixes for upcoming R-devel changes.
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 # waldo 0.5.1
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     Tolerance is also taken into account when displaying differences
@@ -81,11 +92,11 @@
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # waldo 0.5.0
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     You can opt-out of quoting strings with `quote_strings = FALSE`
@@ -95,7 +106,7 @@
 -   !begin-bullet!
     Improvements to missing value handling:
 
-    !begin-bullets-7!
+    !begin-bullets-8!
     -   !begin-bullet!
         `NA_character_` and `"NA"` are no longer treated as equal
         (#162).
@@ -112,7 +123,7 @@
 
         !end-bullet!
 
-    !end-bullets-7!
+    !end-bullets-8!
     !end-bullet!
 -   !begin-bullet!
     The `balanced` attribute used by some `POSIXlt` objects in R 4.3 and
@@ -132,11 +143,11 @@
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 # waldo 0.4.0
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     Atomic S3 classes with format methods now use those methods when
@@ -178,11 +189,11 @@
 
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 # waldo 0.3.1
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     `compare()`ing data frames now works independently of
@@ -194,11 +205,11 @@
 
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 # waldo 0.3.0
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     `compare()` is now considerably faster when comparing complex
@@ -209,7 +220,7 @@
 -   !begin-bullet!
     `compare()` gains two improvements to low-level diffs:
 
-    !begin-bullets-11!
+    !begin-bullets-12!
     -   !begin-bullet!
         Structurally identical data frames (#78) and numeric matrices
         (#76) gain a row-by-row diff that makes it easier to see where
@@ -223,7 +234,7 @@
 
         !end-bullet!
 
-    !end-bullets-11!
+    !end-bullets-12!
     !end-bullet!
 -   !begin-bullet!
     `compare()` gains a `list_as_map` argument thanks to an idea from
@@ -237,7 +248,7 @@
     The objects involved in `compare()` (as opposed to the caller of
     `compare()`) gained much greater ability to control the comparison.
 
-    !begin-bullets-12!
+    !begin-bullets-13!
     -   !begin-bullet!
         Objects can now contain a `waldo_opts` attribute, a list with
         the same names and valid values as the arguments to `compare()`,
@@ -261,7 +272,7 @@
 
         !end-bullet!
 
-    !end-bullets-12!
+    !end-bullets-13!
     !end-bullet!
 -   !begin-bullet!
     Comparing a list with symbol to a list without that element no
@@ -269,22 +280,22 @@
 
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 # waldo 0.2.5
 
-!begin-bullets-13!
+!begin-bullets-14!
 
 -   !begin-bullet!
     On platforms without UTF-8 support, strings that differ only in
     their encoding are now correctly considered to be identical (#66).
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-14!
 
 # waldo 0.2.4
 
-!begin-bullets-14!
+!begin-bullets-15!
 
 -   !begin-bullet!
     Additional arguments to `compare()` generate a more informative
@@ -308,11 +319,11 @@
 
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-15!
 
 # waldo 0.2.3
 
-!begin-bullets-15!
+!begin-bullets-16!
 
 -   !begin-bullet!
     `compare()` gains a new `max_diffs` argument that allows you to
@@ -331,11 +342,11 @@
 
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-16!
 
 # waldo 0.2.2
 
-!begin-bullets-16!
+!begin-bullets-17!
 
 -   !begin-bullet!
     Handle S4 objects that have attributes that are not slots.
@@ -347,11 +358,11 @@
 
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-17!
 
 # waldo 0.2.1
 
-!begin-bullets-17!
+!begin-bullets-18!
 
 -   !begin-bullet!
     `compare()` now labels output as `old` and `new`, since that's the
@@ -371,7 +382,7 @@
 -   !begin-bullet!
     Improvements to comparison display:
 
-    !begin-bullets-18!
+    !begin-bullets-19!
     -   !begin-bullet!
         Zero length vectors compare robustly (#39)
 
@@ -389,14 +400,14 @@
 
         !end-bullet!
 
-    !end-bullets-18!
+    !end-bullets-19!
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-18!
 
 # waldo 0.2.0
 
-!begin-bullets-19!
+!begin-bullets-20!
 
 -   !begin-bullet!
     All objects: class (#26) and names (#31) are ignored when ignoring
@@ -441,11 +452,11 @@
 
     !end-bullet!
 
-!end-bullets-19!
+!end-bullets-20!
 
 ------------------------------------------------------------------------
 
-!begin-bullets-20!
+!begin-bullets-21!
 
 -   !begin-bullet!
     `compare_proxy()` is now exported so that you can provide methods if
@@ -458,14 +469,14 @@
 
     !end-bullet!
 
-!end-bullets-20!
+!end-bullets-21!
 
 # waldo 0.1.0
 
-!begin-bullets-21!
+!begin-bullets-22!
 
 -   !begin-bullet!
     Added a `NEWS.md` file to track changes to the package.
     !end-bullet!
 
-!end-bullets-21!
+!end-bullets-22!

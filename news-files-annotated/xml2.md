@@ -4,6 +4,12 @@
 
 -   !begin-bullet!
     read_html() now allows huge elements by default (#455)
+
+    !end-bullet!
+-   !begin-bullet!
+    Workaround for xQuartz/Cocoa on MacOS hitting our global error
+    handler.
+
     !end-bullet!
 
 !end-bullets-1!
