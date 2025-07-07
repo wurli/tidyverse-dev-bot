@@ -25,6 +25,11 @@
     in the table cell or text (@thebioengineer, #1912)
 
     !end-bullet!
+-   !begin-bullet!
+    Fixed an issue where grand summary rows would not be saved properly
+    to Word (@olivroy, #2000).
+
+    !end-bullet!
 
 !end-bullets-1!
 

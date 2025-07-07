@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `compare()` now goes into more details if you're comparing an S3
+    object with a base object of the same type (#218).
+    !end-bullet!
+-   !begin-bullet!
     Read-only S7 properties are ignored (#219).
     !end-bullet!
 -   !begin-bullet!

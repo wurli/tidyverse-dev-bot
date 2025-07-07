@@ -19442,3 +19442,5 @@ tibble,6247e09aa77a090d56f6d30529e3f256,"Snapshot updates for rcc-full ({""os"":
 xml2,359f533b2c86ba0d23e568ac7bb1aff7,Workaround for xQuartz/Cocoa on MacOS hitting our global error handler.,NA,NA,NA,NA
 waldo,a327d93496fac4d7a1f4a665df892181,Read-only S7 properties are ignored (#219).,NA,NA,NA,NA
 waldo,137db677657a9ec79555a172db8527cf,Can now compare weakrefs,NA,NA,NA,NA
+waldo,64d11cf18c8aa6cef61be738c7d832cc,`compare()` now goes into more details if you're comparing an S3 object with a base object of the same type (#218).,NA,NA,NA,NA
+gt,a2944cd2c061877c82954677d77281b4,"Fixed an issue where grand summary rows would not be saved properly to Word (@​olivroy, #2000).",NA,NA,NA,NA
