@@ -3,6 +3,19 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Added `project_path()`, `get_running_project_root()`, and
+    `find_project_root()` functions for Quarto-aware project path
+    construction. These functions provide a consistent way to reference
+    files relative to the project root, working both during Quarto
+    rendering (using `QUARTO_PROJECT_ROOT` environment variables) and in
+    interactive sessions (using intelligent project detection). The
+    `project_path()` function is particularly useful in Quarto document
+    cells where you need to reference data files or scripts from the
+    project root regardless of the document's location in subdirectories
+    (#180).
+
+    !end-bullet!
+-   !begin-bullet!
     `quarto_preview()` now explicitly returns the preview server URL
     (invisibly) and documents this behavior. This enables programmatic
     workflows such as taking screenshots with **webshot2** or passing
@@ -19,6 +32,16 @@
     because they are not supported in YAML 1.2 spec. This is to help
     users handle missing data appropriately before passing to Quarto
     (#168).
+
+    !end-bullet!
+-   !begin-bullet!
+    Added `qmd_to_r_script()` function to extract R code cells from
+    Quarto documents and create R scripts. This experimental function
+    preserves chunk options using `#|` syntax, adds YAML metadata as
+    spin-style headers, and handles mixed-language documents by
+    filtering only R cells. Complements the existing
+    `add_spin_preamble()` function for working with R scripts in Quarto
+    workflows (#208, quarto-dev/quarto-cli#9112).
 
     !end-bullet!
 -   !begin-bullet!
