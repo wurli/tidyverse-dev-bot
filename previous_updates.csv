@@ -19444,3 +19444,5 @@ waldo,a327d93496fac4d7a1f4a665df892181,Read-only S7 properties are ignored (#219
 waldo,137db677657a9ec79555a172db8527cf,Can now compare weakrefs,NA,NA,NA,NA
 waldo,64d11cf18c8aa6cef61be738c7d832cc,`compare()` now goes into more details if you're comparing an S3 object with a base object of the same type (#218).,NA,NA,NA,NA
 gt,a2944cd2c061877c82954677d77281b4,"Fixed an issue where grand summary rows would not be saved properly to Word (@​olivroy, #2000).",NA,NA,NA,NA
+shiny,04bae1dc7ea32f6c52cff4d920a4cd80,Fixed an issue where `InputBinding` implementations that don't pass a value to their `subscribe` callback were no longer notifying Shiny of input changes. (#4243),NA,NA,NA,NA
+shiny,ceeee8f24ba3f689220ded7cf23fed6b,`updateActionButton()` and `updateActionLink()` once again handle `label` updates correctly. (#4245),NA,NA,NA,NA
