@@ -19450,3 +19450,4 @@ quarto,5fd134e9f2e5c7ffe830bfb4363adc59,"Added `project_path()`, `get_running_pr
 quarto,f6f39cf6ebb6f8a87f9f0c2ee20e87a8,"Added `qmd_to_r_script()` function to extract R code cells from Quarto documents and create R scripts. This experimental function preserves chunk options using `#|` syntax, adds YAML metadata as spin-style headers, and handles mixed-language documents by filtering only R cells. Complements the existing `add_spin_preamble()` function for working with R scripts in Quarto workflows (#208, quarto-dev/quarto-cli#9112).",NA,NA,NA,NA
 waldo,67507952adf4b7d10a044a02257a3aaa,"`compare()` ignores read-only S7 properties, only comparing the underlying data stored in attributes (#219).",NA,NA,NA,NA
 waldo,0a2708c3ff6c717feceea2c5b59cee9f,`compare()` can compare weakrefs.,NA,NA,NA,NA
+gt,178b73949d4a864f128138ecd3715dd4,"Enable `cols_align()` and `cols_label()` functions for gt_group objects (@​shannonhaughton, #2005)",NA,NA,NA,NA

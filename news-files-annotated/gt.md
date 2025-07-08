@@ -30,6 +30,11 @@
     to Word (@olivroy, #2000).
 
     !end-bullet!
+-   !begin-bullet!
+    Enable `cols_align()` and `cols_label()` functions for gt_group
+    objects (@shannonhaughton, #2005)
+
+    !end-bullet!
 
 !end-bullets-1!
 
