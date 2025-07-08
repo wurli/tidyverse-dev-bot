@@ -7,10 +7,11 @@
     object with a base object of the same type (#218).
     !end-bullet!
 -   !begin-bullet!
-    Read-only S7 properties are ignored (#219).
+    `compare()` ignores read-only S7 properties, only comparing the
+    underlying data stored in attributes (#219).
     !end-bullet!
 -   !begin-bullet!
-    Can now compare weakrefs
+    `compare()` can compare weakrefs.
     !end-bullet!
 
 !end-bullets-1!
