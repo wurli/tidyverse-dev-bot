@@ -19451,3 +19451,4 @@ quarto,f6f39cf6ebb6f8a87f9f0c2ee20e87a8,"Added `qmd_to_r_script()` function to e
 waldo,67507952adf4b7d10a044a02257a3aaa,"`compare()` ignores read-only S7 properties, only comparing the underlying data stored in attributes (#219).",NA,NA,NA,NA
 waldo,0a2708c3ff6c717feceea2c5b59cee9f,`compare()` can compare weakrefs.,NA,NA,NA,NA
 gt,178b73949d4a864f128138ecd3715dd4,"Enable `cols_align()` and `cols_label()` functions for gt_group objects (@​shannonhaughton, #2005)",NA,NA,NA,NA
+httr2,1e2798000538f16341fe9800536c0972,"All print methods now send output to stdout, not the message stream.",NA,NA,NA,NA

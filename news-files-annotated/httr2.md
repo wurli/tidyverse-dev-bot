@@ -113,6 +113,10 @@
     #719).
 
     !end-bullet!
+-   !begin-bullet!
+    All print methods now send output to stdout, not the message stream.
+
+    !end-bullet!
 
 !end-bullets-3!
 
