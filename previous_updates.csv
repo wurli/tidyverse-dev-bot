@@ -19454,3 +19454,4 @@ gt,178b73949d4a864f128138ecd3715dd4,"Enable `cols_align()` and `cols_label()` fu
 httr2,1e2798000538f16341fe9800536c0972,"All print methods now send output to stdout, not the message stream.",NA,NA,NA,NA
 usethis,55bce5d48b9857bf2aae18dc668c2895,"`use_package(min_version = FALSE)` is treated the same as when `min_version` is not specified (#2117, @​salim-b).",NA,NA,NA,NA
 gt,ef8153ab86578af486a8fbcfbbde6024,"Fixed an encoding issue with docx output and `sub_small_vals()`/`sub_large_vals()` (@​olivroy, #1997).",NA,NA,NA,NA
+reticulate,6dce809a5b175232e459d450dae6b7d2,`uv_python_list()` now tries managed python environments before system-installed Python environments. This makes it much faster as system discovery can be slow. Users can still control their preference using the `UV_PYTHON_PREFERENCE` environment variable. (#1810),NA,NA,NA,NA

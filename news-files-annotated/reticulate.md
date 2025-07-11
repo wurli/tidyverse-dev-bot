@@ -33,6 +33,14 @@
     (#1184)
 
     !end-bullet!
+-   !begin-bullet!
+    `uv_python_list()` now tries managed python environments before
+    system-installed Python environments. This makes it much faster as
+    system discovery can be slow. Users can still control their
+    preference using the `UV_PYTHON_PREFERENCE` environment variable.
+    (#1810)
+
+    !end-bullet!
 
 !end-bullets-1!
 
