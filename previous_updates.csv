@@ -19452,3 +19452,4 @@ waldo,67507952adf4b7d10a044a02257a3aaa,"`compare()` ignores read-only S7 propert
 waldo,0a2708c3ff6c717feceea2c5b59cee9f,`compare()` can compare weakrefs.,NA,NA,NA,NA
 gt,178b73949d4a864f128138ecd3715dd4,"Enable `cols_align()` and `cols_label()` functions for gt_group objects (@​shannonhaughton, #2005)",NA,NA,NA,NA
 httr2,1e2798000538f16341fe9800536c0972,"All print methods now send output to stdout, not the message stream.",NA,NA,NA,NA
+usethis,55bce5d48b9857bf2aae18dc668c2895,"`use_package(min_version = FALSE)` is treated the same as when `min_version` is not specified (#2117, @​salim-b).",NA,NA,NA,NA

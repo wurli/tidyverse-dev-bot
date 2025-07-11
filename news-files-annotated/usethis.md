@@ -5,6 +5,12 @@
 -   !begin-bullet!
     `use_air()` is a new function to configure a project to use Air, an
     extremely fast R code formatter.
+
+    !end-bullet!
+-   !begin-bullet!
+    `use_package(min_version = FALSE)` is treated the same as when
+    `min_version` is not specified (#2117, @salim-b).
+
     !end-bullet!
 
 !end-bullets-1!
