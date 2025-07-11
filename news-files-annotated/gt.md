@@ -9,8 +9,8 @@
 
     !end-bullet!
 -   !begin-bullet!
-    as_word() now handles "`<br>`{=html}" line breaks for md() and
-    html(), and no longer automatically adds "Table N" ahead of the
+    `as_word()` now handles "`<br>`{=html}" line breaks for `md()` and
+    `html()`, and no longer automatically adds "Table N" ahead of the
     caption.
 
     !end-bullet!
@@ -28,6 +28,11 @@
 -   !begin-bullet!
     Fixed an issue where grand summary rows would not be saved properly
     to Word (@olivroy, #2000).
+
+    !end-bullet!
+-   !begin-bullet!
+    Fixed an encoding issue with docx output and
+    `sub_small_vals()`/`sub_large_vals()` (@olivroy, #1997).
 
     !end-bullet!
 -   !begin-bullet!
