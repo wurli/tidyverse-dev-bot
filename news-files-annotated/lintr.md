@@ -68,6 +68,10 @@
     Files with encoding inferred from settings read more robustly under
     `lint(parse_settings = TRUE)` (#2803, @MichaelChirico).
     !end-bullet!
+-   !begin-bullet!
+    `assignment_linter()` no longer errors if `"%<>%"` is an allowed
+    operator (#2850, @AshesITR).
+    !end-bullet!
 
 !end-bullets-3!
 
