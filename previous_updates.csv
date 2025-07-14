@@ -19460,3 +19460,4 @@ usethis,cf5d528b4a330f24913dea9773a786a4,usethis's criteria for recognizing a pr
 usethis,cf5d528b4a330f24913dea9773a786a4,"• a `.vscode/` directory, which Positron or VS Code might create",NA,NA,NA,NA
 usethis,cf5d528b4a330f24913dea9773a786a4,"• a `_quarto.yml` file, typical of a Quarto project",NA,NA,NA,NA
 usethis,cf5d528b4a330f24913dea9773a786a4,"• an `renv.lock` file, which renv creates",NA,NA,NA,NA
+usethis,940a8ac11135b6495dacac215fe1e54a,"`use_tidy_style()` is deprecated, in favor of using Air for any new, explicit formatting efforts (#2110).",NA,NA,NA,NA

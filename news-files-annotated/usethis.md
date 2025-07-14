@@ -8,6 +8,11 @@
 
     !end-bullet!
 -   !begin-bullet!
+    `use_tidy_style()` is deprecated, in favor of using Air for any new,
+    explicit formatting efforts (#2110).
+
+    !end-bullet!
+-   !begin-bullet!
     `use_package(min_version = FALSE)` is treated the same as when
     `min_version` is not specified (#2117, @salim-b).
 
