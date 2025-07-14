@@ -19461,3 +19461,6 @@ usethis,cf5d528b4a330f24913dea9773a786a4,"• a `.vscode/` directory, which Posi
 usethis,cf5d528b4a330f24913dea9773a786a4,"• a `_quarto.yml` file, typical of a Quarto project",NA,NA,NA,NA
 usethis,cf5d528b4a330f24913dea9773a786a4,"• an `renv.lock` file, which renv creates",NA,NA,NA,NA
 usethis,940a8ac11135b6495dacac215fe1e54a,"`use_tidy_style()` is deprecated, in favor of using Air for any new, explicit formatting efforts (#2110).",NA,NA,NA,NA
+shiny,411ec68d8c02007163dd02ffd878338b,"The `icon` argument of `updateActionButton()`/`updateActionLink()` nows allows values other than `shiny::icon()` (e.g., `fontawesome::fa()`, `bsicons::bs_icon()`, etc). (#4249)",NA,NA,NA,NA
+shiny,1b3b1fdf2b7452c075b2c99f701693bd,`updateActionButton()`/`updateActionLink()` now correctly renders HTML content passed to the `label` argument. (#4249),NA,NA,NA,NA
+shiny,84218ed780321842b174b1f0fd0b96fb,The return value of `actionButton()`/`actionLink()` changed slightly: `label` and `icon` are wrapped in an additional HTML container element. This allows for: 1. `updateActionButton()`/`updateActionLink()` to distinguish between the `label` and `icon` when making updates and 2. spacing between `label` and `icon` to be more easily customized via CSS.,NA,NA,NA,NA
