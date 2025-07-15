@@ -191,6 +191,10 @@
     `grepv()` wrapper of `grep()`; `regex_subset_linter()` also
     recommends `grepv()` alternatives (#2855, @MichaelChirico).
     !end-bullet!
+-   !begin-bullet!
+    `object_usage_linter()` lints missing packages that may cause false
+    positives (#2872, @AshesITR)
+    !end-bullet!
 
 !end-bullets-5!
 
