@@ -40,6 +40,11 @@
     objects (@shannonhaughton, #2005)
 
     !end-bullet!
+-   !begin-bullet!
+    `tab_footnote()` + `md()` + docx is now processed correctly
+    (@olivroy, #1892).
+
+    !end-bullet!
 
 !end-bullets-1!
 

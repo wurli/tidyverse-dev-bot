@@ -19465,3 +19465,4 @@ shiny,411ec68d8c02007163dd02ffd878338b,"The `icon` argument of `updateActionButt
 shiny,1b3b1fdf2b7452c075b2c99f701693bd,`updateActionButton()`/`updateActionLink()` now correctly renders HTML content passed to the `label` argument. (#4249),NA,NA,NA,NA
 shiny,84218ed780321842b174b1f0fd0b96fb,The return value of `actionButton()`/`actionLink()` changed slightly: `label` and `icon` are wrapped in an additional HTML container element. This allows for: 1. `updateActionButton()`/`updateActionLink()` to distinguish between the `label` and `icon` when making updates and 2. spacing between `label` and `icon` to be more easily customized via CSS.,NA,NA,NA,NA
 lintr,3cac4f5feb21622679a354f3294edd83,"`object_usage_linter()` lints missing packages that may cause false positives (#2872, @​AshesITR)",NA,NA,NA,NA
+gt,a44443d04326bedf844833841481f31f,"`tab_footnote()` + `md()` + docx is now processed correctly (@​olivroy, #1892).",NA,NA,NA,NA
