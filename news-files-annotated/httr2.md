@@ -32,8 +32,8 @@
 -   !begin-bullet!
     Redacted headers are no longer serialized to disk. This is important
     since it makes it harder to accidentally leak secrets to files on
-    disk, but comes at a cost: you can longer perform such requests that
-    have been saved and reloaded (#721).
+    disk, but comes at a cost: you can no longer perform such requests
+    that have been saved and reloaded (#721).
 
     !end-bullet!
 -   !begin-bullet!
@@ -62,12 +62,12 @@
 
 !end-bullets-2!
 
-## Minor improvements bug fixues
+## Minor improvements and bug fixes
 
 !begin-bullets-3!
 
 -   !begin-bullet!
-    Functions that capture interrutps (like `req_perform_parallel()` and
+    Functions that capture interrupts (like `req_perform_parallel()` and
     friends) are now easier to escape if they're called inside a loop:
     you can press Ctrl + C twice to guarantee an exit (#1810).
 
