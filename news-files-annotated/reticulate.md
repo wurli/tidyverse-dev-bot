@@ -41,6 +41,11 @@
     (#1810)
 
     !end-bullet!
+-   !begin-bullet!
+    Hotfix to pin `uv` version resolved by reticulate to `<0.8.0`.
+    (#1812)
+
+    !end-bullet!
 
 !end-bullets-1!
 
