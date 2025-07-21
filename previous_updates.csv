@@ -19468,3 +19468,4 @@ lintr,3cac4f5feb21622679a354f3294edd83,"`object_usage_linter()` lints missing pa
 gt,a44443d04326bedf844833841481f31f,"`tab_footnote()` + `md()` + docx is now processed correctly (@​olivroy, #1892).",NA,NA,NA,NA
 lintr,f62d83513bbd30022684dbb2bef55a33,"`download_file_linter()` encourages the use of `mode = ""wb""` (or `mode = ""ab""`) when using `download.file()`, rather than `mode = ""w""` or `mode = ""a""`, as the latter can produce broken files in Windows (#2882, @​Bisaloo).",NA,NA,NA,NA
 reticulate,0289103422cb7cc378caf3e9b9fdcecd,Hotfix to pin `uv` version resolved by reticulate to `<0.8.0`. (#1812),NA,NA,NA,NA
+httr2,ea6b2e4d315000d30792e18e18397521,Colons in paths are no longer escaped.,NA,NA,NA,NA
