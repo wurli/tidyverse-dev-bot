@@ -7,6 +7,16 @@
 
     !end-bullet!
 -   !begin-bullet!
+    Added `has_parameters()` function to detect whether Quarto documents
+    use parameters. The function works with both knitr and Jupyter
+    engines: for knitr documents (.qmd), it checks for a "params" field
+    in the document metadata; for Jupyter notebooks (.ipynb), it detects
+    cells tagged with "parameters" using papermill convention. This
+    enables programmatic identification of parameterized documents for
+    automated workflows and document processing (#245).
+
+    !end-bullet!
+-   !begin-bullet!
     Added `detect_bookdown_crossrefs()` function to help users migrate
     from bookdown to Quarto by identifying cross-references that need
     manual conversion. The function scans R Markdown or Quarto files to
