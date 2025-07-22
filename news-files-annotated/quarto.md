@@ -3,6 +3,31 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Improved YAML 1.2 compatibility features to ensure proper parsing by
+    Quarto's js-yaml parser.
+
+    !begin-bullets-2!
+    -   !begin-bullet!
+        The `yaml_quote_string()` function allows explicit control over
+        string quoting in YAML output.
+        !end-bullet!
+    -   !begin-bullet!
+        `write_yaml_metadata_block()` automatically handles data
+        corruption prevention from leading zero strings like `"029"`
+        that would be misinterpreted as octal numbers (becoming `29`)
+        (thanks, @Mosk915, quarto-dev/quarto-cli#12736, #242). Boolean
+        values are also correctly formatted as lowercase
+        (`true`/`false`) instead of YAML 1.1 variants like `yes`/`no`.
+        !end-bullet!
+    -   !begin-bullet!
+        This change also benefits other functions writing YAML like
+        `quarto_render()` when using `metadata=` or `execute_params=`
+        arguments.
+        !end-bullet!
+
+    !end-bullets-2!
+    !end-bullet!
+-   !begin-bullet!
     Package is now licenced MIT like Quarto CLI.
 
     !end-bullet!
@@ -167,7 +192,7 @@
 -   !begin-bullet!
     Add several new wrapper function (thanks, @parmsam, #192):
 
-    !begin-bullets-2!
+    !begin-bullets-3!
     -   !begin-bullet!
         `quarto_list_extensions()` to list installed extensions using
         `quarto list extensions`
@@ -181,7 +206,7 @@
         using `quarto update extensions`
         !end-bullet!
 
-    !end-bullets-2!
+    !end-bullets-3!
     !end-bullet!
 -   !begin-bullet!
     `quarto_create_project()` offers better user experience now (thanks,
@@ -241,7 +266,7 @@
 
 # quarto 1.4.4
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     `quarto_preview()` now looks at `quarto preview` log to browse to
@@ -266,11 +291,11 @@
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 # quarto 1.4
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     This version is now adapted to Quarto 1.4 latest stable release.
@@ -357,4 +382,4 @@
 
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
