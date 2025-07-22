@@ -3,6 +3,22 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Package is now licenced MIT like Quarto CLI.
+
+    !end-bullet!
+-   !begin-bullet!
+    Added `detect_bookdown_crossrefs()` function to help users migrate
+    from bookdown to Quarto by identifying cross-references that need
+    manual conversion. The function scans R Markdown or Quarto files to
+    detect bookdown-specific cross-reference syntax (like
+    `\@ref(fig:label)` and `(\#eq:label)`) and provides detailed
+    guidance on converting them to Quarto syntax (like `@fig-label` and
+    `{#eq-label}`). It offers both compact and verbose reporting modes,
+    with context-aware warnings that only show syntax patterns actually
+    found in your files.
+
+    !end-bullet!
+-   !begin-bullet!
     Added `project_path()`, `get_running_project_root()`, and
     `find_project_root()` functions for Quarto-aware project path
     construction. These functions provide a consistent way to reference
@@ -12,7 +28,7 @@
     `project_path()` function is particularly useful in Quarto document
     cells where you need to reference data files or scripts from the
     project root regardless of the document's location in subdirectories
-    (#180).
+    (#180).0).
 
     !end-bullet!
 -   !begin-bullet!
