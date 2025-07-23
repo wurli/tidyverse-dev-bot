@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed an issue where `file.rename()` could fail when unpacking a
+    package during installation in certain Windows environments. (#2156)
+
+    !end-bullet!
+-   !begin-bullet!
     `renv`'s dependency discovery now supports usages of `base::use()`.
     (#2130)
 

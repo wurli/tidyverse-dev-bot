@@ -19488,3 +19488,4 @@ quarto,d6913838c40a7c816267393e074a7b1d,`yaml_quote_string()` allows explicit co
 quarto,fbacc3afd09cfa719d5aad322501e31d,"Error reporting improved when background process call to `quarto` fails (thanks, @​salim-b, #235).",NA,NA,NA,NA
 quarto,4454a5fe72bec2a79e30d7b9b0446fd8,"Interactive prompt error fixed for extension approval (thanks, @​wjschne, #212).",NA,NA,NA,NA
 testthat,a68049a1287b36dcd80b6d85a57b755e,testthat now requires R 4.1.,NA,NA,NA,NA
+renv,945b73bbc37cd9180094cdb211daf43a,Fixed an issue where `file.rename()` could fail when unpacking a package during installation in certain Windows environments. (#2156),NA,NA,NA,NA
