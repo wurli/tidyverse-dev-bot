@@ -3,6 +3,13 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `expect_s4_class()` now supports unquoting (@stibu81, #2064).
+    !end-bullet!
+-   !begin-bullet!
+    `it()` now finds the correct evaluation environment in more cases
+    (@averissimo, #2085).
+    !end-bullet!
+-   !begin-bullet!
     Fixed an issue preventing compilation from succeeding due to
     deprecation / removal of `std::uncaught_exception()` (2, #2047).
     !end-bullet!
