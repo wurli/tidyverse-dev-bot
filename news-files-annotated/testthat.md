@@ -3,6 +3,9 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    testthat now requires R 4.1.
+    !end-bullet!
+-   !begin-bullet!
     `expect_s4_class()` now supports unquoting (@stibu81, #2064).
     !end-bullet!
 -   !begin-bullet!
