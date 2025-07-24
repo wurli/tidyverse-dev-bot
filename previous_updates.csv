@@ -19490,3 +19490,4 @@ quarto,4454a5fe72bec2a79e30d7b9b0446fd8,"Interactive prompt error fixed for exte
 testthat,a68049a1287b36dcd80b6d85a57b755e,testthat now requires R 4.1.,NA,NA,NA,NA
 renv,945b73bbc37cd9180094cdb211daf43a,Fixed an issue where `file.rename()` could fail when unpacking a package during installation in certain Windows environments. (#2156),NA,NA,NA,NA
 testthat,4edf179a776ba862cd5a303b86e40f12,"New `skip_unless_r()` to skip running tests on unsuitable versions of R, e.g. `skip_unless_r("">= 4.1.0"")` to skip tests that require, say, `...names` (@​MichaelChirico, #2022)",NA,NA,NA,NA
+httr2,4df6dce728a66cdd213e008c5afd0793,Refactor `url_modify()` to better retain exact formatting of URL components that are not modified. (#788),NA,NA,NA,NA
