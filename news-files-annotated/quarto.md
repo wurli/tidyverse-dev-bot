@@ -234,7 +234,7 @@
 
     !end-bullet!
 -   !begin-bullet!
-    `quarto_render(as_job = TRUE)` is now wrapable (thanks, @salim-b,
+    `quarto_render(as_job = TRUE)` is now wrappable (thanks, @salim-b,
     #105).
 
     !end-bullet!
