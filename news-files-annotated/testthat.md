@@ -16,6 +16,11 @@
     Fixed an issue preventing compilation from succeeding due to
     deprecation / removal of `std::uncaught_exception()` (2, #2047).
     !end-bullet!
+-   !begin-bullet!
+    New `skip_unless_r()` to skip running tests on unsuitable versions
+    of R, e.g. `skip_unless_r(">= 4.1.0")` to skip tests that require,
+    say, `...names` (@MichaelChirico, #2022)
+    !end-bullet!
 
 !end-bullets-1!
 
