@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed an issue where `renv::dependencies()` could fail for chunks
+    which had a `label` which was not a length-one character vector.
+    (#2144)
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed an issue where `file.rename()` could fail when unpacking a
     package during installation in certain Windows environments. (#2156)
 

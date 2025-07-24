@@ -19496,3 +19496,4 @@ lintr,261094c7e4e297aa8c59be1f11c28516,• `library_call_linter()`,NA,NA,NA,NA
 lintr,261094c7e4e297aa8c59be1f11c28516,• `terminal_close_linter()`,NA,NA,NA,NA
 lintr,261094c7e4e297aa8c59be1f11c28516,• `unnecessary_lambda_linter()`,NA,NA,NA,NA
 testthat,987dcf51e47f29e15b88c27fcde19ea2,"`skip_on_os()` gains an option `""emscripten""` of the `os` argument to skip tests on Emscripten (@​eitsupi, #2103).",NA,NA,NA,NA
+renv,21a690174bdfd18bfcdd7eb1d6e584cc,Fixed an issue where `renv::dependencies()` could fail for chunks which had a `label` which was not a length-one character vector. (#2144),NA,NA,NA,NA
