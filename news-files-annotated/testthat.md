@@ -21,6 +21,10 @@
     of R, e.g. `skip_unless_r(">= 4.1.0")` to skip tests that require,
     say, `...names` (@MichaelChirico, #2022)
     !end-bullet!
+-   !begin-bullet!
+    `skip_on_os()` gains an option `"emscripten"` of the `os` argument
+    to skip tests on Emscripten (@eitsupi, #2103).
+    !end-bullet!
 
 !end-bullets-1!
 

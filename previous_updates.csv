@@ -19491,3 +19491,8 @@ testthat,a68049a1287b36dcd80b6d85a57b755e,testthat now requires R 4.1.,NA,NA,NA,
 renv,945b73bbc37cd9180094cdb211daf43a,Fixed an issue where `file.rename()` could fail when unpacking a package during installation in certain Windows environments. (#2156),NA,NA,NA,NA
 testthat,4edf179a776ba862cd5a303b86e40f12,"New `skip_unless_r()` to skip running tests on unsuitable versions of R, e.g. `skip_unless_r("">= 4.1.0"")` to skip tests that require, say, `...names` (@​MichaelChirico, #2022)",NA,NA,NA,NA
 httr2,4df6dce728a66cdd213e008c5afd0793,Refactor `url_modify()` to better retain exact formatting of URL components that are not modified. (#788),NA,NA,NA,NA
+lintr,261094c7e4e297aa8c59be1f11c28516,"Linters with logic around function declarations consistently include the R 4.0.0 shorthand `\()` (#2818, continuation of earlier #2190, @​MichaelChirico).",NA,NA,NA,NA
+lintr,261094c7e4e297aa8c59be1f11c28516,• `library_call_linter()`,NA,NA,NA,NA
+lintr,261094c7e4e297aa8c59be1f11c28516,• `terminal_close_linter()`,NA,NA,NA,NA
+lintr,261094c7e4e297aa8c59be1f11c28516,• `unnecessary_lambda_linter()`,NA,NA,NA,NA
+testthat,987dcf51e47f29e15b88c27fcde19ea2,"`skip_on_os()` gains an option `""emscripten""` of the `os` argument to skip tests on Emscripten (@​eitsupi, #2103).",NA,NA,NA,NA
