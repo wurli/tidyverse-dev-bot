@@ -3,6 +3,9 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `local_edition()` now gives a useful error for bad values (#1547).
+    !end-bullet!
+-   !begin-bullet!
     testthat now requires R 4.1.
     !end-bullet!
 -   !begin-bullet!
