@@ -25,6 +25,11 @@
     `skip_on_os()` gains an option `"emscripten"` of the `os` argument
     to skip tests on Emscripten (@eitsupi, #2103).
     !end-bullet!
+-   !begin-bullet!
+    New expectation, `expect_shape()`, for testing the shape (i.e., the
+    `length()`, `nrow()`, `ncol()`, or `dim()`), all in one place
+    (#1423, @michaelchirico).
+    !end-bullet!
 
 !end-bullets-1!
 
