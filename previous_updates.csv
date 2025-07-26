@@ -19501,3 +19501,9 @@ quarto,d53b6dea5042120e1e65fe1241d6dfdc,"`tbl_qmd_span()` and `tbl_qmd_div()` cr
 quarto,5c2b3a413f1f9d2c65ba49af8d9609e2,"`theme_brand_*()` and `theme_colors_*()` helper functions assist with theming using dark and light brand colors for common graph and table packages (thanks, @​gordonwoodhull, #234). The functions support **ggplot2** (`theme_brand_ggplot2()`, `theme_colors_ggplot2()`), **gt** (`theme_brand_gt()`, `theme_colors_gt()`), **flextable** (`theme_brand_flextable()`, `theme_colors_flextable()`), **plotly** (`theme_brand_plotly()`, `theme_colors_plotly()`), and **thematic** (`theme_brand_thematic()`, `theme_colors_thematic()`).",NA,NA,NA,NA
 testthat,22944e84d8ee6d461ed2c47cb611bcf9,"New expectation, `expect_shape()`, for testing the shape (i.e., the `length()`, `nrow()`, `ncol()`, or `dim()`), all in one place (#1423, @​michaelchirico).",NA,NA,NA,NA
 testthat,dea10ba5f88df67b02a846bf5e56c246,`local_edition()` now gives a useful error for bad values (#1547).,NA,NA,NA,NA
+lintr,fd944d193f08165b6760d1c88f8f1049,"New argument `include_s4_slots` for the `xml_find_function_calls()` entry in the `get_source_expressions()` to govern whether calls of the form `s4Obj@​fun()` are included in the result (#2820, @​MichaelChirico).",NA,NA,NA,NA
+lintr,b1db4bc69c4bd38842fd0d934ef198f0,"More consistency on handling `@​` extractions (#2820, @​MichaelChirico).",NA,NA,NA,NA
+lintr,b1db4bc69c4bd38842fd0d934ef198f0,• `function_left_parentheses_linter()`,NA,NA,NA,NA
+lintr,b1db4bc69c4bd38842fd0d934ef198f0,• `indentation_linter()`,NA,NA,NA,NA
+lintr,b1db4bc69c4bd38842fd0d934ef198f0,• `library_call_linter()`,NA,NA,NA,NA
+lintr,b1db4bc69c4bd38842fd0d934ef198f0,• `missing_argument_linter()`,NA,NA,NA,NA
