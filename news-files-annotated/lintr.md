@@ -72,6 +72,14 @@
     `assignment_linter()` no longer errors if `"%<>%"` is an allowed
     operator (#2850, @AshesITR).
     !end-bullet!
+-   !begin-bullet!
+    `condition_call_linter()` no longer covers cases where the object
+    type in the ellipsis cannot be determined with certainty (#2888,
+    #2890, @Bisaloo). In particular, this fixes the known false positive
+    of custom conditions created via `errorCondition()` or
+    `warningCondition()` not being compatible with the `call.` argument
+    in `stop()` or `warning()`.
+    !end-bullet!
 
 !end-bullets-3!
 
