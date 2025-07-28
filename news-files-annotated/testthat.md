@@ -3,6 +3,13 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    New `pass()` function to use in place of `succeed()` (#2113).
+    !end-bullet!
+-   !begin-bullet!
+    `expectation()` is now a combination of `new_expectation()` and
+    `exp_signal()` (#2125).
+    !end-bullet!
+-   !begin-bullet!
     `is_null()`/`matches()` deprecated in 2.0.0 (2017-12-19) and
     `is_true()`/`is_false()` deprecated in 2.1.0 (2019-04-23) have been
     removed (#2109).

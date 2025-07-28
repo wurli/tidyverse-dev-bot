@@ -19512,3 +19512,5 @@ testthat,8c4f0f51ce8d883c45036236341f8b49,`is_null()`/`matches()` deprecated in 
 gt,7aa5498af64d51fbcceb34045e163267,"Enable remaining `cols_*` functions for gt_group objects (@​shannonhaughton, #2012)",NA,NA,NA,NA
 lintr,5d86fcf376854e65e4cd2b1ac68607b4,"`sprintf_linter()` lints `sprintf()` and `gettextf()` calls when a constant string is passed to `fmt` (#2894, @​Bisaloo).",NA,NA,NA,NA
 rsconnect,484b105dc0a4b95564fc3e303b7b146c,Removed unused internal methods from Connect client. (#1182),NA,NA,NA,NA
+testthat,291e1fec00b8ea4b33f47587abdbc895,New `pass()` function to use in place of `succeed()` (#2113).,NA,NA,NA,NA
+testthat,b775debc83aaa375f07d32f01fff2fbb,`expectation()` is now a combination of `new_expectation()` and `exp_signal()` (#2125).,NA,NA,NA,NA
