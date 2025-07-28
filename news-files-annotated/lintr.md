@@ -209,6 +209,10 @@
     the form `s4Obj@fun()` are included in the result (#2820,
     @MichaelChirico).
     !end-bullet!
+-   !begin-bullet!
+    `sprintf_linter()` lints `sprintf()` and `gettextf()` calls when a
+    constant string is passed to `fmt` (#2894, @Bisaloo).
+    !end-bullet!
 
 !end-bullets-5!
 
