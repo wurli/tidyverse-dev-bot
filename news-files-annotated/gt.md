@@ -41,6 +41,11 @@
 
     !end-bullet!
 -   !begin-bullet!
+    Enable remaining `cols_*` functions for gt_group objects
+    (@shannonhaughton, #2012)
+
+    !end-bullet!
+-   !begin-bullet!
     `tab_footnote()` + `md()` + docx is now processed correctly
     (@olivroy, #1892).
 
