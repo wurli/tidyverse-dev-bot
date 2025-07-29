@@ -1,12 +1,14 @@
 ```{=html}
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 ```
-# duckplyr 1.1.0.9000 (2025-05-09)
+# duckplyr 1.1.1 (2025-07-29)
+
+## Chore
 
 !begin-bullets-1!
 
 -   !begin-bullet!
-    Switching to development version.
+    Fix CRAN failure with `_R_CHECK_THINGS_IN_OTHER_DIRS_=true`.
     !end-bullet!
 
 !end-bullets-1!
