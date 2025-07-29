@@ -76,6 +76,13 @@
     it is used to filter the checklist when making the issue.
 
     !end-bullet!
+-   !begin-bullet!
+    Some GitHub functionality should now work for GitHub Enterprise
+    Cloud (as opposed to GitHub Enterprise Server). Specifically an
+    HTTPS URL such as `"https://my-cool-org.ghe.com"` should now be
+    recognized as "looks like GitHub" (#2098, @jameslairdsmith).
+
+    !end-bullet!
 
 !end-bullets-3!
 
