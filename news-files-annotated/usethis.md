@@ -18,6 +18,12 @@
 
     !end-bullet!
 -   !begin-bullet!
+    `use_r_universe_badge()` is a new function that creates a README
+    badge indicating your package is available on R-universe and
+    reporting the latest version (@olivroy, #1883).
+
+    !end-bullet!
+-   !begin-bullet!
     usethis's criteria for recognizing a project have expanded to
     include (#2133):
 
