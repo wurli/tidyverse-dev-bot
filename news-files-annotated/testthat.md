@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `expect_no_failures()` and `expect_no_successes()` are now
+    deprecated as `expect_success()` now test for no failures and
+    `expect_failure()` tests for no successes (#)
+    !end-bullet!
+-   !begin-bullet!
     New `pass()` function to use in place of `succeed()` (#2113).
     !end-bullet!
 -   !begin-bullet!
