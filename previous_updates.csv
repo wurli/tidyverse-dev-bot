@@ -19523,3 +19523,4 @@ duckplyr,298ddf0c5ce299f395d365a46a1b3a94,Fix CRAN failure with `_R_CHECK_THINGS
 usethis,7cbde4df58737c279ca7d5d05d5f940c,"`create_quarto_project()` is a new experimental function that combines basic usage of `quarto::quarto_create_project()` with some of the niceties of usethis's `create_*()` functions, such as opening the newly created project in your IDE (#1891, @​focardozom).",NA,NA,NA,NA
 testthat,c5594875eaf19059b586ab0ce76987fc,New `local_on_cran(TRUE)` allows you to simulate how your tests will run on CRAN (#2112).,NA,NA,NA,NA
 testthat,e8081da8e93befa05f57bf9e8db46904,"`expect_no_*()` now executes the entire code block, rather than stopping at the first message or warning (#1991).",NA,NA,NA,NA
+reticulate,f17b95b13ba6983a785512f895a2851e,"`py_require()` now gives a better message when a user erroneously declares a module from the Python standard library as a required package (@​lazappi, #1788)",NA,NA,NA,NA
