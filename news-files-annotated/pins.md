@@ -4,6 +4,11 @@
 
 -   !begin-bullet!
     Added support of the `qs2` format (#865, @atsyplenkov).
+
+    !end-bullet!
+-   !begin-bullet!
+    Added download progress bar for `board_url()` (#872, @lbm364dl).
+
     !end-bullet!
 
 !end-bullets-1!
