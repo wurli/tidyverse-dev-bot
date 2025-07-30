@@ -134,7 +134,7 @@
     `tabular*`. Float position can be controlled by the `latex.tbl.pos`
     argument in `tab_options`. Quarto users can alternatively use the
     `tbl-pos` argument to control positioning. To use a `longtable`
-    environment instead, use `tab_option(latex.use_longtable = TRUE)`.
+    environment instead, use `tab_options(latex.use_longtable = TRUE)`.
     (@AronGullickson, #1588)
 
     !end-bullet!
