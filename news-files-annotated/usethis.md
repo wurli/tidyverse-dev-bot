@@ -29,7 +29,8 @@
 
     !begin-bullets-2!
     -   !begin-bullet!
-        a `.vscode/` directory, which Positron or VS Code might create
+        a `.vscode/settings.json` file, which Positron or VS Code might
+        create
         !end-bullet!
     -   !begin-bullet!
         a `_quarto.yml` file, typical of a Quarto project
@@ -39,6 +40,13 @@
         !end-bullet!
 
     !end-bullets-2!
+    !end-bullet!
+-   !begin-bullet!
+    `create_quarto_project()` is a new experimental function that
+    combines basic usage of `quarto::quarto_create_project()` with some
+    of the niceties of usethis's `create_*()` functions, such as opening
+    the newly created project in your IDE (#1891, @focardozom).
+
     !end-bullet!
 
 !end-bullets-1!
