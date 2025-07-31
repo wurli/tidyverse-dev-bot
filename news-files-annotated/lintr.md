@@ -221,6 +221,10 @@
 !begin-bullets-8!
 
 -   !begin-bullet!
+    `all_equal_linter()` warns about incorrect use of `all.equal()` in
+    `if` clauses or preceded by `!` (#2885, @Bisaloo).
+    !end-bullet!
+-   !begin-bullet!
     `download_file_linter()` encourages the use of `mode = "wb"` (or
     `mode = "ab"`) when using `download.file()`, rather than
     `mode = "w"` or `mode = "a"`, as the latter can produce broken files

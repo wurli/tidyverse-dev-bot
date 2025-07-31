@@ -19537,3 +19537,4 @@ usethis,734f87b17c6d2072c3832af83b87ded8,"• `use_github_action_pr_commands()`,
 usethis,734f87b17c6d2072c3832af83b87ded8,"• `use_github_action_check_full()`, deprecated in v2.1.0",NA,NA,NA,NA
 testthat,b341dd044d395dd2febc4a24f98d4d1b,`expect_matches()` failures should be a little easier to read (#2135).,NA,NA,NA,NA
 promises,b64960663e1faff0c30c29686104074d,Fixed #154: Makes promises a pure R package that does not require compilation. We include a test of a C++ interface in `inst/promise_task.cpp` that is now dynamically compiled during testing. (#155),NA,NA,NA,NA
+lintr,d926dc4cbec080b094183cbe59e43acd,"`all_equal_linter()` warns about incorrect use of `all.equal()` in `if` clauses or preceded by `!` (#2885, @​Bisaloo).",NA,NA,NA,NA
