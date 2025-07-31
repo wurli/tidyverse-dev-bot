@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `expect_snapshot_value()` can now handle expressions that generate
+    `-` (#1678) or zero length atomic vectors (#2042).
+    !end-bullet!
+-   !begin-bullet!
     `expect_matches()` failures should be a little easier to read
     (#2135).
     !end-bullet!
