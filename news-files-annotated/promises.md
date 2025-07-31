@@ -3,8 +3,16 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed #154: Makes promises a pure R package that does not require
+    compilation. We include a test of a C++ interface in
+    `inst/promise_task.cpp` that is now dynamically compiled during
+    testing. (#155)
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed #47: `promise_map()` can now properly handle `NULL` values
     being returned. (Thank you, @RLesur! #138)
+
     !end-bullet!
 
 !end-bullets-1!
