@@ -19526,3 +19526,12 @@ testthat,e8081da8e93befa05f57bf9e8db46904,"`expect_no_*()` now executes the enti
 reticulate,f17b95b13ba6983a785512f895a2851e,"`py_require()` now gives a better message when a user erroneously declares a module from the Python standard library as a required package (@​lazappi, #1788)",NA,NA,NA,NA
 reticulate,f84f9c341bbc6feb22ed81b5017fd2c8,Restored compatability with `uv` versions \>= 0.8.0 (#1818).,NA,NA,NA,NA
 pins,0af3bec19227630dfeee2fb0ab441690,"Added download progress bar for `board_url()` (#872, @​lbm364dl).",NA,NA,NA,NA
+usethis,1cad2bcb5d7dde300b32275620292acc,`use_course()` and `use_zip()` open the new folder in a new session of the current IDE (RStudio or Positron) in more situations and add a `.here` file if the folder doesn't already fulfill any of usethis's criteria for a project root folder (#2127).,NA,NA,NA,NA
+usethis,734f87b17c6d2072c3832af83b87ded8,Several deprecated functions have been removed:,NA,NA,NA,NA
+usethis,734f87b17c6d2072c3832af83b87ded8,"• `use_rscloud_badge()`, deprecated in v2.2.0; use `use_posit_cloud_badge()` instead",NA,NA,NA,NA
+usethis,734f87b17c6d2072c3832af83b87ded8,"• `git_branch_default()`, deprecated in v2.1.0; use `git_default_branch()` instead",NA,NA,NA,NA
+usethis,734f87b17c6d2072c3832af83b87ded8,"• `use_tidy_eval()`, deprecated in v2.2.0; no longer necessary",NA,NA,NA,NA
+usethis,734f87b17c6d2072c3832af83b87ded8,"• `use_github_actions()` and `use_github_action_check_release()`, deprecated in v.2.2.0; use `use_github_action('check-release')` instead",NA,NA,NA,NA
+usethis,734f87b17c6d2072c3832af83b87ded8,"• `use_github_action_check_standard()`, deprecated in v2.2.0; use `use_github_action('check-standard')` instead",NA,NA,NA,NA
+usethis,734f87b17c6d2072c3832af83b87ded8,"• `use_github_action_pr_commands()`, deprecated in v2.2.0",NA,NA,NA,NA
+usethis,734f87b17c6d2072c3832af83b87ded8,"• `use_github_action_check_full()`, deprecated in v2.1.0",NA,NA,NA,NA
