@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `expect_matches()` failures should be a little easier to read
+    (#2135).
+    !end-bullet!
+-   !begin-bullet!
     New `local_on_cran(TRUE)` allows you to simulate how your tests will
     run on CRAN (#2112).
     !end-bullet!

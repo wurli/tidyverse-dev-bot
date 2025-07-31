@@ -19535,3 +19535,4 @@ usethis,734f87b17c6d2072c3832af83b87ded8,"• `use_github_actions()` and `use_gi
 usethis,734f87b17c6d2072c3832af83b87ded8,"• `use_github_action_check_standard()`, deprecated in v2.2.0; use `use_github_action('check-standard')` instead",NA,NA,NA,NA
 usethis,734f87b17c6d2072c3832af83b87ded8,"• `use_github_action_pr_commands()`, deprecated in v2.2.0",NA,NA,NA,NA
 usethis,734f87b17c6d2072c3832af83b87ded8,"• `use_github_action_check_full()`, deprecated in v2.1.0",NA,NA,NA,NA
+testthat,b341dd044d395dd2febc4a24f98d4d1b,`expect_matches()` failures should be a little easier to read (#2135).,NA,NA,NA,NA
