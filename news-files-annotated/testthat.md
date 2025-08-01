@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `expect_snapshot()` and friends will now fail when creating a new
+    snapshot on CI. This is usually a signal that you've forgotten to
+    run it locally before committing (#1461).
+    !end-bullet!
+-   !begin-bullet!
     `expect_snapshot_value()` can now handle expressions that generate
     `-` (#1678) or zero length atomic vectors (#2042).
     !end-bullet!

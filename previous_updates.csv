@@ -19545,3 +19545,4 @@ promises,c39084f3416c78bdf3609f20c5e80db3,"Updated `catch()` API from `catch(pro
 pillar,e39c0af68bcb18b1c7e6e787e75fd68a,"Format with air, check detritus, better handling of `extra-packages` (#794).",NA,NA,NA,NA
 tibble,8818a6503ea0e8753dab290d4cc604eb,Auto-update from GitHub Actions. Run: https://github.com/tidyverse/tibble/actions/runs/16661919871,NA,NA,NA,NA
 tibble,03486ac4adce9491eb4132034a456592,"Format with air, check detritus, better handling of `extra-packages` (#1660).",NA,NA,NA,NA
+testthat,12d40bbff6b1e2d5dff1d6610217a050,`expect_snapshot()` and friends will now fail when creating a new snapshot on CI. This is usually a signal that you've forgotten to run it locally before committing (#1461).,NA,NA,NA,NA
