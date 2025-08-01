@@ -3,6 +3,14 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `JunitReporter()` strips ANSI escapes in more placese (#1852,
+    #2032).
+    !end-bullet!
+-   !begin-bullet!
+    `try_again()` is now publicised. The first argument is now the
+    number of retries, not tries (#2050).
+    !end-bullet!
+-   !begin-bullet!
     `vignette("custom-expectations)` has been overhauled to make it much
     clearer how to create high-quality expectations (#2113, #2132,
     #2072).
