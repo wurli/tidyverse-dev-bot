@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `vignette("custom-expectations)` has been overhauled to make it much
+    clearer how to create high-quality expectations (#2113, #2132,
+    #2072).
+    !end-bullet!
+-   !begin-bullet!
     `expect_snapshot()` and friends will now fail when creating a new
     snapshot on CI. This is usually a signal that you've forgotten to
     run it locally before committing (#1461).
