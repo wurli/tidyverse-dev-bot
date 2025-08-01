@@ -19549,3 +19549,5 @@ testthat,12d40bbff6b1e2d5dff1d6610217a050,`expect_snapshot()` and friends will n
 testthat,abec579cfd080548d19cdfe4c9489811,"`vignette(""custom-expectations)` has been overhauled to make it much clearer how to create high-quality expectations (#2113, #2132, #2072).",NA,NA,NA,NA
 testthat,87ebf20e36819bf957f146379137d8e5,"`JunitReporter()` strips ANSI escapes in more placese (#1852, #2032).",NA,NA,NA,NA
 testthat,48510a05459a3c08c25d874d61e1e914,"`try_again()` is now publicised. The first argument is now the number of retries, not tries (#2050).",NA,NA,NA,NA
+testthat,6fb96b3969b34e29a047fa049a4db1e7,`expect_*()` functions consistently and rigorously check their inputs (#1754).,NA,NA,NA,NA
+testthat,b843451714628019220e187e6bc5cd84,"`JunitReporter()` no longer fails with `""no applicable method for xml_add_child""` for warnings outside of tests (#1913). Additionally, warnings now save their backtraces.",NA,NA,NA,NA

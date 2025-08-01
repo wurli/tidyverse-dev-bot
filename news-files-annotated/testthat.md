@@ -3,6 +3,15 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `expect_*()` functions consistently and rigorously check their
+    inputs (#1754).
+    !end-bullet!
+-   !begin-bullet!
+    `JunitReporter()` no longer fails with
+    `"no applicable method for xml_add_child"` for warnings outside of
+    tests (#1913). Additionally, warnings now save their backtraces.
+    !end-bullet!
+-   !begin-bullet!
     `JunitReporter()` strips ANSI escapes in more placese (#1852,
     #2032).
     !end-bullet!
