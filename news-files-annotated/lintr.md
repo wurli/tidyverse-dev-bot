@@ -306,6 +306,10 @@
     formulas (`y ~ T + F`), which can represent variables in data not
     controlled by the author (#2637, @MichaelChirico).
     !end-bullet!
+-   !begin-bullet!
+    `implicit_assignment_linter()` with `allow_scoped=TRUE` doesn't lint
+    for `if (a <- 1) print(a)` (#2913, @MichaelChirico).
+    !end-bullet!
 
 !end-bullets-9!
 

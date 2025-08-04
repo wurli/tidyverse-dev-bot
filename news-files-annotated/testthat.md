@@ -3,6 +3,9 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    New `expect_r6_class()` (#2030).
+    !end-bullet!
+-   !begin-bullet!
     `expect_*()` functions consistently and rigorously check their
     inputs (#1754).
     !end-bullet!

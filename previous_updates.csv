@@ -19555,3 +19555,5 @@ renv,d956d36c7f0df1ff2ef66152e99f8bc9,"`renv` now prefers appending, rather than
 renv,62f882b236d3f17ed3489149c668162c,`renv::restore()` now ignores the `Repository` field on lockfile entries when the `repos.override` configuration option is set. (#2127),NA,NA,NA,NA
 renv,36f107817ef1637eb6e1e5126f237daf,"`renv::restore()` now transforms binary repository URLs appropriately, for installed packages which were recorded as installed from an alternate binary repository URL. (#2127)",NA,NA,NA,NA
 promises,d3f2ec7acce3a441d1203bce91ff3864,Fixed #156: `then(tee=)` and `catch(tee=)` is now required to be a logical value (not just a *truthy* value). (#157),NA,NA,NA,NA
+lintr,1c6a7ca4c5132d607b62855df254f27a,"`implicit_assignment_linter()` with `allow_scoped=TRUE` doesn't lint for `if (a <- 1) print(a)` (#2913, @​MichaelChirico).",NA,NA,NA,NA
+testthat,e9af8565a81d89d94a00fe206f525321,New `expect_r6_class()` (#2030).,NA,NA,NA,NA
