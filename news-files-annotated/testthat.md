@@ -3,6 +3,9 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `ParallelProgressReporter` now respect `max_failures` (#1162).
+    !end-bullet!
+-   !begin-bullet!
     The last snapshot is no longer lost if the snapshot file is missing
     the final newline (#2092). It's easy to accidentally remove this
     because there are two trailing new lines in snapshot files and many
