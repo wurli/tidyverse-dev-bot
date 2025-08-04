@@ -3,8 +3,15 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Hashing is now supported for lists containing complex vectors,
+    enabling functions like `vec_unique_loc()` to work on these objects
+    (#1992).
+
+    !end-bullet!
+-   !begin-bullet!
     `vec_detect_complete(NULL)` now returns `logical()`, consistent with
     `vec_detect_missing(NULL)` (#1916).
+
     !end-bullet!
 
 !end-bullets-1!

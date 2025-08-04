@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    The last snapshot is no longer lost if the snapshot file is missing
+    the final newline (#2092). It's easy to accidentally remove this
+    because there are two trailing new lines in snapshot files and many
+    editors will automatically remove if you touch the file.
+    !end-bullet!
+-   !begin-bullet!
     New `expect_r6_class()` (#2030).
     !end-bullet!
 -   !begin-bullet!
