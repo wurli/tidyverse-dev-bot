@@ -19572,3 +19572,4 @@ testthat,61dc6554607e18773a6b787deb8a74d5,`describe()` now correctly scopes `ski
 testthat,333e893b31135c7c3013673130909c6e,"`expect_lt()`, `expect_gt()`, and friends have a refined display that is more likely to display the correct number of digits and shows you the actual values compared.",NA,NA,NA,NA
 testthat,6017637080fefc56c5444b64b9a12c43,Interrupting a test now prints the test name. This makes it easier to tell where a very slow test might be hanging (#1464),NA,NA,NA,NA
 testthat,e522fdc0d730e8ba610090ee64f32849,Parallel testthat now does not ignore test files with syntax errors (#1360).,NA,NA,NA,NA
+vctrs,152903a2dfcf16fadce7bf46b24711f0,"Functions backed by a dictionary based implementation are often significantly faster, depending on the exact inputs used. This includes: `vec_match()`, `vec_in()`, `vec_group_loc()`, `vec_count()`, `vec_unique()`, and more (#1976).",NA,NA,NA,NA
