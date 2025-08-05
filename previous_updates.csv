@@ -19562,3 +19562,9 @@ vctrs,47c7a2c9d60105b4a40a00fcf41d9b17,"Hashing is now supported for lists conta
 testthat,7b81ab8757752fd82f40ea0843f4f2cd,`ParallelProgressReporter` now respect `max_failures` (#1162).,NA,NA,NA,NA
 pillar,6e17a77b8ecd8f79d449c420654a8cd4,Cleanup and fix macOS (#796).,NA,NA,NA,NA
 tibble,9f0c177df523c5c8d104b95e8fcec2fb,Cleanup and fix macOS (#1661).,NA,NA,NA,NA
+vctrs,b38405b8f620cca41178e38c96c100cd,The following functions are no longer experimental:,NA,NA,NA,NA
+vctrs,b38405b8f620cca41178e38c96c100cd,• `vec_fill_missing()`,NA,NA,NA,NA
+vctrs,b38405b8f620cca41178e38c96c100cd,• `vec_group_id()`,NA,NA,NA,NA
+vctrs,b38405b8f620cca41178e38c96c100cd,• `vec_group_loc()`,NA,NA,NA,NA
+vctrs,b38405b8f620cca41178e38c96c100cd,• `vec_group_rle()`,NA,NA,NA,NA
+vctrs,b38405b8f620cca41178e38c96c100cd,• `vec_locate_matches()`,NA,NA,NA,NA
