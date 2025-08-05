@@ -50,6 +50,11 @@
     (@olivroy, #1892).
 
     !end-bullet!
+-   !begin-bullet!
+    Added support for some unicode characters when going out to LaTeX
+    (@thebioengineer)
+
+    !end-bullet!
 
 !end-bullets-1!
 
