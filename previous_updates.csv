@@ -19560,3 +19560,5 @@ testthat,e9af8565a81d89d94a00fe206f525321,New `expect_r6_class()` (#2030).,NA,NA
 testthat,c62545986f1ed67c87672da1d81daee1,The last snapshot is no longer lost if the snapshot file is missing the final newline (#2092). It's easy to accidentally remove this because there are two trailing new lines in snapshot files and many editors will automatically remove if you touch the file.,NA,NA,NA,NA
 vctrs,47c7a2c9d60105b4a40a00fcf41d9b17,"Hashing is now supported for lists containing complex vectors, enabling functions like `vec_unique_loc()` to work on these objects (#1992).",NA,NA,NA,NA
 testthat,7b81ab8757752fd82f40ea0843f4f2cd,`ParallelProgressReporter` now respect `max_failures` (#1162).,NA,NA,NA,NA
+pillar,6e17a77b8ecd8f79d449c420654a8cd4,Cleanup and fix macOS (#796).,NA,NA,NA,NA
+tibble,9f0c177df523c5c8d104b95e8fcec2fb,Cleanup and fix macOS (#1661).,NA,NA,NA,NA
