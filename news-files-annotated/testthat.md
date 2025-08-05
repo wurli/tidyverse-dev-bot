@@ -3,6 +3,14 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `describe()`, `it()`, and `test_that()` now have a shared stack of
+    descriptions so that if you nest any inside of each other, any
+    resulting failures will show you the full path.
+    !end-bullet!
+-   !begin-bullet!
+    `describe()` now correctly scopes `skip()` (#2007).
+    !end-bullet!
+-   !begin-bullet!
     `ParallelProgressReporter` now respect `max_failures` (#1162).
     !end-bullet!
 -   !begin-bullet!

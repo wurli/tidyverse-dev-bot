@@ -19568,3 +19568,4 @@ vctrs,b38405b8f620cca41178e38c96c100cd,• `vec_group_id()`,NA,NA,NA,NA
 vctrs,b38405b8f620cca41178e38c96c100cd,• `vec_group_loc()`,NA,NA,NA,NA
 vctrs,b38405b8f620cca41178e38c96c100cd,• `vec_group_rle()`,NA,NA,NA,NA
 vctrs,b38405b8f620cca41178e38c96c100cd,• `vec_locate_matches()`,NA,NA,NA,NA
+testthat,61dc6554607e18773a6b787deb8a74d5,`describe()` now correctly scopes `skip()` (#2007).,NA,NA,NA,NA
