@@ -3,6 +3,14 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Interrupting a test now prints the test name. This makes it easier
+    to tell where a very slow test might be hanging (#1464)
+    !end-bullet!
+-   !begin-bullet!
+    Parallel testthat now does not ignore test files with syntax errors
+    (#1360).
+    !end-bullet!
+-   !begin-bullet!
     `expect_lt()`, `expect_gt()`, and friends have a refined display
     that is more likely to display the correct number of digits and
     shows you the actual values compared.
