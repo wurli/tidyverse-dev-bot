@@ -19580,3 +19580,4 @@ testthat,dd2b1f85848e405cbf834b33149dd95d,"On CRAN, `test_that()` now automatica
 testthat,73bf100e6899de49b2e84b4f5bb86438,"`expect_snapshot()` no longer skips on CRAN, as that skips the rest of the test. Instead it just returns, neither succeeding nor failing (#1585).",NA,NA,NA,NA
 renv,91ac61411df462cb20c452953217aa15,`renv` now supports bootstrapping itself from the global package cache. (#1799),NA,NA,NA,NA
 renv,bdb698b7f246fc19c08c60d596646d34,The `renv` configuration option `bioconductor.init` can now be used to control the default argument passed for the `bioconductor` parameter in calls to `renv::init()`. (#2128),NA,NA,NA,NA
+renv,8070681bee8c76665cef2e1c0f077ce8,`renv` now prints the version numbers of the packages it downloads during install and restore. (#1925),NA,NA,NA,NA
