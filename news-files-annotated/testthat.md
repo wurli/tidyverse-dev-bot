@@ -3,6 +3,27 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    New `SlowReporter` makes it easier to find the slowest tests in your
+    package. The easiest way to run it is with
+    `devtools::test(reporter = "slow")` (#1466).
+    !end-bullet!
+-   !begin-bullet!
+    Power `expect_mapequal()` with `waldo::compare(list_as_map = TRUE)`
+    (#1521).
+    !end-bullet!
+-   !begin-bullet!
+    On CRAN, `test_that()` now automatically skips if a package is not
+    installed (#1585). Practically, this means that you no longer need
+    to check that suggested packages are installed. (We don't do this in
+    the tidyverse because we think it has limited payoff, but other
+    styles advise differently.)
+    !end-bullet!
+-   !begin-bullet!
+    `expect_snapshot()` no longer skips on CRAN, as that skips the rest
+    of the test. Instead it just returns, neither succeeding nor failing
+    (#1585).
+    !end-bullet!
+-   !begin-bullet!
     Interrupting a test now prints the test name. This makes it easier
     to tell where a very slow test might be hanging (#1464)
     !end-bullet!

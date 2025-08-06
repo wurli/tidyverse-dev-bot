@@ -19574,3 +19574,7 @@ testthat,6017637080fefc56c5444b64b9a12c43,Interrupting a test now prints the tes
 testthat,e522fdc0d730e8ba610090ee64f32849,Parallel testthat now does not ignore test files with syntax errors (#1360).,NA,NA,NA,NA
 vctrs,152903a2dfcf16fadce7bf46b24711f0,"Functions backed by a dictionary based implementation are often significantly faster, depending on the exact inputs used. This includes: `vec_match()`, `vec_in()`, `vec_group_loc()`, `vec_count()`, `vec_unique()`, and more (#1976).",NA,NA,NA,NA
 gt,2f52fb809d3acfc85a3c9d026dc29172,Added support for some unicode characters when going out to LaTeX (@​thebioengineer),NA,NA,NA,NA
+testthat,451ffd215ea490b5727307f82a0f5159,"New `SlowReporter` makes it easier to find the slowest tests in your package. The easiest way to run it is with `devtools::test(reporter = ""slow"")` (#1466).",NA,NA,NA,NA
+testthat,888c677618502d83627c38bbead624ac,Power `expect_mapequal()` with `waldo::compare(list_as_map = TRUE)` (#1521).,NA,NA,NA,NA
+testthat,dd2b1f85848e405cbf834b33149dd95d,"On CRAN, `test_that()` now automatically skips if a package is not installed (#1585). Practically, this means that you no longer need to check that suggested packages are installed. (We don't do this in the tidyverse because we think it has limited payoff, but other styles advise differently.)",NA,NA,NA,NA
+testthat,73bf100e6899de49b2e84b4f5bb86438,"`expect_snapshot()` no longer skips on CRAN, as that skips the rest of the test. Instead it just returns, neither succeeding nor failing (#1585).",NA,NA,NA,NA
