@@ -1,18 +1,26 @@
 # thematic (development version)
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    Added requirement of ggplot2 \>= 3.5.2. (#161, thanks @antivirak)
+    !end-bullet!
+
+!end-bullets-1!
+
 # thematic 0.1.7
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     Updates to accomodate new ggplot2 v4.0.0 release. (#156)
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # thematic 0.1.6
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     Add basic positron IDE support. (#152)
@@ -21,11 +29,11 @@
     Update for now deprecated `systemfonts::match_font()`. (#153)
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 # thematic 0.1.5
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     Accommodate for breaking changes in ggplot2 v3.5.0. (#148)
@@ -35,22 +43,22 @@
     package. (#149)
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 # thematic 0.1.4
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     The `{httpgd}` graphics device (and thus, Github codespaces) is now
     supported. (#143)
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 # thematic 0.1.3
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     Closed #129: Fixed a bug with not being able override thematic
@@ -65,7 +73,7 @@
     `ggiraph::dsvg()`. (#112)
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # thematic 0.1.2.1
 
@@ -73,7 +81,7 @@ Patch release for vdiffr 1.0
 
 # thematic 0.1.2
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     Closed #89: `{thematic}` now works as expected with the
@@ -98,15 +106,15 @@ Patch release for vdiffr 1.0
     plot-specific user code not being respected by `{thematic}`. (#83)
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 # thematic 0.1.1
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     Initial release of the package, see
     https://rstudio.github.io/thematic/
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
