@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    New `snapshot_reject()` rejects all modified snapshots by deleting
+    the `.new` variants (#1923).
+    !end-bullet!
+-   !begin-bullet!
     New `SlowReporter` makes it easier to find the slowest tests in your
     package. The easiest way to run it is with
     `devtools::test(reporter = "slow")` (#1466).

@@ -19584,3 +19584,4 @@ renv,8070681bee8c76665cef2e1c0f077ce8,`renv` now prints the version numbers of t
 testthat,17e952664e2efd1ce7bd2a985662425d,"`expect_matches()` failures should be a little easier to read (#2135, #2181).",NA,NA,NA,NA
 reticulate,deb8416b652b612d4c74b7291abb7b8c,Positron's reticulate integration will now be automatically enabled when the reticulate package is loaded in Positron (#1822).,NA,NA,NA,NA
 thematic,3a2668a573433b1b33352fc21b9e3db7,"Added requirement of ggplot2 \>= 3.5.2. (#161, thanks @​antivirak)",NA,NA,NA,NA
+testthat,f8323d26d8f8da2567c0b22de4bd91a4,New `snapshot_reject()` rejects all modified snapshots by deleting the `.new` variants (#1923).,NA,NA,NA,NA
