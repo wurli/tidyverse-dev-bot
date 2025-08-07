@@ -12,6 +12,11 @@
     package (@lazappi, #1788)
 
     !end-bullet!
+-   !begin-bullet!
+    Positron's reticulate integration will now be automatically enabled
+    when the reticulate package is loaded in Positron (#1822).
+
+    !end-bullet!
 
 !end-bullets-1!
 

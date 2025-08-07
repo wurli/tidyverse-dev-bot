@@ -19582,3 +19582,4 @@ renv,91ac61411df462cb20c452953217aa15,`renv` now supports bootstrapping itself f
 renv,bdb698b7f246fc19c08c60d596646d34,The `renv` configuration option `bioconductor.init` can now be used to control the default argument passed for the `bioconductor` parameter in calls to `renv::init()`. (#2128),NA,NA,NA,NA
 renv,8070681bee8c76665cef2e1c0f077ce8,`renv` now prints the version numbers of the packages it downloads during install and restore. (#1925),NA,NA,NA,NA
 testthat,17e952664e2efd1ce7bd2a985662425d,"`expect_matches()` failures should be a little easier to read (#2135, #2181).",NA,NA,NA,NA
+reticulate,deb8416b652b612d4c74b7291abb7b8c,Positron's reticulate integration will now be automatically enabled when the reticulate package is loaded in Positron (#1822).,NA,NA,NA,NA
