@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed an issue where the package manager URL was computed
+    incorrectly with RHEL 10.
+
+    !end-bullet!
+-   !begin-bullet!
     `renv` now prints the version numbers of the packages it downloads
     during install and restore. (#1925)
 
