@@ -19586,3 +19586,4 @@ reticulate,deb8416b652b612d4c74b7291abb7b8c,Positron's reticulate integration wi
 thematic,3a2668a573433b1b33352fc21b9e3db7,"Added requirement of ggplot2 \>= 3.5.2. (#161, thanks @​antivirak)",NA,NA,NA,NA
 testthat,f8323d26d8f8da2567c0b22de4bd91a4,New `snapshot_reject()` rejects all modified snapshots by deleting the `.new` variants (#1923).,NA,NA,NA,NA
 renv,a00a430e336b1f1252ce8fea98e9c0f5,Fixed an issue where the package manager URL was computed incorrectly with RHEL 10.,NA,NA,NA,NA
+testthat,85f3575e4ecbfafe0ab8fd397e62e2d3,"Test filtering now works with `it()`, and the `desc` argument can take a character vector in order to recursively filter subtests (i.e. `it()` nested inside of `describe()`) (#2118).",NA,NA,NA,NA

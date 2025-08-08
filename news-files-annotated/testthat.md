@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Test filtering now works with `it()`, and the `desc` argument can
+    take a character vector in order to recursively filter subtests
+    (i.e. `it()` nested inside of `describe()`) (#2118).
+    !end-bullet!
+-   !begin-bullet!
     New `snapshot_reject()` rejects all modified snapshots by deleting
     the `.new` variants (#1923).
     !end-bullet!
