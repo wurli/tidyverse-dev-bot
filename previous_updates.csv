@@ -19587,3 +19587,6 @@ thematic,3a2668a573433b1b33352fc21b9e3db7,"Added requirement of ggplot2 \>= 3.5.
 testthat,f8323d26d8f8da2567c0b22de4bd91a4,New `snapshot_reject()` rejects all modified snapshots by deleting the `.new` variants (#1923).,NA,NA,NA,NA
 renv,a00a430e336b1f1252ce8fea98e9c0f5,Fixed an issue where the package manager URL was computed incorrectly with RHEL 10.,NA,NA,NA,NA
 testthat,85f3575e4ecbfafe0ab8fd397e62e2d3,"Test filtering now works with `it()`, and the `desc` argument can take a character vector in order to recursively filter subtests (i.e. `it()` nested inside of `describe()`) (#2118).",NA,NA,NA,NA
+testthat,0636b9e72ecd70ba0f138b06d61b815a,`expect_named()` now gives more informative errors (#2091).,NA,NA,NA,NA
+testthat,884cf8b8c2536ff4ae371d3ab0b285c4,`test_that()` no longer warns about the absence of `{}` since it no longer seems to be necessary.,NA,NA,NA,NA
+testthat,5765da14f483f6a218fc2167dce2240a,"`test_that()`, `describe()`, and `it()` can now be arbitrarily nested. Each component will skip only if it and its subtests don't contain any expectations. The interactive stop reporter has been fixed so it doesn't duplicate failures. (#2063, #2188).",NA,NA,NA,NA
