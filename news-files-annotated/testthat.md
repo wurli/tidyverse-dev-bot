@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `local_mock()` and `with_mock()` have been deprecated because they
+    are no longer permitted in R 4.5.
+    !end-bullet!
+-   !begin-bullet!
     `snapshot_review()` now passes `...` on to `shiny::runApp()`
     (#1928).
     !end-bullet!
