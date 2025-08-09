@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `snapshot_review()` now passes `...` on to `shiny::runApp()`
+    (#1928).
+    !end-bullet!
+-   !begin-bullet!
     `expect_named()` now gives more informative errors (#2091).
     !end-bullet!
 -   !begin-bullet!

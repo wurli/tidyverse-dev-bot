@@ -19590,3 +19590,4 @@ testthat,85f3575e4ecbfafe0ab8fd397e62e2d3,"Test filtering now works with `it()`,
 testthat,0636b9e72ecd70ba0f138b06d61b815a,`expect_named()` now gives more informative errors (#2091).,NA,NA,NA,NA
 testthat,884cf8b8c2536ff4ae371d3ab0b285c4,`test_that()` no longer warns about the absence of `{}` since it no longer seems to be necessary.,NA,NA,NA,NA
 testthat,5765da14f483f6a218fc2167dce2240a,"`test_that()`, `describe()`, and `it()` can now be arbitrarily nested. Each component will skip only if it and its subtests don't contain any expectations. The interactive stop reporter has been fixed so it doesn't duplicate failures. (#2063, #2188).",NA,NA,NA,NA
+testthat,364961556c11eddbea25eb0ca7964420,`snapshot_review()` now passes `...` on to `shiny::runApp()` (#1928).,NA,NA,NA,NA
