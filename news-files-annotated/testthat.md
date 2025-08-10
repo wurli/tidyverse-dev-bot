@@ -3,6 +3,15 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `test_dir()`, `test_file()`, `test_package()`, `test_check()`,
+    `test_local()`, `source_file()` gain a `shuffle` argument uses
+    `sample()` to randomly reorder the top-level expressions in each
+    test file (#1942). This random reordering surfaces dependencies
+    between tests and code outside of any test, as well as dependencies
+    between tests. This helps you find and eliminate unintentional
+    dependencies.
+    !end-bullet!
+-   !begin-bullet!
     `snapshot_accept(test)` now works when the test file name contains
     `.` (#1669).
     !end-bullet!
