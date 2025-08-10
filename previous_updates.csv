@@ -19592,3 +19592,4 @@ testthat,884cf8b8c2536ff4ae371d3ab0b285c4,`test_that()` no longer warns about th
 testthat,5765da14f483f6a218fc2167dce2240a,"`test_that()`, `describe()`, and `it()` can now be arbitrarily nested. Each component will skip only if it and its subtests don't contain any expectations. The interactive stop reporter has been fixed so it doesn't duplicate failures. (#2063, #2188).",NA,NA,NA,NA
 testthat,364961556c11eddbea25eb0ca7964420,`snapshot_review()` now passes `...` on to `shiny::runApp()` (#1928).,NA,NA,NA,NA
 testthat,09aeb4946783fa5d13de2936617a957b,`local_mock()` and `with_mock()` have been deprecated because they are no longer permitted in R 4.5.,NA,NA,NA,NA
+testthat,cd651e67ce8c373a71a64a5fea2ee0ee,`snapshot_accept(test)` now works when the test file name contains `.` (#1669).,NA,NA,NA,NA

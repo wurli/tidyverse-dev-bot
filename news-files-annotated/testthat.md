@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `snapshot_accept(test)` now works when the test file name contains
+    `.` (#1669).
+    !end-bullet!
+-   !begin-bullet!
     `local_mock()` and `with_mock()` have been deprecated because they
     are no longer permitted in R 4.5.
     !end-bullet!
