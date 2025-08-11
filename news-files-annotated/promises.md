@@ -43,6 +43,19 @@
     being returned. (Thank you, @RLesur! #138)
 
     !end-bullet!
+-   !begin-bullet!
+    Improved performance of `promise_all()` by using a counter instead
+    of checking completion status of all promises. This changes the time
+    complexity from `O(n^2)` to `O(n)` for determining when all promises
+    are complete. (#163)
+
+    !end-bullet!
+-   !begin-bullet!
+    Fixed a bug in `promise_all()` where duplicate named arguments (or
+    `.list` entries) were not preserved. Now, a result will be produced
+    for every promise provided. (#163)
+
+    !end-bullet!
 
 !end-bullets-1!
 
