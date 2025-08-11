@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `expect_snapshot_file(name=)` must have a unique file path. If a
+    snapshot file attempts to be saved with a duplicate `name`, an error
+    will be thrown. (#1592)
+    !end-bullet!
+-   !begin-bullet!
     `test_dir()`, `test_file()`, `test_package()`, `test_check()`,
     `test_local()`, `source_file()` gain a `shuffle` argument uses
     `sample()` to randomly reorder the top-level expressions in each
