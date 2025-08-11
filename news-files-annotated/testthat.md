@@ -191,8 +191,8 @@
     !end-bullet!
 -   !begin-bullet!
     New expectation, `expect_shape()`, for testing the shape (i.e., the
-    `length()`, `nrow()`, `ncol()`, or `dim()`), all in one place
-    (#1423, @michaelchirico).
+    `nrow()`, `ncol()`, or `dim()`), all in one place (#1423,
+    @michaelchirico).
     !end-bullet!
 
 !end-bullets-1!
