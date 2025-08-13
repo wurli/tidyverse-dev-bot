@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    In `R CMD check`, snapshots now only advise on how to resolve
+    failures once (#2207).
+    !end-bullet!
+-   !begin-bullet!
     `snapshot_review()` includes a reject button and only displays the
     file navigation and the skip button if there are multiple files to
     review (#2025).
