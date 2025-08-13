@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `snapshot_review()` includes a reject button and only displays the
+    file navigation and the skip button if there are multiple files to
+    review (#2025).
+    !end-bullet!
+-   !begin-bullet!
     New `snapshot_download_gh()` makes it easy to get snapshots off
     GitHub and into your local package (#1779).
     !end-bullet!
