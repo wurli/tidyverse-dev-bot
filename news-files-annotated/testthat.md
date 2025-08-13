@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    New `local_mocked_s3_method()`, `local_mocked_s4_method()`, and
+    `local_mocked_r6_class()` allow you to mock S3 and S4 methods and R6
+    classes (#1892, #1916)
+    !end-bullet!
+-   !begin-bullet!
     `expect_snapshot_file(name=)` must have a unique file path. If a
     snapshot file attempts to be saved with a duplicate `name`, an error
     will be thrown. (#1592)
