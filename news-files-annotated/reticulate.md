@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Adds support for requesting Python versions with a wildcard pattern
+    `x.x.*` such as `==3.12.*` in `virtualenv_starter()`,
+    `py_require()`, and related functions (#1825)
+
+    !end-bullet!
+-   !begin-bullet!
     Restored compatability with `uv` versions \>= 0.8.0 (#1818).
 
     !end-bullet!
