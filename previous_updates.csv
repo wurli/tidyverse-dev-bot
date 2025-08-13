@@ -19598,3 +19598,4 @@ testthat,2ed7bc5a0104363d5223cc95b56c63a2,"`expect_snapshot_file(name=)` must ha
 promises,a9054d82df611d0232fa5083429bf3ee,Improved performance of `promise_all()` by using a counter instead of checking completion status of all promises. This changes the time complexity from `O(n^2)` to `O(n)` for determining when all promises are complete. (#163),NA,NA,NA,NA
 promises,32aad02834effb8a5668270a2038c835,"Fixed a bug in `promise_all()` where duplicate named arguments (or `.list` entries) were not preserved. Now, a result will be produced for every promise provided. (#163)",NA,NA,NA,NA
 testthat,ba4f61fc2cec0aba0c1773577ab6f3e9,"New `local_mocked_s3_method()`, `local_mocked_s4_method()`, and `local_mocked_r6_class()` allow you to mock S3 and S4 methods and R6 classes (#1892, #1916)",NA,NA,NA,NA
+testthat,a4d81b8e606a1b81886dedb6a092bd78,New `snapshot_download_gh()` makes it easy to get snapshots off GitHub and into your local package (#1779).,NA,NA,NA,NA
