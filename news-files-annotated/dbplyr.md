@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Add support for `pmin()` and `pmax()` on SQL Server (@edward-burn,
+    #1602).
+
+    !end-bullet!
+-   !begin-bullet!
     Fix for failing snapshot tests (@edward-burn, #1567).
 
     !end-bullet!

@@ -19602,3 +19602,4 @@ testthat,a4d81b8e606a1b81886dedb6a092bd78,New `snapshot_download_gh()` makes it 
 testthat,7a53557429311fef6dc0904f48aaa872,`snapshot_review()` includes a reject button and only displays the file navigation and the skip button if there are multiple files to review (#2025).,NA,NA,NA,NA
 testthat,3deeb2d49de4b655ec6d8b29da776f55,"In `R CMD check`, snapshots now only advise on how to resolve failures once (#2207).",NA,NA,NA,NA
 reticulate,316e58ca2d65e3420d596c27827ed52c,"Adds support for requesting Python versions with a wildcard pattern `x.x.*` such as `==3.12.*` in `virtualenv_starter()`, `py_require()`, and related functions (#1825)",NA,NA,NA,NA
+dbplyr,f064e0ed0cdb65146c9078b5e7466c70,"Add support for `pmin()` and `pmax()` on SQL Server (@​edward-burn, #1602).",NA,NA,NA,NA
