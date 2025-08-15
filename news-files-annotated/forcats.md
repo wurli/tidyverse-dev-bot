@@ -1,21 +1,29 @@
 # forcats (development version)
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    forcats now requires R 4.1.
+    !end-bullet!
+
+!end-bullets-1!
+
 # forcats 1.0.0
 
 ## New features
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     New `fct_na_value_to_level()` and `fct_na_level_to_value()` to
     convert NA values to NA levels and vice versa (#337).
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 ## Minor improvement and bug fixes
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     All functions now validate their inputs, giving more useful errors
@@ -90,11 +98,11 @@
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 # forcats 0.5.2
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     New `fct()` which works like `factor()` but errors if values of `x`
@@ -111,11 +119,11 @@
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 # forcats 0.5.1
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     Re-license as MIT (#277).
@@ -127,11 +135,11 @@
 
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 # forcats 0.5.0
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     `as_factor()` gains a logical method that always returns a factor
@@ -173,13 +181,13 @@
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # forcats 0.4.0
 
 ## New features
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     `fct_collapse()` gains a `group_other` argument to allow you to
@@ -222,11 +230,11 @@
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 ## Minor bug fixes and improvements
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     `fct_count()` gains a parameter to also compute the proportion
@@ -255,13 +263,13 @@
 
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 # forcats 0.3.0
 
 ## API changes
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     `fct_c()` now requires explicit splicing with `!!!` if you have a
@@ -275,11 +283,11 @@
 
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 ## New features
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     All functions that take `...` use "tidy" dots: this means that you
@@ -295,11 +303,11 @@
 
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 ## Improvements to NA handling
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     `as_factor()` and `fct_inorder()` accept NA levels (#98).
@@ -318,11 +326,11 @@
 
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-11!
+!begin-bullets-12!
 
 -   !begin-bullet!
     Test coverage increased from 80% to 99%.
@@ -343,13 +351,13 @@
 
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-12!
 
 # forcats 0.2.0
 
 ## New functions
 
-!begin-bullets-12!
+!begin-bullets-13!
 
 -   !begin-bullet!
     `as_factor()` which works like `as.factor()` but orders levels by
@@ -367,11 +375,11 @@
 
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-13!
+!begin-bullets-14!
 
 -   !begin-bullet!
     `fct_c()` can take either a list of factors or individual factors
@@ -400,11 +408,11 @@
 
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-14!
 
 # forcats 0.1.1
 
-!begin-bullets-14!
+!begin-bullets-15!
 
 -   !begin-bullet!
     Minor fixes for R CMD check
@@ -415,4 +423,4 @@
 
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-15!
