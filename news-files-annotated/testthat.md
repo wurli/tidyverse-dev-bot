@@ -3,6 +3,9 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `test_file(desc = ...)` no longer loses snapshot results (#2066).
+    !end-bullet!
+-   !begin-bullet!
     In `R CMD check`, snapshots now only advise on how to resolve
     failures once (#2207).
     !end-bullet!
