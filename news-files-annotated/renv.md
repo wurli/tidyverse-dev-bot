@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    The version check in `renv::status()` can now be disabled by setting
+    `options(renv.status.check_version = FALSE)`. (#2167)
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed an issue where the package manager URL was computed
     incorrectly with RHEL 10.
 
