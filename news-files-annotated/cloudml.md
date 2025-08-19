@@ -1,6 +1,18 @@
-# cloudml 0.7.0
+# cloudml (development version)
+
+# cloudml 0.7.1
 
 !begin-bullets-1!
+
+-   !begin-bullet!
+    Documentation updates for CRAN.
+    !end-bullet!
+
+!end-bullets-1!
+
+# cloudml 0.7.0
+
+!begin-bullets-2!
 
 -   !begin-bullet!
     Support for Python 3 and TensorFlow 1.15 runtime.
@@ -11,11 +23,11 @@
 
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # cloudml 0.6.1
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     Use ai-platform instead of ml-engine when user have a recent enought
@@ -29,11 +41,11 @@
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 # cloudml 0.6.0
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     Fixed `gcloud_install()` to properly execute `gcloud init` in
@@ -56,11 +68,11 @@
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 # cloudml 0.5.1
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     Added support for `dry_run` in `cloudml_train`.
@@ -75,14 +87,14 @@
 
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 # cloudml 0.5.0
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     First release to CRAN.
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
