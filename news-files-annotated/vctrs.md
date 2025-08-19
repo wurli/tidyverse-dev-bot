@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `vec_locate_sorted_groups()` and `vec_order_radix()` no longer crash
+    on columns of type complex (tidyverse/dplyr#7708).
+
+    !end-bullet!
+-   !begin-bullet!
     Functions backed by a dictionary based implementation are often
     significantly faster, depending on the exact inputs used. This
     includes: `vec_match()`, `vec_in()`, `vec_group_loc()`,
