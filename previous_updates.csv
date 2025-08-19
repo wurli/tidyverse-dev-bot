@@ -19606,3 +19606,4 @@ dbplyr,f064e0ed0cdb65146c9078b5e7466c70,"Add support for `pmin()` and `pmax()` o
 testthat,6269a2af798a073ab575a07c76b521f7,`test_file(desc = ...)` no longer loses snapshot results (#2066).,NA,NA,NA,NA
 forcats,b887885d3d4c3704b5ec51540380260a,forcats now requires R 4.1.,NA,NA,NA,NA
 renv,c9ebdd7bba2e36c601a439ef72b92037,The version check in `renv::status()` can now be disabled by setting `options(renv.status.check_version = FALSE)`. (#2167),NA,NA,NA,NA
+testthat,043c64d45b7236570214eb53437b9759,The failure messages for all `expect_` functions have been rewritten to first state what was expected and then what was actually received (#2142).,NA,NA,NA,NA

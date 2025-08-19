@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    The failure messages for all `expect_` functions have been rewritten
+    to first state what was expected and then what was actually received
+    (#2142).
+    !end-bullet!
+-   !begin-bullet!
     `test_file(desc = ...)` no longer loses snapshot results (#2066).
     !end-bullet!
 -   !begin-bullet!
