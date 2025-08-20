@@ -3,9 +3,16 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixes `LiveHTML` objects returning 'could not find node with given
+    id' errors if a page navigation occurred after a `$click()` event
+    (#405).
+
+    !end-bullet!
+-   !begin-bullet!
     New example vignette displays the same starwars data but rendered
     dynamically using JS, so you need to use `read_html_live()` to get
     the data.
+
     !end-bullet!
 
 !end-bullets-1!
