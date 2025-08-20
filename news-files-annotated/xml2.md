@@ -11,6 +11,10 @@
     handler.
 
     !end-bullet!
+-   !begin-bullet!
+    Avoid accessing some struct internals disallowed in libxml2 2.14
+
+    !end-bullet!
 
 !end-bullets-1!
 

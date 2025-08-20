@@ -19609,3 +19609,4 @@ renv,c9ebdd7bba2e36c601a439ef72b92037,The version check in `renv::status()` can 
 testthat,043c64d45b7236570214eb53437b9759,The failure messages for all `expect_` functions have been rewritten to first state what was expected and then what was actually received (#2142).,NA,NA,NA,NA
 cloudml,229e2fb63d7eb3ad12ca266b69e8b3d3,Documentation updates for CRAN.,NA,NA,NA,NA
 vctrs,ebdd2613c9c80ae9f9cc0d447eb7551e,`vec_locate_sorted_groups()` and `vec_order_radix()` no longer crash on columns of type complex (tidyverse/dplyr#7708).,NA,NA,NA,NA
+xml2,93724fdf5bb9832b15e6e652edfc7581,Avoid accessing some struct internals disallowed in libxml2 2.14,NA,NA,NA,NA
