@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `fct_cross()` now varies the levels in the last factor fastest
+    (@Adam-AKong, #373).
+    !end-bullet!
+-   !begin-bullet!
     Functions that create a new factor (e.g. `lvls_expand()`,
     `lvls_reorder()`, `fct_lump_n()`, `fct_drop()`) now preserves the
     class of the original object in addition to the attributes (#83).
