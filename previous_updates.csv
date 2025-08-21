@@ -19611,3 +19611,5 @@ cloudml,229e2fb63d7eb3ad12ca266b69e8b3d3,Documentation updates for CRAN.,NA,NA,N
 vctrs,ebdd2613c9c80ae9f9cc0d447eb7551e,`vec_locate_sorted_groups()` and `vec_order_radix()` no longer crash on columns of type complex (tidyverse/dplyr#7708).,NA,NA,NA,NA
 xml2,93724fdf5bb9832b15e6e652edfc7581,Avoid accessing some struct internals disallowed in libxml2 2.14,NA,NA,NA,NA
 rvest,c3ff247a3ee91dccadd4fbbc38f6fa5f,Fixes `LiveHTML` objects returning 'could not find node with given id' errors if a page navigation occurred after a `$click()` event (#405).,NA,NA,NA,NA
+forcats,17369192e8fd294791c699ca75a4387b,"Functions that create a new factor (e.g. `lvls_expand()`, `lvls_reorder()`, `fct_lump_n()`, `fct_drop()`) now preserves the class of the original object in addition to the attributes (#83).",NA,NA,NA,NA
+purrr,a9bafc90fbead297631b5c69101cd78f,"All functions and arguments deprecated in purrr 0.3.0 have now been removed. This includes `%@​%`, `accumulate_right()`, `at_depth()`, `cross_d()`, `cross_n()`, `reduce2_right()`, and `reduce_right()`.",NA,NA,NA,NA

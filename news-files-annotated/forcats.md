@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Functions that create a new factor (e.g. `lvls_expand()`,
+    `lvls_reorder()`, `fct_lump_n()`, `fct_drop()`) now preserves the
+    class of the original object in addition to the attributes (#83).
+    !end-bullet!
+-   !begin-bullet!
     forcats now requires R 4.1.
     !end-bullet!
 
