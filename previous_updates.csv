@@ -19615,3 +19615,4 @@ forcats,17369192e8fd294791c699ca75a4387b,"Functions that create a new factor (e.
 purrr,a9bafc90fbead297631b5c69101cd78f,"All functions and arguments deprecated in purrr 0.3.0 have now been removed. This includes `%@​%`, `accumulate_right()`, `at_depth()`, `cross_d()`, `cross_n()`, `reduce2_right()`, and `reduce_right()`.",NA,NA,NA,NA
 forcats,fb4d0bf0f0edb922dfed8ffc32d6994e,"`fct_cross()` now varies the levels in the last factor fastest (@​Adam-AKong, #373).",NA,NA,NA,NA
 shiny,bfda467355e0e1966ac640b20c29385b,"Fixed an issue where `updateSelectizeInput(options = list(plugins=""remove_button""))` could lead to multiple remove buttons. (#4275)",NA,NA,NA,NA
+vctrs,92c3fc2a43b783a7b2d3f5e2998c9eac,"data.table's `IDate` class now has `vec_proxy()` and `vec_restore()` methods, fixing a number of issues with that class (#1549, #1961, #1972, #1781).",NA,NA,NA,NA

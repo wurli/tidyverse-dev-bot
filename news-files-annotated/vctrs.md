@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    data.table's `IDate` class now has `vec_proxy()` and `vec_restore()`
+    methods, fixing a number of issues with that class (#1549, #1961,
+    #1972, #1781).
+
+    !end-bullet!
+-   !begin-bullet!
     `vec_locate_sorted_groups()` and `vec_order_radix()` no longer crash
     on columns of type complex (tidyverse/dplyr#7708).
 
