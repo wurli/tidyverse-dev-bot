@@ -1,14 +1,17 @@
 # tensorflow (development version)
 
+# tensorflow 2.20.0
+
 !begin-bullets-1!
 
 -   !begin-bullet!
-    Updates for reticulate 1.41. The tensorflow R package now calls
-    `reticuate::py_require()` when it is loaded. Calling
+    Updates for reticulate 1.41 and `reticuate::py_require()`. New
+    function `py_require_tensorflow()` which can be called at the start
+    of an R session to enable reticulate to resolve tensorflow. Calling
     `install_tensorflow()` in most circumstances is no longer necessary.
     !end-bullet!
 -   !begin-bullet!
-    `install_tensorflow()` installs TensorFlow v2.18 by default.
+    `install_tensorflow()` installs TensorFlow v2.20 by default.
     !end-bullet!
 -   !begin-bullet!
     Fixed an issue where GPUs would not be found when running on Windows

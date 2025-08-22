@@ -19616,3 +19616,7 @@ purrr,a9bafc90fbead297631b5c69101cd78f,"All functions and arguments deprecated i
 forcats,fb4d0bf0f0edb922dfed8ffc32d6994e,"`fct_cross()` now varies the levels in the last factor fastest (@​Adam-AKong, #373).",NA,NA,NA,NA
 shiny,bfda467355e0e1966ac640b20c29385b,"Fixed an issue where `updateSelectizeInput(options = list(plugins=""remove_button""))` could lead to multiple remove buttons. (#4275)",NA,NA,NA,NA
 vctrs,92c3fc2a43b783a7b2d3f5e2998c9eac,"data.table's `IDate` class now has `vec_proxy()` and `vec_restore()` methods, fixing a number of issues with that class (#1549, #1961, #1972, #1781).",NA,NA,NA,NA
+purrr,0f672ecb0f96721f86ace07da10c5d6a,"All functions that were soft-deprecated in purrr 1.0.0 are now fully deprecated. They will be removed in a future release. This includes: `invoke_*()`, `lift_*()`, `cross*()`, `prepend()`, `splice()`, `rbernoulli()`, `rdunif()`, `when()`, `update_list()`, `*_raw()`, `vec_depth()`.",NA,NA,NA,NA
+purrr,046755351d4f94ec5c5751b2f8f7955e,"`map_chr()` no longer coereces from logical, integer, or double to strings.",NA,NA,NA,NA
+tensorflow,697c3ec0907a318cb65224f354ea9d81,Updates for reticulate 1.41 and `reticuate::py_require()`. New function `py_require_tensorflow()` which can be called at the start of an R session to enable reticulate to resolve tensorflow. Calling `install_tensorflow()` in most circumstances is no longer necessary.,NA,NA,NA,NA
+tensorflow,72109ead88309a1e1f064f18d268b7dc,`install_tensorflow()` installs TensorFlow v2.20 by default.,NA,NA,NA,NA
