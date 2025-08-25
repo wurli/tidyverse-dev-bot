@@ -19622,3 +19622,4 @@ tensorflow,697c3ec0907a318cb65224f354ea9d81,Updates for reticulate 1.41 and `ret
 tensorflow,72109ead88309a1e1f064f18d268b7dc,`install_tensorflow()` installs TensorFlow v2.20 by default.,NA,NA,NA,NA
 lintr,c25045c5f72f7475ce3cd53892203d36,"`use_lintr()` adds the created `.lintr` file to the `.Rbuildignore` if run in a package (#2926, initial work by @​MEO265, finalized by @​Bisaloo).",NA,NA,NA,NA
 gt,be9d5e6dc551b9580508dd7a9d6d482b,"Use stub alignment values for RTF output (@​shannonhaughton, #2019)",NA,NA,NA,NA
+rmarkdown,b8616f714f58c823dc7d4bd193390990,"`pandoc_convert()` will throw an error if Pandoc is not available (thanks, @​brianperdomo, #2600).",NA,NA,NA,NA
