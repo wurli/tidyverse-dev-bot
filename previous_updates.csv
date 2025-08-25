@@ -19620,3 +19620,4 @@ purrr,0f672ecb0f96721f86ace07da10c5d6a,"All functions that were soft-deprecated 
 purrr,046755351d4f94ec5c5751b2f8f7955e,"`map_chr()` no longer coereces from logical, integer, or double to strings.",NA,NA,NA,NA
 tensorflow,697c3ec0907a318cb65224f354ea9d81,Updates for reticulate 1.41 and `reticuate::py_require()`. New function `py_require_tensorflow()` which can be called at the start of an R session to enable reticulate to resolve tensorflow. Calling `install_tensorflow()` in most circumstances is no longer necessary.,NA,NA,NA,NA
 tensorflow,72109ead88309a1e1f064f18d268b7dc,`install_tensorflow()` installs TensorFlow v2.20 by default.,NA,NA,NA,NA
+lintr,c25045c5f72f7475ce3cd53892203d36,"`use_lintr()` adds the created `.lintr` file to the `.Rbuildignore` if run in a package (#2926, initial work by @​MEO265, finalized by @​Bisaloo).",NA,NA,NA,NA

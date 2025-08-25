@@ -213,6 +213,11 @@
     `sprintf_linter()` lints `sprintf()` and `gettextf()` calls when a
     constant string is passed to `fmt` (#2894, @Bisaloo).
     !end-bullet!
+-   !begin-bullet!
+    `use_lintr()` adds the created `.lintr` file to the `.Rbuildignore`
+    if run in a package (#2926, initial work by @MEO265, finalized by
+    @Bisaloo).
+    !end-bullet!
 
 !end-bullets-5!
 
