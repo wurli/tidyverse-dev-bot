@@ -1,5 +1,8 @@
 # crosstalk (development version)
 
+Address a new R CMD check NOTE about Rd `\link{}`{=tex} targets missing
+package anchors. ()
+
 ## crosstalk 1.2.1
 
 ### Bug fixes
