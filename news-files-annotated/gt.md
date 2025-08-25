@@ -55,6 +55,10 @@
     (@thebioengineer)
 
     !end-bullet!
+-   !begin-bullet!
+    Use stub alignment values for RTF output (@shannonhaughton, #2019)
+
+    !end-bullet!
 
 !end-bullets-1!
 
