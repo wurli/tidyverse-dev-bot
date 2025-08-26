@@ -19625,3 +19625,5 @@ gt,be9d5e6dc551b9580508dd7a9d6d482b,"Use stub alignment values for RTF output (@
 rmarkdown,b8616f714f58c823dc7d4bd193390990,"`pandoc_convert()` will throw an error if Pandoc is not available (thanks, @​brianperdomo, #2600).",NA,NA,NA,NA
 vctrs,d72aacfe6e8d1e7adc76d0e16ddef4eb,"`vec_assign()` and `vec_slice<-()` now efficiently internally recycle `value` of size 1 at the C level, resulting in less memory usage.",NA,NA,NA,NA
 vctrs,caf7df09f7a289339d718c55a4db3d35,`vec_assign()` no longer modifies `POSIXlt` and `vctrs_rcrd` types in place (#1951).,NA,NA,NA,NA
+rsconnect,d867f91628b91b302fe0ed936a0cb9e3,Address user registration for Posit Connect deployments hosted in Snowpark Container Services when there is more than one configured Snowflake connection. (#1189),NA,NA,NA,NA
+rsconnect,9c8f0f8518e428692edd0a589b1999d5,Process cookie expiration dates in addition to the cookie max-age. Some servers return already-expired cookies. (1187),NA,NA,NA,NA

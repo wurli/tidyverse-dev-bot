@@ -3,7 +3,19 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Address user registration for Posit Connect deployments hosted in
+    Snowpark Container Services when there is more than one configured
+    Snowflake connection. (#1189)
+
+    !end-bullet!
+-   !begin-bullet!
+    Process cookie expiration dates in addition to the cookie max-age.
+    Some servers return already-expired cookies. (1187)
+
+    !end-bullet!
+-   !begin-bullet!
     Removed unused internal methods from Connect client. (#1182)
+
     !end-bullet!
 
 !end-bullets-1!
