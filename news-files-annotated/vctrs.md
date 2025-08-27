@@ -3,6 +3,18 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `vec_assign()` has gained a new `slice_value` argument to optionally
+    slice `value` by `i` before performing the assignment. It is an
+    optimized form of `vec_slice(x, i) <- vec_slice(value, i)` that
+    avoids materializing `vec_slice(value, i)` (#2009).
+
+    !end-bullet!
+-   !begin-bullet!
+    `vec_assign()` and `vec_slice<-()` are now more efficient with
+    logical `i` (#2009).
+
+    !end-bullet!
+-   !begin-bullet!
     `vec_assign()` and `vec_slice<-()` now efficiently internally
     recycle `value` of size 1 at the C level, resulting in less memory
     usage.
