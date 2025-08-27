@@ -3,20 +3,28 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `in_parallel()` now accepts objects, including helper functions,
+    supplied to `...` for all locally-defined functions (#1208).
+
+    !end-bullet!
+-   !begin-bullet!
     All functions that were soft-deprecated in purrr 1.0.0 are now fully
     deprecated. They will be removed in a future release. This includes:
     `invoke_*()`, `lift_*()`, `cross*()`, `prepend()`, `splice()`,
     `rbernoulli()`, `rdunif()`, `when()`, `update_list()`, `*_raw()`,
     `vec_depth()`.
+
     !end-bullet!
 -   !begin-bullet!
     `map_chr()` no longer coereces from logical, integer, or double to
     strings.
+
     !end-bullet!
 -   !begin-bullet!
     All functions and arguments deprecated in purrr 0.3.0 have now been
     removed. This includes `%@%`, `accumulate_right()`, `at_depth()`,
     `cross_d()`, `cross_n()`, `reduce2_right()`, and `reduce_right()`.
+
     !end-bullet!
 
 !end-bullets-1!
