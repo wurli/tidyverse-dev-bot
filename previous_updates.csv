@@ -19630,3 +19630,5 @@ rsconnect,9c8f0f8518e428692edd0a589b1999d5,Process cookie expiration dates in ad
 purrr,f9d0b410dd0a78475d5044574fa26f0b,"`in_parallel()` now accepts objects, including helper functions, supplied to `...` for all locally-defined functions (#1208).",NA,NA,NA,NA
 vctrs,bba91fa6a553a9b39091d19d12fd29c0,"`vec_assign()` has gained a new `slice_value` argument to optionally slice `value` by `i` before performing the assignment. It is an optimized form of `vec_slice(x, i) <- vec_slice(value, i)` that avoids materializing `vec_slice(value, i)` (#2009).",NA,NA,NA,NA
 vctrs,c1854ae683d920cbfa98e683cb100784,`vec_assign()` and `vec_slice<-()` are now more efficient with logical `i` (#2009).,NA,NA,NA,NA
+testthat,25b9ee55ec1c4fbc5bdd784d9e54110f,`expect_snapshot_file()` now considers `.json` to be a text file (#1593).,NA,NA,NA,NA
+testthat,6994f8390c58c71d378f296283dc89ca,`expect_snapshot_file()` now shows differences for text files (#1593).,NA,NA,NA,NA

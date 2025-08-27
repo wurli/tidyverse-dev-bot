@@ -3,6 +3,14 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `expect_snapshot_file()` now considers `.json` to be a text file
+    (#1593).
+    !end-bullet!
+-   !begin-bullet!
+    `expect_snapshot_file()` now shows differences for text files
+    (#1593).
+    !end-bullet!
+-   !begin-bullet!
     The failure messages for all `expect_` functions have been rewritten
     to first state what was expected and then what was actually received
     (#2142).
