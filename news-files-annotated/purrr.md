@@ -8,6 +8,11 @@
 
     !end-bullet!
 -   !begin-bullet!
+    `in_parallel()` now works in conjunction with string and list values
+    supplied to the `.progress` argument of map functions (#1203).
+
+    !end-bullet!
+-   !begin-bullet!
     All functions that were soft-deprecated in purrr 1.0.0 are now fully
     deprecated. They will be removed in a future release. This includes:
     `invoke_*()`, `lift_*()`, `cross*()`, `prepend()`, `splice()`,
