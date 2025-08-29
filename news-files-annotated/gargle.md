@@ -6,6 +6,11 @@
     Fixed a bug when displaying a request failure that includes a
     localized message in the error details (#293).
     !end-bullet!
+-   !begin-bullet!
+    gargle is better able to detect when it's running on Posit
+    Workbench, but not necessarily in RStudio, such as in Positron or VS
+    Code (#291).
+    !end-bullet!
 
 !end-bullets-1!
 
