@@ -5,6 +5,10 @@
 -   !begin-bullet!
     Fix gradient rendering bug introduced by trying to fix #177 (#192)
     !end-bullet!
+-   !begin-bullet!
+    Add support for WebP output, both static and animated (#190,
+    @klausbrunner)
+    !end-bullet!
 
 !end-bullets-1!
 

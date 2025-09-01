@@ -19641,3 +19641,4 @@ gargle,c5ba5237047f73060a0b698db761d277,Fixed some bugs around surfacing the det
 gargle,c5ba5237047f73060a0b698db761d277,• Better handling when the error details include a localized message (#293),NA,NA,NA,NA
 gargle,c5ba5237047f73060a0b698db761d277,"• Defensive escaping of `{..}` in Google-provided error messages, to prevent `cli::cli_abort()` from trying (and failing) to do string interpolation (https://github.com/tidyverse/googlesheets4/issues/319)",NA,NA,NA,NA
 testthat,2eff82c7b4dc21e8daa007dd6f7e8161,"When running a test interactively, testthat now reports the number of succeses. The results should also be more useful if you are using nested tests.",NA,NA,NA,NA
+ragg,7c44b0256c2535f691b766f0d00da0fc,"Add support for WebP output, both static and animated (#190, @​klausbrunner)",NA,NA,NA,NA
