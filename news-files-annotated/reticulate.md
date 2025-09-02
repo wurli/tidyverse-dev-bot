@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `install_miniconda()` now installs miniforge instead of miniconda
+    (#1800, #1820).
+
+    !end-bullet!
+-   !begin-bullet!
     Adds support for requesting Python versions with a wildcard pattern
     `x.x.*` such as `==3.12.*` in `virtualenv_starter()`,
     `py_require()`, and related functions (#1825)
