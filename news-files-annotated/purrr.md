@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `list_flatten()` gains an `is_node` parameter taking a predicate
+    function that determines whether an input element is a node or a
+    leaf (@salim-b, #1179).
+
+    !end-bullet!
+-   !begin-bullet!
     `in_parallel()` now accepts objects, including helper functions,
     supplied to `...` for all locally-defined functions (#1208).
 

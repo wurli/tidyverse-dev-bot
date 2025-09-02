@@ -19643,3 +19643,4 @@ gargle,c5ba5237047f73060a0b698db761d277,"• Defensive escaping of `{..}` in Goo
 testthat,2eff82c7b4dc21e8daa007dd6f7e8161,"When running a test interactively, testthat now reports the number of succeses. The results should also be more useful if you are using nested tests.",NA,NA,NA,NA
 ragg,7c44b0256c2535f691b766f0d00da0fc,"Add support for WebP output, both static and animated (#190, @​klausbrunner)",NA,NA,NA,NA
 reticulate,8f48c3eda81c23d11735208d5cd03e4e,"`install_miniconda()` now installs miniforge instead of miniconda (#1800, #1820).",NA,NA,NA,NA
+purrr,1120360df2028534e9e0a24113e9686d,"`list_flatten()` gains an `is_node` parameter taking a predicate function that determines whether an input element is a node or a leaf (@​salim-b, #1179).",NA,NA,NA,NA
