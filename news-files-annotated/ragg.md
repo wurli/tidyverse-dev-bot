@@ -1,5 +1,7 @@
 # ragg (development version)
 
+# ragg 1.5.0
+
 !begin-bullets-1!
 
 -   !begin-bullet!
