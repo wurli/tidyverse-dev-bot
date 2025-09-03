@@ -3,6 +3,16 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `list_unchop()` now works in an edge case with a single `NA`
+    recycled to size 0 (#1989).
+
+    !end-bullet!
+-   !begin-bullet!
+    `list_unchop()` now efficiently internally recycles `x` elements of
+    size 1 (#2013).
+
+    !end-bullet!
+-   !begin-bullet!
     `list_unchop()` now correctly respects `indices` when combining
     fallback data frame columns (#1975).
 

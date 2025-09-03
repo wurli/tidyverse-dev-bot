@@ -19648,3 +19648,5 @@ gargle,64436ab5b49cb30bf9cca6383a849d53,"When retrying a request, the messaging 
 googlesheets4,3491f3dea0a4819696d9ed9e74ebd880,No significant user-facing changes. Release motivated by documentation updates to support HTML reference manuals on CRAN.,NA,NA,NA,NA
 vctrs,63dc7ca6f5cd84dd4b7d32d9413e689e,`list_unchop()` now correctly respects `indices` when combining fallback data frame columns (#1975).,NA,NA,NA,NA
 DT,fcf079cff0bb00882eb412ddff85359a,DT is now released under the MIT license (previously GPL-3) (#1175).,NA,NA,NA,NA
+vctrs,c838f18bc975cd1713c3fd1e3fcfe395,`list_unchop()` now works in an edge case with a single `NA` recycled to size 0 (#1989).,NA,NA,NA,NA
+vctrs,af92c51c27ff59f749d056dce4eecfd7,`list_unchop()` now efficiently internally recycles `x` elements of size 1 (#2013).,NA,NA,NA,NA
