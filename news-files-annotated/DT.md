@@ -1,7 +1,13 @@
+# DT (development version)
+
 # CHANGES IN DT VERSION 0.34
 
 !begin-bullets-1!
 
+-   !begin-bullet!
+    DT is now released under the MIT license (previously GPL-3) (#1175).
+
+    !end-bullet!
 -   !begin-bullet!
     Added `lazyRender` parameter to `DT::datatable()`, which gives the
     option for the table to be rendered immediately rather than waiting

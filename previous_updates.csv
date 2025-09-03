@@ -19647,3 +19647,4 @@ purrr,1120360df2028534e9e0a24113e9686d,"`list_flatten()` gains an `is_node` para
 gargle,64436ab5b49cb30bf9cca6383a849d53,"When retrying a request, the messaging reveals more detail about the failed request and counts down until the retry happens (part of #64).",NA,NA,NA,NA
 googlesheets4,3491f3dea0a4819696d9ed9e74ebd880,No significant user-facing changes. Release motivated by documentation updates to support HTML reference manuals on CRAN.,NA,NA,NA,NA
 vctrs,63dc7ca6f5cd84dd4b7d32d9413e689e,`list_unchop()` now correctly respects `indices` when combining fallback data frame columns (#1975).,NA,NA,NA,NA
+DT,fcf079cff0bb00882eb412ddff85359a,DT is now released under the MIT license (previously GPL-3) (#1175).,NA,NA,NA,NA
