@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    When retrying a request, the messaging reveals more detail about the
+    failed request and counts down until the retry happens (part of
+    #64).
+    !end-bullet!
+-   !begin-bullet!
     Fixed some bugs around surfacing the details of a request failure:
     !begin-bullets-2!
     -   !begin-bullet!
