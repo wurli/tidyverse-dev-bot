@@ -10,6 +10,11 @@
     Added download progress bar for `board_url()` (#872, @lbm364dl).
 
     !end-bullet!
+-   !begin-bullet!
+    Added support for writing pins with multiple types, like
+    `type = c("rds", "csv")` (#877, @lbm364dl).
+
+    !end-bullet!
 
 !end-bullets-1!
 

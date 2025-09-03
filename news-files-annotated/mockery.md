@@ -1,18 +1,29 @@
 # mockery (development version)
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    Documentation fixes for `R CMD check`.
+    !end-bullet!
+-   !begin-bullet!
+    Eliminate use of deprecated `testthat::with_mock()`.
+    !end-bullet!
+
+!end-bullets-1!
+
 # mockery 0.4.4
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     Fixes for `R CMD check`
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # mockery 0.4.3
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     Hadley Wickham is now the maintainer.
@@ -24,11 +35,11 @@
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 # mockery 0.4.2
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     The R6 package has been added to Suggests, as requested by CRAN.
@@ -40,22 +51,22 @@
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 # mockery 0.4.1
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     Fix bug whereby functions that begin with `.` don't have things
     mocked out in them.
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 # mockery 0.4.0
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     Add support for stubbing depth greater than 1.
@@ -66,7 +77,7 @@
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # mockery 0.3.2
 

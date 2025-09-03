@@ -32,6 +32,11 @@
     the sidebar width as desired. (#1217)
 
     !end-bullet!
+-   !begin-bullet!
+    `sidebar()` gains a `fillable` argument to support vertical fill
+    behavior in sidebars. (#1226)
+
+    !end-bullet!
 
 !end-bullets-1!
 

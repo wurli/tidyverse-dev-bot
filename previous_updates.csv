@@ -19652,3 +19652,7 @@ vctrs,c838f18bc975cd1713c3fd1e3fcfe395,`list_unchop()` now works in an edge case
 vctrs,af92c51c27ff59f749d056dce4eecfd7,`list_unchop()` now efficiently internally recycles `x` elements of size 1 (#2013).,NA,NA,NA,NA
 vctrs,358a34e173bfe83190e8625f741cf99b,"New `.name_spec = ""inner""` option for `vec_c()`, `list_unchop()`, and `vec_rbind()`. This efficiently ignores all outer names, while retaining any inner names (#1988).",NA,NA,NA,NA
 dbplyr,e3e280f7bc8872001c2baa84a9c64493,"Use `COUNT_BIG` instead of `COUNT` for SQL server so that `tally()` and `count()` work regardless of size of the data (@​edward-burn, #1498).",NA,NA,NA,NA
+mockery,42455fafc28f74dfa8a4f4fe494c8c6f,Documentation fixes for `R CMD check`.,NA,NA,NA,NA
+mockery,aab62365d96c843327e96f33ff71d0e4,Eliminate use of deprecated `testthat::with_mock()`.,NA,NA,NA,NA
+bslib,dc941920a986a1d60c66c565c815506b,`sidebar()` gains a `fillable` argument to support vertical fill behavior in sidebars. (#1226),NA,NA,NA,NA
+pins,61baae7699bd57e772822277a8c0e3ba,"Added support for writing pins with multiple types, like `type = c(""rds"", ""csv"")` (#877, @​lbm364dl).",NA,NA,NA,NA
