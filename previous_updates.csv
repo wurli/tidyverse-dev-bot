@@ -19651,3 +19651,4 @@ DT,fcf079cff0bb00882eb412ddff85359a,DT is now released under the MIT license (pr
 vctrs,c838f18bc975cd1713c3fd1e3fcfe395,`list_unchop()` now works in an edge case with a single `NA` recycled to size 0 (#1989).,NA,NA,NA,NA
 vctrs,af92c51c27ff59f749d056dce4eecfd7,`list_unchop()` now efficiently internally recycles `x` elements of size 1 (#2013).,NA,NA,NA,NA
 vctrs,358a34e173bfe83190e8625f741cf99b,"New `.name_spec = ""inner""` option for `vec_c()`, `list_unchop()`, and `vec_rbind()`. This efficiently ignores all outer names, while retaining any inner names (#1988).",NA,NA,NA,NA
+dbplyr,e3e280f7bc8872001c2baa84a9c64493,"Use `COUNT_BIG` instead of `COUNT` for SQL server so that `tally()` and `count()` work regardless of size of the data (@​edward-burn, #1498).",NA,NA,NA,NA

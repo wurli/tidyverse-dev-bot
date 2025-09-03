@@ -41,6 +41,12 @@
 
     !end-bullet!
 -   !begin-bullet!
+    Use `COUNT_BIG` instead of `COUNT` for SQL server so that `tally()`
+    and `count()` work regardless of size of the data (@edward-burn,
+    #1498).
+
+    !end-bullet!
+-   !begin-bullet!
     New translations of clock function `date_count_between()` for SQL
     server, Redshift, Snowflake, Postgres, and Spark (@edward-burn,
     #1495).
