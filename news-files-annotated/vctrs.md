@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `list_unchop()` now correctly respects `indices` when combining
+    fallback data frame columns (#1975).
+
+    !end-bullet!
+-   !begin-bullet!
     `vec_assign()` has gained a new `slice_value` argument to optionally
     slice `value` by `i` before performing the assignment. It is an
     optimized form of `vec_slice(x, i) <- vec_slice(value, i)` that

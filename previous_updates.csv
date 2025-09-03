@@ -19646,3 +19646,4 @@ reticulate,8f48c3eda81c23d11735208d5cd03e4e,"`install_miniconda()` now installs 
 purrr,1120360df2028534e9e0a24113e9686d,"`list_flatten()` gains an `is_node` parameter taking a predicate function that determines whether an input element is a node or a leaf (@​salim-b, #1179).",NA,NA,NA,NA
 gargle,64436ab5b49cb30bf9cca6383a849d53,"When retrying a request, the messaging reveals more detail about the failed request and counts down until the retry happens (part of #64).",NA,NA,NA,NA
 googlesheets4,3491f3dea0a4819696d9ed9e74ebd880,No significant user-facing changes. Release motivated by documentation updates to support HTML reference manuals on CRAN.,NA,NA,NA,NA
+vctrs,63dc7ca6f5cd84dd4b7d32d9413e689e,`list_unchop()` now correctly respects `indices` when combining fallback data frame columns (#1975).,NA,NA,NA,NA
