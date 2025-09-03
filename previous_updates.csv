@@ -19645,3 +19645,4 @@ ragg,7c44b0256c2535f691b766f0d00da0fc,"Add support for WebP output, both static 
 reticulate,8f48c3eda81c23d11735208d5cd03e4e,"`install_miniconda()` now installs miniforge instead of miniconda (#1800, #1820).",NA,NA,NA,NA
 purrr,1120360df2028534e9e0a24113e9686d,"`list_flatten()` gains an `is_node` parameter taking a predicate function that determines whether an input element is a node or a leaf (@​salim-b, #1179).",NA,NA,NA,NA
 gargle,64436ab5b49cb30bf9cca6383a849d53,"When retrying a request, the messaging reveals more detail about the failed request and counts down until the retry happens (part of #64).",NA,NA,NA,NA
+googlesheets4,3491f3dea0a4819696d9ed9e74ebd880,No significant user-facing changes. Release motivated by documentation updates to support HTML reference manuals on CRAN.,NA,NA,NA,NA
