@@ -1,5 +1,7 @@
 # gargle (development version)
 
+# gargle 1.6.0
+
 * When retrying a request, the messaging reveals more detail about the failed
   request and counts down until the retry happens (part of #64).
 * Fixed some bugs around surfacing the details of a request failure:

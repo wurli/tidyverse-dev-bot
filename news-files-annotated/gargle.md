@@ -1,5 +1,7 @@
 # gargle (development version)
 
+# gargle 1.6.0
+
 !begin-bullets-1!
 
 -   !begin-bullet!
