@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Reticulate now clears its cache automatically every 120 days.
+    Configure the interval in `.Rprofile` with:
+    `options(reticulate.max_cache_age = as.difftime(30, units = "days"))`.
+
+    !end-bullet!
+-   !begin-bullet!
     `install_miniconda()` now installs miniforge instead of miniconda
     (#1800, #1820).
 
