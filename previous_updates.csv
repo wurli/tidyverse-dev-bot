@@ -19657,3 +19657,5 @@ mockery,aab62365d96c843327e96f33ff71d0e4,Eliminate use of deprecated `testthat::
 bslib,dc941920a986a1d60c66c565c815506b,`sidebar()` gains a `fillable` argument to support vertical fill behavior in sidebars. (#1226),NA,NA,NA,NA
 pins,61baae7699bd57e772822277a8c0e3ba,"Added support for writing pins with multiple types, like `type = c(""rds"", ""csv"")` (#877, @​lbm364dl).",NA,NA,NA,NA
 reticulate,bf82b9aa94b3134b4fccd50ccc1c9c7f,"Reticulate now clears its cache automatically every 120 days. Configure the interval in `.Rprofile` with: `options(reticulate.max_cache_age = as.difftime(30, units = ""days""))`.",NA,NA,NA,NA
+pins,e34017b9c969dc914ef1dca376775223,Switched to using the native pipe in examples and documentation (#879).,NA,NA,NA,NA
+pins,4200dca289fe0d587c96c23b8c7700ef,Further escalated gradual deprecation process for legacy pins functions such as `pin()` (#879).,NA,NA,NA,NA

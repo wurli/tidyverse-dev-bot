@@ -15,6 +15,16 @@
     `type = c("rds", "csv")` (#877, @lbm364dl).
 
     !end-bullet!
+-   !begin-bullet!
+    Switched to using the native pipe in examples and documentation
+    (#879).
+
+    !end-bullet!
+-   !begin-bullet!
+    Further escalated gradual deprecation process for legacy pins
+    functions such as `pin()` (#879).
+
+    !end-bullet!
 
 !end-bullets-1!
 
