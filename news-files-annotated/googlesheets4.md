@@ -1,5 +1,7 @@
 # googlesheets4 (development version)
 
+# googlesheets4 1.1.2
+
 !begin-bullets-1!
 
 -   !begin-bullet!
