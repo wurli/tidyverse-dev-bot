@@ -19659,3 +19659,5 @@ pins,61baae7699bd57e772822277a8c0e3ba,"Added support for writing pins with multi
 reticulate,bf82b9aa94b3134b4fccd50ccc1c9c7f,"Reticulate now clears its cache automatically every 120 days. Configure the interval in `.Rprofile` with: `options(reticulate.max_cache_age = as.difftime(30, units = ""days""))`.",NA,NA,NA,NA
 pins,e34017b9c969dc914ef1dca376775223,Switched to using the native pipe in examples and documentation (#879).,NA,NA,NA,NA
 pins,4200dca289fe0d587c96c23b8c7700ef,Further escalated gradual deprecation process for legacy pins functions such as `pin()` (#879).,NA,NA,NA,NA
+leaflet,0b4a8d50d7bac1361fb7d919c7a43baf,`{leaflet}` is now licensed under the MIT license (was GPL-2) (#958).,NA,NA,NA,NA
+quarto,a8ace97dca64559dc61878f384aae1b6,"Make sure tests pass on CRAN checks even when Quarto is not installed by adding a gihub action to test when no quarto is available. Also fix tests that were not skipping when quarto was not available which failed on CRAN checks for MacOS and no binary were built. (thanks, @​jabenninghoff, #282)",NA,NA,NA,NA

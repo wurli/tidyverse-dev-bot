@@ -1,10 +1,22 @@
 # quarto (development version)
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    Make sure tests pass on CRAN checks even when Quarto is not
+    installed by adding a gihub action to test when no quarto is
+    available. Also fix tests that were not skipping when quarto was not
+    available which failed on CRAN checks for MacOS and no binary were
+    built. (thanks, @jabenninghoff, #282)
+    !end-bullet!
+
+!end-bullets-1!
+
 # quarto 1.5.0
 
 ## Breaking changes
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     `quarto_render(output_file = )` now sets the `output-file` Quarto
@@ -53,11 +65,11 @@
 
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 ## New features
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     `add_spin_preamble()` adds YAML preambles to R scripts for use with
@@ -182,11 +194,11 @@
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 ## Minor improvements and fixes
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     Debugging logic added for quarto vignette engine to help diagnose
@@ -286,11 +298,11 @@
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 # quarto 1.4.4
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     `quarto_preview()` now looks at `quarto preview` log to browse to
@@ -315,11 +327,11 @@
 
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 # quarto 1.4
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     This version is now adapted to Quarto 1.4 latest stable release.
@@ -406,4 +418,4 @@
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!

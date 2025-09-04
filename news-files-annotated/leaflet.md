@@ -1,11 +1,18 @@
 # leaflet (development version)
 
+# leaflet 2.2.3
+
 !begin-bullets-1!
 
 -   !begin-bullet!
-    `{leaflet}` no longer install sp by default and attempts to convert
-    object to sf internally before creating a map and warns when it
-    fails conversion (@olivroy, #942).
+    `{leaflet}` is now licensed under the MIT license (was GPL-2)
+    (#958).
+
+    !end-bullet!
+-   !begin-bullet!
+    `{leaflet}` no longer install `{sp}` by default and attempts to
+    convert object to sf internally before creating a map and warns when
+    it fails conversion (@olivroy, #942).
 
     !end-bullet!
 -   !begin-bullet!
@@ -32,7 +39,7 @@
     !end-bullet!
 -   !begin-bullet!
     Updated vignettes to replace `{sp}`/`{raster}` usage with
-    `{sf}`/\`{terra} and their corresponding examples. (@jack-davison,
+    `{sf}`/`{terra}` and their corresponding examples. (@jack-davison,
     #928)
 
     !end-bullet!
