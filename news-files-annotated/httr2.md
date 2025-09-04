@@ -4,7 +4,7 @@
 
 -   !begin-bullet!
     Refactor `url_modify()` to better retain exact formatting of URL
-    components that are not modified. (#788)
+    components that are not modified. (#788, #794)
     !end-bullet!
 
 !end-bullets-1!
