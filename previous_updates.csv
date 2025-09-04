@@ -19662,3 +19662,4 @@ pins,4200dca289fe0d587c96c23b8c7700ef,Further escalated gradual deprecation proc
 leaflet,0b4a8d50d7bac1361fb7d919c7a43baf,`{leaflet}` is now licensed under the MIT license (was GPL-2) (#958).,NA,NA,NA,NA
 quarto,a8ace97dca64559dc61878f384aae1b6,"Make sure tests pass on CRAN checks even when Quarto is not installed by adding a gihub action to test when no quarto is available. Also fix tests that were not skipping when quarto was not available which failed on CRAN checks for MacOS and no binary were built. (thanks, @​jabenninghoff, #282)",NA,NA,NA,NA
 httr2,58b061bc4fd2c73466c92968a27b8a23,"Refactor `url_modify()` to better retain exact formatting of URL components that are not modified. (#788, #794)",NA,NA,NA,NA
+usethis,538a82656eee1543a1b9c12f0b5fa4d8,`create_quarto_project()` exits early if the Quarto CLI does not appear to be installed and related tests are skipped (#2162).,NA,NA,NA,NA
