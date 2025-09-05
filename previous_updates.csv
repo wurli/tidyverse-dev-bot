@@ -19667,3 +19667,4 @@ usethis,c02b2167e49c285efb20cc94f1e03e06,"`github_lock_branch()` and `github_unl
 tibble,b8a5a97d35eae0f15e68ae9492f71ef5,Auto-update from GitHub Actions. Run: https://github.com/tidyverse/tibble/actions/runs/17451419215,NA,NA,NA,NA
 testthat,5d00ebcda0a958018c3b2afadda5ee32,"New `vignette(""mocking"")` explains mocking in detail (#1265).",NA,NA,NA,NA
 testthat,ae2b2276e01059cda68f6af89f9557ce,"New `vignette(""challenging-functions"")` provides an index to other documentation organised by testing challenges (#1265).",NA,NA,NA,NA
+renv,28087edbee3c0836c2ccb15f8c630045,"`renv` now also supports `RENV_LOCKFILE_VERSION = 1` as an alternate way to request the older, compact lockfiles. (#2175)",NA,NA,NA,NA
