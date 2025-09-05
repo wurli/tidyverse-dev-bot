@@ -3,6 +3,13 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    New `vignette("mocking")` explains mocking in detail (#1265).
+    !end-bullet!
+-   !begin-bullet!
+    New `vignette("challenging-functions")` provides an index to other
+    documentation organised by testing challenges (#1265).
+    !end-bullet!
+-   !begin-bullet!
     When running a test interactively, testthat now reports the number
     of succeses. The results should also be more useful if you are using
     nested tests.
