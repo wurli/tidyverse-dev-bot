@@ -1,23 +1,38 @@
 ```{=html}
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 ```
+# tibble 3.3.0.9005
+
+## Chore
+
+!begin-bullets-1!
+
+-   !begin-bullet!
+    Auto-update from GitHub Actions.
+
+    Run: https://github.com/tidyverse/tibble/actions/runs/17451419215
+
+    !end-bullet!
+
+!end-bullets-1!
+
 # tibble 3.3.0.9004
 
 ## Continuous integration
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     Cleanup and fix macOS (#1661).
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # tibble 3.3.0.9003
 
 ## Chore
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     Auto-update from GitHub Actions.
@@ -26,24 +41,24 @@
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 ## Continuous integration
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     Format with air, check detritus, better handling of `extra-packages`
     (#1660).
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 # tibble 3.3.0.9002
 
 ## Testing
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     Suppress `message()` output in some as_tibble tests
@@ -57,25 +72,25 @@
 
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 # tibble 3.3.0.9001
 
 ## Chore
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     Cynkra's Spring Cleaning (@Layalchristine24, #1643, #1644).
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # tibble 3.3.0.9000
 
 ## Chore
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     Auto-update from GitHub Actions.
@@ -98,23 +113,23 @@
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 ## Documentation
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     Posit as copyright holder.
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 # tibble 3.3.0
 
 ## Bug fixes
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     Subset tibble with `"0"` for row index (@eitsupi, #1636, #1637).
@@ -126,11 +141,11 @@
 
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 ## Features
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     Support new vctrs `.name_repair` options: `unique_quiet`,
@@ -148,11 +163,11 @@
 
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 ## Documentation
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     Update comparison between tibble and data.frame (@olivroy, #1567).
@@ -179,11 +194,11 @@
 
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 ## Testing
 
-!begin-bullets-11!
+!begin-bullets-12!
 
 -   !begin-bullet!
     Skip tests if packages are missing.
@@ -194,25 +209,25 @@
 
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-12!
 
 # tibble 3.2.1
 
 ## Internal
 
-!begin-bullets-12!
+!begin-bullets-13!
 
 -   !begin-bullet!
     Use symbol instead of string in `.Call()`.
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
 
 # tibble 3.2.0
 
 ## Features
 
-!begin-bullets-13!
+!begin-bullets-14!
 
 -   !begin-bullet!
     Accurate location of the source of an error in error messages
@@ -225,17 +240,17 @@
 
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-14!
 
 ## Breaking changes
 
-!begin-bullets-14!
+!begin-bullets-15!
 
 -   !begin-bullet!
     Deprecated functions and arguments where we could not detect usage
     by other CRAN packages (#1515):
 
-    !begin-bullets-15!
+    !begin-bullets-16!
     -   !begin-bullet!
         `data_frame_()`, `lst_()`, `frame_data()`
 
@@ -258,7 +273,7 @@
 
         !end-bullet!
 
-    !end-bullets-15!
+    !end-bullets-16!
     !end-bullet!
 -   !begin-bullet!
     Breaking change: Remove `knit_print.trunc_mat()` method (#1516).
@@ -269,32 +284,32 @@
 
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-15!
 
 ## Bug fixes
 
-!begin-bullets-16!
+!begin-bullets-17!
 
 -   !begin-bullet!
     Allow `glue()` and other classed characters for subassignment
     (#1150, #1503).
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-17!
 
 ## Performance
 
-!begin-bullets-17!
+!begin-bullets-18!
 
 -   !begin-bullet!
     Reduce overhead of single-column subset assignment (#1363).
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-18!
 
 ## Documentation
 
-!begin-bullets-18!
+!begin-bullets-19!
 
 -   !begin-bullet!
     New `vignette("extending")` (#275, #1512).
@@ -319,11 +334,11 @@
 
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-19!
 
 ## Internal
 
-!begin-bullets-19!
+!begin-bullets-20!
 
 -   !begin-bullet!
     Require vctrs \>= 0.4.1 and pillar \>= 1.8.1
@@ -353,13 +368,13 @@
 
     !end-bullet!
 
-!end-bullets-19!
+!end-bullets-20!
 
 # tibble 3.1.8
 
 ## Documentation
 
-!begin-bullets-20!
+!begin-bullets-21!
 
 -   !begin-bullet!
     Better reporting for error calls from `vec_as_location()` (#1237).
@@ -371,13 +386,13 @@
 
     !end-bullet!
 
-!end-bullets-20!
+!end-bullets-21!
 
 # tibble 3.1.7
 
 ## Breaking change
 
-!begin-bullets-21!
+!begin-bullets-22!
 
 -   !begin-bullet!
     `trunc_mat()` now returns a value with a different structure. This
@@ -386,11 +401,11 @@
     `print()` will display the input like a tibble (#1059).
     !end-bullet!
 
-!end-bullets-21!
+!end-bullets-22!
 
 ## Documentation
 
-!begin-bullets-22!
+!begin-bullets-23!
 
 -   !begin-bullet!
     Avoid listing `dim_desc()` in reexports.
@@ -399,11 +414,11 @@
     Add more examples for data frame and matrix columns (#978, #1012).
     !end-bullet!
 
-!end-bullets-22!
+!end-bullets-23!
 
 ## Internal
 
-!begin-bullets-23!
+!begin-bullets-24!
 
 -   !begin-bullet!
     Require rlang 1.0.1 and pillar 1.7.0 (#1063).
@@ -413,11 +428,11 @@
     #1060).
     !end-bullet!
 
-!end-bullets-23!
+!end-bullets-24!
 
 # tibble 3.1.6
 
-!begin-bullets-24!
+!begin-bullets-25!
 
 -   !begin-bullet!
     `set_num_opts()` and `set_char_opts()` are reexported from pillar
@@ -435,11 +450,11 @@
     `tbl_sum.tbl_df()` has an ellipsis in its formals for extensibility.
     !end-bullet!
 
-!end-bullets-24!
+!end-bullets-25!
 
 # tibble 3.1.5
 
-!begin-bullets-25!
+!begin-bullets-26!
 
 -   !begin-bullet!
     Avoid necessity to set `"tibble.view_max"` option for lazy tables
@@ -450,13 +465,13 @@
     upcoming rlang (#955, @romainfrancois).
     !end-bullet!
 
-!end-bullets-25!
+!end-bullets-26!
 
 # tibble 3.1.4
 
 ## Features
 
-!begin-bullets-26!
+!begin-bullets-27!
 
 -   !begin-bullet!
     `as.data.frame.tbl_df()` strips inner column names (#837).
@@ -465,11 +480,11 @@
     `new_tibble()` allows omitting the `nrow` argument again (#781).
     !end-bullet!
 
-!end-bullets-26!
+!end-bullets-27!
 
 ## Documentation
 
-!begin-bullets-27!
+!begin-bullets-28!
 
 -   !begin-bullet!
     Move `vignette("digits")`, `vignette("numbers")`, `?num` and `?char`
@@ -485,11 +500,11 @@
     New `?tibble_options` help page (#912).
     !end-bullet!
 
-!end-bullets-27!
+!end-bullets-28!
 
 ## Performance
 
-!begin-bullets-28!
+!begin-bullets-29!
 
 -   !begin-bullet!
     `x[i, j] <- one_row_value` avoids explicit recycling of the
@@ -497,11 +512,11 @@
     `vctrs::vec_assign()` for performance (#922).
     !end-bullet!
 
-!end-bullets-28!
+!end-bullets-29!
 
 ## Internal
 
-!begin-bullets-29!
+!begin-bullets-30!
 
 -   !begin-bullet!
     Vignettes are now tested with a snapshot test (#919).
@@ -517,13 +532,13 @@
     Fix tests for compatibility with pillar 1.6.2.
     !end-bullet!
 
-!end-bullets-29!
+!end-bullets-30!
 
 # tibble 3.1.3
 
 ## Bug fixes
 
-!begin-bullets-30!
+!begin-bullets-31!
 
 -   !begin-bullet!
     `tbl[row, col] <- rhs` treats an all-`NA` logical vector as a
@@ -536,11 +551,11 @@
     `[[<-()` supports symbols (#893).
     !end-bullet!
 
-!end-bullets-30!
+!end-bullets-31!
 
 ## Features
 
-!begin-bullets-31!
+!begin-bullets-32!
 
 -   !begin-bullet!
     `as_tibble_row()` supports arbitrary vectors (#797).
@@ -557,11 +572,11 @@
     `new_tibble()` is now faster (#901, @mgirlich).
     !end-bullet!
 
-!end-bullets-31!
+!end-bullets-32!
 
 ## Internal
 
-!begin-bullets-32!
+!begin-bullets-33!
 
 -   !begin-bullet!
     Establish compatibility with rlang \> 0.4.11 (#908).
@@ -577,22 +592,22 @@
     package load.
     !end-bullet!
 
-!end-bullets-32!
+!end-bullets-33!
 
 # tibble 3.1.2
 
-!begin-bullets-33!
+!begin-bullets-34!
 
 -   !begin-bullet!
     Bump required versions of ellipsis and vctrs to avoid warning during
     package load.
     !end-bullet!
 
-!end-bullets-33!
+!end-bullets-34!
 
 # tibble 3.1.1
 
-!begin-bullets-34!
+!begin-bullets-35!
 
 -   !begin-bullet!
     `num()` and `char()` are reexported from pillar (#880).
@@ -608,13 +623,13 @@
     Fix `new_tibble()` examples for compatibility with pillar 1.6.0.
     !end-bullet!
 
-!end-bullets-34!
+!end-bullets-35!
 
 # tibble 3.1.0
 
 ## Bug fixes
 
-!begin-bullets-35!
+!begin-bullets-36!
 
 -   !begin-bullet!
     `has_rownames()` now works correctly for data frames with a
@@ -627,11 +642,11 @@
 
     !end-bullet!
 
-!end-bullets-35!
+!end-bullets-36!
 
 ## Features
 
-!begin-bullets-36!
+!begin-bullets-37!
 
 -   !begin-bullet!
     Importing pillar 1.5.0, cli and crayon are now suggested packages
@@ -653,11 +668,11 @@
 
     !end-bullet!
 
-!end-bullets-36!
+!end-bullets-37!
 
 ## Internal
 
-!begin-bullets-37!
+!begin-bullets-38!
 
 -   !begin-bullet!
     Remove compatibility code for pillar \< 1.5.0 (#861).
@@ -668,11 +683,11 @@
 
     !end-bullet!
 
-!end-bullets-37!
+!end-bullets-38!
 
 # tibble 3.0.6
 
-!begin-bullets-38!
+!begin-bullets-39!
 
 -   !begin-bullet!
     `vec_ptype_abbr.tbl_df()` and `type_sum.tbl_df()` now uses the name
@@ -685,23 +700,23 @@
     Avoid tidy evaluation in pillar compatibility code.
     !end-bullet!
 
-!end-bullets-38!
+!end-bullets-39!
 
 # tibble 3.0.5
 
-!begin-bullets-39!
+!begin-bullets-40!
 
 -   !begin-bullet!
     Use testthat edition 3, compatible with testthat 3.0.1 (#827, #832).
     !end-bullet!
 
-!end-bullets-39!
+!end-bullets-40!
 
 # tibble 3.0.4
 
 ## Compatibility
 
-!begin-bullets-40!
+!begin-bullets-41!
 
 -   !begin-bullet!
     Establish compatibility with upcoming pillar 1.5.0 (#818).
@@ -727,11 +742,11 @@
 
     !end-bullet!
 
-!end-bullets-40!
+!end-bullets-41!
 
 ## Bug fixes
 
-!begin-bullets-41!
+!begin-bullets-42!
 
 -   !begin-bullet!
     Fix documentation link to `base::Extract`.
@@ -742,11 +757,11 @@
 
     !end-bullet!
 
-!end-bullets-41!
+!end-bullets-42!
 
 # tibble 3.0.3
 
-!begin-bullets-42!
+!begin-bullets-43!
 
 -   !begin-bullet!
     Fix test compatibility with rlang 0.4.7.
@@ -758,13 +773,13 @@
 
     !end-bullet!
 
-!end-bullets-42!
+!end-bullets-43!
 
 # tibble 3.0.2
 
 ## Bug fixes
 
-!begin-bullets-43!
+!begin-bullets-44!
 
 -   !begin-bullet!
     `[[` works with classed indexes again, e.g. created with
@@ -783,11 +798,11 @@
 
     !end-bullet!
 
-!end-bullets-43!
+!end-bullets-44!
 
 ## Performance
 
-!begin-bullets-44!
+!begin-bullets-45!
 
 -   !begin-bullet!
     Subsetting and subassignment are faster (#780, #790, #794).
@@ -802,23 +817,23 @@
 
     !end-bullet!
 
-!end-bullets-44!
+!end-bullets-45!
 
 ## Compatibility
 
-!begin-bullets-45!
+!begin-bullets-46!
 
 -   !begin-bullet!
     `is_vector_s3()` is no longer reexported from pillar (#789).
     !end-bullet!
 
-!end-bullets-45!
+!end-bullets-46!
 
 # tibble 3.0.1
 
 ## Compatibility fixes
 
-!begin-bullets-46!
+!begin-bullets-47!
 
 -   !begin-bullet!
     `[<-.tbl_df()` coerces matrices to data frames (#762).
@@ -830,11 +845,11 @@
 
     !end-bullet!
 
-!end-bullets-46!
+!end-bullets-47!
 
 ## Bug fixes
 
-!begin-bullets-47!
+!begin-bullets-48!
 
 -   !begin-bullet!
     More soft-deprecation warnings are actually visible.
@@ -851,11 +866,11 @@
 
     !end-bullet!
 
-!end-bullets-47!
+!end-bullets-48!
 
 ## Enhancements
 
-!begin-bullets-48!
+!begin-bullets-49!
 
 -   !begin-bullet!
     `as_tibble(validate = )` now always triggers a deprecation warning.
@@ -877,19 +892,19 @@
 
     !end-bullet!
 
-!end-bullets-48!
+!end-bullets-49!
 
 # tibble 3.0.0
 
 ## Major breaking changes
 
-!begin-bullets-49!
+!begin-bullets-50!
 
 -   !begin-bullet!
     Subset assignment ("subassignment") and also subsetting has become
     stricter. Symptoms:
 
-    !begin-bullets-50!
+    !begin-bullets-51!
     -   !begin-bullet!
         Error: No common type for ...
 
@@ -907,7 +922,7 @@
 
         !end-bullet!
 
-    !end-bullets-50!
+    !end-bullets-51!
     The "invariants" article at
     https://tibble.tidyverse.org/dev/articles/invariants.html describes
     the invariants that the operations follow in tibble, and the most
@@ -920,7 +935,7 @@
     List classes are no longer automatically treated as vectors.
     Symptoms:
 
-    !begin-bullets-51!
+    !begin-bullets-52!
     -   !begin-bullet!
         Error: All columns in a tibble must be vectors
 
@@ -930,7 +945,7 @@
 
         !end-bullet!
 
-    !end-bullets-51!
+    !end-bullets-52!
     If you implement a class that wraps a list as S3 vector, you need to
     include `"list"` in the class:
 
@@ -953,19 +968,19 @@
     change that may break existing comparison tests that don't expect
     names in columns (#630). Symptoms:
 
-    !begin-bullets-52!
+    !begin-bullets-53!
     -   !begin-bullet!
         "names for target but not for current" when comparing
         !end-bullet!
 
-    !end-bullets-52!
+    !end-bullets-53!
     !end-bullet!
 
-!end-bullets-49!
+!end-bullets-50!
 
 ## Breaking changes
 
-!begin-bullets-53!
+!begin-bullets-54!
 
 -   !begin-bullet!
     `tibble()` now splices anonymous data frames,
@@ -1005,11 +1020,11 @@
 
     !end-bullet!
 
-!end-bullets-53!
+!end-bullets-54!
 
 ## Soft deprecations
 
-!begin-bullets-54!
+!begin-bullets-55!
 
 -   !begin-bullet!
     Soft-deprecate `subclass` argument to `new_tibble()`.
@@ -1026,11 +1041,11 @@
 
     !end-bullet!
 
-!end-bullets-54!
+!end-bullets-55!
 
 ## Features
 
-!begin-bullets-55!
+!begin-bullets-56!
 
 -   !begin-bullet!
     Internals now make heavy use of the vctrs package, following most of
@@ -1119,11 +1134,11 @@
 
     !end-bullet!
 
-!end-bullets-55!
+!end-bullets-56!
 
 ## Output
 
-!begin-bullets-56!
+!begin-bullets-57!
 
 -   !begin-bullet!
     Formatting dimensions never uses scientific notation.
@@ -1141,22 +1156,22 @@
 
     !end-bullet!
 
-!end-bullets-56!
+!end-bullets-57!
 
 ## Performance
 
-!begin-bullets-57!
+!begin-bullets-58!
 
 -   !begin-bullet!
     Construction and subsetting of large data frames is faster now
     (#717, @romainfrancois).
     !end-bullet!
 
-!end-bullets-57!
+!end-bullets-58!
 
 ## Internal
 
-!begin-bullets-58!
+!begin-bullets-59!
 
 -   !begin-bullet!
     Import lifecycle package (#669).
@@ -1177,22 +1192,22 @@
 
     !end-bullet!
 
-!end-bullets-58!
+!end-bullets-59!
 
 # tibble 2.1.3
 
-!begin-bullets-59!
+!begin-bullets-60!
 
 -   !begin-bullet!
     Fix compatibility with R 3.5 and earlier, regression introduced in
     tibble 2.1.2.
     !end-bullet!
 
-!end-bullets-59!
+!end-bullets-60!
 
 # tibble 2.1.2
 
-!begin-bullets-60!
+!begin-bullets-61!
 
 -   !begin-bullet!
     Relax version requirements.
@@ -1203,11 +1218,11 @@
 
     !end-bullet!
 
-!end-bullets-60!
+!end-bullets-61!
 
 # tibble 2.1.1
 
-!begin-bullets-61!
+!begin-bullets-62!
 
 -   !begin-bullet!
     Three dots are used even for `"unique"` name repair (#566).
@@ -1224,11 +1239,11 @@
 
     !end-bullet!
 
-!end-bullets-61!
+!end-bullets-62!
 
 # tibble 2.0.1
 
-!begin-bullets-62!
+!begin-bullets-63!
 
 -   !begin-bullet!
     tibble names can again be set to `NULL` within RStudio, as some R
@@ -1247,7 +1262,7 @@
 
     !end-bullet!
 
-!end-bullets-62!
+!end-bullets-63!
 
 # tibble 2.0.0
 
@@ -1265,7 +1280,7 @@ updating your packages or scripts to the new semantics API to turn these
 warnings into errors. The compatibility code will be removed in tibble
 3.0.0.
 
-!begin-bullets-63!
+!begin-bullets-64!
 
 -   !begin-bullet!
     All optional arguments have moved past the ellipsis, and must be
@@ -1342,7 +1357,7 @@ warnings into errors. The compatibility code will be removed in tibble
     names by default. Code that relies on tibbles keeping row names now
     will see:
 
-    !begin-bullets-64!
+    !begin-bullets-65!
     -   !begin-bullet!
         a different result when calling `rownames()` or `row.names()`,
         !end-bullet!
@@ -1351,7 +1366,7 @@ warnings into errors. The compatibility code will be removed in tibble
         character vector, e.g. `as_tibble(mtcars)["Mazda RX4", ]`.
         !end-bullet!
 
-    !end-bullets-64!
+    !end-bullets-65!
     Call `pkgconfig::set_config("tibble::rownames", NA)` to revert to
     the old behavior of keeping row names. Packages that import *tibble*
     can call `set_config()` in their `.onLoad()` function (#114).
@@ -1383,11 +1398,11 @@ warnings into errors. The compatibility code will be removed in tibble
 
     !end-bullet!
 
-!end-bullets-63!
+!end-bullets-64!
 
 ## New features
 
-!begin-bullets-65!
+!begin-bullets-66!
 
 -   !begin-bullet!
     `tibble()` supports columns that are matrices or data frames (#416).
@@ -1404,7 +1419,7 @@ warnings into errors. The compatibility code will be removed in tibble
     `.name_repair` argument to `tibble()` and `as_tibble()`. It takes
     the following values:
 
-    !begin-bullets-66!
+    !begin-bullets-67!
     -   !begin-bullet!
         `"minimal"`: No name repair or checks, beyond basic existence.
         !end-bullet!
@@ -1425,7 +1440,7 @@ warnings into errors. The compatibility code will be removed in tibble
         style of base R).
         !end-bullet!
 
-    !end-bullets-66!
+    !end-bullets-67!
     The `validate` argument of `as_tibble()` is deprecated but supported
     (emits a message once per session). Use `.name_repair = "minimal"`
     instead of `validate = FALSE`, and `.name_repair = "check_unique"`
@@ -1441,7 +1456,7 @@ warnings into errors. The compatibility code will be removed in tibble
     default in `as_tibble()`. The `rownames` argument to `as_tibble()`
     supports:
 
-    !begin-bullets-67!
+    !begin-bullets-68!
     -   !begin-bullet!
         `NULL`: remove row names (default),
         !end-bullet!
@@ -1453,7 +1468,7 @@ warnings into errors. The compatibility code will be removed in tibble
         existing row names, which are no longer present in the result.
         !end-bullet!
 
-    !end-bullets-67!
+    !end-bullets-68!
     The old default can be restored by calling
     `pkgconfig::set_config("tibble::rownames", NA)`, this also works for
     packages that import *tibble*.
@@ -1494,22 +1509,22 @@ warnings into errors. The compatibility code will be removed in tibble
 
     !end-bullet!
 
-!end-bullets-65!
+!end-bullets-66!
 
 ## New functions
 
-!begin-bullets-68!
+!begin-bullets-69!
 
 -   !begin-bullet!
     Added experimental `view()` function that always returns its input
     invisibly and calls `utils::View()` only in interactive mode (#373).
     !end-bullet!
 
-!end-bullets-68!
+!end-bullets-69!
 
 ## Output
 
-!begin-bullets-69!
+!begin-bullets-70!
 
 -   !begin-bullet!
     The `set_tidy_names()` and `tidy_names()` helpers the list of new
@@ -1558,11 +1573,11 @@ warnings into errors. The compatibility code will be removed in tibble
 
     !end-bullet!
 
-!end-bullets-69!
+!end-bullets-70!
 
 ## Bug fixes
 
-!begin-bullets-70!
+!begin-bullets-71!
 
 -   !begin-bullet!
     `glimpse()` takes coloring into account when computing column width,
@@ -1585,11 +1600,11 @@ warnings into errors. The compatibility code will be removed in tibble
 
     !end-bullet!
 
-!end-bullets-70!
+!end-bullets-71!
 
 ## Internal
 
-!begin-bullets-71!
+!begin-bullets-72!
 
 -   !begin-bullet!
     Skip dplyr in tests if unavailable (#420, @QuLogic).
@@ -1635,13 +1650,13 @@ warnings into errors. The compatibility code will be removed in tibble
 
     !end-bullet!
 
-!end-bullets-71!
+!end-bullets-72!
 
 # tibble 1.4.2
 
 ## Bug fixes
 
-!begin-bullets-72!
+!begin-bullets-73!
 
 -   !begin-bullet!
     Fix OS X builds.
@@ -1661,11 +1676,11 @@ warnings into errors. The compatibility code will be removed in tibble
     `glimpse()` returns its input for zero-column data frames.
     !end-bullet!
 
-!end-bullets-72!
+!end-bullets-73!
 
 ## Features
 
-!begin-bullets-73!
+!begin-bullets-74!
 
 -   !begin-bullet!
     `enframe(NULL)` now returns the same as `enframe(logical())` (#352).
@@ -1677,11 +1692,11 @@ warnings into errors. The compatibility code will be removed in tibble
     Updated vignettes and website documentation.
     !end-bullet!
 
-!end-bullets-73!
+!end-bullets-74!
 
 ## Performance
 
-!begin-bullets-74!
+!begin-bullets-75!
 
 -   !begin-bullet!
     Faster printing of very wide tibbles (#360).
@@ -1693,7 +1708,7 @@ warnings into errors. The compatibility code will be removed in tibble
     Only call `nrow()` and `head()` in `glimpse()`, not `ncol()`.
     !end-bullet!
 
-!end-bullets-74!
+!end-bullets-75!
 
 # tibble 1.4.1
 
@@ -1708,7 +1723,7 @@ tibble.
 
 ## New features
 
-!begin-bullets-75!
+!begin-bullets-76!
 
 -   !begin-bullet!
     Make `add_case()` an alias for `add_row()` (#324, @LaDilettante).
@@ -1729,11 +1744,11 @@ tibble.
     (#307, #311).
     !end-bullet!
 
-!end-bullets-75!
+!end-bullets-76!
 
 ## Bug fixes
 
-!begin-bullets-76!
+!begin-bullets-77!
 
 -   !begin-bullet!
     Improved compatibility with remote data sources for `glimpse()`
@@ -1757,11 +1772,11 @@ tibble.
     nonzero length now produces a correct error message (#319).
     !end-bullet!
 
-!end-bullets-76!
+!end-bullets-77!
 
 ## Internal changes
 
-!begin-bullets-77!
+!begin-bullets-78!
 
 -   !begin-bullet!
     Reexporting `has_name()` from rlang, instead of forwarding, to avoid
@@ -1774,13 +1789,13 @@ tibble.
     Remove Rcpp dependency (#313, @patperry).
     !end-bullet!
 
-!end-bullets-77!
+!end-bullets-78!
 
 # tibble 1.3.4
 
 ## Bug fixes
 
-!begin-bullets-78!
+!begin-bullets-79!
 
 -   !begin-bullet!
     Values of length 1 in a `tibble()` call are recycled prior to
@@ -1809,11 +1824,11 @@ tibble.
     passed as named argument, as in `as_tibble(validate = TRUE)`.
     !end-bullet!
 
-!end-bullets-78!
+!end-bullets-79!
 
 ## Formatting
 
-!begin-bullets-79!
+!begin-bullets-80!
 
 -   !begin-bullet!
     `format_v()` now always surrounds lists with `[]` brackets, even if
@@ -1831,13 +1846,13 @@ tibble.
     column names (#291).
     !end-bullet!
 
-!end-bullets-79!
+!end-bullets-80!
 
 # tibble 1.3.3
 
 ## Bug fixes
 
-!begin-bullets-80!
+!begin-bullets-81!
 
 -   !begin-bullet!
     Added `format()` and `print()` methods for both `tbl` and `tbl_df`
@@ -1860,24 +1875,24 @@ tibble.
     Remove unused import declaration for assertthat.
     !end-bullet!
 
-!end-bullets-80!
+!end-bullets-81!
 
 # tibble 1.3.1
 
 ## Bug fixes
 
-!begin-bullets-81!
+!begin-bullets-82!
 
 -   !begin-bullet!
     Subsetting zero columns no longer returns wrong number of rows
     (#241, @echasnovski).
     !end-bullet!
 
-!end-bullets-81!
+!end-bullets-82!
 
 ## Interface changes
 
-!begin-bullets-82!
+!begin-bullets-83!
 
 -   !begin-bullet!
     New `set_tidy_names()` and `tidy_names()`, a simpler version of
@@ -1894,11 +1909,11 @@ tibble.
     `dplyr::all_equal()` (#247).
     !end-bullet!
 
-!end-bullets-82!
+!end-bullets-83!
 
 ## Formatting
 
-!begin-bullets-83!
+!begin-bullets-84!
 
 -   !begin-bullet!
     Printing now uses `x` again instead of the Unicode multiplication
@@ -1923,11 +1938,11 @@ tibble.
     characters in names and data, also for `glimpse()` (#235).
     !end-bullet!
 
-!end-bullets-83!
+!end-bullets-84!
 
 ## Misc
 
-!begin-bullets-84!
+!begin-bullets-85!
 
 -   !begin-bullet!
     Improve formatting of error messages (#223).
@@ -1950,13 +1965,13 @@ tibble.
     `pkgdown` website.
     !end-bullet!
 
-!end-bullets-84!
+!end-bullets-85!
 
 # tibble 1.3.0
 
 ## Bug fixes
 
-!begin-bullets-85!
+!begin-bullets-86!
 
 -   !begin-bullet!
     Time series matrices (objects of class `mts` and `ts`) are now
@@ -1974,11 +1989,11 @@ tibble.
     is loaded or not (#198).
     !end-bullet!
 
-!end-bullets-85!
+!end-bullets-86!
 
 ## Interface changes
 
-!begin-bullets-86!
+!begin-bullets-87!
 
 -   !begin-bullet!
     Now requiring R 3.1.0 instead of R 3.1.3 (#189).
@@ -1998,13 +2013,13 @@ tibble.
     Removed unused dependency on `assertthat`.
     !end-bullet!
 
-!end-bullets-86!
+!end-bullets-87!
 
 ## Features
 
 ### General
 
-!begin-bullets-87!
+!begin-bullets-88!
 
 -   !begin-bullet!
     Keep column classes when adding row to empty tibble (#171, #177,
@@ -2019,11 +2034,11 @@ tibble.
     @LaDilettante).
     !end-bullet!
 
-!end-bullets-87!
+!end-bullets-88!
 
 ### Input validation
 
-!begin-bullets-88!
+!begin-bullets-89!
 
 -   !begin-bullet!
     An attempt to read or update a missing column now throws a clearer
@@ -2034,11 +2049,11 @@ tibble.
     helpful error message (#179).
     !end-bullet!
 
-!end-bullets-88!
+!end-bullets-89!
 
 ### Printing
 
-!begin-bullets-89!
+!begin-bullets-90!
 
 -   !begin-bullet!
     Render Unicode multiplication sign as `x` if it cannot be
@@ -2056,11 +2071,11 @@ tibble.
     #195, @t-kalinowski).
     !end-bullet!
 
-!end-bullets-89!
+!end-bullets-90!
 
 ## Documentation
 
-!begin-bullets-90!
+!begin-bullets-91!
 
 -   !begin-bullet!
     Fix typo in `obj_sum` documentation (#193, @etiennebr).
@@ -2072,23 +2087,23 @@ tibble.
     Now explicitly stating minimum Rcpp version 0.12.3.
     !end-bullet!
 
-!end-bullets-90!
+!end-bullets-91!
 
 ## Internal
 
-!begin-bullets-91!
+!begin-bullets-92!
 
 -   !begin-bullet!
     Using registration of native routines.
     !end-bullet!
 
-!end-bullets-91!
+!end-bullets-92!
 
 # tibble 1.2
 
 ## Bug fixes
 
-!begin-bullets-92!
+!begin-bullets-93!
 
 -   !begin-bullet!
     The `tibble.width` option is used for `glimpse()` only if it is
@@ -2107,11 +2122,11 @@ tibble.
     is named `na.last`, `decreasing` or `method` (#107, @BillDunlap).
     !end-bullet!
 
-!end-bullets-92!
+!end-bullets-93!
 
 ## Interface changes
 
-!begin-bullets-93!
+!begin-bullets-94!
 
 -   !begin-bullet!
     New `add_column()`, analogously to `add_row()` (#99).
@@ -2131,11 +2146,11 @@ tibble.
     tibble". The former is still available as alias (#132, #143).
     !end-bullet!
 
-!end-bullets-93!
+!end-bullets-94!
 
 ## Features
 
-!begin-bullets-94!
+!begin-bullets-95!
 
 -   !begin-bullet!
     `add_row()` now can add multiple rows, with recycling (#142,
@@ -2157,11 +2172,11 @@ tibble.
     (e.g., for SQL data sources).
     !end-bullet!
 
-!end-bullets-94!
+!end-bullets-95!
 
 ## Documentation
 
-!begin-bullets-95!
+!begin-bullets-96!
 
 -   !begin-bullet!
     New object summary vignette that shows which methods to define for
@@ -2176,7 +2191,7 @@ tibble.
     Minor changes in vignette (#115, @helix123).
     !end-bullet!
 
-!end-bullets-95!
+!end-bullets-96!
 
 # tibble 1.1
 
@@ -2184,7 +2199,7 @@ Follow-up release.
 
 ## Breaking changes
 
-!begin-bullets-96!
+!begin-bullets-97!
 
 -   !begin-bullet!
     `tibble()` is no longer an alias for `frame_data()` (#82).
@@ -2200,11 +2215,11 @@ Follow-up release.
     `[[` returns `NULL` if column not found (#109).
     !end-bullet!
 
-!end-bullets-96!
+!end-bullets-97!
 
 ## Output
 
-!begin-bullets-97!
+!begin-bullets-98!
 
 -   !begin-bullet!
     Reworked output: More concise summary (begins with hash `#` and
@@ -2237,11 +2252,11 @@ Follow-up release.
     `type_sum()` shows only topmost class for S3 objects.
     !end-bullet!
 
-!end-bullets-97!
+!end-bullets-98!
 
 ## Error reporting
 
-!begin-bullets-98!
+!begin-bullets-99!
 
 -   !begin-bullet!
     Strict checking of integer and logical column indexes. For integers,
@@ -2265,11 +2280,11 @@ Follow-up release.
     `stop()` and `warning()` are now always called with `call. = FALSE`.
     !end-bullet!
 
-!end-bullets-98!
+!end-bullets-99!
 
 ## Coercion
 
-!begin-bullets-99!
+!begin-bullets-100!
 
 -   !begin-bullet!
     The `.Dim` attribute is silently stripped from columns that are 1d
@@ -2285,11 +2300,11 @@ Follow-up release.
     endless recursion.
     !end-bullet!
 
-!end-bullets-99!
+!end-bullets-100!
 
 ## New features
 
-!begin-bullets-100!
+!begin-bullets-101!
 
 -   !begin-bullet!
     New `has_name()` (#102).
@@ -2320,11 +2335,11 @@ Follow-up release.
     `has_rownames()` supports arguments that are not data frames.
     !end-bullet!
 
-!end-bullets-100!
+!end-bullets-101!
 
 ## Bug fixes
 
-!begin-bullets-101!
+!begin-bullets-102!
 
 -   !begin-bullet!
     Two-dimensional indexing with `[[` works (#58, #63).
@@ -2333,11 +2348,11 @@ Follow-up release.
     Subsetting with empty index (e.g., `x[]`) also removes row names.
     !end-bullet!
 
-!end-bullets-101!
+!end-bullets-102!
 
 ## Documentation
 
-!begin-bullets-102!
+!begin-bullets-103!
 
 -   !begin-bullet!
     Document behavior of `as_tibble.tbl_df()` for subclasses (#60).
@@ -2346,11 +2361,11 @@ Follow-up release.
     Document and test that subsetting removes row names.
     !end-bullet!
 
-!end-bullets-102!
+!end-bullets-103!
 
 ## Internal
 
-!begin-bullets-103!
+!begin-bullets-104!
 
 -   !begin-bullet!
     Don't rely on `knitr` internals for testing (#78).
@@ -2382,11 +2397,11 @@ Follow-up release.
     Use new `expect_output_file()` from `testthat`.
     !end-bullet!
 
-!end-bullets-103!
+!end-bullets-104!
 
 # Version 1.0
 
-!begin-bullets-104!
+!begin-bullets-105!
 
 -   !begin-bullet!
     Initial CRAN release
@@ -2399,7 +2414,7 @@ Follow-up release.
 -   !begin-bullet!
     Exported functions:
 
-    !begin-bullets-105!
+    !begin-bullets-106!
     -   !begin-bullet!
         `tbl_df()`
         !end-bullet!
@@ -2447,12 +2462,12 @@ Follow-up release.
         New `is_vector_s3()`.
         !end-bullet!
 
-    !end-bullets-105!
+    !end-bullets-106!
     !end-bullet!
 -   !begin-bullet!
     Features
 
-    !begin-bullets-106!
+    !begin-bullets-107!
     -   !begin-bullet!
         New `as_data_frame.table()` with argument `n` to control name of
         count column (#22, #23).
@@ -2478,23 +2493,23 @@ Follow-up release.
         0-row but n-col data frame if no data.
         !end-bullet!
 
-    !end-bullets-106!
+    !end-bullets-107!
     !end-bullet!
 -   !begin-bullet!
     Bug fixes
 
-    !begin-bullets-107!
+    !begin-bullets-108!
     -   !begin-bullet!
         `frame_data()` properly constructs rectangular tables
         (hadley/dplyr#1377, @kevinushey).
         !end-bullet!
 
-    !end-bullets-107!
+    !end-bullets-108!
     !end-bullet!
 -   !begin-bullet!
     Minor modifications
 
-    !begin-bullets-108!
+    !begin-bullets-109!
     -   !begin-bullet!
         Uses `setOldClass(c("tbl_df", "tbl", "data.frame"))` to help
         with S4 (hadley/dplyr#969).
@@ -2548,12 +2563,12 @@ Follow-up release.
         @jennybc). Improve `[.tbl_df()` error message.
         !end-bullet!
 
-    !end-bullets-108!
+    !end-bullets-109!
     !end-bullet!
 -   !begin-bullet!
     Documentation
 
-    !begin-bullets-109!
+    !begin-bullets-110!
     -   !begin-bullet!
         Update README, with edits (#52, @bhive01) and enhancements (#54,
         @jennybc).
@@ -2563,12 +2578,12 @@ Follow-up release.
         and regular data frames (hadley/dplyr#1468).
         !end-bullet!
 
-    !end-bullets-109!
+    !end-bullets-110!
     !end-bullet!
 -   !begin-bullet!
     Code quality
 
-    !begin-bullets-110!
+    !begin-bullets-111!
     -   !begin-bullet!
         Test using new-style Travis-CI and AppVeyor. Full test coverage
         (#24, #53). Regression tests load known output from file (#49).
@@ -2581,7 +2596,7 @@ Follow-up release.
         Internal cleanup.
         !end-bullet!
 
-    !end-bullets-110!
+    !end-bullets-111!
     !end-bullet!
 
-!end-bullets-104!
+!end-bullets-105!
