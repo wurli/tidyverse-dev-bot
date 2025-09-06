@@ -19668,3 +19668,5 @@ tibble,b8a5a97d35eae0f15e68ae9492f71ef5,Auto-update from GitHub Actions. Run: ht
 testthat,5d00ebcda0a958018c3b2afadda5ee32,"New `vignette(""mocking"")` explains mocking in detail (#1265).",NA,NA,NA,NA
 testthat,ae2b2276e01059cda68f6af89f9557ce,"New `vignette(""challenging-functions"")` provides an index to other documentation organised by testing challenges (#1265).",NA,NA,NA,NA
 renv,28087edbee3c0836c2ccb15f8c630045,"`renv` now also supports `RENV_LOCKFILE_VERSION = 1` as an alternate way to request the older, compact lockfiles. (#2175)",NA,NA,NA,NA
+pillar,3418b3b582d3ba99f55c852b9b79448e,Use reviewdog for external PRs (#801).,NA,NA,NA,NA
+tibble,5d3138b27719ae6eddf65b36ed412001,Use reviewdog for external PRs (#1663).,NA,NA,NA,NA
