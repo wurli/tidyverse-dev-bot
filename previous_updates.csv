@@ -19674,3 +19674,5 @@ rsconnect,0fe44590c4d50070e94d57c7e57e6c32,Increase the default `rsconnect.max.b
 pkgdown,6897ad02dfaeff02b2e4a3b09741ff4a,"Added documentation explaining how to solve incorrect rendering of plotmath expressions under ragg devices on Linux. (@​remlapmot, #2908)",NA,NA,NA,NA
 pkgdown,b4b1a532be274a3bb702577b362ed172,Improved the LaTeX syntax in one of the math rendering test cases (@​remlapmot),NA,NA,NA,NA
 vctrs,38df987eee440142b6842a0bd04dd87e,`list_unchop()` now assigns names correctly when overlapping `indices` are involved (#2019).,NA,NA,NA,NA
+tidyr,fb8d3efe70800a22ab1d726db8ac2a5b,The base pipe is now used throughout the documentation (#1613).,NA,NA,NA,NA
+tidyr,f9bfd429087d3af2e81abe7c73720be0,"R \>=4.1.0 is now required, in line with the tidyverse standard of supporting the previous 5 minor releases of R (#1613).",NA,NA,NA,NA

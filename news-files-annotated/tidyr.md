@@ -3,6 +3,15 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    The base pipe is now used throughout the documentation (#1613).
+
+    !end-bullet!
+-   !begin-bullet!
+    R \>=4.1.0 is now required, in line with the tidyverse standard of
+    supporting the previous 5 minor releases of R (#1613).
+
+    !end-bullet!
+-   !begin-bullet!
     `fill()` gains a `.by` argument as an alternative to
     `dplyr::group_by()` for applying the fill per group, similar to
     `nest(.by =)` and `dplyr::mutate(.by =)` (@olivroy, #1439).
