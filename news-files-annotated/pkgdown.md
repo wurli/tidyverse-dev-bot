@@ -7,6 +7,15 @@
     other functions (e.g., `build_articles()`) and is useful for
     debugging build errors on GH actions.
     !end-bullet!
+-   !begin-bullet!
+    Added documentation explaining how to solve incorrect rendering of
+    plotmath expressions under ragg devices on Linux. (@remlapmot,
+    #2908)
+    !end-bullet!
+-   !begin-bullet!
+    Improved the LaTeX syntax in one of the math rendering test cases
+    (@remlapmot)
+    !end-bullet!
 
 !end-bullets-1!
 

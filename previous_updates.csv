@@ -19671,3 +19671,5 @@ renv,28087edbee3c0836c2ccb15f8c630045,"`renv` now also supports `RENV_LOCKFILE_V
 pillar,3418b3b582d3ba99f55c852b9b79448e,Use reviewdog for external PRs (#801).,NA,NA,NA,NA
 tibble,5d3138b27719ae6eddf65b36ed412001,Use reviewdog for external PRs (#1663).,NA,NA,NA,NA
 rsconnect,0fe44590c4d50070e94d57c7e57e6c32,Increase the default `rsconnect.max.bundle.size` limit to 5 GiB. (#1200),NA,NA,NA,NA
+pkgdown,6897ad02dfaeff02b2e4a3b09741ff4a,"Added documentation explaining how to solve incorrect rendering of plotmath expressions under ragg devices on Linux. (@​remlapmot, #2908)",NA,NA,NA,NA
+pkgdown,b4b1a532be274a3bb702577b362ed172,Improved the LaTeX syntax in one of the math rendering test cases (@​remlapmot),NA,NA,NA,NA
