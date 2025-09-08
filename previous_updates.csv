@@ -19670,3 +19670,4 @@ testthat,ae2b2276e01059cda68f6af89f9557ce,"New `vignette(""challenging-functions
 renv,28087edbee3c0836c2ccb15f8c630045,"`renv` now also supports `RENV_LOCKFILE_VERSION = 1` as an alternate way to request the older, compact lockfiles. (#2175)",NA,NA,NA,NA
 pillar,3418b3b582d3ba99f55c852b9b79448e,Use reviewdog for external PRs (#801).,NA,NA,NA,NA
 tibble,5d3138b27719ae6eddf65b36ed412001,Use reviewdog for external PRs (#1663).,NA,NA,NA,NA
+rsconnect,0fe44590c4d50070e94d57c7e57e6c32,Increase the default `rsconnect.max.bundle.size` limit to 5 GiB. (#1200),NA,NA,NA,NA
