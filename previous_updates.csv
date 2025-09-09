@@ -19687,3 +19687,4 @@ dbplyr,d0444384dc4d08cd2c7ecaebaccee95f,"• SQL server uses `COUNT_BIG` instead
 dbplyr,d0444384dc4d08cd2c7ecaebaccee95f,"• Spark correctly translates `clock::add_years()` (@​ablack3, #1510).",NA,NA,NA,NA
 dbplyr,d0444384dc4d08cd2c7ecaebaccee95f,"• Teradata now supports `as.double()` and `as.character()` (@​rplsmn, #1545).",NA,NA,NA,NA
 magrittr,c581db69c17615d0de0b2a06dc764543,Fixes for CRAN checks.,NA,NA,NA,NA
+rsconnect,92c1dcf7c2a97ac8b8fe1c0cce1e7d99,`rsconnect` now sets the `rsconnect.max.bundle.size` and `rsconnect.max.bundle.files` options to their default values on startup if they have not yet been set. (#1204),NA,NA,NA,NA

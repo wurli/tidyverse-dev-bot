@@ -3,8 +3,15 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `rsconnect` now sets the `rsconnect.max.bundle.size` and
+    `rsconnect.max.bundle.files` options to their default values on
+    startup if they have not yet been set. (#1204)
+
+    !end-bullet!
+-   !begin-bullet!
     Increase the default `rsconnect.max.bundle.size` limit to 5 GiB.
     (#1200)
+
     !end-bullet!
 
 !end-bullets-1!
