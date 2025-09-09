@@ -1,18 +1,26 @@
 # magrittr (development version)
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    Fixes for CRAN checks.
+    !end-bullet!
+
+!end-bullets-1!
+
 # magrittr 2.0.3
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     Fixed a C level protection issue in `%>%` (#256).
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # magrittr 2.0.2
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     New eager pipe `%!>%` for sequential evaluation (#247). Consider
@@ -26,11 +34,11 @@
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 # magrittr 2.0.1
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     Fixed issue caused by objects with certain names being present in
@@ -43,7 +51,7 @@
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 # magrittr 2.0.0
 
@@ -51,7 +59,7 @@
 
 The pipe has been rewritten in C with the following goals in mind:
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     Minimal performance cost.
@@ -63,7 +71,7 @@ The pipe has been rewritten in C with the following goals in mind:
     No impact on reference counts.
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 As part of this rewrite we have changed the behaviour of the pipe to
 make it closer to the implementation that will likely be included in a
@@ -264,7 +272,7 @@ packages.
 
 ## Bug fixes
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     Can now use the placeholder `.` with the splicing operator `!!!`
@@ -278,7 +286,7 @@ packages.
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # magrittr 1.5
 
@@ -297,7 +305,7 @@ e.g. `f <- . %>% abs %>% mean(na.rm = TRUE)`.
 
 Three new operators are introduced for some special cases
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     Assignment pipe: `%<>%`
@@ -309,7 +317,7 @@ Three new operators are introduced for some special cases
     Exposition pipe: `%$%`
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 For more information see the documentation, e.g. `?%T>%`.
 

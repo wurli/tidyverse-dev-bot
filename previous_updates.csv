@@ -19679,3 +19679,11 @@ tidyr,f9bfd429087d3af2e81abe7c73720be0,"R \>=4.1.0 is now required, in line with
 stringr,c5976e94098b03fcfa2611e8528bef34,`R CMD check` fixes,NA,NA,NA,NA
 dtplyr,55c24075eed3a8ca7a23eb578e915a69,`R CMD check` fixes,NA,NA,NA,NA
 gt,3f9261394fb2940b78d874271b53a0e0,"Added support for rtf to fmt_image (@​shannonhaughton, #2029)",NA,NA,NA,NA
+dbplyr,d0444384dc4d08cd2c7ecaebaccee95f,Improved translations:,NA,NA,NA,NA
+dbplyr,d0444384dc4d08cd2c7ecaebaccee95f,"• SQL Server, Redshift, Snowflake, and Postgres now correctly translate `difftime()` (the sign is now correct) (@​edward-burn, #1532).",NA,NA,NA,NA
+dbplyr,d0444384dc4d08cd2c7ecaebaccee95f,"• SQL server, Redshift, Snowflake, Postgres, and Spark now translate `date_count_between()` (@​edward-burn, #1495).",NA,NA,NA,NA
+dbplyr,d0444384dc4d08cd2c7ecaebaccee95f,"• SQL Server now supports `pmin()` and `pmax()` (@​edward-burn, #1602).",NA,NA,NA,NA
+dbplyr,d0444384dc4d08cd2c7ecaebaccee95f,"• SQL server uses `COUNT_BIG` instead of `COUNT` so `tally()` and `count()` work regardless of data size (@​edward-burn, #1498).",NA,NA,NA,NA
+dbplyr,d0444384dc4d08cd2c7ecaebaccee95f,"• Spark correctly translates `clock::add_years()` (@​ablack3, #1510).",NA,NA,NA,NA
+dbplyr,d0444384dc4d08cd2c7ecaebaccee95f,"• Teradata now supports `as.double()` and `as.character()` (@​rplsmn, #1545).",NA,NA,NA,NA
+magrittr,c581db69c17615d0de0b2a06dc764543,Fixes for CRAN checks.,NA,NA,NA,NA
