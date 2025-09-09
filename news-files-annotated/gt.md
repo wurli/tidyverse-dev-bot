@@ -59,6 +59,10 @@
     Use stub alignment values for RTF output (@shannonhaughton, #2019)
 
     !end-bullet!
+-   !begin-bullet!
+    Added support for rtf to fmt_image (@shannonhaughton, #2029)
+
+    !end-bullet!
 
 !end-bullets-1!
 
