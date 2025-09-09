@@ -19677,3 +19677,4 @@ vctrs,38df987eee440142b6842a0bd04dd87e,`list_unchop()` now assigns names correct
 tidyr,fb8d3efe70800a22ab1d726db8ac2a5b,The base pipe is now used throughout the documentation (#1613).,NA,NA,NA,NA
 tidyr,f9bfd429087d3af2e81abe7c73720be0,"R \>=4.1.0 is now required, in line with the tidyverse standard of supporting the previous 5 minor releases of R (#1613).",NA,NA,NA,NA
 stringr,c5976e94098b03fcfa2611e8528bef34,`R CMD check` fixes,NA,NA,NA,NA
+dtplyr,55c24075eed3a8ca7a23eb578e915a69,`R CMD check` fixes,NA,NA,NA,NA
