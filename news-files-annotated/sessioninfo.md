@@ -1,8 +1,17 @@
 # sessioninfo (development version)
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    Fixed an issue where detecting the Quarto version on Windows could
+    fail (@kevinushey, #122).
+    !end-bullet!
+
+!end-bullets-1!
+
 # sessioninfo 1.2.3
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     `session_info()` no longer produces an error when `info` has length
@@ -35,11 +44,11 @@
 
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # sessioninfo 1.2.2
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     This version does not add an emoji hash to the output.
@@ -61,11 +70,11 @@
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 # sessioninfo 1.2.1
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     `package_info()` and `session_info()` now do not fail if the version
@@ -78,11 +87,11 @@
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 # sessioninfo 1.2.0
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     New function `external_info()`, information about external software.
@@ -160,11 +169,11 @@
 
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 # sessioninfo 1.1.1
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     `package_info()` and `session_info()` now detect locally installed
@@ -178,11 +187,11 @@
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # sessioninfo 1.1.0
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     `package_info()` now has a `dependencies` argument, to filter the
@@ -239,7 +248,7 @@
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 # sessioninfo 1.0.0
 

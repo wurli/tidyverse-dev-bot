@@ -19689,3 +19689,4 @@ dbplyr,d0444384dc4d08cd2c7ecaebaccee95f,"• Teradata now supports `as.double()`
 magrittr,c581db69c17615d0de0b2a06dc764543,Fixes for CRAN checks.,NA,NA,NA,NA
 rsconnect,92c1dcf7c2a97ac8b8fe1c0cce1e7d99,`rsconnect` now sets the `rsconnect.max.bundle.size` and `rsconnect.max.bundle.files` options to their default values on startup if they have not yet been set. (#1204),NA,NA,NA,NA
 googledrive,6c5810c493d71c43228dab45d70cf894,"`drive_upload()` and `drive_download()` support the conversion of a local markdown file to a Google Doc and vice versa (#465, @​ateucher).",NA,NA,NA,NA
+sessioninfo,1c09bc81935d5250e0d419852c166b4f,"Fixed an issue where detecting the Quarto version on Windows could fail (@​kevinushey, #122).",NA,NA,NA,NA
