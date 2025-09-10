@@ -400,7 +400,8 @@ Where to learn more:
     *details for more advanced users*
     !begin-bullets-15!
     -   !begin-bullet!
-        Bring your own OAuth app or API key
+        Bring your own OAuth app or API key *article no longer
+        available*
         !end-bullet!
     -   !begin-bullet!
         How to get your own API credentials
