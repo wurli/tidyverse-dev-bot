@@ -1,5 +1,7 @@
 # dtplyr (development version)
 
+# dtplyr 1.3.2
+
 !begin-bullets-1!
 
 -   !begin-bullet!

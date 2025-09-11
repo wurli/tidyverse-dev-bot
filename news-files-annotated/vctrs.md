@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `vec_equal()` now efficiently internally recycles `x` and `y`
+    elements of size 1 (#2028).
+
+    !end-bullet!
+-   !begin-bullet!
     `list_unchop()` now assigns names correctly when overlapping
     `indices` are involved (#2019).
 
