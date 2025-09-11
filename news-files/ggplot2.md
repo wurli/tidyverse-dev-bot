@@ -1,5 +1,7 @@
 # ggplot2 (development version)
 
+# ggplot2 4.0.0
+
 ## User facing
 
 ### Breaking changes
