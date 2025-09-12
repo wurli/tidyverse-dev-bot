@@ -19691,3 +19691,4 @@ rsconnect,92c1dcf7c2a97ac8b8fe1c0cce1e7d99,`rsconnect` now sets the `rsconnect.m
 googledrive,6c5810c493d71c43228dab45d70cf894,"`drive_upload()` and `drive_download()` support the conversion of a local markdown file to a Google Doc and vice versa (#465, @​ateucher).",NA,NA,NA,NA
 sessioninfo,1c09bc81935d5250e0d419852c166b4f,"Fixed an issue where detecting the Quarto version on Windows could fail (@​kevinushey, #122).",NA,NA,NA,NA
 vctrs,2c4455c350ec1d1bad4ca11ee1fdc9f0,`vec_equal()` now efficiently internally recycles `x` and `y` elements of size 1 (#2028).,NA,NA,NA,NA
+ggplot2,adb9c64f99bcb66f3330c3894dbf88ff,"Fixed regression where `draw_key_rect()` stopped using `fill` colours (@​mitchelloharawild, #6609).",NA,NA,NA,NA
