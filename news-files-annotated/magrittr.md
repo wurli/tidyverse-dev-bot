@@ -1,3 +1,5 @@
+# magrittr (development version)
+
 # magrittr 2.0.4
 
 !begin-bullets-1!
