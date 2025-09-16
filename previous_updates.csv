@@ -19693,3 +19693,7 @@ sessioninfo,1c09bc81935d5250e0d419852c166b4f,"Fixed an issue where detecting the
 vctrs,2c4455c350ec1d1bad4ca11ee1fdc9f0,`vec_equal()` now efficiently internally recycles `x` and `y` elements of size 1 (#2028).,NA,NA,NA,NA
 ggplot2,adb9c64f99bcb66f3330c3894dbf88ff,"Fixed regression where `draw_key_rect()` stopped using `fill` colours (@​mitchelloharawild, #6609).",NA,NA,NA,NA
 pillar,d818577e2c22c1731bf8f39a01afd0fe,Auto-update from GitHub Actions (#803).,NA,NA,NA,NA
+duckplyr,8286c5263cdf66e0c958f16072efe17a,"Threshold for `prudence = ""thrifty""` is reduced to 1000 cells when the data comes from a remote data source.",NA,NA,NA,NA
+duckplyr,e8b7ce0e978418c296f71b0a123fe0dc,Support named arguments for `dd$...()` functions.,NA,NA,NA,NA
+duckplyr,21383de39d6cd2248364705df0027f33,Add and use `meta_reset()`.,NA,NA,NA,NA
+duckplyr,5e75f1703da29ec31384985491f6d0fe,Generate a more balanced expresion when translating `%in%` to avoid performance problems in duckdb v1.4.0.,NA,NA,NA,NA
