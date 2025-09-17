@@ -5,6 +5,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `data_color()` now allows to specify which light/dark color to use
+    when `autocolor_text = TRUE` (@xx02al, #1930).
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed an issue with a warning in Quarto (@olivroy, #1985)
 
     !end-bullet!
