@@ -19699,3 +19699,7 @@ duckplyr,21383de39d6cd2248364705df0027f33,Add and use `meta_reset()`.,NA,NA,NA,N
 duckplyr,5e75f1703da29ec31384985491f6d0fe,Generate a more balanced expresion when translating `%in%` to avoid performance problems in duckdb v1.4.0.,NA,NA,NA,NA
 pillar,53e1d80e72e739a6ad63bb78ffd63a34,`glimpse()` also works for stingy duckplyr data frames.,NA,NA,NA,NA
 gt,1390747990305318d08a90df9c456728,"`data_color()` now allows to specify which light/dark color to use when `autocolor_text = TRUE` (@​xx02al, #1930).",NA,NA,NA,NA
+duckplyr,ee86ecb8b399cb6d1401694902226b3c,Fully support `dd::...()` syntax (#795).,NA,NA,NA,NA
+duckplyr,dda08e7e27f62d42799d1b859d6255c4,"Format with air, check detritus, better handling of `extra-packages` (#738).",NA,NA,NA,NA
+duckplyr,9f5a35bccbd75fbe7a0ff284e4840cf7,Skip tests.,NA,NA,NA,NA
+duckplyr,931b743a298e888bad849f155c48c80b,Fix clone path.,NA,NA,NA,NA
