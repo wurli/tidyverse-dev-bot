@@ -19707,3 +19707,5 @@ renv,406923025ed99c147872ca3ba457e419,"`renv` gains the function `renv::vulns()`
 duckplyr,c739f201767008ecfac64dfc1342a289,Support named arguments for `dd::...()` functions.,NA,NA,NA,NA
 pillar,8014bb7e7edcba04d806e0eb92ecc26f,CRAN release v1.11.1 (#806).,NA,NA,NA,NA
 vroom,e8f4d0a5019e2158089c936507f07ad8,Fixed a bad URL in the README at CRAN's request.,NA,NA,NA,NA
+dplyr,8b725b8fa06508dc0e526dc1388b7e94,The base pipe is now used throughout the documentation (#7711).,NA,NA,NA,NA
+dplyr,5158abbf69445b0f1cbaec9c3e5c7c4a,"R \>=4.1.0 is now required, in line with the tidyverse standard of supporting the previous 5 minor releases of R (#7711).",NA,NA,NA,NA

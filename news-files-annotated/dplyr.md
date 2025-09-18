@@ -3,6 +3,15 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    The base pipe is now used throughout the documentation (#7711).
+
+    !end-bullet!
+-   !begin-bullet!
+    R \>=4.1.0 is now required, in line with the tidyverse standard of
+    supporting the previous 5 minor releases of R (#7711).
+
+    !end-bullet!
+-   !begin-bullet!
     `case_when()` now throws a better error if one of the conditions is
     an array (#6862, @ilovemane).
 
@@ -21,10 +30,6 @@
 -   !begin-bullet!
     Fixed an issue where duckplyr's ALTREP data frames were being
     materialized early due to internal usage of `ncol()` (#7049).
-
-    !end-bullet!
--   !begin-bullet!
-    R \>=3.6.0 is now explicitly required (#7026).
 
     !end-bullet!
 -   !begin-bullet!
