@@ -19706,3 +19706,4 @@ duckplyr,931b743a298e888bad849f155c48c80b,Fix clone path.,NA,NA,NA,NA
 renv,406923025ed99c147872ca3ba457e419,"`renv` gains the function `renv::vulns()`, which can be used to query vulnerability information from a Posit Package Manager instance. This information can be queried either for a specific set of packages, or for all packages defined in a lockfile.",NA,NA,NA,NA
 duckplyr,c739f201767008ecfac64dfc1342a289,Support named arguments for `dd::...()` functions.,NA,NA,NA,NA
 pillar,8014bb7e7edcba04d806e0eb92ecc26f,CRAN release v1.11.1 (#806).,NA,NA,NA,NA
+vroom,e8f4d0a5019e2158089c936507f07ad8,Fixed a bad URL in the README at CRAN's request.,NA,NA,NA,NA
