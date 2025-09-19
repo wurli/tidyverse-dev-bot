@@ -47,6 +47,11 @@
     tidyr now requires dplyr \>=1.1.0 (#1568, @catalamarti).
 
     !end-bullet!
+-   !begin-bullet!
+    `unnest_longer()` now places `indices_to` columns before value
+    columns (#1486, @andrewshibata).
+
+    !end-bullet!
 
 !end-bullets-1!
 

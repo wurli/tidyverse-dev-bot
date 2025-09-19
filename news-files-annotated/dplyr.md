@@ -3,6 +3,16 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    New `slice_sample()` example showing how to use it to shuffle rows
+    (#7707, @Hzanib).
+
+    !end-bullet!
+-   !begin-bullet!
+    Updated `across()` examples to include an example using
+    `everything()` (#7621, @JBrandenburg02).
+
+    !end-bullet!
+-   !begin-bullet!
     Clarified how `slice_min()` and `slice_max()` work in the
     introduction vignette (#7717, @ccani007).
 

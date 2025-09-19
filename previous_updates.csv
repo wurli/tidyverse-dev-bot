@@ -19717,3 +19717,6 @@ rlang,a76ad445da8a2a0680f2b930120f5fad,"`is_syntactic_literal()` returns `FALSE`
 dplyr,4f60855be4f33047d8c2428c8c3ef36d,"Clarified how `slice_min()` and `slice_max()` work in the introduction vignette (#7717, @​ccani007).",NA,NA,NA,NA
 rlang,f17dd0967d643db9c172e574b928001d,"New `%&&%` operator that returns RHS when LHS is non-NULL (#1774, @​snystrom).",NA,NA,NA,NA
 rlang,0f4c523a7360b4659bbcb17a4795ba0a,"`is_syntactic_literal()` returns `FALSE` for negative numbers and complex numbers with negative imaginary components (#1799, @​jonthegeek).",NA,NA,NA,NA
+dplyr,b337439b2de63b82d10a61d14da7fa46,"New `slice_sample()` example showing how to use it to shuffle rows (#7707, @​Hzanib).",NA,NA,NA,NA
+dplyr,4b412404d5195eb7d10cf99add4bf305,"Updated `across()` examples to include an example using `everything()` (#7621, @​JBrandenburg02).",NA,NA,NA,NA
+tidyr,e406e815e497a149c37b579986ca0cb9,"`unnest_longer()` now places `indices_to` columns before value columns (#1486, @​andrewshibata).",NA,NA,NA,NA
