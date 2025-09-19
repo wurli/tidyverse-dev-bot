@@ -13,6 +13,11 @@
     (#1200)
 
     !end-bullet!
+-   !begin-bullet!
+    The target Python binary is included in Python environment
+    inspection errors. (#1207)
+
+    !end-bullet!
 
 !end-bullets-1!
 
