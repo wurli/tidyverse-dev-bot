@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed an internal error in `pivot_wider()` (#1609, @krlmlr).
+
+    !end-bullet!
+-   !begin-bullet!
     The base pipe is now used throughout the documentation (#1613).
 
     !end-bullet!
