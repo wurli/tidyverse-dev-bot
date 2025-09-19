@@ -19713,3 +19713,4 @@ rsconnect,842d98672a93171e9ae02eae1080344d,The target Python binary is included 
 dplyr,7d980acb97830cc2262a6ae7f4dbd28a,"`reframe()` has moved from experimental to stable (#7713, @​VisruthSK).",NA,NA,NA,NA
 tidyr,ccdc44e42ce164750a5158a501cdaefe,"Fixed an internal error in `pivot_wider()` (#1609, @​krlmlr).",NA,NA,NA,NA
 usethis,c56001e106948e1d2a32f8ecea3e8ac5,"`pr_resume()` (without a specific `branch`) and `pr_fetch()` (without a specific `number`) no longer error when a branch name contains curly braces (#2107, @​jonthegeek).",NA,NA,NA,NA
+rlang,a76ad445da8a2a0680f2b930120f5fad,"`is_syntactic_literal()` returns `FALSE` for objects with attributes, such as `array(1)` or `factor(""x"")` (#1817, @​jonthegeek).",NA,NA,NA,NA
