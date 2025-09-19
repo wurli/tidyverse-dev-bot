@@ -19715,3 +19715,5 @@ tidyr,ccdc44e42ce164750a5158a501cdaefe,"Fixed an internal error in `pivot_wider(
 usethis,c56001e106948e1d2a32f8ecea3e8ac5,"`pr_resume()` (without a specific `branch`) and `pr_fetch()` (without a specific `number`) no longer error when a branch name contains curly braces (#2107, @​jonthegeek).",NA,NA,NA,NA
 rlang,a76ad445da8a2a0680f2b930120f5fad,"`is_syntactic_literal()` returns `FALSE` for objects with attributes, such as `array(1)` or `factor(""x"")` (#1817, @​jonthegeek).",NA,NA,NA,NA
 dplyr,4f60855be4f33047d8c2428c8c3ef36d,"Clarified how `slice_min()` and `slice_max()` work in the introduction vignette (#7717, @​ccani007).",NA,NA,NA,NA
+rlang,f17dd0967d643db9c172e574b928001d,"New `%&&%` operator that returns RHS when LHS is non-NULL (#1774, @​snystrom).",NA,NA,NA,NA
+rlang,0f4c523a7360b4659bbcb17a4795ba0a,"`is_syntactic_literal()` returns `FALSE` for negative numbers and complex numbers with negative imaginary components (#1799, @​jonthegeek).",NA,NA,NA,NA
