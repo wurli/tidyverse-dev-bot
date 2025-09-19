@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Clarified how `slice_min()` and `slice_max()` work in the
+    introduction vignette (#7717, @ccani007).
+
+    !end-bullet!
+-   !begin-bullet!
     `reframe()` has moved from experimental to stable (#7713,
     @VisruthSK).
 
