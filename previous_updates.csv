@@ -19710,3 +19710,4 @@ vroom,e8f4d0a5019e2158089c936507f07ad8,Fixed a bad URL in the README at CRAN's r
 dplyr,8b725b8fa06508dc0e526dc1388b7e94,The base pipe is now used throughout the documentation (#7711).,NA,NA,NA,NA
 dplyr,5158abbf69445b0f1cbaec9c3e5c7c4a,"R \>=4.1.0 is now required, in line with the tidyverse standard of supporting the previous 5 minor releases of R (#7711).",NA,NA,NA,NA
 rsconnect,842d98672a93171e9ae02eae1080344d,The target Python binary is included in Python environment inspection errors. (#1207),NA,NA,NA,NA
+dplyr,7d980acb97830cc2262a6ae7f4dbd28a,"`reframe()` has moved from experimental to stable (#7713, @​VisruthSK).",NA,NA,NA,NA

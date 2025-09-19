@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `reframe()` has moved from experimental to stable (#7713,
+    @VisruthSK).
+
+    !end-bullet!
+-   !begin-bullet!
     The base pipe is now used throughout the documentation (#7711).
 
     !end-bullet!
