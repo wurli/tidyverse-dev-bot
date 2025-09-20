@@ -19720,3 +19720,20 @@ rlang,0f4c523a7360b4659bbcb17a4795ba0a,"`is_syntactic_literal()` returns `FALSE`
 dplyr,b337439b2de63b82d10a61d14da7fa46,"New `slice_sample()` example showing how to use it to shuffle rows (#7707, @​Hzanib).",NA,NA,NA,NA
 dplyr,4b412404d5195eb7d10cf99add4bf305,"Updated `across()` examples to include an example using `everything()` (#7621, @​JBrandenburg02).",NA,NA,NA,NA
 tidyr,e406e815e497a149c37b579986ca0cb9,"`unnest_longer()` now places `indices_to` columns before value columns (#1486, @​andrewshibata).",NA,NA,NA,NA
+hms,d48194aedac44a3d0cfb79a3ce79e4c5,"`is.hms()` and `as.hms()` now warn even when called indirectly (@​moodymudskipper, #121, #163).",NA,NA,NA,NA
+hms,5fec4986087a9f162869decf081673ff,"Implement `ceiling_hms()` and `floor_hms()` (@​moodymudskipper, #118, #160).",NA,NA,NA,NA
+hms,8687242855104b6ddef29946204648be,Auto-update from GitHub Actions (#178).,NA,NA,NA,NA
+hms,0605691276ff93cfdd296039660b4f88,IDE.,NA,NA,NA,NA
+hms,21c04e95e40fcde5322ede1a8c3fb780,Add Copilot instructions.,NA,NA,NA,NA
+hms,44fdadfe30f020239df098d6a6fccb4f,"Bump Ubuntu version for dev workflow, run if changed.",NA,NA,NA,NA
+hms,48c28380408043e61b781eb9e5c13db6,Use reviewdog for external PRs (#179).,NA,NA,NA,NA
+hms,bea8e66bdd833b3c729efc044d16af6c,Cleanup and fix macOS (#177).,NA,NA,NA,NA
+hms,b7b2c9bcf1a7997c5cfbe7b89f1fce13,"Format with air, check detritus, better handling of `extra-packages` (#176).",NA,NA,NA,NA
+hms,ecd49e508462440647c319dc2e1d5d9e,Enhance permissions for workflow (#172).,NA,NA,NA,NA
+hms,0386c48686ed685bb116188a961f0a9b,"Permissions, better tests for missing suggests, lints (#171).",NA,NA,NA,NA
+hms,e22a650bb4ba9fd5d5f6bb5f30baffaf,Only fail covr builds if token is given (#170).,NA,NA,NA,NA
+hms,09f4006783c91eb949c3d170704bc2ea,Always use `_R_CHECK_FORCE_SUGGESTS_=false` (#169).,NA,NA,NA,NA
+hms,a0483c84bff9142d780b057f15b4a277,Correct installation of xml2 (#168).,NA,NA,NA,NA
+hms,8e92d32f624f6f8f1005af30e81ed233,Explain (#167).,NA,NA,NA,NA
+hms,d2df5612e677e1585600ca93335eb63a,"Add xml2 for covr, print testthat results (#166).",NA,NA,NA,NA
+hms,509a70693cb33489dc43bf7725616e63,Sync (#165).,NA,NA,NA,NA
