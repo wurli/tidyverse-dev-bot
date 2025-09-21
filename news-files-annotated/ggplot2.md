@@ -8,6 +8,11 @@
     Fixed regression where `draw_key_rect()` stopped using `fill`
     colours (@mitchelloharawild, #6609).
     !end-bullet!
+-   !begin-bullet!
+    Fixed regression where `scale_{x,y}_*()` threw an error when an
+    expression object is set to `labels` argument (@yutannihilation,
+    #6617).
+    !end-bullet!
 
 !end-bullets-1!
 
