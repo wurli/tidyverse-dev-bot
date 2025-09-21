@@ -19737,3 +19737,7 @@ hms,a0483c84bff9142d780b057f15b4a277,Correct installation of xml2 (#168).,NA,NA,
 hms,8e92d32f624f6f8f1005af30e81ed233,Explain (#167).,NA,NA,NA,NA
 hms,d2df5612e677e1585600ca93335eb63a,"Add xml2 for covr, print testthat results (#166).",NA,NA,NA,NA
 hms,509a70693cb33489dc43bf7725616e63,Sync (#165).,NA,NA,NA,NA
+hms,aef14eb266b49421feba739d787cd8b5,Fix \[ci skip\].,NA,NA,NA,NA
+hms,1ec37dae05e462bc0a72a8a9a2928cf7,Allow dispatch.,NA,NA,NA,NA
+hms,f76efd406afaf89552085d29064721c1,Allow dispatch.,NA,NA,NA,NA
+hms,e18e692722defe6a84918d716a81d1b6,Use r-universe for installation of dev dependencies.,NA,NA,NA,NA
