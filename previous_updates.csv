@@ -19742,3 +19742,5 @@ hms,1ec37dae05e462bc0a72a8a9a2928cf7,Allow dispatch.,NA,NA,NA,NA
 hms,f76efd406afaf89552085d29064721c1,Allow dispatch.,NA,NA,NA,NA
 hms,e18e692722defe6a84918d716a81d1b6,Use r-universe for installation of dev dependencies.,NA,NA,NA,NA
 ggplot2,67f915fa97cb28510d2620473521dbfd,"Fixed regression where `scale_{x,y}_*()` threw an error when an expression object is set to `labels` argument (@​yutannihilation, #6617).",NA,NA,NA,NA
+hms,d47c04605675d5d0b98c17b82058c483,Auto-update from GitHub Actions (#182).,NA,NA,NA,NA
+hms,800afb1b55b5b499b1f0708483665d82,"Cynkra spring cleaning (@​schochastics, #174, #175).",NA,NA,NA,NA
