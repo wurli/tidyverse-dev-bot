@@ -3,6 +3,13 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    All relevant stringr functions now preserve names (@jonovik, #575).
+    !end-bullet!
+-   !begin-bullet!
+    New `vignette("locale-sensitive")` about locale sensitive functions
+    (@kylieainslie, #404)
+    !end-bullet!
+-   !begin-bullet!
     New `str_ilike()` that follows the conventions of the SQL ILIKE
     operator (@edward-burn, #543).
     !end-bullet!
