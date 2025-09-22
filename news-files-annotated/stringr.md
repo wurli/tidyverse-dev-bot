@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    New `str_to_camel()`, `str_to_snake()`, and `str_to_kebab()` for
+    changing "programming" case (@librill, #573).
+    !end-bullet!
+-   !begin-bullet!
     All relevant stringr functions now preserve names (@jonovik, #575).
     !end-bullet!
 -   !begin-bullet!

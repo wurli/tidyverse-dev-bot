@@ -19752,3 +19752,5 @@ stringr,d2deb3934bfaef14fc5aaafcf7821392,"All relevant stringr functions now pre
 stringr,e0346b615bd8c2937c5cbf62d55a0e96,"New `vignette(""locale-sensitive"")` about locale sensitive functions (@​kylieainslie, #404)",NA,NA,NA,NA
 vctrs,139e4d5eda57dbf3c4a7a3fabb16b096,"New `vec_recode_values()` and `vec_replace_values()` for recoding and replacing values. In particular, this makes it easy to recode a vector using a lookup table (#2027).",NA,NA,NA,NA
 vctrs,ce0fe617ffbd2b89f203a266d8778a43,New `vec_case_when()` and `vec_replace_when()` for recoding and replacing using logical conditions (#2024).,NA,NA,NA,NA
+stringr,36602bcdc6cc0c1addcf9cfe1cec1dd1,"New `str_to_camel()`, `str_to_snake()`, and `str_to_kebab()` for changing ""programming"" case (@​librill, #573).",NA,NA,NA,NA
+vctrs,720edec1c71492869e5e3a249287a76a,"New `vec_if_else()` for performing a vectorized if-else. It is exactly the same as `dplyr::if_else()`, but much faster and memory efficient (#2030).",NA,NA,NA,NA

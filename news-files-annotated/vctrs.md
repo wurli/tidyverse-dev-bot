@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    New `vec_if_else()` for performing a vectorized if-else. It is
+    exactly the same as `dplyr::if_else()`, but much faster and memory
+    efficient (#2030).
+
+    !end-bullet!
+-   !begin-bullet!
     New `vec_recode_values()` and `vec_replace_values()` for recoding
     and replacing values. In particular, this makes it easy to recode a
     vector using a lookup table (#2027).
