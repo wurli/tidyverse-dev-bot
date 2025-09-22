@@ -19750,3 +19750,5 @@ purrr,9b389a86e666f0227f6d555f41ad917f,"`as_mapper.default()` optimized by remov
 rsconnect,57b49706a91a33fd7ee8344eac369804,Improved documentation and advice for `deployApp(envVars...)`.,NA,NA,NA,NA
 stringr,d2deb3934bfaef14fc5aaafcf7821392,"All relevant stringr functions now preserve names (@​jonovik, #575).",NA,NA,NA,NA
 stringr,e0346b615bd8c2937c5cbf62d55a0e96,"New `vignette(""locale-sensitive"")` about locale sensitive functions (@​kylieainslie, #404)",NA,NA,NA,NA
+vctrs,139e4d5eda57dbf3c4a7a3fabb16b096,"New `vec_recode_values()` and `vec_replace_values()` for recoding and replacing values. In particular, this makes it easy to recode a vector using a lookup table (#2027).",NA,NA,NA,NA
+vctrs,ce0fe617ffbd2b89f203a266d8778a43,New `vec_case_when()` and `vec_replace_when()` for recoding and replacing using logical conditions (#2024).,NA,NA,NA,NA
