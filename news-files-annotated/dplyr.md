@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `bind_rows()` now replaces empty (or `NA`) element names in a list
+    with its numeric index while preserving existing names (#7719,
+    @Meghansaha).
+
+    !end-bullet!
+-   !begin-bullet!
     New `slice_sample()` example showing how to use it to shuffle rows
     (#7707, @Hzanib).
 

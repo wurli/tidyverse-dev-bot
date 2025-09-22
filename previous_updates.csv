@@ -19745,3 +19745,4 @@ ggplot2,67f915fa97cb28510d2620473521dbfd,"Fixed regression where `scale_{x,y}_*(
 hms,d47c04605675d5d0b98c17b82058c483,Auto-update from GitHub Actions (#182).,NA,NA,NA,NA
 hms,800afb1b55b5b499b1f0708483665d82,"Cynkra spring cleaning (@​schochastics, #174, #175).",NA,NA,NA,NA
 ggplot2,49001c3b6a12f5059a3ba0d8697e6d14,"Allow `stat` in `geom_hline`, `geom_vline`, and `geom_abline`. (@​sierrajohnson, #6559)",NA,NA,NA,NA
+dplyr,2c8e49eec50e5fc7071e946feb290d55,"`bind_rows()` now replaces empty (or `NA`) element names in a list with its numeric index while preserving existing names (#7719, @​Meghansaha).",NA,NA,NA,NA
