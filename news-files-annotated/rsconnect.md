@@ -18,6 +18,10 @@
     inspection errors. (#1207)
 
     !end-bullet!
+-   !begin-bullet!
+    Improved documentation and advice for `deployApp(envVars...)`.
+
+    !end-bullet!
 
 !end-bullets-1!
 

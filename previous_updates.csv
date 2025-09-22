@@ -19746,3 +19746,5 @@ hms,d47c04605675d5d0b98c17b82058c483,Auto-update from GitHub Actions (#182).,NA,
 hms,800afb1b55b5b499b1f0708483665d82,"Cynkra spring cleaning (@​schochastics, #174, #175).",NA,NA,NA,NA
 ggplot2,49001c3b6a12f5059a3ba0d8697e6d14,"Allow `stat` in `geom_hline`, `geom_vline`, and `geom_abline`. (@​sierrajohnson, #6559)",NA,NA,NA,NA
 dplyr,2c8e49eec50e5fc7071e946feb290d55,"`bind_rows()` now replaces empty (or `NA`) element names in a list with its numeric index while preserving existing names (#7719, @​Meghansaha).",NA,NA,NA,NA
+purrr,9b389a86e666f0227f6d555f41ad917f,"`as_mapper.default()` optimized by removing special named argument handling for primitive functions (@​mtcarsalot, #1088).",NA,NA,NA,NA
+rsconnect,57b49706a91a33fd7ee8344eac369804,Improved documentation and advice for `deployApp(envVars...)`.,NA,NA,NA,NA
