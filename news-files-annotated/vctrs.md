@@ -3,8 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
-    `list_unchop()` is now more performant when combining many small
-    objects together (#2034, #2035, #2041).
+    `vec_c()`, `list_unchop()`, `vec_size_common()`,
+    `vec_ptype_common()`, `list_sizes()`, `list_check_all_vectors()`,
+    and other vctrs functions that take a list of objects are now more
+    performant, particularly when many small objects are provided
+    (#2034, #2035, #2041, #2042).
 
     !end-bullet!
 -   !begin-bullet!

@@ -19756,3 +19756,4 @@ stringr,36602bcdc6cc0c1addcf9cfe1cec1dd1,"New `str_to_camel()`, `str_to_snake()`
 vctrs,720edec1c71492869e5e3a249287a76a,"New `vec_if_else()` for performing a vectorized if-else. It is exactly the same as `dplyr::if_else()`, but much faster and memory efficient (#2030).",NA,NA,NA,NA
 renv,6f84853d196597e1ac0a99a1d35a1862,`renv::embed()` now errs if one or more of the package dependencies to be included within a file are not available. (#2178),NA,NA,NA,NA
 vctrs,74206eccfc9de0e4c99574e02cffa47a,"`list_unchop()` is now more performant when combining many small objects together (#2034, #2035).",NA,NA,NA,NA
+vctrs,160e5c1f106376aac6c224acc514f90c,"`vec_c()`, `list_unchop()`, `vec_size_common()`, `vec_ptype_common()`, `list_sizes()`, `list_check_all_vectors()`, and other vctrs functions that take a list of objects are now more performant, particularly when many small objects are provided (#2034, #2035, #2041, #2042).",NA,NA,NA,NA
