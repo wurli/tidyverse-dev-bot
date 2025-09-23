@@ -4,7 +4,7 @@
 
 -   !begin-bullet!
     `list_unchop()` is now more performant when combining many small
-    objects together (#2034, #2035).
+    objects together (#2034, #2035, #2041).
 
     !end-bullet!
 -   !begin-bullet!
