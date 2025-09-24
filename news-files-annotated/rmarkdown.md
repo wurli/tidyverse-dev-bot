@@ -12,6 +12,18 @@
     since `--no-highlight` has been deprecated (#2602).
 
     !end-bullet!
+-   !begin-bullet!
+    Dropped the temporary workaround that used to support syntax
+    highlighting of `|>` and `=>`. The workaround has no longer been
+    necessary since Pandoc 2.18, which was released more than 3 years
+    ago (#2290).
+
+    !end-bullet!
+-   !begin-bullet!
+    `convert_ipynb()` no longer drops raw cells with no `format` in
+    metadata (thanks, @katrinabrock, #2587).
+
+    !end-bullet!
 
 !end-bullets-1!
 

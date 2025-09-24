@@ -19777,3 +19777,5 @@ stringr,645eda129b8382806383a378e07bfe5e,"New `[[.stringr_pattern` method to mat
 reticulate,f7db3229cf23a5c90763c99c4aaee15c,"`with()` now forwards errors to Python context manager exit handlers (e.g., so database transactions can roll back cleanly) (#1840, #1841)",NA,NA,NA,NA
 renv,c42bf557a856318f5ba49a87c73845b6,"Fixed an issue where cache callbacks (e.g. those run by setting `RENV_CACHE_USER` and `RENV_CACHE_MODE`, or via the `renv.cache.callback` option) were not run after `renv::hydrate()`. (#2179)",NA,NA,NA,NA
 rmarkdown,ac852560fd1076ff01cda79b3120f7c0,Use the argument `--syntax-highlighting=none` for Pandoc \>= 3.8 since `--no-highlight` has been deprecated (#2602).,NA,NA,NA,NA
+rmarkdown,7563a98d2e208efc075f4bc581383c00,"Dropped the temporary workaround that used to support syntax highlighting of `|>` and `=>`. The workaround has no longer been necessary since Pandoc 2.18, which was released more than 3 years ago (#2290).",NA,NA,NA,NA
+rmarkdown,6ec91decb70db677b85f8088cf6ba6e9,"`convert_ipynb()` no longer drops raw cells with no `format` in metadata (thanks, @​katrinabrock, #2587).",NA,NA,NA,NA
