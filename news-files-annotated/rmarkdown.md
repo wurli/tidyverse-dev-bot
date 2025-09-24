@@ -24,6 +24,11 @@
     metadata (thanks, @katrinabrock, #2587).
 
     !end-bullet!
+-   !begin-bullet!
+    Fixed a bug that prevents `render()` from working when converting
+    `.md` input to PDF (thanks, @mrainers, #2599).
+
+    !end-bullet!
 
 !end-bullets-1!
 
