@@ -19772,3 +19772,5 @@ gt,421559c7a91e530f11ea34ee7765c0a2,HTML output tables no longer have multiple i
 gt,f4fab624cf80093e4a2580301f2a0be2,"Fixed a length recycling issue when using gt with Quarto (#1985). (@​olivroy, #1986)",NA,NA,NA,NA
 gt,7971c2a6ef869ef6e0ccfdb35ba1c097,"The `metro` and `films` datasets have been updated. (#2026, #2027)",NA,NA,NA,NA
 purrr,217b67d561376607938a84a343ee6598,"Formatted strings for the progress bar could only access the global environment. `map()`, `map2()`, and `pmap()` have been updated to add `caller = .purrr_user_env` to `.progress` by default, allowing formatted strings to access to the current/parent environment (@​jcolt45, #1078).",NA,NA,NA,NA
+stringr,feb4f70357c5644f0f68bb39f383c12b,"`str_dup()` gains a `sep` argument so you can add a separator between every repeated value (@​edward-burn, #564).",NA,NA,NA,NA
+stringr,645eda129b8382806383a378e07bfe5e,"New `[[.stringr_pattern` method to match existing `[.stringr_pattern` (@​edward-burn, #569).",NA,NA,NA,NA
