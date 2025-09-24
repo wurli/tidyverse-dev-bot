@@ -5,6 +5,12 @@
 -   !begin-bullet!
     `pandoc_convert()` will throw an error if Pandoc is not available
     (thanks, @brianperdomo, #2600).
+
+    !end-bullet!
+-   !begin-bullet!
+    Use the argument `--syntax-highlighting=none` for Pandoc \>= 3.8
+    since `--no-highlight` has been deprecated (#2602).
+
     !end-bullet!
 
 !end-bullets-1!

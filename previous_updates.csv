@@ -19776,3 +19776,4 @@ stringr,feb4f70357c5644f0f68bb39f383c12b,"`str_dup()` gains a `sep` argument so 
 stringr,645eda129b8382806383a378e07bfe5e,"New `[[.stringr_pattern` method to match existing `[.stringr_pattern` (@​edward-burn, #569).",NA,NA,NA,NA
 reticulate,f7db3229cf23a5c90763c99c4aaee15c,"`with()` now forwards errors to Python context manager exit handlers (e.g., so database transactions can roll back cleanly) (#1840, #1841)",NA,NA,NA,NA
 renv,c42bf557a856318f5ba49a87c73845b6,"Fixed an issue where cache callbacks (e.g. those run by setting `RENV_CACHE_USER` and `RENV_CACHE_MODE`, or via the `renv.cache.callback` option) were not run after `renv::hydrate()`. (#2179)",NA,NA,NA,NA
+rmarkdown,ac852560fd1076ff01cda79b3120f7c0,Use the argument `--syntax-highlighting=none` for Pandoc \>= 3.8 since `--no-highlight` has been deprecated (#2602).,NA,NA,NA,NA
