@@ -3,6 +3,13 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed an issue where cache callbacks (e.g. those run by setting
+    `RENV_CACHE_USER` and `RENV_CACHE_MODE`, or via the
+    `renv.cache.callback` option) were not run after `renv::hydrate()`.
+    (#2179)
+
+    !end-bullet!
+-   !begin-bullet!
     `renv::embed()` now errs if one or more of the package dependencies
     to be included within a file are not available. (#2178)
 
