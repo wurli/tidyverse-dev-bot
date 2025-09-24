@@ -3,6 +3,14 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Formatted strings for the progress bar could only access the global
+    environment. `map()`, `map2()`, and `pmap()` have been updated to
+    add `caller = .purrr_user_env` to `.progress` by default, allowing
+    formatted strings to access to the current/parent environment
+    (@jcolt45, #1078).
+
+    !end-bullet!
+-   !begin-bullet!
     `as_mapper.default()` optimized by removing special named argument
     handling for primitive functions (@mtcarsalot, #1088).
 

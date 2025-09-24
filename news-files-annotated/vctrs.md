@@ -7,7 +7,7 @@
     `vec_ptype_common()`, `list_sizes()`, `list_check_all_vectors()`,
     and other vctrs functions that take a list of objects are now more
     performant, particularly when many small objects are provided
-    (#2034, #2035, #2041, #2042).
+    (#2034, #2035, #2041, #2042, #2043).
 
     !end-bullet!
 -   !begin-bullet!
