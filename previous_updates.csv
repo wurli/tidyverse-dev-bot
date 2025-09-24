@@ -19774,3 +19774,4 @@ gt,7971c2a6ef869ef6e0ccfdb35ba1c097,"The `metro` and `films` datasets have been 
 purrr,217b67d561376607938a84a343ee6598,"Formatted strings for the progress bar could only access the global environment. `map()`, `map2()`, and `pmap()` have been updated to add `caller = .purrr_user_env` to `.progress` by default, allowing formatted strings to access to the current/parent environment (@​jcolt45, #1078).",NA,NA,NA,NA
 stringr,feb4f70357c5644f0f68bb39f383c12b,"`str_dup()` gains a `sep` argument so you can add a separator between every repeated value (@​edward-burn, #564).",NA,NA,NA,NA
 stringr,645eda129b8382806383a378e07bfe5e,"New `[[.stringr_pattern` method to match existing `[.stringr_pattern` (@​edward-burn, #569).",NA,NA,NA,NA
+reticulate,f7db3229cf23a5c90763c99c4aaee15c,"`with()` now forwards errors to Python context manager exit handlers (e.g., so database transactions can roll back cleanly) (#1840, #1841)",NA,NA,NA,NA

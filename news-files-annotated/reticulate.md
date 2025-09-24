@@ -34,6 +34,12 @@
     when the reticulate package is loaded in Positron (#1822).
 
     !end-bullet!
+-   !begin-bullet!
+    `with()` now forwards errors to Python context manager exit handlers
+    (e.g., so database transactions can roll back cleanly) (#1840,
+    #1841)
+
+    !end-bullet!
 
 !end-bullets-1!
 
