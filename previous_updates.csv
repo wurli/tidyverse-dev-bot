@@ -19757,3 +19757,17 @@ vctrs,720edec1c71492869e5e3a249287a76a,"New `vec_if_else()` for performing a vec
 renv,6f84853d196597e1ac0a99a1d35a1862,`renv::embed()` now errs if one or more of the package dependencies to be included within a file are not available. (#2178),NA,NA,NA,NA
 vctrs,74206eccfc9de0e4c99574e02cffa47a,"`list_unchop()` is now more performant when combining many small objects together (#2034, #2035).",NA,NA,NA,NA
 vctrs,160e5c1f106376aac6c224acc514f90c,"`vec_c()`, `list_unchop()`, `vec_size_common()`, `vec_ptype_common()`, `list_sizes()`, `list_check_all_vectors()`, and other vctrs functions that take a list of objects are now more performant, particularly when many small objects are provided (#2034, #2035, #2041, #2042).",NA,NA,NA,NA
+gt,55a3e49965f9a8f23d26080966e260fb,"We can now have multiple columns be a part of the stub by using the enhanced `rowname_col` argument in `gt()`; it can take a vector of one or more column names (#601, #918, #1406, #1408). (#2008)",NA,NA,NA,NA
+gt,87130e5c01f380cb6e058df9221c7e6a,"Added the `latex()` helper function to allow the insertion of raw LaTeX strings. (@​thebioengineer, #1912)",NA,NA,NA,NA
+gt,2275396416533727f1af7c216ce0efba,"You can now use several `cols_*()` functions with `gt_group` objects (#2005, #2012). (@​shannonhaughton, #2010, #2013)",NA,NA,NA,NA
+gt,4fa398e8cbd78b2b0d225010bf9054c9,"Improvements to options for LaTeX including repeating headers, removal of top and bottom lines, font sizes, and line breaks (#1630, #1061, #1767, #1912). (@​thebioengineer, #1995)",NA,NA,NA,NA
+gt,f2ce541b213413fe8425e551186a2c5c,"Added support for some Unicode characters when writing tables as LaTeX. (@​thebioengineer, #1996)",NA,NA,NA,NA
+gt,7bd1bf95745e38e7179c32005b1a4ea8,"`as_word()` now handles `""<br>""` line breaks for `md()` and `html()`, and no longer automatically adds `""Table N""` ahead of the caption (#1966). (@​thebioengineer, #1983)",NA,NA,NA,NA
+gt,efb7616fa5c1a49d40449b8230f04eac,"Corrected text processing in instances where `md()` is used with `tab_footnote()` for Word output tables (#1892, #1983). (@​olivroy, #1892)",NA,NA,NA,NA
+gt,3ee542674a439304bbccc68acece44ce,"Fixed an issue where grand summary rows would not work properly with Word output tables (#2000). (@​olivroy, #2007)",NA,NA,NA,NA
+gt,bc42cd25e26c3b55e534824fcd777fcf,"Fixed an encoding issue with Word output tables when using the `sub_small_vals()` and `sub_large_vals()` functions (#1997). (@​olivroy, #2014)",NA,NA,NA,NA
+gt,951221d2c871f2a898c40f51a0420c09,"Stub alignment values for RTF output tables are now honored (#2019). (@​shannonhaughton, #2021)",NA,NA,NA,NA
+gt,90cb07b5a10109029b201382ff33d032,"Added support for use of `fmt_image()` with RTF output tables (#2029). (@​shannonhaughton, #2030)",NA,NA,NA,NA
+gt,421559c7a91e530f11ea34ee7765c0a2,HTML output tables no longer have multiple instances of `<tfoot>` tags (#1296). (#2025),NA,NA,NA,NA
+gt,f4fab624cf80093e4a2580301f2a0be2,"Fixed a length recycling issue when using gt with Quarto (#1985). (@​olivroy, #1986)",NA,NA,NA,NA
+gt,7971c2a6ef869ef6e0ccfdb35ba1c097,"The `metro` and `films` datasets have been updated. (#2026, #2027)",NA,NA,NA,NA
