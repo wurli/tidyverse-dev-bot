@@ -14,6 +14,11 @@
 
     !end-bullet!
 -   !begin-bullet!
+    `getLogs()` returns log lines for a shinyapps.io hosted application.
+    (#1209)
+
+    !end-bullet!
+-   !begin-bullet!
     The target Python binary is included in Python environment
     inspection errors. (#1207)
 
