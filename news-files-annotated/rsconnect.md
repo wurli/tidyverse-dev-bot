@@ -24,7 +24,11 @@
 
     !end-bullet!
 -   !begin-bullet!
-    Improved documentation and advice for `deployApp(envVars...)`.
+    Improve cookie expiration date handling. (#1212)
+
+    !end-bullet!
+-   !begin-bullet!
+    Improve documentation and advice for `deployApp(envVars...)`.
 
     !end-bullet!
 
