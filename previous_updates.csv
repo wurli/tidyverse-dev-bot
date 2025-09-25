@@ -19780,3 +19780,4 @@ rmarkdown,ac852560fd1076ff01cda79b3120f7c0,Use the argument `--syntax-highlighti
 rmarkdown,7563a98d2e208efc075f4bc581383c00,"Dropped the temporary workaround that used to support syntax highlighting of `|>` and `=>`. The workaround has no longer been necessary since Pandoc 2.18, which was released more than 3 years ago (#2290).",NA,NA,NA,NA
 rmarkdown,6ec91decb70db677b85f8088cf6ba6e9,"`convert_ipynb()` no longer drops raw cells with no `format` in metadata (thanks, @​katrinabrock, #2587).",NA,NA,NA,NA
 rmarkdown,07e02b02b265784cfbab8c01f7bf0ac0,"Fixed a bug that prevents `render()` from working when converting `.md` input to PDF (thanks, @​mrainers, #2599).",NA,NA,NA,NA
+ggplot2,4be5c74e9b8c5a7d88f5ae9a9793acfc,"`stat_boxplot()` treats `width` as an optional aesthetic (@​Yunuuuu, #6575)",NA,NA,NA,NA

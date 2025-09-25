@@ -20,6 +20,11 @@
     (@sierrajohnson, #6559)
 
     !end-bullet!
+-   !begin-bullet!
+    `stat_boxplot()` treats `width` as an optional aesthetic (@Yunuuuu,
+    #6575)
+
+    !end-bullet!
 
 !end-bullets-1!
 
