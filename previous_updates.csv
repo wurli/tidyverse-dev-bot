@@ -19784,3 +19784,4 @@ ggplot2,4be5c74e9b8c5a7d88f5ae9a9793acfc,"`stat_boxplot()` treats `width` as an 
 purrr,b4b759edbb88170e3c0d3e4f3bc28c18,"`map()`, `map2()`, and `pmap()` now automatically set the correct environment so that `format` strings to access to local variables (@​jcolt45, #1078).",NA,NA,NA,NA
 rsconnect,cee36c81480f5772eba661755aa846f1,`getLogs()` returns log lines for a shinyapps.io hosted application. (#1209),NA,NA,NA,NA
 rsconnect,8242b9a450dc066fb21bbcd287042f0b,Improve cookie expiration date handling. (#1212),NA,NA,NA,NA
+renv,afa90b6a491464816b3597d8df095c50,"`renv::dependencies()` now detects packages used in e.g. `data(<dataset>, package = <package>)`. (#2181)",NA,NA,NA,NA

@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `renv::dependencies()` now detects packages used in e.g.
+    `data(<dataset>, package = <package>)`. (#2181)
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed an issue where cache callbacks (e.g. those run by setting
     `RENV_CACHE_USER` and `RENV_CACHE_MODE`, or via the
     `renv.cache.callback` option) were not run after `renv::hydrate()`.
