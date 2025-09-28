@@ -31,6 +31,11 @@
 !begin-bullets-2!
 
 -   !begin-bullet!
+    New "getting started" vignette, `vignette("purrr")` (#915,
+    @ogolovkina).
+
+    !end-bullet!
+-   !begin-bullet!
     `as_mapper.default()` optimized by removing special named argument
     handling for primitive functions (@mtcarsalot, #1088).
 

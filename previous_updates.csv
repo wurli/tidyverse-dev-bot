@@ -19785,3 +19785,4 @@ purrr,b4b759edbb88170e3c0d3e4f3bc28c18,"`map()`, `map2()`, and `pmap()` now auto
 rsconnect,cee36c81480f5772eba661755aa846f1,`getLogs()` returns log lines for a shinyapps.io hosted application. (#1209),NA,NA,NA,NA
 rsconnect,8242b9a450dc066fb21bbcd287042f0b,Improve cookie expiration date handling. (#1212),NA,NA,NA,NA
 renv,afa90b6a491464816b3597d8df095c50,"`renv::dependencies()` now detects packages used in e.g. `data(<dataset>, package = <package>)`. (#2181)",NA,NA,NA,NA
+purrr,27ba41db88993734fc67bd1aa5d7c916,"New ""getting started"" vignette, `vignette(""purrr"")` (#915, @​ogolovkina).",NA,NA,NA,NA
