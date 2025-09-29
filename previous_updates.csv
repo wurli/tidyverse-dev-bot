@@ -19800,3 +19800,4 @@ keras,270b0f01bd4d766d0e81ae677a6c7936,"Added complex-valued helpers: S3 `Arg()`
 keras,6c3725aff867a3810e64450ee6149f0b,"Added signal window operations: `op_bartlett()`, `op_blackman()`, `op_hamming()`, `op_hanning()`, and `op_kaiser()`.",NA,NA,NA,NA
 keras,bd8b3c0f59f45bf1f32106f73fafddd9,"Expanded numeric operations with `op_layer_normalization()`, `op_cbrt()`, `op_corrcoef()`, `op_deg2rad()`, `op_heaviside()`, the new `op_sparse_sigmoid()` plus matching `activation_sparse_sigmoid()`, and an `attn_logits_soft_cap` argument for `op_dot_product_attention()`.",NA,NA,NA,NA
 keras,92d4f9a5e8223aac0c370cac5f72b1c3,`layer_layer_normalization()` removes the `rms_scaling` argument.,NA,NA,NA,NA
+rmarkdown,8337f1a58a1a8f238abb83c3ef42db3a,"Use the argument `--syntax-highlighting` for Pandoc \>= 3.8 since `--highlight-style` has been deprecated (thanks, @​ywwry66, #2602).",NA,NA,NA,NA
