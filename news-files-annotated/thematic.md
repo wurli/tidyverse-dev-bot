@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed an compatibility issue with the new ggplot2 v4.0.0 release.
+    (#164, thanks @teunbrand)
+    !end-bullet!
+-   !begin-bullet!
     Added requirement of ggplot2 \>= 3.5.2. (#161, thanks @antivirak)
     !end-bullet!
 

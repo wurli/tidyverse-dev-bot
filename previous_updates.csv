@@ -19802,3 +19802,4 @@ keras,bd8b3c0f59f45bf1f32106f73fafddd9,"Expanded numeric operations with `op_lay
 keras,92d4f9a5e8223aac0c370cac5f72b1c3,`layer_layer_normalization()` removes the `rms_scaling` argument.,NA,NA,NA,NA
 rmarkdown,8337f1a58a1a8f238abb83c3ef42db3a,"Use the argument `--syntax-highlighting` for Pandoc \>= 3.8 since `--highlight-style` has been deprecated (thanks, @​ywwry66, #2602).",NA,NA,NA,NA
 gt,6f4a85c430ade14af7cb4b12b5fce56d,"Add option to control the order of footnotes (@​shannonhaughton, #2023)",NA,NA,NA,NA
+thematic,de9d2ef4a34375f1addf68a207b33f57,"Fixed an compatibility issue with the new ggplot2 v4.0.0 release. (#164, thanks @​teunbrand)",NA,NA,NA,NA
