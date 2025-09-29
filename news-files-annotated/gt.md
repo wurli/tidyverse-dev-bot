@@ -92,6 +92,11 @@
     The `metro` and `films` datasets have been updated. (#2026, #2027)
 
     !end-bullet!
+-   !begin-bullet!
+    Add option to control the order of footnotes (@shannonhaughton,
+    #2023)
+
+    !end-bullet!
 
 !end-bullets-2!
 
