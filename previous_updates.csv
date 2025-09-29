@@ -19786,3 +19786,17 @@ rsconnect,cee36c81480f5772eba661755aa846f1,`getLogs()` returns log lines for a s
 rsconnect,8242b9a450dc066fb21bbcd287042f0b,Improve cookie expiration date handling. (#1212),NA,NA,NA,NA
 renv,afa90b6a491464816b3597d8df095c50,"`renv::dependencies()` now detects packages used in e.g. `data(<dataset>, package = <package>)`. (#2181)",NA,NA,NA,NA
 purrr,27ba41db88993734fc67bd1aa5d7c916,"New ""getting started"" vignette, `vignette(""purrr"")` (#915, @​ogolovkina).",NA,NA,NA,NA
+keras,c1ca29bbe57718ec593a3a76ce33b839,"Added training loop configuration helpers: `config_max_epochs()`, `config_set_max_epochs()`, `config_max_steps_per_epoch()`, and `config_set_max_steps_per_epoch()`. The caps can also be set via the `KERAS_MAX_EPOCHS` and `KERAS_MAX_STEPS_PER_EPOCH` environment variables. Added `config_is_nnx_enabled()` to check whether JAX NNX features are enabled.",NA,NA,NA,NA
+keras,e8ef1a303baeb0cca775c9eba9b66f90,"LoRA-enabled layers (`layer_dense()`, `layer_embedding()`, `layer_einsum_dense()`) gain a `lora_alpha` argument to scale the adaptation delta independently of the chosen rank.",NA,NA,NA,NA
+keras,9081d71bc68ebc195eaa175bcf2b1d49,`keras_variable()` now accepts a `synchronization` argument for distributed strategies.,NA,NA,NA,NA
+keras,37c0c3deac786fab452b8202d36a238e,`Layer$add_weight()` gains an `overwrite_with_gradient` option and layers now provide a `symbolic_call()` method.,NA,NA,NA,NA
+keras,e62abe41b6227f79a572373b9e2b9b0a,Transposed convolution utilities now follow the latest Keras API: `op_conv_transpose()` defaults `strides = 1` and the `layer_conv_*_transpose()` layers expose `output_padding` for precise shape control.,NA,NA,NA,NA
+keras,2425548b649945692860cc1d2e1a09c7,`layer_torch_module_wrapper()` gains an `output_shape` argument to help Keras infer shapes when wrapping PyTorch modules.,NA,NA,NA,NA
+keras,3ce573c15084865991e8634af928a8c5,`save_model_weights()` adds a `max_shard_size` argument to split large weight files into manageable shards.,NA,NA,NA,NA
+keras,7fb2dcb6253e2d1c144cf55e0445faea,Added elastic deformation utilities for images: `layer_random_elastic_transform()` and the lower-level `op_image_elastic_transform()`.,NA,NA,NA,NA
+keras,e710c72f814db98107e59167c004a503,Added `loss_categorical_generalized_cross_entropy()` for training with noisy labels.,NA,NA,NA,NA
+keras,bc0de71d0b10b1cc72dfa2020b020c2d,Added the Muon optimizer via `optimizer_muon()`.,NA,NA,NA,NA
+keras,270b0f01bd4d766d0e81ae677a6c7936,"Added complex-valued helpers: S3 `Arg()` methods for tensors, `op_angle()`, and conversions `op_view_as_real()` / `op_view_as_complex()`.",NA,NA,NA,NA
+keras,6c3725aff867a3810e64450ee6149f0b,"Added signal window operations: `op_bartlett()`, `op_blackman()`, `op_hamming()`, `op_hanning()`, and `op_kaiser()`.",NA,NA,NA,NA
+keras,bd8b3c0f59f45bf1f32106f73fafddd9,"Expanded numeric operations with `op_layer_normalization()`, `op_cbrt()`, `op_corrcoef()`, `op_deg2rad()`, `op_heaviside()`, the new `op_sparse_sigmoid()` plus matching `activation_sparse_sigmoid()`, and an `attn_logits_soft_cap` argument for `op_dot_product_attention()`.",NA,NA,NA,NA
+keras,92d4f9a5e8223aac0c370cac5f72b1c3,`layer_layer_normalization()` removes the `rms_scaling` argument.,NA,NA,NA,NA
