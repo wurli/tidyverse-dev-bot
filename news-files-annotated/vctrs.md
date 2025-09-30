@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `vec_ptype_common()` now reports more accurate error argument names
+    (#2048).
+
+    !end-bullet!
+-   !begin-bullet!
     `vec_c()`, `list_unchop()`, `vec_size_common()`,
     `vec_ptype_common()`, `list_sizes()`, `list_check_all_vectors()`,
     and other vctrs functions that take a list of objects are now more
