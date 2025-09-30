@@ -7,6 +7,12 @@
     (StandardSymbolPS) by ensuring proper fallback during character
     metric calculation (#136, #201)
     !end-bullet!
+-   !begin-bullet!
+    `agg_capture()` now reports the current "page number" as well as
+    whether any drawing has occured since the last time the capture was
+    taken as attributes in the return value (but only if you request
+    native raster) (#204)
+    !end-bullet!
 
 !end-bullets-1!
 
