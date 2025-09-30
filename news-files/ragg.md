@@ -1,5 +1,9 @@
 # ragg (development version)
 
+* Fix support for the default symbol font on many linux distros
+  (StandardSymbolPS) by ensuring proper fallback during character metric
+  calculation (#136, #201)
+
 # ragg 1.5.0
 
 * Fix gradient rendering bug introduced by trying to fix #177 (#192)
