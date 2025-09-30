@@ -122,9 +122,9 @@
     !end-bullets-2!
     !end-bullet!
 -   !begin-bullet!
-    Hashing is now supported for lists containing complex vectors,
-    enabling functions like `vec_unique_loc()` to work on these objects
-    (#1992).
+    Hashing is now supported for lists containing complex or raw
+    vectors, enabling functions like `vec_unique_loc()` to work on these
+    objects (#1992, #2046).
 
     !end-bullet!
 -   !begin-bullet!

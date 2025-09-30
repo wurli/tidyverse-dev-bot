@@ -19804,3 +19804,4 @@ rmarkdown,8337f1a58a1a8f238abb83c3ef42db3a,"Use the argument `--syntax-highlight
 gt,6f4a85c430ade14af7cb4b12b5fce56d,"Add option to control the order of footnotes (@​shannonhaughton, #2023)",NA,NA,NA,NA
 thematic,de9d2ef4a34375f1addf68a207b33f57,"Fixed an compatibility issue with the new ggplot2 v4.0.0 release. (#164, thanks @​teunbrand)",NA,NA,NA,NA
 ragg,c23c4aae391f101f4f19a454bc9375dc,"Fix support for the default symbol font on many linux distros (StandardSymbolPS) by ensuring proper fallback during character metric calculation (#136, #201)",NA,NA,NA,NA
+vctrs,dfdd2868d662aaa01528cba1be773421,"Hashing is now supported for lists containing complex or raw vectors, enabling functions like `vec_unique_loc()` to work on these objects (#1992, #2046).",NA,NA,NA,NA

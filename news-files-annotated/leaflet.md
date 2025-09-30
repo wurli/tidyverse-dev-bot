@@ -38,12 +38,6 @@
 
     !end-bullet!
 -   !begin-bullet!
-    Updated vignettes to replace `{sp}`/`{raster}` usage with
-    `{sf}`/`{terra}` and their corresponding examples. (@jack-davison,
-    #928)
-
-    !end-bullet!
--   !begin-bullet!
     `addProviderTiles()` will now error if the chosen `provider` does
     not match any currently loaded provider (by default, those in
     `providers`). This behaviour can be toggled off by setting the new
