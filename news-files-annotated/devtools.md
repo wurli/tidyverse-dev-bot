@@ -17,7 +17,7 @@
 
     !end-bullet!
 -   !begin-bullet!
-    `dev_mode()` is deprecated.
+    `dev_mode()` and `check_rhub()` are deprecated.
 
     !end-bullet!
 
@@ -1070,7 +1070,7 @@ understand API in the future, so we feel the tradeoff is worthwhile.
     !end-bullet!
 -   !begin-bullet!
     New `check_rhub()` function to check packages using
-    https://builder.r-hub.io/.
+    `https://builder.r-hub.io/`.
 
     !end-bullet!
 -   !begin-bullet!

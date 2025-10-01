@@ -19811,3 +19811,4 @@ dplyr,844cc16130beabc12544459a1246627d,`if_else()` no longer allows `condition` 
 dplyr,1b4b83e4e33c61855625c8138e99f7f0,`if_else()` has gotten significantly faster and uses much less memory due to a rewrite in C via `vctrs::vec_if_else()` (#7723).,NA,NA,NA,NA
 dplyr,8e27c815dbaa1c5abf2e44b7f9990c63,Passing `size` to `if_else()` is now deprecated. The output size is always taken from the `condition` (#7722).,NA,NA,NA,NA
 devtools,d6b2936c480ba3f3d9c192f56479ebfe,`dev_mode()` is deprecated.,NA,NA,NA,NA
+devtools,20f267b659aeadecc6f253cbca081f3e,`dev_mode()` and `check_rhub()` are deprecated.,NA,NA,NA,NA
