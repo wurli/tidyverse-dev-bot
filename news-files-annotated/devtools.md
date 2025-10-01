@@ -16,6 +16,10 @@
     does a better job of executing snapshot comparisons.
 
     !end-bullet!
+-   !begin-bullet!
+    `dev_mode()` is deprecated.
+
+    !end-bullet!
 
 !end-bullets-1!
 
