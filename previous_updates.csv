@@ -19807,3 +19807,6 @@ ragg,c23c4aae391f101f4f19a454bc9375dc,"Fix support for the default symbol font o
 vctrs,dfdd2868d662aaa01528cba1be773421,"Hashing is now supported for lists containing complex or raw vectors, enabling functions like `vec_unique_loc()` to work on these objects (#1992, #2046).",NA,NA,NA,NA
 vctrs,8f0fd72a4bc1d85dcbf966b1da553331,`vec_ptype_common()` now reports more accurate error argument names (#2048).,NA,NA,NA,NA
 ragg,e983861a63997b23cfdf32c138740ab6,"`agg_capture()` now reports the current ""page number"" as well as whether any drawing has occured since the last time the capture was taken as attributes in the return value (but only if you request native raster) (#204)",NA,NA,NA,NA
+dplyr,844cc16130beabc12544459a1246627d,`if_else()` no longer allows `condition` to be a logical array. It must be a logical vector with no `dim` attribute (#7723).,NA,NA,NA,NA
+dplyr,1b4b83e4e33c61855625c8138e99f7f0,`if_else()` has gotten significantly faster and uses much less memory due to a rewrite in C via `vctrs::vec_if_else()` (#7723).,NA,NA,NA,NA
+dplyr,8e27c815dbaa1c5abf2e44b7f9990c63,Passing `size` to `if_else()` is now deprecated. The output size is always taken from the `condition` (#7722).,NA,NA,NA,NA
