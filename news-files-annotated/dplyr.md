@@ -40,11 +40,15 @@
     !end-bullet!
 -   !begin-bullet!
     The following vector functions have gotten significantly faster and
-    use much less memory due to a rewrite in C via vctrs (#7723):
+    use much less memory due to a rewrite in C via vctrs (#7723, #7725,
+    #7727):
 
     !begin-bullets-2!
     -   !begin-bullet!
         `if_else()`
+        !end-bullet!
+    -   !begin-bullet!
+        `case_when()`
         !end-bullet!
     -   !begin-bullet!
         `coalesce()`

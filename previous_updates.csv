@@ -19846,3 +19846,7 @@ if (code == 1L && flavor == ""chocolate"") {
 }
 ```",NA,NA,NA,NA
 dplyr,585606a54039840f15e25e291ee5a683,"The recycling behavior that allows this style of `case_when()` to work is unsafe, and can result in silent bugs that we'd like to guard against with an error in the future (#7082).",NA,NA,NA,NA
+dplyr,d546b6530b46b8c9ae05d65a64dd6f80,"The following vector functions have gotten significantly faster and use much less memory due to a rewrite in C via vctrs (#7723, #7725, #7727):",NA,NA,NA,NA
+dplyr,d546b6530b46b8c9ae05d65a64dd6f80,• `if_else()`,NA,NA,NA,NA
+dplyr,d546b6530b46b8c9ae05d65a64dd6f80,• `case_when()`,NA,NA,NA,NA
+dplyr,d546b6530b46b8c9ae05d65a64dd6f80,• `coalesce()`,NA,NA,NA,NA
