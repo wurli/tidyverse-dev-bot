@@ -3,13 +3,22 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
-    `if_else()` no longer allows `condition` to be a logical array. It
-    must be a logical vector with no `dim` attribute (#7723).
+    The following vector functions have gotten significantly faster and
+    use much less memory due to a rewrite in C via vctrs (#7723):
 
+    !begin-bullets-2!
+    -   !begin-bullet!
+        `if_else()`
+        !end-bullet!
+    -   !begin-bullet!
+        `coalesce()`
+        !end-bullet!
+
+    !end-bullets-2!
     !end-bullet!
 -   !begin-bullet!
-    `if_else()` has gotten significantly faster and uses much less
-    memory due to a rewrite in C via `vctrs::vec_if_else()` (#7723).
+    `if_else()` no longer allows `condition` to be a logical array. It
+    must be a logical vector with no `dim` attribute (#7723).
 
     !end-bullet!
 -   !begin-bullet!
@@ -84,7 +93,7 @@
 
 # dplyr 1.1.4
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     `join_by()` now allows its helper functions to be namespaced with
@@ -118,11 +127,11 @@
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 # dplyr 1.1.3
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     `mutate_each()` and `summarise_each()` now throw correct deprecation
@@ -136,11 +145,11 @@
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 # dplyr 1.1.2
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     `count()` better documents that it has a `.drop` argument (#6820).
@@ -156,11 +165,11 @@
 
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 # dplyr 1.1.1
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     Mutating joins now warn about multiple matches much less often. At a
@@ -173,7 +182,7 @@
 
     We've accomplished this in two steps:
 
-    !begin-bullets-6!
+    !begin-bullets-7!
     -   !begin-bullet!
         `multiple` now defaults to `"all"`, and the options of `"error"`
         and `"warning"` are now deprecated in favor of using
@@ -201,7 +210,7 @@
 
         !end-bullet!
 
-    !end-bullets-6!
+    !end-bullets-7!
     This change unfortunately does mean that if you have set
     `multiple = "all"` to avoid a warning and you happened to be doing a
     many-to-many style join, then you will need to replace
@@ -303,13 +312,13 @@
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # dplyr 1.1.0
 
 ## New features
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     `.by`/`by` is an experimental alternative to `group_by()` that
@@ -363,7 +372,7 @@
     by applying functions to columns of an existing data frame. It is
     very similar to `summarise()`, with two big differences:
 
-    !begin-bullets-8!
+    !begin-bullets-9!
     -   !begin-bullet!
         `reframe()` can return an arbitrary number of rows per group,
         while `summarise()` reduces each group down to a single row.
@@ -376,7 +385,7 @@
 
         !end-bullet!
 
-    !end-bullets-8!
+    !end-bullets-9!
     `reframe()` has been added in response to valid concern from the
     community that allowing `summarise()` to return any number of rows
     per group increases the chance for accidental bugs. We still feel
@@ -404,7 +413,7 @@
     changes are inspired by data.table's join syntax (#5914, #5661,
     #5413, #2240).
 
-    !begin-bullets-9!
+    !begin-bullets-10!
     -   !begin-bullet!
         A *join specification* can now be created through `join_by()`.
         This allows you to specify both the left and right hand side of
@@ -416,7 +425,7 @@
     -   !begin-bullet!
         Join specifications allow for new types of joins:
 
-        !begin-bullets-10!
+        !begin-bullets-11!
         -   !begin-bullet!
             Equality joins: The most common join, specified by `==`. For
             example, `join_by(sale_date == commercial_date)`.
@@ -449,7 +458,7 @@
 
             !end-bullet!
 
-        !end-bullets-10!
+        !end-bullets-11!
         Note that you cannot use arbitrary expressions in the join
         conditions, like `join_by(sale_date - 40 >= commercial_date)`.
         Instead, use `mutate()` to create a new column containing the
@@ -483,7 +492,7 @@
 
         !end-bullet!
 
-    !end-bullets-9!
+    !end-bullets-10!
     !end-bullet!
 -   !begin-bullet!
     `across()` gains an experimental `.unpack` argument to optionally
@@ -521,13 +530,13 @@
 
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 ## Lifecycle changes
 
 ### Breaking changes
 
-!begin-bullets-11!
+!begin-bullets-12!
 
 -   !begin-bullet!
     `arrange()` and `group_by()` now use the C locale, not the system
@@ -559,11 +568,11 @@
 
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-12!
 
 ### Newly deprecated
 
-!begin-bullets-12!
+!begin-bullets-13!
 
 -   !begin-bullet!
     `across()`, `c_across()`, `if_any()`, and `if_all()` now require the
@@ -571,7 +580,7 @@
     use `pick()` instead of an empty `across()` call or `across()` with
     no `.fns` (e.g. `across(c(x, y))`. (#6523).
 
-    !begin-bullets-13!
+    !begin-bullets-14!
     -   !begin-bullet!
         Relying on the previous default of `.cols = everything()` is
         deprecated. We have skipped the soft-deprecation stage in this
@@ -587,7 +596,7 @@
 
         !end-bullet!
 
-    !end-bullets-13!
+    !end-bullets-14!
     !end-bullet!
 -   !begin-bullet!
     Passing `...` to `across()` is soft-deprecated because it's
@@ -641,11 +650,11 @@
 
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
 
 ### Newly superseded
 
-!begin-bullets-14!
+!begin-bullets-15!
 
 -   !begin-bullet!
     `recode()` is superseded in favour of `case_match()` (#6433).
@@ -664,11 +673,11 @@
 
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-15!
 
 ### Newly stable
 
-!begin-bullets-15!
+!begin-bullets-16!
 
 -   !begin-bullet!
     The `.keep`, `.before`, and `.after` arguments to `mutate()` have
@@ -681,14 +690,14 @@
 
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-16!
 
 ## vctrs
 
 Many of dplyr's vector functions have been rewritten to make use of the
 vctrs package, bringing greater consistency and improved performance.
 
-!begin-bullets-16!
+!begin-bullets-17!
 
 -   !begin-bullet!
     `between()` can now work with all vector types, not just numeric and
@@ -701,7 +710,7 @@ vctrs package, bringing greater consistency and improved performance.
 -   !begin-bullet!
     `case_when()` (#5106):
 
-    !begin-bullets-17!
+    !begin-bullets-18!
     -   !begin-bullet!
         Has a new `.default` argument that is intended to replace usage
         of `TRUE ~ default_value` as a more explicit and readable way to
@@ -742,12 +751,12 @@ vctrs package, bringing greater consistency and improved performance.
 
         !end-bullet!
 
-    !end-bullets-17!
+    !end-bullets-18!
     !end-bullet!
 -   !begin-bullet!
     `coalesce()` (#6265):
 
-    !begin-bullets-18!
+    !begin-bullets-19!
     -   !begin-bullet!
         Discards `NULL` inputs up front.
 
@@ -765,12 +774,12 @@ vctrs package, bringing greater consistency and improved performance.
 
         !end-bullet!
 
-    !end-bullets-18!
+    !end-bullets-19!
     !end-bullet!
 -   !begin-bullet!
     `first()`, `last()`, and `nth()` (#6331):
 
-    !begin-bullets-19!
+    !begin-bullets-20!
     -   !begin-bullet!
         When used on a data frame, these functions now return a single
         row rather than a single column. This is more consistent with
@@ -795,7 +804,7 @@ vctrs package, bringing greater consistency and improved performance.
 
         !end-bullet!
 
-    !end-bullets-19!
+    !end-bullets-20!
     Additionally, they have all gained an `na_rm` argument since they
     are summary functions (#6242, with contributions from @tnederlof).
 
@@ -845,11 +854,11 @@ vctrs package, bringing greater consistency and improved performance.
 
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-17!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-20!
+!begin-bullets-21!
 
 -   !begin-bullet!
     Fixed an issue with latest rlang that caused internal tools (such as
@@ -1127,7 +1136,7 @@ vctrs package, bringing greater consistency and improved performance.
 
     !end-bullet!
 
-!end-bullets-20!
+!end-bullets-21!
 
 # dplyr 1.0.10
 
@@ -1135,7 +1144,7 @@ Hot patch release to resolve R CMD check failures.
 
 # dplyr 1.0.9
 
-!begin-bullets-21!
+!begin-bullets-22!
 
 -   !begin-bullet!
     New `rows_append()` which works like `rows_insert()` but ignores
@@ -1190,11 +1199,11 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-21!
+!end-bullets-22!
 
 # dplyr 1.0.8
 
-!begin-bullets-22!
+!begin-bullets-23!
 
 -   !begin-bullet!
     Better display of error messages thanks to rlang 1.0.0.
@@ -1250,11 +1259,11 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-22!
+!end-bullets-23!
 
 # dplyr 1.0.7
 
-!begin-bullets-23!
+!begin-bullets-24!
 
 -   !begin-bullet!
     `across()` uses the formula environment when inlining them (#5886).
@@ -1275,11 +1284,11 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-23!
+!end-bullets-24!
 
 # dplyr 1.0.6
 
-!begin-bullets-24!
+!begin-bullets-25!
 
 -   !begin-bullet!
     `add_count()` is now generic (#5837).
@@ -1341,11 +1350,11 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-24!
+!end-bullets-25!
 
 # dplyr 1.0.5
 
-!begin-bullets-25!
+!begin-bullets-26!
 
 -   !begin-bullet!
     Fixed edge case of `slice_sample()` when `weight_by=` is used and
@@ -1375,11 +1384,11 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-25!
+!end-bullets-26!
 
 # dplyr 1.0.4
 
-!begin-bullets-26!
+!begin-bullets-27!
 
 -   !begin-bullet!
     Improved performance for `across()`. This makes
@@ -1403,11 +1412,11 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-26!
+!end-bullets-27!
 
 # dplyr 1.0.3
 
-!begin-bullets-27!
+!begin-bullets-28!
 
 -   !begin-bullet!
     `summarise()` no longer informs when the result is ungrouped
@@ -1484,11 +1493,11 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-27!
+!end-bullets-28!
 
 # dplyr 1.0.2
 
-!begin-bullets-28!
+!begin-bullets-29!
 
 -   !begin-bullet!
     Fixed `across()` issue where data frame columns would mask objects
@@ -1506,11 +1515,11 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-28!
+!end-bullets-29!
 
 # dplyr 1.0.1
 
-!begin-bullets-29!
+!begin-bullets-30!
 
 -   !begin-bullet!
     New function `cur_data_all()` similar to `cur_data()` but includes
@@ -1546,13 +1555,13 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-29!
+!end-bullets-30!
 
 # dplyr 1.0.0
 
 ## Breaking changes
 
-!begin-bullets-30!
+!begin-bullets-31!
 
 -   !begin-bullet!
     `bind_cols()` no longer converts to a tibble, returns a data frame
@@ -1563,7 +1572,7 @@ Hot patch release to resolve R CMD check failures.
     `bind_rows()`, `*_join()`, `summarise()` and `mutate()` use vctrs
     coercion rules. There are two main user facing changes:
 
-    !begin-bullets-31!
+    !begin-bullets-32!
     -   !begin-bullet!
         Combining factor and character vectors silently creates a
         character vector; previously it created a character vector with
@@ -1576,7 +1585,7 @@ Hot patch release to resolve R CMD check failures.
 
         !end-bullet!
 
-    !end-bullets-31!
+    !end-bullets-32!
     !end-bullet!
 -   !begin-bullet!
     `bind_rows()` and other functions use vctrs name repair, see
@@ -1586,7 +1595,7 @@ Hot patch release to resolve R CMD check failures.
 -   !begin-bullet!
     `all.equal.tbl_df()` removed.
 
-    !begin-bullets-32!
+    !begin-bullets-33!
     -   !begin-bullet!
         Data frames, tibbles and grouped data frames are no longer
         considered equal, even if the data is the same.
@@ -1603,7 +1612,7 @@ Hot patch release to resolve R CMD check failures.
 
         !end-bullet!
 
-    !end-bullets-32!
+    !end-bullets-33!
     !end-bullet!
 -   !begin-bullet!
     `distinct()` keeps the original column order.
@@ -1653,11 +1662,11 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-30!
+!end-bullets-31!
 
 ## New features
 
-!begin-bullets-33!
+!begin-bullets-34!
 
 -   !begin-bullet!
     The `cur_` functions (`cur_data()`, `cur_group()`, `cur_group_id()`,
@@ -1693,7 +1702,7 @@ Hot patch release to resolve R CMD check failures.
 -   !begin-bullet!
     `slice()` gains a new set of helpers:
 
-    !begin-bullets-34!
+    !begin-bullets-35!
     -   !begin-bullet!
         `slice_head()` and `slice_tail()` select the first and last
         rows, like `head()` and `tail()`, but return `n` rows *per
@@ -1712,7 +1721,7 @@ Hot patch release to resolve R CMD check failures.
 
         !end-bullet!
 
-    !end-bullets-34!
+    !end-bullets-35!
     !end-bullet!
 -   !begin-bullet!
     `summarise()` can create summaries of greater than length 1 if you
@@ -1744,11 +1753,11 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-33!
+!end-bullets-34!
 
 ## Experimental features
 
-!begin-bullets-35!
+!begin-bullets-36!
 
 -   !begin-bullet!
     `mutate()` (for data frames only), gains experimental new arguments
@@ -1774,11 +1783,11 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-35!
+!end-bullets-36!
 
 ## across()
 
-!begin-bullets-36!
+!begin-bullets-37!
 
 -   !begin-bullet!
     New function `across()` that can be used inside `summarise()`,
@@ -1795,11 +1804,11 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-36!
+!end-bullets-37!
 
 ## rowwise()
 
-!begin-bullets-37!
+!begin-bullets-38!
 
 -   !begin-bullet!
     `rowwise()` is no longer questioning; we now understand that it's an
@@ -1818,11 +1827,11 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-37!
+!end-bullets-38!
 
 ## vctrs
 
-!begin-bullets-38!
+!begin-bullets-39!
 
 -   !begin-bullet!
     The implementation of all dplyr verbs have been changed to use
@@ -1860,11 +1869,11 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-38!
+!end-bullets-39!
 
 ## Grouping
 
-!begin-bullets-39!
+!begin-bullets-40!
 
 -   !begin-bullet!
     `group_by()` uses hashing from the `vctrs` package.
@@ -1899,11 +1908,11 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-39!
+!end-bullets-40!
 
 ## Lifecycle changes
 
-!begin-bullets-40!
+!begin-bullets-41!
 
 -   !begin-bullet!
     All deprecations now use the lifecycle, that means by default you'll
@@ -1912,11 +1921,11 @@ Hot patch release to resolve R CMD check failures.
     "quiet", "warning", and "error".
     !end-bullet!
 
-!end-bullets-40!
+!end-bullets-41!
 
 ### Removed
 
-!begin-bullets-41!
+!begin-bullets-42!
 
 -   !begin-bullet!
     `id()`, deprecated in dplyr 0.5.0, is now defunct.
@@ -1942,11 +1951,11 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-41!
+!end-bullets-42!
 
 ### Deprecated
 
-!begin-bullets-42!
+!begin-bullets-43!
 
 -   !begin-bullet!
     Use of pkgconfig for setting `na_matches` argument to join functions
@@ -2028,11 +2037,11 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-42!
+!end-bullets-43!
 
 ### Superseded
 
-!begin-bullets-43!
+!begin-bullets-44!
 
 -   !begin-bullet!
     The scoped helpers (all functions ending in `_if`, `_at`, or `_all`)
@@ -2061,32 +2070,32 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-43!
+!end-bullets-44!
 
 ### Questioning
 
-!begin-bullets-44!
+!begin-bullets-45!
 
 -   !begin-bullet!
     `all_equal()` is questioning; it solves a problem that no longer
     seems important.
     !end-bullet!
 
-!end-bullets-44!
+!end-bullets-45!
 
 ### Stable
 
-!begin-bullets-45!
+!begin-bullets-46!
 
 -   !begin-bullet!
     `rowwise()` is no longer questioning.
     !end-bullet!
 
-!end-bullets-45!
+!end-bullets-46!
 
 ## Documentation improvements
 
-!begin-bullets-46!
+!begin-bullets-47!
 
 -   !begin-bullet!
     New `vignette("base")` which describes how dplyr verbs relate to the
@@ -2106,11 +2115,11 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-46!
+!end-bullets-47!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-47!
+!begin-bullets-48!
 
 -   !begin-bullet!
     dplyr now has a rudimentary, experimental, and stop-gap, extension
@@ -2242,54 +2251,54 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-47!
+!end-bullets-48!
 
 # dplyr 0.8.5 (2020-03-07)
 
-!begin-bullets-48!
+!begin-bullets-49!
 
 -   !begin-bullet!
     Maintenance release for compatibility with R-devel.
     !end-bullet!
 
-!end-bullets-48!
+!end-bullets-49!
 
 # dplyr 0.8.4 (2020-01-30)
 
-!begin-bullets-49!
+!begin-bullets-50!
 
 -   !begin-bullet!
     Adapt tests to changes in dependent packages.
     !end-bullet!
 
-!end-bullets-49!
+!end-bullets-50!
 
 # dplyr 0.8.3 (2019-07-04)
 
-!begin-bullets-50!
+!begin-bullets-51!
 
 -   !begin-bullet!
     Fixed performance regression introduced in version 0.8.2 (#4458).
     !end-bullet!
 
-!end-bullets-50!
+!end-bullets-51!
 
 # dplyr 0.8.2 (2019-06-28)
 
 ## New functions
 
-!begin-bullets-51!
+!begin-bullets-52!
 
 -   !begin-bullet!
     `top_frac(data, proportion)` is a shorthand for
     `top_n(data, proportion * n())` (#4017).
     !end-bullet!
 
-!end-bullets-51!
+!end-bullets-52!
 
 ## colwise changes
 
-!begin-bullets-52!
+!begin-bullets-53!
 
 -   !begin-bullet!
     Using quosures in colwise verbs is deprecated (#4330).
@@ -2314,11 +2323,11 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-52!
+!end-bullets-53!
 
 ## Hybrid evaluation changes
 
-!begin-bullets-53!
+!begin-bullets-54!
 
 -   !begin-bullet!
     hybrid rank functions correctly handle NA (#4427).
@@ -2330,11 +2339,11 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-53!
+!end-bullets-54!
 
 ## Minor changes
 
-!begin-bullets-54!
+!begin-bullets-55!
 
 -   !begin-bullet!
     `top_n()` quotes its `n` argument, `n` no longer needs to be
@@ -2378,24 +2387,24 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-54!
+!end-bullets-55!
 
 # dplyr 0.8.1 (2019-05-14)
 
 ## Breaking changes
 
-!begin-bullets-55!
+!begin-bullets-56!
 
 -   !begin-bullet!
     `group_modify()` is the new name of the function previously known as
     `group_map()`
     !end-bullet!
 
-!end-bullets-55!
+!end-bullets-56!
 
 ## New functions
 
-!begin-bullets-56!
+!begin-bullets-57!
 
 -   !begin-bullet!
     `group_map()` now only calls the function on each group and return a
@@ -2408,11 +2417,11 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-56!
+!end-bullets-57!
 
 ## Minor changes
 
-!begin-bullets-57!
+!begin-bullets-58!
 
 -   !begin-bullet!
     Lists of formulas passed to colwise verbs are now automatically
@@ -2475,23 +2484,23 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-57!
+!end-bullets-58!
 
 # dplyr 0.8.0.1 (2019-02-15)
 
-!begin-bullets-58!
+!begin-bullets-59!
 
 -   !begin-bullet!
     Fixed integer C/C++ division, forced released by CRAN (#4185).
     !end-bullet!
 
-!end-bullets-58!
+!end-bullets-59!
 
 # dplyr 0.8.0 (2019-02-14)
 
 ## Breaking changes
 
-!begin-bullets-59!
+!begin-bullets-60!
 
 -   !begin-bullet!
     The error `could not find function "n"` or the warning
@@ -2512,7 +2521,7 @@ Hot patch release to resolve R CMD check failures.
     If you see `checking S3 generic/method consistency` in R CMD check
     for your package, note that :
 
-    !begin-bullets-60!
+    !begin-bullets-61!
     -   !begin-bullet!
         `sample_n()` and `sample_frac()` have gained `...`
         !end-bullet!
@@ -2523,7 +2532,7 @@ Hot patch release to resolve R CMD check failures.
         `group_by()` has gained `.drop`
         !end-bullet!
 
-    !end-bullets-60!
+    !end-bullets-61!
     !end-bullet!
 -   !begin-bullet!
     `` Error: `.data` is a corrupt grouped_df, ... `` signals code that
@@ -2531,11 +2540,11 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-59!
+!end-bullets-60!
 
 ## New functions
 
-!begin-bullets-61!
+!begin-bullets-62!
 
 -   !begin-bullet!
     New selection helpers `group_cols()`. It can be called in selection
@@ -2622,11 +2631,11 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-61!
+!end-bullets-62!
 
 ## Major changes
 
-!begin-bullets-62!
+!begin-bullets-63!
 
 -   !begin-bullet!
     `group_by()` gains the `.drop` argument. When set to `FALSE` the
@@ -2702,11 +2711,11 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-62!
+!end-bullets-63!
 
 ## Minor changes
 
-!begin-bullets-63!
+!begin-bullets-64!
 
 -   !begin-bullet!
     `tally()` works correctly on non-data frame table sources such as
@@ -2785,11 +2794,11 @@ Hot patch release to resolve R CMD check failures.
     !end-codeblock!
     !end-bullet!
 
-!end-bullets-63!
+!end-bullets-64!
 
 ## Lifecycle
 
-!begin-bullets-64!
+!begin-bullets-65!
 
 -   !begin-bullet!
     `do()`, `rowwise()` and `combine()` are questioning (#3494).
@@ -2801,11 +2810,11 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-64!
+!end-bullets-65!
 
 ## Changes to column wise functions
 
-!begin-bullets-65!
+!begin-bullets-66!
 
 -   !begin-bullet!
     Scoped variants for `distinct()`: `distinct_at()`, `distinct_if()`,
@@ -2822,11 +2831,11 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-65!
+!end-bullets-66!
 
 ## Performance
 
-!begin-bullets-66!
+!begin-bullets-67!
 
 -   !begin-bullet!
     R expressions that cannot be handled with native code are now
@@ -2867,11 +2876,11 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-66!
+!end-bullets-67!
 
 ## Internal
 
-!begin-bullets-67!
+!begin-bullets-68!
 
 -   !begin-bullet!
     The grouping metadata of grouped data frame has been reorganized in
@@ -2904,11 +2913,11 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-67!
+!end-bullets-68!
 
 ## Documentation
 
-!begin-bullets-68!
+!begin-bullets-69!
 
 -   !begin-bullet!
     Add documentation example for moving variable to back in `?select`
@@ -2922,21 +2931,21 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-68!
+!end-bullets-69!
 
 ### Deprecated and defunct functions
 
-!begin-bullets-69!
+!begin-bullets-70!
 
 -   !begin-bullet!
     `mutate_each()` and `summarise_each()` are deprecated.
     !end-bullet!
 
-!end-bullets-69!
+!end-bullets-70!
 
 # dplyr 0.7.6
 
-!begin-bullets-70!
+!begin-bullets-71!
 
 -   !begin-bullet!
     `exprs()` is no longer exported to avoid conflicts with
@@ -2964,13 +2973,13 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-70!
+!end-bullets-71!
 
 # dplyr 0.7.5 (2018-04-14)
 
 ## Breaking changes for package developers
 
-!begin-bullets-71!
+!begin-bullets-72!
 
 -   !begin-bullet!
     The major change in this version is that dplyr now depends on the
@@ -2988,11 +2997,11 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-71!
+!end-bullets-72!
 
 ## Bug fixes
 
-!begin-bullets-72!
+!begin-bullets-73!
 
 -   !begin-bullet!
     `distinct(data, "string")` now returns a one-row data frame again.
@@ -3033,11 +3042,11 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-72!
+!end-bullets-73!
 
 ## Major changes
 
-!begin-bullets-73!
+!begin-bullets-74!
 
 -   !begin-bullet!
     `enexpr()`, `expr()`, `exprs()`, `sym()` and `syms()` are now
@@ -3070,11 +3079,11 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-73!
+!end-bullets-74!
 
 ## Minor changes
 
-!begin-bullets-74!
+!begin-bullets-75!
 
 -   !begin-bullet!
     Support for raw vector columns in `arrange()`, `group_by()`,
@@ -3143,22 +3152,22 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-74!
+!end-bullets-75!
 
 ## Documentation
 
-!begin-bullets-75!
+!begin-bullets-76!
 
 -   !begin-bullet!
     Improved documentation for `funs()` (#3094) and set operations
     (e.g. `union()`) (#3238, @edublancas).
     !end-bullet!
 
-!end-bullets-75!
+!end-bullets-76!
 
 ## Error messages
 
-!begin-bullets-76!
+!begin-bullets-77!
 
 -   !begin-bullet!
     Better error message if dbplyr is not installed when accessing
@@ -3204,11 +3213,11 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-76!
+!end-bullets-77!
 
 ## Performance
 
-!begin-bullets-77!
+!begin-bullets-78!
 
 -   !begin-bullet!
     `sample_n()` and `sample_frac()` on grouped data frame are now
@@ -3216,11 +3225,11 @@ Hot patch release to resolve R CMD check failures.
     @saurfang).
     !end-bullet!
 
-!end-bullets-77!
+!end-bullets-78!
 
 ## Internal
 
-!begin-bullets-78!
+!begin-bullets-79!
 
 -   !begin-bullet!
     Compute variable names for joins in R (#3430).
@@ -3240,11 +3249,11 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-78!
+!end-bullets-79!
 
 # dplyr 0.7.4
 
-!begin-bullets-79!
+!begin-bullets-80!
 
 -   !begin-bullet!
     Fix recent Fedora and ASAN check errors (#3098).
@@ -3255,11 +3264,11 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-79!
+!end-bullets-80!
 
 # dplyr 0.7.3
 
-!begin-bullets-80!
+!begin-bullets-81!
 
 -   !begin-bullet!
     Fixed protection error that occurred when creating a character
@@ -3321,22 +3330,22 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-80!
+!end-bullets-81!
 
 # dplyr 0.7.2
 
-!begin-bullets-81!
+!begin-bullets-82!
 
 -   !begin-bullet!
     Move build-time vs. run-time checks out of `.onLoad()` and into
     `dr_dplyr()`.
     !end-bullet!
 
-!end-bullets-81!
+!end-bullets-82!
 
 # dplyr 0.7.1
 
-!begin-bullets-82!
+!begin-bullets-83!
 
 -   !begin-bullet!
     Use new versions of bindrcpp and glue to avoid protection problems.
@@ -3369,19 +3378,19 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-82!
+!end-bullets-83!
 
 # dplyr 0.7.0
 
 ## New data, functions, and features
 
-!begin-bullets-83!
+!begin-bullets-84!
 
 -   !begin-bullet!
     Five new datasets provide some interesting built-in datasets to
     demonstrate dplyr verbs (#2094):
 
-    !begin-bullets-84!
+    !begin-bullets-85!
     -   !begin-bullet!
         `starwars` dataset about starwars characters; has list columns
         !end-bullet!
@@ -3393,7 +3402,7 @@ Hot patch release to resolve R CMD check failures.
         some simple data to demonstrate joins.
         !end-bullet!
 
-    !end-bullets-84!
+    !end-bullets-85!
     !end-bullet!
 -   !begin-bullet!
     New `add_count()` and `add_tally()` for adding an `n` column within
@@ -3424,11 +3433,11 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-83!
+!end-bullets-84!
 
 ## Deprecated and defunct
 
-!begin-bullets-85!
+!begin-bullets-86!
 
 -   !begin-bullet!
     dplyr no longer messages that you need dtplyr to work with
@@ -3457,7 +3466,7 @@ Hot patch release to resolve R CMD check failures.
 
     !end-bullet!
 
-!end-bullets-85!
+!end-bullets-86!
 
 ## Databases
 
@@ -3466,7 +3475,7 @@ connections work. By and large, you should be able to continue using
 your existing dplyr database code without modification, but there are
 two big changes that you should be aware of:
 
-!begin-bullets-86!
+!begin-bullets-87!
 
 -   !begin-bullet!
     Almost all database related code has been moved out of dplyr and
@@ -3487,7 +3496,7 @@ two big changes that you should be aware of:
 
     !end-bullet!
 
-!end-bullets-86!
+!end-bullets-87!
 
 You can continue to use `src_mysql()`, `src_postgres()`, and
 `src_sqlite()`, but I recommend a new style that makes the connection to
@@ -3518,7 +3527,7 @@ version of dplyr, see `wrap_dbplyr_obj()` for helpers.
 
 ## UTF-8
 
-!begin-bullets-87!
+!begin-bullets-88!
 
 -   !begin-bullet!
     Internally, column names are always represented as character
@@ -3556,11 +3565,11 @@ version of dplyr, see `wrap_dbplyr_obj()` for helpers.
 
     !end-bullet!
 
-!end-bullets-87!
+!end-bullets-88!
 
 ## Colwise functions
 
-!begin-bullets-88!
+!begin-bullets-89!
 
 -   !begin-bullet!
     `rename()`, `select()`, `group_by()`, `filter()`, `arrange()` and
@@ -3598,7 +3607,7 @@ version of dplyr, see `wrap_dbplyr_obj()` for helpers.
 
     !end-bullet!
 
-!end-bullets-88!
+!end-bullets-89!
 
 ## Tidyeval
 
@@ -3623,7 +3632,7 @@ This means that the underscored version of each main verb is no longer
 needed, and so these functions have been deprecated (but remain around
 for backward compatibility).
 
-!begin-bullets-89!
+!begin-bullets-90!
 
 -   !begin-bullet!
     `order_by()`, `top_n()`, `sample_n()` and `sample_frac()` now use
@@ -3664,13 +3673,13 @@ for backward compatibility).
 
     !end-bullet!
 
-!end-bullets-89!
+!end-bullets-90!
 
 ## Verbs
 
 ### Joins
 
-!begin-bullets-90!
+!begin-bullets-91!
 
 -   !begin-bullet!
     \[API\] `xxx_join.tbl_df(na_matches = "never")` treats all `NA`
@@ -3708,11 +3717,11 @@ for backward compatibility).
 
     !end-bullet!
 
-!end-bullets-90!
+!end-bullets-91!
 
 ### Select
 
-!begin-bullets-91!
+!begin-bullets-92!
 
 -   !begin-bullet!
     For selecting variables, the first selector decides if it's an
@@ -3741,11 +3750,11 @@ for backward compatibility).
 
     !end-bullet!
 
-!end-bullets-91!
+!end-bullets-92!
 
 ### Other
 
-!begin-bullets-92!
+!begin-bullets-93!
 
 -   !begin-bullet!
     `recode()`, `case_when()` and `coalesce()` now support splicing of
@@ -3802,11 +3811,11 @@ for backward compatibility).
 
     !end-bullet!
 
-!end-bullets-92!
+!end-bullets-93!
 
 ## Combining and comparing
 
-!begin-bullets-93!
+!begin-bullets-94!
 
 -   !begin-bullet!
     `all_equal()` now reports multiple problems as a character vector
@@ -3888,11 +3897,11 @@ for backward compatibility).
 
     !end-bullet!
 
-!end-bullets-93!
+!end-bullets-94!
 
 ## Vector functions
 
-!begin-bullets-94!
+!begin-bullets-95!
 
 -   !begin-bullet!
     `%in%` gets new hybrid handler (#126).
@@ -3956,11 +3965,11 @@ for backward compatibility).
 
     !end-bullet!
 
-!end-bullets-94!
+!end-bullets-95!
 
 ## Other minor changes and bug fixes
 
-!begin-bullets-95!
+!begin-bullets-96!
 
 -   !begin-bullet!
     Many error messages are more helpful by referring to a column name
@@ -4062,7 +4071,7 @@ for backward compatibility).
 
     !end-bullet!
 
-!end-bullets-95!
+!end-bullets-96!
 
 # dplyr 0.5.0
 
@@ -4070,7 +4079,7 @@ for backward compatibility).
 
 ### Existing functions
 
-!begin-bullets-96!
+!begin-bullets-97!
 
 -   !begin-bullet!
     `arrange()` once again ignores grouping (#1206).
@@ -4096,11 +4105,11 @@ for backward compatibility).
 
     !end-bullet!
 
-!end-bullets-96!
+!end-bullets-97!
 
 ### Deprecated and defunct functions
 
-!begin-bullets-97!
+!begin-bullets-98!
 
 -   !begin-bullet!
     The long deprecated `chain()`, `chain_q()` and `%.%` have been
@@ -4127,11 +4136,11 @@ for backward compatibility).
 
     !end-bullet!
 
-!end-bullets-97!
+!end-bullets-98!
 
 ## New functions
 
-!begin-bullets-98!
+!begin-bullets-99!
 
 -   !begin-bullet!
     `coalesce()` finds the first non-missing value from a set of
@@ -4188,7 +4197,7 @@ for backward compatibility).
 
     !end-bullet!
 
-!end-bullets-98!
+!end-bullets-99!
 
 ## Local backends
 
@@ -4204,7 +4213,7 @@ loaded, you'll get a message reminding you to load dtplyr.
 Functions related to the creation and coercion of `tbl_df`s, now live in
 their own package: tibble. See `vignette("tibble")` for more details.
 
-!begin-bullets-99!
+!begin-bullets-100!
 
 -   !begin-bullet!
     `$` and `[[` methods that never do partial matching (#1504), and
@@ -4282,11 +4291,11 @@ their own package: tibble. See `vignette("tibble")` for more details.
 
     !end-bullet!
 
-!end-bullets-99!
+!end-bullets-100!
 
 ### tbl_cube
 
-!begin-bullets-100!
+!begin-bullets-101!
 
 -   !begin-bullet!
     new `as_data_frame.tbl_cube()` (#1563, @krlmlr).
@@ -4309,11 +4318,11 @@ their own package: tibble. See `vignette("tibble")` for more details.
 
     !end-bullet!
 
-!end-bullets-100!
+!end-bullets-101!
 
 ## Remote backends
 
-!begin-bullets-101!
+!begin-bullets-102!
 
 -   !begin-bullet!
     `as_data_frame()` on SQL sources now returns all rows (#1752, #1821,
@@ -4342,11 +4351,11 @@ their own package: tibble. See `vignette("tibble")` for more details.
 
     !end-bullet!
 
-!end-bullets-101!
+!end-bullets-102!
 
 ### SQLite
 
-!begin-bullets-102!
+!begin-bullets-103!
 
 -   !begin-bullet!
     `src_memdb()` is a session-local in-memory SQLite database.
@@ -4366,11 +4375,11 @@ their own package: tibble. See `vignette("tibble")` for more details.
 
     !end-bullet!
 
-!end-bullets-102!
+!end-bullets-103!
 
 ### SQL translation
 
-!begin-bullets-103!
+!begin-bullets-104!
 
 -   !begin-bullet!
     `filter.tbl_sql()` now puts parens around each argument (#934).
@@ -4402,7 +4411,7 @@ their own package: tibble. See `vignette("tibble")` for more details.
 -   !begin-bullet!
     Window functions:
 
-    !begin-bullets-104!
+    !begin-bullets-105!
     -   !begin-bullet!
         Work on ungrouped data (#1061).
 
@@ -4418,10 +4427,10 @@ their own package: tibble. See `vignette("tibble")` for more details.
 
         !end-bullet!
 
-    !end-bullets-104!
+    !end-bullets-105!
     !end-bullet!
 
-!end-bullets-103!
+!end-bullets-104!
 
 ### Internals
 
@@ -4451,7 +4460,7 @@ make it possible to generate much more succinct queries.
 If you have written a dplyr backend, you'll need to make some minor
 changes to your package:
 
-!begin-bullets-105!
+!begin-bullets-106!
 
 -   !begin-bullet!
     `sql_join()` has been considerably simplified - it is now only
@@ -4473,12 +4482,12 @@ changes to your package:
 
     !end-bullet!
 
-!end-bullets-105!
+!end-bullets-106!
 
 There were two other tweaks to the exported API, but these are less
 likely to affect anyone.
 
-!begin-bullets-106!
+!begin-bullets-107!
 
 -   !begin-bullet!
     `translate_sql()` and `partial_eval()` got a new API: now use
@@ -4493,13 +4502,13 @@ likely to affect anyone.
 
     !end-bullet!
 
-!end-bullets-106!
+!end-bullets-107!
 
 ## Minor improvements and bug fixes
 
 ### Single table verbs
 
-!begin-bullets-107!
+!begin-bullets-108!
 
 -   !begin-bullet!
     Avoiding segfaults in presence of `raw` columns (#1803, #1817,
@@ -4586,11 +4595,11 @@ likely to affect anyone.
 
     !end-bullet!
 
-!end-bullets-107!
+!end-bullets-108!
 
 ### Dual table verbs
 
-!begin-bullets-108!
+!begin-bullets-109!
 
 -   !begin-bullet!
     `bind_cols()` matches the behaviour of `bind_rows()` and ignores
@@ -4654,11 +4663,11 @@ likely to affect anyone.
 
     !end-bullet!
 
-!end-bullets-108!
+!end-bullets-109!
 
 ### Vector functions
 
-!begin-bullets-109!
+!begin-bullets-110!
 
 -   !begin-bullet!
     `combine()` silently drops `NULL` inputs (#1596).
@@ -4703,7 +4712,7 @@ likely to affect anyone.
 
     !end-bullet!
 
-!end-bullets-109!
+!end-bullets-110!
 
 # dplyr 0.4.3
 
@@ -4718,7 +4727,7 @@ received a fix for strings with invalid encodings (#851).
 
 ## Other minor improvements and bug fixes
 
-!begin-bullets-110!
+!begin-bullets-111!
 
 -   !begin-bullet!
     `frame_data()` provides a means for constructing `data_frame`s using
@@ -4856,11 +4865,11 @@ received a fix for strings with invalid encodings (#851).
 
     !end-bullet!
 
-!end-bullets-110!
+!end-bullets-111!
 
 ## Databases
 
-!begin-bullets-111!
+!begin-bullets-112!
 
 -   !begin-bullet!
     `db_query_fields.SQLiteConnection` uses `build_sql` rather than
@@ -4881,11 +4890,11 @@ received a fix for strings with invalid encodings (#851).
 
     !end-bullet!
 
-!end-bullets-111!
+!end-bullets-112!
 
 ## Hybrid evaluation
 
-!begin-bullets-112!
+!begin-bullets-113!
 
 -   !begin-bullet!
     Hybrid evaluation does not take place for objects with a class
@@ -4916,7 +4925,7 @@ received a fix for strings with invalid encodings (#851).
 
     !end-bullet!
 
-!end-bullets-112!
+!end-bullets-113!
 
 # dplyr 0.4.2
 
@@ -4925,7 +4934,7 @@ issues identified by R CMD CHECK. There is one new "feature": dplyr no
 longer complains about unrecognised attributes, and instead just copies
 them over to the output.
 
-!begin-bullets-113!
+!begin-bullets-114!
 
 -   !begin-bullet!
     `lag()` and `lead()` for grouped data were confused about indices
@@ -4984,23 +4993,23 @@ them over to the output.
 
     !end-bullet!
 
-!end-bullets-113!
+!end-bullets-114!
 
 # dplyr 0.4.1
 
-!begin-bullets-114!
+!begin-bullets-115!
 
 -   !begin-bullet!
     Don't assume that RPostgreSQL is available.
     !end-bullet!
 
-!end-bullets-114!
+!end-bullets-115!
 
 # dplyr 0.4.0
 
 ## New features
 
-!begin-bullets-115!
+!begin-bullets-116!
 
 -   !begin-bullet!
     `add_rownames()` turns row names into an explicit variable (#639).
@@ -5031,11 +5040,11 @@ them over to the output.
 
     !end-bullet!
 
-!end-bullets-115!
+!end-bullets-116!
 
 ## New vignettes
 
-!begin-bullets-116!
+!begin-bullets-117!
 
 -   !begin-bullet!
     `vignette("data_frames")` describes dplyr functions that make it
@@ -5048,11 +5057,11 @@ them over to the output.
 
     !end-bullet!
 
-!end-bullets-116!
+!end-bullets-117!
 
 ## Minor improvements
 
-!begin-bullets-117!
+!begin-bullets-118!
 
 -   !begin-bullet!
     `data_frame()` (and `as_data_frame()` & `tbl_df()`) now explicitly
@@ -5184,11 +5193,11 @@ them over to the output.
 
     !end-bullet!
 
-!end-bullets-117!
+!end-bullets-118!
 
 ## Bug fixes
 
-!begin-bullets-118!
+!begin-bullets-119!
 
 -   !begin-bullet!
     `[.tbl_df` correctly computes row names for 0-column data frames,
@@ -5256,23 +5265,23 @@ them over to the output.
 
     !end-bullet!
 
-!end-bullets-118!
+!end-bullets-119!
 
 # dplyr 0.3.0.1
 
-!begin-bullets-119!
+!begin-bullets-120!
 
 -   !begin-bullet!
     Fixed problem with test script on Windows.
     !end-bullet!
 
-!end-bullets-119!
+!end-bullets-120!
 
 # dplyr 0.3
 
 ## New functions
 
-!begin-bullets-120!
+!begin-bullets-121!
 
 -   !begin-bullet!
     `between()` vector function efficiently determines if numeric values
@@ -5333,11 +5342,11 @@ them over to the output.
 
     !end-bullet!
 
-!end-bullets-120!
+!end-bullets-121!
 
 ## Programming with dplyr (non-standard evaluation)
 
-!begin-bullets-121!
+!begin-bullets-122!
 
 -   !begin-bullet!
     You can now program with dplyr - every function that does
@@ -5366,11 +5375,11 @@ them over to the output.
 
     !end-bullet!
 
-!end-bullets-121!
+!end-bullets-122!
 
 ## Removed and deprecated features
 
-!begin-bullets-122!
+!begin-bullets-123!
 
 -   !begin-bullet!
     `%.%` has been deprecated: please use `%>%` instead. `chain()` is
@@ -5398,11 +5407,11 @@ them over to the output.
 
     !end-bullet!
 
-!end-bullets-122!
+!end-bullets-123!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-123!
+!begin-bullets-124!
 
 -   !begin-bullet!
     Main verbs now have individual documentation pages (#519).
@@ -5480,13 +5489,13 @@ them over to the output.
 
     !end-bullet!
 
-!end-bullets-123!
+!end-bullets-124!
 
 ## Minor improvements and bug fixes by backend
 
 ### Databases
 
-!begin-bullets-124!
+!begin-bullets-125!
 
 -   !begin-bullet!
     Correct SQL generation for `paste()` when used with the collapse
@@ -5519,11 +5528,11 @@ them over to the output.
 
     !end-bullet!
 
-!end-bullets-124!
+!end-bullets-125!
 
 ### Data frames/`tbl_df`
 
-!begin-bullets-125!
+!begin-bullets-126!
 
 -   !begin-bullet!
     All verbs now understand how to work with `difftime()` (#390) and
@@ -5535,7 +5544,7 @@ them over to the output.
 -   !begin-bullet!
     Hybrid evaluation bugs fixed:
 
-    !begin-bullets-126!
+    !begin-bullets-127!
     -   !begin-bullet!
         Call substitution stopped too early when a sub expression
         contained a `$` (#502).
@@ -5560,7 +5569,7 @@ them over to the output.
 
         !end-bullet!
 
-    !end-bullets-126!
+    !end-bullets-127!
     !end-bullet!
 -   !begin-bullet!
     `[.tbl_df` always returns a tbl_df (i.e. `drop = FALSE` is the
@@ -5642,11 +5651,11 @@ them over to the output.
 
     !end-bullet!
 
-!end-bullets-125!
+!end-bullets-126!
 
 ### Data tables
 
-!begin-bullets-127!
+!begin-bullets-128!
 
 -   !begin-bullet!
     Fix major omission in `tbl_dt()` and `grouped_dt()` methods - I was
@@ -5664,17 +5673,17 @@ them over to the output.
 
     !end-bullet!
 
-!end-bullets-127!
+!end-bullets-128!
 
 ### Cubes
 
-!begin-bullets-128!
+!begin-bullets-129!
 
 -   !begin-bullet!
     `summarise.tbl_cube()` works with single grouping variable (#480).
     !end-bullet!
 
-!end-bullets-128!
+!end-bullets-129!
 
 # dplyr 0.2
 
@@ -5742,7 +5751,7 @@ longer the job will take to complete.
 
 dplyr 0.2 adds three new verbs:
 
-!begin-bullets-129!
+!begin-bullets-130!
 
 -   !begin-bullet!
     `glimpse()` makes it possible to see all the columns in a tbl,
@@ -5762,11 +5771,11 @@ dplyr 0.2 adds three new verbs:
 
     !end-bullet!
 
-!end-bullets-129!
+!end-bullets-130!
 
 ## Minor improvements
 
-!begin-bullets-130!
+!begin-bullets-131!
 
 -   !begin-bullet!
     If you load plyr after dplyr, you'll get a message suggesting that
@@ -5797,7 +5806,7 @@ dplyr 0.2 adds three new verbs:
 -   !begin-bullet!
     New vignettes:
 
-    !begin-bullets-131!
+    !begin-bullets-132!
     -   !begin-bullet!
         `memory` vignette which discusses how dplyr minimises memory
         usage for local data frames (#198).
@@ -5809,7 +5818,7 @@ dplyr 0.2 adds three new verbs:
 
         !end-bullet!
 
-    !end-bullets-131!
+    !end-bullets-132!
     !end-bullet!
 -   !begin-bullet!
     `changes()` output more clearly distinguishes which columns were
@@ -5856,11 +5865,11 @@ dplyr 0.2 adds three new verbs:
 
     !end-bullet!
 
-!end-bullets-130!
+!end-bullets-131!
 
 ## Bug fixes
 
-!begin-bullets-132!
+!begin-bullets-133!
 
 -   !begin-bullet!
     Code adapted to Rcpp \> 0.11.1
@@ -5958,13 +5967,13 @@ dplyr 0.2 adds three new verbs:
 
     !end-bullet!
 
-!end-bullets-132!
+!end-bullets-133!
 
 # dplyr 0.1.3
 
 ## Bug fixes
 
-!begin-bullets-133!
+!begin-bullets-134!
 
 -   !begin-bullet!
     `select()` actually renames columns in a data table (#284).
@@ -5999,13 +6008,13 @@ dplyr 0.2 adds three new verbs:
 
     !end-bullet!
 
-!end-bullets-133!
+!end-bullets-134!
 
 # dplyr 0.1.2
 
 ## New features
 
-!begin-bullets-134!
+!begin-bullets-135!
 
 -   !begin-bullet!
     `select()` is substantially more powerful. You can use named
@@ -6022,11 +6031,11 @@ dplyr 0.2 adds three new verbs:
 
     !end-bullet!
 
-!end-bullets-134!
+!end-bullets-135!
 
 ## Bug fixes
 
-!begin-bullets-135!
+!begin-bullets-136!
 
 -   !begin-bullet!
     `filter()` now fails when given anything other than a logical
@@ -6089,13 +6098,13 @@ dplyr 0.2 adds three new verbs:
 
     !end-bullet!
 
-!end-bullets-135!
+!end-bullets-136!
 
 # dplyr 0.1.1
 
 ## Improvements
 
-!begin-bullets-136!
+!begin-bullets-137!
 
 -   !begin-bullet!
     new `location()` and `changes()` functions which provide more
@@ -6123,11 +6132,11 @@ dplyr 0.2 adds three new verbs:
 
     !end-bullet!
 
-!end-bullets-136!
+!end-bullets-137!
 
 ## Bug fixes
 
-!begin-bullets-137!
+!begin-bullets-138!
 
 -   !begin-bullet!
     `filter()` (#221) and `summarise()` (#194) correctly propagate
@@ -6172,4 +6181,4 @@ dplyr 0.2 adds three new verbs:
 
     !end-bullet!
 
-!end-bullets-137!
+!end-bullets-138!

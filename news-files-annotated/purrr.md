@@ -23,6 +23,13 @@
     strings.
 
     !end-bullet!
+-   !begin-bullet!
+    `every()`, `some()`, and `none()` now require that `.p` return
+    logical scalar `TRUE`, `FALSE`, or `NA`. Previously, `NA` was
+    allowed to be a non-logical `NA`, and would be coerced to a logical
+    `NA`.
+
+    !end-bullet!
 
 !end-bullets-1!
 
@@ -33,6 +40,12 @@
 -   !begin-bullet!
     New "getting started" vignette, `vignette("purrr")` (#915,
     @ogolovkina).
+
+    !end-bullet!
+-   !begin-bullet!
+    `every()`, `some()`, and `none()` are now more performant. They are
+    now as fast as or faster than their equivalent `any(map_lgl())` or
+    `all(map_lgl())` calls (#1036, @ErdaradunGaztea).
 
     !end-bullet!
 -   !begin-bullet!

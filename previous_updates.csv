@@ -19815,3 +19815,8 @@ devtools,20f267b659aeadecc6f253cbca081f3e,`dev_mode()` and `check_rhub()` are de
 vctrs,99e21cae91d472c0903a1bf24b4fc3da,New `list_all_recyclable()` and `list_check_all_recyclable()`.,NA,NA,NA,NA
 vctrs,53ac9b14d62aae3470f205d841f36ac8,"`list_all_vectors()`, `list_all_size()`, `list_check_all_vectors()`, and `list_check_all_size()` have all gained an `allow_null` argument, which skips over `NULL` when performing their respective check (#1762).",NA,NA,NA,NA
 bslib,591f287d21d72ef99c9684de76cd8d24,`sidebar_toggle()` is now officially deprecated in favor of `toggle_sidebar()`. (#1235),NA,NA,NA,NA
+dplyr,d55427439cc057bc076e776784ca2d05,The following vector functions have gotten significantly faster and use much less memory due to a rewrite in C via vctrs (#7723):,NA,NA,NA,NA
+dplyr,d55427439cc057bc076e776784ca2d05,• `if_else()`,NA,NA,NA,NA
+dplyr,d55427439cc057bc076e776784ca2d05,• `coalesce()`,NA,NA,NA,NA
+purrr,e55c1819c9c0e4c10f301cf4f3fba149,"`every()`, `some()`, and `none()` now require that `.p` return logical scalar `TRUE`, `FALSE`, or `NA`. Previously, `NA` was allowed to be a non-logical `NA`, and would be coerced to a logical `NA`.",NA,NA,NA,NA
+purrr,879bcb988471b29cd6af1f1109d23512,"`every()`, `some()`, and `none()` are now more performant. They are now as fast as or faster than their equivalent `any(map_lgl())` or `all(map_lgl())` calls (#1036, @​ErdaradunGaztea).",NA,NA,NA,NA
