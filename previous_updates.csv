@@ -19820,3 +19820,29 @@ dplyr,d55427439cc057bc076e776784ca2d05,• `if_else()`,NA,NA,NA,NA
 dplyr,d55427439cc057bc076e776784ca2d05,• `coalesce()`,NA,NA,NA,NA
 purrr,e55c1819c9c0e4c10f301cf4f3fba149,"`every()`, `some()`, and `none()` now require that `.p` return logical scalar `TRUE`, `FALSE`, or `NA`. Previously, `NA` was allowed to be a non-logical `NA`, and would be coerced to a logical `NA`.",NA,NA,NA,NA
 purrr,879bcb988471b29cd6af1f1109d23512,"`every()`, `some()`, and `none()` are now more performant. They are now as fast as or faster than their equivalent `any(map_lgl())` or `all(map_lgl())` calls (#1036, @​ErdaradunGaztea).",NA,NA,NA,NA
+dplyr,585606a54039840f15e25e291ee5a683,"In `case_when()`, supplying all size 1 LHS inputs along with a size \>1 RHS input is now soft-deprecated. This is an improper usage of `case_when()` that should instead be a series of if statements, like:",NA,NA,NA,NA
+dplyr,585606a54039840f15e25e291ee5a683,"```
+# Scalars!
+code <- 1L
+flavor <- ""vanilla""
+
+# Previously
+case_when(
+  code == 1L && flavor == ""chocolate"" ~ x,
+  code == 1L && flavor == ""vanilla"" ~ y,
+  code == 2L && flavor == ""vanilla"" ~ z,
+  .default = default
+)
+
+# Now
+if (code == 1L && flavor == ""chocolate"") {
+  x
+} else if (code == 1L && flavor == ""vanilla"") {
+  y
+} else if (code == 2L && flavor == ""vanilla"") {
+  z
+} else {
+  default
+}
+```",NA,NA,NA,NA
+dplyr,585606a54039840f15e25e291ee5a683,"The recycling behavior that allows this style of `case_when()` to work is unsafe, and can result in silent bugs that we'd like to guard against with an error in the future (#7082).",NA,NA,NA,NA
