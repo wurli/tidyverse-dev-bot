@@ -19812,3 +19812,6 @@ dplyr,1b4b83e4e33c61855625c8138e99f7f0,`if_else()` has gotten significantly fast
 dplyr,8e27c815dbaa1c5abf2e44b7f9990c63,Passing `size` to `if_else()` is now deprecated. The output size is always taken from the `condition` (#7722).,NA,NA,NA,NA
 devtools,d6b2936c480ba3f3d9c192f56479ebfe,`dev_mode()` is deprecated.,NA,NA,NA,NA
 devtools,20f267b659aeadecc6f253cbca081f3e,`dev_mode()` and `check_rhub()` are deprecated.,NA,NA,NA,NA
+vctrs,99e21cae91d472c0903a1bf24b4fc3da,New `list_all_recyclable()` and `list_check_all_recyclable()`.,NA,NA,NA,NA
+vctrs,53ac9b14d62aae3470f205d841f36ac8,"`list_all_vectors()`, `list_all_size()`, `list_check_all_vectors()`, and `list_check_all_size()` have all gained an `allow_null` argument, which skips over `NULL` when performing their respective check (#1762).",NA,NA,NA,NA
+bslib,591f287d21d72ef99c9684de76cd8d24,`sidebar_toggle()` is now officially deprecated in favor of `toggle_sidebar()`. (#1235),NA,NA,NA,NA

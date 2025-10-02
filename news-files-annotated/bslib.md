@@ -5,7 +5,7 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
-    `bs_theme_dependencies()` now avoids unecessarily copying internal
+    `bs_theme_dependencies()` now avoids unnecessarily copying internal
     package files to R's temporary directory more than once when
     preparing precompiled theme dependencies (e.g. for a standard
     `bs_theme()` theme). (#1184)
@@ -35,6 +35,11 @@
 -   !begin-bullet!
     `sidebar()` gains a `fillable` argument to support vertical fill
     behavior in sidebars. (#1226)
+
+    !end-bullet!
+-   !begin-bullet!
+    `sidebar_toggle()` is now officially deprecated in favor of
+    `toggle_sidebar()`. (#1235)
 
     !end-bullet!
 

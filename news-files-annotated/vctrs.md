@@ -3,6 +3,17 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    New `list_all_recyclable()` and `list_check_all_recyclable()`.
+
+    !end-bullet!
+-   !begin-bullet!
+    `list_all_vectors()`, `list_all_size()`, `list_check_all_vectors()`,
+    and `list_check_all_size()` have all gained an `allow_null`
+    argument, which skips over `NULL` when performing their respective
+    check (#1762).
+
+    !end-bullet!
+-   !begin-bullet!
     `vec_ptype_common()` now reports more accurate error argument names
     (#2048).
 
