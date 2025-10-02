@@ -20,7 +20,7 @@
     not in the current working directory (#1577).
     !end-bullet!
 -   !begin-bullet!
-    `expect_snapshot_file()` now clearly errors if the `path` doesnt
+    `expect_snapshot_file()` now clearly errors if the `path` doesn't
     exist (#2191).
     !end-bullet!
 -   !begin-bullet!
@@ -173,8 +173,7 @@
     tests (#1913). Additionally, warnings now save their backtraces.
     !end-bullet!
 -   !begin-bullet!
-    `JunitReporter()` strips ANSI escapes in more placese (#1852,
-    #2032).
+    `JunitReporter()` strips ANSI escapes in more places (#1852, #2032).
     !end-bullet!
 -   !begin-bullet!
     `try_again()` is now publicised. The first argument is now the
@@ -1873,9 +1872,9 @@ backtraces from errors and failures.
 
     !end-bullet!
 -   !begin-bullet!
-    `expect_error()` now returns the error object as documentated
-    (#724). It also now warns if you're using a classed expectation and
-    you're not using the `class` argument. This is good practice as it
+    `expect_error()` now returns the error object as documented (#724).
+    It also now warns if you're using a classed expectation and you're
+    not using the `class` argument. This is good practice as it
     decouples the error object (which tends to be stable) from its
     rendering to the user (which tends to be fragile) (#816).
 
@@ -3138,7 +3137,7 @@ There are two main changes:
 
     !end-bullet!
 -   !begin-bullet!
-    Random praise is renabled by default (again!) (#164).
+    Random praise is re-enabled by default (again!) (#164).
 
     !end-bullet!
 -   !begin-bullet!
