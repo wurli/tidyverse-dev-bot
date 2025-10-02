@@ -3,6 +3,14 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `set_state_inspector()` gains `tolerance` argument and ignores minor
+    FP differences by default (@mcol, #2237).
+    !end-bullet!
+-   !begin-bullet!
+    `expect_vector()` fails, instead of erroring, if `object` is not a
+    vector (@plietar, #2224).
+    !end-bullet!
+-   !begin-bullet!
     New `vignette("mocking")` explains mocking in detail (#1265).
     !end-bullet!
 -   !begin-bullet!
