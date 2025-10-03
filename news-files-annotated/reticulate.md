@@ -40,6 +40,12 @@
     #1841)
 
     !end-bullet!
+-   !begin-bullet!
+    Fixed `!!` in string literals being wrongly expanded to a `%system`
+    magic in `repl_python()`. Added support for assigning `%system`
+    command output to multiple variables via unpacking (#1844).
+
+    !end-bullet!
 
 !end-bullets-1!
 
