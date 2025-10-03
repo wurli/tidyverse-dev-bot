@@ -1,5 +1,7 @@
 # devtools (development version)
 
+# devtools 2.4.6
+
 * Functions that use httr now explicitly check that it is installed
   (@catalamarti, #2573).
 
