@@ -3,8 +3,18 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `deprecate_soft()` and `deprecate_warn()` are faster thanks to some
+    internal refactoring.
+
+    !end-bullet!
+-   !begin-bullet!
+    `deprecate_soft()` now actually warns after every 8 hours.
+
+    !end-bullet!
+-   !begin-bullet!
     Improvements to `lint_lifecycle()` and `lint_tidyverse_lifecycle()`
     (@AshesITR):
+
     !begin-bullets-2!
     -   !begin-bullet!
         Updated to support lintr \>= 3.0.0 (#178).

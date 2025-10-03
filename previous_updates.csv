@@ -19852,3 +19852,5 @@ dplyr,d546b6530b46b8c9ae05d65a64dd6f80,• `case_when()`,NA,NA,NA,NA
 dplyr,d546b6530b46b8c9ae05d65a64dd6f80,• `coalesce()`,NA,NA,NA,NA
 testthat,dbe36d06542e5a3725ba9680b3890528,"`set_state_inspector()` gains `tolerance` argument and ignores minor FP differences by default (@​mcol, #2237).",NA,NA,NA,NA
 testthat,547afe1cad05c43afa43aafd1609e1dd,"`expect_vector()` fails, instead of erroring, if `object` is not a vector (@​plietar, #2224).",NA,NA,NA,NA
+lifecycle,88ac184b38c5b6ae4ef3e937d1423490,`deprecate_soft()` and `deprecate_warn()` are faster thanks to some internal refactoring.,NA,NA,NA,NA
+lifecycle,9cfec08812b0642a7d61bfaa5b37ffc6,`deprecate_soft()` now actually warns after every 8 hours.,NA,NA,NA,NA
