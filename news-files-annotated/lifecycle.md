@@ -9,7 +9,7 @@
     !end-bullet!
 -   !begin-bullet!
     `deprecate_soft()` and `deprecate_warn()` are faster thanks to some
-    internal refactoring (#191, #194, #195).
+    internal refactoring (#191, #194, #195, #201).
 
     !end-bullet!
 -   !begin-bullet!
