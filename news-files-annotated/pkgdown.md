@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Updated the translations vignette with instructions for building
+    non-English sites through Github Actions.
+    !end-bullet!
+-   !begin-bullet!
     `build_site()` gained a `quiet` argument, which is propagated to
     other functions (e.g., `build_articles()`) and is useful for
     debugging build errors on GH actions.
