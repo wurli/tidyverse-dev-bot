@@ -3,6 +3,14 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Expectations now consistently return the value of the first
+    argument, regardless of whether the expectation succeeds or fails.
+    The primary exception are `expect_message()` and friends which will
+    return the condition. This shouldn't affect existing tests, but will
+    make failures clearer when you chain together multiple expectations
+    (#2246).
+    !end-bullet!
+-   !begin-bullet!
     `set_state_inspector()` gains `tolerance` argument and ignores minor
     FP differences by default (@mcol, #2237).
     !end-bullet!
