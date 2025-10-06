@@ -131,10 +131,6 @@
     `devtools::test(reporter = "slow")` (#1466).
     !end-bullet!
 -   !begin-bullet!
-    Power `expect_mapequal()` with `waldo::compare(list_as_map = TRUE)`
-    (#1521).
-    !end-bullet!
--   !begin-bullet!
     On CRAN, `test_that()` now automatically skips if a package is not
     installed (#1585). Practically, this means that you no longer need
     to check that suggested packages are installed. (We don't do this in
