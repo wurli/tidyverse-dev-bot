@@ -246,7 +246,8 @@
     `x %||% y`, which is equivalent to `if (is.null(x)) y else x`
     (#2246, @MichaelChirico). While this has long been used in many
     tidyverse packages (it was added to {ggplot2} in 2008), it became
-    part of every R installation from R 4.4.0.
+    part of every R installation from R 4.4.0. Thanks also to
+    @emmanuel-ferdman for fixing a false positive before release.
     !end-bullet!
 
 !end-bullets-8!
