@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Plots in dark mode are now transformed with a CSS filter to improve
+    their visibility (thanks to @gadenbuie).
+    !end-bullet!
+-   !begin-bullet!
     Updated the translations vignette with instructions for building
     non-English sites through Github Actions.
     !end-bullet!
