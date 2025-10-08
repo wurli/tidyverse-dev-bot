@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `expect_all_equal()`, `expect_all_true()`, and `expect_all_false()`
+    are a new family of expectations that checks that every element of a
+    vector has the same value. Compared to using `expect_true(all(...))`
+    they give better failure messages (#1836, #2235).
+    !end-bullet!
+-   !begin-bullet!
     Expectations now consistently return the value of the first
     argument, regardless of whether the expectation succeeds or fails.
     The primary exception are `expect_message()` and friends which will
