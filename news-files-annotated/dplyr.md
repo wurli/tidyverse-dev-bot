@@ -37,7 +37,7 @@
 
     This work is a result of Tidyup 7: Recoding and replacing values in
     the tidyverse, with a lot of great feedback from the community
-    (#7728).
+    (#7728, #7729).
 
     !end-bullet!
 -   !begin-bullet!

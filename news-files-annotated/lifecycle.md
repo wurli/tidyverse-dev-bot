@@ -3,9 +3,9 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
-    `signal_stage()` is now deprecated. This was never hooked up to
-    anything, and our original ideas for it never panned out, so the
-    overhead it entails no longer feels worth it.
+    `signal_stage()` no longer does anything, and is now purely a way to
+    express intent at the call site of whether a function is superseded
+    or experimental (#203).
 
     !end-bullet!
 -   !begin-bullet!
