@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    New `expect_disjoint()` to check for the absence of values
+    (@stibu81, #1851).
+    !end-bullet!
+-   !begin-bullet!
     `expect_all_equal()`, `expect_all_true()`, and `expect_all_false()`
     are a new family of expectations that checks that every element of a
     vector has the same value. Compared to using `expect_true(all(...))`
