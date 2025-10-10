@@ -3,6 +3,16 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    New `rbind()` method for `rowwise_df` to avoid creating corrupt
+    rowwise data frames (r-lib/vctrs#1935).
+
+    !end-bullet!
+-   !begin-bullet!
+    `case_match()` is now superseded by `recode_values()` and
+    `replace_values()`.
+
+    !end-bullet!
+-   !begin-bullet!
     The superseded `recode()` now has updated documentation showing how
     to migrate to `recode_values()` and `replace_values()`.
 

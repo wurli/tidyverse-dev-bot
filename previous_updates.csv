@@ -19882,3 +19882,5 @@ dplyr,b4aad2199107c8754a1ffe5c2b9df6d6,"`replace_when()` is particularly useful 
 lifecycle,96c0e6cc4736843cfa03c947eabb0f35,"`signal_stage()` no longer does anything, and is now purely a way to express intent at the call site of whether a function is superseded or experimental (#203).",NA,NA,NA,NA
 dplyr,f035e84849c980316209b31d23eea2c9,The superseded `recode()` now has updated documentation showing how to migrate to `recode_values()` and `replace_values()`.,NA,NA,NA,NA
 vetiver,31d91c80f6504f1eb80f26da0ac93471,Added support for probably (#294).,NA,NA,NA,NA
+dplyr,491b0efe41fff35c1e0f7aa9a359a7e8,New `rbind()` method for `rowwise_df` to avoid creating corrupt rowwise data frames (r-lib/vctrs#1935).,NA,NA,NA,NA
+dplyr,79d3e7ee61e2893793fc811d586d9baf,`case_match()` is now superseded by `recode_values()` and `replace_values()`.,NA,NA,NA,NA
