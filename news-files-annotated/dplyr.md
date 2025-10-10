@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    The superseded `recode()` now has updated documentation showing how
+    to migrate to `recode_values()` and `replace_values()`.
+
+    !end-bullet!
+-   !begin-bullet!
     `case_when()` is now part of a family of 4 related functions, 3 of
     which are new:
 
