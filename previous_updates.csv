@@ -19887,3 +19887,34 @@ dplyr,79d3e7ee61e2893793fc811d586d9baf,`case_match()` is now superseded by `reco
 testthat,2d78dd685a89acdc57c946c7b791deb3,"New `expect_disjoint()` to check for the absence of values (@​stibu81, #1851).",NA,NA,NA,NA
 dplyr,8c657303129445e216ef7ff6a22ad49f,"`case_when()` has gained a new `.unmatched` argument. For extra safety, set `.unmatched = ""error""` rather than providing a `.default` when you believe that you've handled every possible case, and it will error if a case is left unhandled. The new `recode_values()` also has this argument (#7653).",NA,NA,NA,NA
 hms,dd65a226c7b740fbf063dd051eb3e2de,Fix package installation code.,NA,NA,NA,NA
+styler,94151cf2a45679aca5652e94c4f0ed6f,Add support for {webr} code chunks in Rmd/qmd documents (#1229).,NA,NA,NA,NA
+styler,b640802e1eae7df5b9507616bd8ffbb6,Add colored output to R API (#1187).,NA,NA,NA,NA
+styler,4e63ff392cad45986a493d937571841e,Ensure {styler} can format code with comment in curly-curly (#1269).,NA,NA,NA,NA
+styler,f0a3af0d0e79b497bbddc38b69843467,Adapt to single indent semantics in style guide (#1235).,NA,NA,NA,NA
+styler,eba01bcf529fdc00f2aea422c97af7b5,Remove excessive line breaks between top-level expressions (#1239).,NA,NA,NA,NA
+styler,244695ccd599f2ede1318b755cc46a84,Remove blank lines after opening and before closing braces (#1995).,NA,NA,NA,NA
+styler,278c521da5252ef16ba1a23728851bad,Empty curly have no spaces around (#1234).,NA,NA,NA,NA
+styler,f1c46d7c738b93f500bce24194cd6b2f,Remove spaces around dollar operator (#1246).,NA,NA,NA,NA
+styler,22a857049207f63bd59ca4719ad5c228,Improve stack trace styler throws on parse error (#1216).,NA,NA,NA,NA
+styler,26b7b7b11361bf7edc080ea8294535bc,Use Bootstrap 5 template for pkgdown website (#1209).,NA,NA,NA,NA
+styler,1047701e9241a6ea409e827b1c3c819e,Complete third-party style guide documentation (#1201).,NA,NA,NA,NA
+styler,be00226215bfc012e40c1e6b363aa75e,Document package options (#1193).,NA,NA,NA,NA
+styler,81c1a2659c68d7093c2e84fe59c28c1c,Bump minimum needed R version to 4.0 (#1197).,NA,NA,NA,NA
+styler,8af00683db76862cbb4471f55d186e26,Ensure formatted token is a call before forcing line breaks (#1254).,NA,NA,NA,NA
+styler,f62b669e9ce25b32ec2f3ae283350cae,"Fix lints (#1260), update `.lintr` file.",NA,NA,NA,NA
+styler,04e1453485bcbca9e2308450bb76b17d,Use `all_linters()` instead of using tags (#1207).,NA,NA,NA,NA
+styler,1f16268949e93a7c9fd304818b3b64b2,Fix `paste_linter()` lints (#1204).,NA,NA,NA,NA
+styler,45984866a85b68347fdafdfe4ca2d1ee,Turn off `strings_as_factors_linter()` (#1217).,NA,NA,NA,NA
+styler,97f5d95880a473ef8902db0161229673,Update precommit config (#1205).,NA,NA,NA,NA
+styler,3642a3f7a99d0c00c6c93c8249676914,Remove unused `extend_if_comment()` internal (#1250).,NA,NA,NA,NA
+styler,d2b8ff2144f8705a78584342d0c0e19b,Remove unused internal utility: `calls_sys()` (#1213).,NA,NA,NA,NA
+styler,d62cdb574ba2f30d26a94cf68dece302,Remove unused testing helper: `generate_test_samples()` (#1212).,NA,NA,NA,NA
+styler,7f12e5be256a55ab2bc247b660bcfd18,Improve a few function names (#1249).,NA,NA,NA,NA
+styler,5bdc1098b50a5dc09a6e1ccfaf8e87c0,Use `expect_no_warning()` (#1248).,NA,NA,NA,NA
+styler,f507c19cd01361e4692c6d3290ae7374,"Update WORDLIST (#1240, #1210).",NA,NA,NA,NA
+styler,d0a7904d922fd29b96df4a2924ef719f,Check for warnings in examples and tests (#1219).,NA,NA,NA,NA
+styler,2968b50c7e3a84b4b24e0f3149c98efd,Use stable version of {purrr} (#1215).,NA,NA,NA,NA
+styler,9d6bb8bcbbfb4cf4222f4235c3fa1374,Don't store code tree structures in tests (#1208).,NA,NA,NA,NA
+styler,497496aaa5b7c29feba553871c735820,Update touchstone config (#1203).,NA,NA,NA,NA
+styler,8c2d383de7a539977d325c22303b6f50,Add non-US locale and use pak to upgrade packages in GHA (#1200).,NA,NA,NA,NA
+styler,47dc54dd9d98e5079e32824ba2a3c858,Welcome Indrajeet as author (#1198).,NA,NA,NA,NA
