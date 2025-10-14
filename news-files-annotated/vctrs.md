@@ -3,6 +3,15 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `vec_interleave()` gains new `.size` and `.error_call` arguments.
+
+    !end-bullet!
+-   !begin-bullet!
+    `vec_interleave()` now reports the correct index in errors when
+    `NULL`s are present.
+
+    !end-bullet!
+-   !begin-bullet!
     New `list_combine()` for combining a list of vectors together
     according to a set of `indices`. We now recommend using:
 

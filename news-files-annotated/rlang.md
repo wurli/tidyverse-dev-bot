@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `list2()` is now a little faster (#1837).
+
+    !end-bullet!
+-   !begin-bullet!
     New `%&&%` operator that returns RHS when LHS is non-NULL (#1774,
     @snystrom).
 
