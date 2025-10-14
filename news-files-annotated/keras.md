@@ -3,31 +3,21 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
-    Added S3 methods for JAX array: `str`, `as.array`, `as.double`,
-    `as.integer`, `as.numeric`.
+    Expanded numeric operations with `op_layer_normalization()`,
+    `op_cbrt()`, `op_corrcoef()`, `op_deg2rad()`, `op_heaviside()`, the
+    new `op_sparse_sigmoid()` plus matching
+    `activation_sparse_sigmoid()`, and an `attn_logits_soft_cap`
+    argument for `op_dot_product_attention()`.
 
     !end-bullet!
 -   !begin-bullet!
-    Added `str` S3 method for Keras Variables.
+    Added signal window operations: `op_bartlett()`, `op_blackman()`,
+    `op_hamming()`, `op_hanning()`, and `op_kaiser()`.
 
     !end-bullet!
 -   !begin-bullet!
-    `layer_reshape()` can now accept `-1` as a sentinel for an
-    automatically calculated axis size.
-
-    !end-bullet!
--   !begin-bullet!
-    Updated dependencies declared by `use_backend("jax", gpu=TRUE)` for
-    compatability with `keras-hub`.
-
-    !end-bullet!
--   !begin-bullet!
-    Added training loop configuration helpers: `config_max_epochs()`,
-    `config_set_max_epochs()`, `config_max_steps_per_epoch()`, and
-    `config_set_max_steps_per_epoch()`. The caps can also be set via the
-    `KERAS_MAX_EPOCHS` and `KERAS_MAX_STEPS_PER_EPOCH` environment
-    variables. Added `config_is_nnx_enabled()` to check whether JAX NNX
-    features are enabled.
+    Added `loss_categorical_generalized_cross_entropy()` for training
+    with noisy labels.
 
     !end-bullet!
 -   !begin-bullet!
@@ -37,13 +27,19 @@
 
     !end-bullet!
 -   !begin-bullet!
-    `keras_variable()` now accepts a `synchronization` argument for
-    distributed strategies.
+    Added complex-valued helpers: S3 `Arg()` methods for tensors,
+    `op_angle()`, and conversions `op_view_as_real()` /
+    `op_view_as_complex()`.
 
     !end-bullet!
 -   !begin-bullet!
-    `Layer$add_weight()` gains an `overwrite_with_gradient` option and
-    layers now provide a `symbolic_call()` method.
+    Added the Muon optimizer via `optimizer_muon()`.
+
+    !end-bullet!
+-   !begin-bullet!
+    Added elastic deformation utilities for images:
+    `layer_random_elastic_transform()` and the lower-level
+    `op_image_elastic_transform()`.
 
     !end-bullet!
 -   !begin-bullet!
@@ -54,8 +50,8 @@
 
     !end-bullet!
 -   !begin-bullet!
-    `layer_torch_module_wrapper()` gains an `output_shape` argument to
-    help Keras infer shapes when wrapping PyTorch modules.
+    `register_keras_serializable()` now returns a registered Python
+    callable, making it easier to use with bare R functions.
 
     !end-bullet!
 -   !begin-bullet!
@@ -64,41 +60,93 @@
 
     !end-bullet!
 -   !begin-bullet!
-    Added elastic deformation utilities for images:
-    `layer_random_elastic_transform()` and the lower-level
-    `op_image_elastic_transform()`.
-
-    !end-bullet!
--   !begin-bullet!
-    Added `loss_categorical_generalized_cross_entropy()` for training
-    with noisy labels.
-
-    !end-bullet!
--   !begin-bullet!
-    Added the Muon optimizer via `optimizer_muon()`.
-
-    !end-bullet!
--   !begin-bullet!
-    Added complex-valued helpers: S3 `Arg()` methods for tensors,
-    `op_angle()`, and conversions `op_view_as_real()` /
-    `op_view_as_complex()`.
-
-    !end-bullet!
--   !begin-bullet!
-    Added signal window operations: `op_bartlett()`, `op_blackman()`,
-    `op_hamming()`, `op_hanning()`, and `op_kaiser()`.
-
-    !end-bullet!
--   !begin-bullet!
-    Expanded numeric operations with `op_layer_normalization()`,
-    `op_cbrt()`, `op_corrcoef()`, `op_deg2rad()`, `op_heaviside()`, the
-    new `op_sparse_sigmoid()` plus matching
-    `activation_sparse_sigmoid()`, and an `attn_logits_soft_cap`
-    argument for `op_dot_product_attention()`.
+    `keras_variable()` now accepts a `synchronization` argument for
+    distributed strategies.
 
     !end-bullet!
 -   !begin-bullet!
     `layer_layer_normalization()` removes the `rms_scaling` argument.
+
+    !end-bullet!
+-   !begin-bullet!
+    `layer_reshape()` can now accept `-1` as a sentinel for an
+    automatically calculated axis size.
+
+    !end-bullet!
+-   !begin-bullet!
+    `layer_torch_module_wrapper()` gains an `output_shape` argument to
+    help Keras infer shapes when wrapping PyTorch modules.
+
+    !end-bullet!
+-   !begin-bullet!
+    `Layer$add_weight()` gains an `overwrite_with_gradient` option and
+    layers now provide a `symbolic_call()` method.
+
+    !end-bullet!
+-   !begin-bullet!
+    Added `str()` S3 method for Keras Variables.
+
+    !end-bullet!
+-   !begin-bullet!
+    Added S3 methods for JAX array: `str()`, `as.array()`,
+    `as.double()`, `as.integer()`, `as.numeric()`.
+
+    !end-bullet!
+-   !begin-bullet!
+    Added base-array compatibility methods for backend tensors: `t()`,
+    `aperm()`, and `all.equal()`.
+
+    !end-bullet!
+-   !begin-bullet!
+    Added `pillar::type_sum()` for JAX variables and `JaxVariable`;
+    extended `str()` coverage to the new JAX variable class.
+
+    !end-bullet!
+-   !begin-bullet!
+    `config_max_epochs()`, `config_set_max_epochs()`,
+    `config_max_steps_per_epoch()`, and
+    `config_set_max_steps_per_epoch()`. The caps can also be set via the
+    `KERAS_MAX_EPOCHS` and `KERAS_MAX_STEPS_PER_EPOCH` environment
+    variables. Added `config_is_nnx_enabled()` to check whether JAX NNX
+    features are enabled.
+
+    !end-bullet!
+-   !begin-bullet!
+    Built-in dataset loaders now accept `convert = FALSE` to return
+    NumPy arrays instead of R arrays.
+
+    !end-bullet!
+-   !begin-bullet!
+    Updated `plot(history, theme_bw = TRUE)` for `ggplot2` 3.4.0
+    compatibility.
+
+    !end-bullet!
+-   !begin-bullet!
+    `plot(model)` DPI is now globally configurable via
+    `options(keras.plot.model.dpi = )`, (defaults to `200`).
+
+    !end-bullet!
+-   !begin-bullet!
+    Reexported reticulate functions: `py_help()`, `py_to_r()`,
+    `r_to_py()`, `py_require()`, and `import()`.
+
+    !end-bullet!
+-   !begin-bullet!
+    Support `super()$initialize()` in subclassed Keras classes; improved
+    `super()` behavior in subclasses.
+
+    !end-bullet!
+-   !begin-bullet!
+    Updated dependencies declared by `use_backend("jax", gpu=TRUE)` for
+    compatability with `keras-hub`.
+
+    !end-bullet!
+-   !begin-bullet!
+    Exported `named_list()` utility.
+
+    !end-bullet!
+-   !begin-bullet!
+    Fixed an issue when switching backends twice in a row.
 
     !end-bullet!
 
