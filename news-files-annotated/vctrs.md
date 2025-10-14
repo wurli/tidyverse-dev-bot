@@ -39,7 +39,8 @@
 
     !end-bullet!
 -   !begin-bullet!
-    New `list_all_recyclable()` and `list_check_all_recyclable()`.
+    New `vec_check_recyclable()`, `list_all_recyclable()`, and
+    `list_check_all_recyclable()`.
 
     !end-bullet!
 -   !begin-bullet!
