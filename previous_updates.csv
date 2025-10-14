@@ -19923,3 +19923,25 @@ rlang,bb5e54dac0d83381ba6b09e5bda85d16,`list2()` is now a little faster (#1837).
 vctrs,61715a019ff400c4d4c92095d26d55e2,`vec_interleave()` gains new `.size` and `.error_call` arguments.,NA,NA,NA,NA
 vctrs,2b0f53cc1154faf9fbf866a3287e02c8,`vec_interleave()` now reports the correct index in errors when `NULL`s are present.,NA,NA,NA,NA
 reticulate,e1c5d9a2ef7d7b0b4d23234576a0ac33,"New helpers for reading and writing requirements files, `py_write_requirements()` and `py_read_requirements()` (#1846).",NA,NA,NA,NA
+shiny,40289afa682ec7f31cc2819f8a96d259,"Added support for OpenTelemetry via `{otel}`. By default, if `otel::is_tracing_enabled()` returns `TRUE`, then `{shiny}` will record all OpenTelemetery spans. See `{otelsdk}`'s Collecting Telemetry Data for more details on configuring OpenTelemetry.",NA,NA,NA,NA
+shiny,2629372a84f0fe00ec9afc9590b69886,"Supported values for `options(shiny.otel.bind)` (or `Sys.getenv(""SHINY_OTEL_BIND"")`):",NA,NA,NA,NA
+shiny,2629372a84f0fe00ec9afc9590b69886,"• `""none""` - No Shiny OpenTelemetry tracing.",NA,NA,NA,NA
+shiny,2629372a84f0fe00ec9afc9590b69886,"• `""session""` - Adds session start/end spans.",NA,NA,NA,NA
+shiny,2629372a84f0fe00ec9afc9590b69886,"• `""reactive_update""` - Spans for any synchronous/asynchronous reactive update. (Includes `""session""` features).",NA,NA,NA,NA
+shiny,2629372a84f0fe00ec9afc9590b69886,"• `""reactivity""` - Spans for all reactive expressions. (Includes `""reactive_update""` features).",NA,NA,NA,NA
+shiny,2629372a84f0fe00ec9afc9590b69886,"• `""all""` \[default\] - All Shiny OpenTelemetry tracing. Currently equivalent to `""reactivity""`.",NA,NA,NA,NA
+shiny,78aa85dff36790161bb7ef330e4e3064,Spans are recorded for:,NA,NA,NA,NA
+shiny,78aa85dff36790161bb7ef330e4e3064,• `session_start`: Wraps the calling of the `server()` function. Also contains HTTP request within the attributes.,NA,NA,NA,NA
+shiny,78aa85dff36790161bb7ef330e4e3064,• `session_end`: Wraps the calling of the `onSessionEnded()` handlers.,NA,NA,NA,NA
+shiny,78aa85dff36790161bb7ef330e4e3064,• `reactive_update`: Signals the start of when Shiny knows something is to be calculated. This span ends when there are no more reactive updates (promises or synchronous) to be calculated.,NA,NA,NA,NA
+shiny,78aa85dff36790161bb7ef330e4e3064,"• `reactive`, `observe`, `output`: Captures the calculation (including any async promise chains) of a reactive expression (`reactive()`), an observer (`observe()`), or an output render function (`render*()`).",NA,NA,NA,NA
+shiny,78aa85dff36790161bb7ef330e4e3064,"• `reactive debounce`, `reactive throttle`: Captures the calculation (including any async promise chains) of a `debounce()`d or `throttle()`d reactive expression.",NA,NA,NA,NA
+shiny,78aa85dff36790161bb7ef330e4e3064,• `ExtendedTask`: Captures the calculation (including any async promise chains) of an `ExtendedTask`.,NA,NA,NA,NA
+shiny,1559c61b40e7d3211ba1bcb4795c2a43,OpenTelemetry Logs are recorded for:,NA,NA,NA,NA
+shiny,1559c61b40e7d3211ba1bcb4795c2a43,• `Set reactiveVal <name>` - When a `reactiveVal()` is set,NA,NA,NA,NA
+shiny,1559c61b40e7d3211ba1bcb4795c2a43,• `Set reactiveValues <name>$<key>` - When a `reactiveValues()` element is set,NA,NA,NA,NA
+shiny,1559c61b40e7d3211ba1bcb4795c2a43,"• Fatal or unhandled errors - When an error occurs that causes the session to end, or when an unhandled error occurs in a reactive context. Contains the error within the attributes. To unsantize the error message being collected, set `options(shiny.otel.sanitize.errors = FALSE)`.",NA,NA,NA,NA
+shiny,1559c61b40e7d3211ba1bcb4795c2a43,"• `Set ExtendedTask <name> <value>` - When an `ExtendedTask`'s respective reactive value (e.g., `status`, `value`, and `error`) is set.",NA,NA,NA,NA
+shiny,1559c61b40e7d3211ba1bcb4795c2a43,• `<ExtendedTask name> add to queue` - When an `ExtendedTask` is added to the task queue.,NA,NA,NA,NA
+shiny,21140785b8bc5c1cd93dbcd763b4902a,All logs and spans contain the `session.id` attribute.,NA,NA,NA,NA
+shiny,d45d19dff7d9f6e0090bb9f96d80edc3,"The default label for `reactiveValues()`, `reactivePoll()`, `reactiveFileReader()`, `debounce()`, and `throttle()` will now attempt to retrieve the assigned name if the srcref is available. If a value can not easily be produced, a default label will be used instead. (#4269)",NA,NA,NA,NA
