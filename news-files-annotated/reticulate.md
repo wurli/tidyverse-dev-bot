@@ -14,6 +14,11 @@
 
     !end-bullet!
 -   !begin-bullet!
+    New helpers for reading and writing requirements files,
+    `py_write_requirements()` and `py_read_requirements()` (#1846).
+
+    !end-bullet!
+-   !begin-bullet!
     Adds support for requesting Python versions with a wildcard pattern
     `x.x.*` such as `==3.12.*` in `virtualenv_starter()`,
     `py_require()`, and related functions (#1825)

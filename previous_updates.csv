@@ -19922,3 +19922,4 @@ dplyr,67758bff3df31923d60fe8ce41820892,`case_when()` now throws correctly indexe
 rlang,bb5e54dac0d83381ba6b09e5bda85d16,`list2()` is now a little faster (#1837).,NA,NA,NA,NA
 vctrs,61715a019ff400c4d4c92095d26d55e2,`vec_interleave()` gains new `.size` and `.error_call` arguments.,NA,NA,NA,NA
 vctrs,2b0f53cc1154faf9fbf866a3287e02c8,`vec_interleave()` now reports the correct index in errors when `NULL`s are present.,NA,NA,NA,NA
+reticulate,e1c5d9a2ef7d7b0b4d23234576a0ac33,"New helpers for reading and writing requirements files, `py_write_requirements()` and `py_read_requirements()` (#1846).",NA,NA,NA,NA
