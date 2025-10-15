@@ -19958,3 +19958,4 @@ keras,bac10158cdb38d27b8e98eac31ab5e08,Support `super()$initialize()` in subclas
 keras,3aeda836be6790d136aaa96925883b32,Exported `named_list()` utility.,NA,NA,NA,NA
 keras,752c35bb175f49a421b0c3793969fe56,Fixed an issue when switching backends twice in a row.,NA,NA,NA,NA
 vctrs,d91def926c6c40236ca99d6badb9a65b,"New `vec_check_recyclable()`, `list_all_recyclable()`, and `list_check_all_recyclable()`.",NA,NA,NA,NA
+bslib,16ec31ce390e22a1da37d53df4b34a92,"Added a new `input_submit_textarea()` input element, which is similar to `shiny::textAreaInput()`, but includes a submit button to only submit the text changes to the server on click. This is especially useful when the input text change triggers a long-running operation and/or the user wants to type longer-form input and review it before submitting it.",NA,NA,NA,NA
