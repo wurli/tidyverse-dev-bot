@@ -1,7 +1,7 @@
 ```{=html}
 <!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
 ```
-# {styler} 1.11.0
+# styler 1.11.0
 
 This release fixes a bug related that prevented {styler} to format code
 with comments in curly-curly expressions `{{` (#1269). \@IndrajeetPatil
@@ -127,7 +127,7 @@ Thanks for everyone who contributed to this release: \@armenic,
 \@maikol-solis, \@MichaelChirico, \@nickhir, \@obsaditelnost, \@olivroy,
 \@rinkjames, \@SamGG, \@stibu81, \@strengejacke, \@wiper8, and \@wurli.
 
-# {styler} 1.10.3
+# styler 1.10.3
 
 This release was requested by the CRAN team since parser error messages
 changed, which were hard-coded in some unit tests (#1180).
@@ -200,7 +200,7 @@ We thank everyone who helped making this release possible.
 \@mcanouil, \@moodymudskipper, \@olivroy, \@sbanville-delfi,
 \@sorhawell, \@ssh352, \@swo, and \@vertesy.
 
-# {styler} 1.10.2
+# styler 1.10.2
 
 This release was requested by the CRAN team to fix CRAN warning on
 invalid numeric version inputs (#1143).
@@ -236,7 +236,7 @@ We thank everyone who helped making this release possible.
 \@krlmlr, \@lorenzwalthert, \@MichaelChirico, \@olivroy, \@rkrug, and
 \@rossdrucker.
 
-# {styler} 1.10.1
+# styler 1.10.1
 
 This release was requested by CRAN due to accidentally populating a user
 cache while building vignettes for R \>= 4.3.0.
@@ -256,7 +256,7 @@ cache while building vignettes for R \>= 4.3.0.
 Thanks to everyone who contributed to this release: \@olivroy and
 \@krlmlr.
 
-# {styler} 1.10.0
+# styler 1.10.0
 
 This release contains speed-ups between 20% and 40% depending on your
 use case thanks to replacing {base} functionality with {vctrs} (#1114).
@@ -304,7 +304,7 @@ Thanks for everyone contributing to this release:
 \@IndrajeetPatil, \@krlmlr, \@kyleam, \@MichaelChirico, \@mvanaman,
 \@olivroy, and \@vvarik.
 
-# {styler} 1.9.1
+# styler 1.9.1
 
 **Bug fixes**
 
@@ -348,7 +348,7 @@ Thanks for everyone who contributed to this release:
 
 \@dpprdan, \@flying-sheep, \@giocomai and \@MichaelChirico.
 
-# {styler} 1.9.0
+# styler 1.9.0
 
 **Features**
 
@@ -468,7 +468,7 @@ A big shout out to anyone who contributed to this release:
 
 \@balthasars, \@hadley, \@IndrajeetPatil, \@juliangrimm225 and \@krlmlr.
 
-# {styler} 1.8.1
+# styler 1.8.1
 
 **Features**
 
@@ -518,7 +518,7 @@ This release was requested by CRAN to resolve an R CMD Check note
 Dave Jarvis, \@IndrajeetPatil, \@lorenzwalthert, \@MichaelChirico,
 \@Polkas, and \@Robinlovelace.
 
-# {styler} 1.8.0
+# styler 1.8.0
 
 {styler} 1.8.0 comes with a host of new features, around 40% speed
 improvement, bug fixes and the removal of 8 recursive dependencies. We
@@ -747,7 +747,7 @@ A big hand to everyone who made this release possible:
 \@moodymudskipper, \@RaymondBalise, \@Robinlovelace, \@sebffischer,
 \@sgorm123, \@stefanoborini, and \@wdkrnls.
 
-# {styler} 1.7.0
+# styler 1.7.0
 
 !begin-bullets-25!
 
@@ -944,7 +944,7 @@ Thanks to all contributors that made this release possible:
 \@MichaelChirico, \@mine-cetinkaya-rundel, \@neuwirthe, \@Polkas,
 \@pwang2, \@sebffischer, \@ShixiangWang, \@ssh352, and \@xjtusjtu.
 
-# {styler} 1.6.2
+# styler 1.6.2
 
 !begin-bullets-31!
 
@@ -954,7 +954,7 @@ Thanks to all contributors that made this release possible:
 
 !end-bullets-31!
 
-# {styler} 1.6.1
+# styler 1.6.1
 
 !begin-bullets-32!
 
@@ -1004,7 +1004,7 @@ We'd like to thank all people who helped making this release possible:
 \@bersbersbers, \@eutwt, \@IndrajeetPatil, \@j-mammen, \@jennybc,
 \@JohannesNE, \@jonkeane, \@lorenzwalthert, and \@MichaelChirico.
 
-# {styler} 1.5.1
+# styler 1.5.1
 
 ## Alignment detection
 
@@ -1156,7 +1156,7 @@ requests:
 \@njtierney, \@pat-s, \@psychelzh, \@pvalders, \@RoyalTS, and
 \@russHyde.
 
-# {styler} 1.4.1
+# styler 1.4.1
 
 !begin-bullets-36!
 
@@ -1183,7 +1183,7 @@ Thanks to everyone who contributed to this release:
 
 \@krlmlr, \@lorenzwalthert, and \@renkun-ken.
 
-# {styler} 1.4.0
+# styler 1.4.0
 
 ## API Changes
 
@@ -1400,7 +1400,7 @@ Thanks to all the people who made this release possible:
 \@select-id-from-users, \@SimonDedman, \@stefanoborini, \@swsoyee, and
 \@Winterstorm-j.
 
-# {styler} 1.3.2
+# styler 1.3.2
 
 Release upon request by the CRAN team.
 
@@ -1425,7 +1425,7 @@ Release upon request by the CRAN team.
 
 !end-bullets-42!
 
-# {styler} 1.3.1
+# styler 1.3.1
 
 Emergency release. In case multiple expressions are on one line and only
 some of them are cached, styler can remove code. To reach this state,
@@ -1455,7 +1455,7 @@ We thank the people who have contributed to this release:
 
 \@ellessenne and \@renkun-ken.
 
-# {styler} 1.3.0
+# styler 1.3.0
 
 ## Breaking changes
 
@@ -1538,7 +1538,7 @@ We thank the people who have contributed to this release:
 Thanks to all contributors involved, in particular \@colearendt,
 \@davidski, \@IndrajeetPatil, \@pat-s, and \@programming-wizard.
 
-# {styler} 1.2.0
+# styler 1.2.0
 
 ## Breaking changes
 
@@ -1655,7 +1655,7 @@ Thanks to all contributors involved, in particular
 \@michaelquinn32, \@mine-cetinkaya-rundel, \@Moohan, \@nxskok,
 \@oliverbeagley, \@pat-s, \@reddy-ia, and \@russHyde
 
-# {styler} 1.1.1
+# styler 1.1.1
 
 This is primarily a maintenance release upon the request of the CRAN
 team (#490).
@@ -1776,7 +1776,7 @@ Thanks to all contributors involved, in particular \@ArthurPERE,
 \@rjake, \@Robinlovelace, \@skirmer, \@thalesmello, \@tobiasgerstenberg,
 \@tvatter, \@wdearden, \@wmayner, and \@yech1990.
 
-# {styler} 1.1.0
+# styler 1.1.0
 
 This release introduces new features and is fully backward-compatible.
 It also adapts to changes in the R parser committed into R devel (#419).
@@ -1849,7 +1849,7 @@ Thanks to all contributors for patches, issues and the like:
 @jonmcalder, @krlmlr, @IndrajeetPatil, @kalibera, @Hasnep,
 @kiranmaiganji, @dirkschumacher, @ClaytonJY, @wlandau, @maurolepore
 
-# {styler} 1.0.2
+# styler 1.0.2
 
 This is a maintenance release without any breaking API changes.
 
@@ -1908,7 +1908,7 @@ Thanks to all contributors for patches, issues and the like:
 @tonytonov, @samhinshaw, @fny, @vnijs, @martin-mfg, @NGaffney,
 @dchiu911.
 
-# {styler} 1.0.1
+# styler 1.0.1
 
 This is a maintenance release without any breaking API changes.
 
@@ -1979,7 +1979,7 @@ Thanks to all contributors for patches, issues and the like: @devSJR,
 @RMHogervorst, @wlandau, @llrs, @aaronrudkin, @crew102, @jkgrain,
 @jennybc, @joranE.
 
-# {styler} 1.0.0
+# styler 1.0.0
 
 Initial release.
 
