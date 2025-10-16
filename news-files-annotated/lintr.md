@@ -313,6 +313,10 @@
     controlled by the author (#2637, @MichaelChirico).
     !end-bullet!
 -   !begin-bullet!
+    `T_and_F_symbol_linter()` ignores `T` and `F` if followed by `[` or
+    `[[` (#2944, @mcol).
+    !end-bullet!
+-   !begin-bullet!
     `implicit_assignment_linter()` with `allow_scoped=TRUE` doesn't lint
     for `if (a <- 1) print(a)` (#2913, @MichaelChirico).
     !end-bullet!
