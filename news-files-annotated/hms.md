@@ -1,65 +1,21 @@
 ```{=html}
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 ```
-# hms 1.1.3.9017
+# hms 1.1.4
 
-## Continuous integration
+## Bug fixes
 
 !begin-bullets-1!
 
 -   !begin-bullet!
-    Fix package installation code.
+    Sub-second value parsing accurately (@eitsupi, #127, #128).
     !end-bullet!
 
 !end-bullets-1!
 
-# hms 1.1.3.9016
-
-## Chore
-
-!begin-bullets-2!
-
--   !begin-bullet!
-    Auto-update from GitHub Actions (#182).
-
-    !end-bullet!
--   !begin-bullet!
-    Cynkra spring cleaning (@schochastics, #174, #175).
-
-    !end-bullet!
-
-!end-bullets-2!
-
-# hms 1.1.3.9015
-
-## Continuous integration
-
-!begin-bullets-3!
-
--   !begin-bullet!
-    Fix \[ci skip\].
-
-    !end-bullet!
--   !begin-bullet!
-    Allow dispatch.
-
-    !end-bullet!
--   !begin-bullet!
-    Allow dispatch.
-
-    !end-bullet!
--   !begin-bullet!
-    Use r-universe for installation of dev dependencies.
-
-    !end-bullet!
-
-!end-bullets-3!
-
-# hms 1.1.3.9014
-
 ## Features
 
-!begin-bullets-4!
+!begin-bullets-2!
 
 -   !begin-bullet!
     `is.hms()` and `as.hms()` now warn even when called indirectly
@@ -72,448 +28,58 @@
 
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-2!
 
 ## Chore
 
-!begin-bullets-5!
+!begin-bullets-3!
 
 -   !begin-bullet!
-    Auto-update from GitHub Actions (#178).
+    Spring cleaning (@schochastics, #174, #175).
 
     !end-bullet!
--   !begin-bullet!
-    IDE.
-
-    !end-bullet!
-
-!end-bullets-5!
-
-## Continuous integration
-
-!begin-bullets-6!
-
--   !begin-bullet!
-    Add Copilot instructions.
-
-    !end-bullet!
--   !begin-bullet!
-    Bump Ubuntu version for dev workflow, run if changed.
-
-    !end-bullet!
--   !begin-bullet!
-    Use reviewdog for external PRs (#179).
-
-    !end-bullet!
--   !begin-bullet!
-    Cleanup and fix macOS (#177).
-
-    !end-bullet!
--   !begin-bullet!
-    Format with air, check detritus, better handling of `extra-packages`
-    (#176).
-
-    !end-bullet!
--   !begin-bullet!
-    Enhance permissions for workflow (#172).
-
-    !end-bullet!
--   !begin-bullet!
-    Permissions, better tests for missing suggests, lints (#171).
-
-    !end-bullet!
--   !begin-bullet!
-    Only fail covr builds if token is given (#170).
-
-    !end-bullet!
--   !begin-bullet!
-    Always use `_R_CHECK_FORCE_SUGGESTS_=false` (#169).
-
-    !end-bullet!
--   !begin-bullet!
-    Correct installation of xml2 (#168).
-
-    !end-bullet!
--   !begin-bullet!
-    Explain (#167).
-
-    !end-bullet!
--   !begin-bullet!
-    Add xml2 for covr, print testthat results (#166).
-
-    !end-bullet!
--   !begin-bullet!
-    Sync (#165).
-
-    !end-bullet!
-
-!end-bullets-6!
-
-# hms 1.1.3.9013
-
-## Continuous integration
-
-!begin-bullets-7!
-
--   !begin-bullet!
-    Avoid failure in fledge workflow if no changes (#156).
-    !end-bullet!
-
-!end-bullets-7!
-
-# hms 1.1.3.9012
-
-## Continuous integration
-
-!begin-bullets-8!
-
--   !begin-bullet!
-    Fetch tags for fledge workflow to avoid unnecessary NEWS entries
-    (#154).
-    !end-bullet!
-
-!end-bullets-8!
-
-# hms 1.1.3.9011
-
-## Bug fixes
-
-!begin-bullets-9!
-
--   !begin-bullet!
-    Sub-second value parsing accurately (@eitsupi, #127, #128).
-    !end-bullet!
-
-!end-bullets-9!
-
-## Continuous integration
-
-!begin-bullets-10!
-
--   !begin-bullet!
-    Use larger retry count for lock-threads workflow (#152).
-
-    !end-bullet!
--   !begin-bullet!
-    Ignore errors when removing pkg-config on macOS (#142).
-
-    !end-bullet!
--   !begin-bullet!
-    Explicit permissions (#140).
-
-    !end-bullet!
--   !begin-bullet!
-    Use styler from main branch (#138).
-
-    !end-bullet!
--   !begin-bullet!
-    Need to install R on Ubuntu 24.04 (#136).
-
-    !end-bullet!
--   !begin-bullet!
-    Use Ubuntu 24.04 and styler PR (#134).
-
-    !end-bullet!
--   !begin-bullet!
-    Correctly detect branch protection (#130).
-
-    !end-bullet!
-
-!end-bullets-10!
-
-## Uncategorized
-
-!begin-bullets-11!
-
--   !begin-bullet!
-    PLACEHOLDER https://github.com/tidyverse/hms/pull/16 (#16).
-    !end-bullet!
-
-!end-bullets-11!
-
-# hms 1.1.3.9010
-
-## Continuous integration
-
-!begin-bullets-12!
-
--   !begin-bullet!
-    Use stable pak (#129).
-    !end-bullet!
-
-!end-bullets-12!
-
-# hms 1.1.3.9009
-
-## Continuous integration
-
-!begin-bullets-13!
-
--   !begin-bullet!
-    Trigger run (#126).
-
-    !begin-bullets-14!
-    -   !begin-bullet!
-        ci: Trigger run
-
-        !end-bullet!
-    -   !begin-bullet!
-        ci: Latest changes
-
-        !end-bullet!
-
-    !end-bullets-14!
-    !end-bullet!
-
-!end-bullets-13!
-
-# hms 1.1.3.9008
-
-## Continuous integration
-
-!begin-bullets-15!
-
--   !begin-bullet!
-    Trigger run (#124).
-
-    !end-bullet!
--   !begin-bullet!
-    Use pkgdown branch (#123).
-
-    !begin-bullets-16!
-    -   !begin-bullet!
-        ci: Use pkgdown branch
-
-        !end-bullet!
-    -   !begin-bullet!
-        ci: Updates from duckdb
-
-        !end-bullet!
-
-    !end-bullets-16!
-    !end-bullet!
-
-!end-bullets-15!
-
-# hms 1.1.3.9007
-
-## Continuous integration
-
-!begin-bullets-17!
-
--   !begin-bullet!
-    Install via R CMD INSTALL ., not pak (#122).
-
-    !begin-bullets-18!
-    -   !begin-bullet!
-        ci: Install via R CMD INSTALL ., not pak
-
-        !end-bullet!
-    -   !begin-bullet!
-        ci: Bump version of upload-artifact action
-
-        !end-bullet!
-
-    !end-bullets-18!
-    !end-bullet!
-
-!end-bullets-17!
-
-# hms 1.1.3.9006
-
-## Chore
-
-!begin-bullets-19!
-
--   !begin-bullet!
-    Auto-update from GitHub Actions.
-
-    Run: https://github.com/tidyverse/hms/actions/runs/10425483161
-
-    !end-bullet!
--   !begin-bullet!
-    Auto-update from GitHub Actions.
-
-    Run: https://github.com/tidyverse/hms/actions/runs/10200113283
-
-    !end-bullet!
--   !begin-bullet!
-    Auto-update from GitHub Actions.
-
-    Run: https://github.com/tidyverse/hms/actions/runs/9728444063
-
-    !end-bullet!
--   !begin-bullet!
-    Auto-update from GitHub Actions.
-
-    Run: https://github.com/tidyverse/hms/actions/runs/9691617778
-
-    !end-bullet!
-
-!end-bullets-19!
-
-## Continuous integration
-
-!begin-bullets-20!
-
--   !begin-bullet!
-    Install local package for pkgdown builds.
-
-    !end-bullet!
--   !begin-bullet!
-    Improve support for protected branches with fledge.
-
-    !end-bullet!
--   !begin-bullet!
-    Improve support for protected branches, without fledge.
-
-    !end-bullet!
--   !begin-bullet!
-    Sync with latest developments.
-
-    !end-bullet!
--   !begin-bullet!
-    Use v2 instead of master.
-
-    !end-bullet!
--   !begin-bullet!
-    Inline action.
-
-    !end-bullet!
--   !begin-bullet!
-    Use dev roxygen2 and decor.
-
-    !end-bullet!
--   !begin-bullet!
-    Fix on Windows, tweak lock workflow.
-
-    !end-bullet!
--   !begin-bullet!
-    Avoid checking bashisms on Windows.
-
-    !end-bullet!
--   !begin-bullet!
-    Better commit message.
-
-    !end-bullet!
--   !begin-bullet!
-    Bump versions, better default, consume custom matrix.
-
-    !end-bullet!
--   !begin-bullet!
-    Recent updates.
-
-    !end-bullet!
-
-!end-bullets-20!
-
-# hms 1.1.3.9005
-
-!begin-bullets-21!
-
--   !begin-bullet!
-    Internal changes only.
-    !end-bullet!
-
-!end-bullets-21!
-
-# hms 1.1.3.9004
-
-!begin-bullets-22!
-
--   !begin-bullet!
-    Internal changes only.
-    !end-bullet!
-
-!end-bullets-22!
-
-# hms 1.1.3.9003
-
-!begin-bullets-23!
-
--   !begin-bullet!
-    Internal changes only.
-    !end-bullet!
-
-!end-bullets-23!
-
-# hms 1.1.3.9002
-
-!begin-bullets-24!
-
--   !begin-bullet!
-    Merged cran-1.1.3 into main.
-    !end-bullet!
-
-!end-bullets-24!
-
-# hms 1.1.3.9001
-
-!begin-bullets-25!
-
--   !begin-bullet!
-    Internal changes only.
-    !end-bullet!
-
-!end-bullets-25!
-
-# hms 1.1.3.9000
-
-## Bug fixes
-
-!begin-bullets-26!
-
--   !begin-bullet!
-    Fix method consistency, checked by R-devel.
-    !end-bullet!
-
-!end-bullets-26!
-
-## Chore
-
-!begin-bullets-27!
-
 -   !begin-bullet!
     Use rlang instead of ellipsis (#106).
+
     !end-bullet!
 
-!end-bullets-27!
+!end-bullets-3!
 
 # hms 1.1.3
 
 ## Bug fixes
 
-!begin-bullets-28!
+!begin-bullets-4!
 
 -   !begin-bullet!
     Fix method consistency, checked by R-devel.
     !end-bullet!
 
-!end-bullets-28!
+!end-bullets-4!
 
 ## Internal
 
-!begin-bullets-29!
+!begin-bullets-5!
 
 -   !begin-bullet!
     Use rlang instead of ellipsis (#106).
     !end-bullet!
 
-!end-bullets-29!
+!end-bullets-5!
 
 # hms 1.1.2
 
-!begin-bullets-30!
+!begin-bullets-6!
 
 -   !begin-bullet!
     Re-rendered documentation for compatibility with R-devel.
     !end-bullet!
 
-!end-bullets-30!
+!end-bullets-6!
 
 # hms 1.1.1
 
-!begin-bullets-31!
+!begin-bullets-7!
 
 -   !begin-bullet!
     Avoid blanket import for lifecycle package for compatibility with
@@ -524,13 +90,13 @@
     @lionel-).
     !end-bullet!
 
-!end-bullets-31!
+!end-bullets-7!
 
 # hms 1.1.0
 
 ## Breaking changes
 
-!begin-bullets-32!
+!begin-bullets-8!
 
 -   !begin-bullet!
     `"hms"` objects no longer have a common type with `character` and
@@ -542,11 +108,11 @@
     input can't be parsed (#68).
     !end-bullet!
 
-!end-bullets-32!
+!end-bullets-8!
 
 ## Features
 
-!begin-bullets-33!
+!begin-bullets-9!
 
 -   !begin-bullet!
     New `unique.hms()` method (#98, @joethorley).
@@ -555,11 +121,11 @@
     `as_hms()` is a generic again (#81).
     !end-bullet!
 
-!end-bullets-33!
+!end-bullets-9!
 
 ## Internal
 
-!begin-bullets-34!
+!begin-bullets-10!
 
 -   !begin-bullet!
     Avoid `LazyData` in `DESCRIPTION`.
@@ -572,23 +138,23 @@
     Using lifecycle package (#94).
     !end-bullet!
 
-!end-bullets-34!
+!end-bullets-10!
 
 # hms 1.0.0
 
 ## Life cycle
 
-!begin-bullets-35!
+!begin-bullets-11!
 
 -   !begin-bullet!
     hms is now marked as "stable".
     !end-bullet!
 
-!end-bullets-35!
+!end-bullets-11!
 
 ## Breaking changes
 
-!begin-bullets-36!
+!begin-bullets-12!
 
 -   !begin-bullet!
     `"hms"` objects no longer have a common type with `character` and
@@ -600,11 +166,11 @@
     input can't be parsed (#68).
     !end-bullet!
 
-!end-bullets-36!
+!end-bullets-12!
 
 ## Features
 
-!begin-bullets-37!
+!begin-bullets-13!
 
 -   !begin-bullet!
     `as_hms()` is a generic again (#81).
@@ -614,22 +180,22 @@
     @hglanz).
     !end-bullet!
 
-!end-bullets-37!
+!end-bullets-13!
 
 ## Bug fixes
 
-!begin-bullets-38!
+!begin-bullets-14!
 
 -   !begin-bullet!
     `as_hms()` and `vec_cast()` now correctly treat objects of class
     `"difftime"` with `integer` mode (#84).
     !end-bullet!
 
-!end-bullets-38!
+!end-bullets-14!
 
 ## Internal
 
-!begin-bullets-39!
+!begin-bullets-15!
 
 -   !begin-bullet!
     Using lifecycle package (#94).
@@ -638,11 +204,11 @@
     hms has been re-licensed as MIT (#86).
     !end-bullet!
 
-!end-bullets-39!
+!end-bullets-15!
 
 # hms 0.5.3
 
-!begin-bullets-40!
+!begin-bullets-16!
 
 -   !begin-bullet!
     Use `vec_default_ptype2()`, remove `vec_ptype2.hms.unspecified()`
@@ -656,32 +222,32 @@
     Remove `as.data.frame.hms()`, handeld by vctrs.
     !end-bullet!
 
-!end-bullets-40!
+!end-bullets-16!
 
 # hms 0.5.2.9000
 
-!begin-bullets-41!
+!begin-bullets-17!
 
 -   !begin-bullet!
     Internal changes only.
     !end-bullet!
 
-!end-bullets-41!
+!end-bullets-17!
 
 # hms 0.5.2
 
-!begin-bullets-42!
+!begin-bullets-18!
 
 -   !begin-bullet!
     Work around parsing error that occurs on DST changeover dates
     (https://bugs.r-project.org/bugzilla/show_bug.cgi?id=16764).
     !end-bullet!
 
-!end-bullets-42!
+!end-bullets-18!
 
 # hms 0.5.1
 
-!begin-bullets-43!
+!begin-bullets-19!
 
 -   !begin-bullet!
     Lossy casts from `character` vectors to `hms` now also trigger a
@@ -689,13 +255,13 @@
     fails for other elements.
     !end-bullet!
 
-!end-bullets-43!
+!end-bullets-19!
 
 # hms 0.5.0
 
 ## Breaking changes
 
-!begin-bullets-44!
+!begin-bullets-20!
 
 -   !begin-bullet!
     Now based on vctrs \>= 0.2.0 (#61). This adds support for
@@ -711,11 +277,11 @@
 
     !end-bullet!
 
-!end-bullets-44!
+!end-bullets-20!
 
 ## Printing
 
-!begin-bullets-45!
+!begin-bullets-21!
 
 -   !begin-bullet!
     Always show seconds in a pillar if they are different from zero
@@ -729,11 +295,11 @@
 
     !end-bullet!
 
-!end-bullets-45!
+!end-bullets-21!
 
 ## Internal
 
-!begin-bullets-46!
+!begin-bullets-22!
 
 -   !begin-bullet!
     Don't test colored output on CRAN.
@@ -742,21 +308,21 @@
     Correct reference link on r4ds (#58, @evanhaldane).
     !end-bullet!
 
-!end-bullets-46!
+!end-bullets-22!
 
 # hms 0.4.2
 
-!begin-bullets-47!
+!begin-bullets-23!
 
 -   !begin-bullet!
     Adapted tests to pillar 1.2.1.
     !end-bullet!
 
-!end-bullets-47!
+!end-bullets-23!
 
 # hms 0.4.1
 
-!begin-bullets-48!
+!begin-bullets-24!
 
 -   !begin-bullet!
     Preserve `NA` when converting to `character` (#51, @jeroen).
@@ -765,13 +331,13 @@
     Adapted tests to pillar 1.1.0.
     !end-bullet!
 
-!end-bullets-48!
+!end-bullets-24!
 
 # hms 0.4.0
 
 ## Breaking changes
 
-!begin-bullets-49!
+!begin-bullets-25!
 
 -   !begin-bullet!
     `as.hms.POSIXt()` now defaults to the current time zone, the
@@ -779,11 +345,11 @@
     `pkgconfig::set_config("hms::default_tz", "UTC")`.
     !end-bullet!
 
-!end-bullets-49!
+!end-bullets-25!
 
 ## New features
 
-!begin-bullets-50!
+!begin-bullets-26!
 
 -   !begin-bullet!
     Pillar support, will display `hms` columns in tibbles in color on
@@ -805,11 +371,11 @@
     (#33).
     !end-bullet!
 
-!end-bullets-50!
+!end-bullets-26!
 
 ## Bug fixes
 
-!begin-bullets-51!
+!begin-bullets-27!
 
 -   !begin-bullet!
     `hms()` now works correctly if all four components (days, hours,
@@ -831,11 +397,11 @@
     `c()` now returns a hms (#41, @qgeissmann).
     !end-bullet!
 
-!end-bullets-51!
+!end-bullets-27!
 
 ## Documentation and error messages
 
-!begin-bullets-52!
+!begin-bullets-28!
 
 -   !begin-bullet!
     Fix and enhance examples in `?hms`.
@@ -848,11 +414,11 @@
     (#29).
     !end-bullet!
 
-!end-bullets-52!
+!end-bullets-28!
 
 # hms 0.3
 
-!begin-bullets-53!
+!begin-bullets-29!
 
 -   !begin-bullet!
     Fix `lubridate` test for compatibility with 1.6.0 (#23, @vspinu).
@@ -861,13 +427,13 @@
     NA values are formatted as `NA` (#22).
     !end-bullet!
 
-!end-bullets-53!
+!end-bullets-29!
 
 # hms 0.2
 
 Minor fixes and improvements.
 
-!begin-bullets-54!
+!begin-bullets-30!
 
 -   !begin-bullet!
     Subsetting keeps `hms` class (#16).
@@ -885,18 +451,18 @@ Minor fixes and improvements.
     values trailing zeros are shown (#17).
     !end-bullet!
 
-!end-bullets-54!
+!end-bullets-30!
 
 # hms 0.1
 
 First CRAN release.
 
-!begin-bullets-55!
+!begin-bullets-31!
 
 -   !begin-bullet!
     Values are stored as a numeric vector that contains the number of
     seconds since midnight.
-    !begin-bullets-56!
+    !begin-bullets-32!
     -   !begin-bullet!
         Inherits from `difftime` class.
         !end-bullet!
@@ -905,12 +471,12 @@ First CRAN release.
         issues a warning.
         !end-bullet!
 
-    !end-bullets-56!
+    !end-bullets-32!
     !end-bullet!
 -   !begin-bullet!
     Supports construction from time values, coercion to and from various
     data types, and formatting.
-    !begin-bullets-57!
+    !begin-bullets-33!
     -   !begin-bullet!
         Conversion from numeric treats input as seconds.
         !end-bullet!
@@ -918,14 +484,14 @@ First CRAN release.
         Negative times are formatted with a leading `-`.
         !end-bullet!
 
-    !end-bullets-57!
+    !end-bullets-33!
     !end-bullet!
 -   !begin-bullet!
     Can be used as a regular column in a data frame.
     !end-bullet!
 -   !begin-bullet!
     Full test coverage.
-    !begin-bullets-58!
+    !begin-bullets-34!
     -   !begin-bullet!
         Test for arithmetic with `Date`, `POSIXt` and `hms` classes.
         !end-bullet!
@@ -933,11 +499,11 @@ First CRAN release.
         Test basic compatibility with `lubridate` package (#5).
         !end-bullet!
 
-    !end-bullets-58!
+    !end-bullets-34!
     !end-bullet!
 -   !begin-bullet!
     Interface:
-    !begin-bullets-59!
+    !begin-bullets-35!
     -   !begin-bullet!
         `hms()` (with rigorous argument checks)
         !end-bullet!
@@ -961,7 +527,7 @@ First CRAN release.
         `print.hms()` (returns unchanged input invisibly)
         !end-bullet!
 
-    !end-bullets-59!
+    !end-bullets-35!
     !end-bullet!
 
-!end-bullets-55!
+!end-bullets-31!
