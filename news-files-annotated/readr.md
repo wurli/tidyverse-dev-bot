@@ -8,10 +8,12 @@
     motivation is to remove an unnecessary blocker on platforms, such as
     Alpine Linux, where the output of `iconvlist()` does not reflect the
     actual capabilities (@bastistician, #1537).
+
     !end-bullet!
 -   !begin-bullet!
     Help files below `man/` have been re-generated, as part of the
     effort to support HTML reference manuals on CRAN.
+
     !end-bullet!
 
 !end-bullets-1!
