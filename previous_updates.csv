@@ -19965,3 +19965,4 @@ hms,930cdadf0e22bd7b6abb469e4e1b09e6,"Spring cleaning (@​schochastics, #174, #
 lintr,57a6d0a30ff1fcb4388daec381876b26,"`T_and_F_symbol_linter()` ignores `T` and `F` if followed by `[` or `[[` (#2944, @​mcol).",NA,NA,NA,NA
 hms,7ef0e421cecdabc32105a0cf7c1ef9f6,CRAN release v1.1.4 (#185).,NA,NA,NA,NA
 pkgdown,ad8d02a410cee172fc7d5e6faf1caef6,Links generated with `\code{\link{foo}()}` now have the `()` moved into the `<a>` in the generated output (@​maelle).,NA,NA,NA,NA
+lintr,3942d4ba65c250069f0fb3ce9a7c9022,"`length_test_linter()` is extended to check incorrect usage of `nrow()`, `ncol()`, `NROW()`, `NCOL()` (#2933, @​mcol).",NA,NA,NA,NA

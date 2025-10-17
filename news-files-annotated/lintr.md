@@ -218,6 +218,10 @@
     if run in a package (#2926, initial work by @MEO265, finalized by
     @Bisaloo).
     !end-bullet!
+-   !begin-bullet!
+    `length_test_linter()` is extended to check incorrect usage of
+    `nrow()`, `ncol()`, `NROW()`, `NCOL()` (#2933, @mcol).
+    !end-bullet!
 
 !end-bullets-5!
 
