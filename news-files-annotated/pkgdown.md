@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Links generated with `\code{\link{foo}()}` now have the `()` moved
+    into the `<a>` in the generated output (@maelle).
+    !end-bullet!
+-   !begin-bullet!
     Plots in dark mode are now transformed with a CSS filter to improve
     their visibility (thanks to @gadenbuie).
     !end-bullet!
