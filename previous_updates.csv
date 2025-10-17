@@ -19963,3 +19963,4 @@ readr,ec09e80cd48a9bd6919ce400231ce1fe,"`locale(encoding =)` now warns, instead 
 readr,2b0590b8bee869d199c7aa5332ffec68,"Help files below `man/` have been re-generated, as part of the effort to support HTML reference manuals on CRAN.",NA,NA,NA,NA
 hms,930cdadf0e22bd7b6abb469e4e1b09e6,"Spring cleaning (@​schochastics, #174, #175).",NA,NA,NA,NA
 lintr,57a6d0a30ff1fcb4388daec381876b26,"`T_and_F_symbol_linter()` ignores `T` and `F` if followed by `[` or `[[` (#2944, @​mcol).",NA,NA,NA,NA
+hms,7ef0e421cecdabc32105a0cf7c1ef9f6,CRAN release v1.1.4 (#185).,NA,NA,NA,NA
