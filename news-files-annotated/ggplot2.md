@@ -5,6 +5,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Out-of-bounds datapoints used as padding by `stat_align()` now get
+    removed silently rather than verbosely (@teunbrand, #6667)
+    !end-bullet!
+-   !begin-bullet!
     Fixed bug where `stat_bin(boundary)` was ignored (#6682).
     !end-bullet!
 -   !begin-bullet!
