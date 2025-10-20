@@ -5,6 +5,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed bug where `stat_bin(boundary)` was ignored (#6682).
+
+    !end-bullet!
+-   !begin-bullet!
     `geom_text()` and `geom_label()` accept expressions as the `label`
     aesthetic (@teunbrand, #6638)
 
