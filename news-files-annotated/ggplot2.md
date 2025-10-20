@@ -1,9 +1,16 @@
 # ggplot2 (development version)
 
-### Bug fixes
-
 !begin-bullets-1!
 
+-   !begin-bullet!
+    Fixed bug where `NA` handling in `geom_path()` was ignoring panels
+    (@teunbrand, #6533)
+    !end-bullet!
+-   !begin-bullet!
+    Logical values for the linetype aesthetic will be interpreted
+    numerically, so that `linetype = FALSE` becomes 0/'blank' and
+    `linetype = TRUE` becomes 1/'solid' (@teunbrand, #6641)
+    !end-bullet!
 -   !begin-bullet!
     Out-of-bounds datapoints used as padding by `stat_align()` now get
     removed silently rather than verbosely (@teunbrand, #6667)
@@ -34,6 +41,14 @@
 -   !begin-bullet!
     `stat_boxplot()` treats `width` as an optional aesthetic (@Yunuuuu,
     #6575)
+    !end-bullet!
+-   !begin-bullet!
+    Fixed regression where the first (unnamed) argument to colour/fill
+    scales was not passed as the `name` argument (@teunbrand, #6623)
+    !end-bullet!
+-   !begin-bullet!
+    Fixed issue where vectorised `arrow()`s caused errors in drawing the
+    legend glyphs (@teunbrand, #6594)
     !end-bullet!
 
 !end-bullets-1!
