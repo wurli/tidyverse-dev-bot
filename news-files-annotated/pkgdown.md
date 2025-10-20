@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    New `build_llm_docs()` generates a `LLMs.txt` at the root directory
+    of your site, and provides a `.md` version of every page. You can
+    disable by adding `llm-docs: false` to your `_pkgdown.yaml` (#2914,
+    @maelle)
+    !end-bullet!
+-   !begin-bullet!
     Links generated with `\code{\link{foo}()}` now have the `()` moved
     into the `<a>` in the generated output (@maelle).
     !end-bullet!
