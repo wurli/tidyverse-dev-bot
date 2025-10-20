@@ -1,5 +1,7 @@
 # ggplot2 (development version)
 
+* Fixed regression where `position_stack(vjust)` was ignored when there are
+  only single groups (#6692)
 * Fixed bug where `NA` handling in `geom_path()` was ignoring panels (@teunbrand, #6533)
 * Logical values for the linetype aesthetic will be interpreted numerically,
   so that `linetype = FALSE` becomes 0/'blank' and `linetype = TRUE` becomes 
@@ -20,6 +22,8 @@
   not passed as the `name` argument (@teunbrand, #6623)
 * Fixed issue where vectorised `arrow()`s caused errors in drawing the 
   legend glyphs (@teunbrand, #6594)
+* Fixed regression where `NULL`-aesthetics contributed to plot labels too 
+  insistently. Now they contribute only as fallback labels (@teunbrand, #6616)
 
 # ggplot2 4.0.0
 

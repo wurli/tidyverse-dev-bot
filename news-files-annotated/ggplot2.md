@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed regression where `position_stack(vjust)` was ignored when
+    there are only single groups (#6692)
+    !end-bullet!
+-   !begin-bullet!
     Fixed bug where `NA` handling in `geom_path()` was ignoring panels
     (@teunbrand, #6533)
     !end-bullet!
@@ -49,6 +53,11 @@
 -   !begin-bullet!
     Fixed issue where vectorised `arrow()`s caused errors in drawing the
     legend glyphs (@teunbrand, #6594)
+    !end-bullet!
+-   !begin-bullet!
+    Fixed regression where `NULL`-aesthetics contributed to plot labels
+    too insistently. Now they contribute only as fallback labels
+    (@teunbrand, #6616)
     !end-bullet!
 
 !end-bullets-1!

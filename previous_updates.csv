@@ -19974,3 +19974,5 @@ ggplot2,9d85aae868bf5c20453ffc6c3db60904,"Fixed bug where `NA` handling in `geom
 ggplot2,094d9847cc362a43eb19bfc8916c42f9,"Logical values for the linetype aesthetic will be interpreted numerically, so that `linetype = FALSE` becomes 0/'blank' and `linetype = TRUE` becomes 1/'solid' (@​teunbrand, #6641)",NA,NA,NA,NA
 ggplot2,93f589d89ccf693bad680f9e0879bc86,"Fixed regression where the first (unnamed) argument to colour/fill scales was not passed as the `name` argument (@​teunbrand, #6623)",NA,NA,NA,NA
 ggplot2,c5fbe9600b646106977c828c288168af,"Fixed issue where vectorised `arrow()`s caused errors in drawing the legend glyphs (@​teunbrand, #6594)",NA,NA,NA,NA
+ggplot2,08ade58dbcdd48bafec84b03e7975543,Fixed regression where `position_stack(vjust)` was ignored when there are only single groups (#6692),NA,NA,NA,NA
+ggplot2,4b180b180bfad7670f4b8cf9ef026011,"Fixed regression where `NULL`-aesthetics contributed to plot labels too insistently. Now they contribute only as fallback labels (@​teunbrand, #6616)",NA,NA,NA,NA
