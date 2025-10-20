@@ -19968,3 +19968,4 @@ pkgdown,ad8d02a410cee172fc7d5e6faf1caef6,Links generated with `\code{\link{foo}(
 lintr,3942d4ba65c250069f0fb3ce9a7c9022,"`length_test_linter()` is extended to check incorrect usage of `nrow()`, `ncol()`, `NROW()`, `NCOL()` (#2933, @​mcol).",NA,NA,NA,NA
 ggplot2,a681b8d9da3170adb390b6b64812190d,"`geom_text()` and `geom_label()` accept expressions as the `label` aesthetic (@​teunbrand, #6638)",NA,NA,NA,NA
 ggplot2,f0e28464958631f9c2400a892832780f,Fixed bug where `stat_bin(boundary)` was ignored (#6682).,NA,NA,NA,NA
+ggplot2,1ffda5233468991a1a34e48a60d38ed2,"Improved palette fallback mechanism in scales (@​teunbrand, #6669).",NA,NA,NA,NA

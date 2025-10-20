@@ -6,33 +6,30 @@
 
 -   !begin-bullet!
     Fixed bug where `stat_bin(boundary)` was ignored (#6682).
-
     !end-bullet!
 -   !begin-bullet!
     `geom_text()` and `geom_label()` accept expressions as the `label`
     aesthetic (@teunbrand, #6638)
-
     !end-bullet!
 -   !begin-bullet!
     Fixed regression where `draw_key_rect()` stopped using `fill`
     colours (@mitchelloharawild, #6609).
-
     !end-bullet!
 -   !begin-bullet!
     Fixed regression where `scale_{x,y}_*()` threw an error when an
     expression object is set to `labels` argument (@yutannihilation,
     #6617).
-
+    !end-bullet!
+-   !begin-bullet!
+    Improved palette fallback mechanism in scales (@teunbrand, #6669).
     !end-bullet!
 -   !begin-bullet!
     Allow `stat` in `geom_hline`, `geom_vline`, and `geom_abline`.
     (@sierrajohnson, #6559)
-
     !end-bullet!
 -   !begin-bullet!
     `stat_boxplot()` treats `width` as an optional aesthetic (@Yunuuuu,
     #6575)
-
     !end-bullet!
 
 !end-bullets-1!
