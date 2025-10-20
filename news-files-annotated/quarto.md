@@ -1,8 +1,18 @@
 # quarto (development version)
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    `.libPaths()` from the calling R session will now be passed by
+    default to all call to quarto as a subprocess. This should solve
+    issue with **pkgdown** or when building vignettes.
+    !end-bullet!
+
+!end-bullets-1!
+
 # quarto 1.5.1
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     Make sure tests pass on CRAN checks even when Quarto is not
@@ -12,13 +22,13 @@
     built. (thanks, @jabenninghoff, #282)
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # quarto 1.5.0
 
 ## Breaking changes
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     `quarto_render(output_file = )` now sets the `output-file` Quarto
@@ -67,11 +77,11 @@
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 ## New features
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     `add_spin_preamble()` adds YAML preambles to R scripts for use with
@@ -196,11 +206,11 @@
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 ## Minor improvements and fixes
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     Debugging logic added for quarto vignette engine to help diagnose
@@ -300,11 +310,11 @@
 
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 # quarto 1.4.4
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     `quarto_preview()` now looks at `quarto preview` log to browse to
@@ -329,11 +339,11 @@
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # quarto 1.4
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     This version is now adapted to Quarto 1.4 latest stable release.
@@ -420,4 +430,4 @@
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!

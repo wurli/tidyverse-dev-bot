@@ -19976,3 +19976,4 @@ ggplot2,93f589d89ccf693bad680f9e0879bc86,"Fixed regression where the first (unna
 ggplot2,c5fbe9600b646106977c828c288168af,"Fixed issue where vectorised `arrow()`s caused errors in drawing the legend glyphs (@​teunbrand, #6594)",NA,NA,NA,NA
 ggplot2,08ade58dbcdd48bafec84b03e7975543,Fixed regression where `position_stack(vjust)` was ignored when there are only single groups (#6692),NA,NA,NA,NA
 ggplot2,4b180b180bfad7670f4b8cf9ef026011,"Fixed regression where `NULL`-aesthetics contributed to plot labels too insistently. Now they contribute only as fallback labels (@​teunbrand, #6616)",NA,NA,NA,NA
+quarto,3c039c684639be17f7c0e68a05caea07,`.libPaths()` from the calling R session will now be passed by default to all call to quarto as a subprocess. This should solve issue with **pkgdown** or when building vignettes.,NA,NA,NA,NA
