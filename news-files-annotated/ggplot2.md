@@ -5,6 +5,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `geom_text()` and `geom_label()` accept expressions as the `label`
+    aesthetic (@teunbrand, #6638)
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed regression where `draw_key_rect()` stopped using `fill`
     colours (@mitchelloharawild, #6609).
 
