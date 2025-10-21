@@ -19978,3 +19978,4 @@ ggplot2,08ade58dbcdd48bafec84b03e7975543,Fixed regression where `position_stack(
 ggplot2,4b180b180bfad7670f4b8cf9ef026011,"Fixed regression where `NULL`-aesthetics contributed to plot labels too insistently. Now they contribute only as fallback labels (@​teunbrand, #6616)",NA,NA,NA,NA
 quarto,3c039c684639be17f7c0e68a05caea07,`.libPaths()` from the calling R session will now be passed by default to all call to quarto as a subprocess. This should solve issue with **pkgdown** or when building vignettes.,NA,NA,NA,NA
 pkgdown,5b0a2fd422fa23b1f0558f60624f4bfb,"New `build_llm_docs()` generates a `LLMs.txt` at the root directory of your site, and provides a `.md` version of every page. You can disable by adding `llm-docs: false` to your `_pkgdown.yaml` (#2914, @​maelle)",NA,NA,NA,NA
+pkgdown,c1089773783a282928e1614f2100f672,"New translations were add for Dutch (`nl`) and Japanese (`ja`), thanks to @​pepijn-devires and @​shikokuchuo respectively.",NA,NA,NA,NA
