@@ -7,7 +7,7 @@
     thanks to @pepijn-devires and @shikokuchuo respectively.
     !end-bullet!
 -   !begin-bullet!
-    New `build_llm_docs()` generates a `LLMs.txt` at the root directory
+    New `build_llm_docs()` generates a `llms.txt` at the root directory
     of your site, and provides a `.md` version of every page. You can
     disable by adding `llm-docs: false` to your `_pkgdown.yaml` (#2914,
     @maelle)
