@@ -29,6 +29,14 @@
 
     !end-bullet!
 -   !begin-bullet!
+    Added `hybrid_then()` function that will synchronously or
+    asynchronously execute a success/failure callbacks based on whether
+    the input is a promise or a regular value. This function is useful
+    for writing code that can handle both synchronous and asynchronous
+    inputs seamlessly. (#192)
+
+    !end-bullet!
+-   !begin-bullet!
     Added `tee=FALSE` parameter to `then()`. When `tee=TRUE`, `then()`
     will ignore the return value of the callback, and return the
     original value instead. This is useful for performing operations
