@@ -3,6 +3,19 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `obj_check_vector()` now throws a clearer error message. In
+    particular, special info bullets have been added that link out to
+    FAQ pages and explain common issues around incompatible S3 lists and
+    data frames (#2061).
+
+    !end-bullet!
+-   !begin-bullet!
+    R \>=4.0.0 is now required. This is still more permissive than the
+    general tidyverse policy of supporting the 5 most recent versions of
+    R.
+
+    !end-bullet!
+-   !begin-bullet!
     `vec_interleave()` gains new `.size` and `.error_call` arguments.
 
     !end-bullet!
