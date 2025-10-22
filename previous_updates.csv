@@ -19996,3 +19996,4 @@ promises,c7189ee182a4a9094b4c010e16e4c8cc,promises is now a pure R package that 
 promises,a281f6735496d410f5f9b8afe4aae8d1,`promise_all()` now preserves duplicate named arguments (or `.list` entries). A result will be produced for every promise provided. (#163),NA,NA,NA,NA
 promises,30bd44e9379b18d513d84a8afb0d2f61,"`promise_map()` now properly handles `NULL` values being returned. (Thank you, @​RLesur! #47)",NA,NA,NA,NA
 promises,4c015a7a8eccd6466bd00a95740be236,"promises no longer imports base packages in DESCRIPTION. (Thank you, @​shikokuchuo! #186)",NA,NA,NA,NA
+promises,9c53ebbf95d57969f04a1197ad66e3d8,"A promise is now a simple classed environment rather than an R6 class. This reduces their creation overhead by up to 10x, thereby substantially improving performance. (#191)",NA,NA,NA,NA

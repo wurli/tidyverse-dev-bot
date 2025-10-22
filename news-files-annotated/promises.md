@@ -1,10 +1,20 @@
 # promises (development version)
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    A promise is now a simple classed environment rather than an R6
+    class. This reduces their creation overhead by up to 10x, thereby
+    substantially improving performance. (#191)
+    !end-bullet!
+
+!end-bullets-1!
+
 # promises 1.4.0
 
 ## Breaking changes
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     Nested promise domains now correctly invoke in reverse order.
@@ -16,11 +26,11 @@
     expected scoping behavior. (#165)
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 ## New features
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     `hybrid_then()` synchronously or asynchronously executes
@@ -39,7 +49,7 @@
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 ### OpenTelemetry integration
 
@@ -47,7 +57,7 @@ promises now integrates with the otel package to provide observability
 and tracing for asynchronous operations. OpenTelemetry integration is
 experimental and subject to change.
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     `with_ospan_async()` creates an OpenTelemetry span, executes the
@@ -73,11 +83,11 @@ experimental and subject to change.
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 ## Minor improvements and fixes
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     promises now requires R 4.1 or later. R's native pipe (`|>`) and
@@ -128,11 +138,11 @@ experimental and subject to change.
 
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 # promises 1.3.3
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     Changed the way we create future objects to stay compatible with new
@@ -147,11 +157,11 @@ experimental and subject to change.
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # promises 1.3.2
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     Fixed bug introduced in 1.3.1, where promise domains that are active
@@ -161,32 +171,32 @@ experimental and subject to change.
     promise domains. (#115)
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 # promises 1.3.1
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     Fixed bug where promise domains were forgotten when handlers were
     registered from within other handlers. (#110)
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 # promises 1.3.0
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     `is.promising` is now an S3 method. (#104)
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 # promises 1.2.1
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     `future_promise()` received a speed improvement when submitting many
@@ -211,11 +221,11 @@ experimental and subject to change.
 
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 # promises 1.2.0.1
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     Added `future_promise()` which returns a `promise` that executes the
@@ -236,22 +246,22 @@ experimental and subject to change.
 
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 # promises 1.1.1
 
-!begin-bullets-11!
+!begin-bullets-12!
 
 -   !begin-bullet!
     Fix handling of FutureErrors during `future::resolved()` and
     `future::value()` by discarding the corrupt future. (#37)
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-12!
 
 # promises 1.1.0
 
-!begin-bullets-12!
+!begin-bullets-13!
 
 -   !begin-bullet!
     Fixed #49: `promise_all()` previously did not handle `NULL` values
@@ -271,14 +281,14 @@ experimental and subject to change.
 
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
 
 # promises 1.0.1
 
-!begin-bullets-13!
+!begin-bullets-14!
 
 -   !begin-bullet!
     Initial CRAN release
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-14!
