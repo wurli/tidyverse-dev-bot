@@ -153,12 +153,22 @@
 !begin-bullets-7!
 
 -   !begin-bullet!
+    Markdown rendering in showcase mode now uses server-side rendering
+    with the `{commonmark}` package, providing support for GitHub
+    Flavored Markdown features (tables, strikethrough, autolinks, task
+    lists). While most existing README.md files should continue to work
+    as expected, some minor rendering differences may occur due to the
+    change in markdown processor. (#4202, #4201)
+
+    !end-bullet!
+-   !begin-bullet!
     The return value of `actionButton()`/`actionLink()` changed
     slightly: `label` and `icon` are wrapped in an additional HTML
     container element. This allows for: 1.
     `updateActionButton()`/`updateActionLink()` to distinguish between
     the `label` and `icon` when making updates and 2. spacing between
     `label` and `icon` to be more easily customized via CSS.
+
     !end-bullet!
 
 !end-bullets-7!
