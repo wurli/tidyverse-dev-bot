@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    tidyr is now compliant with R's C API (#1618).
+
+    !end-bullet!
+-   !begin-bullet!
     Fixed an internal error in `pivot_wider()` (#1609, @krlmlr).
 
     !end-bullet!
