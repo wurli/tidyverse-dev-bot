@@ -1639,7 +1639,7 @@ backtraces from errors and failures.
 -   !begin-bullet!
     New `exp_signal()` function is a condition signaller that implements
     the testthat protocol (signal with `stop()` if the expectation is
-    broken, with a `continue_test` restart).
+    broken, with a `muffle_expectation` restart).
 
     !end-bullet!
 -   !begin-bullet!
