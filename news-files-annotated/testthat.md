@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Make `expect_lt()`, `expect_lte()`, `expect_gt()`, and
+    `expect_gte()` work properly for non-numeric data (#2268)
+    !end-bullet!
+-   !begin-bullet!
     New `expect_disjoint()` to check for the absence of values
     (@stibu81, #1851).
     !end-bullet!

@@ -20001,3 +20001,4 @@ reticulate,d2ce1444f135c7e16f86a76a54fdf0a0,`virtualenv_starter()` now discovers
 tidyr,8c997a287a47a8dc9d62c58c403ec0a0,tidyr is now compliant with R's C API (#1618).,NA,NA,NA,NA
 dplyr,e9a5311a3796c097417b6202b79716cd,Progress towards making dplyr conformant with the public C API of R (#7741).,NA,NA,NA,NA
 rsconnect,320a20f8f4e0d18c6a3ab3f7d16413a8,Added support for deploying to Posit Connect Cloud. Connect Cloud credentials may be added using `connectCloudUser()`.,NA,NA,NA,NA
+testthat,159aa5d6c522b6ed3451c40522ae1550,"Make `expect_lt()`, `expect_lte()`, `expect_gt()`, and `expect_gte()` work properly for non-numeric data (#2268)",NA,NA,NA,NA
