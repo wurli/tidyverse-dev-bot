@@ -15,20 +15,14 @@
 
 # hms 1.1.4
 
-## Bug fixes
+## Features
 
 !begin-bullets-2!
 
 -   !begin-bullet!
     Sub-second value parsing accurately (@eitsupi, #127, #128).
+
     !end-bullet!
-
-!end-bullets-2!
-
-## Features
-
-!begin-bullets-3!
-
 -   !begin-bullet!
     `is.hms()` and `as.hms()` now warn even when called indirectly
     (@moodymudskipper, #121, #163).
@@ -38,6 +32,17 @@
     Implement `ceiling_hms()` and `floor_hms()` (@moodymudskipper, #118,
     #160).
 
+    !end-bullet!
+
+!end-bullets-2!
+
+## Bug fixes
+
+!begin-bullets-3!
+
+-   !begin-bullet!
+    Parsing now holds the date part fixed, removing unlikely errors
+    during clock wraparound.
     !end-bullet!
 
 !end-bullets-3!
