@@ -1,6 +1,16 @@
-# xml2 1.4.0
+# xml2 1.4.1
 
 !begin-bullets-1!
+
+-   !begin-bullet!
+    Remove a test that broke with libxml2 2.15
+    !end-bullet!
+
+!end-bullets-1!
+
+# xml2 1.4.0
+
+!begin-bullets-2!
 
 -   !begin-bullet!
     read_html() now allows huge elements by default (#455)
@@ -16,11 +26,11 @@
 
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # xml2 1.3.8
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     Replace new "non-api" call IS_S4_OBJECT with Rf_isS4
@@ -35,11 +45,11 @@
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 # xml2 1.3.7
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     Windows: use libxml2 from Rtools if found
@@ -54,11 +64,11 @@
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 # xml2 1.3.6
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     Now compatible with libxml2 2.12.0 and later (@KNnut).
@@ -97,11 +107,11 @@
 
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 # xml2 1.3.5
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     Small speedup for `xml_find_all()` (@mgirlich, #393).
@@ -112,11 +122,11 @@
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # xml2 1.3.4
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     Fixes for R CMD check problems.
@@ -127,11 +137,11 @@
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 # xml2 1.3.3
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     Hadley Wickham is now (again) the maintainer.
@@ -169,11 +179,11 @@
 
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 # xml2 1.3.2
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     `read_html()` and `read_xml()` now error if passed strings of length
@@ -190,43 +200,43 @@
 
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 # xml2 1.3.1
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     `read_html()` now again works with HTML files with non-ASCII
     encodings (#293).
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 # xml2 1.3.0
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     Removes the Rcpp dependency
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 # xml2 1.2.5
 
-!begin-bullets-11!
+!begin-bullets-12!
 
 -   !begin-bullet!
     Fix compilation issue on macOS versions after High Sierra when not
     using homebrew supplied libxml2
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-12!
 
 # xml2 1.2.4
 
-!begin-bullets-12!
+!begin-bullets-13!
 
 -   !begin-bullet!
     Fix potential dangling pointer with internal `asXmlChar()` function
@@ -250,24 +260,24 @@
 
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
 
 # xml2 1.2.2
 
-!begin-bullets-13!
+!begin-bullets-14!
 
 -   !begin-bullet!
     Export S4 classes with documentation, so they can be used in other
     packages without Warnings (@nuest, #267)
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-14!
 
 # xml2 1.2.1
 
 ## New Features
 
-!begin-bullets-14!
+!begin-bullets-15!
 
 -   !begin-bullet!
     xml2 now has a pkgdown site! https://xml2.r-lib.org
@@ -284,11 +294,11 @@
 
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-15!
 
 ## Bugfixes and Miscellaneous features
 
-!begin-bullets-15!
+!begin-bullets-16!
 
 -   !begin-bullet!
     Generic xml2 error are now forwarded as R errors. Previously these
@@ -354,13 +364,13 @@
 
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-16!
 
 # xml2 1.2.0
 
 ## Breaking changes
 
-!begin-bullets-16!
+!begin-bullets-17!
 
 -   !begin-bullet!
     `as_list()` on `xml_document` objects did not properly include the
@@ -368,11 +378,11 @@
     using `as_list()[[1L]]` in place of `as_list()`.
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-17!
 
 ## New Features
 
-!begin-bullets-17!
+!begin-bullets-18!
 
 -   !begin-bullet!
     `download_xml()` and `download_html()` helper functions to make it
@@ -389,11 +399,11 @@
 
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-18!
 
 ## Bugfixes
 
-!begin-bullets-18!
+!begin-bullets-19!
 
 -   !begin-bullet!
     `xml_find_first()` no longer de-duplicates results, so the results
@@ -419,11 +429,11 @@
 
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-19!
 
 # xml2 1.1.1
 
-!begin-bullets-19!
+!begin-bullets-20!
 
 -   !begin-bullet!
     This is a small point release addressing installation issues found
@@ -431,13 +441,13 @@
     (#163, #164).
     !end-bullet!
 
-!end-bullets-19!
+!end-bullets-20!
 
 # xml2 1.1.0
 
 ## New Features
 
-!begin-bullets-20!
+!begin-bullets-21!
 
 -   !begin-bullet!
     `write_xml()` and `write_html()` now accept connections as well as
@@ -499,11 +509,11 @@
 
     !end-bullet!
 
-!end-bullets-20!
+!end-bullets-21!
 
 ## Bugfixes
 
-!begin-bullets-21!
+!begin-bullets-22!
 
 -   !begin-bullet!
     `xml_new_document()` now explicitly sets the encoding (default
@@ -557,11 +567,11 @@
 
     !end-bullet!
 
-!end-bullets-21!
+!end-bullets-22!
 
 # xml2 1.0.0
 
-!begin-bullets-22!
+!begin-bullets-23!
 
 -   !begin-bullet!
     All C++ functions now use `checked_get()` instead of `get()` where
@@ -640,11 +650,11 @@
 
     !end-bullet!
 
-!end-bullets-22!
+!end-bullets-23!
 
 # xml2 0.1.2
 
-!begin-bullets-23!
+!begin-bullets-24!
 
 -   !begin-bullet!
     Improved configure script - now works again on R-devel on windows.
@@ -655,11 +665,11 @@
 
     !end-bullet!
 
-!end-bullets-23!
+!end-bullets-24!
 
 # xml2 0.1.1
 
-!begin-bullets-24!
+!begin-bullets-25!
 
 -   !begin-bullet!
     Make configure script more cross platform.
@@ -670,4 +680,4 @@
 
     !end-bullet!
 
-!end-bullets-24!
+!end-bullets-25!
