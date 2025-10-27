@@ -75,6 +75,10 @@
     (@jcolt45, #1078).
 
     !end-bullet!
+-   !begin-bullet!
+    `map_vec()` no longer fails on empty named lists (#1206).
+
+    !end-bullet!
 
 !end-bullets-2!
 

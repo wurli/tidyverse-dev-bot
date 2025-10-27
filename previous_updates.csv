@@ -20005,3 +20005,4 @@ testthat,159aa5d6c522b6ed3451c40522ae1550,"Make `expect_lt()`, `expect_lte()`, `
 hms,1e15f5f54d85ea7d11579bd2d89695f1,"Parsing now holds the date part fixed, removing unlikely errors during clock wraparound.",NA,NA,NA,NA
 hms,c37bd5f95fd4326cb0e938b66e158200,Merge tag 'v1.1.4'.,NA,NA,NA,NA
 xml2,ef16933afe7c75c3507a7b512034efa4,Remove a test that broke with libxml2 2.15,NA,NA,NA,NA
+purrr,2a1c7cfc376fc989afd646f8bcb2b8fe,`map_vec()` no longer fails on empty named lists (#1206).,NA,NA,NA,NA
