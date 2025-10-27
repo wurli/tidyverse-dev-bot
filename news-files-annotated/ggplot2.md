@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed regression where `geom_area()` didn't draw panels with single
+    groups when `stat = "align"` (@teunbrand, #6680)
+    !end-bullet!
+-   !begin-bullet!
     Fixed regression where `position_stack(vjust)` was ignored when
     there are only single groups (#6692)
     !end-bullet!
@@ -58,6 +62,11 @@
     Fixed regression where `NULL`-aesthetics contributed to plot labels
     too insistently. Now they contribute only as fallback labels
     (@teunbrand, #6616)
+    !end-bullet!
+-   !begin-bullet!
+    The `theme(panel.widths, panel.heights)` setting attempts to
+    preserve the plot's aspect ratio when only one of the two settings
+    is given, and the plot has a single panel (@teunbrand, #6701).
     !end-bullet!
 -   !begin-bullet!
     Fixed axis misplacement in `coor_radial()` when labels are blank

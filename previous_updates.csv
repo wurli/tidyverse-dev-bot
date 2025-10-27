@@ -20008,3 +20008,5 @@ xml2,ef16933afe7c75c3507a7b512034efa4,Remove a test that broke with libxml2 2.15
 purrr,2a1c7cfc376fc989afd646f8bcb2b8fe,`map_vec()` no longer fails on empty named lists (#1206).,NA,NA,NA,NA
 stringr,dcafe731617bd4ef3c6a206440afb9e9,"New `str_to_camel()`, `str_to_snake()`, and `str_to_kebab()` for changing ""programming"" case (@​librill, #573 + @​arnaudgallou, #593).",NA,NA,NA,NA
 ggplot2,00b6e1ae30de87285279b24d535485ce,"Fixed axis misplacement in `coor_radial()` when labels are blank (@​teunbrand, #6574)",NA,NA,NA,NA
+ggplot2,b67825334d2add06cb0c3db74359f6e5,"Fixed regression where `geom_area()` didn't draw panels with single groups when `stat = ""align""` (@​teunbrand, #6680)",NA,NA,NA,NA
+ggplot2,c50d3e50d4888d6364eee51c3c1739a5,"The `theme(panel.widths, panel.heights)` setting attempts to preserve the plot's aspect ratio when only one of the two settings is given, and the plot has a single panel (@​teunbrand, #6701).",NA,NA,NA,NA
