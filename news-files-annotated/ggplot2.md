@@ -59,6 +59,10 @@
     too insistently. Now they contribute only as fallback labels
     (@teunbrand, #6616)
     !end-bullet!
+-   !begin-bullet!
+    Fixed axis misplacement in `coor_radial()` when labels are blank
+    (@teunbrand, #6574)
+    !end-bullet!
 
 !end-bullets-1!
 
