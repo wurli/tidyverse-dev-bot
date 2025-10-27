@@ -20006,3 +20006,4 @@ hms,1e15f5f54d85ea7d11579bd2d89695f1,"Parsing now holds the date part fixed, rem
 hms,c37bd5f95fd4326cb0e938b66e158200,Merge tag 'v1.1.4'.,NA,NA,NA,NA
 xml2,ef16933afe7c75c3507a7b512034efa4,Remove a test that broke with libxml2 2.15,NA,NA,NA,NA
 purrr,2a1c7cfc376fc989afd646f8bcb2b8fe,`map_vec()` no longer fails on empty named lists (#1206).,NA,NA,NA,NA
+stringr,dcafe731617bd4ef3c6a206440afb9e9,"New `str_to_camel()`, `str_to_snake()`, and `str_to_kebab()` for changing ""programming"" case (@​librill, #573 + @​arnaudgallou, #593).",NA,NA,NA,NA

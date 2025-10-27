@@ -34,7 +34,7 @@
     !end-bullet!
 -   !begin-bullet!
     New `str_to_camel()`, `str_to_snake()`, and `str_to_kebab()` for
-    changing "programming" case (@librill, #573).
+    changing "programming" case (@librill, #573 + @arnaudgallou, #593).
     !end-bullet!
 
 !end-bullets-2!
