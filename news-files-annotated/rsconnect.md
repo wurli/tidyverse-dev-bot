@@ -3,14 +3,19 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Support deploying to Posit Connect Cloud. Use `connectCloudUser()`
+    to add Connect Cloud credentials.
+
+    !end-bullet!
+-   !begin-bullet!
     `rsconnect` now sets the `rsconnect.max.bundle.size` and
     `rsconnect.max.bundle.files` options to their default values on
     startup if they have not yet been set. (#1204)
 
     !end-bullet!
 -   !begin-bullet!
-    Increase the default `rsconnect.max.bundle.size` limit to 5 GiB.
-    (#1200)
+    The default `rsconnect.max.bundle.size` limit has increased to 5
+    GiB. (#1200)
 
     !end-bullet!
 -   !begin-bullet!
@@ -19,8 +24,8 @@
 
     !end-bullet!
 -   !begin-bullet!
-    The target Python binary is included in Python environment
-    inspection errors. (#1207)
+    Python environment inspection errors include the path to the target
+    Python binary. (#1207)
 
     !end-bullet!
 -   !begin-bullet!
@@ -37,15 +42,13 @@
     Existing Posit Cloud account records may be removed by using
     `removeAccount("yourname", "posit.cloud")`.
 
+    Existing Posit Cloud deployment records may be removed by using
+    `forgetDeployment(name="deployment", account="yourname", server="posit.cloud")`.
+
     !end-bullet!
 -   !begin-bullet!
     Removed the Posit Cloud-exclusive `space` argument from
     `deployApp()`. (#1215)
-
-    !end-bullet!
--   !begin-bullet!
-    Added support for deploying to Posit Connect Cloud. Connect Cloud
-    credentials may be added using `connectCloudUser()`.
 
     !end-bullet!
 

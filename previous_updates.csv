@@ -20010,3 +20010,6 @@ stringr,dcafe731617bd4ef3c6a206440afb9e9,"New `str_to_camel()`, `str_to_snake()`
 ggplot2,00b6e1ae30de87285279b24d535485ce,"Fixed axis misplacement in `coor_radial()` when labels are blank (@​teunbrand, #6574)",NA,NA,NA,NA
 ggplot2,b67825334d2add06cb0c3db74359f6e5,"Fixed regression where `geom_area()` didn't draw panels with single groups when `stat = ""align""` (@​teunbrand, #6680)",NA,NA,NA,NA
 ggplot2,c50d3e50d4888d6364eee51c3c1739a5,"The `theme(panel.widths, panel.heights)` setting attempts to preserve the plot's aspect ratio when only one of the two settings is given, and the plot has a single panel (@​teunbrand, #6701).",NA,NA,NA,NA
+rsconnect,e1f8cd794563000aa5b8e820059d888b,Support deploying to Posit Connect Cloud. Use `connectCloudUser()` to add Connect Cloud credentials.,NA,NA,NA,NA
+rsconnect,560de5e084e1174e3dec88ef30f52e2d,The default `rsconnect.max.bundle.size` limit has increased to 5 GiB. (#1200),NA,NA,NA,NA
+rsconnect,1f9cf27665c3c29b13381ebb16272ede,"Removed support for publishing to Posit Cloud. (#1215) Existing Posit Cloud account records may be removed by using `removeAccount(""yourname"", ""posit.cloud"")`. Existing Posit Cloud deployment records may be removed by using `forgetDeployment(name=""deployment"", account=""yourname"", server=""posit.cloud"")`.",NA,NA,NA,NA
