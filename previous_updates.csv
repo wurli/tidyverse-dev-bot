@@ -20033,3 +20033,7 @@ testthat,83c04b274ea82e2cb5a0f0416b50bcd8,"`expect_lt()`, `expect_gt()`, and fri
 testthat,f6a63545a246ec40418155d90cce34aa,"`JunitReporter()` no longer fails with `""no applicable method for xml_add_child""` for warnings outside of tests (#1913). Additionally, warnings now save their backtraces. `JunitReporter()` strips ANSI escapes in more places (#1852, #2032).",NA,NA,NA,NA
 testthat,a14e30bdf630747c54a758b071addf75,"`test_file(desc = ...)` (i.e. test filtering) no longer loses snapshot results (#2066), works with `it()`, and can now be character vector in order to recursively filter subtests (#2118).",NA,NA,NA,NA
 vctrs,a1f7e4d4e5b2d50e84bf7579ecd9fd01,Methods for the deprecated testthat function `is_informative_error()` have been removed (#2089).,NA,NA,NA,NA
+shiny,f249fa6df02ee0b0e569ba879480f87c,"The default label for items described below will now attempt to retrieve the assigned name if the srcref is available. If a value can not easily be produced, a default label will be used instead. This should improve the OpenTelemetry span labels and the reactlog experience. (#4269, #4300)",NA,NA,NA,NA
+shiny,f249fa6df02ee0b0e569ba879480f87c,"• `reactiveValues()`, `reactivePoll()`, `reactiveFileReader()`, `debounce()`, `throttle()`, `observe()`",NA,NA,NA,NA
+shiny,f249fa6df02ee0b0e569ba879480f87c,• Combinations of `bindEvent()` and `reactive()` / `observe()`,NA,NA,NA,NA
+shiny,f249fa6df02ee0b0e569ba879480f87c,• Combination of `bindCache()` and `reactive()`,NA,NA,NA,NA
