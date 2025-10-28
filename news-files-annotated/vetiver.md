@@ -1,4 +1,4 @@
-# vetiver (development version)
+# vetiver 0.2.6
 
 !begin-bullets-1!
 
