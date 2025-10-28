@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Methods for the deprecated testthat function
+    `is_informative_error()` have been removed (#2089).
+
+    !end-bullet!
+-   !begin-bullet!
     `obj_check_vector()` now throws a clearer error message. In
     particular, special info bullets have been added that link out to
     FAQ pages and explain common issues around incompatible S3 lists and
