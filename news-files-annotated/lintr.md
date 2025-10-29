@@ -222,6 +222,11 @@
     `length_test_linter()` is extended to check incorrect usage of
     `nrow()`, `ncol()`, `NROW()`, `NCOL()` (#2933, @mcol).
     !end-bullet!
+-   !begin-bullet!
+    `implicit_assignment_linter()` gains argument `allow_paren_print` to
+    disable lints for the use of `(` for auto-printing (#2962,
+    @TimTaylor).
+    !end-bullet!
 
 !end-bullets-5!
 

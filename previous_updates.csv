@@ -20038,3 +20038,4 @@ shiny,f249fa6df02ee0b0e569ba879480f87c,"• `reactiveValues()`, `reactivePoll()`
 shiny,f249fa6df02ee0b0e569ba879480f87c,• Combinations of `bindEvent()` and `reactive()` / `observe()`,NA,NA,NA,NA
 shiny,f249fa6df02ee0b0e569ba879480f87c,• Combination of `bindCache()` and `reactive()`,NA,NA,NA,NA
 rsconnect,4485faf44dc429fefd320839cc4d2860,"SPCS/Snowflake authentication supports Connect API keys for user identification. The `connectSPCSUser()` function now requires an `apiKey` parameter, and the API key is included in the `X-RSC-Authorization` header alongside Snowflake token authentication. This aligns with updated Connect server requirements where Snowflake tokens provide proxied authentication while API keys identify users to the Connect server itself.",NA,NA,NA,NA
+lintr,e92d16b05e9905e33c39017aa68645dc,"`implicit_assignment_linter()` gains argument `allow_paren_print` to disable lints for the use of `(` for auto-printing (#2962, @​TimTaylor).",NA,NA,NA,NA
