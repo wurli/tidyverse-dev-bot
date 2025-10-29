@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fix account registration from RStudio. (#1250)
+
+    !end-bullet!
+-   !begin-bullet!
     SPCS/Snowflake authentication supports Connect API keys for user
     identification. The `connectSPCSUser()` function now requires an
     `apiKey` parameter, and the API key is included in the
@@ -10,6 +14,7 @@
     authentication. This aligns with updated Connect server requirements
     where Snowflake tokens provide proxied authentication while API keys
     identify users to the Connect server itself.
+
     !end-bullet!
 
 !end-bullets-1!
