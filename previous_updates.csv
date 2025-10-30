@@ -20042,3 +20042,4 @@ lintr,e92d16b05e9905e33c39017aa68645dc,"`implicit_assignment_linter()` gains arg
 rsconnect,82a8b767354daa502eb099cec163a59d,Fix account registration from RStudio. (#1250),NA,NA,NA,NA
 dplyr,b0c5282825109a73a15f6c375901d251,Empty `rowwise()` list-column elements now resolve to `logical()` rather than a random logical of length 1 (#7710).,NA,NA,NA,NA
 dplyr,824c39faff8d12207c423535c7fa2bee,`last_dplyr_warnings()` no longer prevents objects from being garbage collected (#7649).,NA,NA,NA,NA
+pkgdown,50497bd402b64fd29e809ba7234a29cb,`autolink_html()` deprecated in 1.6.0 and `preview_page()` have been removed.,NA,NA,NA,NA
