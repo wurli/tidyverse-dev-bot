@@ -6,6 +6,12 @@
     `.libPaths()` from the calling R session will now be passed by
     default to all call to quarto as a subprocess. This should solve
     issue with **pkgdown** or when building vignettes.
+
+    !end-bullet!
+-   !begin-bullet!
+    Curly braces in Quarto CLI error messages are now escaped to prevent
+    them from being interpreted as `cli` formatting syntax (#293).
+
     !end-bullet!
 
 !end-bullets-1!
