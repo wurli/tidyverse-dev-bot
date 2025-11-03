@@ -20051,3 +20051,4 @@ promises,a935aabd16e87c81a87cf9c37c940ea8,• `with_ospan_promise_domain()` - Pl
 promises,a935aabd16e87c81a87cf9c37c940ea8,• `local_ospan_promise_domain()` - Please use `local_otel_promise_domain()` instead.,NA,NA,NA,NA
 promises,168428e0163e550137ff7cc4816dabac,The old function names are now deprecated and will be removed in a future release. (#198),NA,NA,NA,NA
 lintr,ca300b469720e1eb0d97fe243643ae67,"`package_hooks_linter()` now validates `.onUnload()` hook signatures, requiring exactly one argument starting with 'lib' (#2940, @​emmanuel-ferdman).",NA,NA,NA,NA
+gargle,66b93161e5a296769d33ed35de0b8ad4,"In vignettes, convert all `{r eval=FALSE}` chunks to plain `r` chunks to prevent any chance of vignette code evaluation while maintaining R syntax highlighting (#301, @​tanho63)",NA,NA,NA,NA
