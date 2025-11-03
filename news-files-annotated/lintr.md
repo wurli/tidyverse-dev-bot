@@ -80,6 +80,11 @@
     `warningCondition()` not being compatible with the `call.` argument
     in `stop()` or `warning()`.
     !end-bullet!
+-   !begin-bullet!
+    `package_hooks_linter()` now validates `.onUnload()` hook
+    signatures, requiring exactly one argument starting with 'lib'
+    (#2940, @emmanuel-ferdman).
+    !end-bullet!
 
 !end-bullets-3!
 
