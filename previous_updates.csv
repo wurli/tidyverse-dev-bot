@@ -20052,3 +20052,6 @@ promises,a935aabd16e87c81a87cf9c37c940ea8,• `local_ospan_promise_domain()` - P
 promises,168428e0163e550137ff7cc4816dabac,The old function names are now deprecated and will be removed in a future release. (#198),NA,NA,NA,NA
 lintr,ca300b469720e1eb0d97fe243643ae67,"`package_hooks_linter()` now validates `.onUnload()` hook signatures, requiring exactly one argument starting with 'lib' (#2940, @​emmanuel-ferdman).",NA,NA,NA,NA
 gargle,66b93161e5a296769d33ed35de0b8ad4,"In vignettes, convert all `{r eval=FALSE}` chunks to plain `r` chunks to prevent any chance of vignette code evaluation while maintaining R syntax highlighting (#301, @​tanho63)",NA,NA,NA,NA
+duckplyr,73ee3571be810f52cefeb56d5962b1d3,"`read_file_duckdb()` only wraps `path` into a list if the length is not equal to one, to support `read_stat()`.",NA,NA,NA,NA
+duckplyr,7de7c52429a321913da2d1fa9d09d07a,Avoid example failing in R 4.2 and older.,NA,NA,NA,NA
+duckplyr,4bc1d214289ace8e3f4b55bf7f5da13d,Merge pull request #801 from jeroenjanssens/supported-by-posit.,NA,NA,NA,NA
