@@ -64,6 +64,10 @@
     (@teunbrand, #6616)
     !end-bullet!
 -   !begin-bullet!
+    Fixed regression where empty arguments to colour/fill scale caused
+    errors (@jmbarbone, #6710)
+    !end-bullet!
+-   !begin-bullet!
     The `theme(panel.widths, panel.heights)` setting attempts to
     preserve the plot's aspect ratio when only one of the two settings
     is given, and the plot has a single panel (@teunbrand, #6701).

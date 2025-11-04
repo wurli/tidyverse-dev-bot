@@ -20057,3 +20057,4 @@ duckplyr,7de7c52429a321913da2d1fa9d09d07a,Avoid example failing in R 4.2 and old
 duckplyr,4bc1d214289ace8e3f4b55bf7f5da13d,Merge pull request #801 from jeroenjanssens/supported-by-posit.,NA,NA,NA,NA
 duckplyr,30dd0440df47a81c1646655e8cf2d467,"Add ""Supported by Posit"" badge.",NA,NA,NA,NA
 duckplyr,1e8402fc896117c104d3439b7b99bf61,CRAN release v1.1.3 (#803).,NA,NA,NA,NA
+ggplot2,ab6ea39c52048ea394f1f5644893c395,"Fixed regression where empty arguments to colour/fill scale caused errors (@​jmbarbone, #6710)",NA,NA,NA,NA
