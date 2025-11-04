@@ -1,5 +1,7 @@
 # stringr (development version)
 
+# stringr 1.6.0
+
 ## Breaking changes
 
 * All relevant stringr functions now preserve names (@jonovik, #575).
