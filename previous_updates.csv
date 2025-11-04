@@ -20055,3 +20055,4 @@ gargle,66b93161e5a296769d33ed35de0b8ad4,"In vignettes, convert all `{r eval=FALS
 duckplyr,73ee3571be810f52cefeb56d5962b1d3,"`read_file_duckdb()` only wraps `path` into a list if the length is not equal to one, to support `read_stat()`.",NA,NA,NA,NA
 duckplyr,7de7c52429a321913da2d1fa9d09d07a,Avoid example failing in R 4.2 and older.,NA,NA,NA,NA
 duckplyr,4bc1d214289ace8e3f4b55bf7f5da13d,Merge pull request #801 from jeroenjanssens/supported-by-posit.,NA,NA,NA,NA
+duckplyr,30dd0440df47a81c1646655e8cf2d467,"Add ""Supported by Posit"" badge.",NA,NA,NA,NA
