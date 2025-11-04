@@ -20058,3 +20058,5 @@ duckplyr,4bc1d214289ace8e3f4b55bf7f5da13d,Merge pull request #801 from jeroenjan
 duckplyr,30dd0440df47a81c1646655e8cf2d467,"Add ""Supported by Posit"" badge.",NA,NA,NA,NA
 duckplyr,1e8402fc896117c104d3439b7b99bf61,CRAN release v1.1.3 (#803).,NA,NA,NA,NA
 ggplot2,ab6ea39c52048ea394f1f5644893c395,"Fixed regression where empty arguments to colour/fill scale caused errors (@​jmbarbone, #6710)",NA,NA,NA,NA
+gmailr,a079ff2d4afd6917a55da95455af9233,"Functions that lack the `gm_` prefix have been removed, concluding a deprecation process that kicked off with gmailr 1.0.0 (released 2019-08-23). These functions were hard deprecated in gmailr 2.0.0 (released 2023-06-30). This eliminates many name conflicts with other packages (including the base package).",NA,NA,NA,NA
+gmailr,e33bb2dcc870d4270263b25feaa4ed00,"Legacy auth functions `clear_token()`, `gmail_auth()`, and `use_secret_file()` have been removed, following the same deprecation timeline as described above.",NA,NA,NA,NA
