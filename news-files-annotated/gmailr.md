@@ -21,11 +21,25 @@
 
 !end-bullets-1!
 
+## Bug fixes
+
+!begin-bullets-2!
+
+-   !begin-bullet!
+    Fixed MIME structure for emails with text+HTML bodies and
+    attachments. These messages now correctly use nested
+    `multipart/mixed` (outer) containing `multipart/alternative`
+    (text/HTML), preventing the loss of some of the message parts
+    (#202).
+    !end-bullet!
+
+!end-bullets-2!
+
 # gmailr 2.0.0
 
 ## Changes around the OAuth client
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     Set up an OAuth client is a new non-vignette article with detailed
@@ -62,11 +76,11 @@
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 ## Storing and deploying a token
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     `gm_token_write()` + `gm_token_read()` is a new matched pair of
@@ -89,14 +103,14 @@
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 ## Syncing up with gargle
 
 Versions 1.3.0, 1.4.0, and 1.5.1 of gargle introduced some changes
 around OAuth and gmailr is syncing up that:
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     `gm_oauth_client()` is a new function to replace the now-deprecated
@@ -112,7 +126,7 @@ around OAuth and gmailr is syncing up that:
     !end-bullet!
 -   !begin-bullet!
     `gm_auth_configure()` has an updated signature:
-    !begin-bullets-5!
+    !begin-bullets-6!
     -   !begin-bullet!
         The first argument is now named `client`, which is morally
         equivalent to the previous `app`, i.e. this is essentially a
@@ -147,14 +161,14 @@ around OAuth and gmailr is syncing up that:
 
         !end-bullet!
 
-    !end-bullets-5!
+    !end-bullets-6!
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 ## Other changes
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     `gm_auth(subject =)` is a new argument that can be used with
@@ -205,23 +219,23 @@ around OAuth and gmailr is syncing up that:
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 # gmailr 1.0.1
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     Jenny Bryan is now the maintainer
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 # gmailr 1.0.0
 
 ## Breaking changes
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     All functions are now prefixed with `gm_*()` to avoid name conflicts
@@ -248,11 +262,11 @@ around OAuth and gmailr is syncing up that:
 
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 ## New features
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     New `gm_attachements()` returns a data.frame of attachment
@@ -280,11 +294,11 @@ around OAuth and gmailr is syncing up that:
 
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 ## Minor improvements and fixes
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     `gm_body()`, `gm_to()`, `gm_from()`, `gm_cc()`, `gm_bcc()` and
@@ -308,11 +322,11 @@ around OAuth and gmailr is syncing up that:
 
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 # gmailr 0.7.1
 
-!begin-bullets-11!
+!begin-bullets-12!
 
 -   !begin-bullet!
     Bundle a application token and secret in gmailr so the average user
@@ -330,13 +344,13 @@ around OAuth and gmailr is syncing up that:
     @josibake
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-12!
 
 # gmailr 0.5.0
 
 ### Major Changes
 
-!begin-bullets-12!
+!begin-bullets-13!
 
 -   !begin-bullet!
     Added ability to create and send drafts and messages. (#5, #6)
@@ -346,11 +360,11 @@ around OAuth and gmailr is syncing up that:
     Email::Stuffer perl module.
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
 
 ### Minor Fixes
 
-!begin-bullets-13!
+!begin-bullets-14!
 
 -   !begin-bullet!
     Namespace was not properly updated (#2)
@@ -359,14 +373,14 @@ around OAuth and gmailr is syncing up that:
     added extraction functions for gmail_messages (#3)
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-14!
 
 # gmailr 0.0.1
 
-!begin-bullets-14!
+!begin-bullets-15!
 
 -   !begin-bullet!
     Initial release
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-15!
