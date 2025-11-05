@@ -1,20 +1,19 @@
 # promises (development version)
 
+# promises 1.5.0
+
+## OpenTelemetry
+
+promises now integrates with the otel package to provide observability
+and tracing for asynchronous operations.
+
 !begin-bullets-1!
 
 -   !begin-bullet!
-    A promise is now a simple classed environment rather than an R6
-    class. This reduces their creation overhead by up to 10x, thereby
-    substantially improving performance. (#191)
-
-    !end-bullet!
--   !begin-bullet!
-    `with_otel_span()` creates an OpenTelemetry span, executes the given
-    expression within it, and ends the span. This function handles both
-    synchronous and asynchronous (promise-based) operations. For
-    promises, the span is automatically ended when the promise resolves
-    or rejects. To access the OpenTelemetry span within your expression,
-    use `otel::get_current_span()`. (#198)
+    `local_otel_promise_domain()` adds an OpenTelemetry span promise
+    domain to the local scope. This is useful for `{coro}` operations
+    where encapsulating the coro operations inside `with_*()` methods is
+    not allowed. (#179)
 
     !end-bullet!
 -   !begin-bullet!
@@ -25,44 +24,48 @@
 
     !end-bullet!
 -   !begin-bullet!
-    `local_otel_promise_domain()` adds an OpenTelemetry span promise
-    domain to the local scope. This is useful for `{coro}` operations
-    where encapsulating the coro operations inside `with_*()` methods is
-    not allowed. (#179)
-
-    !end-bullet!
--   !begin-bullet!
-    Deprecated OpenTelemetry functions to use consistent naming and
-    better reflect their behavior:
-
-    !begin-bullets-2!
-    -   !begin-bullet!
-        `with_ospan_async()` - Please use `with_otel_span()` instead.
-        This name change reflects handling of both synchronous and
-        asynchronous operations, similar to `hybrid_then()`
-        !end-bullet!
-    -   !begin-bullet!
-        `with_ospan_promise_domain()` - Please use
-        `with_otel_promise_domain()` instead.
-        !end-bullet!
-    -   !begin-bullet!
-        `local_ospan_promise_domain()` - Please use
-        `local_otel_promise_domain()` instead.
-        !end-bullet!
-
-    !end-bullets-2!
-    The old function names are now deprecated and will be removed in a
-    future release. (#198)
+    `with_otel_span()` creates an OpenTelemetry span, executes the given
+    expression within it, and ends the span when the expression
+    completes. This function handles both synchronous and asynchronous
+    (promise-based) operations. For promises, the span is automatically
+    ended when the promise resolves or rejects. To access the
+    OpenTelemetry span within your expression, use
+    `otel::get_current_span()`. (#198)
 
     !end-bullet!
 
 !end-bullets-1!
 
+## New features
+
+!begin-bullets-2!
+
+-   !begin-bullet!
+    Promises are now simple classed environments rather than R6 classes.
+    This reduces their creation overhead by up to 10x, thereby
+    substantially improving performance. (#191)
+    !end-bullet!
+
+!end-bullets-2!
+
+## Life cycle changes
+
+!begin-bullets-3!
+
+-   !begin-bullet!
+    `local_ospan_promise_domain()`, `with_ospan_async()`, and
+    `with_ospan_promise_domain()` are deprecated in favor of
+    `local_otel_promise_domain()`, `with_otel_span()`, and
+    `with_otel_promise_domain()` respectively. (#198)
+    !end-bullet!
+
+!end-bullets-3!
+
 # promises 1.4.0
 
 ## Breaking changes
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     Nested promise domains now correctly invoke in reverse order.
@@ -74,11 +77,11 @@
     expected scoping behavior. (#165)
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 ## New features
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     `hybrid_then()` synchronously or asynchronously executes
@@ -97,7 +100,7 @@
 
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 ### OpenTelemetry integration
 
@@ -105,7 +108,7 @@ promises now integrates with the otel package to provide observability
 and tracing for asynchronous operations. OpenTelemetry integration is
 experimental and subject to change.
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     `with_ospan_async()` creates an OpenTelemetry span, executes the
@@ -131,11 +134,11 @@ experimental and subject to change.
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 ## Minor improvements and fixes
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     promises now requires R 4.1 or later. R's native pipe (`|>`) and
@@ -186,11 +189,11 @@ experimental and subject to change.
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 # promises 1.3.3
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     Changed the way we create future objects to stay compatible with new
@@ -205,11 +208,11 @@ experimental and subject to change.
 
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 # promises 1.3.2
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     Fixed bug introduced in 1.3.1, where promise domains that are active
@@ -219,32 +222,32 @@ experimental and subject to change.
     promise domains. (#115)
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 # promises 1.3.1
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     Fixed bug where promise domains were forgotten when handlers were
     registered from within other handlers. (#110)
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 # promises 1.3.0
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     `is.promising` is now an S3 method. (#104)
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 # promises 1.2.1
 
-!begin-bullets-11!
+!begin-bullets-12!
 
 -   !begin-bullet!
     `future_promise()` received a speed improvement when submitting many
@@ -269,11 +272,11 @@ experimental and subject to change.
 
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-12!
 
 # promises 1.2.0.1
 
-!begin-bullets-12!
+!begin-bullets-13!
 
 -   !begin-bullet!
     Added `future_promise()` which returns a `promise` that executes the
@@ -294,22 +297,22 @@ experimental and subject to change.
 
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
 
 # promises 1.1.1
 
-!begin-bullets-13!
+!begin-bullets-14!
 
 -   !begin-bullet!
     Fix handling of FutureErrors during `future::resolved()` and
     `future::value()` by discarding the corrupt future. (#37)
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-14!
 
 # promises 1.1.0
 
-!begin-bullets-14!
+!begin-bullets-15!
 
 -   !begin-bullet!
     Fixed #49: `promise_all()` previously did not handle `NULL` values
@@ -329,14 +332,14 @@ experimental and subject to change.
 
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-15!
 
 # promises 1.0.1
 
-!begin-bullets-15!
+!begin-bullets-16!
 
 -   !begin-bullet!
     Initial CRAN release
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-16!
