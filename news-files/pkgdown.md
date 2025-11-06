@@ -1,5 +1,7 @@
 # pkgdown (development version)
 
+# pkgdown 2.2.0
+
 ## Lifecycle changes
 
 * `autolink_html()` deprecated in 1.6.0 and `preview_page()` have been removed.
