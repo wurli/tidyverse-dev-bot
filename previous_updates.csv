@@ -20080,3 +20080,4 @@ testthat,4031c791689be121c318e82dab86f0c3,`expect_snapshot()` on reports how to 
 testthat,38aa90c32123204866af7b16cb776a3a,"`ParallelProgressReporter` now respects `max_failures` (#1162), and test files with syntax errors are no longer silently ignored (#1360).",NA,NA,NA,NA
 promises,126609e15858726891b37e8ea12e0074,"Promises are now simple classed environments rather than R6 classes. This reduces their creation overhead by up to 10x, thereby substantially improving performance. (#191)",NA,NA,NA,NA
 promises,f8e818295ccc3d22ac2c1ed20e40e498,"`local_ospan_promise_domain()`, `with_ospan_async()`, and `with_ospan_promise_domain()` are deprecated in favor of `local_otel_promise_domain()`, `with_otel_span()`, and `with_otel_promise_domain()` respectively. (#198)",NA,NA,NA,NA
+gargle,5d946dc186905b4bbd58266c5c38c618,`gargle_last_response()` and `gargle_last_content()` are newly exported.,NA,NA,NA,NA
