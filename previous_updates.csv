@@ -20081,3 +20081,7 @@ testthat,38aa90c32123204866af7b16cb776a3a,"`ParallelProgressReporter` now respec
 promises,126609e15858726891b37e8ea12e0074,"Promises are now simple classed environments rather than R6 classes. This reduces their creation overhead by up to 10x, thereby substantially improving performance. (#191)",NA,NA,NA,NA
 promises,f8e818295ccc3d22ac2c1ed20e40e498,"`local_ospan_promise_domain()`, `with_ospan_async()`, and `with_ospan_promise_domain()` are deprecated in favor of `local_otel_promise_domain()`, `with_otel_span()`, and `with_otel_promise_domain()` respectively. (#198)",NA,NA,NA,NA
 gargle,5d946dc186905b4bbd58266c5c38c618,`gargle_last_response()` and `gargle_last_content()` are newly exported.,NA,NA,NA,NA
+duckplyr,342eba53fe69134021db3481f1568627,Sync (#805).,NA,NA,NA,NA
+hms,cca56fe3fa26b5776b4610e42dbf6f57,Sync (#190).,NA,NA,NA,NA
+pillar,c3fed64d15b0aafdc47c770947685d86,Sync (#810).,NA,NA,NA,NA
+tibble,5707421af8dbf8e45edcc8b371bf94f2,Sync (#1668).,NA,NA,NA,NA
