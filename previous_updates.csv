@@ -20085,3 +20085,7 @@ duckplyr,342eba53fe69134021db3481f1568627,Sync (#805).,NA,NA,NA,NA
 hms,cca56fe3fa26b5776b4610e42dbf6f57,Sync (#190).,NA,NA,NA,NA
 pillar,c3fed64d15b0aafdc47c770947685d86,Sync (#810).,NA,NA,NA,NA
 tibble,5707421af8dbf8e45edcc8b371bf94f2,Sync (#1668).,NA,NA,NA,NA
+tibble,4afb7cfd6860a63427318732fb24c961,Avoid use of `SET_OBJECT()` (#1671).,NA,NA,NA,NA
+tibble,9a1ba38d1a9f5b968c1c13840de3531d,Enable `clang-format` (#1670).,NA,NA,NA,NA
+tibble,0f0d3f308192f28d8e81d90d878fa34e,"Snapshot updates for R-CMD-check-dev ({""package"":""vctrs""}) (#1666).",NA,NA,NA,NA
+tibble,aac86d4ccc7bb3852555703ecba78968,"Snapshot updates for R-CMD-check-dev ({""package"":""knitr""}) (#1626).",NA,NA,NA,NA
