@@ -20089,3 +20089,24 @@ tibble,4afb7cfd6860a63427318732fb24c961,Avoid use of `SET_OBJECT()` (#1671).,NA,
 tibble,9a1ba38d1a9f5b968c1c13840de3531d,Enable `clang-format` (#1670).,NA,NA,NA,NA
 tibble,0f0d3f308192f28d8e81d90d878fa34e,"Snapshot updates for R-CMD-check-dev ({""package"":""vctrs""}) (#1666).",NA,NA,NA,NA
 tibble,aac86d4ccc7bb3852555703ecba78968,"Snapshot updates for R-CMD-check-dev ({""package"":""knitr""}) (#1626).",NA,NA,NA,NA
+blob,334c444180bcd0c898e2cac396e1a0e1,Auto-update from GitHub Actions. Run: https://github.com/tidyverse/blob/actions/runs/14636194825,NA,NA,NA,NA
+blob,dc31e5c44e02d7385e17b439671ebbf1,Use workflows for fledge (#62).,NA,NA,NA,NA
+blob,b0106ea58ab4a769ecc8bbcc16bf12d0,Sync (#61).,NA,NA,NA,NA
+blob,6054b0c3625d0f60069aef17094fc3b3,Use reviewdog for external PRs (#59).,NA,NA,NA,NA
+blob,a1a81684b03da5ac85a7696ac54ef3e2,Cleanup and fix macOS (#58).,NA,NA,NA,NA
+blob,f43423f024180f875cae599f54e2465a,"Format with air, check detritus, better handling of `extra-packages` (#57).",NA,NA,NA,NA
+blob,11cec645b5767e92934fb9e55fd4fb1e,Enhance permissions for workflow (#53).,NA,NA,NA,NA
+blob,6c8e18a0bb373e4fc0acd1c81469a6ca,"Permissions, better tests for missing suggests, lints (#52).",NA,NA,NA,NA
+blob,e15400a84db4ee767f2b16879dc74d05,Only fail covr builds if token is given (#51).,NA,NA,NA,NA
+blob,d83670bfaccd4da8010b7c83830cc6d4,Always use `_R_CHECK_FORCE_SUGGESTS_=false` (#50).,NA,NA,NA,NA
+blob,37cedc82ee8dff8c2d0dac14c546f941,Correct installation of xml2 (#49).,NA,NA,NA,NA
+blob,1cfd055083d99acc3171954b1e07d037,Explain (#48).,NA,NA,NA,NA
+blob,8163c5477fdd968aa57a52b40a911a39,"Add xml2 for covr, print testthat results (#47).",NA,NA,NA,NA
+blob,902ddad537d0590f759da40afe8a5bf7,Fix (#46).,NA,NA,NA,NA
+blob,08c5ed6704565ad82d2fc2e2ae5b1dcb,Sync (#45).,NA,NA,NA,NA
+hms,85b4cf306e2ae0df5214d309f66d0692,Sync (#192).,NA,NA,NA,NA
+tibble,d5cf70e33b76e44e06c5c4ae00a9dbed,Checkout unconditionally to avoid removal of patch file.,NA,NA,NA,NA
+tibble,c585ee3a8d4b7ee6673287b48e42cf07,Improve reviewdog.,NA,NA,NA,NA
+tibble,795d1a6b8fc14e583396053369edc91a,Run reviewdog from separate workflow.,NA,NA,NA,NA
+tibble,2dd436868db583c50280cb8fb4c77dda,Use workflows for fledge (#1676).,NA,NA,NA,NA
+tibble,653786ff1c176887b78ee6cff3790f41,"Snapshot updates for R-CMD-check-dev ({""package"":""dplyr""}) (#1672).",NA,NA,NA,NA
