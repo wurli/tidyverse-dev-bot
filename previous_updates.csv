@@ -20110,3 +20110,4 @@ tibble,c585ee3a8d4b7ee6673287b48e42cf07,Improve reviewdog.,NA,NA,NA,NA
 tibble,795d1a6b8fc14e583396053369edc91a,Run reviewdog from separate workflow.,NA,NA,NA,NA
 tibble,2dd436868db583c50280cb8fb4c77dda,Use workflows for fledge (#1676).,NA,NA,NA,NA
 tibble,653786ff1c176887b78ee6cff3790f41,"Snapshot updates for R-CMD-check-dev ({""package"":""dplyr""}) (#1672).",NA,NA,NA,NA
+pins,d1b7e7ce15ed6cbd8614749ae15f2847,"Added support for `pin_list()` to `board_gcs()` for Google Cloud Storage (#889, @​sverrirarnors).",NA,NA,NA,NA

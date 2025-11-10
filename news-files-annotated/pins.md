@@ -25,6 +25,11 @@
     functions such as `pin()` (#879).
 
     !end-bullet!
+-   !begin-bullet!
+    Added support for `pin_list()` to `board_gcs()` for Google Cloud
+    Storage (#889, @sverrirarnors).
+
+    !end-bullet!
 
 !end-bullets-1!
 
