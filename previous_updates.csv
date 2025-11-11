@@ -20128,3 +20128,7 @@ tibble,0195a6db575c3c1b89defc5e3879e24a,Keep error.,NA,NA,NA,NA
 tibble,d747c8e462a01ebfdfd6d7e5ffbf9aa7,Tweaks.,NA,NA,NA,NA
 tibble,cc9916dc6e93758ef8cad4c37718e8d8,Syntax.,NA,NA,NA,NA
 tibble,fc26c44c299ca618f8e7be8b8a14a07d,Use `pull_request_target`.,NA,NA,NA,NA
+gmailr,13a4a0e82063a5ed1b5fb374b5456b3d,"All HTTP responses are passed through `gargle::response_process()`, which updates gmailr's error handling to be consistent with other packages that use gargle for HTTP requests. Users might notice that errors are more verbose (and hopefully more informative). Also the class vector has changed:",NA,NA,NA,NA
+gmailr,13a4a0e82063a5ed1b5fb374b5456b3d,"• Previously: `c(""condition"", ""error"", ""gmail_error"")`",NA,NA,NA,NA
+gmailr,13a4a0e82063a5ed1b5fb374b5456b3d,"• Now: `c(""gmailr_error"", ""gargle_error_request_failed"", ""http_error_{XXX}"", ""gargle_error"", ""rlang_error"", ""error"", ""condition"")`",NA,NA,NA,NA
+gmailr,bdb4ab91752bd70390cca1929bede3c7,"`gm_last_response()` is deprecated, in favor of `gargle::gargle_last_response()`, since gmailr no longer caches the last response itself.",NA,NA,NA,NA

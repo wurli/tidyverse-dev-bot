@@ -1,8 +1,31 @@
 # gmailr (development version)
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    All HTTP responses are passed through `gargle::response_process()`,
+    which updates gmailr's error handling to be consistent with other
+    packages that use gargle for HTTP requests. Users might notice that
+    errors are more verbose (and hopefully more informative). Also the
+    class vector has changed:
+
+    !begin-bullets-2!
+    -   !begin-bullet!
+        Previously: `c("condition", "error", "gmail_error")`
+        !end-bullet!
+    -   !begin-bullet!
+        Now:
+        `c("gmailr_error", "gargle_error_request_failed", "http_error_{XXX}", "gargle_error", "rlang_error", "error", "condition")`
+        !end-bullet!
+
+    !end-bullets-2!
+    !end-bullet!
+
+!end-bullets-1!
+
 ## Deprecations
 
-!begin-bullets-1!
+!begin-bullets-3!
 
 -   !begin-bullet!
     Functions that lack the `gm_` prefix have been removed, concluding a
@@ -18,28 +41,33 @@
     deprecation timeline as described above.
 
     !end-bullet!
+-   !begin-bullet!
+    `gm_last_response()` is deprecated, in favor of
+    `gargle::gargle_last_response()`, since gmailr no longer caches the
+    last response itself.
 
-!end-bullets-1!
+    !end-bullet!
+
+!end-bullets-3!
 
 ## Bug fixes
 
-!begin-bullets-2!
+!begin-bullets-4!
 
 -   !begin-bullet!
     Fixed MIME structure for emails with text+HTML bodies and
     attachments. These messages now correctly use nested
-    `multipart/mixed` (outer) containing `multipart/alternative`
-    (text/HTML), preventing the loss of some of the message parts
-    (#202).
+    `multipart/mixed` (outer) containing `multipart/alternative` (inner
+    text/HTML), preventing the loss of some of the message parts (#202).
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-4!
 
 # gmailr 2.0.0
 
 ## Changes around the OAuth client
 
-!begin-bullets-3!
+!begin-bullets-5!
 
 -   !begin-bullet!
     Set up an OAuth client is a new non-vignette article with detailed
@@ -76,11 +104,11 @@
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-5!
 
 ## Storing and deploying a token
 
-!begin-bullets-4!
+!begin-bullets-6!
 
 -   !begin-bullet!
     `gm_token_write()` + `gm_token_read()` is a new matched pair of
@@ -103,14 +131,14 @@
 
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-6!
 
 ## Syncing up with gargle
 
 Versions 1.3.0, 1.4.0, and 1.5.1 of gargle introduced some changes
 around OAuth and gmailr is syncing up that:
 
-!begin-bullets-5!
+!begin-bullets-7!
 
 -   !begin-bullet!
     `gm_oauth_client()` is a new function to replace the now-deprecated
@@ -126,7 +154,7 @@ around OAuth and gmailr is syncing up that:
     !end-bullet!
 -   !begin-bullet!
     `gm_auth_configure()` has an updated signature:
-    !begin-bullets-6!
+    !begin-bullets-8!
     -   !begin-bullet!
         The first argument is now named `client`, which is morally
         equivalent to the previous `app`, i.e. this is essentially a
@@ -161,14 +189,14 @@ around OAuth and gmailr is syncing up that:
 
         !end-bullet!
 
-    !end-bullets-6!
+    !end-bullets-8!
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-7!
 
 ## Other changes
 
-!begin-bullets-7!
+!begin-bullets-9!
 
 -   !begin-bullet!
     `gm_auth(subject =)` is a new argument that can be used with
@@ -219,23 +247,23 @@ around OAuth and gmailr is syncing up that:
 
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-9!
 
 # gmailr 1.0.1
 
-!begin-bullets-8!
+!begin-bullets-10!
 
 -   !begin-bullet!
     Jenny Bryan is now the maintainer
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-10!
 
 # gmailr 1.0.0
 
 ## Breaking changes
 
-!begin-bullets-9!
+!begin-bullets-11!
 
 -   !begin-bullet!
     All functions are now prefixed with `gm_*()` to avoid name conflicts
@@ -262,11 +290,11 @@ around OAuth and gmailr is syncing up that:
 
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-11!
 
 ## New features
 
-!begin-bullets-10!
+!begin-bullets-12!
 
 -   !begin-bullet!
     New `gm_attachements()` returns a data.frame of attachment
@@ -294,11 +322,11 @@ around OAuth and gmailr is syncing up that:
 
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-12!
 
 ## Minor improvements and fixes
 
-!begin-bullets-11!
+!begin-bullets-13!
 
 -   !begin-bullet!
     `gm_body()`, `gm_to()`, `gm_from()`, `gm_cc()`, `gm_bcc()` and
@@ -322,11 +350,11 @@ around OAuth and gmailr is syncing up that:
 
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-13!
 
 # gmailr 0.7.1
 
-!begin-bullets-12!
+!begin-bullets-14!
 
 -   !begin-bullet!
     Bundle a application token and secret in gmailr so the average user
@@ -344,13 +372,13 @@ around OAuth and gmailr is syncing up that:
     @josibake
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-14!
 
 # gmailr 0.5.0
 
 ### Major Changes
 
-!begin-bullets-13!
+!begin-bullets-15!
 
 -   !begin-bullet!
     Added ability to create and send drafts and messages. (#5, #6)
@@ -360,11 +388,11 @@ around OAuth and gmailr is syncing up that:
     Email::Stuffer perl module.
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-15!
 
 ### Minor Fixes
 
-!begin-bullets-14!
+!begin-bullets-16!
 
 -   !begin-bullet!
     Namespace was not properly updated (#2)
@@ -373,14 +401,14 @@ around OAuth and gmailr is syncing up that:
     added extraction functions for gmail_messages (#3)
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-16!
 
 # gmailr 0.0.1
 
-!begin-bullets-15!
+!begin-bullets-17!
 
 -   !begin-bullet!
     Initial release
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-17!
