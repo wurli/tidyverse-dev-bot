@@ -100,6 +100,13 @@
 !begin-bullets-3!
 
 -   !begin-bullet!
+    New `extract_test()` function to extract a reprex from a failing
+    expectation. tests run in `R CMD check` will use this to
+    automatically create a reprex in the `_problems/` directory for each
+    failing expectation. You can turn this behaviour off by setting
+    `TESTTHAT_PROBLEMS=false` (#2263).
+    !end-bullet!
+-   !begin-bullet!
     New `local_mocked_s3_method()`, `local_mocked_s4_method()`, and
     `local_mocked_r6_class()` allow you to mock S3 and S4 methods and R6
     classes (#1892, #1916)
@@ -205,6 +212,10 @@
     `expect_snapshot()` and `expect_snapshot_file()` hints now include
     the path to the package, if it's not the current working directory
     (#1577).
+    !end-bullet!
+-   !begin-bullet!
+    `expect_snapshot()` gives a more informative backtrace when the code
+    inside the snapshot errors (#2277).
     !end-bullet!
 -   !begin-bullet!
     `expect_snapshot_file()` now clearly errors if the `path` doesn't
