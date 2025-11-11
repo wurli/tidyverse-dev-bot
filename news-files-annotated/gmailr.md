@@ -20,6 +20,12 @@
 
     !end-bullets-2!
     !end-bullet!
+-   !begin-bullet!
+    Text headers, such as `Subject`, are now properly prepared as per
+    RFC 2047, fixing a problem with long-ish headers that contain
+    non-ASCII characters (#193).
+
+    !end-bullet!
 
 !end-bullets-1!
 

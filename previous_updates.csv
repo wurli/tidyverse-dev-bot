@@ -20136,3 +20136,4 @@ testthat,8de165c4c9cdf7a980b8ce17f3c7510b,New `extract_test()` function to extra
 testthat,576fa5e1cc730998ac4cfcaa0cb414d1,`expect_snapshot()` gives a more informative backtrace when the code inside the snapshot errors (#2277).,NA,NA,NA,NA
 lintr,1b802838c8776a20bc25a748c93373b2,"`line_length_linter()` has a new argument `ignore_string_bodies` (defaulting to `FALSE`) which governs whether the contents of multi-line string bodies should be linted (#856, @​MichaelChirico). We think the biggest use case for this is writing SQL in R strings, especially in cases where the recommended string width for SQL & R differ.",NA,NA,NA,NA
 multidplyr,15d257d6a6987fa93a7290b8a47c7f29,"Switch to qs2, as qs is being archived (@​traversc, #159).",NA,NA,NA,NA
+gmailr,5247ad8a806c70a268bcb30e18091751,"Text headers, such as `Subject`, are now properly prepared as per RFC 2047, fixing a problem with long-ish headers that contain non-ASCII characters (#193).",NA,NA,NA,NA
