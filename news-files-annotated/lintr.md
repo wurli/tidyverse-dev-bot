@@ -232,6 +232,14 @@
     disable lints for the use of `(` for auto-printing (#2962,
     @TimTaylor).
     !end-bullet!
+-   !begin-bullet!
+    `line_length_linter()` has a new argument `ignore_string_bodies`
+    (defaulting to `FALSE`) which governs whether the contents of
+    multi-line string bodies should be linted (#856, @MichaelChirico).
+    We think the biggest use case for this is writing SQL in R strings,
+    especially in cases where the recommended string width for SQL & R
+    differ.
+    !end-bullet!
 
 !end-bullets-5!
 
