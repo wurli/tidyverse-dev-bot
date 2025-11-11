@@ -20111,3 +20111,20 @@ tibble,795d1a6b8fc14e583396053369edc91a,Run reviewdog from separate workflow.,NA
 tibble,2dd436868db583c50280cb8fb4c77dda,Use workflows for fledge (#1676).,NA,NA,NA,NA
 tibble,653786ff1c176887b78ee6cff3790f41,"Snapshot updates for R-CMD-check-dev ({""package"":""dplyr""}) (#1672).",NA,NA,NA,NA
 pins,d1b7e7ce15ed6cbd8614749ae15f2847,"Added support for `pin_list()` to `board_gcs()` for Google Cloud Storage (#889, @​sverrirarnors).",NA,NA,NA,NA
+duckplyr,f6b63db9cc0d19744a6737e52bffbd6b,Use workflows for fledge (#807).,NA,NA,NA,NA
+pillar,6a501aab496a595d46df0279e463b73a,Use workflows for fledge (#812).,NA,NA,NA,NA
+tibble,10ea17f37fa3e93247dc32bf69bb36c9,"Implement review workflows (@​krlmlr, #1675).",NA,NA,NA,NA
+tibble,df2f53414799e504e39cb66af4b1a89b,Use comment action.,NA,NA,NA,NA
+tibble,de935fff3d9da1a2b79a21bf544916e7,Comment only.,NA,NA,NA,NA
+tibble,088a9c83a554c289aa97f8734dabfc5c,Token.,NA,NA,NA,NA
+tibble,b1e3d4fbc1d38d04e8cf933e9f0b8ab4,Find PR.,NA,NA,NA,NA
+tibble,1a1b1733454c62189933eeb59daf6793,Debug.,NA,NA,NA,NA
+tibble,5b59635d81a46b0ffdad13d540486238,Fix data source.,NA,NA,NA,NA
+tibble,1110626865ee2235311c719c7839d8d3,Rename.,NA,NA,NA,NA
+tibble,dd6990fc445e8eac70dccdeefc01e85d,Get PR number correctly.,NA,NA,NA,NA
+tibble,009aeb4e64696b837e912291e867669d,Need token.,NA,NA,NA,NA
+tibble,3c1d42e006b9fa2a5d79151270698e6b,Try again commenting from completion workflow.,NA,NA,NA,NA
+tibble,0195a6db575c3c1b89defc5e3879e24a,Keep error.,NA,NA,NA,NA
+tibble,d747c8e462a01ebfdfd6d7e5ffbf9aa7,Tweaks.,NA,NA,NA,NA
+tibble,cc9916dc6e93758ef8cad4c37718e8d8,Syntax.,NA,NA,NA,NA
+tibble,fc26c44c299ca618f8e7be8b8a14a07d,Use `pull_request_target`.,NA,NA,NA,NA
