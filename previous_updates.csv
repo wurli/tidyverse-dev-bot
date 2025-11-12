@@ -20147,3 +20147,28 @@ vctrs,bc0a125045b2915aa323a032800942bf,• `is_partial()`,NA,NA,NA,NA
 vctrs,bc0a125045b2915aa323a032800942bf,• `new_partial()`,NA,NA,NA,NA
 vctrs,bc0a125045b2915aa323a032800942bf,• `partial_factor()`,NA,NA,NA,NA
 vctrs,bc0a125045b2915aa323a032800942bf,• `partial_frame()`,NA,NA,NA,NA
+dplyr,8f8e1f6c373a551406e5f2ba60cedc35,"The following were already deprecated, and are now defunct:",NA,NA,NA,NA
+dplyr,8f8e1f6c373a551406e5f2ba60cedc35,"• `combine()`. Deprecated in 1.0.0, use `c()` or `vctrs::vec_c()` instead.",NA,NA,NA,NA
+dplyr,8f8e1f6c373a551406e5f2ba60cedc35,"• `src_mysql()`, `src_postgres()`, `src_sqlite()`, `src_local()`, and `src_df()`. Deprecated in 1.0.0, use `tbl()` instead.",NA,NA,NA,NA
+dplyr,8f8e1f6c373a551406e5f2ba60cedc35,"• `tbl_df()` and `as.tbl()`. Deprecated in 1.0.0, use `tibble::as_tibble()` instead.",NA,NA,NA,NA
+dplyr,8f8e1f6c373a551406e5f2ba60cedc35,"• `add_rownames()`. Deprecated in 1.0.0, use `tibble::rownames_to_column()` instead.",NA,NA,NA,NA
+dplyr,8f8e1f6c373a551406e5f2ba60cedc35,"• The `.drop` argument of `add_count()`. Deprecated in 1.0.0, had no effect.",NA,NA,NA,NA
+dplyr,8f8e1f6c373a551406e5f2ba60cedc35,"• The `add` argument of `group_by()` and `group_by_prepare()`. Deprecated in 1.0.0, use `.add` instead.",NA,NA,NA,NA
+dplyr,8f8e1f6c373a551406e5f2ba60cedc35,• The `.dots` argument of `group_by()` and `group_by_prepare()`. Deprecated in 1.0.0.,NA,NA,NA,NA
+dplyr,8f8e1f6c373a551406e5f2ba60cedc35,"• The `...` argument of `group_keys()` and `group_indices()`. Deprecated in 1.0.0, use `group_by()` first.",NA,NA,NA,NA
+dplyr,8f8e1f6c373a551406e5f2ba60cedc35,"• The `keep` argument of `group_map()`, `group_modify()`, and `group_split()`. Deprecated in 1.0.0, use `.keep` instead.",NA,NA,NA,NA
+dplyr,8f8e1f6c373a551406e5f2ba60cedc35,"• `multiple = NULL` in joins. Deprecated in 1.1.1, use `multiple = ""all""` instead.",NA,NA,NA,NA
+dplyr,8f8e1f6c373a551406e5f2ba60cedc35,"• `multiple = ""error"" / ""warning""` in joins. Deprecated in 1.1.1, use `relationship = ""many-to-one""` instead.",NA,NA,NA,NA
+dplyr,8f8e1f6c373a551406e5f2ba60cedc35,• The `vars` argument of `group_cols()`. Deprecated in 1.0.0.,NA,NA,NA,NA
+dplyr,68f2ce0ee9daeee4f2fe8b95b5bb315e,"The following were already deprecated, and now warn unconditionally if used:",NA,NA,NA,NA
+dplyr,68f2ce0ee9daeee4f2fe8b95b5bb315e,"• `all_equal()`. Deprecated in 1.1.0, use `all.equal()` instead.",NA,NA,NA,NA
+dplyr,68f2ce0ee9daeee4f2fe8b95b5bb315e,• `progress_estimated()`. Deprecated in 1.0.0.,NA,NA,NA,NA
+dplyr,68f2ce0ee9daeee4f2fe8b95b5bb315e,"• `filter()` with a 1 column matrix. Deprecated in 1.1.0, use a vector instead.",NA,NA,NA,NA
+dplyr,68f2ce0ee9daeee4f2fe8b95b5bb315e,"• `slice()` with a 1 column matrix. Deprecated in 1.1.0, use a vector instead.",NA,NA,NA,NA
+dplyr,68f2ce0ee9daeee4f2fe8b95b5bb315e,• Not supplying the `.cols` argument of `across()`. Deprecated in 1.1.0.,NA,NA,NA,NA
+dplyr,68f2ce0ee9daeee4f2fe8b95b5bb315e,"• `group_indices()` with no arguments. Deprecated in 1.0.0, use `cur_group_id()` instead.",NA,NA,NA,NA
+dplyr,44087ccbd5698c7a2cf563488a6cc8f1,"The following were already soft-deprecated, and now warn unconditionally once per session if used:",NA,NA,NA,NA
+dplyr,44087ccbd5698c7a2cf563488a6cc8f1,"• `cur_data()` and `cur_data_all()`. Deprecated in 1.1.0, use `pick()` instead.",NA,NA,NA,NA
+dplyr,44087ccbd5698c7a2cf563488a6cc8f1,"• The `...` argument of `across()`. Deprecated in 1.1.0, use an anonymous function instead.",NA,NA,NA,NA
+dplyr,44087ccbd5698c7a2cf563488a6cc8f1,"• Using `by = character()` to perform a cross join. Deprecated in 1.1.0, use `cross_join()` instead.",NA,NA,NA,NA
+dplyr,d751a4fc92e59b0bd14dd82e50879e64,`.by` has moved from experimental to stable (#7762).,NA,NA,NA,NA
