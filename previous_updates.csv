@@ -20137,3 +20137,8 @@ testthat,576fa5e1cc730998ac4cfcaa0cb414d1,`expect_snapshot()` gives a more infor
 lintr,1b802838c8776a20bc25a748c93373b2,"`line_length_linter()` has a new argument `ignore_string_bodies` (defaulting to `FALSE`) which governs whether the contents of multi-line string bodies should be linted (#856, @​MichaelChirico). We think the biggest use case for this is writing SQL in R strings, especially in cases where the recommended string width for SQL & R differ.",NA,NA,NA,NA
 multidplyr,15d257d6a6987fa93a7290b8a47c7f29,"Switch to qs2, as qs is being archived (@​traversc, #159).",NA,NA,NA,NA
 gmailr,5247ad8a806c70a268bcb30e18091751,"Text headers, such as `Subject`, are now properly prepared as per RFC 2047, fixing a problem with long-ish headers that contain non-ASCII characters (#193).",NA,NA,NA,NA
+blob,8788c8c815f83f7f13713d4e8e820111,Fix reviewdog and add commenting workflow (#63).,NA,NA,NA,NA
+duckplyr,d728e7008e06af141edf2039d1694954,Fix reviewdog and add commenting workflow (#810).,NA,NA,NA,NA
+hms,341bcd38de93650a4a42552a812df1e0,Fix reviewdog and add commenting workflow (#194).,NA,NA,NA,NA
+pillar,50d513e6aa7e146fe0f271752377cd1c,Fix reviewdog and add commenting workflow (#815).,NA,NA,NA,NA
+tibble,b96fe0a9ccc445a296a54bbbf5e606e7,Rename (#1677).,NA,NA,NA,NA
