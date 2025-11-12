@@ -268,6 +268,11 @@
 
         !end-bullet!
     -   !begin-bullet!
+        Using `across()` and data frames in `filter()`. Deprecated in
+        1.0.8, use `if_any()` or `if_all()` instead.
+
+        !end-bullet!
+    -   !begin-bullet!
         `multiple = NULL` in joins. Deprecated in 1.1.1, use
         `multiple = "all"` instead.
 
