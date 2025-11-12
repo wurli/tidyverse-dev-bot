@@ -20142,3 +20142,8 @@ duckplyr,d728e7008e06af141edf2039d1694954,Fix reviewdog and add commenting workf
 hms,341bcd38de93650a4a42552a812df1e0,Fix reviewdog and add commenting workflow (#194).,NA,NA,NA,NA
 pillar,50d513e6aa7e146fe0f271752377cd1c,Fix reviewdog and add commenting workflow (#815).,NA,NA,NA,NA
 tibble,b96fe0a9ccc445a296a54bbbf5e606e7,Rename (#1677).,NA,NA,NA,NA
+vctrs,bc0a125045b2915aa323a032800942bf,"Experimental ""partial"" type support has been removed. This idea never panned out and was not widely used. The following functions have been removed (#2101):",NA,NA,NA,NA
+vctrs,bc0a125045b2915aa323a032800942bf,• `is_partial()`,NA,NA,NA,NA
+vctrs,bc0a125045b2915aa323a032800942bf,• `new_partial()`,NA,NA,NA,NA
+vctrs,bc0a125045b2915aa323a032800942bf,• `partial_factor()`,NA,NA,NA,NA
+vctrs,bc0a125045b2915aa323a032800942bf,• `partial_frame()`,NA,NA,NA,NA

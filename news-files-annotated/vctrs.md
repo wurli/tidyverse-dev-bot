@@ -3,6 +3,27 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Experimental "partial" type support has been removed. This idea
+    never panned out and was not widely used. The following functions
+    have been removed (#2101):
+
+    !begin-bullets-2!
+    -   !begin-bullet!
+        `is_partial()`
+        !end-bullet!
+    -   !begin-bullet!
+        `new_partial()`
+        !end-bullet!
+    -   !begin-bullet!
+        `partial_factor()`
+        !end-bullet!
+    -   !begin-bullet!
+        `partial_frame()`
+        !end-bullet!
+
+    !end-bullets-2!
+    !end-bullet!
+-   !begin-bullet!
     Methods for the deprecated testthat function
     `is_informative_error()` have been removed (#2089).
 
@@ -33,7 +54,7 @@
     New `list_combine()` for combining a list of vectors together
     according to a set of `indices`. We now recommend using:
 
-    !begin-bullets-2!
+    !begin-bullets-3!
     -   !begin-bullet!
         `list_combine(x, indices = indices, size = size)` over
         `list_unchop(x, indices = indices)`
@@ -42,7 +63,7 @@
         `vec_c(!!!x)` over `list_unchop(x)`
         !end-bullet!
 
-    !end-bullets-2!
+    !end-bullets-3!
     `list_unchop()` is not being deprecated, we just no longer feel like
     it has the best name or the most correct API, and all future work
     will be put into improving `list_combine()`. `list_combine()` is
@@ -174,7 +195,7 @@
 -   !begin-bullet!
     The following functions are no longer experimental:
 
-    !begin-bullets-3!
+    !begin-bullets-4!
     -   !begin-bullet!
         `vec_fill_missing()`
         !end-bullet!
@@ -191,7 +212,7 @@
         `vec_locate_matches()`
         !end-bullet!
 
-    !end-bullets-3!
+    !end-bullets-4!
     !end-bullet!
 -   !begin-bullet!
     Hashing is now supported for lists containing complex or raw
@@ -209,7 +230,7 @@
 
 # vctrs 0.6.5
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     Internal changes requested by CRAN around C level format strings
@@ -221,11 +242,11 @@
 
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 # vctrs 0.6.4
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     Fixed a performance issue with `vec_c()` and ALTREP vectors (in
@@ -247,11 +268,11 @@
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # vctrs 0.6.3
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     Fixed an issue where certain ALTREP row names were being
@@ -275,11 +296,11 @@
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 # vctrs 0.6.2
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     Fixed conditional S3 registration to avoid a CRAN check NOTE that
@@ -292,21 +313,21 @@
 
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 # vctrs 0.6.1
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     Fixed a test related to `c.sfc()` changes in sf 1.0-10 (#1817).
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 # vctrs 0.6.0
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     New `vec_run_sizes()` for computing the size of each run within a
@@ -379,11 +400,11 @@
 
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 # vctrs 0.5.2
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     New `vec_expand_grid()`, which is a lower level helper that is
@@ -416,21 +437,21 @@
 
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 # vctrs 0.5.1
 
-!begin-bullets-11!
+!begin-bullets-12!
 
 -   !begin-bullet!
     Fix for CRAN checks.
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-12!
 
 # vctrs 0.5.0
 
-!begin-bullets-12!
+!begin-bullets-13!
 
 -   !begin-bullet!
     vctrs is now compliant with `-Wstrict-prototypes` as requested by
@@ -762,21 +783,21 @@
 
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
 
 # vctrs 0.4.2
 
-!begin-bullets-13!
+!begin-bullets-14!
 
 -   !begin-bullet!
     HTML documentation fixes for CRAN checks.
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-14!
 
 # vctrs 0.4.1
 
-!begin-bullets-14!
+!begin-bullets-15!
 
 -   !begin-bullet!
     OOB errors with `character()` indexes use "that don't exist" instead
@@ -789,11 +810,11 @@
 
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-15!
 
 # vctrs 0.4.0
 
-!begin-bullets-15!
+!begin-bullets-16!
 
 -   !begin-bullet!
     New experimental `vec_locate_sorted_groups()` for returning the
@@ -886,7 +907,7 @@
     makes it possible to report the correct context in error messages.
     This concerns:
 
-    !begin-bullets-16!
+    !begin-bullets-17!
     -   !begin-bullet!
         `vec_cast()` and `vec_ptype2()`
         !end-bullet!
@@ -903,7 +924,7 @@
         `stop_` constructors like `stop_incompatible_type()`
         !end-bullet!
 
-    !end-bullets-16!
+    !end-bullets-17!
     Note that default `vec_cast()` and `vec_ptype2()` methods
     automatically support this if they pass `...` to the corresponding
     `vec_default_` functions. If you throw a non-internal error from a
@@ -1027,21 +1048,21 @@
 
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-16!
 
 # vctrs 0.3.8
 
-!begin-bullets-17!
+!begin-bullets-18!
 
 -   !begin-bullet!
     Compatibility with next version of rlang.
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-18!
 
 # vctrs 0.3.7
 
-!begin-bullets-18!
+!begin-bullets-19!
 
 -   !begin-bullet!
     `vec_ptype_abbr()` gains arguments to control whether to indicate
@@ -1084,11 +1105,11 @@
 
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-19!
 
 # vctrs 0.3.6
 
-!begin-bullets-19!
+!begin-bullets-20!
 
 -   !begin-bullet!
     Fixed an issue with tibble 3.0.0 where removing column names with
@@ -1100,11 +1121,11 @@
 
     !end-bullet!
 
-!end-bullets-19!
+!end-bullets-20!
 
 # vctrs 0.3.5
 
-!begin-bullets-20!
+!begin-bullets-21!
 
 -   !begin-bullet!
     New experimental `vec_fill_missing()` for filling in missing values
@@ -1154,21 +1175,21 @@
 
     !end-bullet!
 
-!end-bullets-20!
+!end-bullets-21!
 
 # vctrs 0.3.4
 
-!begin-bullets-21!
+!begin-bullets-22!
 
 -   !begin-bullet!
     Fixed a GCC sanitiser error revealed by CRAN checks.
     !end-bullet!
 
-!end-bullets-21!
+!end-bullets-22!
 
 # vctrs 0.3.3
 
-!begin-bullets-22!
+!begin-bullets-23!
 
 -   !begin-bullet!
     The `table` class is now implemented as a wrapper type that
@@ -1278,11 +1299,11 @@
 
     !end-bullet!
 
-!end-bullets-22!
+!end-bullets-23!
 
 # vctrs 0.3.2
 
-!begin-bullets-23!
+!begin-bullets-24!
 
 -   !begin-bullet!
     Fixed a performance issue in `bind_rows()` with S3 columns (#1122,
@@ -1308,11 +1329,11 @@
 
     !end-bullet!
 
-!end-bullets-23!
+!end-bullets-24!
 
 # vctrs 0.3.1
 
-!begin-bullets-24!
+!begin-bullets-25!
 
 -   !begin-bullet!
     `vec_slice()` no longer restores attributes of foreign objects for
@@ -1358,11 +1379,11 @@
 
     !end-bullet!
 
-!end-bullets-24!
+!end-bullets-25!
 
 ## CRAN results
 
-!begin-bullets-25!
+!begin-bullets-26!
 
 -   !begin-bullet!
     Fixed type declaration mismatches revealed by LTO build.
@@ -1371,7 +1392,7 @@
     Fixed r-devel issue with new `c.factor()` method.
     !end-bullet!
 
-!end-bullets-25!
+!end-bullets-26!
 
 # vctrs 0.3.0
 
@@ -1383,7 +1404,7 @@ There are three new documentation topics if you'd like to learn how to
 implement coercion methods to make your class compatible with tidyverse
 packages like dplyr:
 
-!begin-bullets-26!
+!begin-bullets-27!
 
 -   !begin-bullet!
     https://vctrs.r-lib.org/reference/theory-faq-coercion.html for an
@@ -1401,13 +1422,13 @@ packages like dplyr:
 
     !end-bullet!
 
-!end-bullets-26!
+!end-bullets-27!
 
 ## Reverse dependencies troubleshooting
 
 The following errors are caused by breaking changes.
 
-!begin-bullets-27!
+!begin-bullets-28!
 
 -   !begin-bullet!
     `"Can't convert <character> to <list>."`
@@ -1431,11 +1452,11 @@ The following errors are caused by breaking changes.
 
     !end-bullet!
 
-!end-bullets-27!
+!end-bullets-28!
 
 ## Breaking changes
 
-!begin-bullets-28!
+!begin-bullets-29!
 
 -   !begin-bullet!
     Double-dispatch methods for `vec_ptype2()` and `vec_cast()` are no
@@ -1458,7 +1479,7 @@ The following errors are caused by breaking changes.
     `vec_ptype2()` methods (#606, #741). This change is motivated by
     safety and performance:
 
-    !begin-bullets-29!
+    !begin-bullets-30!
     -   !begin-bullet!
         It is generally sloppy to generically convert arbitrary inputs
         to one type. Restricted coercions are more predictable and allow
@@ -1481,7 +1502,7 @@ The following errors are caused by breaking changes.
 
         !end-bullet!
 
-    !end-bullets-29!
+    !end-bullets-30!
     !end-bullet!
 -   !begin-bullet!
     `stop_incompatible_cast()` now throws an error of class
@@ -1497,11 +1518,11 @@ The following errors are caused by breaking changes.
 
     !end-bullet!
 
-!end-bullets-28!
+!end-bullets-29!
 
 ## Type system
 
-!begin-bullets-30!
+!begin-bullets-31!
 
 -   !begin-bullet!
     Double-dispatch methods for `vec_ptype2()` and `vec_cast()` are now
@@ -1561,11 +1582,11 @@ The following errors are caused by breaking changes.
 
     !end-bullet!
 
-!end-bullets-30!
+!end-bullets-31!
 
 ## Compatibility and fallbacks
 
-!begin-bullets-31!
+!begin-bullets-32!
 
 -   !begin-bullet!
     With the double dispatch changes, the coercion methods are no longer
@@ -1593,7 +1614,7 @@ The following errors are caused by breaking changes.
     combine have the same foreign class, one of these fallbacks is
     invoked:
 
-    !begin-bullets-32!
+    !begin-bullets-33!
     -   !begin-bullet!
         If the class implements a `base::c()` method, the method is used
         for the combination. (FIXME: `vec_rbind()` currently doesn't use
@@ -1607,7 +1628,7 @@ The following errors are caused by breaking changes.
 
         !end-bullet!
 
-    !end-bullets-32!
+    !end-bullets-33!
     These fallbacks do not make your class completely compatible with
     vctrs-powered packages, but they should help in many simple cases.
 
@@ -1619,11 +1640,11 @@ The following errors are caused by breaking changes.
 
     !end-bullet!
 
-!end-bullets-31!
+!end-bullets-32!
 
 ## Vector operations
 
-!begin-bullets-33!
+!begin-bullets-34!
 
 -   !begin-bullet!
     `vec_rbind()` and `vec_c()` with data frame inputs now consistently
@@ -1707,11 +1728,11 @@ The following errors are caused by breaking changes.
 
     !end-bullet!
 
-!end-bullets-33!
+!end-bullets-34!
 
 ## Classes
 
-!begin-bullets-34!
+!begin-bullets-35!
 
 -   !begin-bullet!
     vctrs now supports the `data.table` class. The common type of a data
@@ -1758,11 +1779,11 @@ The following errors are caused by breaking changes.
 
     !end-bullet!
 
-!end-bullets-34!
+!end-bullets-35!
 
 ## Indexing and names
 
-!begin-bullets-35!
+!begin-bullets-36!
 
 -   !begin-bullet!
     `vec_as_subscript()` now fails when the subscript is a matrix or an
@@ -1791,11 +1812,11 @@ The following errors are caused by breaking changes.
 
     !end-bullet!
 
-!end-bullets-35!
+!end-bullets-36!
 
 ## Conditions
 
-!begin-bullets-36!
+!begin-bullets-37!
 
 -   !begin-bullet!
     `stop_incompatible_type()` now has an `action` argument for
@@ -1837,11 +1858,11 @@ The following errors are caused by breaking changes.
 
     !end-bullet!
 
-!end-bullets-36!
+!end-bullets-37!
 
 ## CRAN results
 
-!begin-bullets-37!
+!begin-bullets-38!
 
 -   !begin-bullet!
     Fixed clang-UBSAN error "nan is outside the range of representable
@@ -1854,11 +1875,11 @@ The following errors are caused by breaking changes.
 
     !end-bullet!
 
-!end-bullets-37!
+!end-bullets-38!
 
 # vctrs 0.2.4
 
-!begin-bullets-38!
+!begin-bullets-39!
 
 -   !begin-bullet!
     Factors and dates methods are now implemented in C for efficiency.
@@ -1914,11 +1935,11 @@ The following errors are caused by breaking changes.
 
     !end-bullet!
 
-!end-bullets-38!
+!end-bullets-39!
 
 # vctrs 0.2.3
 
-!begin-bullets-39!
+!begin-bullets-40!
 
 -   !begin-bullet!
     The main feature of this release is considerable performance
@@ -1996,11 +2017,11 @@ The following errors are caused by breaking changes.
 
     !end-bullet!
 
-!end-bullets-39!
+!end-bullets-40!
 
 # vctrs 0.2.2
 
-!begin-bullets-40!
+!begin-bullets-41!
 
 -   !begin-bullet!
     New `vec_as_subscript()` function to cast inputs to the base type of
@@ -2146,7 +2167,7 @@ The following errors are caused by breaking changes.
 
     !end-bullet!
 
-!end-bullets-40!
+!end-bullets-41!
 
 # vctrs 0.2.1
 
@@ -2169,7 +2190,7 @@ possible cast.
 
 ## Breaking changes
 
-!begin-bullets-41!
+!begin-bullets-42!
 
 -   !begin-bullet!
     Lossy casts now throw errors of type `vctrs_error_cast_lossy`.
@@ -2228,7 +2249,7 @@ possible cast.
 -   !begin-bullet!
     We have renamed the `type` particle to `ptype`:
 
-    !begin-bullets-42!
+    !begin-bullets-43!
     -   !begin-bullet!
         `vec_type()` =\> `vec_ptype()`
         !end-bullet!
@@ -2239,16 +2260,16 @@ possible cast.
         `vec_type_common()` =\> `vec_ptype_common()`
         !end-bullet!
 
-    !end-bullets-42!
+    !end-bullets-43!
     Consequently, `vec_ptype()` was renamed to `vec_ptype_show()`.
 
     !end-bullet!
 
-!end-bullets-41!
+!end-bullets-42!
 
 ## New features
 
-!begin-bullets-43!
+!begin-bullets-44!
 
 -   !begin-bullet!
     New `vec_proxy()` generic. This is the main customisation point in
@@ -2372,11 +2393,11 @@ possible cast.
 
     !end-bullet!
 
-!end-bullets-43!
+!end-bullets-44!
 
 ## Other features and bug fixes
 
-!begin-bullets-44!
+!begin-bullets-45!
 
 -   !begin-bullet!
     Using classed errors of class `"vctrs_error_assert"` for failed
@@ -2475,4 +2496,4 @@ possible cast.
 
     !end-bullet!
 
-!end-bullets-44!
+!end-bullets-45!
