@@ -20173,3 +20173,4 @@ dplyr,44087ccbd5698c7a2cf563488a6cc8f1,"• The `...` argument of `across()`. De
 dplyr,44087ccbd5698c7a2cf563488a6cc8f1,"• Using `by = character()` to perform a cross join. Deprecated in 1.1.0, use `cross_join()` instead.",NA,NA,NA,NA
 dplyr,d751a4fc92e59b0bd14dd82e50879e64,`.by` has moved from experimental to stable (#7762).,NA,NA,NA,NA
 bslib,87e7c65dfc181a938cd3e9294e972248,`card_header()` is now flex by default and gains a `gap` argument to better support complex header layouts. (#1253),NA,NA,NA,NA
+slider,d8e87e3ee9675c05deb38673183d6c66,Removed usage of non-API `OBJECT()`.,NA,NA,NA,NA
