@@ -10,7 +10,16 @@
     only submit the text changes to the server on click. This is
     especially useful when the input text change triggers a long-running
     operation and/or the user wants to type longer-form input and review
-    it before submitting it.
+    it before submitting it. (#1204)
+
+    !end-bullet!
+-   !begin-bullet!
+    Added toast notifications based on Bootstrap's Toast component: Use
+    `toast()` to create customizable toast objects, `show_toast()` to
+    display a toast message, `hide_toast()` for manual dismissal, and
+    `toast_header()` for structured headers with icons and status
+    indicators. (#1246)
+
     !end-bullet!
 
 !end-bullets-1!
