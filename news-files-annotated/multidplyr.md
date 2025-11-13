@@ -1,5 +1,7 @@
 # multidplyr (development version)
 
+# multidplyr 0.1.4
+
 !begin-bullets-1!
 
 -   !begin-bullet!
