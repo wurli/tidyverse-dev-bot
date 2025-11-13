@@ -1,5 +1,7 @@
 # testthat (development version)
 
+# testthat 3.3.0
+
 ## Lifecycle changes
 
 * testthat now requires R 4.1.

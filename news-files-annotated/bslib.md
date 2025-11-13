@@ -20,6 +20,11 @@
 !begin-bullets-2!
 
 -   !begin-bullet!
+    `card_header()` is now flex by default and gains a `gap` argument to
+    better support complex header layouts. (#1253)
+
+    !end-bullet!
+-   !begin-bullet!
     `bs_theme_dependencies()` now avoids unnecessarily copying internal
     package files to R's temporary directory more than once when
     preparing precompiled theme dependencies (e.g. for a standard
