@@ -15,6 +15,13 @@
     effort to support HTML reference manuals on CRAN.
 
     !end-bullet!
+-   !begin-bullet!
+    readr no longer uses `SETLENGTH()`, `SET_TRUELENGTH()`, or
+    `SET_GROWABLE_BIT()`. This change improves C API compliance, with a
+    small performance cost affecting only the legacy first edition
+    parser.
+
+    !end-bullet!
 
 !end-bullets-1!
 
