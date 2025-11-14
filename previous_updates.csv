@@ -20178,3 +20178,6 @@ bslib,117b8e06b67d59e9ccd4522d5decef39,"Added a new `input_submit_textarea()` in
 bslib,590d64bbde5b09f86f436603d4b7457d,"Added toast notifications based on Bootstrap's Toast component: Use `toast()` to create customizable toast objects, `show_toast()` to display a toast message, `hide_toast()` for manual dismissal, and `toast_header()` for structured headers with icons and status indicators. (#1246)",NA,NA,NA,NA
 readr,ae4e38d5276881006a9b7300d057952b,"readr no longer uses `SETLENGTH()`, `SET_TRUELENGTH()`, or `SET_GROWABLE_BIT()`. This change improves C API compliance, with a small performance cost affecting only the legacy first edition parser.",NA,NA,NA,NA
 ggplot2,e5fac8572ede2cba7b8f8a0cea796617,"`get_layer_data()` and `get_layer_grob()` now accept layer names as index (@​lgaborini, #6724)",NA,NA,NA,NA
+slider,0e9818dba4046a9ef0efee560e38d04d,Fixed the C level function signature for a vctrs callable (#224).,NA,NA,NA,NA
+vctrs,43417bcb838455d11add88c44419c3b4,The deprecated C callable for `vec_is_vector()` has been removed.,NA,NA,NA,NA
+vctrs,f3fd864c044b4f8cd55057b77ee3bd50,Fixed the C level signature for the `exp_short_init_compact_seq()` callable.,NA,NA,NA,NA

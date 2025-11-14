@@ -3,6 +3,15 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    The deprecated C callable for `vec_is_vector()` has been removed.
+
+    !end-bullet!
+-   !begin-bullet!
+    Fixed the C level signature for the `exp_short_init_compact_seq()`
+    callable.
+
+    !end-bullet!
+-   !begin-bullet!
     Experimental "partial" type support has been removed. This idea
     never panned out and was not widely used. The following functions
     have been removed (#2101):

@@ -3,7 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed the C level function signature for a vctrs callable (#224).
+
+    !end-bullet!
+-   !begin-bullet!
     Removed usage of non-API `OBJECT()`.
+
     !end-bullet!
 
 !end-bullets-1!
