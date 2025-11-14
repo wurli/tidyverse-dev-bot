@@ -127,6 +127,8 @@
 
   * Using `across()` and data frames in `filter()`. Deprecated in 1.0.8, use `if_any()` or `if_all()` instead.
 
+  * Returning more or less than 1 row per group in `summarise()`. Deprecated in 1.1.0, use `reframe()` instead.
+
   * `multiple = NULL` in joins. Deprecated in 1.1.1, use `multiple = "all"` instead.
 
   * `multiple = "error" / "warning"` in joins. Deprecated in 1.1.1, use `relationship = "many-to-one"` instead.
@@ -156,6 +158,10 @@
   * The `...` argument of `across()`. Deprecated in 1.1.0, use an anonymous function instead.
 
   * Using `by = character()` to perform a cross join. Deprecated in 1.1.0, use `cross_join()` instead.
+
+* The following are newly deprecated:
+
+  * The `dplyr.legacy_locale` global option. If you used this to affect the ordering of `arrange()`, use `arrange(.locale =)` instead. If you used this to affect the ordering of `group_by() |> summarise()`, follow up with an additional call to `arrange(.locale =)` instead (#7760).
 
 ### Newly stable
 

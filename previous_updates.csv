@@ -20185,3 +20185,6 @@ reticulate,e106be169db244f233a6d0e1cf0c0fbe,The default Python version in `insta
 reticulate,94993d4cde48d96c3cf88f4c499996dc,Fix error in `virtualenv_create()`/`virtualenv_starter()` (#1861).,NA,NA,NA,NA
 reticulate,1e5dd15512ba19ed63156a0d115db23b,Fix display of Python variables in the Positron Variables Pane (#1859).,NA,NA,NA,NA
 usethis,e3e1be9072e7f62f5a831ae9d0946310,Removes deprecated `use_tidy_style()` from to-do's from upkeep (@​edgararuiz),NA,NA,NA,NA
+dplyr,8d311b8c06a0fbd250b5decaaaa896d9,The following are newly deprecated:,NA,NA,NA,NA
+dplyr,8d311b8c06a0fbd250b5decaaaa896d9,"• The `dplyr.legacy_locale` global option. If you used this to affect the ordering of `arrange()`, use `arrange(.locale =)` instead. If you used this to affect the ordering of `group_by() |> summarise()`, follow up with an additional call to `arrange(.locale =)` instead (#7760).",NA,NA,NA,NA
+shinytest2,1a98fbdcf5daa57febc173c576b8ac1d,Fixed internal bug where `{testthat}` v3.3.0 changed expectation behavior for screenshot snapshots within `App$expect_values()` (#418).,NA,NA,NA,NA

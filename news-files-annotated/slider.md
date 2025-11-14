@@ -1,5 +1,7 @@
 # slider (development version)
 
+# slider 0.3.3
+
 !begin-bullets-1!
 
 -   !begin-bullet!

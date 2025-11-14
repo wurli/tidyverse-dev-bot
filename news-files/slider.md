@@ -1,5 +1,7 @@
 # slider (development version)
 
+# slider 0.3.3
+
 * Fixed the C level function signature for a vctrs callable (#224).
 
 * Removed usage of non-API `OBJECT()`.
