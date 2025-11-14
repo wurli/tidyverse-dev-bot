@@ -3,9 +3,15 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Removes deprecated `use_tidy_style()` from to-do's from upkeep
+    (@edgararuiz)
+
+    !end-bullet!
+-   !begin-bullet!
     `pr_resume()` (without a specific `branch`) and `pr_fetch()`
     (without a specific `number`) no longer error when a branch name
     contains curly braces (#2107, @jonthegeek).
+
     !end-bullet!
 
 !end-bullets-1!
