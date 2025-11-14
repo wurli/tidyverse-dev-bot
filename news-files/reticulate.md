@@ -1,5 +1,7 @@
 # reticulate (development version)
 
+# reticulate 1.44.1
+
 - The default Python version in `install_python()` 
   and `conda_create()` is now 3.12 (#1862).
 
