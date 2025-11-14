@@ -20181,3 +20181,6 @@ ggplot2,e5fac8572ede2cba7b8f8a0cea796617,"`get_layer_data()` and `get_layer_grob
 slider,0e9818dba4046a9ef0efee560e38d04d,Fixed the C level function signature for a vctrs callable (#224).,NA,NA,NA,NA
 vctrs,43417bcb838455d11add88c44419c3b4,The deprecated C callable for `vec_is_vector()` has been removed.,NA,NA,NA,NA
 vctrs,f3fd864c044b4f8cd55057b77ee3bd50,Fixed the C level signature for the `exp_short_init_compact_seq()` callable.,NA,NA,NA,NA
+reticulate,e106be169db244f233a6d0e1cf0c0fbe,The default Python version in `install_python()` and `conda_create()` is now 3.12 (#1862).,NA,NA,NA,NA
+reticulate,94993d4cde48d96c3cf88f4c499996dc,Fix error in `virtualenv_create()`/`virtualenv_starter()` (#1861).,NA,NA,NA,NA
+reticulate,1e5dd15512ba19ed63156a0d115db23b,Fix display of Python variables in the Positron Variables Pane (#1859).,NA,NA,NA,NA
