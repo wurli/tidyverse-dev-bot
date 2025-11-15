@@ -1,5 +1,7 @@
 # readr (development version)
 
+# readr 2.1.6
+
 !begin-bullets-1!
 
 -   !begin-bullet!
