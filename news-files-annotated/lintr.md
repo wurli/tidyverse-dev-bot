@@ -85,6 +85,11 @@
     signatures, requiring exactly one argument starting with 'lib'
     (#2940, @emmanuel-ferdman).
     !end-bullet!
+-   !begin-bullet!
+    `expect_lint()` conforms to {testthat} v3.3.0+ rules for custom
+    expectations, namely that they produce either exactly one success or
+    exactly one failure (#2937, @hadley).
+    !end-bullet!
 
 !end-bullets-3!
 
