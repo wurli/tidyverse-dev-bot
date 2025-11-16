@@ -20189,3 +20189,4 @@ dplyr,8d311b8c06a0fbd250b5decaaaa896d9,The following are newly deprecated:,NA,NA
 dplyr,8d311b8c06a0fbd250b5decaaaa896d9,"• The `dplyr.legacy_locale` global option. If you used this to affect the ordering of `arrange()`, use `arrange(.locale =)` instead. If you used this to affect the ordering of `group_by() |> summarise()`, follow up with an additional call to `arrange(.locale =)` instead (#7760).",NA,NA,NA,NA
 shinytest2,1a98fbdcf5daa57febc173c576b8ac1d,Fixed internal bug where `{testthat}` v3.3.0 changed expectation behavior for screenshot snapshots within `App$expect_values()` (#418).,NA,NA,NA,NA
 lintr,d0ae63ec67f2cb6bd32f3f878f414ed2,"`expect_lint()` conforms to {testthat} v3.3.0+ rules for custom expectations, namely that they produce either exactly one success or exactly one failure (#2937, @​hadley).",NA,NA,NA,NA
+xml2,0c6053e03e59e83a9921958442dcbb01,Experimental custom myExternalEntityLoader on libxml2 2.15 and up.,NA,NA,NA,NA
