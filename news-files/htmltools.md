@@ -1,5 +1,11 @@
 # htmltools (development version)
 
+* Fix test for testthat 3.3.0. (#442) 
+
+# htmltools 0.5.8.1
+
+* `capturePlot()`s examples are now only run when `interactive()`. (#429)
+
 # htmltools 0.5.8
 
 ## Improvements

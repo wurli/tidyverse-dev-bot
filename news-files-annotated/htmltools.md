@@ -1,10 +1,29 @@
 # htmltools (development version)
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    Fix test for testthat 3.3.0. (#442)
+    !end-bullet!
+
+!end-bullets-1!
+
+# htmltools 0.5.8.1
+
+!begin-bullets-2!
+
+-   !begin-bullet!
+    `capturePlot()`s examples are now only run when `interactive()`.
+    (#429)
+    !end-bullet!
+
+!end-bullets-2!
+
 # htmltools 0.5.8
 
 ## Improvements
 
-!begin-bullets-1!
+!begin-bullets-3!
 
 -   !begin-bullet!
     The fill CSS attached to fillable containers and fill items with
@@ -20,11 +39,11 @@
 
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-3!
 
 ## Bug fixes
 
-!begin-bullets-2!
+!begin-bullets-4!
 
 -   !begin-bullet!
     `bindFillRole()` now attaches its `HTMLDependency()` to fill items,
@@ -32,24 +51,24 @@
     missing CSS. (#421)
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-4!
 
 # htmltools 0.5.7
 
 ## New Features
 
-!begin-bullets-3!
+!begin-bullets-5!
 
 -   !begin-bullet!
     `save_html()` is now an S3 generic, allowing for more customization
     over how certain classes are saved to an HTML file. (#411)
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-5!
 
 ## Improvements
 
-!begin-bullets-4!
+!begin-bullets-6!
 
 -   !begin-bullet!
     Fill items no longer set `overflow: auto` or `width: 100%` by
@@ -66,36 +85,36 @@
 
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-6!
 
 ## Bug fixes
 
-!begin-bullets-5!
+!begin-bullets-7!
 
 -   !begin-bullet!
     `{htmltools}` now requires `{rlang}` version 1.0.0 or higher. (#403)
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-7!
 
 # htmltools 0.5.6.1
 
 ## Improvements
 
-!begin-bullets-6!
+!begin-bullets-8!
 
 -   !begin-bullet!
     `tagQuery()` no longer throws an error when attempting to traverse a
     NULL value with r-devel. (#407)
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-8!
 
 # htmltools 0.5.6
 
 ## Possibly breaking changes
 
-!begin-bullets-7!
+!begin-bullets-9!
 
 -   !begin-bullet!
     Closed #386: Fillable containers no longer set `overflow: auto` by
@@ -113,11 +132,11 @@
 
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-9!
 
 ## Minor improvements
 
-!begin-bullets-8!
+!begin-bullets-10!
 
 -   !begin-bullet!
     Closed #375: calling `htmlDependency()` or a function that returns
@@ -139,13 +158,13 @@
 
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-10!
 
 # htmltools 0.5.5
 
 ## Bug fixes
 
-!begin-bullets-9!
+!begin-bullets-11!
 
 -   !begin-bullet!
     Closed #355: `tagQuery()` was failing to select elements with tag
@@ -158,13 +177,13 @@
 
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-11!
 
 # htmltools 0.5.4
 
 ## New Features
 
-!begin-bullets-10!
+!begin-bullets-12!
 
 -   !begin-bullet!
     Added a new `bindFillRole()` function for modifying `tag()`
@@ -179,11 +198,11 @@
     `htmlwidgets::shinyWidgetOutput()`. (#343)
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-12!
 
 ## Bug fixes
 
-!begin-bullets-11!
+!begin-bullets-13!
 
 -   !begin-bullet!
     Closed #331: `copyDependencyToDir()` creates `outputDir`
@@ -198,13 +217,13 @@
 
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-13!
 
 # htmltools 0.5.3
 
 ## Breaking changes
 
-!begin-bullets-12!
+!begin-bullets-14!
 
 -   !begin-bullet!
     Closed #305: `htmlPreserve()` no longer uses *inline* code blocks
@@ -214,11 +233,11 @@
     (#306)
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-14!
 
 ## Bug fixes
 
-!begin-bullets-13!
+!begin-bullets-15!
 
 -   !begin-bullet!
     Closed #301: `tagQuery()` was failing to copy all `tagList()` html
@@ -243,13 +262,13 @@
 
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-15!
 
 # htmltools 0.5.2
 
 ## Breaking Changes
 
-!begin-bullets-14!
+!begin-bullets-16!
 
 -   !begin-bullet!
     Closed #205: When calling `tagGetAttribute(x)` on an object with a
@@ -258,11 +277,11 @@
     attributes. (#212)
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-16!
 
 ## New Features & Improvements
 
-!begin-bullets-15!
+!begin-bullets-17!
 
 -   !begin-bullet!
     `{htmltools}` now has its own `{pkgdown}` site hosted at
@@ -301,11 +320,11 @@
 
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-17!
 
 ## Bug Fixes
 
-!begin-bullets-16!
+!begin-bullets-18!
 
 -   !begin-bullet!
     When retrieving a tag attribute using `tagGetAttribute(tag, attr)`,
@@ -326,23 +345,23 @@
 
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-18!
 
 # htmltools 0.5.1.1
 
-!begin-bullets-17!
+!begin-bullets-19!
 
 -   !begin-bullet!
     Added shiny as a suggested package.
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-19!
 
 # htmltools 0.5.1
 
 ## New Features & Improvements
 
-!begin-bullets-18!
+!begin-bullets-20!
 
 -   !begin-bullet!
     Added a new `tagFunction()` for generating `tags` and/or
@@ -377,11 +396,11 @@
 
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-20!
 
 ## Breaking Changes
 
-!begin-bullets-19!
+!begin-bullets-21!
 
 -   !begin-bullet!
     Closed #161: `parseCssColors(x)` now requires `x` to be a character
@@ -390,22 +409,22 @@
     value(s). (#194)
     !end-bullet!
 
-!end-bullets-19!
+!end-bullets-21!
 
 ## Bug fixes
 
-!begin-bullets-20!
+!begin-bullets-22!
 
 -   !begin-bullet!
     `print(as.tags(x))` no longer results in error when `x` is a generic
     `list()` of tag-like objects. (#181)
     !end-bullet!
 
-!end-bullets-20!
+!end-bullets-22!
 
 # htmltools 0.5.0
 
-!begin-bullets-21!
+!begin-bullets-23!
 
 -   !begin-bullet!
     `tags` is now generated by a script which collects all HTML and SVG
@@ -474,11 +493,11 @@
 
     !end-bullet!
 
-!end-bullets-21!
+!end-bullets-23!
 
 # htmltools 0.4.0
 
-!begin-bullets-22!
+!begin-bullets-24!
 
 -   !begin-bullet!
     Fixed #128: Added support for trailing commas in tagLists and the
@@ -540,11 +559,11 @@
 
     !end-bullet!
 
-!end-bullets-22!
+!end-bullets-24!
 
 # htmltools 0.3.6
 
-!begin-bullets-23!
+!begin-bullets-25!
 
 -   !begin-bullet!
     `validateCssUnit()` now accepts viewport units (vw, vh, vmin, vmax).
@@ -566,11 +585,11 @@
 
     !end-bullet!
 
-!end-bullets-23!
+!end-bullets-25!
 
 # htmltools 0.3.5
 
-!begin-bullets-24!
+!begin-bullets-26!
 
 -   !begin-bullet!
     `as.character` now returns a character vector with no other
@@ -615,11 +634,11 @@
 
     !end-bullet!
 
-!end-bullets-24!
+!end-bullets-26!
 
 # htmltools 0.3
 
-!begin-bullets-25!
+!begin-bullets-27!
 
 -   !begin-bullet!
     Add `css` function for conveniently forming CSS declaration strings.
@@ -631,11 +650,11 @@
 
     !end-bullet!
 
-!end-bullets-25!
+!end-bullets-27!
 
 # htmltools 0.2.9
 
-!begin-bullets-26!
+!begin-bullets-28!
 
 -   !begin-bullet!
     Add check that `htmlDependency()` isn't called with an absolute path
@@ -653,22 +672,22 @@
 
     !end-bullet!
 
-!end-bullets-26!
+!end-bullets-28!
 
 # htmltools 0.2.7
 
-!begin-bullets-27!
+!begin-bullets-29!
 
 -   !begin-bullet!
     Add "append" parameter to attachDependencies, to allow adding
     dependencies, instead of replacing them.
     !end-bullet!
 
-!end-bullets-27!
+!end-bullets-29!
 
 # htmltools 0.2.6
 
-!begin-bullets-28!
+!begin-bullets-30!
 
 -   !begin-bullet!
     Add "attachment" parameter to htmlDependency, which can be used to
@@ -676,11 +695,11 @@
     at runtime.
     !end-bullet!
 
-!end-bullets-28!
+!end-bullets-30!
 
 # htmltools 0.2.5
 
-!begin-bullets-29!
+!begin-bullets-31!
 
 -   !begin-bullet!
     Explicit library(htmltools) is no longer required for tags to be
@@ -692,7 +711,7 @@
 
     !end-bullet!
 
-!end-bullets-29!
+!end-bullets-31!
 
 # htmltools 0.2.4
 
