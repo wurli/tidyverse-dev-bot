@@ -21,6 +21,11 @@
     well as make them work in-line (@thebioengineer, #2037, #2041)
 
     !end-bullet!
+-   !begin-bullet!
+    Fix bug where latex spanner widths were based on incorrect column
+    widths (@shannonhaughton, #2016, #1922)
+
+    !end-bullet!
 
 !end-bullets-1!
 
