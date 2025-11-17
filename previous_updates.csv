@@ -20196,3 +20196,4 @@ hms,f0ecd34312073e7d4f9ad75fa77aaefe,Install binaries from r-universe for dev wo
 pillar,27875481da5de83d3308faaab3228662,Install binaries from r-universe for dev workflow (#817).,NA,NA,NA,NA
 tibble,a19c7663d52e518ffe5989d7c54802a9,Install binaries from r-universe for dev workflow (#1679).,NA,NA,NA,NA
 gt,e8e78a967d2087dbfc415f4613ddcce2,"Fix bug where latex spanner widths were based on incorrect column widths (@​shannonhaughton, #2016, #1922)",NA,NA,NA,NA
+pkgdown,75a5b1b837877e0cc24158621a18d325,"Make `build_llm_docs()` more robust to the use of old Pandoc (@​nanxstats, @​galachad, #2952, #2954)",NA,NA,NA,NA
