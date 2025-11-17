@@ -20200,3 +20200,6 @@ pkgdown,75a5b1b837877e0cc24158621a18d325,"Make `build_llm_docs()` more robust to
 htmltools,d062143f517a005367ccef4a046bb5dd,Fix test for testthat 3.3.0. (#442),NA,NA,NA,NA
 htmltools,8a1aa2a7037367d4bd3de4926e0024d0,`capturePlot()`s examples are now only run when `interactive()`. (#429),NA,NA,NA,NA
 rsconnect,7b06e8a6792e70a22097657df551202c,Fix an opaque error when creating a manifest in a project using Python \<= 3.10 with a version requirement in a `pyproject.toml` file. A warning is shown rather than an error when the tomllib package is not present.,NA,NA,NA,NA
+dplyr,17a39618cd97074afccc74097f317104,"`storms` has been updated to include 2023 and 2024 data (#7111, @​tomalrussell).",NA,NA,NA,NA
+rsconnect,ea9fb0200e8ddf4d11bb7abdd1c27278,Fix an opaque error when creating a manifest using Python \<= 3.10 with a version requirement in a `pyproject.toml` file. A warning is shown rather than an error when the tomllib package is not present. (#1226),NA,NA,NA,NA
+rsconnect,d907979537b8c3c6dce41006ec5f2c75,Address CRAN test failures caused by some openssl configurations. (#1255),NA,NA,NA,NA
