@@ -1,5 +1,7 @@
 # rsconnect (development version)
 
+# rsconnect 1.6.2
+
 * Fix an opaque error when creating a manifest using Python <= 3.10 with a
   version requirement in a `pyproject.toml` file. A warning is shown rather
   than an error when the tomllib package is not present. (#1226)

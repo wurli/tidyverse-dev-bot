@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `tally_n()` creates fully qualified funciton calls for duckplyr
+    compatibility (#7046)
+
+    !end-bullet!
+-   !begin-bullet!
     `storms` has been updated to include 2023 and 2024 data (#7111,
     @tomalrussell).
 
