@@ -3,8 +3,16 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `locale(encoding =)` now warns, instead of errors, when the encoding
+    cannot be found in `iconvlist()` return value. This removes an
+    unnecessary blocker on platforms like Alpine Linux where the output
+    doesn't reflect actual capabilities.
+
+    !end-bullet!
+-   !begin-bullet!
     vroom no longer uses `STDVEC_DATAPTR()` and takes the recommended
     approach for phasing out usage of `DATAPTR()` (#561).
+
     !end-bullet!
 
 !end-bullets-1!
