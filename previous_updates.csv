@@ -20209,3 +20209,4 @@ shinytest2,587bdd2421ca2fe8a1b8875f09088390,"Added support for local package dev
 shinytest2,3f2fcc30d731666dbf9edf5f7df01866,"Added support for function execution for `AppDriver$new(app_dir=)`. You must run the App or document yourself. Similar to `{mirai}`, all packages must be `library()`'d or `require()`'d again as the function is being ran in the background R process (#402).",NA,NA,NA,NA
 shinytest2,3f291cdbb45686354139e4e4899a2632,Migrated from `{httr}` to `{httr2}` for all HTTP requests made by `{shinytest2}` (#420).,NA,NA,NA,NA
 dplyr,7ced77a2c4e2d21302aa038e5f3d1a92,`tally_n()` creates fully qualified funciton calls for duckplyr compatibility (#7046),NA,NA,NA,NA
+rmarkdown,d4faf2b99a0f4bef223e02a5680d2c1a,"Base64 encoded images work with non-HTML output formats now (thanks, @​averissimo, #2604).",NA,NA,NA,NA

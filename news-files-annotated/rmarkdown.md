@@ -3,8 +3,14 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Base64 encoded images work with non-HTML output formats now (thanks,
+    @averissimo, #2604).
+
+    !end-bullet!
+-   !begin-bullet!
     Use the argument `--syntax-highlighting` for Pandoc \>= 3.8 since
     `--highlight-style` has been deprecated (thanks, @ywwry66, #2602).
+
     !end-bullet!
 
 !end-bullets-1!
