@@ -20219,3 +20219,8 @@ pillar,997c6e214d0363d1ea9d7337392760a4,Auto-update from GitHub Actions (#819).,
 readr,80155f88e537a9227867465dcdeef743,"The `quote_escape` parameter has been removed from `write_delim()`, `write_csv()`, `write_csv2()`, `write_excel_csv()`, `write_excel_csv2()`, `write_tsv()`, `format_delim()`, `format_csv()`, `format_csv2()`, and `format_tsv()`. This parameter was deprecated in readr 2.0.0 (2021-07-20) in favor of the `escape` parameter. Use `escape` instead.",NA,NA,NA,NA
 vctrs,87026abf558a99261fb77ccbb191d466,"New `vec_pany()` and `vec_pall()`, parallel variants of `any()` and `all()` (in the same way that `pmin()` and `pmax()` are parallel variants of `min()` and `max()`).",NA,NA,NA,NA
 readr,772c87a101edc6d7448435bfe24f992d,"The `quoted_na` argument now throws an error if used in edition 2 with `read_delim()`, `read_csv()`, `read_csv2()`, or `read_tsv()`. This usage was first deprecated in readr 2.0.0 (2021-07-20).",NA,NA,NA,NA
+dplyr,fcf5aab897269d698ec05767c911665e,"`if_any()` and `if_all()` are now more consistent in all use cases (#7059, #7077, #7746, @​jrwinget). In particular:",NA,NA,NA,NA
+dplyr,fcf5aab897269d698ec05767c911665e,"• When called with zero inputs, `if_any()` returns `FALSE` and `if_all()` returns `TRUE`.",NA,NA,NA,NA
+dplyr,fcf5aab897269d698ec05767c911665e,"• When called with one input, both now return logical vectors rather than the original column.",NA,NA,NA,NA
+dplyr,fcf5aab897269d698ec05767c911665e,• The result of applying `.fns` now must be a logical vector.,NA,NA,NA,NA
+readr,c45c661b2324aaf6efe7b8643cb5e383,`read_table2()` has been removed from readr. This function was deprecated in readr 2.0.0 (2021-07-20) in favor of `read_table()`. Use `read_table()` instead.,NA,NA,NA,NA
