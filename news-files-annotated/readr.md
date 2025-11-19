@@ -19,6 +19,12 @@
     available in the meltr package (https://github.com/r-lib/meltr).
 
     !end-bullet!
+-   !begin-bullet!
+    The `skip_empty_rows` argument of `fwf_empty()` now throws an error
+    if used in edition 2. This argument was deprecated in readr 2.0.0
+    (2021-07-20).
+
+    !end-bullet!
 
 !end-bullets-1!
 
