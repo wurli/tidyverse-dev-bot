@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    New `vec_pany()` and `vec_pall()`, parallel variants of `any()` and
+    `all()` (in the same way that `pmin()` and `pmax()` are parallel
+    variants of `min()` and `max()`).
+
+    !end-bullet!
+-   !begin-bullet!
     The deprecated C callable for `vec_is_vector()` has been removed.
 
     !end-bullet!
