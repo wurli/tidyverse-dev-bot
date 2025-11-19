@@ -34,6 +34,12 @@
     (2021-07-20).
 
     !end-bullet!
+-   !begin-bullet!
+    The `quoted_na` argument now throws an error if used in edition 2
+    with `read_delim()`, `read_csv()`, `read_csv2()`, or `read_tsv()`.
+    This usage was first deprecated in readr 2.0.0 (2021-07-20).
+
+    !end-bullet!
 
 !end-bullets-1!
 
