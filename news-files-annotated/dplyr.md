@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    The `.groups` message emitted by `summarise()` is hopefully more
+    clear now (#6986).
+
+    !end-bullet!
+-   !begin-bullet!
     `if_any()` and `if_all()` are now more consistent in all use cases
     (#7059, #7077, #7746, @jrwinget). In particular:
 
