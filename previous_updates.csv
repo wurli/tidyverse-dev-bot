@@ -20224,3 +20224,4 @@ dplyr,fcf5aab897269d698ec05767c911665e,"• When called with zero inputs, `if_an
 dplyr,fcf5aab897269d698ec05767c911665e,"• When called with one input, both now return logical vectors rather than the original column.",NA,NA,NA,NA
 dplyr,fcf5aab897269d698ec05767c911665e,• The result of applying `.fns` now must be a logical vector.,NA,NA,NA,NA
 readr,c45c661b2324aaf6efe7b8643cb5e383,`read_table2()` has been removed from readr. This function was deprecated in readr 2.0.0 (2021-07-20) in favor of `read_table()`. Use `read_table()` instead.,NA,NA,NA,NA
+reticulate,cf40d94e696dd02235d6269bf96eff70,reticulate now warns when `py_require()`d packages are not found in the selected Python virtual environment. This behavior can be disabled by setting the environment variable `RETICULATE_CHECK_REQUIRED_PACKAGES=0` (#1850).,NA,NA,NA,NA

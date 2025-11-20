@@ -79,6 +79,13 @@
     command output to multiple variables via unpacking (#1844).
 
     !end-bullet!
+-   !begin-bullet!
+    reticulate now warns when `py_require()`d packages are not found in
+    the selected Python virtual environment. This behavior can be
+    disabled by setting the environment variable
+    `RETICULATE_CHECK_REQUIRED_PACKAGES=0` (#1850).
+
+    !end-bullet!
 
 !end-bullets-2!
 
