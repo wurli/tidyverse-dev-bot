@@ -3,6 +3,16 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `vec_cast()` with arrays no longer clones when no casting is
+    required (#2006).
+
+    !end-bullet!
+-   !begin-bullet!
+    `vec_rank()` now throws an improved error on non-vector types, like
+    `NULL` (#1967).
+
+    !end-bullet!
+-   !begin-bullet!
     `vec_ptype_common()` has gained a `.finalise` argument that defaults
     to `TRUE`. Setting this to `FALSE` lets you opt out of prototype
     finalisation, which allows `vec_ptype_common()` to act like

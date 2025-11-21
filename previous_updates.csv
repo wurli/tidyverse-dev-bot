@@ -20227,3 +20227,5 @@ readr,c45c661b2324aaf6efe7b8643cb5e383,`read_table2()` has been removed from rea
 reticulate,cf40d94e696dd02235d6269bf96eff70,reticulate now warns when `py_require()`d packages are not found in the selected Python virtual environment. This behavior can be disabled by setting the environment variable `RETICULATE_CHECK_REQUIRED_PACKAGES=0` (#1850).,NA,NA,NA,NA
 dplyr,c9dac159aa0d203a976036d55fb22f08,The `.groups` message emitted by `summarise()` is hopefully more clear now (#6986).,NA,NA,NA,NA
 vctrs,e7722bc908f0a0244e9d9ea89000f1ef,"`vec_ptype_common()` has gained a `.finalise` argument that defaults to `TRUE`. Setting this to `FALSE` lets you opt out of prototype finalisation, which allows `vec_ptype_common()` to act like `vec_ptype()` and `vec_ptype2()`, which don't finalise. This can be useful in some advanced common type determination cases (#2100).",NA,NA,NA,NA
+vctrs,a0b4819e404da710f8ffb767771061e0,`vec_cast()` with arrays no longer clones when no casting is required (#2006).,NA,NA,NA,NA
+vctrs,6ba0137689def2df0984a8ec3de115dd,"`vec_rank()` now throws an improved error on non-vector types, like `NULL` (#1967).",NA,NA,NA,NA
