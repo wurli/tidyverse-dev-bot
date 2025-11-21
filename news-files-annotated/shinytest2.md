@@ -1,5 +1,7 @@
 # shinytest2 (development version)
 
+## AppDriver
+
 !begin-bullets-1!
 
 -   !begin-bullet!
@@ -18,6 +20,80 @@
     function is being ran in the background R process (#402).
 
     !end-bullet!
+
+!end-bullets-1!
+
+## Package testing
+
+!begin-bullets-2!
+
+-   !begin-bullet!
+    For package authors, it is now recommended to test your Shiny
+    applications within your own `{testthat}` tests instead of using
+    `test_app()`. By using your package's existing `{testthat}`
+    infrastructure to test your Shiny applications, collecting snapshots
+    in a single location. Be sure to use `with_app_support()` or
+    `local_app_support()` to load your app's support files as needed.
+    See the use-package vignette for more details (#328).
+
+    !end-bullet!
+-   !begin-bullet!
+    To implement the new test file location app, `record_test()` will
+    now save the test file to the package's `tests/testthat/` directory
+    if the current working directory is within a package given
+    `record_in_package=TRUE` (default). If `record_in_package=FALSE`,
+    the test file will be saved relative to the app's `tests/testthat/`
+    directory. This change helps facilitate using the package's existing
+    testing infrastructure by having unit tests in a single place
+    (#328).
+
+    !end-bullet!
+
+!end-bullets-2!
+
+## Bug / Improvements
+
+!begin-bullets-3!
+
+-   !begin-bullet!
+    Added two new methods: `with_app_support()` and
+    `local_app_support()`. These methods provide package authors a
+    flexible way to scope app support files such as `global.R`, `app.R`,
+    `server.R`, and `ui.R` within your tests. Non-package authors should
+    still use `load_app_support()` within their `setup-shinytest2.R`
+    file. See `?local_app_support` for more details (#328).
+
+    !end-bullet!
+-   !begin-bullet!
+    `load_app_env()` has been superseded by `load_app_support()`. This
+    new method aligns its name with `local_app_support()` and
+    `with_app_support()`, and similarly, it requires an `app_dir=`
+    parameter (#328).
+
+    !end-bullet!
+-   !begin-bullet!
+    `test_app(check_setup=)` is now deprecated. Checking is no longer
+    required as default behavior. This is because `load_app_env()` is
+    now superseded by two new functions: `with_app_support()` and
+    `local_app_support()`. Each function provides a more robust and
+    flexible way to scope app support files such as `global.R`, `app.R`,
+    `server.R`, and `ui.R`. See `?with_app_support` and
+    `?local_app_support` for more details (#328).
+
+    !end-bullet!
+-   !begin-bullet!
+    Given `test_app(check_setup=FALSE)` is now deprecated. This change
+    was done for package authors do not require apps to load support
+    (#328).
+
+    !end-bullet!
+-   !begin-bullet!
+    `record_test()` will now only save setup file for local app testing
+    and not within package app testing. When recording a test for an app
+    inside a package, `local_app_support()` will be added to the top of
+    the testing code (#328).
+
+    !end-bullet!
 -   !begin-bullet!
     Fixed internal bug where `{testthat}` v3.3.0 changed expectation
     behavior for screenshot snapshots within `App$expect_values()`
@@ -29,27 +105,35 @@
     `{shinytest2}` (#420).
 
     !end-bullet!
+-   !begin-bullet!
+    `record_test()` gained a new parameter `record_in_package=`. If
+    `TRUE` and if the current working directory is within a package, the
+    test file will be saved to the package's `tests/testthat/`
+    directory. If `FALSE`, the test file will be saved to the app's
+    `tests/testthat/` directory (#328).
 
-!end-bullets-1!
+    !end-bullet!
+
+!end-bullets-3!
 
 # shinytest2 0.4.1
 
 ## Bug
 
-!begin-bullets-2!
+!begin-bullets-4!
 
 -   !begin-bullet!
     Fixed a bug where `AppDriver$expect_values(transform=)` default
     value caused error to be thrown. (#413)
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-4!
 
 # shinytest2 0.4.0
 
 ## Breaking changes
 
-!begin-bullets-3!
+!begin-bullets-5!
 
 -   !begin-bullet!
     `{shinytest2}` will skip and test on CRAN where an `AppDriver` is
@@ -69,11 +153,11 @@
     the latest R package versions. (#407)
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-5!
 
 ## Bug / Improvements
 
-!begin-bullets-4!
+!begin-bullets-6!
 
 -   !begin-bullet!
     Add support for `$click()`ing `{bslib}`'s `input_task_button()`
@@ -105,13 +189,13 @@
 
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-6!
 
 # shinytest2 0.3.2
 
 ## Bug / Improvements
 
-!begin-bullets-5!
+!begin-bullets-7!
 
 -   !begin-bullet!
     `{shinytest2}` now uses `{rlang}` and longer depends on `{ellipsis}`
@@ -126,13 +210,13 @@
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-7!
 
 # shinytest2 0.3.1
 
 ## Breaking changes
 
-!begin-bullets-6!
+!begin-bullets-8!
 
 -   !begin-bullet!
     `AppDriver$get_screenshot()`/`AppDriver$expect_screenshot()` now
@@ -143,11 +227,11 @@
     `get_screenshot()`/`expect_screenshot()` (#350).
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-8!
 
 ## Bug / Improvements
 
-!begin-bullets-7!
+!begin-bullets-9!
 
 -   !begin-bullet!
     shinytest2 no longer checks if the computer running the tests is
@@ -155,13 +239,13 @@
     to the server hosting the Shiny app being tested. (@Riraro #364)
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-9!
 
 # shinytest2 0.3.0
 
 ## Breaking changes
 
-!begin-bullets-8!
+!begin-bullets-10!
 
 -   !begin-bullet!
     `AppDriver$get_screenshot(selector=)`,
@@ -174,11 +258,11 @@
     (#325)
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-10!
 
 ## New features
 
-!begin-bullets-9!
+!begin-bullets-11!
 
 -   !begin-bullet!
     `AppDriver$get_screenshot(selector=)`,
@@ -207,11 +291,11 @@
 
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-11!
 
 ## Bug / Improvements
 
-!begin-bullets-10!
+!begin-bullets-12!
 
 -   !begin-bullet!
     Set the directory to the Shiny App directory before starting the
@@ -219,11 +303,11 @@
     `.Renviron` files to be found naturally. (#275)
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-12!
 
 # shinytest2 0.2.1
 
-!begin-bullets-11!
+!begin-bullets-13!
 
 -   !begin-bullet!
     Fixed request from CRAN to correct C++11 problems in web checks
@@ -254,7 +338,7 @@
 
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-13!
 
 # shinytest2 0.2.0
 
@@ -262,7 +346,7 @@
 
 ### Shiny log levels
 
-!begin-bullets-12!
+!begin-bullets-14!
 
 -   !begin-bullet!
     `AppDriver$get_logs()` has changed the `level` values when
@@ -270,11 +354,11 @@
     have been renamed to `"stderr"` and `"stdout"`. (#265)
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-14!
 
 ### Download snapshot files
 
-!begin-bullets-13!
+!begin-bullets-15!
 
 -   !begin-bullet!
     All downloaded snapshots will contain a counter prefix (e.g. `003-`
@@ -300,7 +384,7 @@
     `tests/testthat/_snaps/003-my_custom_name.txt`. (#261)
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-15!
 
 ### Timeout values
 
@@ -343,7 +427,7 @@ value. For example, if `app <- AppDriver$new(timeout = 500)` then
 
 ## New Features
 
-!begin-bullets-14!
+!begin-bullets-16!
 
 -   !begin-bullet!
     `compare_screenshot_threshold()` is a new method to compare
@@ -393,11 +477,11 @@ value. For example, if `app <- AppDriver$new(timeout = 500)` then
 
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-16!
 
 ## Bug / Improvements
 
-!begin-bullets-15!
+!begin-bullets-17!
 
 -   !begin-bullet!
     Fix set of bugs found by @daattali including test files should be
@@ -463,24 +547,24 @@ value. For example, if `app <- AppDriver$new(timeout = 500)` then
 
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-17!
 
 # shinytest2 0.1.1
 
-!begin-bullets-16!
+!begin-bullets-18!
 
 -   !begin-bullet!
     Update docs for CRAN (#253)
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-18!
 
 # shinytest2 0.1.0
 
-!begin-bullets-17!
+!begin-bullets-19!
 
 -   !begin-bullet!
     Initial release of package
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-19!
