@@ -20239,3 +20239,4 @@ shinytest2,2352c97d0ae803a09e14e68cf220baff,"`record_test()` will now only save 
 shinytest2,c9e447cbe1dce9691af8ee4f3c390e32,"`record_test()` gained a new parameter `record_in_package=`. If `TRUE` and if the current working directory is within a package, the test file will be saved to the package's `tests/testthat/` directory. If `FALSE`, the test file will be saved to the app's `tests/testthat/` directory (#328).",NA,NA,NA,NA
 dbplyr,a60a7fab4966856c158b6a071663e262,"`dbplyr_uncount()` now works with Redshift (@​owenjonesuob, #1601).",NA,NA,NA,NA
 haven,e3aa10f39d23366d278b0dd3f34cebd2,Character limit checks in `write_xpt()` now check for the number of bytes instead of the number of characters (#746).,NA,NA,NA,NA
+testthat,076c930b41f92cd5a3c480f488a26012,"Fixed support for `shinytest2::AppDriver$expect_values()` screenshot snapshot failing on CI (#2293, #2288).",NA,NA,NA,NA

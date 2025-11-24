@@ -1,10 +1,19 @@
 # testthat (development version)
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    Fixed support for `shinytest2::AppDriver$expect_values()` screenshot
+    snapshot failing on CI (#2293, #2288).
+    !end-bullet!
+
+!end-bullets-1!
+
 # testthat 3.3.0
 
 ## Lifecycle changes
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     testthat now requires R 4.1.
@@ -28,11 +37,11 @@
     removed.
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 ## Expectations and tests
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     All `expect_` functions have had their failure messages rewritten.
@@ -95,11 +104,11 @@
     `ncol()`, or `dim()`) (#1423, @michaelchirico).
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 ## Other new features
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     New `extract_test()` function to extract a reprex from a failing
@@ -161,11 +170,11 @@
     documentation organised by various challenges (#1265).
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     Interrupting a test now prints the test name. This makes it easier
@@ -274,11 +283,11 @@
     review (#2025). It now passes `...` on to `shiny::runApp()` (#1928).
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 # testthat 3.2.3
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     Fixed an issue where `expect_no_error(1)` was failing (#2037).
@@ -290,13 +299,13 @@
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # testthat 3.2.2
 
 ## New expectations
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     `expect_s7_class()` tests if an object is an S7 class (#1580).
@@ -309,11 +318,11 @@
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 ## Bug fixes and minor improvements
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     testthat now requires waldo 0.6.0 or later to access the latest
@@ -376,11 +385,11 @@
 
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 # testthat 3.2.1
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     Fix incorrect format string detected by latest R-devel. Fix thanks
@@ -416,13 +425,13 @@
 
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 # testthat 3.2.0
 
 ## Lifecycle changes
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     `is_informative_error()` and the `wrap` argument to `test_dir()` and
@@ -436,11 +445,11 @@
 
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 ## New features
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     All packages, regardless of whether or not they use rlang 1.0.0, now
@@ -460,11 +469,11 @@
 
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 ## Minor features and bug fixes
 
-!begin-bullets-11!
+!begin-bullets-12!
 
 -   !begin-bullet!
     Helpers are no longer run twice.
@@ -517,11 +526,11 @@
 
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-12!
 
 # testthat 3.1.10
 
-!begin-bullets-12!
+!begin-bullets-13!
 
 -   !begin-bullet!
     Fix for upcoming R-devel release.
@@ -536,11 +545,11 @@
 
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
 
 # testthat 3.1.9
 
-!begin-bullets-13!
+!begin-bullets-14!
 
 -   !begin-bullet!
     New `expect_contains()` and `expect_in()` that works similarly to
@@ -589,11 +598,11 @@
 
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-14!
 
 # testthat 3.1.8
 
-!begin-bullets-14!
+!begin-bullets-15!
 
 -   !begin-bullet!
     `expect_snapshot()` differences no longer use quotes.
@@ -642,11 +651,11 @@
 
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-15!
 
 # testthat 3.1.7
 
-!begin-bullets-15!
+!begin-bullets-16!
 
 -   !begin-bullet!
     `expect_setequal()` gives more actionable feedback (#1657).
@@ -663,21 +672,21 @@
 
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-16!
 
 # testthat 3.1.6
 
-!begin-bullets-16!
+!begin-bullets-17!
 
 -   !begin-bullet!
     The embedded version of Catch no longer uses `sprintf()`.
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-17!
 
 # testthat 3.1.5
 
-!begin-bullets-17!
+!begin-bullets-18!
 
 -   !begin-bullet!
     Deprecation warnings are no longer captured by
@@ -746,21 +755,21 @@
 
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-18!
 
 # testthat 3.1.4
 
-!begin-bullets-18!
+!begin-bullets-19!
 
 -   !begin-bullet!
     Minor tweaks to output for latest cli (#1606).
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-19!
 
 # testthat 3.1.3
 
-!begin-bullets-19!
+!begin-bullets-20!
 
 -   !begin-bullet!
     Package that explicitly depend on rlang in their description file
@@ -771,7 +780,7 @@
 
     Changes include:
 
-    !begin-bullets-20!
+    !begin-bullets-21!
     -   !begin-bullet!
         Condition classes are no longer included in the snapshot by
         default. This is to avoid snapshot noise when upstream code adds
@@ -790,7 +799,7 @@
 
         !end-bullet!
 
-    !end-bullets-20!
+    !end-bullets-21!
     !end-bullet!
 -   !begin-bullet!
     Test results show hyperlinks to failed expectation when supported
@@ -798,11 +807,11 @@
 
     !end-bullet!
 
-!end-bullets-19!
+!end-bullets-20!
 
 # testthat 3.1.2
 
-!begin-bullets-21!
+!begin-bullets-22!
 
 -   !begin-bullet!
     testthat now uses brio for all reading and writing (#1120). This
@@ -889,11 +898,11 @@
 
     !end-bullet!
 
-!end-bullets-21!
+!end-bullets-22!
 
 # testthat 3.1.1
 
-!begin-bullets-22!
+!begin-bullets-23!
 
 -   !begin-bullet!
     Condition expectations like `expect_error()` now match across the
@@ -944,13 +953,13 @@
 
     !end-bullet!
 
-!end-bullets-22!
+!end-bullets-23!
 
 # testthat 3.1.0
 
 ## Snapshot tests
 
-!begin-bullets-23!
+!begin-bullets-24!
 
 -   !begin-bullet!
     `expect_snapshot()` is no longer experimental.
@@ -1000,11 +1009,11 @@
 
     !end-bullet!
 
-!end-bullets-23!
+!end-bullets-24!
 
 ## Breaking changes
 
-!begin-bullets-24!
+!begin-bullets-25!
 
 -   !begin-bullet!
     Condition expectations now consistently return the expected
@@ -1035,11 +1044,11 @@
 
     !end-bullet!
 
-!end-bullets-24!
+!end-bullets-25!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-25!
+!begin-bullets-26!
 
 -   !begin-bullet!
     Errors in test blocks now display the call if stored in the
@@ -1096,11 +1105,11 @@
 
     !end-bullet!
 
-!end-bullets-25!
+!end-bullets-26!
 
 # testthat 3.0.4
 
-!begin-bullets-26!
+!begin-bullets-27!
 
 -   !begin-bullet!
     The vendored Catch code used for `use_catch()` now uses a constant
@@ -1116,11 +1125,11 @@
 
     !end-bullet!
 
-!end-bullets-26!
+!end-bullets-27!
 
 # testthat 3.0.3
 
-!begin-bullets-27!
+!begin-bullets-28!
 
 -   !begin-bullet!
     `expect_snapshot_file()` gains a `compare` argument (#1378, @nbenn).
@@ -1158,11 +1167,11 @@
 
     !end-bullet!
 
-!end-bullets-27!
+!end-bullets-28!
 
 # testthat 3.0.2
 
-!begin-bullets-28!
+!begin-bullets-29!
 
 -   !begin-bullet!
     Failing expectations now include a backtrace when they're not called
@@ -1196,11 +1205,11 @@
 
     !end-bullet!
 
-!end-bullets-28!
+!end-bullets-29!
 
 # testthat 3.0.1
 
-!begin-bullets-29!
+!begin-bullets-30!
 
 -   !begin-bullet!
     New `testthat.progress.verbose_skips` option. Set to `FALSE` to stop
@@ -1280,7 +1289,7 @@
 
     !end-bullet!
 
-!end-bullets-29!
+!end-bullets-30!
 
 # testthat 3.0.0
 
@@ -1293,7 +1302,7 @@ set `Config/testthat/edition: 3` in your `DESCRIPTION` or use
 `local_edition(3)` in individual tests. You can retrieve the active
 edition with `edition_get()`. Learn more in `vignette("third-edition")`.
 
-!begin-bullets-30!
+!begin-bullets-31!
 
 -   !begin-bullet!
     `context()` is deprecated.
@@ -1360,7 +1369,7 @@ edition with `edition_get()`. Learn more in `vignette("third-edition")`.
 
     !end-bullet!
 
-!end-bullets-30!
+!end-bullets-31!
 
 ## Snapshot testing
 
@@ -1379,7 +1388,7 @@ See `vignette("snapshotting")` for more details.
 
 ## Reporters
 
-!begin-bullets-31!
+!begin-bullets-32!
 
 -   !begin-bullet!
     `CheckReporter` (used inside R CMD check) now prints out all
@@ -1441,11 +1450,11 @@ See `vignette("snapshotting")` for more details.
 
     !end-bullet!
 
-!end-bullets-31!
+!end-bullets-32!
 
 ## Fixtures
 
-!begin-bullets-32!
+!begin-bullets-33!
 
 -   !begin-bullet!
     New `vignette("test-fixtures")` describes test fixtures; i.e. how to
@@ -1460,11 +1469,11 @@ See `vignette("snapshotting")` for more details.
 
     !end-bullet!
 
-!end-bullets-32!
+!end-bullets-33!
 
 ## Skips
 
-!begin-bullets-33!
+!begin-bullets-34!
 
 -   !begin-bullet!
     New `vignette("skipping")` gives more general information on
@@ -1480,11 +1489,11 @@ See `vignette("snapshotting")` for more details.
 
     !end-bullet!
 
-!end-bullets-33!
+!end-bullets-34!
 
 ## Test running
 
-!begin-bullets-34!
+!begin-bullets-35!
 
 -   !begin-bullet!
     `test_that()` no longer triggers an error when run outside of tests;
@@ -1516,11 +1525,11 @@ See `vignette("snapshotting")` for more details.
 
     !end-bullet!
 
-!end-bullets-34!
+!end-bullets-35!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-35!
+!begin-bullets-36!
 
 -   !begin-bullet!
     testthat no longer supports tests stored in `inst/tests`. This has
@@ -1569,21 +1578,21 @@ See `vignette("snapshotting")` for more details.
 
     !end-bullet!
 
-!end-bullets-35!
+!end-bullets-36!
 
 # testthat 2.3.2
 
-!begin-bullets-36!
+!begin-bullets-37!
 
 -   !begin-bullet!
     Fix R CMD check issues
     !end-bullet!
 
-!end-bullets-36!
+!end-bullets-37!
 
 # testthat 2.3.1
 
-!begin-bullets-37!
+!begin-bullets-38!
 
 -   !begin-bullet!
     The last version of testthat introduced a performance regression in
@@ -1600,7 +1609,7 @@ See `vignette("snapshotting")` for more details.
 
     !end-bullet!
 
-!end-bullets-37!
+!end-bullets-38!
 
 # testthat 2.3.0
 
@@ -1611,7 +1620,7 @@ conditions (i.e. errors, warnings and messages). There are relatively
 few user-facing changes, although you should now see more informative
 backtraces from errors and failures.
 
-!begin-bullets-38!
+!begin-bullets-39!
 
 -   !begin-bullet!
     Unexpected errors are now printed with a simplified backtrace.
@@ -1665,11 +1674,11 @@ backtraces from errors and failures.
 
     !end-bullet!
 
-!end-bullets-38!
+!end-bullets-39!
 
 ## Expectations
 
-!begin-bullets-39!
+!begin-bullets-40!
 
 -   !begin-bullet!
     Expectations can now be explicitly subclassed with
@@ -1713,11 +1722,11 @@ backtraces from errors and failures.
 
     !end-bullet!
 
-!end-bullets-39!
+!end-bullets-40!
 
 ## Other minor improvements and bug fixes
 
-!begin-bullets-40!
+!begin-bullets-41!
 
 -   !begin-bullet!
     `compare.numeric()` uses a more sophisticated default tolerance that
@@ -1731,24 +1740,24 @@ backtraces from errors and failures.
 
     !end-bullet!
 
-!end-bullets-40!
+!end-bullets-41!
 
 # testthat 2.2.1
 
-!begin-bullets-41!
+!begin-bullets-42!
 
 -   !begin-bullet!
     Repair regression in `test_rd()` and add a couple of tests to
     hopefully detect the problem earlier in the future.
     !end-bullet!
 
-!end-bullets-41!
+!end-bullets-42!
 
 # testthat 2.2.0
 
 ## New features
 
-!begin-bullets-42!
+!begin-bullets-43!
 
 -   !begin-bullet!
     New `verify_output()` is designed for testing output aimed at humans
@@ -1757,11 +1766,11 @@ backtraces from errors and failures.
     automatically skipped on CRAN (#782, #834).
     !end-bullet!
 
-!end-bullets-42!
+!end-bullets-43!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-43!
+!begin-bullets-44!
 
 -   !begin-bullet!
     `as.data.frame.testthat_results()` now always returns a data frame
@@ -1833,23 +1842,23 @@ backtraces from errors and failures.
 
     !end-bullet!
 
-!end-bullets-43!
+!end-bullets-44!
 
 # testthat 2.1.1
 
-!begin-bullets-44!
+!begin-bullets-45!
 
 -   !begin-bullet!
     Fix test failures in strict latin1 locale
     !end-bullet!
 
-!end-bullets-44!
+!end-bullets-45!
 
 # testthat 2.1.0
 
 ## New expectations
 
-!begin-bullets-45!
+!begin-bullets-46!
 
 -   !begin-bullet!
     New `expect_visible()` and `expect_invisible()` make it easier to
@@ -1871,11 +1880,11 @@ backtraces from errors and failures.
 
     !end-bullet!
 
-!end-bullets-45!
+!end-bullets-46!
 
 ## Improvements to existing expectations
 
-!begin-bullets-46!
+!begin-bullets-47!
 
 -   !begin-bullet!
     All expectations give clearer error messages if you forget the
@@ -1930,11 +1939,11 @@ backtraces from errors and failures.
 
     !end-bullet!
 
-!end-bullets-46!
+!end-bullets-47!
 
 ## Reporters
 
-!begin-bullets-47!
+!begin-bullets-48!
 
 -   !begin-bullet!
     Reporter documentation has been considerably improved (#657).
@@ -1959,7 +1968,7 @@ backtraces from errors and failures.
 -   !begin-bullet!
     `ProgressReporter`, the default reporter, now:
 
-    !begin-bullets-48!
+    !begin-bullets-49!
     -   !begin-bullet!
         Automatically generates a context from the file name. We no
         longer recommend the use of `context()` and instead encourage
@@ -1983,7 +1992,7 @@ backtraces from errors and failures.
 
         !end-bullet!
 
-    !end-bullets-48!
+    !end-bullets-49!
     !end-bullet!
 -   !begin-bullet!
     `reporter$end_reporter()` is now only called when testing completes
@@ -1992,11 +2001,11 @@ backtraces from errors and failures.
 
     !end-bullet!
 
-!end-bullets-47!
+!end-bullets-48!
 
 ## Skips
 
-!begin-bullets-49!
+!begin-bullets-50!
 
 -   !begin-bullet!
     `skip_if_offline()` skips tests if an internet connection is not
@@ -2009,11 +2018,11 @@ backtraces from errors and failures.
 
     !end-bullet!
 
-!end-bullets-49!
+!end-bullets-50!
 
 ## Other new features
 
-!begin-bullets-50!
+!begin-bullets-51!
 
 -   !begin-bullet!
     New `testthat_examples()` and `testthat_example()` make it easy to
@@ -2029,11 +2038,11 @@ backtraces from errors and failures.
 
     !end-bullet!
 
-!end-bullets-50!
+!end-bullets-51!
 
 ## Other minor improvements and bug fixes
 
-!begin-bullets-51!
+!begin-bullets-52!
 
 -   !begin-bullet!
     `auto_test_package()` works better with recent devtools and also
@@ -2075,23 +2084,23 @@ backtraces from errors and failures.
 
     !end-bullet!
 
-!end-bullets-51!
+!end-bullets-52!
 
 # testthat 2.0.1
 
-!begin-bullets-52!
+!begin-bullets-53!
 
 -   !begin-bullet!
     Fix failing tests with devtools 2.0.0
     !end-bullet!
 
-!end-bullets-52!
+!end-bullets-53!
 
 # testthat 2.0.0
 
 ## Breaking API changes
 
-!begin-bullets-53!
+!begin-bullets-54!
 
 -   !begin-bullet!
     "Can't mock functions in base packages": You can no longer use
@@ -2105,7 +2114,7 @@ backtraces from errors and failures.
     has changed slightly as both now pass `...` on another function.
     This reveals itself with a number of different errors, like:
 
-    !begin-bullets-54!
+    !begin-bullets-55!
     -   !begin-bullet!
         'what' must be a character vector
         !end-bullet!
@@ -2128,7 +2137,7 @@ backtraces from errors and failures.
         argument is missing, with no default
         !end-bullet!
 
-    !end-bullets-54!
+    !end-bullets-55!
     If you see one of these errors, check the number, order, and names
     of arguments to the expectation.
 
@@ -2151,13 +2160,13 @@ backtraces from errors and failures.
 
     !end-bullet!
 
-!end-bullets-53!
+!end-bullets-54!
 
 ## Expectations
 
 ### New and improved expectations
 
-!begin-bullets-55!
+!begin-bullets-56!
 
 -   !begin-bullet!
     `expect_condition()` works like `expect_error()` but captures any
@@ -2180,11 +2189,11 @@ backtraces from errors and failures.
 
     !end-bullet!
 
-!end-bullets-55!
+!end-bullets-56!
 
 ### New and improved skips
 
-!begin-bullets-56!
+!begin-bullets-57!
 
 -   !begin-bullet!
     `skip_if()` makes it easy to skip a test when a condition is true
@@ -2205,7 +2214,7 @@ backtraces from errors and failures.
 
     !end-bullet!
 
-!end-bullets-56!
+!end-bullets-57!
 
 ### Known good values
 
@@ -2214,7 +2223,7 @@ results of an expression to a known good value stored in a file. They
 are designed to be use in conjunction with git so that you can see what
 precisely has changed, and revert it if needed.
 
-!begin-bullets-57!
+!begin-bullets-58!
 
 -   !begin-bullet!
     `expect_known_output()` replaces `expect_output_file()`, which has
@@ -2238,7 +2247,7 @@ precisely has changed, and revert it if needed.
 
     !end-bullet!
 
-!end-bullets-57!
+!end-bullets-58!
 
 ### Quasiquotation support
 
@@ -2285,7 +2294,7 @@ At this time you can not unquote quosures.)
 
 ### Setup and teardown
 
-!begin-bullets-58!
+!begin-bullets-59!
 
 -   !begin-bullet!
     New `setup()` and `teardown()` functions allow you to run at the
@@ -2301,11 +2310,11 @@ At this time you can not unquote quosures.)
 
     !end-bullet!
 
-!end-bullets-58!
+!end-bullets-59!
 
 ### Other new features
 
-!begin-bullets-59!
+!begin-bullets-60!
 
 -   !begin-bullet!
     All files are now read and written as UTF-8 (#510, #605).
@@ -2329,7 +2338,7 @@ At this time you can not unquote quosures.)
 
     !end-bullet!
 
-!end-bullets-59!
+!end-bullets-60!
 
 ### New default reporter
 
@@ -2340,7 +2349,7 @@ upfront (#529). You can return to the previous default by setting
 
 ### Reporters
 
-!begin-bullets-60!
+!begin-bullets-61!
 
 -   !begin-bullet!
     Output colours have been tweaked to be consistent with clang:
@@ -2371,7 +2380,7 @@ upfront (#529). You can return to the previous default by setting
 -   !begin-bullet!
     `SummaryReporter` received a number of smaller tweaks
 
-    !begin-bullets-61!
+    !begin-bullets-62!
     -   !begin-bullet!
         Aborts testing as soon the limit given by the option
         `testthat.summary.max_reports` (default 10) is reached (#520).
@@ -2388,7 +2397,7 @@ upfront (#529). You can return to the previous default by setting
 
         !end-bullet!
 
-    !end-bullets-61!
+    !end-bullets-62!
     !end-bullet!
 -   !begin-bullet!
     New option `testthat.default_check_reporter`, defaults to `"check"`.
@@ -2405,22 +2414,22 @@ upfront (#529). You can return to the previous default by setting
 
     !end-bullet!
 
-!end-bullets-60!
+!end-bullets-61!
 
 ## Deprecated functions
 
-!begin-bullets-62!
+!begin-bullets-63!
 
 -   !begin-bullet!
     `is_null()` and `matches()` have been deprecated because they
     conflict with other functions in the tidyverse (#523).
     !end-bullet!
 
-!end-bullets-62!
+!end-bullets-63!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-63!
+!begin-bullets-64!
 
 -   !begin-bullet!
     Updated Catch to 1.9.6. `testthat` now understands and makes use of
@@ -2555,22 +2564,22 @@ upfront (#529). You can return to the previous default by setting
 
     !end-bullet!
 
-!end-bullets-63!
+!end-bullets-64!
 
 # testthat 1.0.2
 
-!begin-bullets-64!
+!begin-bullets-65!
 
 -   !begin-bullet!
     Ensure `std::logic_error()` constructed with `std::string()`
     argument, to avoid build errors on Solaris.
     !end-bullet!
 
-!end-bullets-64!
+!end-bullets-65!
 
 # testthat 1.0.1
 
-!begin-bullets-65!
+!begin-bullets-66!
 
 -   !begin-bullet!
     New `expect_output_file()` to compare output of a function with a
@@ -2616,7 +2625,7 @@ upfront (#529). You can return to the previous default by setting
 
     !end-bullet!
 
-!end-bullets-65!
+!end-bullets-66!
 
 # testthat 1.0.0
 
@@ -2668,7 +2677,7 @@ will succeed.
 
 There are six new expectations:
 
-!begin-bullets-66!
+!begin-bullets-67!
 
 -   !begin-bullet!
     `expect_type()` checks the *type* of the object (#316),
@@ -2688,11 +2697,11 @@ There are six new expectations:
 
     !end-bullet!
 
-!end-bullets-66!
+!end-bullets-67!
 
 A number of older features have been deprecated:
 
-!begin-bullets-67!
+!begin-bullets-68!
 
 -   !begin-bullet!
     `expect_more_than()` and `expect_less_than()` have been deprecated.
@@ -2709,7 +2718,7 @@ A number of older features have been deprecated:
 
     !end-bullet!
 
-!end-bullets-67!
+!end-bullets-68!
 
 ## Expectations are conditions
 
@@ -2731,7 +2740,7 @@ The reporters system class has been considerably refactored to make
 existing reporters simpler and to make it easier to write new reporters.
 There are two main changes:
 
-!begin-bullets-68!
+!begin-bullets-69!
 
 -   !begin-bullet!
     Reporters classes are now R6 classes instead of Reference Classes.
@@ -2740,7 +2749,7 @@ There are two main changes:
 -   !begin-bullet!
     Each callbacks receive the full context:
 
-    !begin-bullets-69!
+    !begin-bullets-70!
     -   !begin-bullet!
         `add_results()` is passed context and test as well as the
         expectation.
@@ -2752,7 +2761,7 @@ There are two main changes:
         `context_start()` and `context_end()` get the context.
         !end-bullet!
 
-    !end-bullets-69!
+    !end-bullets-70!
     !end-bullet!
 -   !begin-bullet!
     Warnings are now captured and reported in most reporters.
@@ -2781,11 +2790,11 @@ There are two main changes:
 
     !end-bullet!
 
-!end-bullets-68!
+!end-bullets-69!
 
 ## Other
 
-!begin-bullets-70!
+!begin-bullets-71!
 
 -   !begin-bullet!
     New functions `capture_output()`, `capture_message()`, and
@@ -2887,11 +2896,11 @@ There are two main changes:
 
     !end-bullet!
 
-!end-bullets-70!
+!end-bullets-71!
 
 # testthat 0.11.0
 
-!begin-bullets-71!
+!begin-bullets-72!
 
 -   !begin-bullet!
     Handle skipped tests in the TAP reporter (#262).
@@ -2975,11 +2984,11 @@ There are two main changes:
 
     !end-bullet!
 
-!end-bullets-71!
+!end-bullets-72!
 
 # testthat 0.10.0
 
-!begin-bullets-72!
+!begin-bullets-73!
 
 -   !begin-bullet!
     Failure locations are now formatted as R error locations.
@@ -3071,23 +3080,23 @@ There are two main changes:
 
     !end-bullet!
 
-!end-bullets-72!
+!end-bullets-73!
 
 # testthat 0.9.1
 
-!begin-bullets-73!
+!begin-bullets-74!
 
 -   !begin-bullet!
     Bump R version dependency
     !end-bullet!
 
-!end-bullets-73!
+!end-bullets-74!
 
 # testthat 0.9
 
 ## New features
 
-!begin-bullets-74!
+!begin-bullets-75!
 
 -   !begin-bullet!
     BDD: testhat now comes with an initial behaviour driven development
@@ -3125,11 +3134,11 @@ There are two main changes:
 
     !end-bullet!
 
-!end-bullets-74!
+!end-bullets-75!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-75!
+!begin-bullets-76!
 
 -   !begin-bullet!
     `auto_test_package()` works once more, and now uses
@@ -3166,21 +3175,21 @@ There are two main changes:
 
     !end-bullet!
 
-!end-bullets-75!
+!end-bullets-76!
 
 ## Deprecated functions
 
-!begin-bullets-76!
+!begin-bullets-77!
 
 -   !begin-bullet!
     `library_if_available()` has been deprecated.
     !end-bullet!
 
-!end-bullets-76!
+!end-bullets-77!
 
 # testthat 0.8.1
 
-!begin-bullets-77!
+!begin-bullets-78!
 
 -   !begin-bullet!
     Better default environment for `test_check()` and `test_package()`
@@ -3192,7 +3201,7 @@ There are two main changes:
 
     !end-bullet!
 
-!end-bullets-77!
+!end-bullets-78!
 
 # testthat 0.8
 
@@ -3211,7 +3220,7 @@ where failures occurred.
 
 ## New reporters
 
-!begin-bullets-78!
+!begin-bullets-79!
 
 -   !begin-bullet!
     `MultiReporter`, which combines several reporters into one. (Thanks
@@ -3237,11 +3246,11 @@ where failures occurred.
 
     !end-bullet!
 
-!end-bullets-78!
+!end-bullets-79!
 
 ## New expectations
 
-!begin-bullets-79!
+!begin-bullets-80!
 
 -   !begin-bullet!
     `expect_null()` and `is_null` to check if an object is NULL (#78)
@@ -3259,11 +3268,11 @@ where failures occurred.
 
     !end-bullet!
 
-!end-bullets-79!
+!end-bullets-80!
 
 ## Minor improvements and bug fixes
 
-!begin-bullets-80!
+!begin-bullets-81!
 
 -   !begin-bullet!
     `expect_that()` (and thus all `expect_*` functions) now invisibly
@@ -3330,11 +3339,11 @@ where failures occurred.
 
     !end-bullet!
 
-!end-bullets-80!
+!end-bullets-81!
 
 # testthat 0.7.1
 
-!begin-bullets-81!
+!begin-bullets-82!
 
 -   !begin-bullet!
     Ignore attributes in `is_true` and `is_false` (#49)
@@ -3364,11 +3373,11 @@ where failures occurred.
 
     !end-bullet!
 
-!end-bullets-81!
+!end-bullets-82!
 
 # testthat 0.7
 
-!begin-bullets-82!
+!begin-bullets-83!
 
 -   !begin-bullet!
     `SummaryReporter`: still return informative messages even if no
@@ -3404,11 +3413,11 @@ where failures occurred.
 
     !end-bullet!
 
-!end-bullets-82!
+!end-bullets-83!
 
 # testthat 0.6
 
-!begin-bullets-83!
+!begin-bullets-84!
 
 -   !begin-bullet!
     All `mutatr` classes have been replaced with ReferenceClasses.
@@ -3424,21 +3433,21 @@ where failures occurred.
 
     !end-bullet!
 
-!end-bullets-83!
+!end-bullets-84!
 
 # testthat 0.5
 
-!begin-bullets-84!
+!begin-bullets-85!
 
 -   !begin-bullet!
     bare expectations now correctly throw errors again
     !end-bullet!
 
-!end-bullets-84!
+!end-bullets-85!
 
 # testthat 0.4
 
-!begin-bullets-85!
+!begin-bullets-86!
 
 -   !begin-bullet!
     autotest correctly loads code and executes tests in same environment
@@ -3460,11 +3469,11 @@ where failures occurred.
 
     !end-bullet!
 
-!end-bullets-85!
+!end-bullets-86!
 
 # testthat 0.3
 
-!begin-bullets-86!
+!begin-bullets-87!
 
 -   !begin-bullet!
     all expectations now have a shortcut form, so instead of
@@ -3509,11 +3518,11 @@ where failures occurred.
 
     !end-bullet!
 
-!end-bullets-86!
+!end-bullets-87!
 
 # testthat 0.2
 
-!begin-bullets-87!
+!begin-bullets-88!
 
 -   !begin-bullet!
     colourise also works in screen terminal
@@ -3550,4 +3559,4 @@ where failures occurred.
 
     !end-bullet!
 
-!end-bullets-87!
+!end-bullets-88!
