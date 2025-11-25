@@ -20240,3 +20240,5 @@ shinytest2,c9e447cbe1dce9691af8ee4f3c390e32,"`record_test()` gained a new parame
 dbplyr,a60a7fab4966856c158b6a071663e262,"`dbplyr_uncount()` now works with Redshift (@​owenjonesuob, #1601).",NA,NA,NA,NA
 haven,e3aa10f39d23366d278b0dd3f34cebd2,Character limit checks in `write_xpt()` now check for the number of bytes instead of the number of characters (#746).,NA,NA,NA,NA
 testthat,076c930b41f92cd5a3c480f488a26012,"Fixed support for `shinytest2::AppDriver$expect_values()` screenshot snapshot failing on CI (#2293, #2288).",NA,NA,NA,NA
+lintr,3050496b65e66704d1b900e975b797fd,"`lint()` no longer picks up settings automatically in *ad hoc* invocations like `lint(""text\n"")` or `lint(text = ""str"")`. You should set `parse_settings=TRUE` to force settings to be read.",NA,NA,NA,NA
+lintr,22da9fcfb5c2b17a4d8aa29ab18242aa,"Files with encoding inferred from settings read more robustly under `lint(parse_settings = TRUE)` (#2803, @​MichaelChirico). Thanks also to @​bastistician for detecting a regression caused by the initial change for users of Emacs (#2847).",NA,NA,NA,NA

@@ -51,6 +51,11 @@
     native pipe required) to coincide with the same change in the
     Tidyverse Style Guide (#2707, @MichaelChirico).
     !end-bullet!
+-   !begin-bullet!
+    `lint()` no longer picks up settings automatically in *ad hoc*
+    invocations like `lint("text\n")` or `lint(text = "str")`. You
+    should set `parse_settings=TRUE` to force settings to be read.
+    !end-bullet!
 
 !end-bullets-1!
 
@@ -66,7 +71,9 @@
     !end-bullet!
 -   !begin-bullet!
     Files with encoding inferred from settings read more robustly under
-    `lint(parse_settings = TRUE)` (#2803, @MichaelChirico).
+    `lint(parse_settings = TRUE)` (#2803, @MichaelChirico). Thanks also
+    to @bastistician for detecting a regression caused by the initial
+    change for users of Emacs (#2847).
     !end-bullet!
 -   !begin-bullet!
     `assignment_linter()` no longer errors if `"%<>%"` is an allowed
