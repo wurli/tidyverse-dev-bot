@@ -201,10 +201,6 @@
     (#2858, @lschneiderbauer)
     !end-bullet!
 -   !begin-bullet!
-    `brace_linter()` requires `test_that()`'s `code=` argument to have
-    curly braces (#2292, @MichaelChirico).
-    !end-bullet!
--   !begin-bullet!
     `fixed_regex_linter()` recognizes usage of the new (R 4.5.0)
     `grepv()` wrapper of `grep()`; `regex_subset_linter()` also
     recommends `grepv()` alternatives (#2855, @MichaelChirico).
