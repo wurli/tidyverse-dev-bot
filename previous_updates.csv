@@ -20242,3 +20242,9 @@ haven,e3aa10f39d23366d278b0dd3f34cebd2,Character limit checks in `write_xpt()` n
 testthat,076c930b41f92cd5a3c480f488a26012,"Fixed support for `shinytest2::AppDriver$expect_values()` screenshot snapshot failing on CI (#2293, #2288).",NA,NA,NA,NA
 lintr,3050496b65e66704d1b900e975b797fd,"`lint()` no longer picks up settings automatically in *ad hoc* invocations like `lint(""text\n"")` or `lint(text = ""str"")`. You should set `parse_settings=TRUE` to force settings to be read.",NA,NA,NA,NA
 lintr,22da9fcfb5c2b17a4d8aa29ab18242aa,"Files with encoding inferred from settings read more robustly under `lint(parse_settings = TRUE)` (#2803, @​MichaelChirico). Thanks also to @​bastistician for detecting a regression caused by the initial change for users of Emacs (#2847).",NA,NA,NA,NA
+shiny,ba2fe5d7a4c0de1f318dffd76352f5e8,"Supported values for `options(shiny.otel.collect)` (or `Sys.getenv(""SHINY_OTEL_COLLECT"")`):",NA,NA,NA,NA
+shiny,ba2fe5d7a4c0de1f318dffd76352f5e8,"• `""none""` - No Shiny OpenTelemetry tracing.",NA,NA,NA,NA
+shiny,ba2fe5d7a4c0de1f318dffd76352f5e8,"• `""session""` - Adds session start/end spans.",NA,NA,NA,NA
+shiny,ba2fe5d7a4c0de1f318dffd76352f5e8,"• `""reactive_update""` - Spans for any synchronous/asynchronous reactive update. (Includes `""session""` features).",NA,NA,NA,NA
+shiny,ba2fe5d7a4c0de1f318dffd76352f5e8,"• `""reactivity""` - Spans for all reactive expressions. (Includes `""reactive_update""` features).",NA,NA,NA,NA
+shiny,ba2fe5d7a4c0de1f318dffd76352f5e8,"• `""all""` \[default\] - All Shiny OpenTelemetry tracing. Currently equivalent to `""reactivity""`.",NA,NA,NA,NA

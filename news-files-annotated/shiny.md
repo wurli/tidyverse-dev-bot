@@ -12,8 +12,8 @@
 
     !end-bullet!
 -   !begin-bullet!
-    Supported values for `options(shiny.otel.bind)` (or
-    `Sys.getenv("SHINY_OTEL_BIND")`):
+    Supported values for `options(shiny.otel.collect)` (or
+    `Sys.getenv("SHINY_OTEL_COLLECT")`):
 
     !begin-bullets-2!
     -   !begin-bullet!
