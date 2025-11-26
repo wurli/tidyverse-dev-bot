@@ -12,6 +12,11 @@
     `--highlight-style` has been deprecated (thanks, @ywwry66, #2602).
 
     !end-bullet!
+-   !begin-bullet!
+    `default_output_format()` will fall back to `html_document` if the
+    output format in YAML cannot be recognized.
+
+    !end-bullet!
 
 !end-bullets-1!
 

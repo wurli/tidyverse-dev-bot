@@ -20254,3 +20254,4 @@ dbplyr,9691a7279537a24feebf82ef157db0cd,"Corrected translation of `stringr::str_
 dbplyr,00bb5a50c007afc2769329ffa771de5e,"Fixed overwrite flag in `copy_to()` to work when source is in the same DB as destination (@​liudvikasakelis, #1535)",NA,NA,NA,NA
 xml2,79e9a42c5902fc224343a37f5e0e1ddf,Avoid shared libxml2 on MacOS because this reveals bugs in R.app (#471),NA,NA,NA,NA
 vroom,95f44d0af0fdae2dbff38028f2c536fe,"`problems()` are no longer corrupted if the offending data frame is partially materialized, e.g. by viewing a subset, before calling `problems()` (#535).",NA,NA,NA,NA
+rmarkdown,ea86c2955a2447262400545873c9c375,`default_output_format()` will fall back to `html_document` if the output format in YAML cannot be recognized.,NA,NA,NA,NA
