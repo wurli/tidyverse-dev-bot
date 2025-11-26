@@ -20250,3 +20250,5 @@ shiny,ba2fe5d7a4c0de1f318dffd76352f5e8,"• `""reactivity""` - Spans for all rea
 shiny,ba2fe5d7a4c0de1f318dffd76352f5e8,"• `""all""` \[default\] - All Shiny OpenTelemetry tracing. Currently equivalent to `""reactivity""`.",NA,NA,NA,NA
 vroom,60359f3f30d42894a0ff8886f30c3fbb,"`problems()` works normally for vroom-produced objects, even if readr is attached (#534, #554).",NA,NA,NA,NA
 dbplyr,e7c234a7f2ee35faf7741ef7fca23518,"Snowflake correctly translates `$` to `:` (@​jsowder, #1608)",NA,NA,NA,NA
+dbplyr,9691a7279537a24feebf82ef157db0cd,"Corrected translation of `stringr::str_like()` to use case-sensitive `LIKE` when argument `ignore_case` is set as `FALSE` (@​edward-burn, #1488).",NA,NA,NA,NA
+dbplyr,00bb5a50c007afc2769329ffa771de5e,"Fixed overwrite flag in `copy_to()` to work when source is in the same DB as destination (@​liudvikasakelis, #1535)",NA,NA,NA,NA

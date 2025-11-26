@@ -3,6 +3,15 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Corrected translation of `stringr::str_like()` to use case-sensitive
+    `LIKE` when argument `ignore_case` is set as `FALSE` (@edward-burn,
+    #1488).
+    !end-bullet!
+-   !begin-bullet!
+    Fixed overwrite flag in `copy_to()` to work when source is in the
+    same DB as destination (@liudvikasakelis, #1535)
+    !end-bullet!
+-   !begin-bullet!
     Snowflake correctly translates `$` to `:` (@jsowder, #1608)
     !end-bullet!
 -   !begin-bullet!
