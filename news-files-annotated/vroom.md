@@ -14,6 +14,11 @@
     approach for phasing out usage of `DATAPTR()` (#561).
 
     !end-bullet!
+-   !begin-bullet!
+    `problems()` works normally for vroom-produced objects, even if
+    readr is attached (#534, #554).
+
+    !end-bullet!
 
 !end-bullets-1!
 

@@ -20248,3 +20248,4 @@ shiny,ba2fe5d7a4c0de1f318dffd76352f5e8,"• `""session""` - Adds session start/e
 shiny,ba2fe5d7a4c0de1f318dffd76352f5e8,"• `""reactive_update""` - Spans for any synchronous/asynchronous reactive update. (Includes `""session""` features).",NA,NA,NA,NA
 shiny,ba2fe5d7a4c0de1f318dffd76352f5e8,"• `""reactivity""` - Spans for all reactive expressions. (Includes `""reactive_update""` features).",NA,NA,NA,NA
 shiny,ba2fe5d7a4c0de1f318dffd76352f5e8,"• `""all""` \[default\] - All Shiny OpenTelemetry tracing. Currently equivalent to `""reactivity""`.",NA,NA,NA,NA
+vroom,60359f3f30d42894a0ff8886f30c3fbb,"`problems()` works normally for vroom-produced objects, even if readr is attached (#534, #554).",NA,NA,NA,NA
