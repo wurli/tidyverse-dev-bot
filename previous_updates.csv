@@ -20253,3 +20253,4 @@ dbplyr,e7c234a7f2ee35faf7741ef7fca23518,"Snowflake correctly translates `$` to `
 dbplyr,9691a7279537a24feebf82ef157db0cd,"Corrected translation of `stringr::str_like()` to use case-sensitive `LIKE` when argument `ignore_case` is set as `FALSE` (@​edward-burn, #1488).",NA,NA,NA,NA
 dbplyr,00bb5a50c007afc2769329ffa771de5e,"Fixed overwrite flag in `copy_to()` to work when source is in the same DB as destination (@​liudvikasakelis, #1535)",NA,NA,NA,NA
 xml2,79e9a42c5902fc224343a37f5e0e1ddf,Avoid shared libxml2 on MacOS because this reveals bugs in R.app (#471),NA,NA,NA,NA
+vroom,95f44d0af0fdae2dbff38028f2c536fe,"`problems()` are no longer corrupted if the offending data frame is partially materialized, e.g. by viewing a subset, before calling `problems()` (#535).",NA,NA,NA,NA

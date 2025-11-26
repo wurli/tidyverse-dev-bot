@@ -19,6 +19,12 @@
     readr is attached (#534, #554).
 
     !end-bullet!
+-   !begin-bullet!
+    `problems()` are no longer corrupted if the offending data frame is
+    partially materialized, e.g. by viewing a subset, before calling
+    `problems()` (#535).
+
+    !end-bullet!
 
 !end-bullets-1!
 
