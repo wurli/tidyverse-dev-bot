@@ -3,6 +3,9 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Snowflake correctly translates `$` to `:` (@jsowder, #1608)
+    !end-bullet!
+-   !begin-bullet!
     `dbplyr_uncount()` now works with Redshift (@owenjonesuob, #1601).
     !end-bullet!
 
