@@ -20252,3 +20252,4 @@ vroom,60359f3f30d42894a0ff8886f30c3fbb,"`problems()` works normally for vroom-pr
 dbplyr,e7c234a7f2ee35faf7741ef7fca23518,"Snowflake correctly translates `$` to `:` (@​jsowder, #1608)",NA,NA,NA,NA
 dbplyr,9691a7279537a24feebf82ef157db0cd,"Corrected translation of `stringr::str_like()` to use case-sensitive `LIKE` when argument `ignore_case` is set as `FALSE` (@​edward-burn, #1488).",NA,NA,NA,NA
 dbplyr,00bb5a50c007afc2769329ffa771de5e,"Fixed overwrite flag in `copy_to()` to work when source is in the same DB as destination (@​liudvikasakelis, #1535)",NA,NA,NA,NA
+xml2,79e9a42c5902fc224343a37f5e0e1ddf,Avoid shared libxml2 on MacOS because this reveals bugs in R.app (#471),NA,NA,NA,NA
