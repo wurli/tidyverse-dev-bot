@@ -20265,3 +20265,14 @@ duckplyr,0f8fd409c2089fe1b677b1333bac4923,"Add superseded lifecycle badge to `tr
 duckplyr,c0495e702bec94252f9512863fc667db,Review contributing guide (#657).,NA,NA,NA,NA
 dbplyr,79db7d9324ea49fe8b5c5e75f89e4f2e,"SQL server: `slice_sample()` returns different results each run (@​thomashulst, #1503)",NA,NA,NA,NA
 dbplyr,80df88cf44216d3740481b28cb3c21f4,`show_query()` gains `use_colour` argument (#1590).,NA,NA,NA,NA
+lintr,106012bd87a2945e0c047d1ff8ac0f4b,"`lint()` no longer picks up settings automatically in *ad hoc* invocations like `lint(""text\n"")` or `lint(text = ""str"")`. You should set `parse_settings=TRUE` to force settings to be read. Emacs ESS users may need to update to a recent version, e.g. `ESS>20251003`.",NA,NA,NA,NA
+lintr,8eb6ac82780a1e81b879ae1b42b42c7c,"`Lint()`, and thus all linters, require that the returned object's `message` attribute is consistently a simple character string (and not, for example, an object of class `""glue""`; #2740, @​MichaelChirico). In general it is good to avoid slower string builders like `glue()` inside a loop (a linter might be run on every expression in your pakcage). Classed character strings return a warning in this release, which will be upgraded to an error subsequently.",NA,NA,NA,NA
+lintr,84dd020c64ba413ba6169911e5cc9893,"`all_equal_linter()` warns about incorrect use of `all.equal()` in `if` clauses or preceded by `!` (#2885, @​Bisaloo). Such usages should wrap `all.equal()` with `isTRUE()`, for example.",NA,NA,NA,NA
+lintr,6023bfb0c89d3dfbc4b222262d6eb008,`T_and_F_symbol_linter()` ignores `T` and `F`:,NA,NA,NA,NA
+lintr,6023bfb0c89d3dfbc4b222262d6eb008,"• When used as symbols in formulas (`y ~ T + F`), which can represent variables in data not controlled by the author (#2637, @​MichaelChirico).",NA,NA,NA,NA
+lintr,6023bfb0c89d3dfbc4b222262d6eb008,"• If followed by `[` or `[[` (#2944, @​mcol).",NA,NA,NA,NA
+lintr,493d5fc79f4bb636570a1444deab86aa,"More consistency on handling `@​` extractions to match how similar `$` extractions would be linted (#2820, @​MichaelChirico).",NA,NA,NA,NA
+lintr,493d5fc79f4bb636570a1444deab86aa,• `function_left_parentheses_linter()`,NA,NA,NA,NA
+lintr,493d5fc79f4bb636570a1444deab86aa,• `indentation_linter()`,NA,NA,NA,NA
+lintr,493d5fc79f4bb636570a1444deab86aa,• `library_call_linter()`,NA,NA,NA,NA
+lintr,493d5fc79f4bb636570a1444deab86aa,• `missing_argument_linter()`,NA,NA,NA,NA
