@@ -3,6 +3,9 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `show_query()` gains `use_colour` argument (#1590).
+    !end-bullet!
+-   !begin-bullet!
     SQL server: `slice_sample()` returns different results each run
     (@thomashulst, #1503)
     !end-bullet!
