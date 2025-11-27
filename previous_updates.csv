@@ -20263,3 +20263,4 @@ duckplyr,eb7ed31759190da3b30a29a98ca396c4,"Document `row.names` incompatibility 
 duckplyr,bce0fb69ca874bdcf4483edbcb7831b6,"Add examples for specifying CSV column types by name (#775, #820).",NA,NA,NA,NA
 duckplyr,0f8fd409c2089fe1b677b1333bac4923,"Add superseded lifecycle badge to `transmute()` documentation (#364, #824).",NA,NA,NA,NA
 duckplyr,c0495e702bec94252f9512863fc667db,Review contributing guide (#657).,NA,NA,NA,NA
+dbplyr,79db7d9324ea49fe8b5c5e75f89e4f2e,"SQL server: `slice_sample()` returns different results each run (@​thomashulst, #1503)",NA,NA,NA,NA

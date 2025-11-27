@@ -3,6 +3,15 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    SQL server: `slice_sample()` returns different results each run
+    (@thomashulst, #1503)
+    !end-bullet!
+-   !begin-bullet!
+    Corrected translation of `stringr::str_like()` to use case-sensitive
+    `LIKE` when argument `ignore_case` is set as `FALSE` (@edward-burn,
+    #1488).
+    !end-bullet!
+-   !begin-bullet!
     Corrected translation of `stringr::str_like()` to use case-sensitive
     `LIKE` when argument `ignore_case` is set as `FALSE` (@edward-burn,
     #1488).
@@ -114,7 +123,7 @@
         !end-bullet!
     -   !begin-bullet!
         If you accidentally pass a named vector to any of the database
-        identifer functions, those names will be automatically stripped
+        identifier functions, those names will be automatically stripped
         (#1404).
 
         !end-bullet!
@@ -432,7 +441,7 @@
 
         !end-bullet!
     -   !begin-bullet!
-        A `semi/anti_join()` on fitlered `y` is inlined when possible
+        A `semi/anti_join()` on filtered `y` is inlined when possible
         (@mgirlich, #884).
 
         !end-bullet!
