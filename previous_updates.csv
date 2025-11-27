@@ -20255,3 +20255,11 @@ dbplyr,00bb5a50c007afc2769329ffa771de5e,"Fixed overwrite flag in `copy_to()` to 
 xml2,79e9a42c5902fc224343a37f5e0e1ddf,Avoid shared libxml2 on MacOS because this reveals bugs in R.app (#471),NA,NA,NA,NA
 vroom,95f44d0af0fdae2dbff38028f2c536fe,"`problems()` are no longer corrupted if the offending data frame is partially materialized, e.g. by viewing a subset, before calling `problems()` (#535).",NA,NA,NA,NA
 rmarkdown,ea86c2955a2447262400545873c9c375,`default_output_format()` will fall back to `html_document` if the output format in YAML cannot be recognized.,NA,NA,NA,NA
+duckplyr,a99d3c6a9e97cb8368e06778a2051726,"`transmute()` can reference new variables (#796, #819).",NA,NA,NA,NA
+duckplyr,783198d4671e34b91f6e0acf1463379b,Move compatibility checks to duckdb (#721).,NA,NA,NA,NA
+duckplyr,05ebe839d104097ccacd399d63c638f2,Fix compatibility with duckdb 1.4.2.,NA,NA,NA,NA
+duckplyr,432213dd15aeb74f606970d79d4e8f58,"Add blog post to pkgdown config (#612, #827).",NA,NA,NA,NA
+duckplyr,eb7ed31759190da3b30a29a98ca396c4,"Document `row.names` incompatibility (#603, #825).",NA,NA,NA,NA
+duckplyr,bce0fb69ca874bdcf4483edbcb7831b6,"Add examples for specifying CSV column types by name (#775, #820).",NA,NA,NA,NA
+duckplyr,0f8fd409c2089fe1b677b1333bac4923,"Add superseded lifecycle badge to `transmute()` documentation (#364, #824).",NA,NA,NA,NA
+duckplyr,c0495e702bec94252f9512863fc667db,Review contributing guide (#657).,NA,NA,NA,NA
