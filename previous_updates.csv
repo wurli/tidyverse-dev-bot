@@ -20280,3 +20280,19 @@ dbplyr,6b0766e1f966e42762f40add6d7ea5c4,Defunct functions have been removed:,NA,
 dbplyr,6b0766e1f966e42762f40add6d7ea5c4,• `src_sql()` deprecated in 1.4.0 (2019-04-23),NA,NA,NA,NA
 dbplyr,6b0766e1f966e42762f40add6d7ea5c4,• `partial_eval(var)` deprecated in 2.2.0 (2022-06-05).,NA,NA,NA,NA
 dbplyr,6b0766e1f966e42762f40add6d7ea5c4,• `group_by(add = )` deprecated in dplyr 1.1.0 (2020-06-01).,NA,NA,NA,NA
+pointblank,e81f7b3042c8dc2a7862610f90eb17c9,"We now support validation checks of Oracle tables via ODBC (#462). (#644, @​pachadotdev)",NA,NA,NA,NA
+pointblank,5cec009148485e40f305a2fe67267a4a,"Redshift table support has now been fixed (#538). (#623, #643, @​pachadotdev and @​hfrick)",NA,NA,NA,NA
+pointblank,148696502546dac6a28809709fba68cb,"Added an infix resolution for `log4r_step()`'s `message` argument (#654). (#656, @​alexpaynter)",NA,NA,NA,NA
+pointblank,813230a511ed1660bd99e51338015e5d,Fixed the issue where an agent would auto-generating a table label that was too long (truncation occurs now) (#613). (#614),NA,NA,NA,NA
+pointblank,d356da2eb04e20cb2356eee732723e7e,Fixed problem where agents would not search the formula environment when materializing `~ tbl` (#598). (#599),NA,NA,NA,NA
+pointblank,2db26285a965aff29a31afdc7dc0aa25,`info_columns()` now warns more informatively when no columns are selected (#344). (#589).,NA,NA,NA,NA
+pointblank,d4a20d9ff9cb90b86f7385e73cf63cfb,`write_yaml()` errors more informatively now when a `tbl` value is incompatible for YAML-writing (#596). (#597),NA,NA,NA,NA
+pointblank,48e973582c872dd4e2475a050794e582,The `yaml_agent_string()` function now returns the yaml string (#609). (#610),NA,NA,NA,NA
+pointblank,246023d37d913bedfb3602bcc721cfe4,The `col_vals_regex()` function now supports Perl regexes (#606). (#608),NA,NA,NA,NA
+pointblank,9fc123b503bc610fe00fd078175ab29b,"We now use a safeguard to fall back to the original string as-is if glue interpolation fails (useful in cases where a user-provided regex like `{1,2}` is to be preservedin in autobrief but triggers an error by {glue}) (#600). (#601)",NA,NA,NA,NA
+pointblank,dcabf8632214169c75784c6e2f150d88,"Data extracts for `rows_distinct()`/`rows_complete()` now preserve all columns, not just the ones tested (#475). (#588, #591)",NA,NA,NA,NA
+pointblank,5386ee492bff694f1cc5efdf5ed2cb34,"Performed extensive refactoring of internal dplyr and ggplot2 code. (#579, #582, #583, @​olivroy)",NA,NA,NA,NA
+pointblank,734b99c39729907eb9313a2f39c5f6cb,"Rebuilt translation table and added support for ordered factors in `scan_data()`. (#580, @​olivroy)",NA,NA,NA,NA
+pointblank,87a45c162e16cfba94b4086b3921a4ce,"Modernized test infrastructure and removed deprecated testthat features. (#577, @​olivroy)",NA,NA,NA,NA
+pointblank,a3f4291ba40e6353828923b419280de2,"Added a new Get Started vignette. (#605, @​hfrick)",NA,NA,NA,NA
+pointblank,a1d3108e01a041e6e09cef85869f2f27,The README.md has undergone some refinements. (#618),NA,NA,NA,NA

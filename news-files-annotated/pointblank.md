@@ -1,52 +1,103 @@
-# pointblank (development version)
+# pointblank 0.12.3
 
 !begin-bullets-1!
 
 -   !begin-bullet!
-    Add `na_pass` to `col_vals_expr()` for finer control of `NA` values.
-    Previously, `NA`s were ignored, but now they are caught as failures
-    with the default `na_pass = FALSE`. As a safeguard, if an expression
-    generates `NA` values while `na_pass` is not explicitly supplied, a
-    warning is thrown. (#617)
+    We now support validation checks of Oracle tables via ODBC (#462).
+    (#644, @pachadotdev)
 
     !end-bullet!
 -   !begin-bullet!
-    Bugfix agents auto-generating a table label that was too long. They
-    now get truncated (#614)
+    Redshift table support has now been fixed (#538). (#623, #643,
+    @pachadotdev and @hfrick)
 
     !end-bullet!
 -   !begin-bullet!
-    Bugfix agents not searching the formula environment when
-    materializing `~ tbl` (#599)
+    Added the `na_pass` argument to `col_vals_expr()` for finer control
+    of `NA` values. Previously, `NA`s were ignored, but now they are
+    caught as failures with the default `na_pass = FALSE`. As a
+    safeguard, if an expression generates `NA` values while `na_pass` is
+    not explicitly supplied, a warning is thrown (#616). (#617)
 
     !end-bullet!
 -   !begin-bullet!
-    `info_columns()` warn more informatively when no columns are
-    selected (#589).
+    Added an infix resolution for `log4r_step()`'s `message` argument
+    (#654). (#656, @alexpaynter)
 
     !end-bullet!
 -   !begin-bullet!
-    `write_yaml()` errors more informatively when `tbl` value is
-    incompatible for yaml-writing (#597)
+    Fixed the issue where an agent would auto-generating a table label
+    that was too long (truncation occurs now) (#613). (#614)
 
     !end-bullet!
 -   !begin-bullet!
-    Data extracts for `rows_distinct()`/`rows_complete()` preserves all
-    columns, not just the ones tested (#588, #591)
+    Fixed problem where agents would not search the formula environment
+    when materializing `~ tbl` (#598). (#599)
+
+    !end-bullet!
+-   !begin-bullet!
+    `info_columns()` now warns more informatively when no columns are
+    selected (#344). (#589).
+
+    !end-bullet!
+-   !begin-bullet!
+    `write_yaml()` errors more informatively now when a `tbl` value is
+    incompatible for YAML-writing (#596). (#597)
+
+    !end-bullet!
+-   !begin-bullet!
+    The `yaml_agent_string()` function now returns the yaml string
+    (#609). (#610)
+
+    !end-bullet!
+-   !begin-bullet!
+    The `col_vals_regex()` function now supports Perl regexes (#606).
+    (#608)
+
+    !end-bullet!
+-   !begin-bullet!
+    We now use a safeguard to fall back to the original string as-is if
+    glue interpolation fails (useful in cases where a user-provided
+    regex like `{1,2}` is to be preservedin in autobrief but triggers an
+    error by {glue}) (#600). (#601)
+
+    !end-bullet!
+-   !begin-bullet!
+    Data extracts for `rows_distinct()`/`rows_complete()` now preserve
+    all columns, not just the ones tested (#475). (#588, #591)
 
     !end-bullet!
 -   !begin-bullet!
     The `brief` argument of validation functions now also supports
-    `{glue}` syntax (#587)
+    `{glue}` syntax. (#587)
 
     !end-bullet!
 -   !begin-bullet!
-    Validation step `brief`s correctly recycle to match expanded steps
+    Validation step `brief`s correctly recycle to match expanded steps.
     (#564)
 
     !end-bullet!
 -   !begin-bullet!
-    A new Get Started vignette (#605).
+    Performed extensive refactoring of internal dplyr and ggplot2 code.
+    (#579, #582, #583, @olivroy)
+
+    !end-bullet!
+-   !begin-bullet!
+    Rebuilt translation table and added support for ordered factors in
+    `scan_data()`. (#580, @olivroy)
+
+    !end-bullet!
+-   !begin-bullet!
+    Modernized test infrastructure and removed deprecated testthat
+    features. (#577, @olivroy)
+
+    !end-bullet!
+-   !begin-bullet!
+    Added a new Get Started vignette. (#605, @hfrick)
+
+    !end-bullet!
+-   !begin-bullet!
+    The README.md has undergone some refinements. (#618)
 
     !end-bullet!
 
