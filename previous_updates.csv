@@ -20276,3 +20276,7 @@ lintr,493d5fc79f4bb636570a1444deab86aa,• `function_left_parentheses_linter()`,
 lintr,493d5fc79f4bb636570a1444deab86aa,• `indentation_linter()`,NA,NA,NA,NA
 lintr,493d5fc79f4bb636570a1444deab86aa,• `library_call_linter()`,NA,NA,NA,NA
 lintr,493d5fc79f4bb636570a1444deab86aa,• `missing_argument_linter()`,NA,NA,NA,NA
+dbplyr,6b0766e1f966e42762f40add6d7ea5c4,Defunct functions have been removed:,NA,NA,NA,NA
+dbplyr,6b0766e1f966e42762f40add6d7ea5c4,• `src_sql()` deprecated in 1.4.0 (2019-04-23),NA,NA,NA,NA
+dbplyr,6b0766e1f966e42762f40add6d7ea5c4,• `partial_eval(var)` deprecated in 2.2.0 (2022-06-05).,NA,NA,NA,NA
+dbplyr,6b0766e1f966e42762f40add6d7ea5c4,• `group_by(add = )` deprecated in dplyr 1.1.0 (2020-06-01).,NA,NA,NA,NA
