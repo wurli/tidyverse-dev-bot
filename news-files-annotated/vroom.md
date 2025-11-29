@@ -1,4 +1,4 @@
-# vroom (development version)
+# vroom 1.6.7
 
 !begin-bullets-1!
 
