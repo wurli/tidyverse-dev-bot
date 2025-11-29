@@ -20297,3 +20297,4 @@ pointblank,87a45c162e16cfba94b4086b3921a4ce,"Modernized test infrastructure and 
 pointblank,a3f4291ba40e6353828923b419280de2,"Added a new Get Started vignette. (#605, @​hfrick)",NA,NA,NA,NA
 pointblank,a1d3108e01a041e6e09cef85869f2f27,The README.md has undergone some refinements. (#618),NA,NA,NA,NA
 lintr,e889be5df99ca31bafaed9eff314af33,"Six linters fully deprecated in the previous release are now removed: `consecutive_stopifnot_linter()`, `extraction_operator_linter()`, `no_tab_linter()`, `single_quotes_linter()`, `unnecessary_nested_if_linter()`, and `unneeded_concatenation_linter()`.",NA,NA,NA,NA
+dbplyr,40561581bb9cef95f6b1b5d84921c947,dbplyr now uses the base pipe (#1626).,NA,NA,NA,NA

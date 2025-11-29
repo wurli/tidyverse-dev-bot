@@ -3,6 +3,9 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    dbplyr now uses the base pipe (#1626).
+    !end-bullet!
+-   !begin-bullet!
     Defunct functions have been removed:
     !begin-bullets-2!
     -   !begin-bullet!
