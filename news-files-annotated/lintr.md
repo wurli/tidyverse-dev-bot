@@ -14,11 +14,21 @@
 
 !end-bullets-1!
 
+## Notes
+
+!begin-bullets-2!
+
+-   !begin-bullet!
+    {lintr} now requires R 4.1.0
+    !end-bullet!
+
+!end-bullets-2!
+
 # lintr (3.3.0-1)
 
 ## Deprecations & breaking changes
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     The default for `pipe_consistency_linter()` is changed from `"auto"`
@@ -48,7 +58,7 @@
 -   !begin-bullet!
     As previously announced, the following fully-deprecated items are
     now removed from the package:
-    !begin-bullets-3!
+    !begin-bullets-4!
     -   !begin-bullet!
         `source_file=` argument to `ids_with_token()` and `with_id()`.
         !end-bullet!
@@ -66,7 +76,7 @@
         `paren_brace_linter()`, and `semicolon_terminator_linter()`.
         !end-bullet!
 
-    !end-bullets-3!
+    !end-bullets-4!
     !end-bullet!
 -   !begin-bullet!
     Argument `interpret_glue` to `object_usage_linter()` is deprecated
@@ -85,11 +95,11 @@
     subsequently.
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 ## Bug fixes
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     Files with encoding inferred from settings read more robustly under
@@ -107,11 +117,11 @@
     exactly one failure (#2937, @hadley).
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 ## Changes to default linters
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     `pipe_consistency_linter()`, with its new default to enforce the
@@ -120,13 +130,13 @@
     @MichaelChirico).
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 ## New and improved features
 
 ### New linters
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     `all_equal_linter()` warns about incorrect use of `all.equal()` in
@@ -154,11 +164,11 @@
     @emmanuel-ferdman for fixing a false positive before release.
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 ### Linter improvements
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     `brace_linter()` has a new argument `function_bodies` (default
@@ -170,7 +180,7 @@
     !end-bullet!
 -   !begin-bullet!
     `seq_linter()`:
-    !begin-bullets-8!
+    !begin-bullets-9!
     -   !begin-bullet!
         recommends using `seq_along(x)` instead of `seq_len(length(x))`
         (#2577, @MichaelChirico).
@@ -180,11 +190,11 @@
         `unlist(lapply(ints, seq))` (#2618, @Bisaloo).
         !end-bullet!
 
-    !end-bullets-8!
+    !end-bullets-9!
     !end-bullet!
 -   !begin-bullet!
     `undesirable_operator_linter()`:
-    !begin-bullets-9!
+    !begin-bullets-10!
     -   !begin-bullet!
         Lints operators in prefix form, e.g. `` `%%`(x, 2) `` (#1910,
         @MichaelChirico). Disable this by setting
@@ -196,7 +206,7 @@
         @MichaelChirico).
         !end-bullet!
 
-    !end-bullets-9!
+    !end-bullets-10!
     !end-bullet!
 -   !begin-bullet!
     `undesirable_function_linter()` accepts unnamed entries, treating
@@ -272,15 +282,15 @@
     (#2940, @emmanuel-ferdman).
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 ### Lint accuracy fixes: removing false positives
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     `unnecessary_nesting_linter()`:
-    !begin-bullets-11!
+    !begin-bullets-12!
     -   !begin-bullet!
         Treats function bodies under the shorthand lambda (`\()`) the
         same as normal function bodies (#2748, @MichaelChirico).
@@ -290,7 +300,7 @@
         consecutive `if()` clauses (#2245, @MichaelChirico).
         !end-bullet!
 
-    !end-bullets-11!
+    !end-bullets-12!
     !end-bullet!
 -   !begin-bullet!
     `string_boundary_linter()` omits lints of patterns like `\\^` which
@@ -330,7 +340,7 @@
     !end-bullet!
 -   !begin-bullet!
     `T_and_F_symbol_linter()` ignores `T` and `F`:
-    !begin-bullets-12!
+    !begin-bullets-13!
     -   !begin-bullet!
         When used as symbols in formulas (`y ~ T + F`), which can
         represent variables in data not controlled by the author (#2637,
@@ -340,14 +350,14 @@
         If followed by `[` or `[[` (#2944, @mcol).
         !end-bullet!
 
-    !end-bullets-12!
+    !end-bullets-13!
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 ### Lint accuracy fixes: removing false negatives
 
-!begin-bullets-13!
+!begin-bullets-14!
 
 -   !begin-bullet!
     `todo_comment_linter()` finds comments inside {roxygen2} markup
@@ -357,7 +367,7 @@
     Linters with logic around function declarations consistently include
     the R 4.0.0 shorthand `\()` (#2818, continuation of earlier #2190,
     @MichaelChirico).
-    !begin-bullets-14!
+    !begin-bullets-15!
     -   !begin-bullet!
         `library_call_linter()`
         !end-bullet!
@@ -368,12 +378,12 @@
         `unnecessary_lambda_linter()`
         !end-bullet!
 
-    !end-bullets-14!
+    !end-bullets-15!
     !end-bullet!
 -   !begin-bullet!
     More consistency on handling `@` extractions to match how similar
     `$` extractions would be linted (#2820, @MichaelChirico).
-    !begin-bullets-15!
+    !begin-bullets-16!
     -   !begin-bullet!
         `function_left_parentheses_linter()`
         !end-bullet!
@@ -387,7 +397,7 @@
         `missing_argument_linter()`
         !end-bullet!
 
-    !end-bullets-15!
+    !end-bullets-16!
     !end-bullet!
 -   !begin-bullet!
     `condition_call_linter()` no longer covers cases where the object
@@ -398,11 +408,11 @@
     in `stop()` or `warning()`.
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-14!
 
 ### Other improvements
 
-!begin-bullets-16!
+!begin-bullets-17!
 
 -   !begin-bullet!
     `get_source_expression()` captures warnings emitted by the R parser
@@ -430,11 +440,11 @@
     @Bisaloo).
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-17!
 
 ## Notes
 
-!begin-bullets-17!
+!begin-bullets-18!
 
 -   !begin-bullet!
     `{lintr}` now has an associated paper at the Journal of Open Source
@@ -448,7 +458,7 @@
 -   !begin-bullet!
     `unnecessary_nesting_linter()` gives a more specific lint message
     identifying:
-    !begin-bullets-18!
+    !begin-bullets-19!
     -   !begin-bullet!
         the unmatched "exit call" that prompts the recommendation to
         reduce nesting (#2316, @MichaelChirico).
@@ -458,7 +468,7 @@
         linted one (#1891, @MichaelChirico).
         !end-bullet!
 
-    !end-bullets-18!
+    !end-bullets-19!
     !end-bullet!
 -   !begin-bullet!
     The description in `?paste_linter` of `allow_file_path=` has been
@@ -471,19 +481,19 @@
     now-defunct support for posting GitHub comments.
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-18!
 
 # lintr 3.2.0
 
 ## Deprecations & breaking changes
 
-!begin-bullets-19!
+!begin-bullets-20!
 
 -   !begin-bullet!
     Various things marked deprecated since {lintr} 3.0.0 have been fully
     deprecated. They will be completely removed in the subsequent
     release. See previous NEWS for advice on how to replace them.
-    !begin-bullets-20!
+    !begin-bullets-21!
     -   !begin-bullet!
         `source_file=` argument to `ids_with_token()` and `with_id()`.
         !end-bullet!
@@ -504,7 +514,7 @@
         Helper `with_defaults()`.
         !end-bullet!
 
-    !end-bullets-20!
+    !end-bullets-21!
     !end-bullet!
 -   !begin-bullet!
     `all_linters()` has signature `all_linters(..., packages)` rather
@@ -577,11 +587,11 @@
     positionally first. See below about the new argument.
     !end-bullet!
 
-!end-bullets-19!
+!end-bullets-20!
 
 ## Bug fixes
 
-!begin-bullets-21!
+!begin-bullets-22!
 
 -   !begin-bullet!
     `expect_identical_linter()` also skips `expect_equal()` comparison
@@ -616,11 +626,11 @@
     @MichaelChirico).
     !end-bullet!
 
-!end-bullets-21!
+!end-bullets-22!
 
 ## Changes to default linters
 
-!begin-bullets-22!
+!begin-bullets-23!
 
 -   !begin-bullet!
     New default linter `return_linter()` for the style guide rule that
@@ -628,11 +638,11 @@
     #2356, @MEO265 and @MichaelChirico).
     !end-bullet!
 
-!end-bullets-22!
+!end-bullets-23!
 
 ## New and improved features
 
-!begin-bullets-23!
+!begin-bullets-24!
 
 -   !begin-bullet!
     New function node caching for big efficiency gains to most linters
@@ -653,7 +663,7 @@
 -   !begin-bullet!
     New `return_linter()` also has arguments for fine-tuning which
     functions get linted:
-    !begin-bullets-24!
+    !begin-bullets-25!
     -   !begin-bullet!
         `return_style=` (`"implicit"` by default) which checks that all
         functions confirm to the specified return style of `"implicit"`
@@ -687,7 +697,7 @@
         @MichaelChirico).
         !end-bullet!
 
-    !end-bullets-24!
+    !end-bullets-25!
     !end-bullet!
 -   !begin-bullet!
     `assignment_linter()` can be fully customized with the new
@@ -710,7 +720,7 @@
     !end-bullet!
 -   !begin-bullet!
     `library_call_linter()` is extended
-    !begin-bullets-25!
+    !begin-bullets-26!
     -   !begin-bullet!
         to encourage all packages to be attached with `library(symbol)`,
         not `library("symbol", character.only = TRUE)` or "vectorized"
@@ -723,7 +733,7 @@
         @MichaelChirico).
         !end-bullet!
 
-    !end-bullets-25!
+    !end-bullets-26!
     !end-bullet!
 -   !begin-bullet!
     `unnecessary_lambda_linter()` is extended to encourage vectorized
@@ -798,11 +808,11 @@
     pipe (#2671, @jcken95)
     !end-bullet!
 
-!end-bullets-23!
+!end-bullets-24!
 
 ### New linters
 
-!begin-bullets-26!
+!begin-bullets-27!
 
 -   !begin-bullet!
     `condition_call_linter()` for ensuring consistent use of `call.` in
@@ -894,11 +904,11 @@
     @MichaelChirico and @AshesITR).
     !end-bullet!
 
-!end-bullets-26!
+!end-bullets-27!
 
 ### Lint accuracy fixes: removing false positives
 
-!begin-bullets-27!
+!begin-bullets-28!
 
 -   !begin-bullet!
     `object_name_linter()` and `object_length_linter()` ignore {rlang}
@@ -913,11 +923,11 @@
     in scripts (#2654, @MichaelChirico).
     !end-bullet!
 
-!end-bullets-27!
+!end-bullets-28!
 
 ## Notes
 
-!begin-bullets-28!
+!begin-bullets-29!
 
 -   !begin-bullet!
     `{lintr}` now has a hex sticker
@@ -948,7 +958,7 @@
     `expect_lint(checks=)`.
     !end-bullet!
 
-!end-bullets-28!
+!end-bullets-29!
 
 # lintr 3.1.2
 
@@ -956,7 +966,7 @@
 
 ### Lint accuracy fixes: removing false positives
 
-!begin-bullets-29!
+!begin-bullets-30!
 
 -   !begin-bullet!
     `unreachable_code_linter()` ignores reachable code in inline
@@ -965,7 +975,7 @@
     !end-bullet!
 -   !begin-bullet!
     `unnecessary_lambda_linter()`
-    !begin-bullets-30!
+    !begin-bullets-31!
     -   !begin-bullet!
         ignores extractions with explicit returns like
         `lapply(l, function(x) foo(x)$bar)` (#2258, @MichaelChirico).
@@ -976,7 +986,7 @@
         @MichaelChirico).
         !end-bullet!
 
-    !end-bullets-30!
+    !end-bullets-31!
     !end-bullet!
 -   !begin-bullet!
     `vector_logic_linter()` recognizes some cases where bitwise `&`/`|`
@@ -994,11 +1004,11 @@
     @MichaelChirico).
     !end-bullet!
 
-!end-bullets-29!
+!end-bullets-30!
 
 ### Lint accuracy fixes: removing false negatives
 
-!begin-bullets-31!
+!begin-bullets-32!
 
 -   !begin-bullet!
     `missing_argument_linter()` catches all missing arguments in calls
@@ -1011,11 +1021,11 @@
     (#2402, @MichaelChirico).
     !end-bullet!
 
-!end-bullets-31!
+!end-bullets-32!
 
 ## Notes
 
-!begin-bullets-32!
+!begin-bullets-33!
 
 -   !begin-bullet!
     Fixed a test assuming a specific parser error message that recently
@@ -1027,13 +1037,13 @@
     releases wearing that hat!!
     !end-bullet!
 
-!end-bullets-32!
+!end-bullets-33!
 
 # lintr 3.1.1
 
 ## Breaking changes
 
-!begin-bullets-33!
+!begin-bullets-34!
 
 -   !begin-bullet!
     `infix_spaces_linter()` distinguishes `<-`, `:=`, `<<-` and `->`,
@@ -1067,7 +1077,7 @@
     config is searched for in a file named `.lintr.R`. This is a mildly
     breaking change if you happened to be keeping a file `.lintr.R`
     around since that file is given precedence over `.lintr`.
-    !begin-bullets-34!
+    !begin-bullets-35!
     -   !begin-bullet!
         We also validate config files up-front make it clearer when
         invalid configs are present (#2195, @MichaelChirico). There is a
@@ -1078,14 +1088,14 @@
         which variables are settings vs. ancillary.
         !end-bullet!
 
-    !end-bullets-34!
+    !end-bullets-35!
     !end-bullet!
 
-!end-bullets-33!
+!end-bullets-34!
 
 ## Bug fixes
 
-!begin-bullets-35!
+!begin-bullets-36!
 
 -   !begin-bullet!
     `sprintf_linter()` doesn't error in cases where whitespace in `...`
@@ -1093,11 +1103,11 @@
     which won't parse if whitespace is removed (#2131, @MichaelChirico).
     !end-bullet!
 
-!end-bullets-35!
+!end-bullets-36!
 
 ## Changes to default linters
 
-!begin-bullets-36!
+!begin-bullets-37!
 
 -   !begin-bullet!
     `assignment_linter()` lints the {magrittr} assignment pipe `%<>%`
@@ -1106,7 +1116,7 @@
     !end-bullet!
 -   !begin-bullet!
     `object_usage_linter()`:
-    !begin-bullets-37!
+    !begin-bullets-38!
     -   !begin-bullet!
         assumes `glue()` is `glue::glue()` when `interpret_glue=TRUE`
         (#2032, @MichaelChirico).
@@ -1117,7 +1127,7 @@
         #2069, @MichaelChirico).
         !end-bullet!
 
-    !end-bullets-37!
+    !end-bullets-38!
     !end-bullet!
 -   !begin-bullet!
     `object_name_linter()` no longer attempts to lint strings in
@@ -1133,11 +1143,11 @@
     convoluted form of `is.na(x)` (#2088, @MichaelChirico).
     !end-bullet!
 
-!end-bullets-36!
+!end-bullets-37!
 
 ## New and improved features
 
-!begin-bullets-38!
+!begin-bullets-39!
 
 -   !begin-bullet!
     New exclusion sentinel `# nolint next` to signify the next line
@@ -1178,11 +1188,11 @@
     @dave-lovell).
     !end-bullet!
 
-!end-bullets-38!
+!end-bullets-39!
 
 ### New linters
 
-!begin-bullets-39!
+!begin-bullets-40!
 
 -   !begin-bullet!
     `library_call_linter()` can detect if all library/require calls are
@@ -1221,11 +1231,11 @@
     which is meant to be `length(x) == 0` (#1991, @MichaelChirico).
     !end-bullet!
 
-!end-bullets-39!
+!end-bullets-40!
 
 ### Extensions to existing linters
 
-!begin-bullets-40!
+!begin-bullets-41!
 
 -   !begin-bullet!
     `fixed_regex_linter()` gains an option `allow_unescaped` (default
@@ -1283,7 +1293,7 @@
     !end-bullet!
 -   !begin-bullet!
     `unreachable_code_linter()`
-    !begin-bullets-41!
+    !begin-bullets-42!
     -   !begin-bullet!
         checks for code inside `if (FALSE)` and other conditional loops
         with deterministically false conditions (#1428, @ME0265).
@@ -1294,7 +1304,7 @@
         `next` statements. (#2105, @ME0265).
         !end-bullet!
 
-    !end-bullets-41!
+    !end-bullets-42!
     !end-bullet!
 -   !begin-bullet!
     `implicit_assignment_linter()` gains an argument `allow_lazy`
@@ -1316,7 +1326,7 @@
     Linters with logic around the magrittr pipe `%>%` consistently apply
     it to the other pipes `%!>%`, `%T>%`, `%<>%` (and possibly `%$%`)
     where appropriate (#2008, @MichaelChirico).
-    !begin-bullets-42!
+    !begin-bullets-43!
     -   !begin-bullet!
         `brace_linter()`
         !end-bullet!
@@ -1333,12 +1343,12 @@
         `unnecessary_placeholder_linter()`
         !end-bullet!
 
-    !end-bullets-42!
+    !end-bullets-43!
     !end-bullet!
 -   !begin-bullet!
     Linters with logic around function declarations consistently include
     the R 4.0.0 shorthand `\()` (#2190, @MichaelChirico).
-    !begin-bullets-43!
+    !begin-bullets-44!
     -   !begin-bullet!
         `brace_linter()`
         !end-bullet!
@@ -1367,18 +1377,18 @@
         `unreachable_code_linter()`
         !end-bullet!
 
-    !end-bullets-43!
+    !end-bullets-44!
     !end-bullet!
 
-!end-bullets-40!
+!end-bullets-41!
 
 ### Lint accuracy fixes: removing false positives
 
-!begin-bullets-44!
+!begin-bullets-45!
 
 -   !begin-bullet!
     `fixed_regex_linter()`
-    !begin-bullets-45!
+    !begin-bullets-46!
     -   !begin-bullet!
         Is pipe-aware, in particular removing false positives around
         piping into {stringr} functions like
@@ -1389,13 +1399,13 @@
         (#2159, @MichaelChirico).
         !end-bullet!
 
-    !end-bullets-45!
+    !end-bullets-46!
     !end-bullet!
 -   !begin-bullet!
     Several linters avoiding false positives in `$` extractions get the
     same exceptions for `@` extractions, e.g. `S4@T` will no longer
     throw a `T_and_F_symbol_linter()` hit (#2039, @MichaelChirico).
-    !begin-bullets-46!
+    !begin-bullets-47!
     -   !begin-bullet!
         `T_and_F_symbol_linter()`
         !end-bullet!
@@ -1418,7 +1428,7 @@
         `yoda_test_linter()`
         !end-bullet!
 
-    !end-bullets-46!
+    !end-bullets-47!
     !end-bullet!
 -   !begin-bullet!
     `sprintf_linter()` is pipe-aware, so that
@@ -1449,11 +1459,11 @@
     preferable.
     !end-bullet!
 
-!end-bullets-44!
+!end-bullets-45!
 
 ### Lint accuracy fixes: removing false negatives
 
-!begin-bullets-47!
+!begin-bullets-48!
 
 -   !begin-bullet!
     `unreachable_code_linter()` finds unreachable code even in the
@@ -1462,7 +1472,7 @@
     !end-bullet!
 -   !begin-bullet!
     `implicit_assignment_linter()`
-    !begin-bullets-48!
+    !begin-bullets-49!
     -   !begin-bullet!
         finds assignments in call arguments besides the first one
         (#2136, @MichaelChirico).
@@ -1472,28 +1482,28 @@
         `if (A && (B <- foo(A))) { }` (#2138, @MichaelChirico).
         !end-bullet!
 
-    !end-bullets-48!
+    !end-bullets-49!
     !end-bullet!
 -   !begin-bullet!
     `unnecessary_lambda_linter()` checks for cases using explicit
     returns, e.g. `lapply(x, \(xi) return(sum(xi)))` (#1567,
     @MichaelChirico).
-    !begin-bullets-49!
+    !begin-bullets-50!
     -   !begin-bullet!
         thanks to @Bisaloo and @strengejacke for detecting a regression
         in the original fix (#2231, #2247).
         !end-bullet!
 
-    !end-bullets-49!
+    !end-bullets-50!
     !end-bullet!
 
-!end-bullets-47!
+!end-bullets-48!
 
 # lintr 3.1.0
 
 ## Deprecations & Breaking Changes
 
-!begin-bullets-50!
+!begin-bullets-51!
 
 -   !begin-bullet!
     `.lintr` files can now be kept in the directory `.github/linters`
@@ -1539,11 +1549,11 @@
     upgraded to an error.
     !end-bullet!
 
-!end-bullets-50!
+!end-bullets-51!
 
 ## Bug fixes
 
-!begin-bullets-51!
+!begin-bullets-52!
 
 -   !begin-bullet!
     `linters_with_tags()` now includes the previously missing spaces
@@ -1573,7 +1583,7 @@
 -   !begin-bullet!
     `object_usage_linter()`
 
-    !begin-bullets-52!
+    !begin-bullets-53!
     -   !begin-bullet!
         No longer silently ignores usage warnings that don't contain a
         quoted name (#1714, @AshesITR)
@@ -1583,7 +1593,7 @@
         to `glue::glue()` (#1919, @MichaelChirico)
         !end-bullet!
 
-    !end-bullets-52!
+    !end-bullets-53!
     !end-bullet!
 -   !begin-bullet!
     `namespace_linter()` correctly recognizes backticked operators to be
@@ -1600,7 +1610,7 @@
     Improved error behavior in `Lint()`, `lint()` and
     `xml_nodes_to_lints()` (#1427, #763, @AshesITR)
 
-    !begin-bullets-53!
+    !begin-bullets-54!
     -   !begin-bullet!
         `Lint()` validates its inputs more thoroughly, preventing errors
         during `print.Lints` like "Error in rep.int(character, length) :
@@ -1615,7 +1625,7 @@
         uses dummy locations as a fallback.
         !end-bullet!
 
-    !end-bullets-53!
+    !end-bullets-54!
     !end-bullet!
 -   !begin-bullet!
     `linters_with_defaults()` no longer erroneously marks linter
@@ -1637,7 +1647,7 @@
     `object_usage_linter()` improves identification of the exact source
     of a lint
 
-    !begin-bullets-54!
+    !begin-bullets-55!
     -   !begin-bullet!
         for undefined variables in expressions with where the variable
         is used as a symbol in a usual way, for example in a formula or
@@ -1648,7 +1658,7 @@
         #1917, @AshesITR)
         !end-bullet!
 
-    !end-bullets-54!
+    !end-bullets-55!
     !end-bullet!
 -   !begin-bullet!
     `function_left_parentheses_linter()` produces a more specific lint
@@ -1659,11 +1669,11 @@
 
     !end-bullet!
 
-!end-bullets-51!
+!end-bullets-52!
 
 ## Changes to defaults
 
-!begin-bullets-55!
+!begin-bullets-56!
 
 -   !begin-bullet!
     Set the default for the `except` argument in
@@ -1675,7 +1685,7 @@
 -   !begin-bullet!
     `object_usage_linter()`
 
-    !begin-bullets-56!
+    !begin-bullets-57!
     -   !begin-bullet!
         gains `skip_with` argument to skip code in `with()` expressions.
         To be consistent with `R CMD check`, it defaults to `TRUE`
@@ -1691,7 +1701,7 @@
         (#1933, @MichaelChirico)
         !end-bullet!
 
-    !end-bullets-56!
+    !end-bullets-57!
     !end-bullet!
 -   !begin-bullet!
     `spaces_inside_linter()` allows terminal missing keyword arguments
@@ -1717,7 +1727,7 @@
     New linters which are also included as defaults (see "New linters"
     for more details):
 
-    !begin-bullets-57!
+    !begin-bullets-58!
     -   !begin-bullet!
         `indentation_linter()`
         !end-bullet!
@@ -1731,18 +1741,18 @@
         `whitespace_linter()`
         !end-bullet!
 
-    !end-bullets-57!
+    !end-bullets-58!
     !end-bullet!
 -   !begin-bullet!
     `lint_package()` also looks for files in `exec/` (#1950, @jmaspons).
 
     !end-bullet!
 
-!end-bullets-55!
+!end-bullets-56!
 
 ## New and improved features
 
-!begin-bullets-58!
+!begin-bullets-59!
 
 -   !begin-bullet!
     New `get_r_string()` helper to get the R-equivalent value of a
@@ -1872,11 +1882,11 @@
 
     !end-bullet!
 
-!end-bullets-58!
+!end-bullets-59!
 
 ### New linters
 
-!begin-bullets-59!
+!begin-bullets-60!
 
 -   !begin-bullet!
     `matrix_apply_linter()` recommends use of dedicated `rowSums()`,
@@ -1991,11 +2001,11 @@
 
     !end-bullet!
 
-!end-bullets-59!
+!end-bullets-60!
 
 ## Notes
 
-!begin-bullets-60!
+!begin-bullets-61!
 
 -   !begin-bullet!
     {lintr} now depends on R version 3.5.0, in line with the tidyverse
@@ -2034,7 +2044,7 @@
     The output of `lint()` and `Lint()` gain S3 class `"list"` to assist
     with S3 dispatch (#1494, @MichaelChirico)
 
-    !begin-bullets-61!
+    !begin-bullets-62!
     -   !begin-bullet!
         As a corollary, we now register an `as_tibble` method for class
         `lints`, conditional on {tibble} availability, to avoid
@@ -2042,7 +2052,7 @@
         `lint()` output (#1997, @MichaelChirico)
         !end-bullet!
 
-    !end-bullets-61!
+    !end-bullets-62!
     !end-bullet!
 -   !begin-bullet!
     `object_usage_linter()` gives a more helpful warning when a `glue()`
@@ -2056,22 +2066,22 @@
 
     !end-bullet!
 
-!end-bullets-60!
+!end-bullets-61!
 
 # lintr 3.0.2
 
-!begin-bullets-62!
+!begin-bullets-63!
 
 -   !begin-bullet!
     Fix test to avoid leaving behind cache files in the global cache
     directory.
     !end-bullet!
 
-!end-bullets-62!
+!end-bullets-63!
 
 # lintr 3.0.1
 
-!begin-bullets-63!
+!begin-bullets-64!
 
 -   !begin-bullet!
     Skip multi-byte tests in non UTF-8 locales (#1504)
@@ -2086,11 +2096,11 @@
 
     !end-bullet!
 
-!end-bullets-63!
+!end-bullets-64!
 
 ## Changes to defaults
 
-!begin-bullets-64!
+!begin-bullets-65!
 
 -   !begin-bullet!
     `brace_linter()` allows opening curly braces on a new line when
@@ -2125,11 +2135,11 @@
 
     !end-bullet!
 
-!end-bullets-64!
+!end-bullets-65!
 
 ## New and improved features
 
-!begin-bullets-65!
+!begin-bullets-66!
 
 -   !begin-bullet!
     New `sort_linter()` to detect `x[order(x)]` and recommend the faster
@@ -2165,11 +2175,11 @@
 
     !end-bullet!
 
-!end-bullets-65!
+!end-bullets-66!
 
 ## Bug fixes
 
-!begin-bullets-66!
+!begin-bullets-67!
 
 -   !begin-bullet!
     `object_length_linter()` does not fail in case there are
@@ -2207,11 +2217,11 @@
     configured for a single file (#1413, #1442, @AshesITR).
     !end-bullet!
 
-!end-bullets-66!
+!end-bullets-67!
 
 ## Other changes
 
-!begin-bullets-67!
+!begin-bullets-68!
 
 -   !begin-bullet!
     The minimum needed version for soft dependency `{withr}` has been
@@ -2227,13 +2237,13 @@
     this (#1486, @IndrajeetPatil).
     !end-bullet!
 
-!end-bullets-67!
+!end-bullets-68!
 
 # lintr 3.0.0
 
 ## Breaking changes
 
-!begin-bullets-68!
+!begin-bullets-69!
 
 -   !begin-bullet!
     All linters are now function factories (i.e., functions that return
@@ -2265,7 +2275,7 @@
     Removed long-deprecated linters (they've been marked as deprecated
     since v1.0.1 in 2017):
 
-    !begin-bullets-69!
+    !begin-bullets-70!
     -   !begin-bullet!
         `absolute_paths_linter()`
         !end-bullet!
@@ -2282,7 +2292,7 @@
         `trailing_semicolons_linter()`
         !end-bullet!
 
-    !end-bullets-69!
+    !end-bullets-70!
     !end-bullet!
 -   !begin-bullet!
     Removed `return()` from `all_undesirable_functions` because early
@@ -2297,11 +2307,11 @@
 
     !end-bullet!
 
-!end-bullets-68!
+!end-bullets-69!
 
 ## Deprecations
 
-!begin-bullets-70!
+!begin-bullets-71!
 
 -   !begin-bullet!
     Lints are now marked with the name of the `linter` that caused them
@@ -2320,7 +2330,7 @@
 -   !begin-bullet!
     The following linters were subsumed into `brace_linter()` and are
     now deprecated; see the item on `brace_linter()` below:
-    !begin-bullets-71!
+    !begin-bullets-72!
     -   !begin-bullet!
         `closed_curly_linter()`
         !end-bullet!
@@ -2331,7 +2341,7 @@
         `paren_brace_linter()`
         !end-bullet!
 
-    !end-bullets-71!
+    !end-bullets-72!
     !end-bullet!
 -   !begin-bullet!
     The `...` argument for `lint()`, `lint_dir()`, and `lint_package()`
@@ -2341,7 +2351,7 @@
     non-required arguments, e.g. `lint_dir("/path/to/dir", linter())`
     now works without the need to specify `relative_path`. This affects
     some code that uses positional arguments (#935, @MichaelChirico).
-    !begin-bullets-72!
+    !begin-bullets-73!
     -   !begin-bullet!
         For `lint()`, `...` is now the 3rd argument, where earlier this
         was `cache`.
@@ -2351,7 +2361,7 @@
         argument, where earlier this was `relative_path`.
         !end-bullet!
 
-    !end-bullets-72!
+    !end-bullets-73!
     !end-bullet!
 -   !begin-bullet!
     Deprecated argument `source_file` to exported functions `with_id()`
@@ -2385,18 +2395,18 @@
     for linters, these are no longer necessary (#1373, @MichaelChirico).
     !end-bullet!
 
-!end-bullets-70!
+!end-bullets-71!
 
 ## Other changes to defaults
 
 ### Updates to `default_linters`
 
-!begin-bullets-73!
+!begin-bullets-74!
 
 -   !begin-bullet!
     New `brace_linter()` which combines several curly brace related
     linters, deprecating the following predecessors (#1041, @AshesITR):
-    !begin-bullets-74!
+    !begin-bullets-75!
     -   !begin-bullet!
         `closed_curly_linter()`; both now also allow `}]` in addition to
         `})` and `},` as exceptions, i.e., `}` doesn't need to be on its
@@ -2421,7 +2431,7 @@
     -   !begin-bullet!
         `brace_linter()` also newly enforces the following rules
         surrounding curly braces (originally Google linters, see below):
-        !begin-bullets-75!
+        !begin-bullets-76!
         -   !begin-bullet!
             Require `else` to come on the same line as the preceding
             `}`, if present (#884, @MichaelChirico).
@@ -2436,10 +2446,10 @@
             `else` branch, and *vice versa* (#983, @MichaelChirico).
             !end-bullet!
 
-        !end-bullets-75!
+        !end-bullets-76!
         !end-bullet!
 
-    !end-bullets-74!
+    !end-bullets-75!
     !end-bullet!
 -   !begin-bullet!
     New `paren_body_linter()` checks that there is a space between a
@@ -2451,7 +2461,7 @@
     !end-bullet!
 -   !begin-bullet!
     `assignment_linter()` (#915, @MichaelChirico):
-    !begin-bullets-76!
+    !begin-bullets-77!
     -   !begin-bullet!
         Right assignments are now linted by default (`->` and `->>`).
         !end-bullet!
@@ -2464,7 +2474,7 @@
         whether to lint `->` and `->>`.
         !end-bullet!
 
-    !end-bullets-76!
+    !end-bullets-77!
     !end-bullet!
 -   !begin-bullet!
     `commented_code_linter()`: use the parse tree to find comments,
@@ -2472,7 +2482,7 @@
     !end-bullet!
 -   !begin-bullet!
     `equals_na_linter()` (#545, @MichaelChirico):
-    !begin-bullets-77!
+    !begin-bullets-78!
     -   !begin-bullet!
         Extended to lint `x != NA` (before, only `==` was caught) and
         `NA == x` (before, only `NA` on RHS was caught).
@@ -2482,7 +2492,7 @@
         `is.na(x) # use is.na(x), not x == NA`.
         !end-bullet!
 
-    !end-bullets-77!
+    !end-bullets-78!
     !end-bullet!
 -   !begin-bullet!
     `function_left_parentheses_linter()`: improved location information
@@ -2490,7 +2500,7 @@
     !end-bullet!
 -   !begin-bullet!
     `infix_spaces_linter()`:
-    !begin-bullets-78!
+    !begin-bullets-79!
     -   !begin-bullet!
         Added argument `allow_multiple_spaces` (`TRUE` by default) which
         toggles whether to generate a lint for operators used with
@@ -2513,7 +2523,7 @@
         (#1087, @klmr).
         !end-bullet!
 
-    !end-bullets-78!
+    !end-bullets-79!
     !end-bullet!
 -   !begin-bullet!
     `line_length_linter()`: place the source marker at the margin of the
@@ -2533,7 +2543,7 @@
     !end-bullet!
 -   !begin-bullet!
     `object_name_linter()`:
-    !begin-bullets-79!
+    !begin-bullets-80!
     -   !begin-bullet!
         Improved generic detection -- in user-defined method
         `my_method.upstream.class`, `upstream.class` no longer throws a
@@ -2555,24 +2565,24 @@
     -   !begin-bullet!
         Added new styles `"symbols"` and `"SNAKE_CASE"` (#494, #495,
         #615, #670, @MichaelChirico and @AshesITR).
-        !begin-bullets-80!
+        !begin-bullets-81!
         -   !begin-bullet!
             `"symbols"` is a new default style which won't lint
             all-symbol object names. In particular, that means operator
             names like `%+%` are allowed.
             !end-bullet!
 
-        !end-bullets-80!
+        !end-bullets-81!
         !end-bullet!
     -   !begin-bullet!
         No longer lints names used in `$` extractions (#582, @AshesITR).
         !end-bullet!
 
-    !end-bullets-79!
+    !end-bullets-80!
     !end-bullet!
 -   !begin-bullet!
     `object_usage_linter()`:
-    !begin-bullets-81!
+    !begin-bullets-82!
     -   !begin-bullet!
         Detect global variables if there are top-level
         dollar-assignments (#666, @AshesITR).
@@ -2603,7 +2613,7 @@
         `setMethod()` (#1322, @AshesITR).
         !end-bullet!
 
-    !end-bullets-81!
+    !end-bullets-82!
     !end-bullet!
 -   !begin-bullet!
     `spaces_inside_linter()`: ignore spaces preceding trailing comments
@@ -2611,7 +2621,7 @@
     !end-bullet!
 -   !begin-bullet!
     `T_and_F_symbol_linter()`:
-    !begin-bullets-82!
+    !begin-bullets-83!
     -   !begin-bullet!
         Added as a default because it enforces a tidyverse style guide
         rule (#517, @AshesITR).
@@ -2622,11 +2632,11 @@
         names (#657, @AshesITR).
         !end-bullet!
 
-    !end-bullets-82!
+    !end-bullets-83!
     !end-bullet!
 -   !begin-bullet!
     `trailing_blank_lines_linter()`:
-    !begin-bullets-83!
+    !begin-bullets-84!
     -   !begin-bullet!
         Extended to lint files without a terminal newline (#675,
         @AshesITR).
@@ -2636,11 +2646,11 @@
         longer throws a `warning()`.
         !end-bullet!
 
-    !end-bullets-83!
+    !end-bullets-84!
     !end-bullet!
 -   !begin-bullet!
     `trailing_whitespace_linter()`:
-    !begin-bullets-84!
+    !begin-bullets-85!
     -   !begin-bullet!
         Extended to also lint completely blank lines by default (#1044,
         @AshesITR).
@@ -2658,15 +2668,15 @@
         this behavior.
         !end-bullet!
 
-    !end-bullets-84!
+    !end-bullets-85!
     !end-bullet!
 -   !begin-bullet!
     `undesirable_function_linter()`:
-    !begin-bullets-85!
+    !begin-bullets-86!
     -   !begin-bullet!
         Added new functions to `default_undesirable_functions` related
         to debugging (#876, @MichaelChirico):
-        !begin-bullets-86!
+        !begin-bullets-87!
         -   !begin-bullet!
             `browser()`
             !end-bullet!
@@ -2686,7 +2696,7 @@
             `untrace()`
             !end-bullet!
 
-        !end-bullets-86!
+        !end-bullets-87!
         !end-bullet!
     -   !begin-bullet!
         No longer lints `library()` and `require()` calls attaching a
@@ -2704,14 +2714,14 @@
         @AshesITR).
         !end-bullet!
 
-    !end-bullets-85!
+    !end-bullets-86!
     !end-bullet!
 
-!end-bullets-73!
+!end-bullets-74!
 
 ### Other noteworthy changes
 
-!begin-bullets-87!
+!begin-bullets-88!
 
 -   !begin-bullet!
     `cyclocomp_linter()`: set the default `complexity_limit` to 15. This
@@ -2730,13 +2740,13 @@
     deleted (#1062, @AshesITR).
     !end-bullet!
 
-!end-bullets-87!
+!end-bullets-88!
 
 ## New and improved features
 
 ### New linters
 
-!begin-bullets-88!
+!begin-bullets-89!
 
 -   !begin-bullet!
     `backport_linter()` for detecting mismatched R version dependencies
@@ -2778,7 +2788,7 @@
     R scripts (#239, @jimhester, @AshesITR).
     !end-bullet!
 
-!end-bullets-88!
+!end-bullets-89!
 
 #### Google linters
 
@@ -2789,7 +2799,7 @@ general interest to the broader R community. More will be included in
 future releases. See, e.g. #884, #979, #998, #1011, #1016, #1036, #1051,
 #1066, and #1067; special thanks to @MichaelChirico and @michaelquinn32.
 
-!begin-bullets-89!
+!begin-bullets-90!
 
 -   !begin-bullet!
     `any_duplicated_linter()` Require usage of `anyDuplicated(x) > 0L`
@@ -2861,7 +2871,7 @@ future releases. See, e.g. #884, #979, #998, #1011, #1016, #1036, #1051,
     `fixed_regex_linter()` Require `fixed = TRUE` or `stringr::fixed()`
     for regular expressions that can be expressed statically,
     e.g. `strsplit(x, "[.]")` can be `strsplit(x, ".", fixed = TRUE)`.
-    !begin-bullets-90!
+    !begin-bullets-91!
     -   !begin-bullet!
         Added parameter `allow_grepl` (default `FALSE`) to toggle
         whether `grepl()` usages should be linted. These might be
@@ -2871,7 +2881,7 @@ future releases. See, e.g. #884, #979, #998, #1011, #1016, #1036, #1051,
         (#1376, @MichaelChirico).
         !end-bullet!
 
-    !end-bullets-90!
+    !end-bullets-91!
     !end-bullet!
 -   !begin-bullet!
     `ifelse_censor_linter()` Require usage of `pmax()` / `pmin()` where
@@ -2901,7 +2911,7 @@ future releases. See, e.g. #884, #979, #998, #1011, #1016, #1036, #1051,
 -   !begin-bullet!
     `paste_linter()` lint for common mis-use of `paste()` and
     `paste0()`:
-    !begin-bullets-91!
+    !begin-bullets-92!
     -   !begin-bullet!
         `paste0()` encouraged instead of `paste(sep = "")`.
         !end-bullet!
@@ -2913,7 +2923,7 @@ future releases. See, e.g. #884, #979, #998, #1011, #1016, #1036, #1051,
         Lint `sep=` passed to `paste0()` -- typically a mistake.
         !end-bullet!
 
-    !end-bullets-91!
+    !end-bullets-92!
     !end-bullet!
 -   !begin-bullet!
     `redundant_ifelse_linter()` Prevent usage like
@@ -2954,16 +2964,16 @@ future releases. See, e.g. #884, #979, #998, #1011, #1016, #1036, #1051,
     `expect_equal(1L, x)` and similar.
     !end-bullet!
 
-!end-bullets-89!
+!end-bullets-90!
 
 ### Other features and improvements
 
-!begin-bullets-92!
+!begin-bullets-93!
 
 -   !begin-bullet!
     **Documentation**: Reorganize linter documentation into new
     tag-based Rd pages (#888, #1015, @AshesITR).
-    !begin-bullets-93!
+    !begin-bullets-94!
     -   !begin-bullet!
         Each linter has its own help page.
         !end-bullet!
@@ -2987,7 +2997,7 @@ future releases. See, e.g. #884, #979, #998, #1011, #1016, #1036, #1051,
         linters using tags.
         !end-bullet!
 
-    !end-bullets-93!
+    !end-bullets-94!
     !end-bullet!
 -   !begin-bullet!
     **Encodings**: lintr now supports non-system character Encodings.
@@ -3021,13 +3031,13 @@ future releases. See, e.g. #884, #979, #998, #1011, #1016, #1036, #1051,
     required. Also allows for partial matching as long as the supplied
     prefix is unique, e.g. `# nolint: infix_spaces.` works to exclude
     `infix_spaces_linter` (#605, #872, @AshesITR).
-    !begin-bullets-94!
+    !begin-bullets-95!
     -   !begin-bullet!
         Added the linter name to lintrs output to facilitate discovery
         of the correct name (#1357, @AshesITR).
         !end-bullet!
 
-    !end-bullets-94!
+    !end-bullets-95!
     !end-bullet!
 -   !begin-bullet!
     Improved S3 generic detection for non-standard S3 generics where
@@ -3061,7 +3071,7 @@ future releases. See, e.g. #884, #979, #998, #1011, #1016, #1036, #1051,
     !end-bullet!
 -   !begin-bullet!
     `unneeded_concatenation_linter()`:
-    !begin-bullets-95!
+    !begin-bullets-96!
     -   !begin-bullet!
         Correctly considers arguments in pipelines (`%>%` or `|>`; #573,
         #1270, @michaelquinn32 and @AshesITR).
@@ -3083,7 +3093,7 @@ future releases. See, e.g. #884, #979, #998, #1011, #1016, #1036, #1051,
         @MichaelChirico).
         !end-bullet!
 
-    !end-bullets-95!
+    !end-bullets-96!
     !end-bullet!
 -   !begin-bullet!
     `use_lintr()`: new exported helper for creating a minimal `.lintr`
@@ -3096,11 +3106,11 @@ future releases. See, e.g. #884, #979, #998, #1011, #1016, #1036, #1051,
     @AshesITR).
     !end-bullet!
 
-!end-bullets-92!
+!end-bullets-93!
 
 ## Bug fixes
 
-!begin-bullets-96!
+!begin-bullets-97!
 
 -   !begin-bullet!
     **RStudio**: Source markers are cleared when there are no lints
@@ -3116,7 +3126,7 @@ future releases. See, e.g. #884, #979, #998, #1011, #1016, #1036, #1051,
     !end-bullet!
 -   !begin-bullet!
     `get_source_expressions()`:
-    !begin-bullets-97!
+    !begin-bullets-98!
     -   !begin-bullet!
         Fix possible error on invalid XML produced by
         `xmlparsedata::xml_parse_data()` (#559, @renkun-ken).
@@ -3144,7 +3154,7 @@ future releases. See, e.g. #884, #979, #998, #1011, #1016, #1036, #1051,
         format specifiers (#472, @russHyde).
         !end-bullet!
 
-    !end-bullets-97!
+    !end-bullets-98!
     !end-bullet!
 -   !begin-bullet!
     `line_length_linter()`: fix a bug causing duplicate lints for lines
@@ -3152,7 +3162,7 @@ future releases. See, e.g. #884, #979, #998, #1011, #1016, #1036, #1051,
     !end-bullet!
 -   !begin-bullet!
     `lint_package()`:
-    !begin-bullets-98!
+    !begin-bullets-99!
     -   !begin-bullet!
         Warns and returns `NULL` if no package is found (instead of
         giving a peculiar error message; #776, @MichaelChirico).
@@ -3162,11 +3172,11 @@ future releases. See, e.g. #884, #979, #998, #1011, #1016, #1036, #1051,
         named `DESCRIPTION` are ignored (#702, @MichaelChirico).
         !end-bullet!
 
-    !end-bullets-98!
+    !end-bullets-99!
     !end-bullet!
 -   !begin-bullet!
     `linters_with_defaults()` (formerly `with_defaults()`):
-    !begin-bullets-99!
+    !begin-bullets-100!
     -   !begin-bullet!
         No longer duplicates the `lintr_function` class when it is
         already present (#511, @AshesITR).
@@ -3176,7 +3186,7 @@ future releases. See, e.g. #884, #979, #998, #1011, #1016, #1036, #1051,
         `defaults` (#1049, @AshesITR).
         !end-bullet!
 
-    !end-bullets-99!
+    !end-bullets-100!
     !end-bullet!
 -   !begin-bullet!
     `linters_with_defaults()` handles automatic naming of very long
@@ -3194,11 +3204,11 @@ future releases. See, e.g. #884, #979, #998, #1011, #1016, #1036, #1051,
     (#654, @AshesITR).
     !end-bullet!
 
-!end-bullets-96!
+!end-bullets-97!
 
 ## Internals
 
-!begin-bullets-100!
+!begin-bullets-101!
 
 -   !begin-bullet!
     Added a new, more restrictive test workflow - `test-package` - that
@@ -3234,13 +3244,13 @@ future releases. See, e.g. #884, #979, #998, #1011, #1016, #1036, #1051,
     @AshesITR, #910, #967).
     !end-bullet!
 
-!end-bullets-100!
+!end-bullets-101!
 
 # lintr 2.0.1
 
 ## New features
 
-!begin-bullets-101!
+!begin-bullets-102!
 
 -   !begin-bullet!
     lintr now supports GitHub Actions and will print the lints as
@@ -3255,11 +3265,11 @@ future releases. See, e.g. #884, #979, #998, #1011, #1016, #1036, #1051,
     (@AshesITR).
     !end-bullet!
 
-!end-bullets-101!
+!end-bullets-102!
 
 ## Minor fixes and features
 
-!begin-bullets-102!
+!begin-bullets-103!
 
 -   !begin-bullet!
     `single_quote_linter()` no longer causes a print issue when open
@@ -3286,7 +3296,7 @@ future releases. See, e.g. #884, #979, #998, #1011, #1016, #1036, #1051,
     @MrMallIronmaker)
     !end-bullet!
 
-!end-bullets-102!
+!end-bullets-103!
 
 # lintr 2.0.0
 
@@ -3295,7 +3305,7 @@ since the last major release (1.0.0) in 2016-04-16.
 
 ## Deprecated functions
 
-!begin-bullets-103!
+!begin-bullets-104!
 
 -   !begin-bullet!
     Deprecated `camel_case_linter()`, `snake_case_linter()` and
@@ -3309,11 +3319,11 @@ since the last major release (1.0.0) in 2016-04-16.
     lints (#199, @fangly).
     !end-bullet!
 
-!end-bullets-103!
+!end-bullets-104!
 
 ## New linters
 
-!begin-bullets-104!
+!begin-bullets-105!
 
 -   !begin-bullet!
     New `cyclocomp_linter()` identifies overly complex functions (#361,
@@ -3375,11 +3385,11 @@ since the last major release (1.0.0) in 2016-04-16.
     constant or no arguments (@fangly).
     !end-bullet!
 
-!end-bullets-104!
+!end-bullets-105!
 
 ## New functions for writing linters
 
-!begin-bullets-105!
+!begin-bullets-106!
 
 -   !begin-bullet!
     Export `expect_lint()` (#178, #210)
@@ -3392,11 +3402,11 @@ since the last major release (1.0.0) in 2016-04-16.
     https://github.com/MangoTheCat/xmlparsedata package (#154, 1)
     !end-bullet!
 
-!end-bullets-105!
+!end-bullets-106!
 
 ## New functions for users
 
-!begin-bullets-106!
+!begin-bullets-107!
 
 -   !begin-bullet!
     New `lint_dir()` function to lint files under a given directory
@@ -3411,11 +3421,11 @@ since the last major release (1.0.0) in 2016-04-16.
     output (#156, @joshkgold)
     !end-bullet!
 
-!end-bullets-106!
+!end-bullets-107!
 
 ## Linter fixes
 
-!begin-bullets-107!
+!begin-bullets-108!
 
 -   !begin-bullet!
     `closed_curly_linter()` now allows closing parenthesis or comma
@@ -3480,11 +3490,11 @@ since the last major release (1.0.0) in 2016-04-16.
     (#203, @fangly)
     !end-bullet!
 
-!end-bullets-107!
+!end-bullets-108!
 
 ## General improvements and fixes
 
-!begin-bullets-108!
+!begin-bullets-109!
 
 -   !begin-bullet!
     `expect_lint()` now no longer shows Rstudio markers and error
@@ -3580,31 +3590,31 @@ since the last major release (1.0.0) in 2016-04-16.
     and `||` (#363 #377 #384 #391, @russHyde).
     !end-bullet!
 
-!end-bullets-108!
+!end-bullets-109!
 
 # lintr 1.0.3
 
-!begin-bullets-109!
+!begin-bullets-110!
 
 -   !begin-bullet!
     Fix tests to work with changes in the parser in R 3.6
     !end-bullet!
 
-!end-bullets-109!
+!end-bullets-110!
 
 # lintr 1.0.2
 
-!begin-bullets-110!
+!begin-bullets-111!
 
 -   !begin-bullet!
     Fix tests to work with upcoming testthat release.
     !end-bullet!
 
-!end-bullets-110!
+!end-bullets-111!
 
 # lintr 1.0.1
 
-!begin-bullets-111!
+!begin-bullets-112!
 
 -   !begin-bullet!
     bugfix to work with knitr 1.16.7
@@ -3616,21 +3626,21 @@ since the last major release (1.0.0) in 2016-04-16.
     directory.
     !end-bullet!
 
-!end-bullets-111!
+!end-bullets-112!
 
 # lintr 1.0.0
 
-!begin-bullets-112!
+!begin-bullets-113!
 
 -   !begin-bullet!
     bugfix to work with testthat 1.0.0
     !end-bullet!
 
-!end-bullets-112!
+!end-bullets-113!
 
 # lintr 0.3.3
 
-!begin-bullets-113!
+!begin-bullets-114!
 
 -   !begin-bullet!
     infix_spaces_linter now properly checks `=` in named arguments.
@@ -3707,14 +3717,14 @@ since the last major release (1.0.0) in 2016-04-16.
     @nathaneastwood)
     !end-bullet!
 
-!end-bullets-113!
+!end-bullets-114!
 
 # lintr 0.2.0
 
-!begin-bullets-114!
+!begin-bullets-115!
 
 -   !begin-bullet!
     Initial release
     !end-bullet!
 
-!end-bullets-114!
+!end-bullets-115!
