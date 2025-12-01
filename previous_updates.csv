@@ -20310,3 +20310,4 @@ lintr,3b586e23e8c7d287f64f7ec67f5986d3,"Argument `interpret_glue` to `object_usa
 dbplyr,06d2b4691ef5b577c951b57dfc446421,"`compute()`, `collect()`, and `collapse()` now have their own documentation pages.",NA,NA,NA,NA
 shiny,75b1474111853969071cdc99513de74d,"`dateRangeInput()`/`updateDateRangeInput()` now correctly considers the time zones of date-time objects (POSIXct) passed to the `start`, `end`, `min` and `max` arguments. (thanks @​ismirsehregal, #4318)",NA,NA,NA,NA
 dbplyr,5e817ccfaeaf6cf78a1f8d138ee40190,Deprecated `win_rank_tdata()` has been removed.,NA,NA,NA,NA
+rsconnect,96c390c39c59e0e5c66b327c456d5af5,Added support for deploying from `manifest.json` files created by `writeManifest()`: use the `manifestPath` argument of `deployApp()` and related functions to specify the path to an existing manifest file. (#1259),NA,NA,NA,NA
