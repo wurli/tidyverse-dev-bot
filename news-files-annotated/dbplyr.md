@@ -3,6 +3,9 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Deprecated `win_rank_tdata()` has been removed.
+    !end-bullet!
+-   !begin-bullet!
     `compute()`, `collect()`, and `collapse()` now have their own
     documentation pages.
     !end-bullet!
