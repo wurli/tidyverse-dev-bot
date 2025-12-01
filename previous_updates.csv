@@ -20299,3 +20299,9 @@ pointblank,a1d3108e01a041e6e09cef85869f2f27,The README.md has undergone some ref
 lintr,e889be5df99ca31bafaed9eff314af33,"Six linters fully deprecated in the previous release are now removed: `consecutive_stopifnot_linter()`, `extraction_operator_linter()`, `no_tab_linter()`, `single_quotes_linter()`, `unnecessary_nested_if_linter()`, and `unneeded_concatenation_linter()`.",NA,NA,NA,NA
 dbplyr,40561581bb9cef95f6b1b5d84921c947,dbplyr now uses the base pipe (#1626).,NA,NA,NA,NA
 lintr,dd4297f08ca26ce884d4d57d382aee17,{lintr} now requires R 4.1.0,NA,NA,NA,NA
+pak,2502f2c1ca98c29d1dd8dde1ea6c2e06,pak is now more tolerant with extraneous whitespace in `PACKAGES*` metadata files (https://github.com/r-lib/pak/issues/785).,NA,NA,NA,NA
+pak,b4194610287dcf144d28d2c6031dbd06,pak now builds again on FreeBSD (#790).,NA,NA,NA,NA
+pak,03a4020e6033601685fbc1f4ab2f999d,Installing dependencies of a package file with `deps::<filename>` works again (#784).,NA,NA,NA,NA
+pak,2fa3bef032b900ff3ab7d616d704db73,pak now always uses the correct working directory in the subprocess; this was a common source of errors.,NA,NA,NA,NA
+pak,83bc1131e9ddd6b934d8706ca86648f9,New (nightly) binary builds for aarch64 Windows.,NA,NA,NA,NA
+pak,75a9ec241da3cf654103a39c94d4bcb4,"We do not build binary builds for the release candidate of pak any more, only for stable and devel pak. `rc` is an alias to `stable` now.",NA,NA,NA,NA

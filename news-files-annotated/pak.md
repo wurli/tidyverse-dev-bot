@@ -1,8 +1,42 @@
 # pak (development version)
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    pak is now more tolerant with extraneous whitespace in `PACKAGES*`
+    metadata files (https://github.com/r-lib/pak/issues/785).
+
+    !end-bullet!
+-   !begin-bullet!
+    pak now builds again on FreeBSD (#790).
+
+    !end-bullet!
+-   !begin-bullet!
+    Installing dependencies of a package file with `deps::<filename>`
+    works again (#784).
+
+    !end-bullet!
+-   !begin-bullet!
+    pak now always uses the correct working directory in the subprocess;
+    this was a common source of errors.
+
+    !end-bullet!
+-   !begin-bullet!
+    New (nightly) binary builds for aarch64 Windows.
+
+    !end-bullet!
+-   !begin-bullet!
+    We do not build binary builds for the release candidate of pak any
+    more, only for stable and devel pak. `rc` is an alias to `stable`
+    now.
+
+    !end-bullet!
+
+!end-bullets-1!
+
 # pak 0.9.0
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     pak now supports HTTP basic authentication for CRAN-like
@@ -33,7 +67,7 @@
 
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # pak 0.8.0.2
 
@@ -45,7 +79,7 @@ No changes.
 
 # pak 0.8.0
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     `pkg_deps()` now accepts a vector of package names.
@@ -91,11 +125,11 @@ No changes.
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 # pak 0.7.2
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     pak now supports using parameters for all packages with the
@@ -108,11 +142,11 @@ No changes.
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 # pak 0.7.1
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     pak can now handle the case when `Config/Needs/*` dependencies are
@@ -124,11 +158,11 @@ No changes.
 
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 # pak 0.7.0
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     pak now correctly handles the latest GitHub release with the
@@ -156,11 +190,11 @@ No changes.
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # pak 0.6.0
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     pak now requires R \>= 3.5.0.
@@ -169,10 +203,10 @@ No changes.
 -   !begin-bullet!
     Many improvements in system requirements support:
 
-    !begin-bullets-7!
+    !begin-bullets-8!
     -   !begin-bullet!
         New functions:
-        !begin-bullets-8!
+        !begin-bullets-9!
         -   !begin-bullet!
             `pkg_sysreqs()`: calculate system requirements of packages.
             !end-bullet!
@@ -190,7 +224,7 @@ No changes.
             `sysreqs_platforms()`: list supported platforms.
             !end-bullet!
 
-        !end-bullets-8!
+        !end-bullets-9!
         !end-bullet!
     -   !begin-bullet!
         The installation proposal, printed before installation, now
@@ -210,7 +244,7 @@ No changes.
         with the `sysreqs_update` configuration option.)
         !end-bullet!
 
-    !end-bullets-7!
+    !end-bullets-8!
     !end-bullet!
 -   !begin-bullet!
     New `gitlab::` package source to install packages from GitLab
@@ -258,21 +292,21 @@ No changes.
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 # pak 0.5.1
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     No user visible changes.
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 # pak 0.5.0
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     The `meta_*()` functions now consider the `platforms`, `cran_mirror`
@@ -339,11 +373,11 @@ No changes.
 
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 # pak 0.4.0
 
-!begin-bullets-11!
+!begin-bullets-12!
 
 -   !begin-bullet!
     pak has much improved and more informative error messages now. This
@@ -442,11 +476,11 @@ No changes.
 
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-12!
 
 # pak 0.3.1
 
-!begin-bullets-12!
+!begin-bullets-13!
 
 -   !begin-bullet!
     The `?ignore` parameter works correctly now.
@@ -497,11 +531,11 @@ No changes.
 
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
 
 # pak 0.3.0
 
-!begin-bullets-13!
+!begin-bullets-14!
 
 -   !begin-bullet!
     pak functions that used to return tibbles return data frames now.
@@ -571,7 +605,7 @@ No changes.
 
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-14!
 
 # pak 0.2.1
 
