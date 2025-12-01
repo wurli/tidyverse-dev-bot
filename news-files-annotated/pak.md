@@ -1,4 +1,4 @@
-# pak (development version)
+# pak 0.9.1
 
 !begin-bullets-1!
 
