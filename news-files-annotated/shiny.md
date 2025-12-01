@@ -158,6 +158,12 @@
 
     !end-bullets-7!
     !end-bullet!
+-   !begin-bullet!
+    `dateRangeInput()`/`updateDateRangeInput()` now correctly considers
+    the time zones of date-time objects (POSIXct) passed to the `start`,
+    `end`, `min` and `max` arguments. (thanks @ismirsehregal, #4318)
+
+    !end-bullet!
 
 !end-bullets-6!
 
