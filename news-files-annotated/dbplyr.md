@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `compute()`, `collect()`, and `collapse()` now have their own
+    documentation pages.
+    !end-bullet!
+-   !begin-bullet!
     dbplyr now uses the base pipe (#1626).
     !end-bullet!
 -   !begin-bullet!
