@@ -11,6 +11,17 @@
     `single_quotes_linter()`, `unnecessary_nested_if_linter()`, and
     `unneeded_concatenation_linter()`.
     !end-bullet!
+-   !begin-bullet!
+    Arguments `allow_cascading_assign=`, `allow_right_assign=`, and
+    `allow_pipe_assign=` to `assignment_linter()` are now removed. Use
+    `operator=` instead.
+    !end-bullet!
+-   !begin-bullet!
+    Argument `interpret_glue` to `object_usage_linter()`, marked
+    deprecated in the previous release, is now defunct. Use
+    `interpret_extensions=` instead; see the 3.3.0-1 release notes and
+    `?object_usage_linter` for more.
+    !end-bullet!
 
 !end-bullets-1!
 

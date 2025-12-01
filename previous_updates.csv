@@ -20305,3 +20305,5 @@ pak,03a4020e6033601685fbc1f4ab2f999d,Installing dependencies of a package file w
 pak,2fa3bef032b900ff3ab7d616d704db73,pak now always uses the correct working directory in the subprocess; this was a common source of errors.,NA,NA,NA,NA
 pak,83bc1131e9ddd6b934d8706ca86648f9,New (nightly) binary builds for aarch64 Windows.,NA,NA,NA,NA
 pak,75a9ec241da3cf654103a39c94d4bcb4,"We do not build binary builds for the release candidate of pak any more, only for stable and devel pak. `rc` is an alias to `stable` now.",NA,NA,NA,NA
+lintr,ac2e709e7649d922e3df48b74bbd0cf8,"Arguments `allow_cascading_assign=`, `allow_right_assign=`, and `allow_pipe_assign=` to `assignment_linter()` are now removed. Use `operator=` instead.",NA,NA,NA,NA
+lintr,3b586e23e8c7d287f64f7ec67f5986d3,"Argument `interpret_glue` to `object_usage_linter()`, marked deprecated in the previous release, is now defunct. Use `interpret_extensions=` instead; see the 3.3.0-1 release notes and `?object_usage_linter` for more.",NA,NA,NA,NA
