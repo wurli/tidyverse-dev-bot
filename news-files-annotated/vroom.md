@@ -1,8 +1,19 @@
 # vroom (development version)
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    Columns specified as having type "number" (requested via
+    `col_number()` or `"number"` or `'n'`) or "skip" (requested via
+    `col_skip()` or `"skip"` or `_` or `-`) now work in the case where 0
+    rows of data are parsed (#427, #540, #548).
+    !end-bullet!
+
+!end-bullets-1!
+
 # vroom 1.6.7
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     `locale(encoding =)` now warns, instead of errors, when the encoding
@@ -28,32 +39,32 @@
 
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # vroom 1.6.6
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     Fixed a bad URL in the README at CRAN's request.
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 # vroom 1.6.5
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     Internal changes requested by CRAN around format specification
     (#524).
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 # vroom 1.6.4
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     It is now possible (again?) to read from a list of connections
@@ -66,31 +77,31 @@
 
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 # vroom 1.6.3
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     No user-facing changes.
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # vroom 1.6.2
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     There was no CRAN release with this version number.
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 # vroom 1.6.1
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     `str()` now works in a colorized context in the presence of a column
@@ -105,11 +116,11 @@
 
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 # vroom 1.6.0
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     `vroom(col_select=)` now handles column selection by numeric
@@ -186,11 +197,11 @@
 
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 # vroom 1.5.7
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     Jenny Bryan is now the official maintainer.
@@ -213,11 +224,11 @@
 
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 # vroom 1.5.6
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     `vroom(col_select=)` now works if `col_names = FALSE` as intended
@@ -289,11 +300,11 @@
 
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 # vroom 1.5.5
 
-!begin-bullets-11!
+!begin-bullets-12!
 
 -   !begin-bullet!
     `vroom()` now supports files with only carriage return newlines
@@ -343,11 +354,11 @@
 
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-12!
 
 # vroom 1.5.4
 
-!begin-bullets-12!
+!begin-bullets-13!
 
 -   !begin-bullet!
     `vroom(col_types=)` now accepts column type names like those
@@ -373,11 +384,11 @@
 
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
 
 # vroom 1.5.3
 
-!begin-bullets-13!
+!begin-bullets-14!
 
 -   !begin-bullet!
     `vroom(col_types=)` now truncates the column types if the user
@@ -395,11 +406,11 @@
 
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-14!
 
 # vroom 1.5.2
 
-!begin-bullets-14!
+!begin-bullets-15!
 
 -   !begin-bullet!
     `vroom()` now supports inputs with unnamed column types that are
@@ -441,11 +452,11 @@
 
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-15!
 
 # vroom 1.5.1
 
-!begin-bullets-15!
+!begin-bullets-16!
 
 -   !begin-bullet!
     Parsers now treat NA values as NA even if they are valid values for
@@ -458,13 +469,13 @@
 
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-16!
 
 # vroom 1.5.0
 
 ## Major improvements
 
-!begin-bullets-16!
+!begin-bullets-17!
 
 -   !begin-bullet!
     New `vroom(show_col_types=)` argument to more simply control when
@@ -504,11 +515,11 @@
 
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-17!
 
 ## Minor improvements and fixes
 
-!begin-bullets-17!
+!begin-bullets-18!
 
 -   !begin-bullet!
     \`vroom() correctly reads double values with comma as decimal
@@ -644,13 +655,13 @@
 
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-18!
 
 # vroom 1.4.0
 
 ## Major changes and new functions
 
-!begin-bullets-18!
+!begin-bullets-19!
 
 -   !begin-bullet!
     vroom now tracks indexing and parsing errors like readr. The first
@@ -679,11 +690,11 @@
 
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-19!
 
 ## Minor improvements and fixes
 
-!begin-bullets-19!
+!begin-bullets-20!
 
 -   !begin-bullet!
     Datetime formats used when guessing now match those used when
@@ -727,11 +738,11 @@
 
     !end-bullet!
 
-!end-bullets-19!
+!end-bullets-20!
 
 # vroom 1.3.2
 
-!begin-bullets-20!
+!begin-bullets-21!
 
 -   !begin-bullet!
     Test failures on R 4.1 related to factors with NA values fixed
@@ -744,11 +755,11 @@
 
     !end-bullet!
 
-!end-bullets-20!
+!end-bullets-21!
 
 # vroom 1.3.1
 
-!begin-bullets-21!
+!begin-bullets-22!
 
 -   !begin-bullet!
     Test failures on R 4.1 related to POSIXct classes fixed (#260)
@@ -764,11 +775,11 @@
 
     !end-bullet!
 
-!end-bullets-21!
+!end-bullets-22!
 
 # vroom 1.3.0
 
-!begin-bullets-22!
+!begin-bullets-23!
 
 -   !begin-bullet!
     The Rcpp dependency has been removed in favor of cpp11.
@@ -799,11 +810,11 @@
 
     !end-bullet!
 
-!end-bullets-22!
+!end-bullets-23!
 
 # vroom 1.2.1
 
-!begin-bullets-23!
+!begin-bullets-24!
 
 -   !begin-bullet!
     `vroom()` now writes the column names if given an input with no rows
@@ -841,13 +852,13 @@
 
     !end-bullet!
 
-!end-bullets-23!
+!end-bullets-24!
 
 # vroom 1.2.0
 
 ## Breaking changes
 
-!begin-bullets-24!
+!begin-bullets-25!
 
 -   !begin-bullet!
     `vroom_altrep_opts()` and the argument `vroom(altrep_opts =)` have
@@ -855,11 +866,11 @@
     prior names have been deprecated.
     !end-bullet!
 
-!end-bullets-24!
+!end-bullets-25!
 
 ## New Features
 
-!begin-bullets-25!
+!begin-bullets-26!
 
 -   !begin-bullet!
     `vroom()` now supports reading Big Integer values with the `bit64`
@@ -878,11 +889,11 @@
 
     !end-bullet!
 
-!end-bullets-25!
+!end-bullets-26!
 
 ## Minor improvements and fixes
 
-!begin-bullets-26!
+!begin-bullets-27!
 
 -   !begin-bullet!
     `col_date` now parses single digit month and day (@edzer, #123,
@@ -985,13 +996,13 @@
 
     !end-bullet!
 
-!end-bullets-26!
+!end-bullets-27!
 
 # vroom 1.0.2
 
 ## New Features
 
-!begin-bullets-27!
+!begin-bullets-28!
 
 -   !begin-bullet!
     The column created by `id` is now stored as an run length encoded
@@ -999,11 +1010,11 @@
     inputs. (#111)
     !end-bullet!
 
-!end-bullets-27!
+!end-bullets-28!
 
 ## Minor improvements and fixes
 
-!begin-bullets-28!
+!begin-bullets-29!
 
 -   !begin-bullet!
     `vroom_lines()` now properly respects the `n_max` parameter (#142)
@@ -1063,24 +1074,24 @@
 
     !end-bullet!
 
-!end-bullets-28!
+!end-bullets-29!
 
 # vroom 1.0.1
 
 ## New Features
 
-!begin-bullets-29!
+!begin-bullets-30!
 
 -   !begin-bullet!
     `vroom_lines()` function added, to (lazily) read lines from a file
     into a character vector (#90).
     !end-bullet!
 
-!end-bullets-29!
+!end-bullets-30!
 
 ## Minor improvements and fixes
 
-!begin-bullets-30!
+!begin-bullets-31!
 
 -   !begin-bullet!
     Fix for a hang on Windows caused by a race condition in the progress
@@ -1119,11 +1130,11 @@
 
     !end-bullet!
 
-!end-bullets-30!
+!end-bullets-31!
 
 # vroom 1.0.0
 
-!begin-bullets-31!
+!begin-bullets-32!
 
 -   !begin-bullet!
     Initial release
@@ -1134,4 +1145,4 @@
 
     !end-bullet!
 
-!end-bullets-31!
+!end-bullets-32!
