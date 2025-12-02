@@ -7,6 +7,12 @@
     `writeManifest()`: use the `manifestPath` argument of `deployApp()`
     and related functions to specify the path to an existing manifest
     file. (#1259)
+
+    !end-bullet!
+-   !begin-bullet!
+    `urlEncode()` now uses `curl::curl_escape()` instead of
+    `RCurl::curlEscape()`, as RCurl is a Suggests dependency. (#1265)
+
     !end-bullet!
 
 !end-bullets-1!
