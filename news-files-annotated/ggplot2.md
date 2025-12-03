@@ -21,6 +21,10 @@
     Fixed a regression where default `width` was miscalculated when some
     panels are empty (@teunbrand, #6758)
     !end-bullet!
+-   !begin-bullet!
+    `geom_hex()` has a new `radius` aesthetic, representing the relative
+    size of the hexagons (@teunbrand, #6727)
+    !end-bullet!
 
 !end-bullets-1!
 

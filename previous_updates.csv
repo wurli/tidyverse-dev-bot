@@ -20323,3 +20323,4 @@ dbplyr,96b16b7e922f53bb08f23acb27c50611,MySQL gains slightly better translation 
 dbplyr,be5faf456a721b210147be38e7c1fae0,`glue_sql2()` is now exported for building SQL strings with glue syntax and type markers. `build_sql()` is deprecated in favor of `glue_sql2()` (#1249).,NA,NA,NA,NA
 ggplot2,df7efb2d8917eb888c0645f508e7416d,"Scales and guides specified by a string can now use package name prefixes to indicate a namespace wherein to look for the scale/guide. For example, one can use `scale_x_continuous(guide = ""legendry::axis_base"")` (@​teunbrand, #4705).",NA,NA,NA,NA
 ggplot2,35ff22b2d7d8ca18b0018d2a0d55413e,"Fixed a regression where default `width` was miscalculated when some panels are empty (@​teunbrand, #6758)",NA,NA,NA,NA
+ggplot2,9cb17ab020ab63b4bdc152789e57f639,"`geom_hex()` has a new `radius` aesthetic, representing the relative size of the hexagons (@​teunbrand, #6727)",NA,NA,NA,NA
