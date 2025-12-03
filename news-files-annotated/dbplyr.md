@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `glue_sql2()` is now exported for building SQL strings with glue
+    syntax and type markers. `build_sql()` is deprecated in favor of
+    `glue_sql2()` (#1249).
+    !end-bullet!
+-   !begin-bullet!
     dbplyr 1e interfaces are now deprecated (#1197). Backend developers
     have had \>2 years to update.
     !end-bullet!

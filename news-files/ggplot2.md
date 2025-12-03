@@ -1,9 +1,14 @@
 # ggplot2 (development version)
 
+* Scales and guides specified by a string can now use package name prefixes to
+  indicate a namespace wherein to look for the scale/guide. For example, one can
+  use `scale_x_continuous(guide = "legendry::axis_base")` (@teunbrand, #4705).
 * `get_layer_data()` and `get_layer_grob()` now accept layer names as index 
   (@lgaborini, #6724)
 * Added new argument `geom_curve(shape)` that will be passed down to 
   `grid::curveGrob()` (@fmarotta, #5998).
+* Fixed a regression where default `width` was miscalculated when some panels
+  are empty (@teunbrand, #6758)
 
 # ggplot2 4.0.1
 
