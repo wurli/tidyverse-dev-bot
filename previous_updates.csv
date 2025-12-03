@@ -20328,3 +20328,4 @@ dbplyr,8617e8f54b6523b9972a964a3d17667b,"`semi_join()` and `anti_join()` once ag
 dbplyr,e69453ee37980de30f6ea82a0b8a96d8,`window_order()` works with `dplyr::desc()` (not just `desc()`) (#1486).,NA,NA,NA,NA
 ggplot2,8e73b87064e3b68b7c09b4baff927598,Using infinite `radius` aesthetic in `geom_spoke()` now throws a warning (#6671),NA,NA,NA,NA
 dbplyr,2395eb0c42b3f471effa90b4c7bf6082,`sql_check_na_rm()` is now exported for use in other backends (#1483).,NA,NA,NA,NA
+dbplyr,06d06ef6a1861eff3293528548adb145,"`str_flatten()` (#1540) and `n_distinct()` (#1579) now have an `na.rm` argument, which regularly warns when it's not `TRUE`.",NA,NA,NA,NA

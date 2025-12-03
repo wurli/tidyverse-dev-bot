@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `str_flatten()` (#1540) and `n_distinct()` (#1579) now have an
+    `na.rm` argument, which regularly warns when it's not `TRUE`.
+    !end-bullet!
+-   !begin-bullet!
     `semi_join()` and `anti_join()` once again work with filtered
     windowed values (#1534, #1606).
     !end-bullet!
