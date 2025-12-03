@@ -20327,3 +20327,4 @@ ggplot2,9cb17ab020ab63b4bdc152789e57f639,"`geom_hex()` has a new `radius` aesthe
 dbplyr,8617e8f54b6523b9972a964a3d17667b,"`semi_join()` and `anti_join()` once again work with filtered windowed values (#1534, #1606).",NA,NA,NA,NA
 dbplyr,e69453ee37980de30f6ea82a0b8a96d8,`window_order()` works with `dplyr::desc()` (not just `desc()`) (#1486).,NA,NA,NA,NA
 ggplot2,8e73b87064e3b68b7c09b4baff927598,Using infinite `radius` aesthetic in `geom_spoke()` now throws a warning (#6671),NA,NA,NA,NA
+dbplyr,2395eb0c42b3f471effa90b4c7bf6082,`sql_check_na_rm()` is now exported for use in other backends (#1483).,NA,NA,NA,NA

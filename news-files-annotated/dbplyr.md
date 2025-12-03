@@ -11,6 +11,10 @@
     (#1486).
     !end-bullet!
 -   !begin-bullet!
+    `sql_check_na_rm()` is now exported for use in other backends
+    (#1483).
+    !end-bullet!
+-   !begin-bullet!
     `glue_sql2()` is now exported for building SQL strings with glue
     syntax and type markers. `build_sql()` is deprecated in favor of
     `glue_sql2()` (#1249).
