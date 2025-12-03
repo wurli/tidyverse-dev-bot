@@ -3,6 +3,14 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `semi_join()` and `anti_join()` once again work with filtered
+    windowed values (#1534, #1606).
+    !end-bullet!
+-   !begin-bullet!
+    `window_order()` works with `dplyr::desc()` (not just `desc()`)
+    (#1486).
+    !end-bullet!
+-   !begin-bullet!
     `glue_sql2()` is now exported for building SQL strings with glue
     syntax and type markers. `build_sql()` is deprecated in favor of
     `glue_sql2()` (#1249).

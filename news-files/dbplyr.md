@@ -1,5 +1,7 @@
 # dbplyr (development version)
 
+* `semi_join()` and `anti_join()` once again work with filtered windowed values (#1534, #1606).
+* `window_order()` works with `dplyr::desc()` (not just `desc()`) (#1486).
 * `glue_sql2()` is now exported for building SQL strings with glue syntax and
   type markers. `build_sql()` is deprecated in favor of `glue_sql2()` (#1249).
 * dbplyr 1e interfaces are now deprecated (#1197). Backend developers have had >2 years to update.
