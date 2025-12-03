@@ -20318,3 +20318,5 @@ ggplot2,5020f1dae1192810abd0daf2f884dd98,"Added new argument `geom_curve(shape)`
 rsconnect,4b65fafe9a79052b0915013b07528987,"`urlEncode()` now uses `curl::curl_escape()` instead of `RCurl::curlEscape()`, as RCurl is a Suggests dependency. (#1265)",NA,NA,NA,NA
 vroom,c154987cf394645c1b9fea605f749034,"vroom.tidyverse.org is the new home of vroom's website, catching up to the much earlier move (April 2022) of vroom's GitHub repository from the r-lib organization to the tidyverse. The motivation for that was to make it easier to transfer issues between these two closely connected packages.",NA,NA,NA,NA
 dbplyr,fadf0d1fda10d81d93cdd7e5bbe3c599,"Fixed snowflake translations that were being reported as unknown (@​edward-burn, #1570).",NA,NA,NA,NA
+dbplyr,187ca3a2f6e5c4a6e5abaa9050ac0239,dbplyr 1e interfaces are now deprecated (#1197). Backend developers have had \>2 years to update.,NA,NA,NA,NA
+dbplyr,96b16b7e922f53bb08f23acb27c50611,MySQL gains slightly better translation for `as.integer()` and `as.integer64()` (#1647).,NA,NA,NA,NA
