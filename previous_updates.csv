@@ -20317,3 +20317,4 @@ vroom,d702ac64f2eb7794952e713a2169491a,"The function `vroom_altrep_opts()` and t
 ggplot2,5020f1dae1192810abd0daf2f884dd98,"Added new argument `geom_curve(shape)` that will be passed down to `grid::curveGrob()` (@​fmarotta, #5998).",NA,NA,NA,NA
 rsconnect,4b65fafe9a79052b0915013b07528987,"`urlEncode()` now uses `curl::curl_escape()` instead of `RCurl::curlEscape()`, as RCurl is a Suggests dependency. (#1265)",NA,NA,NA,NA
 vroom,c154987cf394645c1b9fea605f749034,"vroom.tidyverse.org is the new home of vroom's website, catching up to the much earlier move (April 2022) of vroom's GitHub repository from the r-lib organization to the tidyverse. The motivation for that was to make it easier to transfer issues between these two closely connected packages.",NA,NA,NA,NA
+dbplyr,fadf0d1fda10d81d93cdd7e5bbe3c599,"Fixed snowflake translations that were being reported as unknown (@​edward-burn, #1570).",NA,NA,NA,NA

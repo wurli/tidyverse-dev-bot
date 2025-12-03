@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fixed snowflake translations that were being reported as unknown
+    (@edward-burn, #1570).
+    !end-bullet!
+-   !begin-bullet!
     Deprecated `win_rank_tdata()` has been removed.
     !end-bullet!
 -   !begin-bullet!
