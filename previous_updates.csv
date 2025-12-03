@@ -20329,3 +20329,18 @@ dbplyr,e69453ee37980de30f6ea82a0b8a96d8,`window_order()` works with `dplyr::desc
 ggplot2,8e73b87064e3b68b7c09b4baff927598,Using infinite `radius` aesthetic in `geom_spoke()` now throws a warning (#6671),NA,NA,NA,NA
 dbplyr,2395eb0c42b3f471effa90b4c7bf6082,`sql_check_na_rm()` is now exported for use in other backends (#1483).,NA,NA,NA,NA
 dbplyr,06d06ef6a1861eff3293528548adb145,"`str_flatten()` (#1540) and `n_distinct()` (#1579) now have an `na.rm` argument, which regularly warns when it's not `TRUE`.",NA,NA,NA,NA
+shiny,d0bc14da5c15abeaa9a8100953f4b8f2,Timer tests are now skipped on CRAN. (#4327),NA,NA,NA,NA
+shiny,5db9815e342526656a736e6ba60bf70c,"Shiny now supports OpenTelemetry via `{otel}`. By default, if `otel::is_tracing_enabled()` returns `TRUE`, then `{shiny}` records all OpenTelemetry spans. See `{otelsdk}`'s Collecting Telemetry Data for more details on configuring OpenTelemetry. (#4269, #4300)",NA,NA,NA,NA
+shiny,e8d7fe7bcaf27c066cc023fc944d0c12,OpenTelemetry spans are recorded for:,NA,NA,NA,NA
+shiny,e8d7fe7bcaf27c066cc023fc944d0c12,• `session_start`: Wraps the calling of the `server()` function. Also contains HTTP request within the attributes.,NA,NA,NA,NA
+shiny,e8d7fe7bcaf27c066cc023fc944d0c12,• `session_end`: Wraps the calling of the `onSessionEnded()` handlers.,NA,NA,NA,NA
+shiny,e8d7fe7bcaf27c066cc023fc944d0c12,• `reactive_update`: Signals the start of when Shiny knows something is to be calculated. This span ends when there are no more reactive updates (promises or synchronous) to be calculated.,NA,NA,NA,NA
+shiny,e8d7fe7bcaf27c066cc023fc944d0c12,"• `reactive`, `observe`, `output`: Captures the calculation (including any async promise chains) of a reactive expression (`reactive()`), an observer (`observe()`), or an output render function (`render*()`).",NA,NA,NA,NA
+shiny,e8d7fe7bcaf27c066cc023fc944d0c12,"• `reactive debounce`, `reactive throttle`: Captures the calculation (including any async promise chains) of a `debounce()`d or `throttle()`d reactive expression.",NA,NA,NA,NA
+shiny,e8d7fe7bcaf27c066cc023fc944d0c12,"• `reactiveFileReader`, `reactivePoll`: Captures the calculation (including any async promise chains) of a `reactiveFileReader()` or `reactivePoll()`.",NA,NA,NA,NA
+shiny,e8d7fe7bcaf27c066cc023fc944d0c12,• `ExtendedTask`: Captures the calculation (including any async promise chains) of an `ExtendedTask`.,NA,NA,NA,NA
+shiny,69efa8ba15671eec4b111a8009afe8ad,All OpenTelemetry logs and spans will contain a `session.id` attribute containing the active session ID.,NA,NA,NA,NA
+shiny,af6da2f5976e1f8c01aa6a826699f714,"`updateActionButton()` and `updateActionLink()` now accept values other than `shiny::icon()` for the `icon` argument (e.g., `fontawesome::fa()`, `bsicons::bs_icon()`, etc). (#4249)",NA,NA,NA,NA
+shiny,27a0319031e958b4cec3637531d4f020,"`debounce()`, `reactiveFileReader()`, `reactivePoll()`, `reactiveValues()`, and `throttle()` now attempt to retrieve the assigned name for the default label if the srcref is available. If a value cannot easily be produced, a default label is used instead. (#4269, #4300)",NA,NA,NA,NA
+shiny,d29cb94daabe365b62d7b543ef70f230,"`updateSelectizeInput()` no longer creates multiple remove buttons when `options = list(plugins=""remove_button"")` is used. (#4275)",NA,NA,NA,NA
+shiny,a999e624cf9ac884a5af08d31c5408de,"The return value of `actionButton()` and `actionLink()` now wraps `label` and `icon` in an additional HTML container element. This allows `updateActionButton()` and `updateActionLink()` to distinguish between the `label` and `icon` when making updates, and allows spacing between `label` and `icon` to be more easily customized via CSS.",NA,NA,NA,NA
