@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Using infinite `radius` aesthetic in `geom_spoke()` now throws a
+    warning (#6671)
+    !end-bullet!
+-   !begin-bullet!
     Scales and guides specified by a string can now use package name
     prefixes to indicate a namespace wherein to look for the
     scale/guide. For example, one can use
