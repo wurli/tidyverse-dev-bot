@@ -3,6 +3,15 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    New `resps_ok()` returns a logical vector indicating which requests
+    were successful (#807).
+    !end-bullet!
+-   !begin-bullet!
+    httr2 will now emit OpenTelemetry traces for all requests when
+    tracing is enabled. Requires the `otelsdk` package (@atheriel,
+    #729).
+    !end-bullet!
+-   !begin-bullet!
     `req_perform_connection()` no longer errors with
     `no applicable method for 'close' applied to an object of class "c('httr2_failure', 'httr2_error', 'rlang_error', 'error', 'condition')`
     (#817).

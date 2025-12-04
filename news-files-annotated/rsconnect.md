@@ -14,6 +14,12 @@
     `RCurl::curlEscape()`, as RCurl is a Suggests dependency. (#1265)
 
     !end-bullet!
+-   !begin-bullet!
+    The `User-Agent` header in requests made from rsconnect will now be
+    of the format `RSConnect/x.y.z` instead of `rsconnect/x.y.z` in
+    order to satisfy web application firewalls that enforce Pascal case.
+
+    !end-bullet!
 
 !end-bullets-1!
 

@@ -20356,3 +20356,8 @@ ggplot2,ca66196ab0904704d8b64d289dcb598b,(internal) `zeroGrob()` now returns a `
 ggplot2,aeb5684e368a7ab6c7a63d7cea275909,"The `arrow` and `arrow.fill` arguments are now available in `geom_linerange()` and `geom_pointrange()` layers (@​teunbrand, #6481).",NA,NA,NA,NA
 dbplyr,71e5f3b7fd75b8ff0c012d76938ace31,"Corrected error message for `quantile()` and `median()` in `mutate()` on Redshift (@​edward-burn, #1571).",NA,NA,NA,NA
 httr2,0175f98863a7f26ad886d2eeed734e0d,"`req_perform_connection()` no longer errors with `no applicable method for 'close' applied to an object of class ""c('httr2_failure', 'httr2_error', 'rlang_error', 'error', 'condition')` (#817).",NA,NA,NA,NA
+dbplyr,c59c71ad7567435f0ce47e64355fe92c,"New translations for stringr function `str_ilike()` for Postgres, Redshift, and Snowflake (@​edward-burn, #1628).",NA,NA,NA,NA
+dbplyr,cf69e8b270ebb22a6bcd2f7f677377d8,"Argument `ignore_case` for `str_like()` has been deprecated (@​edward-burn, #1630).",NA,NA,NA,NA
+httr2,e9c94c9fb71a678a4ff30ba2cc0f30d5,New `resps_ok()` returns a logical vector indicating which requests were successful (#807).,NA,NA,NA,NA
+httr2,4656a53dfeed96b6677086ae16f99255,"httr2 will now emit OpenTelemetry traces for all requests when tracing is enabled. Requires the `otelsdk` package (@​atheriel, #729).",NA,NA,NA,NA
+rsconnect,cc4019d8cd9acb0c5a1087bbc0ac0099,The `User-Agent` header in requests made from rsconnect will now be of the format `RSConnect/x.y.z` instead of `rsconnect/x.y.z` in order to satisfy web application firewalls that enforce Pascal case.,NA,NA,NA,NA
