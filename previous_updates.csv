@@ -20348,3 +20348,4 @@ shiny,ba2f3a699b0f8b78cafb0eda2b230cf1,"OpenTelemetry code attributes now includ
 ggplot2,e8d7ed0fa7724eeab1728c8a7b92c948,"The default linetype in `geom_sf()` is derived from `geom_polygon()` for polygons and from `geom_line()` for (multi)linestrings (@​teunbrand, #6543).",NA,NA,NA,NA
 ggplot2,8649c51a0d469d875822d15c147197dc,"Added `preserve` argument to `position_jitterdodge()` (@​teunbrand, #6584).",NA,NA,NA,NA
 ggplot2,5c38a472c4767b943242b1adbd06da96,"Fixed `position_jitterdodge(jitter.height, jitter.width)` applying to the wrong dimension with flipped geoms (@​teunbrand, #6535).",NA,NA,NA,NA
+ggplot2,98a82c02bb72427cf1eb6b8e919713aa,"New `position_dodge2(group.row)` argument that can be set to `""many""` to dodge groups with more than one row, such as in `geom_violin()` (@​teunbrand, #6663)",NA,NA,NA,NA

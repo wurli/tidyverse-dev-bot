@@ -42,6 +42,11 @@
     Fixed `position_jitterdodge(jitter.height, jitter.width)` applying
     to the wrong dimension with flipped geoms (@teunbrand, #6535).
     !end-bullet!
+-   !begin-bullet!
+    New `position_dodge2(group.row)` argument that can be set to
+    `"many"` to dodge groups with more than one row, such as in
+    `geom_violin()` (@teunbrand, #6663)
+    !end-bullet!
 
 !end-bullets-1!
 
