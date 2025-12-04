@@ -1,5 +1,9 @@
 # ggplot2 (development version)
 
+* `stat_ydensity()` now only requires the `x` or `y` aesthetic. The other will
+  be populated with 0, similar to `stat_boxplot()` (@teunbrand, #6600)
+* Implemented `as.list()` and `S7::convert()` methods for lists and classes in ggplot2 
+  (@teunbrand, #6695)
 * The default linetype in `geom_sf()` is derived from `geom_polygon()` for 
   polygons and from `geom_line()` for (multi)linestrings (@teunbrand, #6543).
 * Using infinite `radius` aesthetic in `geom_spoke()` now throws a warning 

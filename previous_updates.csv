@@ -20349,3 +20349,5 @@ ggplot2,e8d7ed0fa7724eeab1728c8a7b92c948,"The default linetype in `geom_sf()` is
 ggplot2,8649c51a0d469d875822d15c147197dc,"Added `preserve` argument to `position_jitterdodge()` (@​teunbrand, #6584).",NA,NA,NA,NA
 ggplot2,5c38a472c4767b943242b1adbd06da96,"Fixed `position_jitterdodge(jitter.height, jitter.width)` applying to the wrong dimension with flipped geoms (@​teunbrand, #6535).",NA,NA,NA,NA
 ggplot2,98a82c02bb72427cf1eb6b8e919713aa,"New `position_dodge2(group.row)` argument that can be set to `""many""` to dodge groups with more than one row, such as in `geom_violin()` (@​teunbrand, #6663)",NA,NA,NA,NA
+ggplot2,55fa5d3b0094248bfb3a07cdfc2ee837,"`stat_ydensity()` now only requires the `x` or `y` aesthetic. The other will be populated with 0, similar to `stat_boxplot()` (@​teunbrand, #6600)",NA,NA,NA,NA
+ggplot2,71b04e0b97f6b2210dd85653fcc728b6,"Implemented `as.list()` and `S7::convert()` methods for lists and classes in ggplot2 (@​teunbrand, #6695)",NA,NA,NA,NA
