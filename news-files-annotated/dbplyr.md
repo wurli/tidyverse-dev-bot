@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Corrected error message for `quantile()` and `median()` in
+    `mutate()` on Redshift (@edward-burn, #1571).
+    !end-bullet!
+-   !begin-bullet!
     All set operations now error if you pass extra arguments (instead of
     silently ignoring then) (#1585).
     !end-bullet!

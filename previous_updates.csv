@@ -20354,3 +20354,4 @@ ggplot2,71b04e0b97f6b2210dd85653fcc728b6,"Implemented `as.list()` and `S7::conve
 dbplyr,235b784ed5205c55a4d5ff47a917954f,All set operations now error if you pass extra arguments (instead of silently ignoring then) (#1585).,NA,NA,NA,NA
 ggplot2,ca66196ab0904704d8b64d289dcb598b,(internal) `zeroGrob()` now returns a `grid::nullGrob()` (#6390).,NA,NA,NA,NA
 ggplot2,aeb5684e368a7ab6c7a63d7cea275909,"The `arrow` and `arrow.fill` arguments are now available in `geom_linerange()` and `geom_pointrange()` layers (@​teunbrand, #6481).",NA,NA,NA,NA
+dbplyr,71e5f3b7fd75b8ff0c012d76938ace31,"Corrected error message for `quantile()` and `median()` in `mutate()` on Redshift (@​edward-burn, #1571).",NA,NA,NA,NA
