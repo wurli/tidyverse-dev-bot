@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    The default linetype in `geom_sf()` is derived from `geom_polygon()`
+    for polygons and from `geom_line()` for (multi)linestrings
+    (@teunbrand, #6543).
+    !end-bullet!
+-   !begin-bullet!
     Using infinite `radius` aesthetic in `geom_spoke()` now throws a
     warning (#6671)
     !end-bullet!
@@ -28,6 +33,14 @@
 -   !begin-bullet!
     `geom_hex()` has a new `radius` aesthetic, representing the relative
     size of the hexagons (@teunbrand, #6727)
+    !end-bullet!
+-   !begin-bullet!
+    Added `preserve` argument to `position_jitterdodge()` (@teunbrand,
+    #6584).
+    !end-bullet!
+-   !begin-bullet!
+    Fixed `position_jitterdodge(jitter.height, jitter.width)` applying
+    to the wrong dimension with flipped geoms (@teunbrand, #6535).
     !end-bullet!
 
 !end-bullets-1!
