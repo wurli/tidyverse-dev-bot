@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `req_perform_connection()` no longer errors with
+    `no applicable method for 'close' applied to an object of class "c('httr2_failure', 'httr2_error', 'rlang_error', 'error', 'condition')`
+    (#817).
+    !end-bullet!
+-   !begin-bullet!
     Refactor `url_modify()` to better retain exact formatting of URL
     components that are not modified. (#788, #794)
     !end-bullet!

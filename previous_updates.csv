@@ -20355,3 +20355,4 @@ dbplyr,235b784ed5205c55a4d5ff47a917954f,All set operations now error if you pass
 ggplot2,ca66196ab0904704d8b64d289dcb598b,(internal) `zeroGrob()` now returns a `grid::nullGrob()` (#6390).,NA,NA,NA,NA
 ggplot2,aeb5684e368a7ab6c7a63d7cea275909,"The `arrow` and `arrow.fill` arguments are now available in `geom_linerange()` and `geom_pointrange()` layers (@​teunbrand, #6481).",NA,NA,NA,NA
 dbplyr,71e5f3b7fd75b8ff0c012d76938ace31,"Corrected error message for `quantile()` and `median()` in `mutate()` on Redshift (@​edward-burn, #1571).",NA,NA,NA,NA
+httr2,0175f98863a7f26ad886d2eeed734e0d,"`req_perform_connection()` no longer errors with `no applicable method for 'close' applied to an object of class ""c('httr2_failure', 'httr2_error', 'rlang_error', 'error', 'condition')` (#817).",NA,NA,NA,NA
