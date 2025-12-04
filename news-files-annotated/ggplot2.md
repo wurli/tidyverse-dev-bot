@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    The `arrow` and `arrow.fill` arguments are now available in
+    `geom_linerange()` and `geom_pointrange()` layers (@teunbrand,
+    #6481).
+    !end-bullet!
+-   !begin-bullet!
     (internal) `zeroGrob()` now returns a `grid::nullGrob()` (#6390).
     !end-bullet!
 -   !begin-bullet!
