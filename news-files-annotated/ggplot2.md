@@ -3,6 +3,9 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    (internal) `zeroGrob()` now returns a `grid::nullGrob()` (#6390).
+    !end-bullet!
+-   !begin-bullet!
     `stat_ydensity()` now only requires the `x` or `y` aesthetic. The
     other will be populated with 0, similar to `stat_boxplot()`
     (@teunbrand, #6600)

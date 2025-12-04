@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    All set operations now error if you pass extra arguments (instead of
+    silently ignoring then) (#1585).
+    !end-bullet!
+-   !begin-bullet!
     `str_flatten()` (#1540) and `n_distinct()` (#1579) now have an
     `na.rm` argument, which regularly warns when it's not `TRUE`.
     !end-bullet!
