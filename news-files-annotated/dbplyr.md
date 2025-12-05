@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    SQL Server: `if`/`ifelse()`, and `if_else()` now use `CASE WHEN`
+    instead of `IIF`. This ensures the handling of `NULL`s matches the
+    R's `NA` handling rules (#1569).
+    !end-bullet!
+-   !begin-bullet!
     `if_else()` uses simpler translation for `missing` (#1573).
     !end-bullet!
 -   !begin-bullet!
