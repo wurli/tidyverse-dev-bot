@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Multiple calls to `req_throttle()` no longer reset the token bucket
+    (#801).
+    !end-bullet!
+-   !begin-bullet!
     New `resps_ok()` returns a logical vector indicating which requests
     were successful (#807).
     !end-bullet!
