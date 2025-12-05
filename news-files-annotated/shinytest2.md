@@ -102,7 +102,7 @@
     !end-bullet!
 -   !begin-bullet!
     Migrated from `{httr}` to `{httr2}` for all HTTP requests made by
-    `{shinytest2}` (#420).
+    `{shinytest2}` (#420, #428).
 
     !end-bullet!
 -   !begin-bullet!
