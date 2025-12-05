@@ -3,37 +3,25 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
-    tidyr is now compliant with R's C API (#1618).
-
-    !end-bullet!
--   !begin-bullet!
-    Fixed an internal error in `pivot_wider()` (#1609, @krlmlr).
-
-    !end-bullet!
--   !begin-bullet!
-    The base pipe is now used throughout the documentation (#1613).
-
-    !end-bullet!
--   !begin-bullet!
-    R \>=4.1.0 is now required, in line with the tidyverse standard of
-    supporting the previous 5 minor releases of R (#1613).
-
-    !end-bullet!
--   !begin-bullet!
     `fill()` gains a `.by` argument as an alternative to
     `dplyr::group_by()` for applying the fill per group, similar to
     `nest(.by =)` and `dplyr::mutate(.by =)` (@olivroy, #1439).
 
     !end-bullet!
 -   !begin-bullet!
-    `unchop()` produces a more helpful error message when columns cannot
-    be cast to `ptype` (@mgirlich, #1477).
-
-    !end-bullet!
--   !begin-bullet!
     `expand_grid()` gains a new `.vary` argument, allowing users to
     control whether the first column varies fastest or slowest (#1543,
     @JamesHWade).
+
+    !end-bullet!
+-   !begin-bullet!
+    `unnest_longer()` now places `indices_to` columns before value
+    columns (#1486, @andrewshibata).
+
+    !end-bullet!
+-   !begin-bullet!
+    `unchop()` produces a more helpful error message when columns cannot
+    be cast to `ptype` (@mgirlich, #1477).
 
     !end-bullet!
 -   !begin-bullet!
@@ -48,12 +36,24 @@
 
     !end-bullet!
 -   !begin-bullet!
+    Fixed an internal error in `pivot_wider()` (#1609, @krlmlr).
+
+    !end-bullet!
+-   !begin-bullet!
+    R \>=4.1.0 is now required, in line with the tidyverse standard of
+    supporting the previous 5 minor releases of R (#1613).
+
+    !end-bullet!
+-   !begin-bullet!
+    The base pipe is now used throughout the documentation (#1613).
+
+    !end-bullet!
+-   !begin-bullet!
     tidyr now requires dplyr \>=1.1.0 (#1568, @catalamarti).
 
     !end-bullet!
 -   !begin-bullet!
-    `unnest_longer()` now places `indices_to` columns before value
-    columns (#1486, @andrewshibata).
+    tidyr is now compliant with R's C API (#1618).
 
     !end-bullet!
 

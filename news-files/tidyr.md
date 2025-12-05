@@ -1,24 +1,16 @@
 # tidyr (development version)
 
-* tidyr is now compliant with R's C API (#1618).
-
-* Fixed an internal error in `pivot_wider()` (#1609, @krlmlr).
-
-* The base pipe is now used throughout the documentation (#1613).
-
-* R >=4.1.0 is now required, in line with the [tidyverse
-  standard](https://www.tidyverse.org/blog/2019/04/r-version-support/) of
-  supporting the previous 5 minor releases of R (#1613).
-
 * `fill()` gains a `.by` argument as an alternative to `dplyr::group_by()` for
   applying the fill per group, similar to `nest(.by =)` and
   `dplyr::mutate(.by =)` (@olivroy, #1439).
 
-* `unchop()` produces a more helpful error message when columns cannot be cast
-  to `ptype` (@mgirlich, #1477).
-
 * `expand_grid()` gains a new `.vary` argument, allowing users to control
   whether the first column varies fastest or slowest (#1543, @JamesHWade).
+
+* `unnest_longer()` now places `indices_to` columns before value columns (#1486, @andrewshibata).
+
+* `unchop()` produces a more helpful error message when columns cannot be cast
+  to `ptype` (@mgirlich, #1477).
 
 * `unite()` no longer errors if you provide a selection that doesn't select any
   columns. Instead, it returns a column containing the empty string (#1548,
@@ -27,9 +19,17 @@
 * `pivot_wider_spec()` now throws a more informative error on non-data frame
   inputs (@catalamarti, #1510).
 
+* Fixed an internal error in `pivot_wider()` (#1609, @krlmlr).
+
+* R >=4.1.0 is now required, in line with the [tidyverse
+  standard](https://tidyverse.org/blog/2019/04/r-version-support/) of
+  supporting the previous 5 minor releases of R (#1613).
+
+* The base pipe is now used throughout the documentation (#1613).
+
 * tidyr now requires dplyr >=1.1.0 (#1568, @catalamarti).
 
-* `unnest_longer()` now places `indices_to` columns before value columns (#1486, @andrewshibata).
+* tidyr is now compliant with R's C API (#1618).
 
 # tidyr 1.3.1
 
@@ -615,7 +615,7 @@ See `vignette("in-packages")` for a detailed transition guide.
 
 * The first argument of `nest()` has changed from `data` to `.data`.
 
-* `unnest()` uses the [emerging tidyverse standard](https://www.tidyverse.org/blog/2019/01/tibble-2.0.1/#name-repair)
+* `unnest()` uses the [emerging tidyverse standard](https://tidyverse.org/blog/2019/01/tibble-2.0.1/)
   to disambiguate unique names. Use `names_repair = tidyr_legacy` to
   request the previous approach.
 
