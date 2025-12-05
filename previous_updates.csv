@@ -20362,3 +20362,17 @@ httr2,e9c94c9fb71a678a4ff30ba2cc0f30d5,New `resps_ok()` returns a logical vector
 httr2,4656a53dfeed96b6677086ae16f99255,"httr2 will now emit OpenTelemetry traces for all requests when tracing is enabled. Requires the `otelsdk` package (@​atheriel, #729).",NA,NA,NA,NA
 rsconnect,cc4019d8cd9acb0c5a1087bbc0ac0099,The `User-Agent` header in requests made from rsconnect will now be of the format `RSConnect/x.y.z` instead of `rsconnect/x.y.z` in order to satisfy web application firewalls that enforce Pascal case.,NA,NA,NA,NA
 httr2,b0c100f58ccf6ef394dc53085e86acf7,Multiple calls to `req_throttle()` no longer reset the token bucket (#801).,NA,NA,NA,NA
+vctrs,44f02eb80db9cf22de84a88779088586,Assigning `NULL` into a `<list_of>` via `x[[i]] <- NULL` now shortens the list to better align with base R and the existing `$<-` and `[<-` methods (#2112).,NA,NA,NA,NA
+vctrs,b7aac9063638204d64c6e95c6df9b5cd,"`as_list_of()` on an existing `<list_of>` no longer has a `.ptype` argument for changing the type on the fly, as this feels incompatible with the new system that allows restricting both the type and size. If you really need this, coerce to a bare list with `as.list()` first, then coerce back to a `<list_of>` using the `<list>` method of `as_list_of()`.",NA,NA,NA,NA
+vctrs,69352344d648ffef5075c716e79c13f0,`list_of()` can now restrict the element size in addition to the element type. For example:,NA,NA,NA,NA
+vctrs,69352344d648ffef5075c716e79c13f0,"```
+# Restricts the element type, but not the size (default behavior)
+list_of(1:2, 3:4, .ptype = integer(), .size = zap())
+
+# Restricts the element size, but not the type
+list_of(1:2, 3:4, .ptype = zap(), .size = 2)
+
+# Restricts the element type and size
+list_of(1:2, 3:4, .ptype = integer(), .size = 2)
+```",NA,NA,NA,NA
+vctrs,6bfb5904e43195361794314003896543,"`obj_is_list()` now returns `FALSE` for list arrays. Functions such as `list_drop_empty()` and `list_combine()` validate their input using `obj_is_list()`, but aren't well defined on list arrays.",NA,NA,NA,NA
