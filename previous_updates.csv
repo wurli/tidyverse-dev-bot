@@ -20379,3 +20379,5 @@ vctrs,6bfb5904e43195361794314003896543,"`obj_is_list()` now returns `FALSE` for 
 dbplyr,d068fb9351e3d5fef7ea986f0613c769,`if_else()` uses simpler translation for `missing` (#1573).,NA,NA,NA,NA
 shinytest2,494ef89dc300fd54d3dccd00dd65fa32,"Migrated from `{httr}` to `{httr2}` for all HTTP requests made by `{shinytest2}` (#420, #428).",NA,NA,NA,NA
 dbplyr,d880719cc55181e5e20648b96edeb9e2,"SQL Server: `if`/`ifelse()`, and `if_else()` now use `CASE WHEN` instead of `IIF`. This ensures the handling of `NULL`s matches the R's `NA` handling rules (#1569).",NA,NA,NA,NA
+duckplyr,ab739282bfda5d4a13cb9c0c33b4dd9d,Revert to CRAN duckdb.,NA,NA,NA,NA
+duckplyr,3c0efb5e4de84c759ef2de85aa7f4556,Use dev duckdb.,NA,NA,NA,NA
