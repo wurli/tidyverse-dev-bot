@@ -3,6 +3,13 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Redshift: fixed syntax error in `date_build()` translation (#1512).
+    !end-bullet!
+-   !begin-bullet!
+    Ensure `str_like()` and `str_ilike()` have consistent behaviour on
+    SQL Server (@edward-burn, #1669).
+    !end-bullet!
+-   !begin-bullet!
     SQL Server: `if`/`ifelse()`, and `if_else()` now use `CASE WHEN`
     instead of `IIF`. This ensures the handling of `NULL`s matches the
     R's `NA` handling rules (#1569).

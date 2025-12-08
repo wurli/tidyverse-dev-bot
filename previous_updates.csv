@@ -20387,3 +20387,5 @@ httr2,776ff9b28fab9510d2c76cc5abc3cc2c,`req_throttle()` no longer resets the tok
 httr2,57c96cfc014e8c64c1f4f02e2bb7ecb3,"`url_modify()` refactored to better retain exact formatting of URL not modified components (#788, #794)",NA,NA,NA,NA
 shiny,6e3be9558972346d5695eb84b1996844,Added `withOtelCollect()` and `localOtelCollect()` functions to temporarily control OpenTelemetry collection levels during reactive expression creation. These functions allow you to enable or disable telemetry collection for specific modules or sections of code where reactive expressions are being created. (#4333),NA,NA,NA,NA
 shiny,fef7ed5fed9db8d8729773fe05e737ee,"`ExtendedTask` now captures the OpenTelemetry recording state at initialization time rather than at invocation time, ensuring consistent span recording behavior regardless of runtime configuration changes. (#4334)",NA,NA,NA,NA
+dbplyr,28e151f4c8e4e6f827dbbea32ec18066,Redshift: fixed syntax error in `date_build()` translation (#1512).,NA,NA,NA,NA
+dbplyr,705049221f351d73b402e7c9721cf843,"Ensure `str_like()` and `str_ilike()` have consistent behaviour on SQL Server (@​edward-burn, #1669).",NA,NA,NA,NA
