@@ -3,8 +3,21 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Fix bug that caused `write_xpt()` to fail when writing tagged `NA`
+    values (#755).
+
+    !end-bullet!
+-   !begin-bullet!
+    Tagged `NA` values are now silently converted to lower case when
+    they are created in R with `tagged_na()` or checked with
+    `is_tagged_na()`. These are case insensitive when reading and
+    writing, so forcing lower case removes any potential ambiguity.
+
+    !end-bullet!
+-   !begin-bullet!
     Character limit checks in `write_xpt()` now check for the number of
     bytes instead of the number of characters (#746).
+
     !end-bullet!
 
 !end-bullets-1!
