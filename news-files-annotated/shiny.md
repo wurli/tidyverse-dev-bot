@@ -3,6 +3,13 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    Added `withOtelCollect()` and `localOtelCollect()` functions to
+    temporarily control OpenTelemetry collection levels during reactive
+    expression creation. These functions allow you to enable or disable
+    telemetry collection for specific modules or sections of code where
+    reactive expressions are being created. (#4333)
+    !end-bullet!
+-   !begin-bullet!
     OpenTelemetry code attributes now include both preferred
     (`code.file.path`, `code.line.number`, `code.column.number`) and
     deprecated (`code.filepath`, `code.lineno`, `code.column`) attribute
