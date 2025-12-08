@@ -20389,3 +20389,4 @@ shiny,6e3be9558972346d5695eb84b1996844,Added `withOtelCollect()` and `localOtelC
 shiny,fef7ed5fed9db8d8729773fe05e737ee,"`ExtendedTask` now captures the OpenTelemetry recording state at initialization time rather than at invocation time, ensuring consistent span recording behavior regardless of runtime configuration changes. (#4334)",NA,NA,NA,NA
 dbplyr,28e151f4c8e4e6f827dbbea32ec18066,Redshift: fixed syntax error in `date_build()` translation (#1512).,NA,NA,NA,NA
 dbplyr,705049221f351d73b402e7c9721cf843,"Ensure `str_like()` and `str_ilike()` have consistent behaviour on SQL Server (@​edward-burn, #1669).",NA,NA,NA,NA
+dbplyr,9541856ea7c3dfe2ff752afdd823429d,"`fill()` now errors if you attempt to rename a column, for consistency with dplyr (#1536)",NA,NA,NA,NA

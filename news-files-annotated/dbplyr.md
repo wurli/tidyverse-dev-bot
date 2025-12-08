@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `fill()` now errors if you attempt to rename a column, for
+    consistency with dplyr (#1536)
+    !end-bullet!
+-   !begin-bullet!
     Redshift: fixed syntax error in `date_build()` translation (#1512).
     !end-bullet!
 -   !begin-bullet!
