@@ -20383,3 +20383,5 @@ duckplyr,ab739282bfda5d4a13cb9c0c33b4dd9d,Revert to CRAN duckdb.,NA,NA,NA,NA
 duckplyr,3c0efb5e4de84c759ef2de85aa7f4556,Use dev duckdb.,NA,NA,NA,NA
 haven,0193d1f77f170d8ec26034c86dc2ac1c,Fix bug that caused `write_xpt()` to fail when writing tagged `NA` values (#755).,NA,NA,NA,NA
 haven,e6235960edb9725f3c94b6b51c48c2a2,"Tagged `NA` values are now silently converted to lower case when they are created in R with `tagged_na()` or checked with `is_tagged_na()`. These are case insensitive when reading and writing, so forcing lower case removes any potential ambiguity.",NA,NA,NA,NA
+httr2,776ff9b28fab9510d2c76cc5abc3cc2c,`req_throttle()` no longer resets the token bucket when used repeatedly with the same host (#801) and never generates negative wait times (#820).,NA,NA,NA,NA
+httr2,57c96cfc014e8c64c1f4f02e2bb7ecb3,"`url_modify()` refactored to better retain exact formatting of URL not modified components (#788, #794)",NA,NA,NA,NA

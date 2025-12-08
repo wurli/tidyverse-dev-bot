@@ -1,28 +1,31 @@
 # httr2 (development version)
 
+# httr2 1.2.2
+
 !begin-bullets-1!
 
--   !begin-bullet!
-    Multiple calls to `req_throttle()` no longer reset the token bucket
-    (#801).
-    !end-bullet!
--   !begin-bullet!
-    New `resps_ok()` returns a logical vector indicating which requests
-    were successful (#807).
-    !end-bullet!
 -   !begin-bullet!
     httr2 will now emit OpenTelemetry traces for all requests when
     tracing is enabled. Requires the `otelsdk` package (@atheriel,
     #729).
     !end-bullet!
 -   !begin-bullet!
+    `req_throttle()` no longer resets the token bucket when used
+    repeatedly with the same host (#801) and never generates negative
+    wait times (#820).
+    !end-bullet!
+-   !begin-bullet!
     `req_perform_connection()` no longer errors with
-    `no applicable method for 'close' applied to an object of class "c('httr2_failure', 'httr2_error', 'rlang_error', 'error', 'condition')`
+    `no applicable method for 'close' applied to an object of class "c('httr2_failure', 'httr2_error', 'rlang_error', 'error', 'condition')"`
     (#817).
     !end-bullet!
 -   !begin-bullet!
-    Refactor `url_modify()` to better retain exact formatting of URL
-    components that are not modified. (#788, #794)
+    New `resps_ok()` returns a logical vector indicating which requests
+    were successful (#807).
+    !end-bullet!
+-   !begin-bullet!
+    `url_modify()` refactored to better retain exact formatting of URL
+    not modified components (#788, #794)
     !end-bullet!
 
 !end-bullets-1!
