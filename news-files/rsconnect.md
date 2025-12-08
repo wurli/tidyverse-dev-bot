@@ -1,5 +1,7 @@
 # rsconnect (development version)
 
+# rsconnect 1.7.0
+
 * Added support for deploying from `manifest.json` files created by
   `writeManifest()`: use the `manifestPath` argument of `deployApp()` and related
   functions to specify the path to an existing manifest file. (#1259)
