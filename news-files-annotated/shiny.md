@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `ExtendedTask` now captures the OpenTelemetry recording state at
+    initialization time rather than at invocation time, ensuring
+    consistent span recording behavior regardless of runtime
+    configuration changes. (#4334)
+    !end-bullet!
+-   !begin-bullet!
     Added `withOtelCollect()` and `localOtelCollect()` functions to
     temporarily control OpenTelemetry collection levels during reactive
     expression creation. These functions allow you to enable or disable
