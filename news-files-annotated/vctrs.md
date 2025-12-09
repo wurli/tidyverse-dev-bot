@@ -3,6 +3,14 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    New `list_of_transpose()` for transposing a `<list_of>` (#2059).
+
+    !end-bullet!
+-   !begin-bullet!
+    New `list_of_ptype()` and `list_of_size()` accessors.
+
+    !end-bullet!
+-   !begin-bullet!
     Assigning `NULL` into a `<list_of>` via `x[[i]] <- NULL` now
     shortens the list to better align with base R and the existing `$<-`
     and `[<-` methods (#2112).

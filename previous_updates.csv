@@ -20390,3 +20390,5 @@ shiny,fef7ed5fed9db8d8729773fe05e737ee,"`ExtendedTask` now captures the OpenTele
 dbplyr,28e151f4c8e4e6f827dbbea32ec18066,Redshift: fixed syntax error in `date_build()` translation (#1512).,NA,NA,NA,NA
 dbplyr,705049221f351d73b402e7c9721cf843,"Ensure `str_like()` and `str_ilike()` have consistent behaviour on SQL Server (@​edward-burn, #1669).",NA,NA,NA,NA
 dbplyr,9541856ea7c3dfe2ff752afdd823429d,"`fill()` now errors if you attempt to rename a column, for consistency with dplyr (#1536)",NA,NA,NA,NA
+vctrs,3049a3e1fddb632ef7181bc023bbb3ff,New `list_of_transpose()` for transposing a `<list_of>` (#2059).,NA,NA,NA,NA
+vctrs,a230280e578cf858e33be3595420c8b2,New `list_of_ptype()` and `list_of_size()` accessors.,NA,NA,NA,NA
