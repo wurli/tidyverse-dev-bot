@@ -20392,3 +20392,4 @@ dbplyr,705049221f351d73b402e7c9721cf843,"Ensure `str_like()` and `str_ilike()` h
 dbplyr,9541856ea7c3dfe2ff752afdd823429d,"`fill()` now errors if you attempt to rename a column, for consistency with dplyr (#1536)",NA,NA,NA,NA
 vctrs,3049a3e1fddb632ef7181bc023bbb3ff,New `list_of_transpose()` for transposing a `<list_of>` (#2059).,NA,NA,NA,NA
 vctrs,a230280e578cf858e33be3595420c8b2,New `list_of_ptype()` and `list_of_size()` accessors.,NA,NA,NA,NA
+shiny,e4eeab4337b770a03a60c00a7dd34650,"`withOtelCollect()` and `localOtelCollect()` temporarily control OpenTelemetry collection levels during reactive expression creation, allowing you to enable or disable telemetry collection for specific modules or sections of code. (#4333)",NA,NA,NA,NA
