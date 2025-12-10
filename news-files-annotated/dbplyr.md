@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    New `sql_glue()` and `sql_glue2()` provide a convenient syntax for
+    building SQL strings. These functions replace the now superseded
+    `build_sql()`, `sql_expr()`, and `sql_call2()`. (#1249).
+    !end-bullet!
+-   !begin-bullet!
     `fill()` now errors if you attempt to rename a column, for
     consistency with dplyr (#1536)
     !end-bullet!
@@ -54,9 +59,9 @@
     (#1483).
     !end-bullet!
 -   !begin-bullet!
-    `glue_sql2()` is now exported for building SQL strings with glue
+    `sql_glue2()` is now exported for building SQL strings with glue
     syntax and type markers. `build_sql()` is deprecated in favor of
-    `glue_sql2()` (#1249).
+    `sql_glue2()` (#1249).
     !end-bullet!
 -   !begin-bullet!
     dbplyr 1e interfaces are now deprecated (#1197). Backend developers
