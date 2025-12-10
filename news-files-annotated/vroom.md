@@ -31,6 +31,12 @@
     rows of data are parsed (#427, #540, #548).
 
     !end-bullet!
+-   !begin-bullet!
+    `vroom()`, `vroom_lines()`, and `vroom_fwf()` now close and destroy
+    (instead of leak) the connection in the case where opening the
+    connection fails due to, e.g., a nonexistent URL (#488).
+
+    !end-bullet!
 
 !end-bullets-1!
 
