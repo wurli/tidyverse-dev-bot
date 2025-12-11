@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    The print method no longer mentions the "source" in the header,
+    because it's an outdated dplyr concept (#897).
+    !end-bullet!
+-   !begin-bullet!
     New `sql_glue()` and `sql_glue2()` provide a convenient syntax for
     building SQL strings. These functions replace the now superseded
     `build_sql()`, `sql_expr()`, and `sql_call2()`. (#1249).
