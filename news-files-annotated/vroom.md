@@ -37,6 +37,11 @@
     connection fails due to, e.g., a nonexistent URL (#488).
 
     !end-bullet!
+-   !begin-bullet!
+    vroom takes the recommended approach for phasing out usage of the
+    non-API entry points `SETLENGTH` and `SET_TRUELENGTH` (#582).
+
+    !end-bullet!
 
 !end-bullets-1!
 
