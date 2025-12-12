@@ -3,6 +3,13 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `join_by(between())` now correctly handles column renames (#1572).
+    !end-bullet!
+-   !begin-bullet!
+    SQL Server uses `DATEDIFF_BIG` instead of `DATEDIFF` to work
+    regardless of data size (@edward-burn, #1666).
+    !end-bullet!
+-   !begin-bullet!
     `na_matches = "na"` now works correctly with inequality and overlap
     joins, preserving the comparison operator instead of converting to
     equality (#1505).
@@ -48,7 +55,7 @@
     !end-bullet!
 -   !begin-bullet!
     New translations for stringr function `str_ilike()` for Postgres,
-    Redshift, and Snowflake (@edward-burn, #1628).
+    Redshift, Snowflake, and Spark (@edward-burn, #1628).
     !end-bullet!
 -   !begin-bullet!
     Argument `ignore_case` for `str_like()` has been deprecated
