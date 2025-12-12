@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `na_matches = "na"` now works correctly with inequality and overlap
+    joins, preserving the comparison operator instead of converting to
+    equality (#1505).
+    !end-bullet!
+-   !begin-bullet!
     `copy_inline()` now works with blob columns (#1515).
     !end-bullet!
 -   !begin-bullet!

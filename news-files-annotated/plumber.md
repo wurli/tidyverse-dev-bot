@@ -5,6 +5,14 @@
 -   !begin-bullet!
     Added support for Arrow IPC Streams (@josiahparry #968)
     !end-bullet!
+-   !begin-bullet!
+    Fixed a bug where setting the `apiPath` option wouldn't be honored
+    when running the app (@thomasp85, #836)
+    !end-bullet!
+-   !begin-bullet!
+    Removed deprecated `mockery` package dependency. Tests now use
+    native R closures for callback tracking. (#1009)
+    !end-bullet!
 
 !end-bullets-1!
 
