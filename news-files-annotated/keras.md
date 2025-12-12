@@ -43,6 +43,10 @@
 
     !end-bullet!
 -   !begin-bullet!
+    Added `as.array()` support for `PIL.Image.Image` objects.
+
+    !end-bullet!
+-   !begin-bullet!
     Transposed convolution utilities now follow the latest Keras API:
     `op_conv_transpose()` defaults `strides = 1` and the
     `layer_conv_*_transpose()` layers expose `output_padding` for
@@ -66,6 +70,15 @@
     !end-bullet!
 -   !begin-bullet!
     `layer_layer_normalization()` removes the `rms_scaling` argument.
+
+    !end-bullet!
+-   !begin-bullet!
+    Merging layers now capture `...` with tidy dots (fixes #1525).
+
+    !end-bullet!
+-   !begin-bullet!
+    Fixed Ops on JAX `_DimExpr` so symbolic shapes survive arithmetic
+    with R double scalars.
 
     !end-bullet!
 -   !begin-bullet!

@@ -20407,3 +20407,6 @@ plumber,2c78eb888f2e583665798e5a7c9c7137,"Fixed a bug where setting the `apiPath
 plumber,82c91c12dbf38582a4c26603c8414ae6,Removed deprecated `mockery` package dependency. Tests now use native R closures for callback tracking. (#1009),NA,NA,NA,NA
 sortable,1c17d4e6cc40ca771f56ae32e806d615,"Fix the problem with using `sortable` with `shiny` modules. To prevent user code from breaking, this requires opting in by using 'enable_modules()\`. See the vignette for more information.",NA,NA,NA,NA
 sortable,d8ccee1b802d54ff7c1fcf0857ce43f2,Update `Sortable.js` to version 1.15.6,NA,NA,NA,NA
+keras,122759878fb2cc98e0ef0ed7a982a68b,Added `as.array()` support for `PIL.Image.Image` objects.,NA,NA,NA,NA
+keras,f0944af6dc1eac6288362b0a2f802ba5,Merging layers now capture `...` with tidy dots (fixes #1525).,NA,NA,NA,NA
+keras,497cdec1cd3afcc53a45ebc8078bb551,Fixed Ops on JAX `_DimExpr` so symbolic shapes survive arithmetic with R double scalars.,NA,NA,NA,NA
