@@ -20398,3 +20398,5 @@ dbplyr,cabc3473c8bf9857a2be04d847a3d4bc,"New `sql_glue()` and `sql_glue2()` prov
 dbplyr,e6239a022eb16da2f109e8c35a17eb4d,"The print method no longer mentions the ""source"" in the header, because it's an outdated dplyr concept (#897).",NA,NA,NA,NA
 vroom,b19290d27958e84c6e5a2a8debb10ccf,vroom takes the recommended approach for phasing out usage of the non-API entry points `SETLENGTH` and `SET_TRUELENGTH` (#582).,NA,NA,NA,NA
 rsconnect,d2a1341fbd46d8c47d685462528cdc45,Resolved a bug where `renv.lock` files that had multiple repositories were not being translated faithfully when creating the manifest file. (#1268),NA,NA,NA,NA
+dbplyr,f33fd8f121239da2df5a711ae7855a3c,`tbl_sql()` is now (soft) deprecated. It hasn't been required in a while.,NA,NA,NA,NA
+dbplyr,13325d0b025bc007b8aec3721a75568b,dbplyr now longer attempts to translate `pi` to `PI()`. This caused problems if you had a column called `pi` (#1531).,NA,NA,NA,NA

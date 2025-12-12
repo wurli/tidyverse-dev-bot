@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `tbl_sql()` is now (soft) deprecated. It hasn't been required in a
+    while.
+    !end-bullet!
+-   !begin-bullet!
     The print method no longer mentions the "source" in the header,
     because it's an outdated dplyr concept (#897).
     !end-bullet!
@@ -17,6 +21,10 @@
     !end-bullet!
 -   !begin-bullet!
     Redshift: fixed syntax error in `date_build()` translation (#1512).
+    !end-bullet!
+-   !begin-bullet!
+    dbplyr now longer attempts to translate `pi` to `PI()`. This caused
+    problems if you had a column called `pi` (#1531).
     !end-bullet!
 -   !begin-bullet!
     Ensure `str_like()` and `str_ilike()` have consistent behaviour on
