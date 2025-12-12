@@ -1,8 +1,16 @@
 # vetiver (development version)
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    Updated to support all versions of xgboost (#304).
+    !end-bullet!
+
+!end-bullets-1!
+
 # vetiver 0.2.6
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     Added new `additional_pkgs` argument for writing plumber files
@@ -19,41 +27,41 @@
 
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # vetiver 0.2.5
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     Fixed bug in generating plumber files (#257).
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 # vetiver 0.2.4
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     Fixed how plumber files are generated for `board_url()` (#241).
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 # vetiver 0.2.3
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     Updated test involving renv and rsconnect (#230).
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 # vetiver 0.2.2
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     Fixed a bug in where `vetiver_write_docker()` writes the renv
@@ -66,11 +74,11 @@
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # vetiver 0.2.1
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     Added support for keras (#164), recipes (#179), and luz (#187,
@@ -103,18 +111,18 @@
 
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 # vetiver 0.2.0
 
 ## Breaking changes
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     The arguments for dealing with a model's input data prototype have
     changed from using `ptype` to using `prototype` (#166):
-    !begin-bullets-8!
+    !begin-bullets-9!
     -   !begin-bullet!
         In `vetiver_model()`, now use `save_prototype`.
         !end-bullet!
@@ -122,14 +130,14 @@
         In `vetiver_api()`, now use `check_prototype`.
         !end-bullet!
 
-    !end-bullets-8!
+    !end-bullets-9!
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 ## Other improvements
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     Added support for k-Prototypes clustering from clustMixType (#163,
@@ -161,11 +169,11 @@
 
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 # vetiver 0.1.8
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     Trailing slashes are now removed from `vetiver_endpoint()` (#134).
@@ -199,11 +207,11 @@
 
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 # vetiver 0.1.7
 
-!begin-bullets-11!
+!begin-bullets-12!
 
 -   !begin-bullet!
     Now pass the dots for writing a pin through to vetiver allowing, for
@@ -217,11 +225,11 @@
 
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-12!
 
 # vetiver 0.1.6
 
-!begin-bullets-12!
+!begin-bullets-13!
 
 -   !begin-bullet!
     The lockfile created by `vetiver_write_docker()` can now be named
@@ -264,11 +272,11 @@
 
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
 
 # vetiver 0.1.5
 
-!begin-bullets-13!
+!begin-bullets-14!
 
 -   !begin-bullet!
     Add functions for model monitoring (#92).
@@ -279,21 +287,21 @@
 
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-14!
 
 # vetiver 0.1.4
 
-!begin-bullets-14!
+!begin-bullets-15!
 
 -   !begin-bullet!
     Improve how Dockerfiles are generated.
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-15!
 
 # vetiver 0.1.3
 
-!begin-bullets-15!
+!begin-bullets-16!
 
 -   !begin-bullet!
     Update all tests to use redaction for snapshots.
@@ -304,11 +312,11 @@
 
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-16!
 
 # vetiver 0.1.2
 
-!begin-bullets-16!
+!begin-bullets-17!
 
 -   !begin-bullet!
     Generate Dockerfiles to deploy model (#71).
@@ -324,11 +332,11 @@
 
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-17!
 
 # vetiver 0.1.1
 
-!begin-bullets-17!
+!begin-bullets-18!
 
 -   !begin-bullet!
     Added support for tidymodels (#51), caret (#52), and mlr3 (#56).
@@ -364,14 +372,14 @@
 
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-18!
 
 # vetiver 0.1.0
 
-!begin-bullets-18!
+!begin-bullets-19!
 
 -   !begin-bullet!
     Initial CRAN release of package.
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-19!
