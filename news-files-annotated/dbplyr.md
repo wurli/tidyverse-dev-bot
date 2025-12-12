@@ -3,6 +3,9 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `copy_inline()` now works with blob columns (#1515).
+    !end-bullet!
+-   !begin-bullet!
     `tbl_sql()` is now (soft) deprecated. It hasn't been required in a
     while.
     !end-bullet!

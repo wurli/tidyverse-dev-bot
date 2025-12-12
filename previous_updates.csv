@@ -20400,3 +20400,4 @@ vroom,b19290d27958e84c6e5a2a8debb10ccf,vroom takes the recommended approach for 
 rsconnect,d2a1341fbd46d8c47d685462528cdc45,Resolved a bug where `renv.lock` files that had multiple repositories were not being translated faithfully when creating the manifest file. (#1268),NA,NA,NA,NA
 dbplyr,f33fd8f121239da2df5a711ae7855a3c,`tbl_sql()` is now (soft) deprecated. It hasn't been required in a while.,NA,NA,NA,NA
 dbplyr,13325d0b025bc007b8aec3721a75568b,dbplyr now longer attempts to translate `pi` to `PI()`. This caused problems if you had a column called `pi` (#1531).,NA,NA,NA,NA
+dbplyr,cd8f19e5752e58dc9a8a702a3c365d73,`copy_inline()` now works with blob columns (#1515).,NA,NA,NA,NA
