@@ -1,6 +1,8 @@
 # vetiver (development version)
 
-* Updated to support all versions of xgboost (#304).
+# vetiver 0.2.7
+
+* Updated to support all versions of xgboost (#306).
 
 # vetiver 0.2.6
 

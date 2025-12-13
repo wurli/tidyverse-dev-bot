@@ -20412,3 +20412,4 @@ keras,f0944af6dc1eac6288362b0a2f802ba5,Merging layers now capture `...` with tid
 keras,497cdec1cd3afcc53a45ebc8078bb551,Fixed Ops on JAX `_DimExpr` so symbolic shapes survive arithmetic with R double scalars.,NA,NA,NA,NA
 dbplyr,c8df0d94c8479116faf8c10666c5b659,`join_by(between())` now correctly handles column renames (#1572).,NA,NA,NA,NA
 dbplyr,2944b502b1fb17ada0a3ff37721f7806,"SQL Server uses `DATEDIFF_BIG` instead of `DATEDIFF` to work regardless of data size (@​edward-burn, #1666).",NA,NA,NA,NA
+vetiver,efd9d90010e24e0091cc96046dcd4043,Updated to support all versions of xgboost (#306).,NA,NA,NA,NA
