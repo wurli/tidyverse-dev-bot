@@ -20414,3 +20414,4 @@ dbplyr,c8df0d94c8479116faf8c10666c5b659,`join_by(between())` now correctly handl
 dbplyr,2944b502b1fb17ada0a3ff37721f7806,"SQL Server uses `DATEDIFF_BIG` instead of `DATEDIFF` to work regardless of data size (@​edward-burn, #1666).",NA,NA,NA,NA
 vetiver,efd9d90010e24e0091cc96046dcd4043,Updated to support all versions of xgboost (#306).,NA,NA,NA,NA
 dbplyr,2db0bb82b6487a3346975594d582094f,"New `.sql` pronoun makes it a little easier to use known SQL functions in packages, requiring only `@​importFrom dbplyr .sql` (#1117).",NA,NA,NA,NA
+dbplyr,45b27a4da5be9533b2c61c7481530817,"`.data$col`, `.data[[col]]`, `.env$var`, and `.env$[[var]]` now work correctly inside `across()` (#1520).",NA,NA,NA,NA

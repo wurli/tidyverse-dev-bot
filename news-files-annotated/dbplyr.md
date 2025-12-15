@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `.data$col`, `.data[[col]]`, `.env$var`, and `.env$[[var]]` now work
+    correctly inside `across()` (#1520).
+    !end-bullet!
+-   !begin-bullet!
     New `.sql` pronoun makes it a little easier to use known SQL
     functions in packages, requiring only `@importFrom dbplyr .sql`
     (#1117).
