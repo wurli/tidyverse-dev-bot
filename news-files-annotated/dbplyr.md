@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    New `.sql` pronoun makes it a little easier to use known SQL
+    functions in packages, requiring only `@importFrom dbplyr .sql`
+    (#1117).
+    !end-bullet!
+-   !begin-bullet!
     `join_by(between())` now correctly handles column renames (#1572).
     !end-bullet!
 -   !begin-bullet!
