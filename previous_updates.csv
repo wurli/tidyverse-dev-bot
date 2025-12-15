@@ -20430,3 +20430,4 @@ df |> filter(count != 0 | is.na(count))
 df |> filter_out(count == 0)
 ```",NA,NA,NA,NA
 dplyr,d2b1794e0fe24e57782358f005d8ce3a,"With `filter()`, you must provide a ""negative"" condition of `!= 0` and must explicitly guard against accidentally dropping rows with `NA`. With `filter_out()`, you directly specify rows to drop and you don't have to guard against dropping rows with `NA`, which tends to result in much clearer code. This work is a result of Tidyup 8: Expanding the `filter()` family, with a lot of great feedback from the community (#6560, #6891).",NA,NA,NA,NA
+rsconnect,066094f115a515ca0f28f0b4475c2365,Added support for overriding R package repository resolution behavior.,NA,NA,NA,NA

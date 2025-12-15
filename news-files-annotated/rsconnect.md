@@ -6,6 +6,12 @@
     Resolved a bug where `renv.lock` files that had multiple
     repositories were not being translated faithfully when creating the
     manifest file. (#1268)
+
+    !end-bullet!
+-   !begin-bullet!
+    Added support for overriding R package repository resolution
+    behavior.
+
     !end-bullet!
 
 !end-bullets-1!
