@@ -3,6 +3,18 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    SQL Server 2025 (version 17.0) now supports stringr regex functions:
+    `str_detect()`, `str_starts()`, `str_ends()`, `str_replace()`,
+    `str_replace_all()`, `str_remove()`, `str_remove_all()`,
+    `str_extract()`, and `str_count()`. Fixed pattern versions of
+    `str_detect()`, `str_starts()`, and `str_ends()` work on all SQL
+    Server versions (#1671).
+    !end-bullet!
+-   !begin-bullet!
+    MS Access now correctly generates SQL for multiple joins by adding
+    required parentheses (#1576).
+    !end-bullet!
+-   !begin-bullet!
     `.data$col`, `.data[[col]]`, `.env$var`, and `.env$[[var]]` now work
     correctly inside `across()` (#1520).
     !end-bullet!

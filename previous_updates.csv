@@ -20415,3 +20415,5 @@ dbplyr,2944b502b1fb17ada0a3ff37721f7806,"SQL Server uses `DATEDIFF_BIG` instead 
 vetiver,efd9d90010e24e0091cc96046dcd4043,Updated to support all versions of xgboost (#306).,NA,NA,NA,NA
 dbplyr,2db0bb82b6487a3346975594d582094f,"New `.sql` pronoun makes it a little easier to use known SQL functions in packages, requiring only `@​importFrom dbplyr .sql` (#1117).",NA,NA,NA,NA
 dbplyr,45b27a4da5be9533b2c61c7481530817,"`.data$col`, `.data[[col]]`, `.env$var`, and `.env$[[var]]` now work correctly inside `across()` (#1520).",NA,NA,NA,NA
+dbplyr,210ceec75eb90b9340c521d86c079b92,"SQL Server 2025 (version 17.0) now supports stringr regex functions: `str_detect()`, `str_starts()`, `str_ends()`, `str_replace()`, `str_replace_all()`, `str_remove()`, `str_remove_all()`, `str_extract()`, and `str_count()`. Fixed pattern versions of `str_detect()`, `str_starts()`, and `str_ends()` work on all SQL Server versions (#1671).",NA,NA,NA,NA
+dbplyr,14138059715a9edb55bd5de339a344c5,MS Access now correctly generates SQL for multiple joins by adding required parentheses (#1576).,NA,NA,NA,NA
