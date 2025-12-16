@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `mutate()` gains `.order` and `.frame` arguments for specifying
+    window function ordering and frame bounds within a single mutate
+    call, similar to how `.by` works for grouping (#1542).
+    !end-bullet!
+-   !begin-bullet!
     The `copy` argument of join, set, and row operations now accepts
     `"inline"` to use `copy_inline()` instead of copying to a temporary
     table (#863).

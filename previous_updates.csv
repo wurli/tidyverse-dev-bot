@@ -20455,3 +20455,4 @@ gt,ffbdb15b1e6db805f23c9f5c0bbc828e,"Refactored pipe use, moving many pipes in t
 gt,53f1081c00bf069df901c108e1d94f05,"Add option to control the order of footnotes (#2023). (@​shannonhaughton, #2036)",NA,NA,NA,NA
 lubridate,4751ed8d46ed6e6a21ac6ed4fcf5a4c8,lubridate is now MIT licensed (#968).,NA,NA,NA,NA
 dbplyr,207335509f7c4fc52bd204dcb17d74db,"The `copy` argument of join, set, and row operations now accepts `""inline""` to use `copy_inline()` instead of copying to a temporary table (#863).",NA,NA,NA,NA
+dbplyr,8a1de5e8d3da64638b4a584dfdad627d,"`mutate()` gains `.order` and `.frame` arguments for specifying window function ordering and frame bounds within a single mutate call, similar to how `.by` works for grouping (#1542).",NA,NA,NA,NA
