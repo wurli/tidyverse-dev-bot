@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `as.sql()` is now deprecated as part of major internal refactoring
+    of how `sql()` and `ident()` are used.
+    !end-bullet!
+-   !begin-bullet!
     `expand()` now errors when column expressions don't reference any
     columns in the data, instead of generating invalid SQL (#720).
     !end-bullet!

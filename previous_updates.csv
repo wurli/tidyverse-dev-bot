@@ -20437,3 +20437,19 @@ dplyr,fecef0f24881166d065915c9ab7909b1,"New `when_any()` and `when_all()`, which
 dplyr,fecef0f24881166d065915c9ab7909b1,"• `when_any(x, y, z)` is equivalent to `x | y | z`.",NA,NA,NA,NA
 dplyr,fecef0f24881166d065915c9ab7909b1,"• `when_all(x, y, z)` is equivalent to `x & y & z`.",NA,NA,NA,NA
 dplyr,de7f70f5815dfcd1c1e6433a947f996e,`when_any()` is particularly useful within `filter()` and `filter_out()` to specify comma separated conditions combined with `|` rather than `&`. This work is a result of Tidyup 8: Expanding the `filter()` family.,NA,NA,NA,NA
+dbplyr,8b0733f708a5c54cf3a5c1005600d22a,`as.sql()` is now deprecated as part of major internal refactoring of how `sql()` and `ident()` are used.,NA,NA,NA,NA
+gt,64d8f4f79cde1637722edf4e3b422f30,"Added the `summary_columns()` function to enable horizontal, row-wise aggregation (#382). (#2067)",NA,NA,NA,NA
+gt,b61fd988affd47d80f53dd3fb27114dd,Added the `min_sep_threshold` argument to numeric formatting functions; this controls the minimum number of digits required in the integer part of a number for grouping separators to be applied (#908). (#2064),NA,NA,NA,NA
+gt,5555260c1fa8ab8099b0b5b398950562,The `stub()` helper now works with tables having a multi-column stub (#2066). (#2069),NA,NA,NA,NA
+gt,fdd7b6d9ba07c238d1d7edb8e4b8f64b,Fixed issue where loading in the Unicode conversion file (for LaTeX output tables) fails (#2048). (#2049),NA,NA,NA,NA
+gt,cbc3eb4873ae7f01f988e2d6337895a3,"Added fix to make LaTeX Unicode conversion operations optional (as well as make them work in-line) (#2037, #2041). (@​thebioengineer, #2042)",NA,NA,NA,NA
+gt,f8fc4dc7b3cd079e5f5a476b0258b4c5,"Fixed a bug where LaTeX spanner widths were based on incorrect column widths (#1922, #2016). (@​shannonhaughton, #2079)",NA,NA,NA,NA
+gt,f37116e7bd272c0275b8f7e6eb57bfb0,The `fmt_scientific()` function should no longer error when formatting `Inf`/`-Inf` values in a table column (#1516). (#2058),NA,NA,NA,NA
+gt,540000a4b4b7d882e9fcd1b4b7664e1e,"Allow for horizontal alignment within cells of LaTeX output tables (#2001). (@​thebioengineer, #2075)",NA,NA,NA,NA
+gt,fe45a392663ff5cd6a22665ce76729c3,"Added functionality for handling tables with a multicolumn stub in the Word output format. (@​romainfrancois, #2074, #2086)",NA,NA,NA,NA
+gt,3b02f2b8a91069612e549ce8640a1375,We now correctly handle tables with a multicolumn stub in the RTF output format (#2045). (#2061),NA,NA,NA,NA
+gt,0d2141418d35ac5a1ea11ba5afb11f7e,Added better support for LaTeX tables with a multicolumn stub (#2044). (#2051),NA,NA,NA,NA
+gt,176e230cd8ccb9029fa8c2c106ca24d2,The `countrypops` dataset has been updated to include population values up to 2024. (#2057),NA,NA,NA,NA
+gt,92bcbf3985bb9b6f8105886d546eea08,"GitHub Actions workflows were updated. (@​olivroy, #2077)",NA,NA,NA,NA
+gt,ffbdb15b1e6db805f23c9f5c0bbc828e,"Refactored pipe use, moving many pipes in the codebase from `%>%` to `|>`. (#2056)",NA,NA,NA,NA
+gt,53f1081c00bf069df901c108e1d94f05,"Add option to control the order of footnotes (#2023). (@​shannonhaughton, #2036)",NA,NA,NA,NA

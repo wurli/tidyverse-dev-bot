@@ -1,12 +1,26 @@
 # gt (development version)
 
+# gt 1.2.0
+
 !begin-bullets-1!
 
 -   !begin-bullet!
     The new `fmt_number_si()` function format numeric values with SI
-    prefixes and an optional unit (could be obtained from a separate
-    column), automatically selecting the appropriate prefix to keep the
-    mantissa in a readable range (#1999). (#2060)
+    prefixes and an optional unit (which could be also be obtained from
+    a separate column), automatically selecting the appropriate prefix
+    to keep the mantissa in a readable range (#1999). (#2060)
+
+    !end-bullet!
+-   !begin-bullet!
+    Added the `summary_columns()` function to enable horizontal,
+    row-wise aggregation (#382). (#2067)
+
+    !end-bullet!
+-   !begin-bullet!
+    Added the `min_sep_threshold` argument to numeric formatting
+    functions; this controls the minimum number of digits required in
+    the integer part of a number for grouping separators to be applied
+    (#908). (#2064)
 
     !end-bullet!
 -   !begin-bullet!
@@ -17,18 +31,63 @@
 
     !end-bullet!
 -   !begin-bullet!
-    Update latex Unicode conversions to be optional (default to TRUE) as
-    well as make them work in-line (@thebioengineer, #2037, #2041)
+    The `stub()` helper now works with tables having a multi-column stub
+    (#2066). (#2069)
 
     !end-bullet!
 -   !begin-bullet!
-    Fix bug where latex spanner widths were based on incorrect column
-    widths (@shannonhaughton, #2016, #1922)
+    Fixed issue where loading in the Unicode conversion file (for LaTeX
+    output tables) fails (#2048). (#2049)
 
     !end-bullet!
 -   !begin-bullet!
-    Update latex to allow for horizontal alignment within cells
-    (@thebioengineer, #2001)
+    Added fix to make LaTeX Unicode conversion operations optional (as
+    well as make them work in-line) (#2037, #2041). (@thebioengineer,
+    #2042)
+
+    !end-bullet!
+-   !begin-bullet!
+    Fixed a bug where LaTeX spanner widths were based on incorrect
+    column widths (#1922, #2016). (@shannonhaughton, #2079)
+
+    !end-bullet!
+-   !begin-bullet!
+    The `fmt_scientific()` function should no longer error when
+    formatting `Inf`/`-Inf` values in a table column (#1516). (#2058)
+
+    !end-bullet!
+-   !begin-bullet!
+    Allow for horizontal alignment within cells of LaTeX output tables
+    (#2001). (@thebioengineer, #2075)
+
+    !end-bullet!
+-   !begin-bullet!
+    Added functionality for handling tables with a multicolumn stub in
+    the Word output format. (@romainfrancois, #2074, #2086)
+
+    !end-bullet!
+-   !begin-bullet!
+    We now correctly handle tables with a multicolumn stub in the RTF
+    output format (#2045). (#2061)
+
+    !end-bullet!
+-   !begin-bullet!
+    Added better support for LaTeX tables with a multicolumn stub
+    (#2044). (#2051)
+
+    !end-bullet!
+-   !begin-bullet!
+    The `countrypops` dataset has been updated to include population
+    values up to 2024. (#2057)
+
+    !end-bullet!
+-   !begin-bullet!
+    GitHub Actions workflows were updated. (@olivroy, #2077)
+
+    !end-bullet!
+-   !begin-bullet!
+    Refactored pipe use, moving many pipes in the codebase from `%>%` to
+    `|>`. (#2056)
 
     !end-bullet!
 
@@ -127,8 +186,8 @@
 
     !end-bullet!
 -   !begin-bullet!
-    Add option to control the order of footnotes (@shannonhaughton,
-    #2023)
+    Add option to control the order of footnotes (#2023).
+    (@shannonhaughton, #2036)
 
     !end-bullet!
 
