@@ -26,6 +26,11 @@
     widths (@shannonhaughton, #2016, #1922)
 
     !end-bullet!
+-   !begin-bullet!
+    Update latex to allow for horizontal alignment within cells
+    (@thebioengineer, #2001)
+
+    !end-bullet!
 
 !end-bullets-1!
 
