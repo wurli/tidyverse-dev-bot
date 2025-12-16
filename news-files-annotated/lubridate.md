@@ -5,6 +5,9 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    lubridate is now MIT licensed (#968).
+    !end-bullet!
+-   !begin-bullet!
     Don't use CET and EST as timezones to accommodate the upgrade of
     tzdata in the R-devel
     !end-bullet!

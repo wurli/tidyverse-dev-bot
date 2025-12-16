@@ -20453,3 +20453,4 @@ gt,176e230cd8ccb9029fa8c2c106ca24d2,The `countrypops` dataset has been updated t
 gt,92bcbf3985bb9b6f8105886d546eea08,"GitHub Actions workflows were updated. (@​olivroy, #2077)",NA,NA,NA,NA
 gt,ffbdb15b1e6db805f23c9f5c0bbc828e,"Refactored pipe use, moving many pipes in the codebase from `%>%` to `|>`. (#2056)",NA,NA,NA,NA
 gt,53f1081c00bf069df901c108e1d94f05,"Add option to control the order of footnotes (#2023). (@​shannonhaughton, #2036)",NA,NA,NA,NA
+lubridate,4751ed8d46ed6e6a21ac6ed4fcf5a4c8,lubridate is now MIT licensed (#968).,NA,NA,NA,NA
