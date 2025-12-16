@@ -20432,3 +20432,8 @@ df |> filter_out(count == 0)
 dplyr,d2b1794e0fe24e57782358f005d8ce3a,"With `filter()`, you must provide a ""negative"" condition of `!= 0` and must explicitly guard against accidentally dropping rows with `NA`. With `filter_out()`, you directly specify rows to drop and you don't have to guard against dropping rows with `NA`, which tends to result in much clearer code. This work is a result of Tidyup 8: Expanding the `filter()` family, with a lot of great feedback from the community (#6560, #6891).",NA,NA,NA,NA
 rsconnect,066094f115a515ca0f28f0b4475c2365,Added support for overriding R package repository resolution behavior.,NA,NA,NA,NA
 gt,f94ac37e68679103b667f0ef90c1d2b8,"Update latex to allow for horizontal alignment within cells (@​thebioengineer, #2001)",NA,NA,NA,NA
+dbplyr,607ee08cf5c6ea4978eeadd62c9e49b6,"`expand()` now errors when column expressions don't reference any columns in the data, instead of generating invalid SQL (#720).",NA,NA,NA,NA
+dplyr,fecef0f24881166d065915c9ab7909b1,"New `when_any()` and `when_all()`, which are elementwise versions of `any()` and `all()`. Alternatively, you can think of them as performing repeated `|` and `&` on any number of inputs, for example:",NA,NA,NA,NA
+dplyr,fecef0f24881166d065915c9ab7909b1,"• `when_any(x, y, z)` is equivalent to `x | y | z`.",NA,NA,NA,NA
+dplyr,fecef0f24881166d065915c9ab7909b1,"• `when_all(x, y, z)` is equivalent to `x & y & z`.",NA,NA,NA,NA
+dplyr,de7f70f5815dfcd1c1e6433a947f996e,`when_any()` is particularly useful within `filter()` and `filter_out()` to specify comma separated conditions combined with `|` rather than `&`. This work is a result of Tidyup 8: Expanding the `filter()` family.,NA,NA,NA,NA

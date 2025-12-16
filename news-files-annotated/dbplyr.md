@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `expand()` now errors when column expressions don't reference any
+    columns in the data, instead of generating invalid SQL (#720).
+    !end-bullet!
+-   !begin-bullet!
     CTEs now correctly quote table names when the same query is used
     multiple times (#1559).
     !end-bullet!
