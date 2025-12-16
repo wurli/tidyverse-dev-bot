@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    The `copy` argument of join, set, and row operations now accepts
+    `"inline"` to use `copy_inline()` instead of copying to a temporary
+    table (#863).
+    !end-bullet!
+-   !begin-bullet!
     `as.sql()` is now deprecated as part of major internal refactoring
     of how `sql()` and `ident()` are used.
     !end-bullet!

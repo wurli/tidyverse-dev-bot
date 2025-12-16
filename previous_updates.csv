@@ -20454,3 +20454,4 @@ gt,92bcbf3985bb9b6f8105886d546eea08,"GitHub Actions workflows were updated. (@â€
 gt,ffbdb15b1e6db805f23c9f5c0bbc828e,"Refactored pipe use, moving many pipes in the codebase from `%>%` to `|>`. (#2056)",NA,NA,NA,NA
 gt,53f1081c00bf069df901c108e1d94f05,"Add option to control the order of footnotes (#2023). (@â€‹shannonhaughton, #2036)",NA,NA,NA,NA
 lubridate,4751ed8d46ed6e6a21ac6ed4fcf5a4c8,lubridate is now MIT licensed (#968).,NA,NA,NA,NA
+dbplyr,207335509f7c4fc52bd204dcb17d74db,"The `copy` argument of join, set, and row operations now accepts `""inline""` to use `copy_inline()` instead of copying to a temporary table (#863).",NA,NA,NA,NA
