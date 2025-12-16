@@ -20456,3 +20456,6 @@ gt,53f1081c00bf069df901c108e1d94f05,"Add option to control the order of footnote
 lubridate,4751ed8d46ed6e6a21ac6ed4fcf5a4c8,lubridate is now MIT licensed (#968).,NA,NA,NA,NA
 dbplyr,207335509f7c4fc52bd204dcb17d74db,"The `copy` argument of join, set, and row operations now accepts `""inline""` to use `copy_inline()` instead of copying to a temporary table (#863).",NA,NA,NA,NA
 dbplyr,8a1de5e8d3da64638b4a584dfdad627d,"`mutate()` gains `.order` and `.frame` arguments for specifying window function ordering and frame bounds within a single mutate call, similar to how `.by` works for grouping (#1542).",NA,NA,NA,NA
+dbplyr,f508680771ac840e2f1ecbf73d0b401f,"`simulate_*()` now uses (approximately) correct quoting for all backends, so the generated SQL looks more like what you'll actually get when connected to a real database (#1464).",NA,NA,NA,NA
+dbplyr,73987d50a8fe18f0e608920ec6f25442,"`sql_infix()` no longer has a `con` argument since the connection needs to be determined at call time, not at definition time.",NA,NA,NA,NA
+vroom,6713e3a5fce5a86f1a5f304933a9fc2f,"If there is insufficient space for the tempfile used when reading from a connection (affects delimited and fixed width parsing, from compressed files and URLs), that is now reported as an error and no longer segfaults (#544).",NA,NA,NA,NA

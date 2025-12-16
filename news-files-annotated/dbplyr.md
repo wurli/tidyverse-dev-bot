@@ -3,6 +3,15 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `simulate_*()` now uses (approximately) correct quoting for all
+    backends, so the generated SQL looks more like what you'll actually
+    get when connected to a real database (#1464).
+    !end-bullet!
+-   !begin-bullet!
+    `sql_infix()` no longer has a `con` argument since the connection
+    needs to be determined at call time, not at definition time.
+    !end-bullet!
+-   !begin-bullet!
     `mutate()` gains `.order` and `.frame` arguments for specifying
     window function ordering and frame bounds within a single mutate
     call, similar to how `.by` works for grouping (#1542).
