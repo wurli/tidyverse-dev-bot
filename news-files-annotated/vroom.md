@@ -49,6 +49,12 @@
     longer segfaults (#544).
 
     !end-bullet!
+-   !begin-bullet!
+    Reading from a connection (compressed file, URL, raw connection)
+    with `n_max = 0` and explicit `col_names` no longer produces a
+    "negative length vectors are not allowed" error or crashes R (#539).
+
+    !end-bullet!
 
 !end-bullets-1!
 

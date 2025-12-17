@@ -20461,3 +20461,4 @@ dbplyr,73987d50a8fe18f0e608920ec6f25442,"`sql_infix()` no longer has a `con` arg
 vroom,6713e3a5fce5a86f1a5f304933a9fc2f,"If there is insufficient space for the tempfile used when reading from a connection (affects delimited and fixed width parsing, from compressed files and URLs), that is now reported as an error and no longer segfaults (#544).",NA,NA,NA,NA
 dbplyr,b622d35c9ee1ea389f36fafcadb7ac33,"`distinct()` with computed columns now ignores grouping, matching dplyr's behavior (#1081).",NA,NA,NA,NA
 dbplyr,17934c727a8b14c83b97efafa5ce6200,`sql_escape_string()` now defaults to using `'`.,NA,NA,NA,NA
+vroom,9ae2b81f4444cb948b054d31f51875f2,"Reading from a connection (compressed file, URL, raw connection) with `n_max = 0` and explicit `col_names` no longer produces a ""negative length vectors are not allowed"" error or crashes R (#539).",NA,NA,NA,NA
