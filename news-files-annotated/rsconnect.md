@@ -14,6 +14,12 @@
 
     !end-bullet!
 -   !begin-bullet!
+    Upgraded to use `v1` APIs for deploying to Connect servers, which
+    enables new features for specifying settings in the manifest file.
+    (#1280)
+
+    !end-bullet!
+-   !begin-bullet!
     Removed several functions, including `addConnectServer()` and
     `discoverServer()`, as well as HTTP backends other than libcurl,
     which were deprecated in rsconnect 1.0.0. (#1282)

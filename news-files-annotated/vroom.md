@@ -50,9 +50,14 @@
 
     !end-bullet!
 -   !begin-bullet!
-    Reading from a connection (compressed file, URL, raw connection)
-    with `n_max = 0` and explicit `col_names` no longer produces a
+    `vroom(..., n_max = 0, col_names = c(...))` with a connection
+    (compressed file, URL, raw connection) no longer produces a
     "negative length vectors are not allowed" error or crashes R (#539).
+
+    !end-bullet!
+-   !begin-bullet!
+    `vroom_fwf(..., n_max = 0)` with a connection no longer segfaults
+    (#590).
 
     !end-bullet!
 

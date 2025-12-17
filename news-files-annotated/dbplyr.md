@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `arrange()` now applies consecutively, matching dplyr's behavior:
+    `arrange(y) |> arrange(x)` is now equivalent to `arrange(x, y)`.
+    Empty `arrange()` now preserves existing ordering instead of
+    clearing it (#789).
+    !end-bullet!
+-   !begin-bullet!
     `distinct()` with computed columns now ignores grouping, matching
     dplyr's behavior (#1081).
     !end-bullet!
