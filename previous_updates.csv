@@ -20459,3 +20459,5 @@ dbplyr,8a1de5e8d3da64638b4a584dfdad627d,"`mutate()` gains `.order` and `.frame` 
 dbplyr,f508680771ac840e2f1ecbf73d0b401f,"`simulate_*()` now uses (approximately) correct quoting for all backends, so the generated SQL looks more like what you'll actually get when connected to a real database (#1464).",NA,NA,NA,NA
 dbplyr,73987d50a8fe18f0e608920ec6f25442,"`sql_infix()` no longer has a `con` argument since the connection needs to be determined at call time, not at definition time.",NA,NA,NA,NA
 vroom,6713e3a5fce5a86f1a5f304933a9fc2f,"If there is insufficient space for the tempfile used when reading from a connection (affects delimited and fixed width parsing, from compressed files and URLs), that is now reported as an error and no longer segfaults (#544).",NA,NA,NA,NA
+dbplyr,b622d35c9ee1ea389f36fafcadb7ac33,"`distinct()` with computed columns now ignores grouping, matching dplyr's behavior (#1081).",NA,NA,NA,NA
+dbplyr,17934c727a8b14c83b97efafa5ce6200,`sql_escape_string()` now defaults to using `'`.,NA,NA,NA,NA

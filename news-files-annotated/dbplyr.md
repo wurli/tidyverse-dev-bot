@@ -3,6 +3,13 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `distinct()` with computed columns now ignores grouping, matching
+    dplyr's behavior (#1081).
+    !end-bullet!
+-   !begin-bullet!
+    `sql_escape_string()` now defaults to using `'`.
+    !end-bullet!
+-   !begin-bullet!
     `simulate_*()` now uses (approximately) correct quoting for all
     backends, so the generated SQL looks more like what you'll actually
     get when connected to a real database (#1464).
