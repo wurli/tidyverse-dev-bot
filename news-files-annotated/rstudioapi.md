@@ -1,8 +1,17 @@
 # rstudioapi (development version)
 
+!begin-bullets-1!
+
+-   !begin-bullet!
+    `rstudioapi::documentNew()` now accepts arbitrary document types.
+    (#316)
+    !end-bullet!
+
+!end-bullets-1!
+
 # rstudioapi 0.17.1
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     Ensure a more appropriate error message is emitted for calls to
@@ -10,22 +19,22 @@
     RStudio.
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 # rstudioapi 0.17.0
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     Added `getMode()`, which can be used to differentiate between
     Desktop and Server installations of RStudio. (#280)
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 # rstudioapi 0.16.0
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     `restartSession()` gains the `clean` argument, for RStudio 2024.04
@@ -37,11 +46,11 @@
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 # rstudioapi 0.15.0
 
-!begin-bullets-4!
+!begin-bullets-5!
 
 -   !begin-bullet!
     Added `getDelegatedAzureToken` for Posit Workbench users needing to
@@ -49,11 +58,11 @@
     permissions configured
     !end-bullet!
 
-!end-bullets-4!
+!end-bullets-5!
 
 # rstudioapi 0.14
 
-!begin-bullets-5!
+!begin-bullets-6!
 
 -   !begin-bullet!
     `documentPath()` now marks the encoding of file paths as UTF-8.
@@ -85,21 +94,21 @@
 
     !end-bullet!
 
-!end-bullets-5!
+!end-bullets-6!
 
 # rstudioapi 0.13
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     Fixed an issue where `rstudioapi::insertText()` would fail. (#208)
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 # rstudioapi 0.12
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     Fixed an issue where remote `rstudioapi` calls would erroneously use
@@ -117,11 +126,11 @@
 
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 # rstudioapi 0.11
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     `rstudioapi::launcherResourceLimit()` now properly delegates the
@@ -158,21 +167,21 @@
 
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 # rstudioapi 0.10
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     Added the parameters `echo` and `focus` to `sendToConsole()`.
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 # rstudioapi 0.9
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     Added functions for displaying jobs in RStudio's Jobs pane:
@@ -185,11 +194,11 @@
 
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 # rstudioapi 0.8
 
-!begin-bullets-11!
+!begin-bullets-12!
 
 -   !begin-bullet!
     Added functions for installing + using build tools:
@@ -217,11 +226,11 @@
 
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-12!
 
 # rstudioapi 0.7
 
-!begin-bullets-12!
+!begin-bullets-13!
 
 -   !begin-bullet!
     Added methods for prompting the user for file paths: `selectFile()`,
@@ -249,11 +258,11 @@
 
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
 
 # rstudioapi 0.6
 
-!begin-bullets-13!
+!begin-bullets-14!
 
 -   !begin-bullet!
     Add sendToConsole function
@@ -264,11 +273,11 @@
 
     !end-bullet!
 
-!end-bullets-13!
+!end-bullets-14!
 
 # rstudioapi 0.5
 
-!begin-bullets-14!
+!begin-bullets-15!
 
 -   !begin-bullet!
     Add askForPassword function
@@ -279,32 +288,32 @@
 
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-15!
 
 # rstudioapi 0.4
 
-!begin-bullets-15!
+!begin-bullets-16!
 
 -   !begin-bullet!
     Add API methods for interacting with a document open in RStudio:
     'insertText()', 'modifyRange()' and 'getActiveDocumentContext()'.
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-16!
 
 # rstudioapi 0.3
 
-!begin-bullets-16!
+!begin-bullets-17!
 
 -   !begin-bullet!
     Add stub and documentation for sourceMarker function
     !end-bullet!
 
-!end-bullets-16!
+!end-bullets-17!
 
 # rstudioapi 0.2
 
-!begin-bullets-17!
+!begin-bullets-18!
 
 -   !begin-bullet!
     Compatibility with calling conventions for RStudio v0.99
@@ -316,14 +325,14 @@
 
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-18!
 
 # rstudioapi 0.1
 
-!begin-bullets-18!
+!begin-bullets-19!
 
 -   !begin-bullet!
     Initial release to CRAN
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-19!
