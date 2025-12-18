@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `src_memdb()` and `tbl_memdb()` are deprecated; use `memdb()` and
+    `copy_to(memdb(), df)` instead. New `local_memdb_frame()` for use in
+    tests.
+    !end-bullet!
+-   !begin-bullet!
     `arrange()` now applies consecutively, matching dplyr's behavior:
     `arrange(y) |> arrange(x)` is now equivalent to `arrange(x, y)`.
     Empty `arrange()` now preserves existing ordering instead of

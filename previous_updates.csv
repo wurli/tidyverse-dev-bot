@@ -20467,3 +20467,5 @@ dbplyr,a297ae8c8a275b8283aba5d0b19ffa53,"`arrange()` now applies consecutively, 
 vroom,ddbaa4eb08775cf0b786be6cc73d58d7,"`vroom_fwf(..., n_max = 0)` with a connection no longer segfaults (#590).",NA,NA,NA,NA
 rsconnect,4201c6f641ce3807e5f8c2481a2430b5,"Upgraded to use `v1` APIs for deploying to Connect servers, which enables new features for specifying settings in the manifest file. (#1280)",NA,NA,NA,NA
 haven,eb7e423276dcd897f1794ac666bbd620,"`read_sas()` and `read_xpt()` now supports all datetime, date and time formats (#780) and correctly recognises DATEAMPM as datetime (#789).",NA,NA,NA,NA
+dbplyr,fac0a794b236fb1cc09834d3a1cea0e1,"`src_memdb()` and `tbl_memdb()` are deprecated; use `memdb()` and `copy_to(memdb(), df)` instead. New `local_memdb_frame()` for use in tests.",NA,NA,NA,NA
+renv,36265f45a83c3395e305d0661b682f05,Fixed an issue where `renv::sysreqs()` could fail on operating systems which don't declare a VERSION_ID in `/etc/os-release`. (#2197),NA,NA,NA,NA
