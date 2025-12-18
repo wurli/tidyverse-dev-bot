@@ -20466,3 +20466,4 @@ rsconnect,62fda1840b9b1aaad3b34b61fe943d9a,"Removed several functions, including
 dbplyr,a297ae8c8a275b8283aba5d0b19ffa53,"`arrange()` now applies consecutively, matching dplyr's behavior: `arrange(y) |> arrange(x)` is now equivalent to `arrange(x, y)`. Empty `arrange()` now preserves existing ordering instead of clearing it (#789).",NA,NA,NA,NA
 vroom,ddbaa4eb08775cf0b786be6cc73d58d7,"`vroom_fwf(..., n_max = 0)` with a connection no longer segfaults (#590).",NA,NA,NA,NA
 rsconnect,4201c6f641ce3807e5f8c2481a2430b5,"Upgraded to use `v1` APIs for deploying to Connect servers, which enables new features for specifying settings in the manifest file. (#1280)",NA,NA,NA,NA
+haven,eb7e423276dcd897f1794ac666bbd620,"`read_sas()` and `read_xpt()` now supports all datetime, date and time formats (#780) and correctly recognises DATEAMPM as datetime (#789).",NA,NA,NA,NA

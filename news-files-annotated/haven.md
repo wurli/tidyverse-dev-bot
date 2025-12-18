@@ -3,6 +3,12 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `read_sas()` and `read_xpt()` now supports all datetime, date and
+    time formats (#780) and correctly recognises DATEAMPM as datetime
+    (#789).
+
+    !end-bullet!
+-   !begin-bullet!
     Fix bug that caused `write_xpt()` to fail when writing tagged `NA`
     values (#755).
 
