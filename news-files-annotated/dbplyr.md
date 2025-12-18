@@ -3,6 +3,19 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `slice_*()` now handles missing values in line with the
+    documentation, i.e. they are always removed (#1599).
+    !end-bullet!
+-   !begin-bullet!
+    Internal testing functions `src_test()`, `test_frame()` and
+    `test_load()`, `test_register_src()` and `test_register_con()` have
+    been removed.
+    !end-bullet!
+-   !begin-bullet!
+    A `filter()` followed by a `summarise()` is once again inlined
+    correctly (#1707).
+    !end-bullet!
+-   !begin-bullet!
     `src_memdb()` and `tbl_memdb()` are deprecated; use `memdb()` and
     `copy_to(memdb(), df)` instead. New `local_memdb_frame()` for use in
     tests.

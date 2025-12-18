@@ -20470,3 +20470,6 @@ haven,eb7e423276dcd897f1794ac666bbd620,"`read_sas()` and `read_xpt()` now suppor
 dbplyr,fac0a794b236fb1cc09834d3a1cea0e1,"`src_memdb()` and `tbl_memdb()` are deprecated; use `memdb()` and `copy_to(memdb(), df)` instead. New `local_memdb_frame()` for use in tests.",NA,NA,NA,NA
 renv,36265f45a83c3395e305d0661b682f05,Fixed an issue where `renv::sysreqs()` could fail on operating systems which don't declare a VERSION_ID in `/etc/os-release`. (#2197),NA,NA,NA,NA
 rstudioapi,00e36d704820bfe2ee1ffd1f1eb68140,`rstudioapi::documentNew()` now accepts arbitrary document types. (#316),NA,NA,NA,NA
+dbplyr,fb89c4461ae64b557fb7d6b643c10116,"`slice_*()` now handles missing values in line with the documentation, i.e. they are always removed (#1599).",NA,NA,NA,NA
+dbplyr,a88129f4e2805e7117e59212c49249bb,"Internal testing functions `src_test()`, `test_frame()` and `test_load()`, `test_register_src()` and `test_register_con()` have been removed.",NA,NA,NA,NA
+dbplyr,076dd1a50c3338703b793c2121160660,A `filter()` followed by a `summarise()` is once again inlined correctly (#1707).,NA,NA,NA,NA
