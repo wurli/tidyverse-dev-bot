@@ -20532,3 +20532,4 @@ dplyr,d92a4d7a814a9622824331b3d327b25b,"• Using `by = character()` to perform 
 dplyr,d9295c13e691ccd9a4b67b861b47637c,"`bench_tbls()`, `compare_tbls()`, `compare_tbls2()`, `eval_tbls()`, `eval_tbls2()`, `location()` and `changes()`, Deprecated in 1.0.0 (May 2020), are now defunct (#6387).",NA,NA,NA,NA
 reticulate,d9eab8404498662cbdb9832e973a7d13,"Fixed Positron UI interactions, such as restart/create new session with reticulate (#1871, #1869).",NA,NA,NA,NA
 reticulate,3f498ae070b45a3740dc9787fc0b9cf4,Added support for F1 help for reticulate Python objects in Positron (#1866).,NA,NA,NA,NA
+dbplyr,0f85097d7c4086934f24914b62cc928e,New `bind_queries()` makes it easy to combine multiple lazy queries using `UNION ALL` (#1342).,NA,NA,NA,NA

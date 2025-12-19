@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    New `bind_queries()` makes it easy to combine multiple lazy queries
+    using `UNION ALL` (#1342).
+    !end-bullet!
+-   !begin-bullet!
     `slice_*()` now handles missing values in line with the
     documentation, i.e. they are always removed (#1599).
     !end-bullet!
