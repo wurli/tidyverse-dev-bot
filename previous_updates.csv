@@ -20473,3 +20473,4 @@ rstudioapi,00e36d704820bfe2ee1ffd1f1eb68140,`rstudioapi::documentNew()` now acce
 dbplyr,fb89c4461ae64b557fb7d6b643c10116,"`slice_*()` now handles missing values in line with the documentation, i.e. they are always removed (#1599).",NA,NA,NA,NA
 dbplyr,a88129f4e2805e7117e59212c49249bb,"Internal testing functions `src_test()`, `test_frame()` and `test_load()`, `test_register_src()` and `test_register_con()` have been removed.",NA,NA,NA,NA
 dbplyr,076dd1a50c3338703b793c2121160660,A `filter()` followed by a `summarise()` is once again inlined correctly (#1707).,NA,NA,NA,NA
+reticulate,ca1937563d5c0a664b7945d2d24a2a77,Fix spurious `Error: ignoring SIGPIPE signal` on Unix when embedded Python writes to a closed pipe (#1868).,NA,NA,NA,NA
