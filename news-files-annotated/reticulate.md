@@ -5,6 +5,17 @@
 -   !begin-bullet!
     Fix spurious `Error: ignoring SIGPIPE signal` on Unix when embedded
     Python writes to a closed pipe (#1868).
+
+    !end-bullet!
+-   !begin-bullet!
+    Fixed Positron UI interactions, such as restart/create new session
+    with reticulate (#1871, #1869).
+
+    !end-bullet!
+-   !begin-bullet!
+    Added support for F1 help for reticulate Python objects in Positron
+    (#1866).
+
     !end-bullet!
 
 !end-bullets-1!
