@@ -3,6 +3,9 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `distinct()` after a join no longer creates a subquery (#722).
+    !end-bullet!
+-   !begin-bullet!
     New `bind_queries()` makes it easy to combine multiple lazy queries
     using `UNION ALL` (#1342).
     !end-bullet!

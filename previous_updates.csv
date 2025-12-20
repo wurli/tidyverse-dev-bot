@@ -20533,3 +20533,4 @@ dplyr,d9295c13e691ccd9a4b67b861b47637c,"`bench_tbls()`, `compare_tbls()`, `compa
 reticulate,d9eab8404498662cbdb9832e973a7d13,"Fixed Positron UI interactions, such as restart/create new session with reticulate (#1871, #1869).",NA,NA,NA,NA
 reticulate,3f498ae070b45a3740dc9787fc0b9cf4,Added support for F1 help for reticulate Python objects in Positron (#1866).,NA,NA,NA,NA
 dbplyr,0f85097d7c4086934f24914b62cc928e,New `bind_queries()` makes it easy to combine multiple lazy queries using `UNION ALL` (#1342).,NA,NA,NA,NA
+dbplyr,ab96ad794ff518af84d4775c1766c580,`distinct()` after a join no longer creates a subquery (#722).,NA,NA,NA,NA
