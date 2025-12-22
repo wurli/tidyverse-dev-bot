@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `summarise()` now reports grouping immediately, rather than when you
+    summarise.
+    !end-bullet!
+-   !begin-bullet!
     `sql_optimise()` has been removed. It was only used for two cases
     (filter + summarise and arrange + summarise), and these are now
     handled at a higher level (#1720).

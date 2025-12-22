@@ -20538,3 +20538,4 @@ dbplyr,77dc077e62c5d4a631a0f4f8bb36db0a,"`sql_optimise()` has been removed. It w
 plumber,2e88a3fd132fc52168f323fcfc7bb0c1,"`serializer_feather_stream()` and `parser_feather_stream()` now support Arrow IPC Streams (@​josiahparry, #968).",NA,NA,NA,NA
 plumber,a8eaa3af5115d34ceaf3e10bd972c7f7,"`pr_run()` now correctly honors the `apiPath` option when mounting documentation (@​thomasp85, #836).",NA,NA,NA,NA
 plumber,c3dfd643a6b474ddd31851ddb1e09a16,Added CI testing for only depends packages by request of CRAN (#1006).,NA,NA,NA,NA
+dbplyr,013e2253ee574376b3338ebd61c67eb0,"`summarise()` now reports grouping immediately, rather than when you summarise.",NA,NA,NA,NA
