@@ -5,6 +5,12 @@
 -   !begin-bullet!
     Fixed support for `shinytest2::AppDriver$expect_values()` screenshot
     snapshot failing on CI (#2293, #2288).
+
+    !end-bullet!
+-   !begin-bullet!
+    testthat now emits OpenTelemetry traces for tests when tracing is
+    enabled. Requires the otel and otelsdk packages (#2282).
+
     !end-bullet!
 
 !end-bullets-1!

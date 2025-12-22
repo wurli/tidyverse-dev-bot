@@ -20540,3 +20540,4 @@ plumber,a8eaa3af5115d34ceaf3e10bd972c7f7,"`pr_run()` now correctly honors the `a
 plumber,c3dfd643a6b474ddd31851ddb1e09a16,Added CI testing for only depends packages by request of CRAN (#1006).,NA,NA,NA,NA
 dbplyr,013e2253ee574376b3338ebd61c67eb0,"`summarise()` now reports grouping immediately, rather than when you summarise.",NA,NA,NA,NA
 bslib,8e1d9d1f741d78dfc42ff22b647a63ae,"bslib now uses the `{brand.yml}` package for reading brand.yml files. This change improves compatibility with other tools that use brand.yml files, such as Quarto. The `{brand.yml}` package must be installed for `_brand.yml` files to be automatically discovered. (#1227)",NA,NA,NA,NA
+testthat,88833f674acb2f908442a6ae812375e5,testthat now emits OpenTelemetry traces for tests when tracing is enabled. Requires the otel and otelsdk packages (#2282).,NA,NA,NA,NA
