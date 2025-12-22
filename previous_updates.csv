@@ -20534,3 +20534,4 @@ reticulate,d9eab8404498662cbdb9832e973a7d13,"Fixed Positron UI interactions, suc
 reticulate,3f498ae070b45a3740dc9787fc0b9cf4,Added support for F1 help for reticulate Python objects in Positron (#1866).,NA,NA,NA,NA
 dbplyr,0f85097d7c4086934f24914b62cc928e,New `bind_queries()` makes it easy to combine multiple lazy queries using `UNION ALL` (#1342).,NA,NA,NA,NA
 dbplyr,ab96ad794ff518af84d4775c1766c580,`distinct()` after a join no longer creates a subquery (#722).,NA,NA,NA,NA
+dbplyr,77dc077e62c5d4a631a0f4f8bb36db0a,"`sql_optimise()` has been removed. It was only used for two cases (filter + summarise and arrange + summarise), and these are now handled at a higher level (#1720).",NA,NA,NA,NA

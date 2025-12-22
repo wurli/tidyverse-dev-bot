@@ -3,6 +3,11 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `sql_optimise()` has been removed. It was only used for two cases
+    (filter + summarise and arrange + summarise), and these are now
+    handled at a higher level (#1720).
+    !end-bullet!
+-   !begin-bullet!
     `distinct()` after a join no longer creates a subquery (#722).
     !end-bullet!
 -   !begin-bullet!
