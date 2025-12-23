@@ -1,5 +1,7 @@
 # pak (development version)
 
+# pak 0.9.2
+
 * No user visible changes.
 
 # pak 0.9.1
