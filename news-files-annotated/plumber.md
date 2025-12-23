@@ -1,21 +1,34 @@
 # plumber (development version)
 
+# plumber 1.3.2
+
+## Bug fixes and minor improvements
+
+!begin-bullets-1!
+
+-   !begin-bullet!
+    R Markdown include tests now use more robust HTML pattern matching
+    for image source attributes (#1012).
+    !end-bullet!
+
+!end-bullets-1!
+
 # plumber 1.3.1
 
 ## New features
 
-!begin-bullets-1!
+!begin-bullets-2!
 
 -   !begin-bullet!
     `serializer_feather_stream()` and `parser_feather_stream()` now
     support Arrow IPC Streams (@josiahparry, #968).
     !end-bullet!
 
-!end-bullets-1!
+!end-bullets-2!
 
 ## Bug fixes and minor improvements
 
-!begin-bullets-2!
+!begin-bullets-3!
 
 -   !begin-bullet!
     `pr_run()` now correctly honors the `apiPath` option when mounting
@@ -28,11 +41,11 @@
 
     !end-bullet!
 
-!end-bullets-2!
+!end-bullets-3!
 
 # plumber 1.3.0
 
-!begin-bullets-3!
+!begin-bullets-4!
 
 -   !begin-bullet!
     The port many now be specified as an environment variable.
@@ -61,18 +74,18 @@
 -   !begin-bullet!
     New serializers:
 
-    !begin-bullets-4!
+    !begin-bullets-5!
     -   !begin-bullet!
         `serializer_excel()`: Return an object serialized by
         `writexl::write_xlsx` (@r2evans, #973).
         !end-bullet!
 
-    !end-bullets-4!
+    !end-bullets-5!
     !end-bullet!
 -   !begin-bullet!
     New request body parsers:
 
-    !begin-bullets-5!
+    !begin-bullets-6!
     -   !begin-bullet!
         `parser_excel()`: Parse request body as an excel workbook using
         `readxl::read_excel` (@r2evans, #973). This defaults to loading
@@ -82,7 +95,7 @@
         worksheet.
         !end-bullet!
 
-    !end-bullets-5!
+    !end-bullets-6!
     !end-bullet!
 -   !begin-bullet!
     Mounts now have a dynamic `req$PATH_INFO` instead of a pre-computed
@@ -106,11 +119,11 @@
 
     !end-bullet!
 
-!end-bullets-3!
+!end-bullets-4!
 
 # plumber 1.2.2
 
-!begin-bullets-6!
+!begin-bullets-7!
 
 -   !begin-bullet!
     Allow to set plumber options using environment variables
@@ -125,23 +138,23 @@
     Windows. (#930)
     !end-bullet!
 
-!end-bullets-6!
+!end-bullets-7!
 
 # plumber 1.2.1
 
-!begin-bullets-7!
+!begin-bullets-8!
 
 -   !begin-bullet!
     Update docs for CRAN (#878)
     !end-bullet!
 
-!end-bullets-7!
+!end-bullets-8!
 
 # plumber 1.2.0
 
 ## Breaking changes
 
-!begin-bullets-8!
+!begin-bullets-9!
 
 -   !begin-bullet!
     First line of endpoint comments interpreted as OpenAPI 'summary'
@@ -149,11 +162,11 @@
     field. (@wkmor1 #805)
     !end-bullet!
 
-!end-bullets-8!
+!end-bullets-9!
 
 ## New features
 
-!begin-bullets-9!
+!begin-bullets-10!
 
 -   !begin-bullet!
     Static file handler now serves HEAD requests. (#798)
@@ -193,11 +206,11 @@
 
     !end-bullet!
 
-!end-bullets-9!
+!end-bullets-10!
 
 ## Bug fixes
 
-!begin-bullets-10!
+!begin-bullets-11!
 
 -   !begin-bullet!
     OpenAPI specification collision when using `examples`. (@meztez
@@ -230,13 +243,13 @@
 
     !end-bullet!
 
-!end-bullets-10!
+!end-bullets-11!
 
 # plumber 1.1.0
 
 ## Breaking changes
 
-!begin-bullets-11!
+!begin-bullets-12!
 
 -   !begin-bullet!
     Force json serialization of endpoint error responses instead of
@@ -255,11 +268,11 @@
 
     !end-bullet!
 
-!end-bullets-11!
+!end-bullets-12!
 
 ## New features
 
-!begin-bullets-12!
+!begin-bullets-13!
 
 -   !begin-bullet!
     Added option `plumber.trailingSlash`. This option (which is
@@ -301,7 +314,7 @@
     parameters will not produce lingering effects on the `Plumber`
     router. (@jcheng5 #765)
 
-    !begin-bullets-13!
+    !begin-bullets-14!
     -   !begin-bullet!
         Setting `quiet = TRUE` will suppress routine startup messages.
         !end-bullet!
@@ -319,7 +332,7 @@
         `pr_set_docs_callback()`.
         !end-bullet!
 
-    !end-bullets-13!
+    !end-bullets-14!
     !end-bullet!
 -   !begin-bullet!
     To update a `PlumberEndpoint` path after initialization, call the
@@ -341,11 +354,11 @@
 
     !end-bullet!
 
-!end-bullets-12!
+!end-bullets-13!
 
 ## Bug fixes
 
-!begin-bullets-14!
+!begin-bullets-15!
 
 -   !begin-bullet!
     Ignore regular comments in block parsing. (@meztez #718)
@@ -407,7 +420,7 @@
 
     !end-bullet!
 
-!end-bullets-14!
+!end-bullets-15!
 
 # plumber 1.0.0
 
@@ -415,7 +428,7 @@
 
 ### Plumber router
 
-!begin-bullets-15!
+!begin-bullets-16!
 
 -   !begin-bullet!
     Added support for promises in endpoints, filters, and hooks. This
@@ -455,7 +468,7 @@
     `plumb_api("plumber", "17-arguments")` to retrieve the api.
     Improvements include:
 
-    !begin-bullets-16!
+    !begin-bullets-17!
     -   !begin-bullet!
         The value supplied to `req` and `res` arguments in a route
         definition are now *always* Plumber request and response
@@ -483,14 +496,14 @@
         only be passed through via `...` (#666)
         !end-bullet!
 
-    !end-bullets-16!
+    !end-bullets-17!
     !end-bullet!
 
-!end-bullets-15!
+!end-bullets-16!
 
 ### OpenAPI
 
-!begin-bullets-17!
+!begin-bullets-18!
 
 -   !begin-bullet!
     API Documentation is now hosted at `/__docs__`. If `swagger`
@@ -518,11 +531,11 @@
 
     !end-bullet!
 
-!end-bullets-17!
+!end-bullets-18!
 
 ### Serializers
 
-!begin-bullets-18!
+!begin-bullets-19!
 
 -   !begin-bullet!
     Added `as_attachment(value, filename)` method which allows routes to
@@ -549,7 +562,7 @@
 -   !begin-bullet!
     New serializers
 
-    !begin-bullets-19!
+    !begin-bullets-20!
     -   !begin-bullet!
         `serializer_yaml()`: Return an object serialized by `yaml`
         (@meztez, #556)
@@ -596,14 +609,14 @@
         (#660)
         !end-bullet!
 
-    !end-bullets-19!
+    !end-bullets-20!
     !end-bullet!
 
-!end-bullets-18!
+!end-bullets-19!
 
 ### Body parsing
 
-!begin-bullets-20!
+!begin-bullets-21!
 
 -   !begin-bullet!
     Added support for request body parsing (@meztez, #532)
@@ -612,7 +625,7 @@
 -   !begin-bullet!
     New request body parsers
 
-    !begin-bullets-21!
+    !begin-bullets-22!
     -   !begin-bullet!
         `parser_csv()`: Parse request body as a commas separated value
         (#584)
@@ -659,7 +672,7 @@
         recommended in production!) (#584)
         !end-bullet!
 
-    !end-bullets-21!
+    !end-bullets-22!
     !end-bullet!
 -   !begin-bullet!
     The parsed request body values is stored at `req$body`. (#663)
@@ -676,11 +689,11 @@
 
     !end-bullet!
 
-!end-bullets-20!
+!end-bullets-21!
 
 ### Visual Documentation
 
-!begin-bullets-22!
+!begin-bullets-23!
 
 -   !begin-bullet!
     Generalize user interface integration. Plumber can now use other
@@ -702,11 +715,11 @@
 
     !end-bullet!
 
-!end-bullets-22!
+!end-bullets-23!
 
 ## Security improvements
 
-!begin-bullets-23!
+!begin-bullets-24!
 
 -   !begin-bullet!
     Secret session cookies are now encrypted using `sodium`. All prior
@@ -729,11 +742,11 @@
 
     !end-bullet!
 
-!end-bullets-23!
+!end-bullets-24!
 
 ## Breaking changes
 
-!begin-bullets-24!
+!begin-bullets-25!
 
 -   !begin-bullet!
     When `plumb()`ing a file (or `Plumber$new(file)`), the working
@@ -791,11 +804,11 @@
 
     !end-bullet!
 
-!end-bullets-24!
+!end-bullets-25!
 
 ## Deprecations
 
-!begin-bullets-25!
+!begin-bullets-26!
 
 -   !begin-bullet!
     Shorthand serializers are now deprecated. `@html`, `@json`, `@png`,
@@ -842,11 +855,11 @@
 
     !end-bullet!
 
-!end-bullets-25!
+!end-bullets-26!
 
 ## Minor new features and improvements
 
-!begin-bullets-26!
+!begin-bullets-27!
 
 -   !begin-bullet!
     Documentation is updated and now presented using `pkgdown` (#570)
@@ -938,11 +951,11 @@
 
     !end-bullet!
 
-!end-bullets-26!
+!end-bullets-27!
 
 ## Bug fixes
 
-!begin-bullets-27!
+!begin-bullets-28!
 
 -   !begin-bullet!
     Handle plus signs in URI as space characters instead of actual plus
@@ -1004,11 +1017,11 @@
 
     !end-bullet!
 
-!end-bullets-27!
+!end-bullets-28!
 
 # plumber 0.4.6
 
-!begin-bullets-28!
+!begin-bullets-29!
 
 -   !begin-bullet!
     BUGFIX: Hooks that accept a `value` argument (`postroute`,
@@ -1033,11 +1046,11 @@
     Add RStudio Project Template to package.
     !end-bullet!
 
-!end-bullets-28!
+!end-bullets-29!
 
 # plumber 0.4.4
 
-!begin-bullets-29!
+!begin-bullets-30!
 
 -   !begin-bullet!
     Support Expiration, HTTPOnly, and Secure flags on cookies (#87).
@@ -1103,11 +1116,11 @@
     Support `.` in string path segments
     !end-bullet!
 
-!end-bullets-29!
+!end-bullets-30!
 
 # plumber 0.4.2
 
-!begin-bullets-30!
+!begin-bullets-31!
 
 -   !begin-bullet!
     Development version for 0.4.2. Will be working to move to even/odd
@@ -1115,11 +1128,11 @@
     might get skipped, making the next CRAN release 0.4.2.
     !end-bullet!
 
-!end-bullets-30!
+!end-bullets-31!
 
 # plumber 0.4.0
 
-!begin-bullets-31!
+!begin-bullets-32!
 
 -   !begin-bullet!
     BREAKING: Listen on localhost instead of listening publicly by
@@ -1203,22 +1216,22 @@
     `TRUE` in order to get more insight into your API errors.
     !end-bullet!
 
-!end-bullets-31!
+!end-bullets-32!
 
 # plumber 0.3.3
 
-!begin-bullets-32!
+!begin-bullets-33!
 
 -   !begin-bullet!
     `plumb()` now accepts an argument `dir`, referring to a directory
     containing `plumber.R`, which may be provided instead of `file`.
     !end-bullet!
 
-!end-bullets-32!
+!end-bullets-33!
 
 # plumber 0.3.2
 
-!begin-bullets-33!
+!begin-bullets-34!
 
 -   !begin-bullet!
     Introduced the `do_provision()`, `do_deploy_api()`,
@@ -1242,22 +1255,22 @@
     Don't convert `+` character in a query string to a space.
     !end-bullet!
 
-!end-bullets-33!
+!end-bullets-34!
 
 # plumber 0.3.1
 
-!begin-bullets-34!
+!begin-bullets-35!
 
 -   !begin-bullet!
     Add a method to consume JSON on post (you can still send a query
     string in the body of a POST request as well).
     !end-bullet!
 
-!end-bullets-34!
+!end-bullets-35!
 
 # plumber 0.3.0
 
-!begin-bullets-35!
+!begin-bullets-36!
 
 -   !begin-bullet!
     BREAKING CHANGE: serializer factories are now registered instead of
@@ -1274,11 +1287,11 @@
     factory. See example `09-content-type`.
     !end-bullet!
 
-!end-bullets-35!
+!end-bullets-36!
 
 # plumber 0.2.4
 
-!begin-bullets-36!
+!begin-bullets-37!
 
 -   !begin-bullet!
     Add a filter which parses and sets req\$cookies to be a list
@@ -1292,11 +1305,11 @@
     before URL- encoding.
     !end-bullet!
 
-!end-bullets-36!
+!end-bullets-37!
 
 # plumber 0.2.3
 
-!begin-bullets-37!
+!begin-bullets-38!
 
 -   !begin-bullet!
     Set options(warn=1) during execution of user code so that warnings
@@ -1304,11 +1317,11 @@
     until the server is stopped.
     !end-bullet!
 
-!end-bullets-37!
+!end-bullets-38!
 
 # plumber 0.2.2
 
-!begin-bullets-38!
+!begin-bullets-39!
 
 -   !begin-bullet!
     Add `sessionCookie` function to define a processor that can be used
@@ -1328,11 +1341,11 @@
     Document all public params so CHECK passes
     !end-bullet!
 
-!end-bullets-38!
+!end-bullets-39!
 
 # plumber 0.2.1
 
-!begin-bullets-39!
+!begin-bullets-40!
 
 -   !begin-bullet!
     Add more `roxygen2` documentation for exported functions
@@ -1341,11 +1354,11 @@
     Remove the warning in the README as the API seems to be stabilizing.
     !end-bullet!
 
-!end-bullets-39!
+!end-bullets-40!
 
 # plumber 0.2.0
 
-!begin-bullets-40!
+!begin-bullets-41!
 
 -   !begin-bullet!
     BREAKING: Changed variable-path routing to use bracketed format
@@ -1361,14 +1374,14 @@
     Added support for the `#*` prefix.
     !end-bullet!
 
-!end-bullets-40!
+!end-bullets-41!
 
 # plumber 0.1.0
 
-!begin-bullets-41!
+!begin-bullets-42!
 
 -   !begin-bullet!
     Initial Release
     !end-bullet!
 
-!end-bullets-41!
+!end-bullets-42!
