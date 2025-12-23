@@ -20541,3 +20541,5 @@ plumber,c3dfd643a6b474ddd31851ddb1e09a16,Added CI testing for only depends packa
 dbplyr,013e2253ee574376b3338ebd61c67eb0,"`summarise()` now reports grouping immediately, rather than when you summarise.",NA,NA,NA,NA
 bslib,8e1d9d1f741d78dfc42ff22b647a63ae,"bslib now uses the `{brand.yml}` package for reading brand.yml files. This change improves compatibility with other tools that use brand.yml files, such as Quarto. The `{brand.yml}` package must be installed for `_brand.yml` files to be automatically discovered. (#1227)",NA,NA,NA,NA
 testthat,88833f674acb2f908442a6ae812375e5,testthat now emits OpenTelemetry traces for tests when tracing is enabled. Requires the otel and otelsdk packages (#2282).,NA,NA,NA,NA
+tibble,78b5de5aab3b7276dc862559ddc1dc9a,"Avoid use of `SET_OBJECT()`, `ATTRIB()` and `SET_ATTRIB()` (#1671).",NA,NA,NA,NA
+tibble,4c73bf4183f37849345502fa7687b8c3,"Spring Cleaning (@​Layalchristine24, #1643, #1644).",NA,NA,NA,NA
