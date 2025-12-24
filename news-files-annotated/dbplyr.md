@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `escape_ansi()` has been removed. Use
+    `escape(x, con = simulate_dbi())` instead.
+    !end-bullet!
+-   !begin-bullet!
     `summarise()` now reports grouping immediately, rather than when you
     summarise.
     !end-bullet!

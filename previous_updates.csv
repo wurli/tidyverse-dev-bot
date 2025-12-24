@@ -20545,3 +20545,4 @@ tibble,78b5de5aab3b7276dc862559ddc1dc9a,"Avoid use of `SET_OBJECT()`, `ATTRIB()`
 tibble,4c73bf4183f37849345502fa7687b8c3,"Spring Cleaning (@​Layalchristine24, #1643, #1644).",NA,NA,NA,NA
 plumber,629b1ac145891ee8ced5dbbc2a2a291b,R Markdown include tests now use more robust HTML pattern matching for image source attributes (#1012).,NA,NA,NA,NA
 tibble,ca48cbeb02ea93919fbdd3b185321060,CRAN release v3.3.1 (#1687).,NA,NA,NA,NA
+dbplyr,7022299bcb3b17643d1e2e0763f27e85,"`escape_ansi()` has been removed. Use `escape(x, con = simulate_dbi())` instead.",NA,NA,NA,NA
