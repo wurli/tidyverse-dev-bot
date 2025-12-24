@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    PostgreSQL: uses improved translation for `seconds()`, `minutes()`,
+    `hours()`, `days()`, `weeks()`, `months()`, and `years()`.
+    !end-bullet!
+-   !begin-bullet!
     `escape_ansi()` has been removed. Use
     `escape(x, con = simulate_dbi())` instead.
     !end-bullet!
