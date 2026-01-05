@@ -3,6 +3,10 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `filter()` after `left_join()` or `inner_join()` no longer creates a
+    subquery (#722).
+    !end-bullet!
+-   !begin-bullet!
     PostgreSQL: uses improved translation for `seconds()`, `minutes()`,
     `hours()`, `days()`, `weeks()`, `months()`, and `years()`.
     !end-bullet!
