@@ -3,6 +3,15 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `do()` is deprecated. Use `collect()` then your favourite tidyverse
+    functions instead.
+    !end-bullet!
+-   !begin-bullet!
+    `as(x, "type")` is now translated to `CAST(x AS type)`, allowing you
+    to cast to arbitrary database types not covered by the standard
+    `as.*()` functions (#1729).
+    !end-bullet!
+-   !begin-bullet!
     `filter()` after `left_join()` or `inner_join()` no longer creates a
     subquery (#722).
     !end-bullet!

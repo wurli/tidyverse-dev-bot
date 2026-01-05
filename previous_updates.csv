@@ -20548,3 +20548,5 @@ tibble,ca48cbeb02ea93919fbdd3b185321060,CRAN release v3.3.1 (#1687).,NA,NA,NA,NA
 dbplyr,7022299bcb3b17643d1e2e0763f27e85,"`escape_ansi()` has been removed. Use `escape(x, con = simulate_dbi())` instead.",NA,NA,NA,NA
 dbplyr,32f670a3ae789063857e8becfbd1ce56,"PostgreSQL: uses improved translation for `seconds()`, `minutes()`, `hours()`, `days()`, `weeks()`, `months()`, and `years()`.",NA,NA,NA,NA
 dbplyr,33a9864e5da6e7789dfa54326f89b1b4,`filter()` after `left_join()` or `inner_join()` no longer creates a subquery (#722).,NA,NA,NA,NA
+dbplyr,f0c448dc584549ea34421d8e664da34e,`do()` is deprecated. Use `collect()` then your favourite tidyverse functions instead.,NA,NA,NA,NA
+dbplyr,3a093a5c4b1e847da4e4ee605a80da99,"`as(x, ""type"")` is now translated to `CAST(x AS type)`, allowing you to cast to arbitrary database types not covered by the standard `as.*()` functions (#1729).",NA,NA,NA,NA
