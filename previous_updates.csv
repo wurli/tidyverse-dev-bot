@@ -20550,3 +20550,4 @@ dbplyr,32f670a3ae789063857e8becfbd1ce56,"PostgreSQL: uses improved translation f
 dbplyr,33a9864e5da6e7789dfa54326f89b1b4,`filter()` after `left_join()` or `inner_join()` no longer creates a subquery (#722).,NA,NA,NA,NA
 dbplyr,f0c448dc584549ea34421d8e664da34e,`do()` is deprecated. Use `collect()` then your favourite tidyverse functions instead.,NA,NA,NA,NA
 dbplyr,3a093a5c4b1e847da4e4ee605a80da99,"`as(x, ""type"")` is now translated to `CAST(x AS type)`, allowing you to cast to arbitrary database types not covered by the standard `as.*()` functions (#1729).",NA,NA,NA,NA
+haven,c1e35c9e6aed06a741a325d785548ea5,"`write_xpt()` now errors if variable names are too long for the XPT version: 8 bytes for version 5, 32 bytes for version 8. Previously, long names were silently truncated for version 5 and error messaging was inconsistent (#771).",NA,NA,NA,NA

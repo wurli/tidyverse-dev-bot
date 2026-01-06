@@ -3,6 +3,13 @@
 !begin-bullets-1!
 
 -   !begin-bullet!
+    `write_xpt()` now errors if variable names are too long for the XPT
+    version: 8 bytes for version 5, 32 bytes for version 8. Previously,
+    long names were silently truncated for version 5 and error messaging
+    was inconsistent (#771).
+
+    !end-bullet!
+-   !begin-bullet!
     `read_sas()` and `read_xpt()` now supports all datetime, date and
     time formats (#780) and correctly recognises DATEAMPM as datetime
     (#789).
